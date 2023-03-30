@@ -1,1 +1,17 @@
-{"description":"fff","bonusItemInfo":{"Uniques":{"items":{"Simple Robe":{"text":null,"items":{"Tabula Rasa":{"text":"Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets."}}}}}}}
+{
+  "description": "These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name.",
+  "bonusItemInfo": {
+    "Uniques": {
+      "items": {
+        "Simple Robe": {
+          "text": null,
+          "items": {
+            "Tabula Rasa": {
+              "text": "Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets."
+            }
+          }
+        }
+      }
+    }
+  }
+}
