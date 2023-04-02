@@ -1,6 +1,7 @@
 {
   "description": "These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
   "bonusItemInfo": {
+
     "Uniques": {
       "items": {
         "Simple Robe": {
@@ -10,8 +11,39 @@
               "text": "Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets."
             }
           }
+        },
+
+        "Elegant Round Shield": {
+          "text": null,
+          "items": {
+            "The Squire": {
+              "text": "Detected via a special rule (using the 3 white sockets)! The oppressor can be safely hidden in the unique tierlist."
+            }
+          }
+        },
+
+        "Infernal Sword": {
+          "text": null,
+          "items": {
+            "Starforge": {
+              "text": "Detected via a special rule that overrides general tiering"
+            },
+            "Voidforge": {
+              "text": "Detected via a special rule that overrides general tiering"
+            }
+          }
+        },
+
+        "Despot Axe" : {
+          "text": null,
+          "items": {
+            "Kingmaker": {
+              "text": "Does not drop naturally! Created with a vendor recipe (siege axe + heartbreaker + fusing)!"
+            }
+          }
         }
       }
     }
+
   }
 }
