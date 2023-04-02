@@ -43,6 +43,46 @@
           }
         }
       }
+    },
+    
+    "Currency": {
+      "items": {}
+    }
+    
+    "Resonator": {
+      "items": {}
+    }
+
+    "Fossil": {
+      "items": {}
+    }
+
+    "DeliriumOrb": {
+      "items": {}
+    }
+
+    "Oil": {
+      "items": {}
+    }
+
+    "Incubator": {
+      "items": {}
+    }
+
+    "DivinationCard": {
+      "items": {}
+    }
+
+    "Fragment": {
+      "items": {}
+    }
+
+    "Scarab": {
+      "items": {}
+    }
+
+    "UniqueMap": {
+      "items": {}
     }
 
   }
