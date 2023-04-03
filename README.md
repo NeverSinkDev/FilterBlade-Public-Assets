@@ -18,7 +18,7 @@ Descriptions are attached through JSON code. The top level property describes th
   "Incubator": {
     "items": {
       "Geomancer's Incubator": {
-        "text": "Grants a random 6link weapon or armour"
+        "text": "Grants a random 6-link weapon or armour"
       }
     }
   }
