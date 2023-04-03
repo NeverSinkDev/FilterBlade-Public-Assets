@@ -37,9 +37,7 @@
 			"items": {
 				"A Dab of Ink": {
 					"text": "Found in Academy, Museum, Scriptorium, The library"
-					}
-				},
-			
+				},			
 				"A Dusty Memory": {
 					"text": "Found in Altered Distant Memory, Augmented Distant Memory, Cortex, Rewritten Distant Memory, Twisted Distant Memory"
 				},
@@ -139,7 +137,7 @@
 				"Azyran's Reward": {
 					"text": "Found in Laboratory, Relic Chambers, Stagnation"
 				}
-		},
+			}
 		"Fragment": {
 			"items": {
 
