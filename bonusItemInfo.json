@@ -1,5 +1,5 @@
 {
-  "description":"These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
+  "comment":"These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
   "bonusItemInfo":{
     
     "Currency": {
@@ -49,9 +49,11 @@
      "Uniques":{
         "items":{
            "Simple Robe":{
+              "comment":"COMMENT: the text property below provides infos about a whole basetype",
               "text":null,
               "items":{
                  "Tabula Rasa":{
+                    "comment":"COMMENT: the text property below provides infos about an individual unique",
                     "text":"Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets."
                  }
               }
