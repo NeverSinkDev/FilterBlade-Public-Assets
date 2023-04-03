@@ -783,7 +783,7 @@
            "Prophet Crown":{
               "text":null,
               "items":{
-                 "Gavel":{
+                 "Crown of the Inward Eye":{
                     "text":"Drops from Sirus."
                  }
               }
@@ -1448,7 +1448,7 @@
            "Stygian Vise":{
               "text":null,
               "items":{
-                 "Gavel":{
+                 "Darkness Enthroned":{
                     "text":"Drops from Abyssal Depths."
                  }
               }
@@ -1536,7 +1536,7 @@
            "Sovereign Spiked Shield":{
               "text":null,
               "items":{
-                 "Gavel":{
+                 "Qotras Regulator":{
                     "text":"Does not drop. Sold in Ritual."
                  }
               }
