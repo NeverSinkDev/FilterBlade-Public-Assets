@@ -1,1648 +1,1923 @@
 {
-  "comment":"These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
-  "bonusItemInfo":{
-    
-    "Currency": {
-      "items": {}
-    },
+   "comment":"These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
+   "bonusItemInfo":{
+      
+      "Currency": {
+         "items": {}
+      },
 
-    "Resonator": {
-      "items": {}
-    },
+      "Resonator": {
+         "items": {}
+      },
 
-    "Fossil": {
-      "items": {}
-    },
+      "Fossil": {
+         "items": {}
+      },
 
-    "DeliriumOrb": {
-      "items": {}
-    },
+      "DeliriumOrb": {
+         "items": {}
+      },
 
-    "Oil": {
-      "items": {}
-    },
+      "Oil": {
+         "items": {}
+      },
 
-    "Incubator": {
-      "items": {
-        "Geomancer's Incubator":{
-          "text":"Grants a random 6link weapon or armour" 
-        }
+      "Incubator": {
+         "items": {
+         "Geomancer's Incubator":{
+            "text":"Grants a random 6link weapon or armour" 
+         }
+         }
+      },
+
+      "DivinationCard": {
+         "items": {}
+      },
+
+      "Fragment": {
+         "items": {}
+      },
+
+      "Scarab": {
+         "items": {}
+      },
+
+      "UniqueMap":{
+         "items":{
+            "Engraved Ultimatum":{
+               "text":null,
+               "items":{
+                  "The Tower of Ordeals":{
+                     "text":"Does not drop. Created from Ultimatum Aspects."
+                  }
+               }
+            },
+            "Courtyard Map":{
+               "text":null,
+               "items":{
+                  "The Vinktar Square":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Maze Map":{
+               "text":null,
+               "items":{
+                  "Doryani's Machinarium":{
+                     "text":"Drops from Ahuatotli."
+                  }
+               }
+            }
+         }
+      },
+      
+      "Uniques":{
+         "items":{
+            "Simple Robe":{
+               "comment":"COMMENT: the text property below provides infos about a whole basetype",
+               "text":null,
+               "items":{
+                  "Tabula Rasa":{
+                     "comment":"COMMENT: the text property below provides infos about an individual unique",
+                     "text":"Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets."
+                  }
+               }
+            },
+            "Elegant Round Shield":{
+               "text":null,
+               "items":{
+                  "The Squire":{
+                     "text":"Detected via a special rule (using the 3 white sockets)! The oppressor can be safely hidden in the unique tierlist."
+                  }
+               }
+            },
+            "Maelström Staff":{
+               "text":null,
+               "items":{
+                  "Duskdawn":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  },
+                  "Disintegrator":{
+                     "text":"Drops from The Uber Elder."
+                  }
+               }
+            },
+            "Cutlass":{
+               "text":null,
+               "items":{
+                  "United in Dream":{
+                     "text":"Drops from Chayula's Flawless Breachstone."
+                  },
+                  "Severed in Sleep":{
+                     "text":"Drops from Chayula's Breach or Breachstone."
+                  }
+               }
+            },
+            "Sage Wand":{
+               "text":null,
+               "items":{
+                  "Relic of the Pact":{
+                     "text":"Drops from The Trialmaster."
+                  }
+               }
+            },
+            "Assassin Bow":{
+               "text":null,
+               "items":{
+                  "Arborix":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Vaal Axe":{
+               "text":null,
+               "items":{
+                  "Atziri's Disfavour":{
+                     "text":"Drops from Uber Atziri."
+                  },
+                  "Uul-Netol's Embrace":{
+                     "text":"Drops from Uul-Netol's Flawless Breachstone."
+                  },
+                  "Uul-Netol's Kiss":{
+                     "text":"Drops from Uul-Netol's Breach or Breachstone."
+                  }
+               }
+            },
+            "Vaal Sceptre":{
+               "text":null,
+               "items":{
+                  "Doryani's Catalyst":{
+                     "text":"Drops from Atziri."
+                  },
+                  "Yaomac's Accord":{
+                     "text":"Drops from The Trialmaster."
+                  }
+               }
+            },
+            "Infernal Sword":{
+               "text":null,
+               "items":{
+                  "Starforge":{
+                     "text":"Overriden in Exceptions. Drops from The Shaper."
+                  },
+                  "Voidforge":{
+                     "text":"Overriden in Exceptions. Drops from The Uber Elder."
+                  },
+                  "Echoforge":{
+                     "text":"Drops from The Maven."
+                  }
+               }
+            },
+            "Judgement Staff":{
+               "text":null,
+               "items":{
+                  "Pledge of Hands":{
+                     "text":"Drops from Atziri."
+                  },
+                  "Atziri's Rule":{
+                     "text":"Drops from Uber Atziri."
+                  }
+               }
+            },
+            "Gemstone Sword":{
+               "text":null,
+               "items":{
+                  "Fate of the Vaal":{
+                     "text":"Does not drop. Created with a Vial."
+                  },
+                  "Story of the Vaal":{
+                     "text":"Drops from the Crucible of Flame in the Temple of Atzoatl."
+                  }
+               }
+            },
+            "Highborn Staff":{
+               "text":null,
+               "items":{
+                  "Witchhunter's Judgment":{
+                     "text":"Drops from Oshabi (Harvest Boss)."
+                  }
+               }
+            },
+            "Despot Axe":{
+               "text":null,
+               "items":{
+                  "Kingmaker":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Legion Sword":{
+               "text":null,
+               "items":{
+                  "The Rippling Thoughts":{
+                     "text":"Does not drop. Created from Harbinger Pieces."
+                  },
+                  "The Surging Thoughts":{
+                     "text":"Does not drop. Created by upgrading Rippling Thoughts via scroll."
+                  },
+                  "The Saviour":{
+                     "text":"Drops from Sirus."
+                  }
+               }
+            },
+            "Imperial Claw":{
+               "text":null,
+               "items":{
+                  "Hand of Wisdom and Action":{
+                     "text":"Drops from Esh's Flawless Breachstone."
+                  },
+                  "Hand of Thought and Motion":{
+                     "text":"Drops from Esh's Breach or Breachstone."
+                  }
+               }
+            },
+            "Vaal Rapier":{
+               "text":null,
+               "items":{
+                  "Paradoxica":{
+                     "text":"Drops from Syndicate Safehouse (Jun)."
+                  }
+               }
+            },
+            "Elegant Sword":{
+               "text":null,
+               "items":{
+                  "The Goddess Scorned":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Gavel":{
+               "text":null,
+               "items":{
+                  "Cameria's Avarice":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Blood Sceptre":{
+               "text":null,
+               "items":{
+                  "Cerberus Limb":{
+                     "text":"Drops from Ahuatotli (Delve)."
+                  }
+               }
+            },
+            "Imperial Staff":{
+               "text":null,
+               "items":{
+                  "The Enmity Divine":{
+                     "text":"Does not drop. Created from Harbinger Pieces."
+                  },
+                  "The Yielding Mortality":{
+                     "text":"Does not drop. Created by upgrading Enmity Divine via scroll."
+                  }
+               }
+            },
+            "Ezomyte Staff":{
+               "text":null,
+               "items":{
+                  "The Fulcrum":{
+                     "text":"Found in a Curio Display in Heist."
+                  }
+               }
+            },
+            "Tornado Wand":{
+               "text":null,
+               "items":{
+                  "Shimmeron":{
+                     "text":"Drops from The Elder."
+                  }
+               }
+            },
+            "Nightmare Mace":{
+               "text":null,
+               "items":{
+                  "Nebuloch":{
+                     "text":"Drops from The Elder."
+                  }
+               }
+            },
+            "Steelwood Bow":{
+               "text":null,
+               "items":{
+                  "The Crimson Storm":{
+                     "text":"Drops from Syndicate Safehouse (Jun)."
+                  }
+               }
+            },
+            "Coiled Staff":{
+               "text":null,
+               "items":{
+                  "Xirgil's Crank":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  }
+               }
+            },
+            "Citadel Bow":{
+               "text":null,
+               "items":{
+                  "The Gluttonous Tide":{
+                     "text":"Drops from The Eater of Worlds."
+                  },
+                  "Xoph's Nurture":{
+                     "text":"Drops from Xoph's Flawless Breachstone."
+                  },
+                  "Xoph's Inception":{
+                     "text":"Drops from Xoph's Breach or Breachstone."
+                  }
+               }
+            },
+            "Hellion's Paw":{
+               "text":null,
+               "items":{
+                  "Law of the Wilds":{
+                     "text":"Drops from Oshabi (Harvest Boss)."
+                  }
+               }
+            },
+            "Ranger Bow":{
+               "text":null,
+               "items":{
+                  "Hopeshredder":{
+                     "text":"Drops from The Elder."
+                  }
+               }
+            },
+            "Void Sceptre":{
+               "text":null,
+               "items":{
+                  "Nebulis":{
+                     "text":"Drops from Cortex."
+                  }
+               }
+            },
+            "Opal Wand":{
+               "text":null,
+               "items":{
+                  "Tulfall":{
+                     "text":"Drops from Tul's Flawless Breachstone."
+                  },
+                  "Tulborn":{
+                     "text":"Drops from Tul's Breach or Breachstone."
+                  }
+               }
+            },
+            "Gladius":{
+               "text":null,
+               "items":{
+                  "The Iron Mass":{
+                     "text":"Found in a Curio Display in Heist."
+                  }
+               }
+            },
+            "Ambusher":{
+               "text":null,
+               "items":{
+                  "The Hidden Blade":{
+                     "text":"Found in a Curio Display in Heist."
+                  }
+               }
+            },
+            "Serpentine Staff":{
+               "text":null,
+               "items":{
+                  "Cane of Kulemak":{
+                     "text":"Drops from Catarina (Jun Boss)."
+                  }
+               }
+            },
+            "Quartz Flask":{
+               "text":null,
+               "items":{
+                  "Soul Ripper":{
+                     "text":"Does not drop. Created with a Vial (Alva Temple)."
+                  },
+                  "Soul Catcher":{
+                     "text":"Drops from The Vaal Omnitect (Alva Temple)."
+                  }
+               }
+            },
+            "Sulphur Flask":{
+               "text":null,
+               "items":{
+                  "Bottled Faith":{
+                     "text":"Drops from Cortex."
+                  }
+               }
+            },
+            "Ruby Flask":{
+               "text":null,
+               "items":{
+                  "Dying Sun":{
+                     "text":"Drops from The Shaper."
+                  },
+                  "Coruscating Elixir":{
+                     "text":"Does not drop. Obtained from a Divination Card set."
+                  }
+               }
+            },
+            "Silver Flask":{
+               "text":null,
+               "items":{
+                  "Cinderswallow Urn":{
+                     "text":"Drops from Catarina (Jun Boss)."
+                  }
+               }
+            },
+            "Bismuth Flask":{
+               "text":null,
+               "items":{
+                  "Oriath's End":{
+                     "text":"Drops from Sirus."
+                  }
+               }
+            },
+            "Topaz Flask":{
+               "text":null,
+               "items":{
+                  "Vessel of Vinktar":{
+                     "text":"Drops from The Vinktar Square."
+                  }
+               }
+            },
+            "Amethyst Flask":{
+               "text":null,
+               "items":{
+                  "Atziri's Promise":{
+                     "text":"Drops from Atziri."
+                  },
+                  "Progenesis":{
+                     "text":"Drops from The Uber Maven."
+                  }
+               }
+            },
+            "Golden Buckler":{
+               "text":null,
+               "items":{
+                  "Atziri's Reflection":{
+                     "text":"Drops from Uber Atziri."
+                  }
+               }
+            },
+            "Triumphant Lamellar":{
+               "text":null,
+               "items":{
+                  "Farrul's Fur":{
+                     "text":"Drops from Farrul (Einhar Boss)."
+                  }
+               }
+            },
+            "Sadist Garb":{
+               "text":null,
+               "items":{
+                  "Doppelgänger Guise":{
+                     "text":"Drops from The Maven."
+                  }
+               }
+            },
+            "Vaal Gauntlets":{
+               "text":null,
+               "items":{
+                  "Atziri's Acuity":{
+                     "text":"Drops from Uber Atziri."
+                  }
+               }
+            },
+            "Steelscale Gauntlets":{
+               "text":null,
+               "items":{
+                  "Tombfist":{
+                     "text":"Drops from Abyssal Depths."
+                  }
+               }
+            },
+            "Vaal Spirit Shield":{
+               "text":null,
+               "items":{
+                  "Apep's Supremacy":{
+                     "text":"Does not drop. Created with a Vial (Alva Temple)."
+                  },
+                  "Apep's Slumber":{
+                     "text":"Drops from the Cultivar Chamber in the Temple of Atzoatl."
+                  },
+                  "Esh's Visage":{
+                     "text":"Drops from Esh's Flawless Breachstone."
+                  },
+                  "Esh's Mirror":{
+                     "text":"Drops from Esh's Breach or Breachstone."
+                  }
+               }
+            },
+            "Blood Raiment":{
+               "text":null,
+               "items":{
+                  "The Eternity Shroud":{
+                     "text":"Drops from The Uber Elder."
+                  },
+                  "Saqawal's Nest":{
+                     "text":"Drops from Saqawal (Einhar Boss)."
+                  }
+               }
+            },
+            "Sacrificial Garb":{
+               "text":null,
+               "items":{
+                  "Atziri's Splendour":{
+                     "text":"Drops from Uber Atziri."
+                  }
+               }
+            },
+            "Murder Boots":{
+               "text":null,
+               "items":{
+                  "Bubonic Trail":{
+                     "text":"Drops from Abyssal Depths."
+                  },
+                  "Voidwalker":{
+                     "text":"Drops from The Shaper."
+                  }
+               }
+            },
+            "Carnal Armour":{
+               "text":null,
+               "items":{
+                  "Shroud of the Lightless":{
+                     "text":"Drops from Abyssal Depths."
+                  },
+                  "Stasis Prison":{
+                     "text":"Drops from the Unrelenging Timeless Emblem."
+                  }
+               }
+            },
+            "Sorcerer Boots":{
+               "text":null,
+               "items":{
+                  "Doryani's Delusion":{
+                     "text":"Drops in Doryani's Machinarium."
+                  },
+                  "Steppan Eard":{
+                     "text":"Drops from Renegades Warband."
+                  }
+               }
+            },
+            "Riveted Gloves":{
+               "text":null,
+               "items":{
+                  "Command of the Pit":{
+                     "text":"Drops from Kurgal (Delve Boss)."
+                  }
+               }
+            },
+            "Crusader Boots":{
+               "text":null,
+               "items":{
+                  "Death's Door":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  }
+               }
+            },
+            "Legion Gloves":{
+               "text":null,
+               "items":{
+                  "Offering to the Serpent":{
+                     "text":"Drops from Cortex."
+                  }
+               }
+            },
+            "Great Crown":{
+               "text":null,
+               "items":{
+                  "Lightpoacher":{
+                     "text":"Drops from Abyssal Depths."
+                  },
+                  "Forbidden Shako":{
+                     "text":"Drops from Oshabi (Harvest Boss)."
+                  }
+               }
+            },
+            "Magistrate Crown":{
+               "text":null,
+               "items":{
+                  "Crown of the Tyrant":{
+                     "text":"Drops from Aul (Delve Boss)."
+                  },
+                  "Mask of the Stitched Demon":{
+                     "text":"Does not drop. Created with a Vial (Alva Temple)."
+                  },
+                  "Mask of the Spirit Drinker":{
+                     "text":"Drops from the Sanctum of Immortality in the Temple of Atzoatl."
+                  },
+                  "Mask of the Tribunal":{
+                     "text":"Drops from a Distant Memory boss."
+                  },
+                  "Craiceann's Chitin":{
+                     "text":"Drops from Craiceann (Einhar Boss)."
+                  }
+               }
+            },
+            "Callous Mask":{
+               "text":null,
+               "items":{
+                  "The Tempest's Binding":{
+                     "text":"Does not drop. Created from Harbinger Pieces."
+                  },
+                  "The Tempest's Liberation":{
+                     "text":"Does not drop. Created by upgrading Tempest's Binding via scroll."
+                  }
+               }
+            },
+            "Necromancer Circlet":{
+               "text":null,
+               "items":{
+                  "The Devouring Diadem":{
+                     "text":"Drops from Catarina (Jun Boss)."
+                  },
+                  "Fenumus' Toxins":{
+                     "text":"Drops from Fenumus (Einhar Boss)."
+                  }
+               }
+            },
+            "Elegant Ringmail":{
+               "text":null,
+               "items":{
+                  "Loreweave":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Ezomyte Tower Shield":{
+               "text":null,
+               "items":{
+                  "The Surrender":{
+                     "text":"Drops from Uul-Netol's Flawless Breachstone."
+                  },
+                  "The Anticipation":{
+                     "text":"Drops from Uul-Netol's Breach or Breachstone."
+                  }
+               }
+            },
+            "Ambush Mitts":{
+               "text":null,
+               "items":{
+                  "Slavedriver's Hand":{
+                     "text":"Does not drop. Created with a Vial."
+                  },
+                  "Architect's Hand":{
+                     "text":"Drops from the Defense Research Lab in the Temple of Atzoatl."
+                  },
+                  "Abhorrent Interrogation":{
+                     "text":"Drops from Oshabi (Harvest Boss)."
+                  }
+               }
+            },
+            "Widowsilk Robe":{
+               "text":null,
+               "items":{
+                  "Fenumus' Shroud":{
+                     "text":"Drops from Fenumus (Einhar Boss)."
+                  }
+               }
+            },
+            "Carnal Boots":{
+               "text":null,
+               "items":{
+                  "Omeyocan":{
+                     "text":"Does not drop. Created with a Vial (Alva Temple)."
+                  },
+                  "Dance of the Offered":{
+                     "text":"Drops from the Lightning Workshop in the Temple of Atzoatl."
+                  }
+               }
+            },
+            "Hubris Circlet":{
+               "text":null,
+               "items":{
+                  "Indigon":{
+                     "text":"Drops from The Uber Elder."
+                  }
+               }
+            },
+            "Archon Kite Shield":{
+               "text":null,
+               "items":{
+                  "Invictus Solaris":{
+                     "text":"Drops from the Twilight Temple."
+                  },
+                  "Unyielding Flame":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  },
+                  "Broken Faith":{
+                     "text":"Drops from Renegades Warband."
+                  },
+                  "The Unshattered Will":{
+                     "text":"Does not drop. Created from Harbinger Pieces."
+                  },
+                  "The Immortal Will":{
+                     "text":"Does not drop. Created with a Scroll."
+                  }
+               }
+            },
+            "Golden Plate":{
+               "text":null,
+               "items":{
+                  "Craiceann's Carapace":{
+                     "text":"Drops from Craiceann (Einhar Boss)."
+                  }
+               }
+            },
+            "Carnal Mitts":{
+               "text":null,
+               "items":{
+                  "Fenumus' Weave":{
+                     "text":"Drops from Fenumus (Einhar Boss)."
+                  },
+                  "Soul Ascension":{
+                     "text":"Drops from The Uber Uber Elder."
+                  }
+               }
+            },
+            "Titan Greaves":{
+               "text":null,
+               "items":{
+                  "The Red Trail":{
+                     "text":"Drops from Uul-Netol's Flawless Breachstone."
+                  },
+                  "The Infinite Pursuit":{
+                     "text":"Drops from Uul-Netol's Breach or Breachstone."
+                  },
+                  "Doryani's Delusion":{
+                     "text":"Drops in Doryani's Machinarium."
+                  }
+               }
+            },
+            "Vaal Mask":{
+               "text":null,
+               "items":{
+                  "The Vertex":{
+                     "text":"Drops from Uber Atziri."
+                  }
+               }
+            },
+            "Tarnished Spirit Shield":{
+               "text":null,
+               "items":{
+                  "Brinerot Flag":{
+                     "text":"Drops from Brinerot Warband."
+                  }
+               }
+            },
+            "Zodiac Leather":{
+               "text":null,
+               "items":{
+                  "The Perfect Form":{
+                     "text":"Drops from Tul's Flawless Breachstone."
+                  },
+                  "The Snowblind Grace":{
+                     "text":"Drops from Tul's Breach or Breachstone."
+                  }
+               }
+            },
+            "Blunt Arrow Quiver":{
+               "text":null,
+               "items":{
+                  "The Fracturing Spinner":{
+                     "text":"Does not drop. Created from Harbinger Pieces."
+                  },
+                  "The Shattered Divinity":{
+                     "text":"Does not drop. Created by upgrading Fracturing Spinner with a Scroll."
+                  }
+               }
+            },
+            "Pinnacle Tower Shield":{
+               "text":null,
+               "items":{
+                  "Magna Eclipsis":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Harlequin Mask":{
+               "text":null,
+               "items":{
+                  "Farrul's Bite":{
+                     "text":"Drops from Farrul (Einhar Boss)."
+                  }
+               }
+            },
+            "Prophet Crown":{
+               "text":null,
+               "items":{
+                  "Crown of the Inward Eye":{
+                     "text":"Drops from Sirus."
+                  }
+               }
+            },
+            "Vaal Regalia":{
+               "text":null,
+               "items":{
+                  "The Queen's Hunger":{
+                     "text":"Drops from Catarina (Jun Boss)."
+                  }
+               }
+            },
+            "Savant's Robe":{
+               "text":null,
+               "items":{
+                  "Cloak of Tawm'r Isley":{
+                     "text":"Drops from Elreon's chest in a Syndicate Safehouse."
+                  },
+                  "Garb of the Ephemeral":{
+                     "text":"Drops from Cortex."
+                  }
+               }
+            },
+            "Assassin's Boots":{
+               "text":null,
+               "items":{
+                  "Fenumus' Spinnerets":{
+                     "text":"Drops from Fenumus (Einhar Boss)."
+                  },
+                  "The Stampede":{
+                     "text":"Drops in Blighted Maps."
+                  }
+               }
+            },
+            "Varnished Coat":{
+               "text":null,
+               "items":{
+                  "The Admiral":{
+                     "text":"Drops from Admiral Darnaw (Unique Heist Contract Boss)"
+                  }
+               }
+            },
+            "Crusader Gloves":{
+               "text":null,
+               "items":{
+                  "Shaper's Touch":{
+                     "text":"Drops from The Shaper."
+                  },
+                  "Hands of the High Templar":{
+                     "text":"Drops from Sirus."
+                  }
+               }
+            },
+            "Ancient Gauntlets":{
+               "text":null,
+               "items":{
+                  "Winds of Change":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  },
+                  "Hateforge":{
+                     "text":"Drops from The Trialmaster."
+                  }
+               }
+            },
+            "Slink Boots":{
+               "text":null,
+               "items":{
+                  "Farrul's Chase":{
+                     "text":"Drops from Farrul (Einhar Boss)."
+                  },
+                  "Doryani's Delusion":{
+                     "text":"Drops in Doryani's Machinarium."
+                  },
+                  "Atziri's Step":{
+                     "text":"Drops from Atziri."
+                  }
+               }
+            },
+            "Hydrascale Gauntlets":{
+               "text":null,
+               "items":{
+                  "Farrul's Pounce":{
+                     "text":"Drops from Farrul (Einhar Boss)."
+                  },
+                  "Breathstealer":{
+                     "text":"Drops in Blighted Maps."
+                  }
+               }
+            },
+            "Royal Burgonet":{
+               "text":null,
+               "items":{
+                  "The Formless Inferno":{
+                     "text":"Drops from Xoph's Flawless Breachstone."
+                  },
+                  "The Formless Flame":{
+                     "text":"Drops from Xoph's Breach or Breachstone."
+                  },
+                  "Echoes of Creation":{
+                     "text":"Drops from The Shaper."
+                  }
+               }
+            },
+            "Zealot Gloves":{
+               "text":null,
+               "items":{
+                  "Hand of the Fervent":{
+                     "text":"Does not drop. Sold in Ritual."
+                  }
+               }
+            },
+            "Cardinal Round Shield":{
+               "text":null,
+               "items":{
+                  "Vix Lunaris":{
+                     "text":"Drops from the Twilight Temple."
+                  }
+               }
+            },
+            "Mind Cage":{
+               "text":null,
+               "items":{
+                  "Hale Negator":{
+                     "text":"Drops from Kurgal (Delve Boss)."
+                  }
+               }
+            },
+            "Goliath Greaves":{
+               "text":null,
+               "items":{
+                  "Craiceann's Tracks":{
+                     "text":"Drops from Craiceann (Einhar Boss)."
+                  }
+               }
+            },
+            "Ezomyte Burgonet":{
+               "text":null,
+               "items":{
+                  "Cowl of the Thermophile":{
+                     "text":"Drops from Blighted Maps."
+                  }
+               }
+            },
+            "Titanium Spirit Shield":{
+               "text":null,
+               "items":{
+                  "Bitterbind Point":{
+                     "text":"Drops from Catarina (Jun Boss)."
+                  }
+               }
+            },
+            "Silken Hood":{
+               "text":null,
+               "items":{
+                  "Saqawal's Flock":{
+                     "text":"Drops from Saqawal (Einhar Boss)."
+                  },
+                  "Cowl of the Cryophile":{
+                     "text":"Drops from Blighted Map."
+                  }
+               }
+            },
+            "Praetor Crown":{
+               "text":null,
+               "items":{
+                  "Viridi's Veil":{
+                     "text":"Drops from The Maven."
+                  }
+               }
+            },
+            "Hydrascale Boots":{
+               "text":null,
+               "items":{
+                  "Saqawal's Talons":{
+                     "text":"Drops from Saqawal (Einhar Boss)."
+                  }
+               }
+            },
+            "Soldier Gloves":{
+               "text":null,
+               "items":{
+                  "Saqawal's Winds":{
+                     "text":"Drops from Saqawal (Einhar Boss)."
+                  }
+               }
+            },
+            "Titan Gauntlets":{
+               "text":null,
+               "items":{
+                  "Craiceann's Pincers":{
+                     "text":"Drops from Craiceann (Einhar Boss)."
+                  }
+               }
+            },
+            "Trapper Boots":{
+               "text":null,
+               "items":{
+                  "Brinerot Whalers":{
+                     "text":"Drops from Brinerot Warband."
+                  }
+               }
+            },
+            "Solaris Circlet":{
+               "text":null,
+               "items":{
+                  "Cowl of the Ceraunophile":{
+                     "text":"Drops from Blighted Map."
+                  }
+               }
+            },
+            "Mirrored Spiked Shield":{
+               "text":null,
+               "items":{
+                  "Font of Thunder":{
+                     "text":"Found in a Curio Display in Heist."
+                  }
+               }
+            },
+            "Regicide Mask":{
+               "text":null,
+               "items":{
+                  "Gorgon's Gaze":{
+                     "text":"Drops from Pillars of Arun boss."
+                  }
+               }
+            },
+            "Dragonscale Boots":{
+               "text":null,
+               "items":{
+                  "Annihilation's Approach":{
+                     "text":"Drops from The Uber Searing Exarch."
+                  }
+               }
+            },
+            "Enameled Buckler":{
+               "text":null,
+               "items":{
+                  "Mutewind Pennant":{
+                     "text":"Drops from Mutewind Warband."
+                  }
+               }
+            },
+            "Serpentscale Boots":{
+               "text":null,
+               "items":{
+                  "Mutewind Whispersteps":{
+                     "text":"Drops from Mutewind Warband."
+                  }
+               }
+            },
+            "Broadhead Arrow Quiver":{
+               "text":null,
+               "items":{
+                  "Steelworm":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  }
+               }
+            },
+            "Painted Tower Shield":{
+               "text":null,
+               "items":{
+                  "Redblade Banner":{
+                     "text":"Drops from Redblade Warband."
+                  }
+               }
+            },
+            "Ancient Greaves":{
+               "text":null,
+               "items":{
+                  "Redblade Tramplers":{
+                     "text":"Drops from Redblade Warband."
+                  }
+               }
+            },
+            "Assassin's Mitts":{
+               "text":null,
+               "items":{
+                  "Blasphemer's Grasp":{
+                     "text":"Drops from The Elder."
+                  },
+                  "Storm's Gift":{
+                     "text":"Drops from a Distant Memory boss."
+                  },
+                  "Entropic Devastation":{
+                     "text":"Drops from The Uber Shaper."
+                  }
+               }
+            },
+            "Colossal Tower Shield":{
+               "text":null,
+               "items":{
+                  "Dawnbreaker":{
+                     "text":"Drops from The Searing Exarch."
+                  }
+               }
+            },
+            "Sentinel Jacket":{
+               "text":null,
+               "items":{
+                  "Expedition's End":{
+                     "text":"Found in a Curio Display in Heist."
+                  }
+               }
+            },
+            "Bone Circlet":{
+               "text":null,
+               "items":{
+                  "Plume of Pursuit":{
+                     "text":"Drops from Janaar (Harvest Boss)."
+                  }
+               }
+            },
+            "Chiming Spirit Shield":{
+               "text":null,
+               "items":{
+                  "The Scales of Justice":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  }
+               }
+            },
+            "Shagreen Boots":{
+               "text":null,
+               "items":{
+                  "Temptation Step":{
+                     "text":"Drops from The Trialmaster."
+                  }
+               }
+            },
+            "Lacquered Helmet":{
+               "text":null,
+               "items":{
+                  "The Fledgling":{
+                     "text":"Drops from Nashta (Unique Heist Contract Boss)."
+                  }
+               }
+            },
+            "Leather Belt":{
+               "text":null,
+               "items":{
+                  "Hyperboreus":{
+                     "text":"Drops from Syndicate Safehouse."
+                  },
+                  "Cyclopean Coil":{
+                     "text":"Drops from The Elder."
+                  },
+                  "Bear's Girdle":{
+                     "text":"Drops from Ersi (Harvest Boss)."
+                  }
+               }
+            },
+            "Paua Amulet":{
+               "text":null,
+               "items":{
+                  "Zerphi's Heart":{
+                     "text":"Does not drop. Created with a Vial."
+                  },
+                  "Sacrificial Heart":{
+                     "text":"Drops from The Vaal Omnitect."
+                  }
+               }
+            },
+            "Jade Amulet":{
+               "text":null,
+               "items":{
+                  "The Pandemonius":{
+                     "text":"Drops from Tul's Flawless Breachstone."
+                  },
+                  "The Halcyon":{
+                     "text":"Drops from Tul's Breach or Breachstone."
+                  }
+               }
+            },
+            "Amber Amulet":{
+               "text":null,
+               "items":{
+                  "Xoph's Blood":{
+                     "text":"Drops from Xoph's Flawless Breachstone."
+                  },
+                  "Xoph's Heart":{
+                     "text":"Drops from Xoph's Breach or Breachstone."
+                  }
+               }
+            },
+            "Onyx Amulet":{
+               "text":null,
+               "items":{
+                  "Solstice Vigil":{
+                     "text":"Drops from The Shaper."
+                  },
+                  "Presence of Chayula":{
+                     "text":"Does not drop. Created with a Blessing of Chayula."
+                  },
+                  "Aul's Uprising":{
+                     "text":"Drops from Aul (Delve Boss)."
+                  },
+                  "Impresence":{
+                     "text":"Drops from The Elder."
+                  },
+                  "Stranglegasp":{
+                     "text":"Drops from Blight-ravaged map."
+                  },
+                  "Ashes of the Stars":{
+                     "text":"Drops from The Eater of Worlds."
+                  },
+                  "Crystallised Omniscience":{
+                     "text":"Drops from The Searing Exarch."
+                  },
+                  "The Eternal Struggle":{
+                     "text":"Drops from The Black Star and from The Infinite Hunger."
+                  },
+                  "Leadership's Price":{
+                     "text":"Drops from Contract: The Twins (Unique Heist Contact Boss)."
+                  }
+               }
+            },
+            "Topaz Ring":{
+               "text":null,
+               "items":{
+                  "Putembo's Mountain":{
+                     "text":"Drops from Aul (Delve Boss)."
+                  },
+                  "Putembo's Meadow":{
+                     "text":"Drops from Kurgal (Delve Boss)."
+                  },
+                  "Putembo's Valley":{
+                     "text":"Drops from Ahuatotli (Delve Boss)."
+                  },
+                  "Precursor's Emblem":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  },
+                  "Circle of Regret":{
+                     "text":"Drops from a Distant Memory boss."
+                  },
+                  "Astral Projector":{
+                     "text":"Drops from Metamorph in Tane's Lab."
+                  },
+                  "Nimis":{
+                     "text":"Drops from The Uber Eater of Worlds."
+                  }
+               }
+            },
+            "Prismatic Ring":{
+               "text":null,
+               "items":{
+                  "The Taming":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  },
+                  "Precursor's Emblem":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Two-Stone Ring":{
+               "text":null,
+               "items":{
+                  "Precursor's Emblem":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Ruby Ring":{
+               "text":null,
+               "items":{
+                  "Precursor's Emblem":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  },
+                  "Ahkeli's Meadow":{
+                     "text":"Drops from Aul (Delve Boss)."
+                  },
+                  "Ahkeli's Valley":{
+                     "text":"Drops from Kurgal (Delve Boss)."
+                  },
+                  "Ahkeli's Mountain":{
+                     "text":"Drops from Ahuatotli (Delve Boss)."
+                  },
+                  "Circle of Anguish":{
+                     "text":"Drops from a Distant Memory boss."
+                  },
+                  "Warrior's Legacy":{
+                     "text":"Drops from Metamorph in Tane's Lab."
+                  }
+               }
+            },
+            "Sapphire Ring":{
+               "text":null,
+               "items":{
+                  "Precursor's Emblem":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  },
+                  "Uzaza's Valley":{
+                     "text":"Drops from Aul (Delve Boss)."
+                  },
+                  "Uzaza's Mountain":{
+                     "text":"Drops from Kurgal (Delve Boss)."
+                  },
+                  "Uzaza's Meadow":{
+                     "text":"Drops from Ahuatotli (Delve Boss)."
+                  },
+                  "Circle of Fear":{
+                     "text":"Drops from a Distant Memory boss."
+                  },
+                  "Call of the Void":{
+                     "text":"Drops from The Uber Elder."
+                  }
+               }
+            },
+            "Lapis Amulet":{
+               "text":null,
+               "items":{
+                  "Choir of the Storm":{
+                     "text":"Drops from Esh's Flawless Breachstone."
+                  },
+                  "Voice of the Storm":{
+                     "text":"Drops from Esh's Breach or Breachstone."
+                  }
+               }
+            },
+            "Unset Ring":{
+               "text":null,
+               "items":{
+                  "The Pariah":{
+                     "text":"Drops from Renegades Warband."
+                  },
+                  "Vivinsect":{
+                     "text":"Drops from Syndicate Safehouse."
+                  },
+                  "Brinerot Mark":{
+                     "text":"Drops from Brinerot Warband."
+                  },
+                  "Redblade Band":{
+                     "text":"Drops from Redblade Warband."
+                  },
+                  "Mutewind Seal":{
+                     "text":"Drops from Mutewind Warband."
+                  },
+                  "Rotblood Promise":{
+                     "text":"Does not drop. Sold in Ritual."
+                  },
+                  "Triumvirate Authority":{
+                     "text":"Drops from Atziri and Uber Atziri."
+                  }
+               }
+            },
+            "Chain Belt":{
+               "text":null,
+               "items":{
+                  "Coward's Legacy":{
+                     "text":"Does not drop. Created with a Vial."
+                  },
+                  "Coward's Chains":{
+                     "text":"Drops from the Hybridization Chamber in the Temple of Atzoatl."
+                  },
+                  "Chains of Emancipation":{
+                     "text":"Drops from Friedrich Tarollo (Unique Heist Contact Boss)."
+                  }
+               }
+            },
+            "Heavy Belt":{
+               "text":null,
+               "items":{
+                  "Doryani's Invitation":{
+                     "text":"Drops from Atziri."
+                  },
+                  "Mother's Embrace":{
+                     "text":"Drops from Metamorph in Tane's Lab."
+                  },
+                  "Survivor's Guilt":{
+                     "text":"Does not drop. Sold in Ritual."
+                  }
+               }
+            },
+            "Opal Ring":{
+               "text":null,
+               "items":{
+                  "Mark of the Shaper":{
+                     "text":"Drops from The Uber Elder."
+                  },
+                  "Polaric Devastation":{
+                     "text":"Drops from The Black Star."
+                  }
+               }
+            },
+            "Cloth Belt":{
+               "text":null,
+               "items":{
+                  "The Flow Untethered":{
+                     "text":"Does not drop. Created from Harbinger Pieces."
+                  },
+                  "The Torrent's Reclamation":{
+                     "text":"Does not drop. Created by upgrading Flow Untethered with a Scroll."
+                  },
+                  "Arn's Anguish":{
+                     "text":"Drops from The Maven."
+                  },
+                  "Olesya's Delight":{
+                     "text":"Drops from The Maven."
+                  },
+                  "Graven's Secret":{
+                     "text":"Drops from The Maven."
+                  }
+               }
+            },
+            "Rustic Sash":{
+               "text":null,
+               "items":{
+                  "The Retch":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Citrine Amulet":{
+               "text":null,
+               "items":{
+                  "The Felbog Fang":{
+                     "text":"Drops from Namharim (Harvest Boss)."
+                  }
+               }
+            },
+            "Iron Ring":{
+               "text":null,
+               "items":{
+                  "Circle of Guilt":{
+                     "text":"Drops from a Distant Memory boss."
+                  }
+               }
+            },
+            "Paua Ring":{
+               "text":null,
+               "items":{
+                  "Fated End":{
+                     "text":"Found in a Curio Display in Heist."
+                  }
+               }
+            },
+            "Steel Ring":{
+               "text":null,
+               "items":{
+                  "Mark of the Elder":{
+                     "text":"Drops from The Uber Elder."
+                  }
+               }
+            },
+            "Amethyst Ring":{
+               "text":null,
+               "items":{
+                  "Circle of Nostalgia":{
+                     "text":"Drops from a Distant Memory boss."
+                  },
+                  "Blackflame":{
+                     "text":"Does not drop. Sold in Ritual."
+                  }
+               }
+            },
+            "Crystal Belt":{
+               "text":null,
+               "items":{
+                  "The Burden of Truth":{
+                     "text":"Drops from Sirus."
+                  }
+               }
+            },
+            "Stygian Vise":{
+               "text":null,
+               "items":{
+                  "Darkness Enthroned":{
+                     "text":"Drops from Abyssal Depths."
+                  }
+               }
+            },
+            "Turquoise Amulet":{
+               "text":null,
+               "items":{
+                  "Fury Valve":{
+                     "text":"Drops from Metamorph in Tane's Lab."
+                  }
+               }
+            },
+            "Steel Circlet":{
+               "text":null,
+               "items":{
+                  "Sudden Dawn":{
+                     "text":"Drops from The Black Star."
+                  }
+               }
+            },
+            "Saint's Hauberk":{
+               "text":null,
+               "items":{
+                  "Sporeguard":{
+                     "text":"Drops from Blighted Map."
+                  }
+               }
+            },
+            "Ezomyte Spiked Shield":{
+               "text":null,
+               "items":{
+                  "Perepiteia":{
+                     "text":"Drops from a Distant Memory boss."
+                  }
+               }
+            },
+            "Steel Kite Shield":{
+               "text":null,
+               "items":{
+                  "Mahuxotl's Machination":{
+                     "text":"Drops from The Trialmaster."
+                  }
+               }
+            },
+            "Butcher Axe":{
+               "text":null,
+               "items":{
+                  "Actum":{
+                     "text":"Found in a Curio Display in Heist."
+                  }
+               }
+            },
+            "Fluted Bascinet":{
+               "text":null,
+               "items":{
+                  "Crest of Desire":{
+                     "text":"Found in a Curio Display in Heist."
+                  }
+               }
+            },
+            "Crimson Round Shield":{
+               "text":null,
+               "items":{
+                  "Shattershard":{
+                     "text":"Found in a Curio Display in Heist."
+                  }
+               }
+            },
+            "Bone Helmet":{
+               "text":null,
+               "items":{
+                  "Maw of Mischief":{
+                     "text":"Does not drop. Obtained from a Divination Card set."
+                  }
+               }
+            },
+            "Wyrmscale Boots":{
+               "text":null,
+               "items":{
+                  "Legacy of Fury":{
+                     "text":"Drops from The Maven."
+                  }
+               }
+            },
+            "Sovereign Spiked Shield":{
+               "text":null,
+               "items":{
+                  "Qotra's Regulator":{
+                     "text":"Does not drop. Sold in Ritual."
+                  }
+               }
+            },
+            "Iron Flask":{
+               "text":null,
+               "items":{
+                  "Olroth's Resolve":{
+                     "text":"Drops from Olroth (expedition boss)."
+                  },
+                  "Starlight Chalice":{
+                     "text":"Drops from Uthred (expedition boss)."
+                  },
+                  "Vorana's Preparation":{
+                     "text":"Drops from Vorana (expedition boss)."
+                  },
+                  "Elixir of the Unbroken Circle":{
+                     "text":"Drops from Medved (expedition boss)."
+                  }
+               }
+            },
+            "Runic Crown":{
+               "text":null,
+               "items":{
+                  "Cadigan's Crown":{
+                     "text":"Drops from Olroth (expedition boss)."
+                  }
+               }
+            },
+            "Runic Sabatons":{
+               "text":null,
+               "items":{
+                  "Vorana's March":{
+                     "text":"Drops from Olroth (expedition boss)."
+                  }
+               }
+            },
+            "Runic Sollerets":{
+               "text":"Drops from Expedition."
+            },
+            "Runic Helm":{
+               "text":"Drops from Expedition."
+            },
+            "Runic Gages":{
+               "text":"Drops from Expedition."
+            },
+            "Runic Gauntlets":{
+               "text":"Drops from Expedition."
+            },
+            "Unset Amulet":{
+               "text":null,
+               "items":{
+                  "Uul-Netol's Vow":{
+                     "text":"Drops from Flawless Breachstone."
+                  }
+               }
+            },
+            "Quarterstaff":{
+               "text":null,
+               "items":{
+                  "The Annihilating Light":{
+                     "text":"Drops from The Searing Exarch."
+                  }
+               }
+            },
+            "Primal Arrow Quiver":{
+               "text":null,
+               "items":{
+                  "Voidfletcher":{
+                     "text":"Drops from The Uber Elder."
+                  }
+               }
+            },
+            "Fingerless Silk Gloves":{
+               "text":null,
+               "items":{
+                  "Black Zenith":{
+                     "text":"Drops from The Infinite Hunger."
+                  }
+               }
+            },
+            "Spiked Gloves":{
+               "text":null,
+               "items":{
+                  "Ceaseless Feast":{
+                     "text":"Drops from The Infinite Hunger."
+                  }
+               }
+            },
+            "Fugitive Boots":{
+               "text":null,
+               "items":{
+                  "Inextricable Fate":{
+                     "text":"Drops from The Eater of Worlds."
+                  }
+               }
+            },
+            "Vaal Greaves":{
+               "text":null,
+               "items":{
+                  "Dawnstrider":{
+                     "text":"Drops from The Searing Exarch."
+                  }
+               }
+            },
+            "Prismatic Jewel":{
+               "text":null,
+               "items":{
+                  "Emperor's Mastery":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  },
+                  "Watcher's Eye":{
+                     "text":"Drops from The Elder."
+                  },
+                  "Sublime Vision":{
+                     "text":"Drops from The Uber Shaper."
+                  },
+                  "Anima Stone":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Large Cluster Jewel":{
+               "text":"Drops from Simulacrum."
+            },
+            "Timeless Jewel":{
+               "text":"Drops from Domain of Timeless Conflict"
+            },
+            "Medium Cluster Jewel":{
+               "text":"Drops from Simulacrum."
+            },
+            "Small Cluster Jewel":{
+               "text":"Drops from Delirious Maps."
+            },
+            "Ghastly Eye Jewel":{
+               "text":null,
+               "items":{
+                  "Amanamu's Gaze":{
+                     "text":"Drops from Abyssal Depths."
+                  }
+               }
+            },
+            "Hypnotic Eye Jewel":{
+               "text":null,
+               "items":{
+                  "Kurgal's Gaze":{
+                     "text":"Drops from Abyssal Depths."
+                  }
+               }
+            },
+            "Searching Eye Jewel":{
+               "text":null,
+               "items":{
+                  "Ulaman's Gaze":{
+                     "text":"Drops from Abyssal Depths."
+                  }
+               }
+            },
+            "Murderous Eye Jewel":{
+               "text":null,
+               "items":{
+                  "Tecrod's Gaze":{
+                     "text":"Drops from Abyssal Depths."
+                  }
+               }
+            },
+            "Cobalt Jewel":{
+               "text":null,
+               "items":{
+                  "Grand Spectrum":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  },
+                  "Emperor's Wit":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  },
+                  "Apex Mode":{
+                     "text":"Drops from Contract: Breaking the Unbreakable."
+                  },
+                  "Nadir Mode":{
+                     "text":"Drops from Contract: Breaking the Unbreakable."
+                  },
+                  "Melding of the Flesh":{
+                     "text":"Drops from The Eater of Worlds."
+                  },
+                  "Primordial Harmony":{
+                     "text":"Drops from Primeval Chamber in Delve."
+                  },
+                  "Rational Doctrine":{
+                     "text":"Drops from Uber Cortex."
+                  },
+                  "Tempered Mind":{
+                     "text":"Drops from The Vaal Omnitect."
+                  },
+                  "The Blue Dream":{
+                     "text":"Drops from Chayula's Breach or Breachstone."
+                  },
+                  "The Blue Nightmare":{
+                     "text":"Drops from Chayula's Flawless Breachstone."
+                  },
+                  "Transcendent Mind":{
+                     "text":"Does not drop. Created with a Vial."
+                  },
+                  "Brute Force Solution":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Energy From Within":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Fertile Mind":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Fevered Mind":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Fortress Covenant":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Healthy Mind":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Powerlessness":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Reckless Defence":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Soul's Wick":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "To Dust":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Combat Focus":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  },
+                  "Endless Misery":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Viridian Jewel":{
+               "text":null,
+               "items":{
+                  "Grand Spectrum":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  },
+                  "Emperor's Cunning":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  },
+                  "Primordial Eminence":{
+                     "text":"Drops from Primeval Chamber in Delve."
+                  },
+                  "Tempered Spirit":{
+                     "text":"Drops from The Vaal Omnitect."
+                  },
+                  "Transcendent Spirit":{
+                     "text":"Does not drop. Created with a Vial."
+                  },
+                  "The Green Dream":{
+                     "text":"Drops from Chayula's Breach or Breachstone."
+                  },
+                  "The Green Nightmare":{
+                     "text":"Drops from Chayula's Flawless Breachstone."
+                  },
+                  "Careful Planning":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Chill of Corruption":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Fluid Motion":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Hidden Potential":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Pacifism":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Quickening Covenant":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Seething Fury":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Self-Flagellation":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "The Golden Rule":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Combat Focus":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  },
+                  "Spirit Guards":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  }
+               }
+            },
+            "Crimson Jewel":{
+               "text":null,
+               "items":{
+                  "Grand Spectrum":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  },
+                  "Emperor's Might":{
+                     "text":"Drops from The Lord's Labyrinth."
+                  },
+                  "Dissolution of the Flesh":{
+                     "text":"Drops from The Searing Exarch."
+                  },
+                  "Primordial Might":{
+                     "text":"Drops from Primeval Chamber in Delve."
+                  },
+                  "Split Personality":{
+                     "text":"Drops from Simulacrum."
+                  },
+                  "Thread of Hope":{
+                     "text":"Drops from Sirus."
+                  },
+                  "Tempered Flesh":{
+                     "text":"Drops from The Vaal Omnitect."
+                  },
+                  "The Red Nightmare":{
+                     "text":"Drops from Chayula's Flawless Breachstone."
+                  },
+                  "The Red Dream":{
+                     "text":"Drops from Chayula's Breach or Breachstone."
+                  },
+                  "Transcendent Flesh":{
+                     "text":"Does not drop. Created with a Vial."
+                  },
+                  "Combat Focus":{
+                     "text":"Does not drop. Created with a vendor recipe."
+                  },
+                  "Atziri's Reign":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Efficient Training":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Energised Armour":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Fragility":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Inertia":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  },
+                  "Rain of Splinters":{
+                     "text":"Overridden in Exceptions. Only Drops Corrupted."
+                  }
+               }
+            }            
+         }
       }
-    },
-
-    "DivinationCard": {
-      "items": {}
-    },
-
-    "Fragment": {
-      "items": {}
-    },
-
-    "Scarab": {
-      "items": {}
-    },
-
-    "UniqueMap": {
-      "items": {}
-    },
-    
-     "Uniques":{
-        "items":{
-           "Simple Robe":{
-              "comment":"COMMENT: the text property below provides infos about a whole basetype",
-              "text":null,
-              "items":{
-                 "Tabula Rasa":{
-                    "comment":"COMMENT: the text property below provides infos about an individual unique",
-                    "text":"Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets."
-                 }
-              }
-           },
-           "Elegant Round Shield":{
-              "text":null,
-              "items":{
-                 "The Squire":{
-                    "text":"Detected via a special rule (using the 3 white sockets)! The oppressor can be safely hidden in the unique tierlist."
-                 }
-              }
-           },
-           "Maelström Staff":{
-              "text":null,
-              "items":{
-                 "Duskdawn":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 },
-                 "Disintegrator":{
-                    "text":"Drops from The Uber Elder."
-                 }
-              }
-           },
-           "Cutlass":{
-              "text":null,
-              "items":{
-                 "United in Dream":{
-                    "text":"Drops from Chayula's Flawless Breachstone."
-                 },
-                 "Severed in Sleep":{
-                    "text":"Drops from Chayula's Breach or Breachstone."
-                 }
-              }
-           },
-           "Sage Wand":{
-              "text":null,
-              "items":{
-                 "Relic of the Pact":{
-                    "text":"Drops from The Trialmaster."
-                 }
-              }
-           },
-           "Assassin Bow":{
-              "text":null,
-              "items":{
-                 "Arborix":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 }
-              }
-           },
-           "Vaal Axe":{
-              "text":null,
-              "items":{
-                 "Atziri's Disfavour":{
-                    "text":"Drops from Uber Atziri."
-                 },
-                 "Uul-Netol's Embrace":{
-                    "text":"Drops from Uul-Netol's Flawless Breachstone."
-                 },
-                 "Uul-Netol's Kiss":{
-                    "text":"Drops from Uul-Netol's Breach or Breachstone."
-                 }
-              }
-           },
-           "Vaal Sceptre":{
-              "text":null,
-              "items":{
-                 "Doryani's Catalyst":{
-                    "text":"Drops from Atziri."
-                 },
-                 "Yaomac's Accord":{
-                    "text":"Drops from The Trialmaster."
-                 }
-              }
-           },
-           "Infernal Sword":{
-              "text":null,
-              "items":{
-                 "Starforge":{
-                    "text":"Overriden in Exceptions. Drops from The Shaper."
-                 },
-                 "Voidforge":{
-                    "text":"Overriden in Exceptions. Drops from The Uber Elder."
-                 },
-                 "Echoforge":{
-                    "text":"Drops from The Maven."
-                 }
-              }
-           },
-           "Judgement Staff":{
-              "text":null,
-              "items":{
-                 "Pledge of Hands":{
-                    "text":"Drops from Atziri."
-                 },
-                 "Atziri's Rule":{
-                    "text":"Drops from Uber Atziri."
-                 }
-              }
-           },
-           "Gemstone Sword":{
-              "text":null,
-              "items":{
-                 "Fate of the Vaal":{
-                    "text":"Does not drop. Created with a Vial."
-                 },
-                 "Story of the Vaal":{
-                    "text":"Drops from the Crucible of Flame in the Temple of Atzoatl."
-                 }
-              }
-           },
-           "Highborn Staff":{
-              "text":null,
-              "items":{
-                 "Witchhunter's Judgment":{
-                    "text":"Drops from Oshabi (Harvest Boss)."
-                 }
-              }
-           },
-           "Despot Axe":{
-              "text":null,
-              "items":{
-                 "Kingmaker":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 }
-              }
-           },
-           "Legion Sword":{
-              "text":null,
-              "items":{
-                 "The Rippling Thoughts":{
-                    "text":"Does not drop. Created from Harbinger Pieces."
-                 },
-                 "The Surging Thoughts":{
-                    "text":"Does not drop. Created by upgrading Rippling Thoughts via scroll."
-                 },
-                 "The Saviour":{
-                    "text":"Drops from Sirus."
-                 }
-              }
-           },
-           "Imperial Claw":{
-              "text":null,
-              "items":{
-                 "Hand of Wisdom and Action":{
-                    "text":"Drops from Esh's Flawless Breachstone."
-                 },
-                 "Hand of Thought and Motion":{
-                    "text":"Drops from Esh's Breach or Breachstone."
-                 }
-              }
-           },
-           "Vaal Rapier":{
-              "text":null,
-              "items":{
-                 "Paradoxica":{
-                    "text":"Drops from Syndicate Safehouse (Jun)."
-                 }
-              }
-           },
-           "Elegant Sword":{
-              "text":null,
-              "items":{
-                 "The Goddess Scorned":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 }
-              }
-           },
-           "Gavel":{
-              "text":null,
-              "items":{
-                 "Cameria's Avarice":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 }
-              }
-           },
-           "Blood Sceptre":{
-              "text":null,
-              "items":{
-                 "Cerberus Limb":{
-                    "text":"Drops from Ahuatotli (Delve)."
-                 }
-              }
-           },
-           "Imperial Staff":{
-              "text":null,
-              "items":{
-                 "The Enmity Divine":{
-                    "text":"Does not drop. Created from Harbinger Pieces."
-                 },
-                 "The Yielding Mortality":{
-                    "text":"Does not drop. Created by upgrading Enmity Divine via scroll."
-                 }
-              }
-           },
-           "Ezomyte Staff":{
-              "text":null,
-              "items":{
-                 "The Fulcrum":{
-                    "text":"Found in a Curio Display in Heist."
-                 }
-              }
-           },
-           "Tornado Wand":{
-              "text":null,
-              "items":{
-                 "Shimmeron":{
-                    "text":"Drops from The Elder."
-                 }
-              }
-           },
-           "Nightmare Mace":{
-              "text":null,
-              "items":{
-                 "Nebuloch":{
-                    "text":"Drops from The Elder."
-                 }
-              }
-           },
-           "Steelwood Bow":{
-              "text":null,
-              "items":{
-                 "The Crimson Storm":{
-                    "text":"Drops from Syndicate Safehouse (Jun)."
-                 }
-              }
-           },
-           "Coiled Staff":{
-              "text":null,
-              "items":{
-                 "Xirgil's Crank":{
-                    "text":"Drops from The Lord's Labyrinth."
-                 }
-              }
-           },
-           "Citadel Bow":{
-              "text":null,
-              "items":{
-                 "The Gluttonous Tide":{
-                    "text":"Drops from The Eater of Worlds."
-                 },
-                 "Xoph's Nurture":{
-                    "text":"Drops from Xoph's Flawless Breachstone."
-                 },
-                 "Xoph's Inception":{
-                    "text":"Drops from Xoph's Breach or Breachstone."
-                 }
-              }
-           },
-           "Hellion's Paw":{
-              "text":null,
-              "items":{
-                 "Law of the Wilds":{
-                    "text":"Drops from Oshabi (Harvest Boss)."
-                 }
-              }
-           },
-           "Ranger Bow":{
-              "text":null,
-              "items":{
-                 "Hopeshredder":{
-                    "text":"Drops from The Elder."
-                 }
-              }
-           },
-           "Void Sceptre":{
-              "text":null,
-              "items":{
-                 "Nebulis":{
-                    "text":"Drops from Cortex."
-                 }
-              }
-           },
-           "Opal Wand":{
-              "text":null,
-              "items":{
-                 "Tulfall":{
-                    "text":"Drops from Tul's Flawless Breachstone."
-                 },
-                 "Tulborn":{
-                    "text":"Drops from Tul's Breach or Breachstone."
-                 }
-              }
-           },
-           "Gladius":{
-              "text":null,
-              "items":{
-                 "The Iron Mass":{
-                    "text":"Found in a Curio Display in Heist."
-                 }
-              }
-           },
-           "Ambusher":{
-              "text":null,
-              "items":{
-                 "The Hidden Blade":{
-                    "text":"Found in a Curio Display in Heist."
-                 }
-              }
-           },
-           "Serpentine Staff":{
-              "text":null,
-              "items":{
-                 "Cane of Kulemak":{
-                    "text":"Drops from Catarina (Jun Boss)."
-                 }
-              }
-           },
-           "Quartz Flask":{
-              "text":null,
-              "items":{
-                 "Soul Ripper":{
-                    "text":"Does not drop. Created with a Vial (Alva Temple)."
-                 },
-                 "Soul Catcher":{
-                    "text":"Drops from The Vaal Omnitect (Alva Temple)."
-                 }
-              }
-           },
-           "Sulphur Flask":{
-              "text":null,
-              "items":{
-                 "Bottled Faith":{
-                    "text":"Drops from Cortex."
-                 }
-              }
-           },
-           "Ruby Flask":{
-              "text":null,
-              "items":{
-                 "Dying Sun":{
-                    "text":"Drops from The Shaper."
-                 },
-                 "Coruscating Elixir":{
-                    "text":"Does not drop. Obtained from a Divination Card set."
-                 }
-              }
-           },
-           "Silver Flask":{
-              "text":null,
-              "items":{
-                 "Cinderswallow Urn":{
-                    "text":"Drops from Catarina (Jun Boss)."
-                 }
-              }
-           },
-           "Bismuth Flask":{
-              "text":null,
-              "items":{
-                 "Oriath's End":{
-                    "text":"Drops from Sirus."
-                 }
-              }
-           },
-           "Topaz Flask":{
-              "text":null,
-              "items":{
-                 "Vessel of Vinktar":{
-                    "text":"Drops from The Vinktar Square."
-                 }
-              }
-           },
-           "Amethyst Flask":{
-              "text":null,
-              "items":{
-                 "Atziri's Promise":{
-                    "text":"Drops from Atziri."
-                 },
-                 "Progenesis":{
-                    "text":"Drops from The Uber Maven."
-                 }
-              }
-           },
-           "Golden Buckler":{
-              "text":null,
-              "items":{
-                 "Atziri's Reflection":{
-                    "text":"Drops from Uber Atziri."
-                 }
-              }
-           },
-           "Triumphant Lamellar":{
-              "text":null,
-              "items":{
-                 "Farrul's Fur":{
-                    "text":"Drops from Farrul (Einhar Boss)."
-                 }
-              }
-           },
-           "Sadist Garb":{
-              "text":null,
-              "items":{
-                 "Doppelgänger Guise":{
-                    "text":"Drops from The Maven."
-                 }
-              }
-           },
-           "Vaal Gauntlets":{
-              "text":null,
-              "items":{
-                 "Atziri's Acuity":{
-                    "text":"Drops from Uber Atziri."
-                 }
-              }
-           },
-           "Steelscale Gauntlets":{
-              "text":null,
-              "items":{
-                 "Tombfist":{
-                    "text":"Drops from Abyssal Depths."
-                 }
-              }
-           },
-           "Vaal Spirit Shield":{
-              "text":null,
-              "items":{
-                 "Apep's Supremacy":{
-                    "text":"Does not drop. Created with a Vial (Alva Temple)."
-                 },
-                 "Apep's Slumber":{
-                    "text":"Drops from the Cultivar Chamber in the Temple of Atzoatl."
-                 },
-                 "Esh's Visage":{
-                    "text":"Drops from Esh's Flawless Breachstone."
-                 },
-                 "Esh's Mirror":{
-                    "text":"Drops from Esh's Breach or Breachstone."
-                 }
-              }
-           },
-           "Blood Raiment":{
-              "text":null,
-              "items":{
-                 "The Eternity Shroud":{
-                    "text":"Drops from The Uber Elder."
-                 },
-                 "Saqawal's Nest":{
-                    "text":"Drops from Saqawal (Einhar Boss)."
-                 }
-              }
-           },
-           "Sacrificial Garb":{
-              "text":null,
-              "items":{
-                 "Atziri's Splendour":{
-                    "text":"Drops from Uber Atziri."
-                 }
-              }
-           },
-           "Murder Boots":{
-              "text":null,
-              "items":{
-                 "Bubonic Trail":{
-                    "text":"Drops from Abyssal Depths."
-                 },
-                 "Voidwalker":{
-                    "text":"Drops from The Shaper."
-                 }
-              }
-           },
-           "Carnal Armour":{
-              "text":null,
-              "items":{
-                 "Shroud of the Lightless":{
-                    "text":"Drops from Abyssal Depths."
-                 },
-                 "Stasis Prison":{
-                    "text":"Drops from the Unrelenging Timeless Emblem."
-                 }
-              }
-           },
-           "Sorcerer Boots":{
-              "text":null,
-              "items":{
-                 "Doryani's Delusion":{
-                    "text":"Drops in Doryani's Machinarium."
-                 },
-                 "Steppan Eard":{
-                    "text":"Drops from Renegades Warband."
-                 }
-              }
-           },
-           "Riveted Gloves":{
-              "text":null,
-              "items":{
-                 "Command of the Pit":{
-                    "text":"Drops from Kurgal (Delve Boss)."
-                 }
-              }
-           },
-           "Crusader Boots":{
-              "text":null,
-              "items":{
-                 "Death's Door":{
-                    "text":"Drops from The Lord's Labyrinth."
-                 }
-              }
-           },
-           "Legion Gloves":{
-              "text":null,
-              "items":{
-                 "Offering to the Serpent":{
-                    "text":"Drops from Cortex."
-                 }
-              }
-           },
-           "Great Crown":{
-              "text":null,
-              "items":{
-                 "Lightpoacher":{
-                    "text":"Drops from Abyssal Depths."
-                 },
-                 "Forbidden Shako":{
-                    "text":"Drops from Oshabi (Harvest Boss)."
-                 }
-              }
-           },
-           "Magistrate Crown":{
-              "text":null,
-              "items":{
-                 "Crown of the Tyrant":{
-                    "text":"Drops from Aul (Delve Boss)."
-                 },
-                 "Mask of the Stitched Demon":{
-                    "text":"Does not drop. Created with a Vial (Alva Temple)."
-                 },
-                 "Mask of the Spirit Drinker":{
-                    "text":"Drops from the Sanctum of Immortality in the Temple of Atzoatl."
-                 },
-                 "Mask of the Tribunal":{
-                    "text":"Drops from a Distant Memory boss."
-                 },
-                 "Craiceann's Chitin":{
-                    "text":"Drops from Craiceann (Einhar Boss)."
-                 }
-              }
-           },
-           "Callous Mask":{
-              "text":null,
-              "items":{
-                 "The Tempest's Binding":{
-                    "text":"Does not drop. Created from Harbinger Pieces."
-                 },
-                 "The Tempest's Liberation":{
-                    "text":"Does not drop. Created by upgrading Tempest's Binding via scroll."
-                 }
-              }
-           },
-           "Necromancer Circlet":{
-              "text":null,
-              "items":{
-                 "The Devouring Diadem":{
-                    "text":"Drops from Catarina (Jun Boss)."
-                 },
-                 "Fenumus' Toxins":{
-                    "text":"Drops from Fenumus (Einhar Boss)."
-                 }
-              }
-           },
-           "Elegant Ringmail":{
-              "text":null,
-              "items":{
-                 "Loreweave":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 }
-              }
-           },
-           "Ezomyte Tower Shield":{
-              "text":null,
-              "items":{
-                 "The Surrender":{
-                    "text":"Drops from Uul-Netol's Flawless Breachstone."
-                 },
-                 "The Anticipation":{
-                    "text":"Drops from Uul-Netol's Breach or Breachstone."
-                 }
-              }
-           },
-           "Ambush Mitts":{
-              "text":null,
-              "items":{
-                 "Slavedriver's Hand":{
-                    "text":"Does not drop. Created with a Vial."
-                 },
-                 "Architect's Hand":{
-                    "text":"Drops from the Defense Research Lab in the Temple of Atzoatl."
-                 },
-                 "Abhorrent Interrogation":{
-                    "text":"Drops from Oshabi (Harvest Boss)."
-                 }
-              }
-           },
-           "Widowsilk Robe":{
-              "text":null,
-              "items":{
-                 "Fenumus' Shroud":{
-                    "text":"Drops from Fenumus (Einhar Boss)."
-                 }
-              }
-           },
-           "Carnal Boots":{
-              "text":null,
-              "items":{
-                 "Omeyocan":{
-                    "text":"Does not drop. Created with a Vial (Alva Temple)."
-                 },
-                 "Dance of the Offered":{
-                    "text":"Drops from the Lightning Workshop in the Temple of Atzoatl."
-                 }
-              }
-           },
-           "Hubris Circlet":{
-              "text":null,
-              "items":{
-                 "Indigon":{
-                    "text":"Drops from The Uber Elder."
-                 }
-              }
-           },
-           "Archon Kite Shield":{
-              "text":null,
-              "items":{
-                 "Invictus Solaris":{
-                    "text":"Drops from the Twilight Temple."
-                 },
-                 "Unyielding Flame":{
-                    "text":"Drops from The Lord's Labyrinth."
-                 },
-                 "Broken Faith":{
-                    "text":"Drops from Renegades Warband."
-                 },
-                 "The Unshattered Will":{
-                    "text":"Does not drop. Created from Harbinger Pieces."
-                 },
-                 "The Immortal Will":{
-                    "text":"Does not drop. Created with a Scroll."
-                 }
-              }
-           },
-           "Golden Plate":{
-              "text":null,
-              "items":{
-                 "Craiceann's Carapace":{
-                    "text":"Drops from Craiceann (Einhar Boss)."
-                 }
-              }
-           },
-           "Carnal Mitts":{
-              "text":null,
-              "items":{
-                 "Fenumus' Weave":{
-                    "text":"Drops from Fenumus (Einhar Boss)."
-                 },
-                 "Soul Ascension":{
-                    "text":"Drops from The Uber Uber Elder."
-                 }
-              }
-           },
-           "Titan Greaves":{
-              "text":null,
-              "items":{
-                 "The Red Trail":{
-                    "text":"Drops from Uul-Netol's Flawless Breachstone."
-                 },
-                 "The Infinite Pursuit":{
-                    "text":"Drops from Uul-Netol's Breach or Breachstone."
-                 },
-                 "Doryani's Delusion":{
-                    "text":"Drops in Doryani's Machinarium."
-                 }
-              }
-           },
-           "Vaal Mask":{
-              "text":null,
-              "items":{
-                 "The Vertex":{
-                    "text":"Drops from Uber Atziri."
-                 }
-              }
-           },
-           "Tarnished Spirit Shield":{
-              "text":null,
-              "items":{
-                 "Brinerot Flag":{
-                    "text":"Drops from Brinerot Warband."
-                 }
-              }
-           },
-           "Zodiac Leather":{
-              "text":null,
-              "items":{
-                 "The Perfect Form":{
-                    "text":"Drops from Tul's Flawless Breachstone."
-                 },
-                 "The Snowblind Grace":{
-                    "text":"Drops from Tul's Breach or Breachstone."
-                 }
-              }
-           },
-           "Blunt Arrow Quiver":{
-              "text":null,
-              "items":{
-                 "The Fracturing Spinner":{
-                    "text":"Does not drop. Created from Harbinger Pieces."
-                 },
-                 "The Shattered Divinity":{
-                    "text":"Does not drop. Created by upgrading Fracturing Spinner with a Scroll."
-                 }
-              }
-           },
-           "Pinnacle Tower Shield":{
-              "text":null,
-              "items":{
-                 "Magna Eclipsis":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 }
-              }
-           },
-           "Harlequin Mask":{
-              "text":null,
-              "items":{
-                 "Farrul's Bite":{
-                    "text":"Drops from Farrul (Einhar Boss)."
-                 }
-              }
-           },
-           "Prophet Crown":{
-              "text":null,
-              "items":{
-                 "Gavel":{
-                    "text":"Drops from Sirus."
-                 }
-              }
-           },
-           "Vaal Regalia":{
-              "text":null,
-              "items":{
-                 "The Queen's Hunger":{
-                    "text":"Drops from Catarina (Jun Boss)."
-                 }
-              }
-           },
-           "Savant's Robe":{
-              "text":null,
-              "items":{
-                 "Cloak of Tawm'r Isley":{
-                    "text":"Drops from Elreon's chest in a Syndicate Safehouse."
-                 },
-                 "Garb of the Ephemeral":{
-                    "text":"Drops from Cortex."
-                 }
-              }
-           },
-           "Assassin's Boots":{
-              "text":null,
-              "items":{
-                 "Fenumus' Spinnerets":{
-                    "text":"Drops from Fenumus (Einhar Boss)."
-                 },
-                 "The Stampede":{
-                    "text":"Drops in Blighted Maps."
-                 }
-              }
-           },
-           "Varnished Coat":{
-              "text":null,
-              "items":{
-                 "The Admiral":{
-                    "text":"Drops from Admiral Darnaw (Unique Heist Contract Boss)"
-                 }
-              }
-           },
-           "Crusader Gloves":{
-              "text":null,
-              "items":{
-                 "Shaper's Touch":{
-                    "text":"Drops from The Shaper."
-                 },
-                 "Hands of the High Templar":{
-                    "text":"Drops from Sirus."
-                 }
-              }
-           },
-           "Ancient Gauntlets":{
-              "text":null,
-              "items":{
-                 "Winds of Change":{
-                    "text":"Drops from The Lord's Labyrinth."
-                 },
-                 "Hateforge":{
-                    "text":"Drops from The Trialmaster."
-                 }
-              }
-           },
-           "Slink Boots":{
-              "text":null,
-              "items":{
-                 "Farrul's Chase":{
-                    "text":"Drops from Farrul (Einhar Boss)."
-                 },
-                 "Doryani's Delusion":{
-                    "text":"Drops in Doryani's Machinarium."
-                 },
-                 "Atziri's Step":{
-                    "text":"Drops from Atziri."
-                 }
-              }
-           },
-           "Hydrascale Gauntlets":{
-              "text":null,
-              "items":{
-                 "Farrul's Pounce":{
-                    "text":"Drops from Farrul (Einhar Boss)."
-                 },
-                 "Breathstealer":{
-                    "text":"Drops in Blighted Maps."
-                 }
-              }
-           },
-           "Royal Burgonet":{
-              "text":null,
-              "items":{
-                 "The Formless Inferno":{
-                    "text":"Drops from Xoph's Flawless Breachstone."
-                 },
-                 "The Formless Flame":{
-                    "text":"Drops from Xoph's Breach or Breachstone."
-                 },
-                 "Echoes of Creation":{
-                    "text":"Drops from The Shaper."
-                 }
-              }
-           },
-           "Zealot Gloves":{
-              "text":null,
-              "items":{
-                 "Hand of the Fervent":{
-                    "text":"Does not drop. Sold in Ritual."
-                 }
-              }
-           },
-           "Cardinal Round Shield":{
-              "text":null,
-              "items":{
-                 "Vix Lunaris":{
-                    "text":"Drops from the Twilight Temple."
-                 }
-              }
-           },
-           "Mind Cage":{
-              "text":null,
-              "items":{
-                 "Hale Negator":{
-                    "text":"Drops from Kurgal (Delve Boss)."
-                 }
-              }
-           },
-           "Goliath Greaves":{
-              "text":null,
-              "items":{
-                 "Craiceann's Tracks":{
-                    "text":"Drops from Craiceann (Einhar Boss)."
-                 }
-              }
-           },
-           "Ezomyte Burgonet":{
-              "text":null,
-              "items":{
-                 "Cowl of the Thermophile":{
-                    "text":"Drops from Blighted Maps."
-                 }
-              }
-           },
-           "Titanium Spirit Shield":{
-              "text":null,
-              "items":{
-                 "Bitterbind Point":{
-                    "text":"Drops from Catarina (Jun Boss)."
-                 }
-              }
-           },
-           "Silken Hood":{
-              "text":null,
-              "items":{
-                 "Saqawal's Flock":{
-                    "text":"Drops from Saqawal (Einhar Boss)."
-                 },
-                 "Cowl of the Cryophile":{
-                    "text":"Drops from Blighted Map."
-                 }
-              }
-           },
-           "Praetor Crown":{
-              "text":null,
-              "items":{
-                 "Viridi's Veil":{
-                    "text":"Drops from The Maven."
-                 }
-              }
-           },
-           "Hydrascale Boots":{
-              "text":null,
-              "items":{
-                 "Saqawal's Talons":{
-                    "text":"Drops from Saqawal (Einhar Boss)."
-                 }
-              }
-           },
-           "Soldier Gloves":{
-              "text":null,
-              "items":{
-                 "Saqawal's Winds":{
-                    "text":"Drops from Saqawal (Einhar Boss)."
-                 }
-              }
-           },
-           "Titan Gauntlets":{
-              "text":null,
-              "items":{
-                 "Craiceann's Pincers":{
-                    "text":"Drops from Craiceann (Einhar Boss)."
-                 }
-              }
-           },
-           "Trapper Boots":{
-              "text":null,
-              "items":{
-                 "Brinerot Whalers":{
-                    "text":"Drops from Brinerot Warband."
-                 }
-              }
-           },
-           "Solaris Circlet":{
-              "text":null,
-              "items":{
-                 "Cowl of the Ceraunophile":{
-                    "text":"Drops from Blighted Map."
-                 }
-              }
-           },
-           "Mirrored Spiked Shield":{
-              "text":null,
-              "items":{
-                 "Font of Thunder":{
-                    "text":"Found in a Curio Display in Heist."
-                 }
-              }
-           },
-           "Regicide Mask":{
-              "text":null,
-              "items":{
-                 "Gorgon's Gaze":{
-                    "text":"Drops from Pillars of Arun boss."
-                 }
-              }
-           },
-           "Dragonscale Boots":{
-              "text":null,
-              "items":{
-                 "Annihilation's Approach":{
-                    "text":"Drops from The Uber Searing Exarch."
-                 }
-              }
-           },
-           "Enameled Buckler":{
-              "text":null,
-              "items":{
-                 "Mutewind Pennant":{
-                    "text":"Drops from Mutewind Warband."
-                 }
-              }
-           },
-           "Serpentscale Boots":{
-              "text":null,
-              "items":{
-                 "Mutewind Whispersteps":{
-                    "text":"Drops from Mutewind Warband."
-                 }
-              }
-           },
-           "Broadhead Arrow Quiver":{
-              "text":null,
-              "items":{
-                 "Steelworm":{
-                    "text":"Drops from The Lord's Labyrinth."
-                 }
-              }
-           },
-           "Painted Tower Shield":{
-              "text":null,
-              "items":{
-                 "Redblade Banner":{
-                    "text":"Drops from Redblade Warband."
-                 }
-              }
-           },
-           "Ancient Greaves":{
-              "text":null,
-              "items":{
-                 "Redblade Tramplers":{
-                    "text":"Drops from Redblade Warband."
-                 }
-              }
-           },
-           "Assassin's Mitts":{
-              "text":null,
-              "items":{
-                 "Blasphemer's Grasp":{
-                    "text":"Drops from The Elder."
-                 },
-                 "Storm's Gift":{
-                    "text":"Drops from a Distant Memory boss."
-                 },
-                 "Entropic Devastation":{
-                    "text":"Drops from The Uber Shaper."
-                 }
-              }
-           },
-           "Colossal Tower Shield":{
-              "text":null,
-              "items":{
-                 "Dawnbreaker":{
-                    "text":"Drops from The Searing Exarch."
-                 }
-              }
-           },
-           "Sentinel Jacket":{
-              "text":null,
-              "items":{
-                 "Expedition's End":{
-                    "text":"Found in a Curio Display in Heist."
-                 }
-              }
-           },
-           "Bone Circlet":{
-              "text":null,
-              "items":{
-                 "Plume of Pursuit":{
-                    "text":"Drops from Janaar (Harvest Boss)."
-                 }
-              }
-           },
-           "Chiming Spirit Shield":{
-              "text":null,
-              "items":{
-                 "The Scales of Justice":{
-                    "text":"Drops from The Lord's Labyrinth."
-                 }
-              }
-           },
-           "Shagreen Boots":{
-              "text":null,
-              "items":{
-                 "Temptation Step":{
-                    "text":"Drops from The Trialmaster."
-                 }
-              }
-           },
-           "Lacquered Helmet":{
-              "text":null,
-              "items":{
-                 "The Fledgling":{
-                    "text":"Drops from Nashta (Unique Heist Contract Boss)."
-                 }
-              }
-           },
-           "Leather Belt":{
-              "text":null,
-              "items":{
-                 "Hyperboreus":{
-                    "text":"Drops from Syndicate Safehouse."
-                 },
-                 "Cyclopean Coil":{
-                    "text":"Drops from The Elder."
-                 },
-                 "Bear's Girdle":{
-                    "text":"Drops from Ersi (Harvest Boss)."
-                 }
-              }
-           },
-           "Paua Amulet":{
-              "text":null,
-              "items":{
-                 "Zerphi's Heart":{
-                    "text":"Does not drop. Created with a Vial."
-                 },
-                 "Sacrificial Heart":{
-                    "text":"Drops from The Vaal Omnitect."
-                 }
-              }
-           },
-           "Jade Amulet":{
-              "text":null,
-              "items":{
-                 "The Pandemonius":{
-                    "text":"Drops from Tul's Flawless Breachstone."
-                 },
-                 "The Halcyon":{
-                    "text":"Drops from Tul's Breach or Breachstone."
-                 }
-              }
-           },
-           "Amber Amulet":{
-              "text":null,
-              "items":{
-                 "Xoph's Blood":{
-                    "text":"Drops from Xoph's Flawless Breachstone."
-                 },
-                 "Xoph's Heart":{
-                    "text":"Drops from Xoph's Breach or Breachstone."
-                 }
-              }
-           },
-           "Onyx Amulet":{
-              "text":null,
-              "items":{
-                 "Solstice Vigil":{
-                    "text":"Drops from The Shaper."
-                 },
-                 "Presence of Chayula":{
-                    "text":"Does not drop. Created with a Blessing of Chayula."
-                 },
-                 "Aul's Uprising":{
-                    "text":"Drops from Aul (Delve Boss)."
-                 },
-                 "Impresence":{
-                    "text":"Drops from The Elder."
-                 },
-                 "Stranglegasp":{
-                    "text":"Drops from Blight-ravaged map."
-                 },
-                 "Ashes of the Stars":{
-                    "text":"Drops from The Eater of Worlds."
-                 },
-                 "Crystallised Omniscience":{
-                    "text":"Drops from The Searing Exarch."
-                 },
-                 "The Eternal Struggle":{
-                    "text":"Drops from The Black Star and from The Infinite Hunger."
-                 },
-                 "Leadership's Price":{
-                    "text":"Drops from Contract: The Twins (Unique Heist Contact Boss)."
-                 }
-              }
-           },
-           "Topaz Ring":{
-              "text":null,
-              "items":{
-                 "Putembo's Mountain":{
-                    "text":"Drops from Aul (Delve Boss)."
-                 },
-                 "Putembo's Meadow":{
-                    "text":"Drops from Kurgal (Delve Boss)."
-                 },
-                 "Putembo's Valley":{
-                    "text":"Drops from Ahuatotli (Delve Boss)."
-                 },
-                 "Precursor's Emblem":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 },
-                 "Circle of Regret":{
-                    "text":"Drops from a Distant Memory boss."
-                 },
-                 "Astral Projector":{
-                    "text":"Drops from Metamorph in Tane's Lab."
-                 },
-                 "Nimis":{
-                    "text":"Drops from The Uber Eater of Worlds."
-                 }
-              }
-           },
-           "Prismatic Ring":{
-              "text":null,
-              "items":{
-                 "The Taming":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 },
-                 "Precursor's Emblem":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 }
-              }
-           },
-           "Two-Stone Ring":{
-              "text":null,
-              "items":{
-                 "Precursor's Emblem":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 }
-              }
-           },
-           "Ruby Ring":{
-              "text":null,
-              "items":{
-                 "Precursor's Emblem":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 },
-                 "Ahkeli's Meadow":{
-                    "text":"Drops from Aul (Delve Boss)."
-                 },
-                 "Ahkeli's Valley":{
-                    "text":"Drops from Kurgal (Delve Boss)."
-                 },
-                 "Ahkeli's Mountain":{
-                    "text":"Drops from Ahuatotli (Delve Boss)."
-                 },
-                 "Circle of Anguish":{
-                    "text":"Drops from a Distant Memory boss."
-                 },
-                 "Warrior's Legacy":{
-                    "text":"Drops from Metamorph in Tane's Lab."
-                 }
-              }
-           },
-           "Sapphire Ring":{
-              "text":null,
-              "items":{
-                 "Precursor's Emblem":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 },
-                 "Uzaza's Valley":{
-                    "text":"Drops from Aul (Delve Boss)."
-                 },
-                 "Uzaza's Mountain":{
-                    "text":"Drops from Kurgal (Delve Boss)."
-                 },
-                 "Uzaza's Meadow":{
-                    "text":"Drops from Ahuatotli (Delve Boss)."
-                 },
-                 "Circle of Fear":{
-                    "text":"Drops from a Distant Memory boss."
-                 },
-                 "Call of the Void":{
-                    "text":"Drops from The Uber Elder."
-                 }
-              }
-           },
-           "Lapis Amulet":{
-              "text":null,
-              "items":{
-                 "Choir of the Storm":{
-                    "text":"Drops from Esh's Flawless Breachstone."
-                 },
-                 "Voice of the Storm":{
-                    "text":"Drops from Esh's Breach or Breachstone."
-                 }
-              }
-           },
-           "Unset Ring":{
-              "text":null,
-              "items":{
-                 "The Pariah":{
-                    "text":"Drops from Renegades Warband."
-                 },
-                 "Vivinsect":{
-                    "text":"Drops from Syndicate Safehouse."
-                 },
-                 "Brinerot Mark":{
-                    "text":"Drops from Brinerot Warband."
-                 },
-                 "Redblade Band":{
-                    "text":"Drops from Redblade Warband."
-                 },
-                 "Mutewind Seal":{
-                    "text":"Drops from Mutewind Warband."
-                 },
-                 "Rotblood Promise":{
-                    "text":"Does not drop. Sold in Ritual."
-                 },
-                 "Triumvirate Authority":{
-                    "text":"Drops from Atziri and Uber Atziri."
-                 }
-              }
-           },
-           "Chain Belt":{
-              "text":null,
-              "items":{
-                 "Coward's Legacy":{
-                    "text":"Does not drop. Created with a Vial."
-                 },
-                 "Coward's Chains":{
-                    "text":"Drops from the Hybridization Chamber in the Temple of Atzoatl."
-                 },
-                 "Chains of Emancipation":{
-                    "text":"Drops from Friedrich Tarollo (Unique Heist Contact Boss)."
-                 }
-              }
-           },
-           "Heavy Belt":{
-              "text":null,
-              "items":{
-                 "Doryani's Invitation":{
-                    "text":"Drops from Atziri."
-                 },
-                 "Mother's Embrace":{
-                    "text":"Drops from Metamorph in Tane's Lab."
-                 },
-                 "Survivor's Guilt":{
-                    "text":"Does not drop. Sold in Ritual."
-                 }
-              }
-           },
-           "Opal Ring":{
-              "text":null,
-              "items":{
-                 "Mark of the Shaper":{
-                    "text":"Drops from The Uber Elder."
-                 },
-                 "Polaric Devastation":{
-                    "text":"Drops from The Black Star."
-                 }
-              }
-           },
-           "Cloth Belt":{
-              "text":null,
-              "items":{
-                 "The Flow Untethered":{
-                    "text":"Does not drop. Created from Harbinger Pieces."
-                 },
-                 "The Torrent's Reclamation":{
-                    "text":"Does not drop. Created by upgrading Flow Untethered with a Scroll."
-                 },
-                 "Arn's Anguish":{
-                    "text":"Drops from The Maven."
-                 },
-                 "Olesya's Delight":{
-                    "text":"Drops from The Maven."
-                 },
-                 "Graven's Secret":{
-                    "text":"Drops from The Maven."
-                 }
-              }
-           },
-           "Rustic Sash":{
-              "text":null,
-              "items":{
-                 "The Retch":{
-                    "text":"Does not drop. Created with a vendor recipe."
-                 }
-              }
-           },
-           "Citrine Amulet":{
-              "text":null,
-              "items":{
-                 "The Felbog Fang":{
-                    "text":"Drops from Namharim (Harvest Boss)."
-                 }
-              }
-           },
-           "Iron Ring":{
-              "text":null,
-              "items":{
-                 "Circle of Guilt":{
-                    "text":"Drops from a Distant Memory boss."
-                 }
-              }
-           },
-           "Paua Ring":{
-              "text":null,
-              "items":{
-                 "Fated End":{
-                    "text":"Found in a Curio Display in Heist."
-                 }
-              }
-           },
-           "Steel Ring":{
-              "text":null,
-              "items":{
-                 "Mark of the Elder":{
-                    "text":"Drops from The Uber Elder."
-                 }
-              }
-           },
-           "Amethyst Ring":{
-              "text":null,
-              "items":{
-                 "Circle of Nostalgia":{
-                    "text":"Drops from a Distant Memory boss."
-                 },
-                 "Blackflame":{
-                    "text":"Does not drop. Sold in Ritual."
-                 }
-              }
-           },
-           "Crystal Belt":{
-              "text":null,
-              "items":{
-                 "The Burden of Truth":{
-                    "text":"Drops from Sirus."
-                 }
-              }
-           },
-           "Stygian Vise":{
-              "text":null,
-              "items":{
-                 "Gavel":{
-                    "text":"Drops from Abyssal Depths."
-                 }
-              }
-           },
-           "Turquoise Amulet":{
-              "text":null,
-              "items":{
-                 "Fury Valve":{
-                    "text":"Drops from Metamorph in Tane's Lab."
-                 }
-              }
-           },
-           "Steel Circlet":{
-              "text":null,
-              "items":{
-                 "Sudden Dawn":{
-                    "text":"Drops from The Black Star."
-                 }
-              }
-           },
-           "Saint's Hauberk":{
-              "text":null,
-              "items":{
-                 "Sporeguard":{
-                    "text":"Drops from Blighted Map."
-                 }
-              }
-           },
-           "Ezomyte Spiked Shield":{
-              "text":null,
-              "items":{
-                 "Perepiteia":{
-                    "text":"Drops from a Distant Memory boss."
-                 }
-              }
-           },
-           "Steel Kite Shield":{
-              "text":null,
-              "items":{
-                 "Mahuxotl's Machination":{
-                    "text":"Drops from The Trialmaster."
-                 }
-              }
-           },
-           "Butcher Axe":{
-              "text":null,
-              "items":{
-                 "Actum":{
-                    "text":"Found in a Curio Display in Heist."
-                 }
-              }
-           },
-           "Fluted Bascinet":{
-              "text":null,
-              "items":{
-                 "Crest of Desire":{
-                    "text":"Found in a Curio Display in Heist."
-                 }
-              }
-           },
-           "Crimson Round Shield":{
-              "text":null,
-              "items":{
-                 "Shattershard":{
-                    "text":"Found in a Curio Display in Heist."
-                 }
-              }
-           },
-           "Bone Helmet":{
-              "text":null,
-              "items":{
-                 "Maw of Mischief":{
-                    "text":"Does not drop. Obtained from a Divination Card set."
-                 }
-              }
-           },
-           "Wyrmscale Boots":{
-              "text":null,
-              "items":{
-                 "Legacy of Fury":{
-                    "text":"Drops from The Maven."
-                 }
-              }
-           },
-           "Sovereign Spiked Shield":{
-              "text":null,
-              "items":{
-                 "Gavel":{
-                    "text":"Does not drop. Sold in Ritual."
-                 }
-              }
-           },
-           "Iron Flask":{
-              "text":null,
-              "items":{
-                 "Olroth's Resolve":{
-                    "text":"Drops from Olroth (expedition boss)."
-                 },
-                 "Starlight Chalice":{
-                    "text":"Drops from Uthred (expedition boss)."
-                 },
-                 "Vorana's Preparation":{
-                    "text":"Drops from Vorana (expedition boss)."
-                 },
-                 "Elixir of the Unbroken Circle":{
-                    "text":"Drops from Medved (expedition boss)."
-                 }
-              }
-           },
-           "Runic Crown":{
-              "text":null,
-              "items":{
-                 "Cadigan's Crown":{
-                    "text":"Drops from Olroth (expedition boss)."
-                 }
-              }
-           },
-           "Runic Sabatons":{
-              "text":null,
-              "items":{
-                 "Vorana's March":{
-                    "text":"Drops from Olroth (expedition boss)."
-                 }
-              }
-           },
-           "Runic Sollerets":{
-              "text":"Drops from Expedition."
-           },
-           "Runic Helm":{
-              "text":"Drops from Expedition."
-           },
-           "Runic Gages":{
-              "text":"Drops from Expedition."
-           },
-           "Runic Gauntlets":{
-              "text":"Drops from Expedition."
-           },
-           "Unset Amulet":{
-              "text":null,
-              "items":{
-                 "Uul-Netol's Vow":{
-                    "text":"Drops from Flawless Breachstone."
-                 }
-              }
-           },
-           "Quarterstaff":{
-              "text":null,
-              "items":{
-                 "The Annihilating Light":{
-                    "text":"Drops from The Searing Exarch."
-                 }
-              }
-           },
-           "Primal Arrow Quiver":{
-              "text":null,
-              "items":{
-                 "Voidfletcher":{
-                    "text":"Drops from The Uber Elder."
-                 }
-              }
-           },
-           "Fingerless Silk Gloves":{
-              "text":null,
-              "items":{
-                 "Black Zenith":{
-                    "text":"Drops from The Infinite Hunger."
-                 }
-              }
-           },
-           "Spiked Gloves":{
-              "text":null,
-              "items":{
-                 "Ceaseless Feast":{
-                    "text":"Drops from The Infinite Hunger."
-                 }
-              }
-           },
-           "Fugitive Boots":{
-              "text":null,
-              "items":{
-                 "Inextricable Fate":{
-                    "text":"Drops from The Eater of Worlds."
-                 }
-              }
-           },
-           "Vaal Greaves":{
-              "text":null,
-              "items":{
-                 "Dawnstrider":{
-                    "text":"Drops from The Searing Exarch."
-                 }
-              }
-           }
-        }
-     }
-  }
+   }
 }
