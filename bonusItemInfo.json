@@ -29,7 +29,7 @@
 		"Incubator": {
 			"items": {
 				"Geomancer's Incubator": {
-					"text": "Grants a random 6link weapon or armour"
+					"text": "Grants a random 6-link weapon or armour"
 				}
 			}
 		},
@@ -163,10 +163,10 @@
 					"text": null,
 					"items": {
 						"Starforge": {
-							"text": "Overriden in Exceptions. Drops from The Shaper."
+							"text": "Overridden in Exceptions. Drops from The Shaper."
 						},
 						"Voidforge": {
-							"text": "Overriden in Exceptions. Drops from The Uber Elder."
+							"text": "Overridden in Exceptions. Drops from The Uber Elder."
 						},
 						"Echoforge": {
 							"text": "Drops from The Maven."
