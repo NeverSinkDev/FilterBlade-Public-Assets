@@ -122,7 +122,7 @@
               "text":null,
               "items":{
                  "Witchhunter's Judgment":{
-                    "text":"Drops from Oshabi."
+                    "text":"Drops from Oshabi (Harvest Boss)."
                  }
               }
            },
@@ -141,7 +141,7 @@
                     "text":"Does not drop. Created from Harbinger Pieces."
                  },
                  "The Surging Thoughts":{
-                    "text":"Does not drop. Created with a Scroll."
+                    "text":"Does not drop. Created by upgrading Rippling Thoughts via scroll."
                  },
                  "The Saviour":{
                     "text":"Drops from Sirus."
@@ -163,7 +163,7 @@
               "text":null,
               "items":{
                  "Paradoxica":{
-                    "text":"Drops from Syndicate Safehouse."
+                    "text":"Drops from Syndicate Safehouse (Jun)."
                  }
               }
            },
@@ -187,7 +187,7 @@
               "text":null,
               "items":{
                  "Cerberus Limb":{
-                    "text":"Drops from Ahuatotli."
+                    "text":"Drops from Ahuatotli (Delve)."
                  }
               }
            },
@@ -198,7 +198,7 @@
                     "text":"Does not drop. Created from Harbinger Pieces."
                  },
                  "The Yielding Mortality":{
-                    "text":"Does not drop. Created with a Scroll."
+                    "text":"Does not drop. Created by upgrading Enmity Divine via scroll."
                  }
               }
            },
@@ -230,7 +230,7 @@
               "text":null,
               "items":{
                  "The Crimson Storm":{
-                    "text":"Drops from Syndicate Safehouse."
+                    "text":"Drops from Syndicate Safehouse (Jun)."
                  }
               }
            },
@@ -260,7 +260,7 @@
               "text":null,
               "items":{
                  "Law of the Wilds":{
-                    "text":"Drops from Oshabi."
+                    "text":"Drops from Oshabi (Harvest Boss)."
                  }
               }
            },
@@ -311,7 +311,7 @@
               "text":null,
               "items":{
                  "Cane of Kulemak":{
-                    "text":"Drops from Catarina."
+                    "text":"Drops from Catarina (Jun Boss)."
                  }
               }
            },
@@ -319,10 +319,10 @@
               "text":null,
               "items":{
                  "Soul Ripper":{
-                    "text":"Does not drop. Created with a Vial."
+                    "text":"Does not drop. Created with a Vial (Alva Temple)."
                  },
                  "Soul Catcher":{
-                    "text":"Drops from The Vaal Omnitect."
+                    "text":"Drops from The Vaal Omnitect (Alva Temple)."
                  }
               }
            },
@@ -349,7 +349,7 @@
               "text":null,
               "items":{
                  "Cinderswallow Urn":{
-                    "text":"Drops from Catarina."
+                    "text":"Drops from Catarina (Jun Boss)."
                  }
               }
            },
@@ -392,7 +392,7 @@
               "text":null,
               "items":{
                  "Farrul's Fur":{
-                    "text":"Drops from Farrul."
+                    "text":"Drops from Farrul (Einhar Boss)."
                  }
               }
            },
@@ -424,7 +424,7 @@
               "text":null,
               "items":{
                  "Apep's Supremacy":{
-                    "text":"Does not drop. Created with a Vial."
+                    "text":"Does not drop. Created with a Vial (Alva Temple)."
                  },
                  "Apep's Slumber":{
                     "text":"Drops from the Cultivar Chamber in the Temple of Atzoatl."
@@ -444,7 +444,7 @@
                     "text":"Drops from The Uber Elder."
                  },
                  "Saqawal's Nest":{
-                    "text":"Drops from Saqawal."
+                    "text":"Drops from Saqawal (Einhar Boss)."
                  }
               }
            },
@@ -493,7 +493,7 @@
               "text":null,
               "items":{
                  "Command of the Pit":{
-                    "text":"Drops from Kurgal."
+                    "text":"Drops from Kurgal (Delve Boss)."
                  }
               }
            },
@@ -520,7 +520,7 @@
                     "text":"Drops from Abyssal Depths."
                  },
                  "Forbidden Shako":{
-                    "text":"Drops from Oshabi."
+                    "text":"Drops from Oshabi (Harvest Boss)."
                  }
               }
            },
@@ -528,10 +528,10 @@
               "text":null,
               "items":{
                  "Crown of the Tyrant":{
-                    "text":"Drops from Aul."
+                    "text":"Drops from Aul (Delve Boss)."
                  },
                  "Mask of the Stitched Demon":{
-                    "text":"Does not drop. Created with a Vial."
+                    "text":"Does not drop. Created with a Vial (Alva Temple)."
                  },
                  "Mask of the Spirit Drinker":{
                     "text":"Drops from the Sanctum of Immortality in the Temple of Atzoatl."
@@ -540,7 +540,7 @@
                     "text":"Drops from a Distant Memory boss."
                  },
                  "Craiceann's Chitin":{
-                    "text":"Drops from Craiceann."
+                    "text":"Drops from Craiceann (Einhar Boss)."
                  }
               }
            },
@@ -551,7 +551,7 @@
                     "text":"Does not drop. Created from Harbinger Pieces."
                  },
                  "The Tempest's Liberation":{
-                    "text":"Does not drop. Created with a Scroll."
+                    "text":"Does not drop. Created by upgrading Tempest's Binding via scroll."
                  }
               }
            },
@@ -559,10 +559,10 @@
               "text":null,
               "items":{
                  "The Devouring Diadem":{
-                    "text":"Drops from Catarina."
+                    "text":"Drops from Catarina (Jun Boss)."
                  },
                  "Fenumus' Toxins":{
-                    "text":"Drops from Fenumus."
+                    "text":"Drops from Fenumus (Einhar Boss)."
                  }
               }
            },
@@ -595,7 +595,7 @@
                     "text":"Drops from the Defense Research Lab in the Temple of Atzoatl."
                  },
                  "Abhorrent Interrogation":{
-                    "text":"Drops from Oshabi."
+                    "text":"Drops from Oshabi (Harvest Boss)."
                  }
               }
            },
@@ -603,7 +603,7 @@
               "text":null,
               "items":{
                  "Fenumus' Shroud":{
-                    "text":"Drops from Fenumus."
+                    "text":"Drops from Fenumus (Einhar Boss)."
                  }
               }
            },
@@ -611,7 +611,7 @@
               "text":null,
               "items":{
                  "Omeyocan":{
-                    "text":"Does not drop. Created with a Vial."
+                    "text":"Does not drop. Created with a Vial (Alva Temple)."
                  },
                  "Dance of the Offered":{
                     "text":"Drops from the Lightning Workshop in the Temple of Atzoatl."
@@ -650,7 +650,7 @@
               "text":null,
               "items":{
                  "Craiceann's Carapace":{
-                    "text":"Drops from Craiceann."
+                    "text":"Drops from Craiceann (Einhar Boss)."
                  }
               }
            },
@@ -658,7 +658,7 @@
               "text":null,
               "items":{
                  "Fenumus' Weave":{
-                    "text":"Drops from Fenumus."
+                    "text":"Drops from Fenumus (Einhar Boss)."
                  },
                  "Soul Ascension":{
                     "text":"Drops from The Uber Uber Elder."
@@ -713,7 +713,7 @@
                     "text":"Does not drop. Created from Harbinger Pieces."
                  },
                  "The Shattered Divinity":{
-                    "text":"Does not drop. Created with a Scroll."
+                    "text":"Does not drop. Created by upgrading Fracturing Spinner with a Scroll."
                  }
               }
            },
@@ -729,7 +729,7 @@
               "text":null,
               "items":{
                  "Farrul's Bite":{
-                    "text":"Drops from Farrul."
+                    "text":"Drops from Farrul (Einhar Boss)."
                  }
               }
            },
@@ -745,7 +745,7 @@
               "text":null,
               "items":{
                  "The Queen's Hunger":{
-                    "text":"Drops from Catarina."
+                    "text":"Drops from Catarina (Jun Boss)."
                  }
               }
            },
@@ -764,10 +764,10 @@
               "text":null,
               "items":{
                  "Fenumus' Spinnerets":{
-                    "text":"Drops from Fenumus."
+                    "text":"Drops from Fenumus (Einhar Boss)."
                  },
                  "The Stampede":{
-                    "text":"Drops from Blighted Map."
+                    "text":"Drops in Blighted Maps."
                  }
               }
            },
@@ -775,7 +775,7 @@
               "text":null,
               "items":{
                  "The Admiral":{
-                    "text":"Drops from Admiral Darnaw"
+                    "text":"Drops from Admiral Darnaw (Unique Heist Contract Boss)"
                  }
               }
            },
@@ -805,7 +805,7 @@
               "text":null,
               "items":{
                  "Farrul's Chase":{
-                    "text":"Drops from Farrul."
+                    "text":"Drops from Farrul (Einhar Boss)."
                  },
                  "Doryani's Delusion":{
                     "text":"Drops in Doryani's Machinarium."
@@ -819,10 +819,10 @@
               "text":null,
               "items":{
                  "Farrul's Pounce":{
-                    "text":"Drops from Farrul."
+                    "text":"Drops from Farrul (Einhar Boss)."
                  },
                  "Breathstealer":{
-                    "text":"Drops from Blighted Map."
+                    "text":"Drops in Blighted Maps."
                  }
               }
            },
@@ -860,7 +860,7 @@
               "text":null,
               "items":{
                  "Hale Negator":{
-                    "text":"Drops from Kurgal."
+                    "text":"Drops from Kurgal (Delve Boss)."
                  }
               }
            },
@@ -868,7 +868,7 @@
               "text":null,
               "items":{
                  "Craiceann's Tracks":{
-                    "text":"Drops from Craiceann."
+                    "text":"Drops from Craiceann (Einhar Boss)."
                  }
               }
            },
@@ -876,7 +876,7 @@
               "text":null,
               "items":{
                  "Cowl of the Thermophile":{
-                    "text":"Drops from Blighted Map."
+                    "text":"Drops from Blighted Maps."
                  }
               }
            },
@@ -884,7 +884,7 @@
               "text":null,
               "items":{
                  "Bitterbind Point":{
-                    "text":"Drops from Catarina."
+                    "text":"Drops from Catarina (Jun Boss)."
                  }
               }
            },
@@ -892,7 +892,7 @@
               "text":null,
               "items":{
                  "Saqawal's Flock":{
-                    "text":"Drops from Saqawal."
+                    "text":"Drops from Saqawal (Einhar Boss)."
                  },
                  "Cowl of the Cryophile":{
                     "text":"Drops from Blighted Map."
@@ -911,7 +911,7 @@
               "text":null,
               "items":{
                  "Saqawal's Talons":{
-                    "text":"Drops from Saqawal."
+                    "text":"Drops from Saqawal (Einhar Boss)."
                  }
               }
            },
@@ -919,7 +919,7 @@
               "text":null,
               "items":{
                  "Saqawal's Winds":{
-                    "text":"Drops from Saqawal."
+                    "text":"Drops from Saqawal (Einhar Boss)."
                  }
               }
            },
@@ -927,7 +927,7 @@
               "text":null,
               "items":{
                  "Craiceann's Pincers":{
-                    "text":"Drops from Craiceann."
+                    "text":"Drops from Craiceann (Einhar Boss)."
                  }
               }
            },
@@ -1045,7 +1045,7 @@
               "text":null,
               "items":{
                  "Plume of Pursuit":{
-                    "text":"Drops from Janaar."
+                    "text":"Drops from Janaar (Harvest Boss)."
                  }
               }
            },
@@ -1069,7 +1069,7 @@
               "text":null,
               "items":{
                  "The Fledgling":{
-                    "text":"Drops from Nashta."
+                    "text":"Drops from Nashta (Unique Heist Contract Boss)."
                  }
               }
            },
@@ -1083,7 +1083,7 @@
                     "text":"Drops from The Elder."
                  },
                  "Bear's Girdle":{
-                    "text":"Drops from Ersi."
+                    "text":"Drops from Ersi (Harvest Boss)."
                  }
               }
            },
@@ -1130,7 +1130,7 @@
                     "text":"Does not drop. Created with a Blessing of Chayula."
                  },
                  "Aul's Uprising":{
-                    "text":"Drops from Aul."
+                    "text":"Drops from Aul (Delve Boss)."
                  },
                  "Impresence":{
                     "text":"Drops from The Elder."
@@ -1148,7 +1148,7 @@
                     "text":"Drops from The Black Star and from The Infinite Hunger."
                  },
                  "Leadership's Price":{
-                    "text":"Drops from Contract: The Twins."
+                    "text":"Drops from Contract: The Twins (Unique Heist Contact Boss)."
                  }
               }
            },
@@ -1156,13 +1156,13 @@
               "text":null,
               "items":{
                  "Putembo's Mountain":{
-                    "text":"Drops from Aul."
+                    "text":"Drops from Aul (Delve Boss)."
                  },
                  "Putembo's Meadow":{
-                    "text":"Drops from Kurgal."
+                    "text":"Drops from Kurgal (Delve Boss)."
                  },
                  "Putembo's Valley":{
-                    "text":"Drops from Ahuatotli."
+                    "text":"Drops from Ahuatotli (Delve Boss)."
                  },
                  "Precursor's Emblem":{
                     "text":"Does not drop. Created with a vendor recipe."
@@ -1204,13 +1204,13 @@
                     "text":"Does not drop. Created with a vendor recipe."
                  },
                  "Ahkeli's Meadow":{
-                    "text":"Drops from Aul."
+                    "text":"Drops from Aul (Delve Boss)."
                  },
                  "Ahkeli's Valley":{
-                    "text":"Drops from Kurgal."
+                    "text":"Drops from Kurgal (Delve Boss)."
                  },
                  "Ahkeli's Mountain":{
-                    "text":"Drops from Ahuatotli."
+                    "text":"Drops from Ahuatotli (Delve Boss)."
                  },
                  "Circle of Anguish":{
                     "text":"Drops from a Distant Memory boss."
@@ -1227,13 +1227,13 @@
                     "text":"Does not drop. Created with a vendor recipe."
                  },
                  "Uzaza's Valley":{
-                    "text":"Drops from Aul."
+                    "text":"Drops from Aul (Delve Boss)."
                  },
                  "Uzaza's Mountain":{
-                    "text":"Drops from Kurgal."
+                    "text":"Drops from Kurgal (Delve Boss)."
                  },
                  "Uzaza's Meadow":{
-                    "text":"Drops from Ahuatotli."
+                    "text":"Drops from Ahuatotli (Delve Boss)."
                  },
                  "Circle of Fear":{
                     "text":"Drops from a Distant Memory boss."
@@ -1290,7 +1290,7 @@
                     "text":"Drops from the Hybridization Chamber in the Temple of Atzoatl."
                  },
                  "Chains of Emancipation":{
-                    "text":"Drops from Friedrich Tarollo."
+                    "text":"Drops from Friedrich Tarollo (Unique Heist Contact Boss)."
                  }
               }
            },
@@ -1326,7 +1326,7 @@
                     "text":"Does not drop. Created from Harbinger Pieces."
                  },
                  "The Torrent's Reclamation":{
-                    "text":"Does not drop. Created with a Scroll."
+                    "text":"Does not drop. Created by upgrading Flow Untethered with a Scroll."
                  },
                  "Arn's Anguish":{
                     "text":"Drops from The Maven."
@@ -1351,7 +1351,7 @@
               "text":null,
               "items":{
                  "The Felbog Fang":{
-                    "text":"Drops from Namharim."
+                    "text":"Drops from Namharim (Harvest Boss)."
                  }
               }
            },
@@ -1498,16 +1498,16 @@
               "text":null,
               "items":{
                  "Olroth's Resolve":{
-                    "text":"Drops from Olroth."
+                    "text":"Drops from Olroth (expedition boss)."
                  },
                  "Starlight Chalice":{
-                    "text":"Drops from Uthred."
+                    "text":"Drops from Uthred (expedition boss)."
                  },
                  "Vorana's Preparation":{
-                    "text":"Drops from Vorana."
+                    "text":"Drops from Vorana (expedition boss)."
                  },
                  "Elixir of the Unbroken Circle":{
-                    "text":"Drops from Medved."
+                    "text":"Drops from Medved (expedition boss)."
                  }
               }
            },
@@ -1515,7 +1515,7 @@
               "text":null,
               "items":{
                  "Cadigan's Crown":{
-                    "text":"Drops from Olroth."
+                    "text":"Drops from Olroth (expedition boss)."
                  }
               }
            },
@@ -1523,7 +1523,7 @@
               "text":null,
               "items":{
                  "Vorana's March":{
-                    "text":"Drops from Olroth."
+                    "text":"Drops from Olroth (expedition boss)."
                  }
               }
            },
