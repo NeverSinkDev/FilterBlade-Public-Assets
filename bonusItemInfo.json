@@ -35,7 +35,108 @@
 		},
 		"DivinationCard": {
 			"items": {
+				"A Dab of Ink": {
+					"text": "Found in Academy, Museum, Scriptorium, The library"
+				},			
+				"A Dusty Memory": {
+					"text": "Found in Altered Distant Memory, Augmented Distant Memory, Cortex, Rewritten Distant Memory, Twisted Distant Memory"
+				},
 
+				"A Familiar Call": {
+					"text": "Drops from The Guardian of the Chimera"
+				},
+				
+				"A Fate Worse Than Death": {
+					"text": "Drops from Al-Hezmin The Hunter, Baran The Crusader, Drox The Warlord, Sirus Awakener of Worlds, Veritania The Redeemer"
+				},
+
+				"A Modest Request": {
+					"text": "Drops from Eater of Souls, Nightmare's Omen, The Hallowed Husk, The High Templar"
+				},
+
+				"A Mother's Parting Gift": {
+					"text": "Found in The High Gardens, The Imperial Gardens"
+				},
+
+				"A Note in the Wind": {
+					"text": "Found in Desert, Desert Spring, Dry Sea, Dunes, The Oasis"
+				},
+
+				"A Sea of Blue": {
+					"text": "Found in Crystal Ore, Grotto, Mineral Pools, Primordial Blocks" 
+				},
+
+				"A Stone Perfected": {
+					"text": "Found in Coves, Flooded Mine, Grotto, Peninsula, Vault, Waterways, Wharf"
+				},
+
+				"Abandoned Wealth": {
+					"text": "Found in Mao Kun"
+				},
+
+				"Acclimatisation": {
+					"text": "Found in Desert, Desert Spring, Dry Sea, Dunes"
+				},
+
+				"Akil's Prophecy": {
+					"text": "Found in The Temple of Atzoatl"
+				},
+
+				"Alivia's Grace": {
+					"text": "Found in Ashen Wood, Bramble Valley, Dark Forest, Forbidden Woods, Jungle Valley, Lair, Ramparts, Spider Forest, Stagnation, Thicket, Tropical Island"
+				},
+
+				"Alluring Bounty": {
+					"text": "Found in The Alluring Abyss, The Apex of Sacrifice"
+				},
+
+				"Alone in the Darkness": {
+					"text": "Drops from an Abyssal Trove"
+				},
+
+				"Altered Perception": {
+					"text": "Uhtred Covetous Traitor"
+				},
+
+				"Ambitious Obsession": {
+					"text": "Ara Sister of Light, Armala the Widow, Drek Apex Hunter, Erebix Light's Bane, Gorulis Will-Thief, Khor Sister of Shadows, Mephod the Earth Scorcher, Nassar Lion of the Seas, Stalker of the Endless Dunes, Tahsin Warmaker, Terror of the Infinite Drifts, Varhesh Shimmering Aberration"
+				},
+
+				"Anachary's Price": {
+					"text": "Drops from Rogue Exiles"
+				},
+
+				"Arrogance of The Vaal": {
+					"text": "Found in Ancient City, Sunken City, Vaal Pyramid"
+				},
+
+				"Assassin's Favour": {
+					"text": "Found in Alleyways, Arcade, Bazaar, Port, The Marketplace, The Quay"
+				},
+
+				"Astral Protection": {
+					"text": "Found in The Moon Temple"
+				},
+
+				"Atziri's Arsenal": {
+					"text": "Found in the Vaults of Atziri"
+				}, 
+
+				"Audacity": {
+					"text": "Found in The Apex of Sacrifice"
+				},
+
+				"Auspicious Ambitions": {
+					"text": "Drops from The Eater of Worlds, The Elder, The Maven, The Searing Exach"
+				},
+
+				"Azure Rage": {
+					"text": "Found in Factory" 
+				}, 
+
+				"Azyran's Reward": {
+					"text": "Found in Laboratory, Relic Chambers, Stagnation"
+				}
 			}
 		},
 		"Fragment": {
