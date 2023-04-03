@@ -42,4 +42,14 @@ In case of uniques, we can attach descriptions to the basetype itself or onto a 
 
 We'd welcome your pull request to help us populate and maintain these files!
 
+Quality Guidelines:
+
+- Only English
+
+- Don't include any links
+
+- Keep the bullet points as short as possible
+
+- Double check for typos.
+
 Changes in this file autodeploy to: https://beta.filterblade.xyz
