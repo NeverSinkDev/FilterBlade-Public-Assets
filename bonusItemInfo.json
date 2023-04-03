@@ -42,7 +42,6 @@
 			
 				"A Dusty Memory": {
 					"text": "Found in Altered Distant Memory, Augmented Distant Memory, Cortex, Rewritten Distant Memory, Twisted Distant Memory"
-					
 				},
 
 				"A Familiar Call": {
@@ -55,12 +54,10 @@
 
 				"A Modest Request": {
 					"text": "Drops from Eater of Souls, Nightmare's Omen, The Hallowed Husk, The High Templar"
-				
 				},
 
 				"A Mother's Parting Gift": {
 					"text": "Found in The High Gardens, The Imperial Gardens"
-				
 				},
 
 				"A Note in the Wind": {
@@ -142,9 +139,6 @@
 				"Azyran's Reward": {
 					"text": "Found in Laboratory, Relic Chambers, Stagnation"
 				}
-
-
-			}
 		},
 		"Fragment": {
 			"items": {
