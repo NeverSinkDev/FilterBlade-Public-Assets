@@ -36,54 +36,74 @@
 		"DivinationCard": {
 			"items": {
 				"A Dab of Ink": {
+<<<<<<< HEAD
 					"text": "Found in Academy, Museum, Scriptorium, The library"
 				},			
 				"A Dusty Memory": {
 					"text": "Found in Altered Distant Memory, Augmented Distant Memory, Cortex, Rewritten Distant Memory, Twisted Distant Memory"
+=======
+					"text": "Found in Academy, Museum, Scriptorium, The library."
+					}
+				},
+			
+				"A Dusty Memory": {
+					"text": "Found in Cortex and Distant Memory maps."
+					
+>>>>>>> 56c4dda (Divination Cards: A-D, punctuation and description edits.)
 				},
 
 				"A Familiar Call": {
-					"text": "Drops from The Guardian of the Chimera"
+					"text": "Drops from Guardian of the Chimera."
 				},
 				
 				"A Fate Worse Than Death": {
-					"text": "Drops from Al-Hezmin The Hunter, Baran The Crusader, Drox The Warlord, Sirus Awakener of Worlds, Veritania The Redeemer"
+					"text": "Drops from Conquerors and Sirus."
 				},
 
 				"A Modest Request": {
+<<<<<<< HEAD
 					"text": "Drops from Eater of Souls, Nightmare's Omen, The Hallowed Husk, The High Templar"
 				},
 
 				"A Mother's Parting Gift": {
 					"text": "Found in The High Gardens, The Imperial Gardens"
+=======
+					"text": "Drops from Eater of Souls, Nightmare's Omen, The Hallowed Husk, The High Templar."
+				
+				},
+
+				"A Mother's Parting Gift": {
+					"text": "Found in The High Gardens, The Imperial Gardens."
+				
+>>>>>>> 56c4dda (Divination Cards: A-D, punctuation and description edits.)
 				},
 
 				"A Note in the Wind": {
-					"text": "Found in Desert, Desert Spring, Dry Sea, Dunes, The Oasis"
+					"text": "Found in Desert, Desert Spring, Dry Sea, Dunes, The Oasis."
 				},
 
 				"A Sea of Blue": {
-					"text": "Found in Crystal Ore, Grotto, Mineral Pools, Primordial Blocks" 
+					"text": "Found in Crystal Ore, Grotto, Mineral Pools, Primordial Blocks." 
 				},
 
 				"A Stone Perfected": {
-					"text": "Found in Coves, Flooded Mine, Grotto, Peninsula, Vault, Waterways, Wharf"
+					"text": "Found in Coves, Flooded Mine, Grotto, Peninsula, Vault, Waterways, Wharf."
 				},
 
 				"Abandoned Wealth": {
-					"text": "Found in Mao Kun"
+					"text": "Found in Mao Kun."
 				},
 
 				"Acclimatisation": {
-					"text": "Found in Desert, Desert Spring, Dry Sea, Dunes"
+					"text": "Found in Desert, Desert Spring, Dry Sea, Dunes."
 				},
 
 				"Akil's Prophecy": {
-					"text": "Found in The Temple of Atzoatl"
+					"text": "Found in The Temple of Atzoatl."
 				},
 
 				"Alivia's Grace": {
-					"text": "Found in Ashen Wood, Bramble Valley, Dark Forest, Forbidden Woods, Jungle Valley, Lair, Ramparts, Spider Forest, Stagnation, Thicket, Tropical Island"
+					"text": "Found in Ashen Wood, Bramble Valley, Dark Forest, Forbidden Woods, Jungle Valley, Lair, Ramparts, Spider Forest, Stagnation, Thicket, Tropical Island."
 				},
 
 				"Alluring Bounty": {
@@ -91,52 +111,252 @@
 				},
 
 				"Alone in the Darkness": {
-					"text": "Drops from an Abyssal Trove"
+					"text": "Drops from an Abyssal Trove."
 				},
 
 				"Altered Perception": {
-					"text": "Uhtred Covetous Traitor"
+					"text": "Drops from Uhtred Covetous Traitor."
 				},
 
 				"Ambitious Obsession": {
-					"text": "Ara Sister of Light, Armala the Widow, Drek Apex Hunter, Erebix Light's Bane, Gorulis Will-Thief, Khor Sister of Shadows, Mephod the Earth Scorcher, Nassar Lion of the Seas, Stalker of the Endless Dunes, Tahsin Warmaker, Terror of the Infinite Drifts, Varhesh Shimmering Aberration"
+					"text": "Drops from map bosses, Cold River, Sunken City, Fields, Cemetery, Infested Valley, Summit, Reef, Siege, Terrace."
 				},
 
 				"Anachary's Price": {
-					"text": "Drops from Rogue Exiles"
+					"text": "Drops from Rogue Exiles."
 				},
 
 				"Arrogance of The Vaal": {
-					"text": "Found in Ancient City, Sunken City, Vaal Pyramid"
+					"text": "Found in Ancient City, Sunken City, Vaal Pyramid."
 				},
 
 				"Assassin's Favour": {
-					"text": "Found in Alleyways, Arcade, Bazaar, Port, The Marketplace, The Quay"
+					"text": "Found in Alleyways, Arcade, Bazaar, Port, The Marketplace, The Quay."
 				},
 
 				"Astral Protection": {
-					"text": "Found in The Moon Temple"
+					"text": "Found in The Moon Temple."
 				},
 
 				"Atziri's Arsenal": {
-					"text": "Found in the Vaults of Atziri"
+					"text": "Found in the Vaults of Atziri."
 				}, 
 
 				"Audacity": {
-					"text": "Found in The Apex of Sacrifice"
+					"text": "Found in The Apex of Sacrifice."
 				},
 
 				"Auspicious Ambitions": {
-					"text": "Drops from The Eater of Worlds, The Elder, The Maven, The Searing Exach"
+					"text": "Drops from The Eater of Worlds, The Elder, The Maven, The Searing Exach."
 				},
 
 				"Azure Rage": {
-					"text": "Found in Factory" 
+					"text": "Found in Factory." 
 				}, 
 
 				"Azyran's Reward": {
-					"text": "Found in Laboratory, Relic Chambers, Stagnation"
+					"text": "Found in Laboratory, Relic Chambers, Stagnation."
+				},
+
+				"Baited Expectations": {
+					"text": "Found in Desert, Desert Spring, Dry Sea, Dunes."
+				},
+
+				"Beauty Through Death": {
+					"text": "Drops from Vaal Temple Bosses."
+				},
+
+				"Bijoux": {
+					"text": "Found in Crystal Ore, Dig, Excavation, Flooded Mine, Grotto."
+				},
+
+				"Blind Venture": {
+					"text": "Found in Museum, Relic Chambers, The Reliquary."
+				},
+
+				"Boon of Justice": {
+					"text": "Found in Chateau, Conservatory, Orchard, Plaza."
+				},
+
+				"Boon of the First Ones": {
+					"text": "Found in Pit of the Chimera."
+				},
+
+				"Boundless Realms": {
+					"text": "Found in Cold River, Temple, The Harbour Bridge, The Solaris Temple, The Twilight Temple."
+				},
+
+				"Bowyer's Dream": {
+					"text": "Drops from Lord of the Ashen Arrow, Mirage of Bones, Steelpoint the Avenger, Stonebeak Battle Fowl."
+				},
+
+				"Broken Promises": {
+					"text": "Drops from Mausoleum boss."
+				},
+
+				"Broken Truce": {
+					"text": "Drops from Jorgin (Jun)."
+				}, 
+
+				"Brother's Stash": {
+					"text": "Found in Cemetary, Grave Trough, Graveyard."
+				},
+
+				"Brother's in Exile": {
+					"text": "Found in Chateau, Orchard, Plaza."
+				},
+
+				"Brush, Paint and Palette": {
+					"text": "Drops from Sepulchre Boss."
+				},
+
+				"Buried Treasure": {
+					"text": "Found in Crystal Ore, Dig, Excavation, Flooded Mine, Geode, Grotto."
+				},
+
+				"Burning Blood": {
+					"text": "Found in Forge of the Phoenix, Lava Chamber."
+				},
+
+				"Call to the First Ones": {
+					"text": "Found in Bramble Valley, Dark Forest, Forbidden Woods, The Northern Forest, Thicket."
+				},
+
+				"Cameria's Cut": {
+					"text": "Drops from Cameria (Jun)."
+				},
+
+				"Cartographer's Delight": {
+					"text": "Found in The Foothills, The Harbour Bridge."
+				},
+
+				"Chaotic Disposition": {
+					"text": "Found in Poorjoy's Asylum."
+				}, 
+
+				"Chasing Risk": {
+					"text": "Drops from The Vaal Omnitect (Alva Temple)."
+				},
+
+				"Checkmate": {
+					"text": "Found in Academy, Museum."
+				},
+
+				"Choking Guilt": {
+					"text": "Drops from The Infinite Hunger."
+				},
+
+				"Costly Curio": {
+					"text": "Found in Museum, Relic Chamber."
+				},
+
+				"Council of Cats": {
+					"text": "Drops from Al-Hezmin The Hunter."
+				},
+
+				"Coveted Possession": {
+					"text": "Found in Bone Crypt, The Catacombs, The Ossuary."
+				},
+
+				"Cursed Words": {
+					"text": "Found in Cemetary, Grave Trough, Graveyard."
+				},
+
+				"Dark Dreams": {
+					"text": "Drops from Minara Anemina (Rogue exile)."
+				},
+
+				"Dark Temptation": {
+					"text": "Found in hidden chests (Azurite Mine)."
+				},
+
+				"Darker Half": {
+					"text": "Found in maps affected by Delirium and Simulacrum."
+				},
+
+				"Deadly Joy": {
+					"text": "Found in Poorjoy's Asylum."
+				},
+
+				"Death": {
+					"text": "Found in Bog, Marshes, Mud Geyser, The Karui Fortress."
+				},
+
+				"Deathly Designs": {
+					"text": "Drops from Ash Lessard (Rogue Exile)."
+				},
+
+				"Dementophobia": {
+					"text": "Drops from Conquerors and Cortex."
+				},
+				
+				"Demigod's Wager": {
+					"text": "Drops from Basilica Boss and The Cleansing Light."
+				},
+
+				"Desecrated Virtue": {
+					"text": "Drops from Aul (Delve Boss)."
+				}, 
+
+				"Desperate Crusade": {
+					"text": "Found in Basilica, Residence."
+				},
+
+				"Destined to Crumble": {
+					"text": "Found in Academy, Museum, Scriptorium."
+				},
+
+				"Dialla's Subjugation": {
+					"text": "Found in Cold River, Temple, The Solaris/Twilight Temple."
+				},
+
+				"Disdain": {
+					"text": "Found in The Maven's Crucible."
+				},
+
+				"Divine Beauty": {
+					"text": "Drops from map bosses, Lava Chamber, Underground Sea(Maelstrom of Chaos), Mineral Pools."
+				},
+
+				"Divine Justice": {
+					"text": "Drops from an Armourer's Strongbox."
+				},
+				
+				"Doedre's Madness": {
+					"text": "Drops from Doedre and similar boss models."
+				},
+
+				"Doryani's Epiphany": {
+					"text": "Unconfirmed - Prohibited Library."
+				},
+
+				"Draped in Dreams" : {
+					"text": "Unconfirmed"
+				},
+
+				"Duality": {
+					"text": "Drops from Architects (Alva Temple)."
+				},
+
+				"Dying Anguish": {
+					"text": "Found in Arsenal, Colonade, Ghetto, Port, Precinct, Promenade."
+				},
+
+				"Dying Light" : {
+					"text": "Drops from The Shaper."
 				}
+<<<<<<< HEAD
+=======
+
+				
+
+
+
+
+
+
+
+>>>>>>> 56c4dda (Divination Cards: A-D, punctuation and description edits.)
 			}
 		},
 		"Fragment": {
