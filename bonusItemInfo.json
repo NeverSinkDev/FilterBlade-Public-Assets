@@ -28,8 +28,89 @@
 		},
 		"Incubator": {
 			"items": {
-				"Geomancer's Incubator": {
-					"text": "Grants a random 6-link weapon or armour"
+				"Fine Incubator" : {
+					"text" : "Doesn't drop. Awards currency."
+				},
+				"Whispering Incubator" : {
+					"text" : "Doesn't drop. Awards a random essence."
+				},
+				"Geomancer's Incubator" : {
+					"text" : "Awards a random 6-link weapon or armour."
+				},
+				"Abyssal Incubator" : {
+					"text" : "Awards an abyss jewel or a stygian vise."
+				},
+				"Blighted Incubator" : {
+					"text" : "Awards blight items: usually blighted maps, oils or scarabs."
+				},
+				"Cartographer's Incubator" : {
+					"text" : "Awards maps and map related items. Can grant special maps, if ItemLevel is 81 or higher."
+				},
+				"Diviner's Incubator" : {
+					"text" : "Awards a bunch of stacked decks (usually 2-4)."
+				},
+				"Enchanted Incubator" : {
+					"text" : "Awards a random rare enchanted helmet."
+				},
+				"Foreboding Incubator" : {
+					"text" : "Awards harbinger related items: usually currency shards, rarely full orbs or scarabs!"
+				},
+				"Fossilised Incubator" : {
+					"text" : "Awards a random fossil!"
+				},
+				"Gemcutter's Incubator" : {
+					"text" : "Awards a random 1-20%quaity gem!"
+				},
+				"Infused Incubator" : {
+					"text" : "Awards a random essence!"
+				},
+				"Kalguuran Incubator" : {
+					"text" : "Awards expedition items: usually expedition reroll currencies or scarabs"
+				},
+				"Maddening Incubator" : {
+					"text" : "Awards delirium items: usually simulacrum splinters or delirium orbs"
+				},
+				"Morphing Incubator" : {
+					"text" : "Awards metamorph items: usually catalysts."
+				},
+				"Obscured Incubator" : {
+					"text" : "Awards breach items: usually splinters or scarabs."
+				},
+				"Ornate Incubator" : {
+					"text" : "Awards one or small stack of random currencies."
+				},
+				"Otherworldly Incubator" : {
+					"text" : "Awards a random unique map."
+				},
+				"Singular Incubator" : {
+					"text" : "Awards a random unique (enjoy your bramblejack)!"
+				},
+				"Skittering Incubator" : {
+					"text" : "Awards a random scarab!"
+				},
+				"Thaumaturge's Incubator" : {
+					"text" : "Awards a special gem reward, such a can be a level 21 gem, an exceptional gem, a gem with 23 quality or a leveled/quality vaal gem!"
+				},
+				"Time-Lost Incubator" : {
+					"text" : "Doesn't drop. Awards a league specific unique!"
+				},
+				"Celestial Armoursmith's Incubator" : {
+					"text" : "Awards a shaper or elder influenced armour piece!"
+				},
+				"Celestial Blacksmith's Incubator" : {
+					"text" : "Awards a shaper or elder influenced weapon!"
+				},
+				"Celestial Jeweller's Incubator" : {
+					"text" : "Awards a shaper or elder influenced ring, amulet or belt!"
+				},
+				"Fragmented Incubator" : {
+					"text" : "Awards a random map fragment. This is usually an atziri fragment. Itemlevel 81+ incubators can rarely grant other fragments!"
+				},
+				"Mysterious Incubator" : {
+					"text" : "Awards the reward of another random incubator (likely bramblejack!)."
+				},
+				"Primal Incubator" : {
+					"text" : "Awards a random talisman. Can rarely award unique talismans!"
 				}
 			}
 		},
