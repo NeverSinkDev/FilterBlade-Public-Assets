@@ -62,7 +62,7 @@
 					"text": "More Caster - Fewer Attack Modifiers"
 				},
 				"Bloodstained Fossil": {
-					"text": "Has a Vaal Modifier"
+					"text": "Corrupted - Has a corrupted implicit Modifier"
 				},
 				"Bound Fossil": {
 					"text": "More Minion/Aura or Curse Modifiers"
@@ -70,14 +70,11 @@
 				"Corroded Fossil": {
 					"text": "More Physical or Chaos Ailment Modifiers - No Elemental Modifiers"
 				},
+				"Deft Fossil": {
+					"text": "More Critical modifiers - No Attribute modifiers"
+				},
 				"Dense Fossil": {
 					"text": "More Defence Modifiers - No Life Modifiers"
-				},
-				"Enchanted Fossil": {
-					"text": "Has a Labyrinth Enchantment"
-				},
-				"Encrusted Fossil": {
-					"text": "More Sockets - Can have White Sockets"
 				},
 				"Faceted Fossil": {
 					"text": "More Gem Modifiers"
@@ -87,6 +84,9 @@
 				},
 				"Frigid Fossil": {
 					"text": "More Cold Modifiers - No Fire Modifiers"
+				},
+				"Fundamental Fossil": {
+					"text": "More Attribute Modifiers - No Critical Modifiers"
 				},
 				"Gilded Fossil": {
 					"text": "Item is overvalued by Vendors"
@@ -124,8 +124,11 @@
 				"Serrated Fossil": {
 					"text": "More Attack Modifiers - No Caster Modifiers"
 				},
+				"Shuddering Fossil": {
+					"text": "More Speed - No mana Modifiers"
+				},
 				"Tangled Fossil": {
-					"text": "Can have any Fossil Modifiers"
+					"text": "Makes a random modifier type much more likely and prevents another random modifier type. Effects revealed once resonator is fully socketed."
 				}
 			}
 		},
