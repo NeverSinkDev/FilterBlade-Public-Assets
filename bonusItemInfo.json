@@ -334,7 +334,213 @@
 		},
 		"Scarab": {
 			"items": {
+				"Rusted Abyss Scarab": {
+					"text": "Area contains 1 additional Abyss"
+				},
+				"Polished Abyss Scarab": {
+					"text": "Area contains 1 additional Abyss, Abysses in Area spawn 50% increased Monsters"
+				},
+				"Gilded Abyss Scarab": {
+					"text": "Area contains 2 additional Abysses, Abysses in Area spawn 50% increased Monsters"
+				},
+				"Winged Abyss Scarab": {
+					"text": "Area contains 3 additional Abysses, Abysses in Area spawn 100% increased Monsters"
+				},
+				
+				"Rusted Ambush Scarab": {
+					"text": "Area contains 3 additional Strongboxes"
+				},
+				"Polished Ambush Scarab": {
+					"text": "Area contains 4 additional Strongboxes"
+				},
+				"Gilded Ambush Scarab": {
+					"text": "Area contains 5 additional Strongboxes"
+				},
+				"Winged Ambush Scarab": {
+					"text": "Area contains 9 additional Strongboxes"
+				},
 
+				"Rusted Bestiary Scarab": {
+					"text": "Area contains an additional Red Beast"
+				},
+				"Polished Bestiary Scarab": {
+					"text": "Area contains 2 additional Red Beasts"
+				},
+				"Gilded Bestiary Scarab": {
+					"text": "Area contains 3 additional Red Beasts"
+				},
+				"Winged Bestiary Scarab": {
+					"text": "Area contains 5 additional Red Beasts"
+				},
+
+				"Rusted Blight Scarab": {
+					"text": "Area contains a Blight Encounter"
+				},
+				"Polished Blight Scarab": {
+					"text": "Encounter contains up to 1 additional boss"
+				},
+				"Gilded Blight Scarab": {
+					"text": "Encounter has +1 additional boss and 50% for additional reward from chests"
+				},
+				"Winged Blight Scarab": {
+					"text": "Encounter has +1 additional boss, 50% for additional reward from chests and lanes have additional reward chest"
+				},
+
+				"Rusted Breach Scarab": {
+					"text": "Area contains an additional Breach"
+				},
+				"Polished Breach Scarab": {
+					"text": "Area contains an additional Breach, Breaches contain an additional boss' clasped hand"
+				},
+				"Gilded Breach Scarab": {
+					"text": "Area contains an additional Breach, Breaches contain an additional boss' clasped hand. Hands drop double splinters"
+				},
+				"Winged Breach Scarab": {
+					"text": "Area contains 2 additional Breaches, Breaches contain an additional boss' clasped hand. Hands drop double splinters"
+				},
+
+				"Rusted Cartography Scarab": {
+					"text": "20% More maps found in area"
+				},
+				"Polished Cartography Scarab": {
+					"text": "35% More maps found in area"
+				},
+				"Gilded Cartography Scarab": {
+					"text": "50% More maps found in area"
+				},
+				"Winged Cartography Scarab": {
+					"text": "85% More maps found in area"
+				},
+
+				"Rusted Divination Scarab": {
+					"text": "50% More divination cards found in area"
+				},
+				"Polished Divination Scarab": {
+					"text": "100% More divination cards found in area"
+				},
+				"Gilded Divination Scarab": {
+					"text": "150% More divination cards found in area"
+				},
+				"Winged Divination Scarab": {
+					"text": "250% More divination cards found in area"
+				},
+
+				"Rusted Elder Scarab": {
+					"text": "30% More rare Elder items found in area"
+				},
+				"Polished Elder Scarab": {
+					"text": "60% More rare Elder items found in area"
+				},
+				"Gilded Elder Scarab": {
+					"text": "90% More rare Elder items found in area"
+				},
+				"Winged Elder Scarab": {
+					"text": "150% More rare Elder items found in area"
+				},
+
+				"Rusted Expedition Scarab": {
+					"text": "Area contains an additional Expedition Encounter"
+				},
+				"Polished Expedition Scarab": {
+					"text": "Expedition Encounters have 20% more explosives and 25% additional runic monster markers"
+				},
+				"Gilded Expedition Scarab": {
+					"text": "Expedition Encountershave 20% more explosives and 50% additional runic monster markers"
+				},
+				"Winged Expedition Scarab": {
+					"text": "Expedition Encounters have 20% more explosives, 50% additional runic monster markers and +1 to Remanant suffix"
+				},
+
+				"Rusted Harbinger Scarab": {
+					"text": "Area contains an additional Harbinger"
+				},
+				"Polished Harbinger Scarab": {
+					"text": "Area contains 3 additional Harbingers"
+				},
+				"Gilded Harbinger Scarab": {
+					"text": "Area contains 4 additional Harbingers"
+				},
+				"Winged Harbinger Scarab": {
+					"text": "Area contains 7 additional Harbingers"
+				},
+
+				"Rusted Legion Scarab": {
+					"text": "Area contains an additional Legion Encounter"
+				},
+				"Polished Legion Scarab": {
+					"text": "Area contains an additional Legion Encounter, Each Legion contains a war hoard"
+				},
+				"Gilded Legion Scarab": {
+					"text": "Area contains an additional Legion Encounter, Each Legion contains a war hoard and general"
+				},
+				"Winged Legion Scarab": {
+					"text": "Area contains 2 additional Legion Encounters, Each Legion contains a war hoard and general"
+				},
+
+				"Rusted Metamorph Scarab": {
+					"text": "Area contains Metamorph monsters"
+				},
+				"Polished Metamorph Scarab": {
+					"text": "Area contains Metamorph monsters, Bosses which drop an itemised sample drop an additional sample"
+				},
+				"Gilded Metamorph Scarab": {
+					"text": "Area contains Metamorph monsters, All metamorph monsters have rewards, Bosses which drop an itemised sample drop an additional sample"
+				},
+				"Winged Metamorph Scarab": {
+					"text": "Area contains Metamorph monsters, All metamorph monsters have rewards, Bosses which drop an itemised sample drop 2 additional samples"
+				},
+
+				"Rusted Reliquary Scarab": {
+					"text": "50% More unique items found in area"
+				},
+				"Polished Reliquary Scarab": {
+					"text": "100% More unique items found in area"
+				},
+				"Gilded Reliquary Scarab": {
+					"text": "150% More unique items found in area"
+				},
+				"Winged ReliquaryScarab": {
+					"text": "250% More unique items found in area"
+				},
+
+				"Rusted Shaper Scarab": {
+					"text": "30% More rare Shaper items found in area"
+				},
+				"Polished Shaper Scarab": {
+					"text": "60% More rare Shaper items found in area"
+				},
+				"Gilded Shaper Scarab": {
+					"text": "90% More rare Shaper items found in area"
+				},
+				"Winged Shaper Scarab": {
+					"text": "150% More rare Shaper items found in area"
+				},
+
+				"Rusted Sulphite Scarab": {
+					"text": "Map owner gains 20% more suphite. Area contains Niko"
+				},
+				"Polished Sulphite Scarab": {
+					"text": "Map owner gains 40% more suphite. Area contains Niko"
+				},
+				"Gilded Sulphite Scarab": {
+					"text": "Map owner gains 60% more suphite. Area contains Niko"
+				},
+				"Winged Sulphite Scarab": {
+					"text": "Map owner gains 100% more suphite. Area contains Niko"
+				},
+
+				"Rusted Torment Scarab": {
+					"text": "Area is haunted by 3 additional Tormented Spirits"
+				},
+				"Polished Torment Scarab": {
+					"text": "Area is haunted by 5 additional Tormented Spirits"
+				},
+				"Gilded Torment Scarab": {
+					"text": "Area is haunted by 7 additional Tormented Spirits"
+				},
+				"Winged Torment Scarab": {
+					"text": "Area is haunted by 12 additional Tormented Spirits"
+				}
 			}
 		},
 		"UniqueMap": {
