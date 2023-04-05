@@ -56,25 +56,25 @@
 		"Fossil": {
 			"items": {
 				"Aberrant Fossil": {
-					"text": "More Chaos Modifiers - No Lightning Modifiers"
+					"text": "More Chaos Modifiers, No Lightning Modifiers"
 				},
 				"Aetheric Fossil": {
-					"text": "More Caster - Fewer Attack Modifiers"
+					"text": "More Caster, Fewer Attack Modifiers"
 				},
 				"Bloodstained Fossil": {
-					"text": "Corrupted - Has a corrupted implicit Modifier"
+					"text": "Corrupted, Has a corrupted implicit Modifier"
 				},
 				"Bound Fossil": {
 					"text": "More Minion/Aura or Curse Modifiers"
 				},
 				"Corroded Fossil": {
-					"text": "More Physical or Chaos Ailment Modifiers - No Elemental Modifiers"
+					"text": "More Physical or Chaos Ailment Modifiers, No Elemental Modifiers"
 				},
 				"Deft Fossil": {
-					"text": "More Critical modifiers - No Attribute modifiers"
+					"text": "More Critical modifiers, No Attribute modifiers"
 				},
 				"Dense Fossil": {
-					"text": "More Defence Modifiers - No Life Modifiers"
+					"text": "More Defence Modifiers, No Life Modifiers"
 				},
 				"Faceted Fossil": {
 					"text": "More Gem Modifiers"
@@ -83,10 +83,10 @@
 					"text": "Creates a Split copy of a non-influenced item"
 				},
 				"Frigid Fossil": {
-					"text": "More Cold Modifiers - No Fire Modifiers"
+					"text": "More Cold Modifiers, No Fire Modifiers"
 				},
 				"Fundamental Fossil": {
-					"text": "More Attribute Modifiers - No Critical Modifiers"
+					"text": "More Attribute Modifiers, No Critical Modifiers"
 				},
 				"Gilded Fossil": {
 					"text": "Item is overvalued by Vendors"
@@ -98,34 +98,34 @@
 					"text": "Has an Abyssal Socket"
 				},
 				"Jagged Fossil": {
-					"text": "More Physical Modifiers - No Chaos Modifiers"
+					"text": "More Physical Modifiers, No Chaos Modifiers"
 				},
 				"Lucent Fossil": {
-					"text": "More Mana Modifiers - No Speed Modifiers"
+					"text": "More Mana Modifiers, No Speed Modifiers"
 				},
 				"Metallic Fossil": {
-					"text": "More Lightning Modifiers - No Physical Modifiers"
+					"text": "More Lightning Modifiers, No Physical Modifiers"
 				},
 				"Perfect Fossil": {
 					"text": "Improved Quality (Gamble to get to 30%)"
 				},
 				"Prismatic Fossil": {
-					"text": "More Elemental Modifiers - No Physical or Chaos Ailment Modifiers"
+					"text": "More Elemental Modifiers, No Physical or Chaos Ailment Modifiers"
 				},
 				"Pristine Fossil": {
-					"text": "More Life Modifiers - No Defence Modifiers"
+					"text": "More Life Modifiers, No Defence Modifiers"
 				},
 				"Sanctified Fossil": {
 					"text": "Numeric values are lucky and high level modifiers are more common"
 				},
 				"Scorched Fossil": {
-					"text": "More Fire Modifiers - No Cold Modifiers"
+					"text": "More Fire Modifiers, No Cold Modifiers"
 				},
 				"Serrated Fossil": {
-					"text": "More Attack Modifiers - No Caster Modifiers"
+					"text": "More Attack Modifiers, No Caster Modifiers"
 				},
 				"Shuddering Fossil": {
-					"text": "More Speed - No mana Modifiers"
+					"text": "More Speed, No mana Modifiers"
 				},
 				"Tangled Fossil": {
 					"text": "Makes a random modifier type much more likely and prevents another random modifier type. Effects revealed once resonator is fully socketed."
@@ -504,7 +504,7 @@
 				},
 
 				"Doryani's Epiphany": {
-					"text": "Unconfirmed - Prohibited Library."
+					"text": "Unconfirmed, Prohibited Library."
 				},
 
 				"Draped in Dreams" : {
