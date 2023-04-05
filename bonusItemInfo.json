@@ -134,12 +134,73 @@
 		},
 		"DeliriumOrb": {
 			"items": {
-
+				"Abyssal Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Abyss Items reward type"
+				},
+				"Amorphous Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Metamorph reward type"
+				},
+				"Armoursmith's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Armour reward type"
+				},
+				"Blacksmith's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Weapons reward type"
+				},
+				"Blighted Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Blight reward type"
+				},
+				"Cartographer's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Map Items reward type"
+				},
+				"Diviner's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Divination Cards reward type"
+				},
+				"Fine Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Currency Items reward type"
+				},
+				"Foreboding Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Harbinger Items reward type"
+				},
+				"Fossilised Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Fossils reward type"
+				},
+				"Fragmented Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Fragments reward type"
+				},
+				"Imperial Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Labyrinth Items reward type"
+				},
+				"Jeweller's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Trinkets reward type"
+				},
+				"Obscured Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Breach Items reward type"
+				},
+				"Singular Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Unique Items reward type"
+				},
+				"Skittering Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Scarabs reward type"
+				},
+				"Thaumaturge's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Gems reward type"
+				},
+				"Timeless Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Legion reward type"
+				},
+				"Whispering Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Essences reward type"
+				}
 			}
 		},
 		"Oil": {
 			"items": {
-
+				"Tainted Oil": {
+					"text": "Used along with other oils to annoint a corrupted item (rings, amulets or blighted maps)"
+				},
+				"Reflective Oil": {
+					"text": "Used along with other oils to annoint a mirrored item (rings, amulets or blighted maps)"
+				}
 			}
 		},
 		"Incubator": {
