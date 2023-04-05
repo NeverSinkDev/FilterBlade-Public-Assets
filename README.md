@@ -6,7 +6,7 @@ The files in this repository are used to add extra-data into the hover-descripti
 
 For instance in this example, the extra-data is used to add drop locations into the unique tiering:
 
-![image](https://user-images.githubusercontent.com/2942999/229589583-253bbc85-e5dc-46d5-9968-d6d08225ecc8.png)
+![image](https://user-images.githubusercontent.com/2942999/230211064-7a91428b-7e90-4d05-a273-2dae4444624d.png)
 
 > See below how these descriptions are represented in the `bonusItemInfo.json` file.
 
