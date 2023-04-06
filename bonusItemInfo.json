@@ -56,76 +56,76 @@
 		"Fossil": {
 			"items": {
 				"Aberrant Fossil": {
-					"text": "More Chaos Modifiers, No Lightning Modifiers"
+					"text": "More Chaos modifiers, No Lightning modifiers"
 				},
 				"Aetheric Fossil": {
-					"text": "More Caster, Fewer Attack Modifiers"
+					"text": "More Caster modifiers, Fewer Attack modifiers"
 				},
 				"Bloodstained Fossil": {
-					"text": "Corrupted, Has a corrupted implicit Modifier"
+					"text": "Corrupted, Has a Corrupted implicit modifier"
 				},
 				"Bound Fossil": {
-					"text": "More Minion/Aura or Curse Modifiers"
+					"text": "More Minion, Aura or Curse modifiers"
 				},
 				"Corroded Fossil": {
-					"text": "More Physical or Chaos Ailment Modifiers, No Elemental Modifiers"
+					"text": "More Physical Ailment or Chaos Ailment modifiers, No Elemental modifiers"
 				},
 				"Deft Fossil": {
 					"text": "More Critical modifiers, No Attribute modifiers"
 				},
 				"Dense Fossil": {
-					"text": "More Defence Modifiers, No Life Modifiers"
+					"text": "More Defence modifiers, No Life modifiers"
 				},
 				"Faceted Fossil": {
-					"text": "More Gem Modifiers"
+					"text": "More Gem modifiers"
 				},
 				"Fractured Fossil": {
-					"text": "Creates a Split copy of a non-influenced item"
+					"text": "Creates a split copy. Cannot be used to split Influenced, Enchanted, Fractured, or Synthesised items."
 				},
 				"Frigid Fossil": {
-					"text": "More Cold Modifiers, No Fire Modifiers"
+					"text": "More Cold modifiers, No Fire modifiers"
 				},
 				"Fundamental Fossil": {
-					"text": "More Attribute Modifiers, No Critical Modifiers"
+					"text": "More Attribute modifiers, No Critical modifiers"
 				},
 				"Gilded Fossil": {
-					"text": "Item is overvalued by Vendors"
+					"text": "Item is overvalued by vendors"
 				},
 				"Glyphic Fossil": {
-					"text": "Has a Corrupted Essence Modifier"
+					"text": "Has a Corrupt Essence modifier"
 				},
 				"Hollow Fossil": {
 					"text": "Has an Abyssal Socket"
 				},
 				"Jagged Fossil": {
-					"text": "More Physical Modifiers, No Chaos Modifiers"
+					"text": "More Physical modifiers, No Chaos modifiers"
 				},
 				"Lucent Fossil": {
-					"text": "More Mana Modifiers, No Speed Modifiers"
+					"text": "More Mana modifiers, No Speed modifiers"
 				},
 				"Metallic Fossil": {
-					"text": "More Lightning Modifiers, No Physical Modifiers"
+					"text": "More Lightning modifiers, No Physical modifiers"
 				},
 				"Perfect Fossil": {
-					"text": "Improved Quality (Gamble to get to 30%)"
+					"text": "Improved Quality"
 				},
 				"Prismatic Fossil": {
-					"text": "More Elemental Modifiers, No Physical or Chaos Ailment Modifiers"
+					"text": "More Elemental modifiers, No Physical Ailment or Chaos Ailment modifiers"
 				},
 				"Pristine Fossil": {
-					"text": "More Life Modifiers, No Defence Modifiers"
+					"text": "More Life modifiers, No Defence modifiers"
 				},
 				"Sanctified Fossil": {
-					"text": "Numeric values are lucky and high level modifiers are more common"
+					"text": "Numeric values are lucky, High Level modifiers are more common"
 				},
 				"Scorched Fossil": {
-					"text": "More Fire Modifiers, No Cold Modifiers"
+					"text": "More Fire modifiers, No Cold modifiers"
 				},
 				"Serrated Fossil": {
-					"text": "More Attack Modifiers, No Caster Modifiers"
+					"text": "More Attack modifiers, No Caster modifiers"
 				},
 				"Shuddering Fossil": {
-					"text": "More Speed, No mana Modifiers"
+					"text": "More Speed modifiers, No mana modifiers"
 				},
 				"Tangled Fossil": {
 					"text": "Makes a random modifier type much more likely and prevents another random modifier type. Effects revealed once resonator is fully socketed."
@@ -196,98 +196,98 @@
 		"Oil": {
 			"items": {
 				"Tainted Oil": {
-					"text": "Used along with other oils to annoint a corrupted item (rings, amulets or blighted maps)"
+					"text": "Can be combined with other oils to enchant corrupted rings, amulets or blighted maps."
 				},
 				"Reflective Oil": {
-					"text": "Used along with other oils to annoint a mirrored item (rings, amulets or blighted maps)"
+					"text": "Can be combined with other oils to enchant mirrored rings, amulets or blighted maps."
 				}
 			}
 		},
 		"Incubator": {
 			"items": {
 				"Fine Incubator" : {
-					"text" : "Doesn't drop. Awards currency."
+					"text" : "Does not drop. Awards a Currency item."
 				},
 				"Whispering Incubator" : {
-					"text" : "Doesn't drop. Awards a random essence."
+					"text" : "Does not drop. Awards an Essence item."
 				},
 				"Geomancer's Incubator" : {
-					"text" : "Awards a random 6-link weapon or armour."
+					"text" : "Awards a 6-Linked Armour item."
 				},
 				"Abyssal Incubator" : {
-					"text" : "Awards an abyss jewel or a stygian vise."
+					"text" : "Awards a Rare Abyss item."
 				},
 				"Blighted Incubator" : {
-					"text" : "Awards blight items: usually blighted maps, oils or scarabs."
+					"text" : "Awards a Blight item. Usually blighted maps, oils or scarabs."
 				},
 				"Cartographer's Incubator" : {
-					"text" : "Awards maps and map related items. Can grant special maps, if ItemLevel is 81 or higher."
+					"text" : "Awards a Map item. Can grant special maps, if ItemLevel is 81 or higher."
 				},
 				"Diviner's Incubator" : {
-					"text" : "Awards a bunch of stacked decks (usually 2-4)."
+					"text" : "Awards Stacked Decks."
 				},
 				"Enchanted Incubator" : {
-					"text" : "Awards a random rare enchanted helmet."
+					"text" : "Awards an Enchanted Helmet."
 				},
 				"Foreboding Incubator" : {
-					"text" : "Awards harbinger related items: usually currency shards, rarely full orbs or scarabs!"
+					"text" : "Awards Currency Shards or a Harbinger item."
 				},
 				"Fossilised Incubator" : {
-					"text" : "Awards a random fossil!"
+					"text" : "Awards a Fossil item."
 				},
 				"Gemcutter's Incubator" : {
-					"text" : "Awards a random 1-20%quaity gem!"
+					"text" : "Does not drop. Awards a Quality Gem item."
 				},
 				"Infused Incubator" : {
-					"text" : "Awards a random essence!"
+					"text" : "Awards an Essence item."
 				},
 				"Kalguuran Incubator" : {
-					"text" : "Awards expedition items: usually expedition reroll currencies or scarabs"
+					"text" : "Awards an Expedition item. Usually expedition reroll currencies or scarabs"
 				},
 				"Maddening Incubator" : {
-					"text" : "Awards delirium items: usually simulacrum splinters or delirium orbs"
+					"text" : "Awards a Delirium item. Usually simulacrum splinters or delirium orbs"
 				},
 				"Morphing Incubator" : {
-					"text" : "Awards metamorph items: usually catalysts."
+					"text" : "Awards a Metamorph item. Usually catalysts."
 				},
 				"Obscured Incubator" : {
-					"text" : "Awards breach items: usually splinters or scarabs."
+					"text" : "Awards a Breach item. Usually splinters or scarabs."
 				},
 				"Ornate Incubator" : {
-					"text" : "Awards one or small stack of random currencies."
+					"text" : "Awards a Currency item."
 				},
 				"Otherworldly Incubator" : {
-					"text" : "Awards a random unique map."
+					"text" : "Awards a Unique Map."
 				},
 				"Singular Incubator" : {
-					"text" : "Awards a random unique (enjoy your bramblejack)!"
+					"text" : "Awards Unique item. (enjoy your bramblejack)!"
 				},
 				"Skittering Incubator" : {
-					"text" : "Awards a random scarab!"
+					"text" : "Awards a Scarab item."
 				},
 				"Thaumaturge's Incubator" : {
-					"text" : "Awards a special gem reward, such a can be a level 21 gem, an exceptional gem, a gem with 23 quality or a leveled/quality vaal gem!"
+					"text" : "Awards a high level Corrupted Gem or valuable Gem item. Usually a level 21 gem, an exceptional gem, a gem with 23 quality or a leveled/quality vaal gem!"
 				},
 				"Time-Lost Incubator" : {
-					"text" : "Doesn't drop. Awards a league specific unique!"
+					"text" : "Does not drop. Awards a League-specific Unique item."
 				},
 				"Celestial Armoursmith's Incubator" : {
-					"text" : "Awards a shaper or elder influenced armour piece!"
+					"text" : "Awards a Shaper or Elder Armour item."
 				},
 				"Celestial Blacksmith's Incubator" : {
-					"text" : "Awards a shaper or elder influenced weapon!"
+					"text" : "Awards a Shaper or Elder Weapon item."
 				},
 				"Celestial Jeweller's Incubator" : {
-					"text" : "Awards a shaper or elder influenced ring, amulet or belt!"
+					"text" : "Awards a Shaper or Elder Trinket item (ring, amulet or belt)."
 				},
 				"Fragmented Incubator" : {
-					"text" : "Awards a random map fragment. This is usually an atziri fragment. Itemlevel 81+ incubators can rarely grant other fragments!"
+					"text" : "Awards a Fragment item. Usually a Sacrifice fragment. Itemlevel 81+ incubators can rarely grant other fragments!"
 				},
 				"Mysterious Incubator" : {
 					"text" : "Awards the reward of another random incubator (likely bramblejack!)."
 				},
 				"Primal Incubator" : {
-					"text" : "Awards a random talisman. Can rarely award unique talismans!"
+					"text" : "Awards a Talisman item. Can rarely award unique talismans!"
 				}
 			}
 		},
@@ -604,7 +604,7 @@
 				"Winged Abyss Scarab": {
 					"text": "Area contains 3 additional Abysses, Abysses in Area spawn 100% increased Monsters"
 				},
-				
+
 				"Rusted Ambush Scarab": {
 					"text": "Area contains 3 additional Strongboxes"
 				},
