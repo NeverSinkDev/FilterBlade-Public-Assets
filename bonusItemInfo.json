@@ -2557,6 +2557,12 @@
 						},
 						"Endless Misery": {
 							"text": "Does not drop. Created with a vendor recipe."
+						},
+						"Dead Reckoning": {
+							"text": "Does not drop. Created with a vendor recipe."
+						},
+						"Forbidden Flesh": {
+							"text": "Drops from The Eater of Worlds."
 						}
 					}
 				},
@@ -2672,6 +2678,9 @@
 						},
 						"Rain of Splinters": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted."
+						},
+						"Forbidden Flame": {
+							"text": "Drops from The Searing Exarch."
 						}
 					}
 				}
