@@ -428,6 +428,18 @@
 				},
 				"Prime Chaotic Resonator": {
 					"text": "Four socket Resonator reforging a rare item using Fossils"
+				},
+				"Primitive Alchemical Resonator": {
+					"text": "Single socket Resonator upgrading a normal item to a rare item using Fossils"
+				},
+				"Potent Alchemical Resonator": {
+					"text": "Two socket Resonator upgrading a normal item to a rare item using Fossils"
+				},
+				"Powerful Alchemical Resonator": {
+					"text": "Three socket Resonator upgrading a normal item to a rare item using Fossils"
+				},
+				"Prime Alchemical Resonator": {
+					"text": "Four socket Resonator upgrading a normal item to a rare item using Fossils"
 				}
 			}
 		},
@@ -578,6 +590,45 @@
 				},
 				"Reflective Oil": {
 					"text": "Can be combined with other oils to enchant mirrored rings, amulets or blighted maps."
+				},
+				"Clear Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 12% reduced Monster Movement Speed"
+				},
+				"Sepia Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Towers deal 25% more Damage"
+				},
+				"Amber Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 25% reduced Cost of Towers"
+				},
+				"Verdant Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 45% increased Experience gain"
+				},
+				"Teal Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Blight Monsters spawn 30% faster, Encounter duration is 50 seconds shorter"
+				},
+				"Azure Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Varieties of Items contained in 5 Blight Chests are Lucky"
+				},
+				"Indigo Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Up to 3 additional Blight Bosses"
+				},
+				"Violet Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 25% chance for an additional Reward Chest"
+				},
+				"Crimson Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Varieties of Items contained in 12 Blight Chests are Lucky"
+				},
+				"Black Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 7% chance for Blight Chests to contain an additional Reward"
+				},
+				"Opalescent Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Varieties of Items contained in 18 Blight Chests are Lucky"
+				},
+				"Silver Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps:  6% increased Pack size, 80% increased Quantity of Items"
+				},
+				"Golden Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps:  6% increased Pack size, 30% chance for Blight Chests to contain an additional Reward"
 				}
 			}
 		},
