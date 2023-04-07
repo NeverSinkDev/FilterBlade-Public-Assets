@@ -735,7 +735,7 @@
 				},
 
 				"Ambitious Obsession": {
-					"text": "Drops from map bosses, Cold River, Sunken City, Fields, Cemetery, Infested Valley, Summit, Reef, Siege, Terrace."
+					"text": "Drops from map bosses: Cold River, Sunken City, Fields, Cemetery, Infested Valley, Summit, Reef, Siege, Terrace."
 				},
 
 				"Anachary's Price": {
@@ -931,7 +931,7 @@
 				},
 
 				"Divine Beauty": {
-					"text": "Drops from map bosses, Lava Chamber, Underground Sea(Maelstrom of Chaos), Mineral Pools."
+					"text": "Drops from map bosses: Lava Chamber, Underground Sea(Maelstrom of Chaos), Mineral Pools."
 				},
 
 				"Divine Justice": {
@@ -960,7 +960,1164 @@
 
 				"Dying Light" : {
 					"text": "Drops from The Shaper."
-				}
+				},
+
+				"Earth Drinker": {
+					"text": "Found in Desert, Desert Spring, Dry Sea, Dunes, The Oasis, The Foothills, The Vastiri Desert."
+				},
+				"Core": {
+					"text": "Found in Core, Overgrown Ruin, Overgrown Shrine."
+				},
+				
+				"Emperor of Purity": {
+					"text": "Found in Overgrown Ruin, Overgrown Shrine, The Chamber of Sins."
+				},
+
+				"Emperor's Luck": {
+					"text": "Found in the Courtyard, Gardens, Orchard, Terrace, The High Gardens, The Imperial Gardens."
+				},
+
+				"Endless Night": {
+					"text": "Unconfirmed"
+				},
+
+				"Etched in Blood": {
+					"text": "Drops from The Cursed King."
+				},
+
+				"Eternal Bonds": {
+					"text": "Drops from Map Reward Chests in Heist."
+				},
+
+				"Ever-Changing": {
+					"text": "Found in Kirac maps."
+				},
+
+				"Fateful Meeting": {
+					"text": "Drops from Vaal Flesh Merchant with Vaal Oligarchs atlas passive (Alva incursions)."
+				},
+
+				"Forbidden Power": {
+					"text": "Drops from map bosses: Cold River, Temple, The Solaris Temple, Twilight Temple, Harbour Bridge."
+				},
+
+				"From Bone to Ashes": {
+					"text": "Found in Caldera, Coves, Estuary, Lava Lake, Shore, Strand, Volcano"
+				},
+
+				"Further Investigation": {
+					"text": "Found in Foundry, Vault."
+				},
+
+				"Gemcutter's Mercy": {
+					"text": "Drops from Gem chests (Azurite Mine)."
+				},
+
+				"Gemcutter's Promise": {
+					"text": "Found in Colonnade, Promenade, The Ebony Barracks, The Lunaris Concourse."
+				},
+
+				"Gift of Asenath": {
+					"text": "Found in Dig, Grotto."
+				},
+
+				"Gift of the Gemling Queen": {
+					"text": "Found in Crystal Ore, Dig, Excavation, Flooded Mine, Geode, Grotto, The Quarry, The Tunnel."
+				},
+
+				"Glimmer of Hope": {
+					"text": "Found in Flooded Mine, Mineral Pools, The Cavern of Anger, Underground Sea."
+				},
+
+				"Grave Knowledge": {
+					"text": "Found in Bone Crypt, Cursed Crypt, Necropolis, The Coward's Trial, The Ossuary."
+				},
+
+				"Guardian's Challenge": {
+					"text": "Sold by Kirac."
+				},
+
+				"Harmony of Souls": {
+					"text": "Drops from Doedre, Maligaro, Shavronne."
+				},
+
+				"Haunting Shadows": {
+					"text": "Found in The Twilight Temple."
+				},
+
+				"Her Mask": {
+					"text": "Found in any map."
+				},
+				
+				"Heterochromia": {
+					"text": "Found in Estuary, The Twilight Temple."
+				},
+
+				"Home": {
+					"text": "Found in Alleyways, Ancient City, Arcade, Bazar, Chateau, City Square, Crimson Township, Haunted Mansion, Residence, Sunken City, Tower."
+				},
+
+				"Hope": {
+					"text": "Found in any map (Area level 68)."
+				},
+
+				"House of Mirrors": {
+					"text": "Found in The Alluring Abyss."
+				},
+
+				"Hubris": {
+					"text": "Drops from Jeweller's Stronboxes."
+				},
+
+				"Humility": {
+					"text": "Found in Channel, Frozen Cabins, The Aqueduct, The Blood Aqueduct, Waterways."
+				},
+
+				"Hunter's Resolve": {
+					"text": "Found in Forking River, Ramparts, The Riverways, The Southern Forest."
+				},
+
+				"Hunter's Reward": {
+					"text": "Unconfirmed"
+				},
+
+				"Immortal Resolve": {
+					"text": "Drops from Amalgam of Nightmares (Carcass map boss)."
+				},
+
+				"Imperfect Memories": {
+					"text": "Drops from Venaruis (Cortex Boss)."
+				},
+
+				"Imperial Legacy": {
+					"text": "Found in Desert, Desert Spring, Dry Sea, Dunes, The Pillars of Arun."
+				},
+
+				"Jack in the Box": {
+					"text": "Found in Arsenal, Colonade, Ghetto, Port, Precinct, Promenade, Act 8 zones."
+				},
+
+				"Judging Voices": {
+					"text": "Unconfirmed"
+				},
+
+				"Justified Ambition": {
+					"text": "Drops from Conquerors."
+				},
+
+				"Keeper's Corruption": {
+					"text": "Found in Chayula's Domain."
+				},
+
+				"Lachrymal Necrosis": {
+					"text": "Found in Basilica, Defiled Cathedral, The Chamber of Innocence, The Desecrated Chambers."
+				},
+
+				"Lantador's Lost Love": {
+					"text": "Found in Atoll, Beach, Coral Ruins, Coves, Estuary, Lighthouse, Pier, Port, Reef, Shore, Strand."
+				},
+
+				"Last Hope": {
+					"text": "Found in Vaal Temple."
+				},
+
+				"Left to Fate": {
+					"text": "Found in Forking River, Ramparts."
+				},
+
+				"Lethean Temptation": {
+					"text": "Unconfirmed"
+				},
+
+				"Light and Truth": {
+					"text": "Found in Palace, Residence, The Upper Sceptre of God, Villa"
+				},
+
+				"Lingering Remnants": {
+					"text": "Found in any map (Area level 78)."
+				},
+
+				"Lost Worlds": {
+					"text": "Sold by Kirac."
+				},
+
+				"Love Through Ice": {
+					"text": "Drops from Veritania."
+				},
+
+				"Loyalty": {
+					"text": "Found in Barrows, Caer Blaidd Wolfpack's Den, Grotto, Lair, The Den."
+				},
+
+				"Lucky Connections": {
+					"text": "Found in Pier, Port, Shipyard, The Docks, The Quay, Wharf."
+				},
+
+				"Lucky Deck": {
+					"text": "Found in tier 7 maps."
+				},
+
+				"Luminous Trove": {
+					"text": "Drops from Aul (Delve Boss)."
+				},
+
+				"Lysah's Respite": {
+					"text": "Found in Maelstrom of Chaos, Mineral Pools, Underground Sea."
+				},
+
+				"Magnum Opus": {
+					"text": "Found in Altered Distant Memory, Augmented Distant Memory, Rewritten Distant Memory, Twisted Distant Memory."
+				},
+
+				"Man With Bear": {
+					"text": "Found in Cemetery."
+				},
+
+				"Mawr Blaidd": {
+					"text": "Found in Bramble Valley, Dark Forest, Forbidden Woods."
+				},
+
+				"Merciless Armament": {
+					"text": "Found in Armoury, Arsenal, Colonnade, Promenade."
+				},
+
+				"Might is Right": {
+					"text": "Mausoleum, Relic Chambers, Sepulchre, The Ossuary, The Reliquary."
+				},
+
+				"Misery in Darkness": {
+					"text": "Drops from Kurgal (Delve Boss)."
+				},
+
+				"Mitts": {
+					"text": "Found in Cold River, Forbidden Woods, Frozen Cabins, Glacier, Iceberg, Summit."
+				},
+
+				"Monochrome": {
+					"text": "Found in Unique maps."
+				},
+
+				"More is Never Enough": {
+					"text": "Drops from map bosses: Cold River, Sunken City, Fields, Cemetery, Infested Valley, Summit, Reef, Siege, Terrace."
+				},
+
+				"No Traces": {
+					"text": "Found in Mausoleum, Relic Chambers, Sepulchre, The Ossuary, The Reliquary."
+				},
+
+				"Nook's Crown": {
+					"text": "Drops from Catarina (Jun Boss)."
+				},
+
+				"Parasitic Passengers": {
+					"text": "Found in Arachnid Tomb, Channel, Infested Valley."
+				},
+
+				"Peaceful Moments": {
+					"text": "Found in the Courtyard, Gardens, Orchard, Terrace."
+				},
+
+				"Perfection": {
+					"text": "Drops from Shaper Guardian bosses."
+				},
+
+				"Prejudice": {
+					"text": "Found in Redeemer maps, Legion divination chests."
+				},
+
+				"Pride Before the Fall": {
+					"text": "Found in Caldera, Volcano"
+				},
+
+				"Pride of the First Ones": {
+					"text": "Found in Barrows, Caer Blaidd Wolfpack's Den, Grotto, Lair."
+				},
+
+				"Prometheus' Armoury": {
+					"text": "Drops from Haku (Jun)."
+				},
+
+				"Prosperity": {
+					"text": "Found in Atoll, Beach, Coral Ruins, Coves, Estuary, Lighthouse, Pier, Port, Reef, Shore, Strand, Wharf."
+				},
+
+				"Rain of Chaos": {
+					"text": "Found in Castle Ruins, Fields, The Crossroads, The Imperial Fields."
+				},
+
+				"Rain Tempter": {
+					"text": "Found in the Courtyard, Gardens, Orchard, Terrace, The High Gardens."
+				},
+
+				"Rats": {
+					"text": "Found in Arsenal, Factory, The Grain Gate, The Imperial Fields."
+				},
+
+				"Rebirth": {
+					"text": "Found in Act 9 zones."
+				},
+
+				"Rebirth and Renewal": {
+					"text": "Unconfirmed"
+				},
+
+				"Reckless Ambition": {
+					"text": "Drops from The Eradicator."
+				},
+
+				"Remembrance": {
+					"text": "Drops from Light Jewellery chests in Primeval Ruins, Abyssal City, Vaal Outpost (Delve)."
+				},
+
+				"Sambodhi's Vow": {
+					"text": "Drops from Syndicate members (Jun)."
+				},
+
+				"Sambodhi's Wisdom": {
+					"text": "Found in Dunes."
+				},
+
+				"Scholar of the Seas": {
+					"text": "Found in Coves, Reef, Strand, The Brine King's Reef, Whakawairu Tuahu."
+				},
+
+				"Seven Years Bad Luck": {
+					"text": "Found in Crimson Temple, Defiled Cathedral, Sepulchre."
+				},
+
+				"Shard of Fate": {
+					"text": "Found in Overgrown Ruin, Overgrown Shrine, The Chamber of Sins."
+				},
+
+				"Silence and Frost": {
+					"text": "Drops from Farrul (Einhar Boss)."
+				},
+
+				"Society's Remorse": {
+					"text": "Drops from Voltaxic Sulphite deposits."
+				},
+
+				"Something Dark": {
+					"text": "Drops from Breachlords."
+				},
+
+				"Struck by Lightning": {
+					"text": "Found in Cemetery, Colonade, Courtyard, Graveyard, Infested Valley, Leyline, Promenade, Shipyard, Tower, Villa, Wharf."
+				},
+
+				"Succor of the Sinless": {
+					"text": "Drops from Baran."
+				},                                                                                        
+				"Terrible Secret of Space": {     
+					"text": "Drops from map bosses: Alleyways, Coves, Vault, Peninsula, Grotto."                                                                                                             
+				},
+				"The Academic": {                 
+						"text": "Found in Academy Map, Museum Map"                          
+				},
+				"The Admirer": {                 
+						"text": "Found in Ancient City Map, Maze Map, Doryani's Machinarium, Vaal Pyramid Map, Vaults of Atziri, Vaal Temple Map"                         
+				},
+				"The Adventuring Spirit": {       
+						"text": "Found in Vaults of Atziri"                         
+				},
+				"The Aesthete": {                 
+						"text": "Drops from Shavronne and similar models."                         
+				},
+				"The Apothecary": {               
+						"text": "Found in Crimson Temple Map, Crimson Township Map, Defiled Cathedral Map, Haunted Mansion Map"                         
+				},
+				"The Archmage's Right Hand": {    
+						"text": "Found in Chayula's Domain"                       
+				},
+				"The Arena Champion": {           
+						"text": "Drops from map bosses: Colosseum, Guardian Chimera, Pit."                                          
+				},
+				"The Army of Blood": {            
+						"text": "Found in The Lunaris Temple Level 2 (Act 3), Shrine Map, Poorjoy's Asylum"                         
+				},
+				"The Artist":  {     
+					"text": "Unconfirmed"                                                                   
+				},
+				"The Aspirant": {                 
+						"text": "Drops from Oashabi(Harvest)."                                                
+				},
+				"The Astromancer": {              
+						"text": "Drops from Corpse stitcher."                                                                                     
+				},
+				"The Avenger": {                 
+						"text": "Found in Maelström of Chaos, Lava Chamber Map, Mineral Pools Map,  Primordial Blocks Map, Underground Sea Map."                          
+				},
+				"The Awakened": {                 
+						"text": "Drops from Metamorph."                                               
+				},
+				"The Bargain": {                 
+						"text": "Drops from It that Fled(Jun)."                                       
+				},
+				"The Battle Born": {              
+						"text": "Found in Kaom's Dream, Kaom's Stronghold, Caldera Map, Volcano Map."                        
+				},
+				"The Bear Woman": {               
+						"text": "Drops from map bosses: Barrows, Cemetery, Basilica."                                               
+				},
+				"The Beast": {                 
+						"text": "Found in The Belly of the Beast Level 1, The Belly of the Beast Level 2, The Belly of the Beast (Act 9)."                         
+				},
+				"The Betrayal": {                 
+						"text": "Found in Burial Chambers Map, Castle Ruins Map, Mesa Map,  Spider Forest Map, Fungal Hollow Map, Strand Map."                         
+				},
+				"The Bitter Blossom": {           
+						"text": "Drops from Oshabi(Harvest), Elida Blisterclaw, Murgeth Bogsong."    
+				},
+				"The Blazing Fire": {             
+						"text": "Found in (Act 5 zones), Alleyways Map, City Square Map, Crimson Temple Map, Defiled Cathedral Map, Haunted Mansion Map, Lookout Map, Silo Map."                          
+				},
+				"The Blessing of Moosh": {        
+						"text": "Found in The Lord's Labyrinth,  Darkshrines."      
+				},
+				"The Body": {                 
+						"text": "Drops from Armourer's Strongbox."                         
+				},
+				"The Bones": {                 
+						"text":  "Drops from Minara Anemina(Exile)."                                                                                                                 
+				},
+				"The Brawny Battle Mage": {       
+						"text": "Found in Burial Chambers Map, The Putrid Cloister, Phantasmagoria Map, Sepulchre Map, Spider Forest Map, Waste Pool Map."                        
+				},
+				"The Breach": {                 
+						"text": "Found in Breaches."                        
+				},
+				"The Brittle Emperor": {          
+						"text": "Drops from Voll and similar models."                                                              
+				},
+				"The Cache": {                 
+						"text": "Found in Maelström of Chaos, Mineral Pools Map, Underground Sea Map, Vaults of Atziri, Vault Map."                        
+				},
+				"The Cacophony": {                
+						"text": "Found in Underground Sea Map, Maelström of Chaos."                         
+				},
+				"The Calling": {                 
+						"text": "Drops from Beyond demons."                                                    
+				},
+				"The Card Sharp": {               
+						"text": "Found in Temporal incursion(Alva), Alva's Memory."                         
+				},
+				"The Carrion Crow": {             
+						"text": "Found in The Blood Aqueduct, Channel Map, City Square Map, Colonnade Map, Courtyard Map, Promenade Map, Ramparts Map, (Act 2 zones)."                          
+				},
+				"The Cartographer": {             
+						"text": "Drops from Cartographer's Strongboxes."                         
+				},
+				"The Cataclysm": {                
+						"text": "Found everywhere."                                 
+				},
+				"The Catalyst": {                 
+						"text": "Found in The Ancient Pyramid, The Causeway, The Vaal City, The Temple of Decay, Ancient City Map, Maze Map, Doryani's Machinarium, Vaal Pyramid Map, Vaults of Atziri, Vaal Temple Map."                         
+				},
+				"The Catch": {                 
+						"text": "Found in Atoll Map, Beach Map, Coves Map, Peninsula Map, Shipyard Map, Shore Map, Strand Map, Tropical Island Map."                         
+				},
+				"The Celestial Justicar": {       
+						"text": "Found in The Crypt (Act 7), Bone Crypt Map, Cursed Crypt Map, The Coward's Trial."                          
+				},
+				"The Celestial Stone": {          
+						"text": "Drops from Jeweller's Strongboxes."                          
+				},
+				"The Chains that Bind": {         
+						"text": "Found in The Slave Pens, The Control Blocks, Shavronne's Tower, Cage Map, Cells Map, Dungeon Map, Pen Map."                          
+				},
+				"The Cheater": {                 
+						"text": "Drops from Guff(Jun)."                                                                                                               
+				},
+				"The Chosen": {                 
+						"text": "Drops from breaches(Hands)."                                                                                                                                                             
+				},
+				"The Coming Storm": {             
+						"text": "Found in Cemetery Map, Colonnade Map, Graveyard Map, Infested Valley Map, Leyline Map, Promenade Map, Shipyard Map, Stagnation Map, Villa Map, Wharf Map."                         
+				},
+				"The Conduit": {                 
+						"text": "Drops from Dominus, and similar models."                          
+				},
+				"The Craving": {                 
+						"text": "Drops from map bosses: Coward's Trial, Action's Nightmare, The Den, The Bone Crypt."                                                                                           
+				},
+				"The Cursed King": {              
+						"text": "Found in Caer Blaidd, Wolfpack's Den."                         
+				},
+				"The Damned": {                 
+						"text": "Found in Ancient City Map, Maze Map, Pyramid Map, Vaults of Atziri, Vaal Temple Map."                          
+				},
+				"The Dapper Prodigy": {           
+						"text": "Found in Palace Map, Residence Map, Villa Map."                         
+				},
+				"The Dark Mage": {                
+						"text": "Found in The Chamber of Sins Level 2 (Act 7), Overgrown Ruin Map, Overgrown Shrine Map."                          
+				},
+				"The Darkest Dream": {            
+						"text": "Found in Whakawairua Tuahu."                          
+				},
+				"The Deal": {                 
+						"text": "Drops from Cameria(Jun)."                                             
+				},
+				"The Deceiver": {                 
+						"text": "Found in The Grand Arena, Arena Map, Colosseum Map, Racecourse Map."
+				},
+				"The Deep Ones": {                
+						"text": "Found in The Brine King's Reef, Coral Ruins Map, Coves Map, Reef Map, Strand Map, Whakawairua Tuahu, Tsoagoth, The Brine King."                         
+				},
+				"The Demon": {                 
+						"text": "Drops from Kitava."                                                                                                                                                                    
+				},
+				"The Demoness": {                 
+						"text": "Found in The Northern Forest (Act 7), Bramble Valley Map, Dark Forest Map, Forbidden Woods Map."                         
+				},
+				"The Destination": {              
+						"text": "From in Beach Map, Shore Map, Tropical Island Map."
+				},
+				"The Devastator": {               
+						"text": "Drop disabled"                                                                     
+				},
+				"The Doctor": {                 
+						"text": "Found in Burial Chambers Map, The Putrid Cloister, Phantasmagoria Map, Sepulchre Map, Spider Forest Map, Waste Pool Map."                       
+				},
+				"The Doppelganger": {             
+						"text": "Found in The Crossroads (Act 7), Whakawairua Tuahu."                          
+				},
+				"The Dragon": {                 
+						"text": "Found in Bramble Valley Map, Dark Forest Map, Forbidden Woods Map."                         
+				},
+				"The Dragon's Heart": {           
+						"text": "Found in any map."                        
+				},
+				"The Dreamer": {                 
+						"text": "Drops from Agent of the Void."                                                                         
+				},
+				"The Dreamland": {                
+						"text": "Drops from Cartographer's Strongboxes."                          
+				},
+				"The Drunken Aristocrat": {       
+						"text": "Found in Academy Map, Bazaar Map, Crystal Ore Map, Pier Map, Ramparts Map, Residence Map."                          
+				},
+				"The Dungeon Master": {           
+						"text": "Found in Cage Map, Cells Map, Dungeon Map, Pen Map."                         
+				},
+				"The Easy Stroll": {              
+						"text": "Found in Courtyard Map, Gardens Map, Orchard Map, Terrace Map."                         
+				},
+				"The Eldritch Decay": {           
+						"text": "Drops from the Elder Guardians."                                                             
+				},
+				"The Emptiness": {                
+						"text": "Found in Maelstrom of Chaos."                          
+				},
+				"The Encroaching Darkness": {     
+						"text": "Found in any map."                         
+				},
+				"The Endless Darkness": {         
+						"text": "Found in The Beachhead, Infused Beachhead, Delve, Kirac's Memory."                          
+				},
+				"The Endurance": {                
+						"text": "Found in The Mines, The Crystal Veins, The Tunnel, The Quarry, Crystal Ore Map, Dig Map, Excavation Map, Flooded Mine Map, Geode Map, Grotto Map."                         
+				},
+				"The Enforcer": {                 
+						"text": "Unconfirmed"                                                 
+				},
+				"The Enlightened": {              
+						"text": "Found in Belfry Map, Crimson Temple Map, Defiled Cathedral Map, Ivory Temple Map, Lookout Map, Temple Map."                          
+				},
+				"The Enthusiasts": {              
+						"text": "Found in Academy Map, Museum Map, Scriptorium Map."                         
+				},
+				"The Escape": {                 
+						"text": "Drops from the Breachlords."                                                                                             
+				},
+				"The Eternal War": {              
+						"text": "Drops from the Conquerors."                                                                                                                                                                                    
+				},
+				"The Ethereal": {                 
+						"text": "Found in The Apex of Sacrifice, The Alluring Abyss, The Eternal Labyrinth."                          
+				},
+				"The Explorer": {                 
+						"text": "Found in The Dread Thicket (Act 7), Thicket Map."                          
+				},
+				"The Eye of Terror": {            
+						"text": "Found in Forge of Phoenix, Sulphur Vents, Boiling Lake."
+				},
+				"The Eye of the Dragon": {        
+						"text": "Found in The Boiling Lake, Forge of the Phoenix Map, Sulphur Vents Map."                          
+				},
+				"The Fathomless Depths": {        
+						"text": "Found in Flooded Mine Map, Mineral Pools Map, Underground Sea Map."                          
+				},
+				"The Feast": {                 
+						"text": "Found in The Sewers, The Toxic Conduits, Lair of the Hydra Map, Toxic Sewer Map, Waste Pool Map."                         
+				},
+				"The Fiend": {                 
+						"text": "Found in Foundry Map, Shrine Map, Poorjoy's Asylum."                        
+				},
+				"The Finishing Touch": {          
+						"text": "Drops from Hillock(Jun)."                                                                                       
+				},
+				"The Fishmonger": {               
+						"text": "Unconfirmed"                                                                                              
+				},
+				"The Fletcher": {                 
+						"text":  "Drops from map bosses: Ashen Woods, Leyline, Graveyard, Canyon, Riverways."                                                                                                                                                     
+				},
+				"The Flora's Gift": {             
+						"text": "Found in Ashen Wood Map, Bramble Valley Map, Dark Forest Map, Forbidden Woods Map, Jungle Valley Map, Lair Map, Ramparts Map, Spider Forest Map, Tropical Island Map."                          
+				},
+				"The Fool": {                 
+						"text": "Drops from Immortal Syndicate(Jun)."                          
+				},
+				"The Forgotten Treasure": {       
+						"text": "Found in Temple Map."                         
+				},
+				"The Formless Sea": {             
+						"text": "Found in Coves Map, Reef Map, Strand Map, Whakawairua Tuahu."
+				},
+				"The Forsaken": {                 
+						"text": "Found in Bone Crypt Map, Cursed Crypt Map, The Coward's Trial, Necropolis Map."                         
+				},
+				"The Forward Gaze": {             
+						"text": "Found in Doryani's Machinarium."                          
+				},
+				"The Fox": {                 
+						"text": "Found in The Western Forest (Act 2), The Riverways (Act 6), The Vaal City, The Crossroads (Act 7), The Fellshrine Ruins (Act 7), Barrows Map, Castle Ruins Map, Fields Map, Sunken City Map."                         
+				},
+				"The Fox in the Brambles": {      
+						"text": "Found in Courtyard Map, Gardens Map, Orchard Map, Terrace Map."                          
+				},
+				"The Gambler": {                 
+						"text":  "Found in any map."                         
+				},
+				"The Garish Power": {             
+						"text": "Found in The Chamber of Sins(Act 7), Overgrown Ruin Map, Overgrown Shrine Map."                          
+				},
+				"The Gemcutter": {                
+						"text": "Drops from Gemcutter's Strongboxes."                          
+				},
+				"The Gentleman": {                
+						"text": "Found in The Slums, The Sarn Ramparts, The Grain Gate, Ghetto Map, Precinct Map."                          
+				},
+				"The Gladiator": {                
+						"text": "Found in Arena Map, Pit of the Chimera Map, Colosseum Map, Pit Map."                         
+				},
+				"The Golden Era": {               
+						"text": "Found in Basilica Map, Ivory Temple Map, Residence Map."                          
+				},
+				"The Greatext Intentions": {      
+						"text": "Drops from The Shaper."                                                   
+				},
+				"The Gulf": {                 
+						"text": "Drops from The Elder."                                                                                                                                                                                    
+				},
+				"The Hale Heart": {               
+						"text": "Drops from the Elder Guardians."                                           
+				},
+				"The Harvester": {                
+						"text": "Found in The Imperial Fields, Castle Ruins Map, Fields Map."                         
+				},
+				"The Hermit": {                 
+						"text": "Found in Act 7 zones."
+				},
+				"The Heroic Shot": {              
+						"text": "Drops from Arcanist's Strongboxes."                          
+				},
+				"The Hive of Knowledge": {        
+						"text": "Found in Maze Map, Vaal Pyramid Map, Vaal Temple Map."                         
+				},
+				"The Hoarder": {                 
+						"text": "Found in Maelström of Chaos, Mineral Pools Map, Underground Sea Map, Vaults of Atziri, Vault Map."                         
+				},
+				"The Hook": {                 
+						"text": "Drops from Venarius(Cortex boss)."
+				},
+				"The Hunger": {                 
+						"text": "Found in The Belly of the Beast, The Harvest (area), The Belly of the Beast (Act 9), The Rotting Core, Carcass Map, Core Map, Malformation Map, Phantasmagoria Map."                         
+				},
+				"The Immortal": {                 
+						"text": "Found in Hall of Grandmasters."                          
+				},
+				"The Incantation": {              
+						"text": "Found in Burial Chambers Map, The Putrid Cloister, Phantasmagoria Map, Sepulchre Map, Spider Forest Map, Waste Pool Map."                         
+				},
+				"The Innocent": {                 
+						"text": "Found in The Chamber of Innocence, Basilica Map, Defiled Cathedral Map."                         
+				},
+				"The Inoculated": {               
+						"text": "Found in Acid Caverns Map, Bog Map, Marshes Map, Mud Geyser Map, Primordial Pool Map, Stagnation Map, Sulphur Vents Map."                          
+				},
+				"The Insane Cat": {               
+						"text": "Drops from Omniphobia, Kosis, Delirium."                       
+				},
+				"The Insatiable": {               
+						"text": "Found in The Rotting Core, Carcass Map, Core Map."                          
+				},
+				"The Inventor": {                 
+						"text": "Found in The Temple of Decay, Maze Map, Doryani's Machinarium, Vaal Pyramid Map, Vaults of Atziri, Vaal Temple Map."                        
+				},
+				"The Jester": {                 
+						"text": "Drops from Ash Lessard(Exile)."
+				},
+				"The Jeweller's Boon": {          
+						"text": "Found in Crystal Ore Map, Grotto Map, Mineral Pools Map, Primordial Blocks Map."                         
+				},
+				"The Journalist": {               
+						"text": "Found in Alleyways Map, City Square Map, Crimson Temple Map, Defiled Cathedral Map, Haunted Mansion Map, Lookout Map, Silo Map."                          
+				},
+				"The Journey": {                 
+						"text": "Found in Atoll Map, Coral Ruins Map, Coves Map, Estuary Map, Lighthouse Map, Pier Map, Plateau Map, Port Map, Reef Map, Shipyard Map, Shore Map, Mao Kun, Strand Map, Tropical Island Map."                   
+				},
+				"The King's Blade": {             
+						"text": "Found in Arena Map, Pit of the Chimera Map, Colosseum Map, Pit Map."                        
+				},
+				"The King's Heart": {             
+						"text": "Found in Caldera Map, Volcano Map."                          
+				},
+				"The Landing": {                 
+						"text": "Found in Shore Map, Mao Kun, Strand Map, Whakawairua Tuahu."                          
+				},
+				"The Last One Standing": {        
+						"text": "Found in Arena Map, Pit of the Chimera Map, Colosseum Map, Pit Map."
+				},
+				"The Last Supper": {              
+						"text": "Found in Poorjoy's Asylum."                          
+				},
+				"The Leviathan": {                
+						"text": "Found in The Maelström of Chaos."                          
+				},
+				"The Lich": {                 
+						"text": "Drops from map bosses: The Bone Crypt, Necropolis."
+				},
+				"The Life Thief": {               
+						"text": "Found in Alleyways Map, City Square Map, Crimson Temple Map, Defiled Cathedral Map, Haunted Mansion Map, Lookout Map, Silo Map."                          
+				},
+				"The Lion": {                 
+						"text": "Drops from The Dishonoured Queen, The Mud Flats, The Vindicated Queen, Caldera Map."                         
+				},
+				"The Long Con": {                 
+						"text": "Found in Izaro's Treasure, Enriched Eternal Labyrinth."                         
+				},
+				"The Long Watch": {               
+						"text": "Drop disabled"                                     
+				},
+				"The Lord in Black": {            
+						"text": "Drops from K'tash the Hate Shepherd(Demon boss)."                                               
+				},
+				"The Lord of Celebration": {      
+						"text": "Found in Basilica Map, Chateau Map, Crimson Temple Map, Crimson Township Map, Haunted Mansion Map, Palace Map, Siege Map, Temple Map, Map, Villa Map."                        
+				},
+				"The Lover": {                 
+						"text": "Found in Maelström of Chaos, Underground Sea Map."                          
+				},
+				"The Lunaris Priestess": {        
+						"text": "Found in The Harbour Bridge, The Lunaris Temple (Act 8), Cold River Map, Moon Temple Map, The Twilight Temple."                          
+				},
+				"The Mad King": {                 
+						"text": "Found in Caldera Map, Colosseum Map, Dark Forest Map, Reef Map."                         
+				},
+				"The Magma Crab": {               
+						"text": "Drops from Magnus Stonehorn(Exile)."
+				},
+				"The Master": {                 
+						"text": "Found in Lair Map, Pen Map."                         
+				},
+				"The Master Artisan": {           
+						"text": "Drops from Artisan's Strongboxes."                          
+				},
+				"The Mayor": {                 
+						"text": "Drop disabled"                          
+				},
+				"The Mercenary": {                
+						"text": "Found in The Broken Bridge (Act 7), Castle Ruins Map."                          
+				},
+				"The Messenger": {                
+						"text": "Found in Crystal Ore Map, Port Map."                         
+				},
+				"The Metalsmith's Gift": {        
+						"text": "Found in The Coast (Act 6), The Mud Flats (Act 6), The Karui Fortress."                          
+				},
+				"The Mind's Eyes": {              
+						"text": "Drops from map bosses: The Bone Crypt, Crystal Ore, Dig, Grotto."                                                                                           
+				},
+				"The Mountain": {                 
+						"text": "Found in The Ascent, The Descent, Glacier Map, Summit Map, Volcano Map."                          
+				},
+				"The Nurse": {                 
+						"text": "Found in The Harvest (area), Shavronne's Tower, Carcass Map, Cells Map, Core Map, Tower Map."                         
+				},
+				"The Oath": {                 
+						"text": "Found in The Belly of the Beast (Act 9), The Rotting Core, Carcass Map, Core Map, Malformation Map, Phantasmagoria Map."                          
+				},
+				"The Obscured": {                 
+						"text": "Found in Abyss, Delve."                        
+				},
+				"The Offering": {                 
+						"text": "Drops from Shavronne."                         
+				},
+				"The Offspring": {                
+						"text": "Drops from map boss: Infested Valley, similar models."                                                                                         
+				},
+				"The Old Man": {                 
+						"text": "Found in Lighthouse Map, Peninsula Map, Pier Map, Shore Map, Strand Map, Tropical Island Map, Wharf Map."                          
+				},
+				"The One That Got Away": {        
+						"text": "Found in Strand Map."    
+				},
+				"The One With All": {             
+						"text": "Found in Barrows Map, Burial Chambers Map, Cemetery Map, Grave Trough Map, Graveyard Map."                         
+				},
+				"The Opulent": {                 
+						"text": "Found in Basilica Map, Chateau Map, Conservatory Map, Crimson Temple Map, Crimson Township Map, Haunted Mansion Map, The Twilight Temple, Palace Map, Residence Map, Temple Map, Vault Map, Villa Map."                          
+				},
+				"The Pack Leader": {              
+						"text": "Found in Ashen Wood Map, Bramble Valley Map, Dark Forest Map, Forbidden Woods Map, Jungle Valley Map, Lair Map, Ramparts Map, Spider Forest Map, Stagnation Map, Thicket Map, Tropical Island Map"                          
+				},
+				"The Pact": {                 
+						"text": "Found in The Quay, Pier Map, Port Map, Shipyard Map, Wharf Map."                          
+				},
+				"The Patient": {                 
+						"text": "Found in Armoury Map, Arsenal Map, Colonnade Map, Promenade Map."                          
+				},
+				"The Penitent": {                 
+						"text": "Found in Cage Map, Cells Map, Dungeon Map, Pen Map."                       
+				},
+				"The Poet": {                 
+						"text": "Found in The Marketplace, The Quay, Alleyways Map, Arcade Map, Bazaar Map, Port Map."                         
+				},
+				"The Polymath": {                 
+						"text": "Found in The Reliquary (Act 5), The Reliquary (Act 10), Museum Map, Relic Chambers Map."                          
+				},
+				"The Porcupine": {                
+						"text": "Found in The High Gardens, Courtyard Map, Gardens Map, Orchard Map, Plaza Map, Terrace Map."                          
+				},
+				"The Price of Devotion": {        
+						"text": "Drops from Atziri."                                                                                                                                                                            
+				},
+				"The Price of Loyalty": {         
+						"text": "Drops from Zilquapa, Architect of the Breach."                                                                                                                                                                                       
+				},
+				"The Price of Prescience": {      
+						"text": "Drops from the Conquerors."                                                                                                                                                          
+				},
+				"The Price of Protection": {      
+						"text": "Drops from Invasion bosses, Vaal side areas."                          
+				},
+				"The Primordial": {               
+						"text": "Found in Coves Map, Flooded Mine Map, Geode Map, Grotto Map, Peninsula Map, Vault Map, Waterways Map, Wharf Map."                          
+				},
+				"The Prince of Darkness": {       
+						"text": "Drops from Eater of Souls, Nightmare's Omen."                                                                                         
+				},
+				"The Professor": {                
+						"text": "Found in Academy Map, Laboratory Map, Museum Map, Scriptorium Map."                         
+				},
+				"The Progeny of Lunaris": {       
+						"text": "Drops from map bosses: Twilight Temple, Cold river."                                                                                    
+				},
+				"The Puzzle": {                 
+						"text": "Drops from Beyond demons."                          
+				},
+				"The Queen": {                 
+						"text": "Found in Vaults of Atziri."                          
+				},
+				"The Rabbit's Foot": {            
+						"text": "Found in Bone Crypt Map, Cursed Crypt Map, The Coward's Trial."                          
+				},
+				"The Rabid Rhoa": {               
+						"text": "Drops from map bosses: Bog and similar models."
+				},
+				"The Realm": {                 
+						"text": "Drops from Breach monsters."                          
+				},
+				"The Return of the Rat": {        
+						"text": "Found in The Grain Gate, The Refinery, Arsenal Map, Factory Map."                          
+				},
+				"The Risk": {                 
+						"text": "Drops from Diviner's Strongbox, Izaro's Treasure, Endgame Labyrinth."                          
+				},
+				"The Rite of Elements": {         
+						"text": "Found in Coves Map, Flooded Mine Map, Geode Map, Grotto Map, Peninsula Map, Vault Map, Waterways Map, Wharf Map."                         
+				},
+				"The Road to Power": {            
+						"text": "Found in Castle Ruins Map, Dark Forest Map, Orchard Map, Shore Map."                         
+				},
+				"The Rusted Bard": {              
+						"text": "Found in The Vinktar Square."                          
+				},
+				"The Ruthless Ceinture": {        
+						"text": "Found in The Descent, The Foothills, Dig Map, Maze of the Minotaur Map, Summit Map."                         
+				},
+				"The Sacrifice": {                
+						"text": "Found in The Temple of Atzoatl."                          
+				},
+				"The Saint's Treasure": {         
+						"text": "Found in The Slums, The Marketplace, The Imperial Fields, The Grain Gate, Alleyways Map, Arcade Map, Bazaar Map, Ghetto Map, Port Map, Precinct Map."                          
+				},
+				"The Samurai's Eye": {            
+						"text": "Drops from Amanamu, Liege of the Lightless(Delve), Ulaman, Sovereign of the Well(Abyss)."
+				},
+				"The Scarred Meadow": {           
+						"text": "Found in The Old Fields, Ashen Wood Map, Fields Map, Peninsula Map."
+				},
+				"The Scavenger": {                
+						"text": "Drops from map bosses: Canyon, Chateau, Underground River, Channel."                                                                                        
+				},
+				"The Scholar": {                 
+						"text": "Found in The Library, The Archives, Academy Map, Museum Map, Scriptorium Map."                          
+				},
+				"The Scout": {                 
+						"text": "Found in Ashen Wood Map, Bramble Valley Map, Dark Forest Map, Forbidden Woods Map, Jungle Valley Map, Lair Map, Ramparts Map, Spider Forest Map, Stagnation Map, Thicket Map, Tropical Island."                         
+				},
+				"The Seeker": {                 
+						"text": "Found in The Temple of Atzoatl."                         
+				},
+				"The Sephirot": {                 
+						"text": "Drops from Dominus."                                                                                       
+				},
+				"The Shepherd's Sandals": {       
+						"text": "Found in Barrows Map, Grotto Map, Lair Map."                          
+				},
+				"The Shieldbearer": {             
+						"text": "Drops from Uber Elder."
+				},
+				"The Shortcut": {                 
+						"text": "Found in Cremated Archives (Act 10), Strange Sinkhole, Concealed Cavity, Reclaimed Barracks, Sealed Basement, Twisted Inquisitorium, Lab Trials."                                                            
+				},
+				"The Side Quest": {               
+						"text": "Found in Alleyways Map, Arachnid Tomb Map, Armoury Map, Castle Ruins Map, Forking River Map, Iceberg Map, Infested Valley Map, Mineral Pools Map, Primordial Blocks Map."                          
+				},
+				"The Sigil": {                 
+						"text": "Found in Overgrown Ruin Map, Overgrown Shrine Map."                          
+				},
+				"The Siren": {                 
+						"text": "Found in The Cavern of Anger (Act 6), The Brine King's Reef, Maelström of Chaos, Underground Sea Map."                          
+				},
+				"The Skeleton": {                 
+						"text": "Found in Mao Kun."                                                                                                                 
+				},
+				"The Soul": {                 
+						"text": "Found in Cells Map, Core Map, Museum Map, Overgrown Shrine Map, Phantasmagoria Map, Sepulchre Map, Tower Map, Waste Pool Map."                          
+				},
+				"The Spark and the Flame": {      
+						"text": "Found in Atoll Map, Plateau Map."                          
+				},
+				"The Spoiled Prince": {           
+						"text": "Found in Vaal Pyramid Map."
+				},
+				"The Standoff": {                 
+						"text": "Found in The Ruined Square, The Torched Courts, Estuary Map, Lava Chamber Map, Lava Lake Map, Forge of the Phoenix Map, Silo Map, Crater Map."                          
+				},
+				"The Stormcaller": {              
+						"text": "Found in Courtyard Map, Strand Map, Tower Map."
+				},
+				"The Strategist": {               
+						"text": "Drops from Drox the Warlord."                                                                                                                                                             
+				},
+				"The Summoner": {                 
+						"text": "Found in The Catacombs, The Lower Prison (Act 6), Shavronne's Tower, Bone Crypt Map, Burial Chambers Map, Cage Map, Spider Forest Map."
+				},
+				"The Sun": {                 
+						"text": "Found in The Solaris Temple Level 1 (Act 8), The Harbour Bridge, Cold River Map, The Twilight Temple, Temple Map."                          
+				},
+				"The Surgeon": {                 
+						"text": "Found in Overgrown Ruin Map, Overgrown Shrine Map."                         
+				},
+				"The Surveyor": {                 
+						"text": "Found in Carcass Map, Core Map, Malformation Map, Phantasmagoria Map."                         
+				},
+				"The Survivalist": {              
+						"text": "Found in The Cavern of Anger (Act 6), Flooded Mine Map, Mineral Pools , Underground Sea Map."                         
+				},
+				"The Sustenance": {               
+						"text": "Drop disabled"                                        
+				},
+				"The Sword King's Salute": {      
+						"text": "Found in Daresso's Dream, The Grand Arena, Arena Map, Pit of the Chimera Map, Colosseum Map, Pit Map."                         
+				},
+				"The Thaumaturgist": {            
+						"text": "Found in Foundry Map, Laboratory Map, Shrine Map, Poorjoy's Asylum."                          
+				},
+				"The Throne": {                 
+						"text": "Found in Lair of the Hydra Map, Toxic Sewer Map, Waste Pool Map."                         
+				},
+				"The Tinkerer's Table": {         
+						"text": "Found in any map."                          
+				},
+				"The Tireless Extractor": {       
+						"text": "Found in Factory Map, Silo Map."                        
+				},
+				"The Tower": {                 
+						"text": "Found in The Sceptre of God, Shavronne's Tower, Residence Map, Tower Map."                        
+				},
+				"The Traitor": {                 
+						"text": "Found in The Battlefront, The Sarn Ramparts, The Solaris Concourse, Promenade Map, Ramparts Map."                         
+				},
+				"The Transformation": {           
+						"text": "Drops from Metamorph."                                                                                               
+				},
+				"The Trial": {                 
+						"text": "Found in any map."                         
+				},
+				"The Tumbleweed": {               
+						"text": "Found in Desert Spring Map, Dunes Map."                          
+				},
+				"The Twilight Moon": {            
+						"text": "Found in Cold River Map, Moon Temple Map, Temple Map."                          
+				},
+				"The Twins": {                 
+						"text": "Found in Cold River Map, Moon Temple Map, The Twilight Temple, Temple Map."
+				},
+				"The Tyrant": {                 
+						"text": "Found in Ancient City Map, Arcade Map, Bazaar Map, Castle Ruins Map, Coral Ruins Map, Ghetto Map, Port Map, Precinct Map."                          
+				},
+				"The Undaunted": {                
+						"text": "Found in Conservatory Map, Courthouse Map, Precinct Map, Whakawairua Tuahu."                          
+				},
+				"The Undisputed": {               
+						"text": "Drops from Chayula."
+				},
+				"The Unexpected Prize": {         
+						"text": "Found in Palace Map, Residence Map, Villa Map."                          
+				},
+				"The Union": {                 
+						"text": "Found in Cemetery Map, Grave Trough Map, Graveyard Map."                         
+				},
+				"The Valkyrie": {                 
+						"text": "Drops from female Rogue Exiles."                                                 
+				},
+				"The Valley of Steel Boxes": {    
+						"text": "Drop disabled"                                       
+				},
+				"The Vast": {                 
+						"text": "Found in Coral Ruins Map, Reef Map."                          
+				},
+				"The Visionary": {                
+						"text": "Found in The Grand Arena, Arena Map, Colosseum Map, Racecourse Map."                          
+				},
+				"The Void": {                 
+						"text": "Found in The Shaper's Realm, Park Map."                          
+				},
+				"The Warden": {                 
+						"text": "Found in The Slave Pens, The Control Blocks, The Lower Prison (Act 6), Shavronne's Tower, Cage Map, Cells Map, Dungeon Map, Pen Map."                         
+				},
+				"The Warlord": {                 
+						"text": "Found in Armoury Map, Arsenal Map, Colonnade Map, Promenade Map."                          
+				},
+				"The Watcher": {                 
+						"text": "Found in Geode Map, Grotto Map."                         
+				},
+				"The Web": {                 
+						"text": "Found in Arachnid Nest Map, Arachnid Tomb Map, Jungle Valley Map, Spider Lair Map, Sunken City Map, Toxic Sewer Map."                          
+				},
+				"The Wedding Gift": {             
+						"text": "Found in Sunken City Map, The Temple of Decay Level 2."                          
+				},
+				"The White Knight": {             
+						"text": "Found in Trial of Stinging Doubt."                          
+				},
+				"The Whiteout": {                 
+						"text": "Drops from map boss: Canyon."                                                                                           
+				},
+				"The Wilted Rose": {              
+						"text": "Found in Acton's Nightmare."                          
+				},
+				"The Wind": {                 
+						"text": "Found in Atoll Map, Jungle Valley Map, Lighthouse Map, Mesa Map, Plateau Map, Summit Map."                          
+				},
+				"The Witch": {                 
+						"text": "Found in Burial Chambers Map, The Putrid Cloister, Phantasmagoria Map, Sepulchre Map, Spider Forest Map, Waste Pool Map."                          
+				},
+				"The Wolf": {                 
+						"text": "Found in The Tunnel, Crystal Ore Map, Dig Map, Excavation Map, Flooded Mine Map, Geode Map, Grotto Map."                          
+				},
+				"The Wolf's Legacy": {            
+						"text": "Found in Izaro's Treasure, Eternal Labyrinth, Enriched Eternal Labyrinth."                          
+				},
+				"The Wolf's Shadow": {            
+						"text": "Found in Dark Forest Map, Lair Map, Caer Blaidd Wolfpack's Den."                         
+				},
+				"The Wolven King's Bite": {       
+						"text": "Found in Dark Forest Map, Lair Map."                          
+				},
+				"The Wolverine": {                
+						"text": "Found in Prisoner's Gate (Act 6), Glacier Map, Lair Map, Summit Map."
+				},
+				"The World Eater": {              
+						"text": "Drops from Ghorr the Grasping Maw."                                                                      
+				},
+				"The Wrath": {                 
+						"text": "Found in The Cathedral Rooftop (Act 5), The Canals, The Feeding Trough, The Cavern of Anger (Act 6), Belfry Map, Lava Lake Map."                          
+				},
+				"The Wretched": {                 
+						"text": "Found in Bone Crypt Map, Cursed Crypt Map, The Coward's Trial, Necropolis Map, Acton's Nightmare."                          
+				},
+				"Thirst for Knowledge": {         
+						"text": "Found in The Library, The Archives, Academy Map, Museum Map, Scriptorium Map."                          
+				},
+				"Three Faces in the Dark": {      
+						"text": "Found in The Marketplace, The Imperial Fields, The Grain Gate, The Refinery, Arsenal Map, Factory Map."                          
+				},
+				"Three Voices": {                 
+						"text": "Found in Arena Map, City Square Map, Courthouse Map, Courtyard Map, Crystal Ore Map, Forbidden Woods Map, Graveyard Map, Racecourse Map, Vaal Pyramid Map, Vaal Temple Map."                         
+				},
+				"Thunderous Skies": {             
+						"text": "Found in The Twilight Strand (Act 6), Shavronne's Tower, Courtyard Map, The Vinktar Square, Strand Map, Tower Map."                         
+				},
+				"Time-Lost Relic": {              
+						"text": " Found in Cemetery, Forest Ruins, Shipwreck Reef, Vaal Temple, Crystal Ore Map, Dig Map, Excavation Map, Flooded Mine Map, Geode Map, Grotto Map, Expedition Logbooks, Crystal Ore Map, Dig."                    
+				},
+				"Tranquillity": {                 
+						"text": "Found in The Ashen Fields, Ashen Wood Map, Fields Map, Peninsula Map."                         
+				},
+				"Treasure Hunter": {              
+						"text": "Found in Crystal Ore Map, Excavation Map, Flooded Mine Map, Grotto Map, Lair Map, Maze of the Minotaur Map, Fungal Hollow Map, Underground River Map, Underground Sea Map."                          
+				},
+				"Treasures of the Vaal": {        
+						"text": "Drop disabled"
+				},        
+				"Triskaidekaphobia": {            
+						"text": "Found in Temple of Atzoatl, Maven's Invitation: The Feared, Cortex, Chayula's Domain, The Alluring Abyss, Uber Atziri, The Shaper's Realm, Absence of Value and Meaning."                          
+				},
+				"Turn the Other Cheek": {         
+						"text": "Found in The Library"                          
+				},
+				"Unchained": {                 
+						"text": "Found in Arena Map, Pit of the Chimera Map, Colosseum Map, Pit Map."                         
+				},
+				"Underground Forest": {           
+						"text": "Found in Petrified forest biome, Fractured walls(Delve)."
+				},
+				"Unrequited Love": {              
+						"text": "Found in The Temple of Decay Level 1, Maze Map, Vaal Pyramid Map, Vaal Temple Map."                         
+				},
+				"Vanity": {                 
+						"text": "Found in Vaal Vessels, Vaal side areas."                        
+				},
+				"Vile Power": {                 
+						"text": "Found in The Rotting Core, Acid Caverns Map, Carcass Map, Core Map, Malformation Map, Phantasmagoria Map, Toxic Sewer Map, Waste Pool Map." 
+				},
+				"Vinia's Token": {                
+						"text": "Found in Core Map, Malformation Map, Shrine Map."                         
+				},
+							
+				"Void of the Elements": {         
+						"text": "Drops from The Elder, Uber Elder"                            
+				},
+				"Volatile Power": {               
+						"text": "Found in The Mines, The Crystal Veins, The Tunnel, The Quarry, Crystal Ore Map, Dig Map, Excavation Map, Flooded Mine Map, Geode Map, Grotto Map."                          
+				},
+				"Wealth and Power": {             
+						"text": "Found in Cold River Map, Moon Temple Map."                          
+				},
+				"Winter's Embrace": {             
+						"text": "Unconfirmed"                                                                                     		
+																									
+			
+
+
+
+
 			}
 		},
 		"Fragment": {
@@ -3065,4 +4222,4 @@
 			}
 		}
 	}
-}
+}}
