@@ -412,7 +412,6 @@
 				   "Transmutation Shard": {
 					"text": "A stack of 20 shards becomes an Orb of Transmutation." 
 					}
-
 			}
 		},
 		"Resonator": {
@@ -2150,8 +2149,7 @@
 				},
 				"Vinia's Token": {                
 						"text": "Found in Core Map, Malformation Map, Shrine Map."                         
-				},
-							
+				},	
 				"Void of the Elements": {         
 						"text": "Drops from The Elder, Uber Elder"                            
 				},
@@ -2163,17 +2161,140 @@
 				},
 				"Winter's Embrace": {             
 						"text": "Unconfirmed"                                                                                     		
-																									
-			
 				}
-
-
-
 			}
 		},
 		"Fragment": {
 			"items": {
-
+				"Gift to the Goddess": {
+					"text": "The final Aspirant's Trial contains a Divine Font, which allows you to enchant an item six additional times. Can be found in treasure chests at the end of the Eternal and Enriched Eternal Labyrinth." 
+					}, 
+				"Timeless Maraketh Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Maraketh Splinters" 
+					}, 
+				"Dedication to the Goddess": {
+					"text": "The final Aspirant's Trial contains a Divine Font, which allows you to enchant belts. Can be found in treasure chests at the end of the Eternal and Enriched Eternal Labyrinth." 
+					}, 
+				"Tribute to the Goddess": {
+					"text": "The Labyrinth's rewards are enriched." 
+					}, 
+				"Mortal Grief": {
+					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
+					}, 
+				"Mortal Rage": {
+					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
+					}, 
+				"Mortal Ignorance": {
+					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
+					}, 
+				"Mortal Hope": {
+					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
+					}, 
+				"Divine Vessel": {
+					"text": "Used in the map device to make the map boss more powerful, and if they are killed, it also captures their soul to unlock additional bonuses on The Pantheon." 
+					}, 
+				"Sacrifice at Dusk": {
+					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Apex of Sacrifice." 
+					}, 
+				"Sacrifice at Midnight": {
+					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Apex of Sacrifice." 
+					}, 
+				"Sacrifice at Dawn": {
+					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Apex of Sacrifice." 
+					}, 
+				"Sacrifice at Noon": {
+					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Apex of Sacrifice." 
+					}, 
+				"Sacred Blossom": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to The Sacred Grove to fight Oshabi. Chance to drop from T4 Harvest monsters (Janaar, the Omen, Namharim, Born of Night, and Ersi, Mother of Thorns)." 
+					}, 
+				"The Maven's Writ": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to The Mavens Crucible to fight The Maven herself."
+					}, 
+				"Al-Hezmin's Crest": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to The Eye of The Storm to fight Sirus, Awakener of Worlds. Guaranteed to drop upon killing Al-Hezmin" 
+					}, 
+				"Baran's Crest": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to The Eye of The Storm to fight Sirus, Awakener of Worlds. Guaranteed to drop upon killing Baran" 
+					}, 
+				"Drox's Crest": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to The Eye of The Storm to fight Sirus, Awakener of Worlds. Guaranteed to drop upon killing Drox" 
+					}, 
+				"Fragment of Constriction": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to the Absence of Value and Meaning to fight The Elder. Guaranteed to drop upon killing The Constrictor" 
+					}, 
+				"Fragment of Emptiness": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to fight Uber Elder. Chance to drop from The Elder" 
+					}, 
+				"Fragment of Enslavement": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to the Absence of Value and Meaning to fight The Elder. Guaranteed to drop upon killing The Enslaver" 
+					}, 
+				"Fragment of Eradication": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to the Absence of Value and Meaning to fight The Elder. Guaranteed to drop upon killing The Eradicator" 
+					}, 
+				"Fragment of Knowledge": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to fight Uber Elder. Chance to drop from The Shaper" 
+					}, 
+				"Fragment of Purification": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to the Absence of Value and Meaning to fight The Elder. Guaranteed to drop upon killing The Purifier" 
+					}, 
+				"Fragment of Shape": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to fight Uber Elder. Chance to drop from The Shaper" 
+					}, 
+				"Fragment of Terror": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to fight Uber Elder. Chance to drop from The Elder" 
+					}, 
+				"Fragment of the Hydra": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to The Shapers Realm. Guaranteed drop when killing Guardian of the Hydra" 
+					}, 
+				"Fragment of the Minotaur": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to The Shapers Realm. Guaranteed drop when killing Guardian of the Minotaur" 
+					}, 
+				"Simulacrum": {
+					"text": "Placed into a map device it opens up 6 portals to a 30 wave fight. Increasing in difficulty with each wave. Aquired by combining 300 Simulacrum Splinters" 
+					}, 
+				"Timeless Templar Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Templar Splinters" 
+					}, 
+				"Unrelenting Timeless Eternal Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict" 
+					}, 
+				"Unrelenting Timeless Karui Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict" 
+					}, 
+				"Unrelenting Timeless Maraketh Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict" 
+					}, 
+				"Unrelenting Timeless Templar Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict" 
+					}, 
+				"Unrelenting Timeless Vaal Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict" 
+					}, 
+				"Veritania's Crest": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to The Eye of The Storm to fight Sirus, Awakener of Worlds. Guaranteed to drop upon killing Veritania" 
+					}, 
+				"Blood-filled Vessel": {
+					"text": "When used a map in the Map Device, it adds a Ritual encounter to the instance, while also adding the stored monsters to the Ritual." 
+					}, 
+				"Fragment of the Chimera": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to The Shapers Realm. Guaranteed drop when killing Guardian of the Chimera" 
+					}, 
+				"Fragment of the Phoenix": {
+					"text": "Once placed in the map device along with the other fragments, it will grant access to The Shapers Realm. Guaranteed drop when killing Guardian of the Hydra" 
+					}, 
+				"Offering to the Goddess": {
+					"text": "Used as payment to enter The Eternal Labyrinth." 
+					}, 
+				"Timeless Eternal Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Eternal Splinters" 
+					}, 
+				"Timeless Karui Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Karui Splinters" 
+					}, 
+				"Timeless Vaal Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Vaal Splinters" 
+					}
 			}
 		},
 		"Scarab": {
