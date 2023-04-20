@@ -58,6 +58,10 @@ We'd welcome your pull request to help us populate and maintain these files!
 - Keep the bullet points as short as possible (<80 characters)
 - Double-check for typos
 
+## License tl;dr
+
+MIT License. You can use this data however you wish and for all your POE project needs, just tell where it came from.
+
 ## Deployment
 
 Changes in this file autodeploy to: https://beta.filterblade.xyz
