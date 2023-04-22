@@ -2179,76 +2179,73 @@
 					"text": "The Labyrinth's rewards are enriched." 
 					}, 
 				"Mortal Grief": {
-					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
+					"text": "Top left Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
 					}, 
 				"Mortal Rage": {
-					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
+					"text": "Top right Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
 					}, 
 				"Mortal Ignorance": {
-					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
+					"text": "Bottom left Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
 					}, 
 				"Mortal Hope": {
-					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
+					"text": "Bottom right Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map." 
 					}, 
 				"Divine Vessel": {
 					"text": "Used in the map device to make the map boss more powerful, and if they are killed, it also captures their soul to unlock additional bonuses on The Pantheon." 
 					}, 
 				"Sacrifice at Dusk": {
-					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Apex of Sacrifice." 
+					"text": "Top left Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map." 
 					}, 
 				"Sacrifice at Midnight": {
-					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Apex of Sacrifice." 
+					"text": "Top right Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map." 
 					}, 
 				"Sacrifice at Dawn": {
-					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Apex of Sacrifice." 
+					"text": "Bottom right Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map." 
 					}, 
 				"Sacrifice at Noon": {
-					"text": "Once placed in the map device, along with the other fragments, it will grant access to the The Apex of Sacrifice." 
+					"text": "Bottom left Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map." 
 					}, 
 				"Sacred Blossom": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to The Sacred Grove to fight Oshabi. Chance to drop from T4 Harvest monsters (Janaar, the Omen, Namharim, Born of Night, and Ersi, Mother of Thorns)." 
+					"text": "Used by itself in the map device it will grant access to The Sacred Grove to fight Oshabi. Chance to drop from T4 Harvest monsters (Janaar, the Omen, Namharim, Born of Night, and Ersi, Mother of Thorns)." 
 					}, 
 				"The Maven's Writ": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to The Mavens Crucible to fight The Maven herself."
+					"text": "Used by itself in the map device it will grant access to The Mavens Crucible to fight The Maven herself."
 					}, 
 				"Al-Hezmin's Crest": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to The Eye of The Storm to fight Sirus, Awakener of Worlds. Guaranteed to drop upon killing Al-Hezmin" 
+					"text": "Guaranteed to drop upon killing Al-Hezmin, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area" 
 					}, 
 				"Baran's Crest": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to The Eye of The Storm to fight Sirus, Awakener of Worlds. Guaranteed to drop upon killing Baran" 
+					"text": "Guaranteed to drop upon killing Baran, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area" 
 					}, 
 				"Drox's Crest": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to The Eye of The Storm to fight Sirus, Awakener of Worlds. Guaranteed to drop upon killing Drox" 
+					"text": "Guaranteed to drop upon killing Drox, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area" 
+					}, 
+				"Veritania's Crest": {
+					"text": "Guaranteed to drop upon killing Veritania, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area" 
 					}, 
 				"Fragment of Constriction": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to the Absence of Value and Meaning to fight The Elder. Guaranteed to drop upon killing The Constrictor" 
-					}, 
-				"Fragment of Emptiness": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to fight Uber Elder. Chance to drop from The Elder" 
+					"text": "Guaranteed to drop upon killing The Constrictor, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
 					}, 
 				"Fragment of Enslavement": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to the Absence of Value and Meaning to fight The Elder. Guaranteed to drop upon killing The Enslaver" 
+					"text": "Guaranteed to drop upon killing The Enslaver, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area" 
 					}, 
 				"Fragment of Eradication": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to the Absence of Value and Meaning to fight The Elder. Guaranteed to drop upon killing The Eradicator" 
-					}, 
-				"Fragment of Knowledge": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to fight Uber Elder. Chance to drop from The Shaper" 
+					"text": "Guaranteed to drop upon killing The Eradicator, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area" 
 					}, 
 				"Fragment of Purification": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to the Absence of Value and Meaning to fight The Elder. Guaranteed to drop upon killing The Purifier" 
+					"text": "Guaranteed to drop upon killing The Purifier, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area" 
 					}, 
 				"Fragment of Shape": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to fight Uber Elder. Chance to drop from The Shaper" 
+					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper" 
 					}, 
 				"Fragment of Terror": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to fight Uber Elder. Chance to drop from The Elder" 
+					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder" 
 					}, 
-				"Fragment of the Hydra": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to The Shapers Realm. Guaranteed drop when killing Guardian of the Hydra" 
+				"Fragment of Knowledge": {
+					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper" 
 					}, 
-				"Fragment of the Minotaur": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to The Shapers Realm. Guaranteed drop when killing Guardian of the Minotaur" 
+				"Fragment of Emptiness": {
+					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder" 
 					}, 
 				"Simulacrum": {
 					"text": "Placed into a map device it opens up 6 portals to a 30 wave fight. Increasing in difficulty with each wave. Aquired by combining 300 Simulacrum Splinters" 
@@ -2271,17 +2268,20 @@
 				"Unrelenting Timeless Vaal Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict" 
 					}, 
-				"Veritania's Crest": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to The Eye of The Storm to fight Sirus, Awakener of Worlds. Guaranteed to drop upon killing Veritania" 
-					}, 
 				"Blood-filled Vessel": {
 					"text": "When used a map in the Map Device, it adds a Ritual encounter to the instance, while also adding the stored monsters to the Ritual." 
 					}, 
 				"Fragment of the Chimera": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to The Shapers Realm. Guaranteed drop when killing Guardian of the Chimera" 
+					"text": "Guaranteed drop when killing Guardian of the Chimera, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area" 
 					}, 
 				"Fragment of the Phoenix": {
-					"text": "Once placed in the map device along with the other fragments, it will grant access to The Shapers Realm. Guaranteed drop when killing Guardian of the Hydra" 
+					"text": "Guaranteed drop when killing Guardian of the Hydra, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area" 
+					},
+				"Fragment of the Hydra": {
+					"text": "Guaranteed drop when killing Guardian of the Hydra, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area" 
+					}, 
+				"Fragment of the Minotaur": {
+					"text": "Guaranteed drop when killing Guardian of the Minotaur, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area" 
 					}, 
 				"Offering to the Goddess": {
 					"text": "Used as payment to enter The Eternal Labyrinth." 
