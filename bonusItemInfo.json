@@ -408,9 +408,27 @@
 					}, 
 				   "Engineer's Shard": {
 					"text": "A stack of 20 shards becomes an Engineer's Orb (Harbingers or Harbinger and Map Currency related rewards drop only)" 
-					}, 
+					},
 				   "Transmutation Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Transmutation." 
+					"text": "A stack of 20 shards becomes an Orb of Transmutation."
+					},
+				   "Deregulation Scroll": {
+					"text": "Used to upgrade The Tempest's Binding to The Tempest's Liberation." 
+					},
+				   "Electroshock Scroll": {
+					"text": "Used to upgrade The Rippling Thoughts to The Surging Thoughts." 
+					},
+				   "Fragmentation Scroll": {
+					"text": "Used to upgrade The Fracturing Spinner to The Shattered Divinity." 
+					},
+				   "Haemocombustion Scroll": {
+					"text": "Used to upgrade The Enmity Divine to The Yielding Mortality."
+					},
+				   "Specularity Scroll": {
+					"text": "Used to upgrade The Unshattered Will to The Immortal Will." 
+					},
+				   "Time-light Scroll": {
+					"text": "Used to upgrade The Flow Untethered to The Torrent's Reclamation." 
 					}
 			}
 		},
@@ -2236,16 +2254,16 @@
 					"text": "Guaranteed to drop upon killing The Purifier, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area" 
 					}, 
 				"Fragment of Shape": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper" 
+					"text": "Bottom Left Uber Elder Fragment, Combined with fragments of Terror, Knowledge and Emptiness it will grant access to fight Uber Elder. Chance to drop from The Shaper (Bottom Left)"
 					}, 
 				"Fragment of Terror": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder" 
+					"text": "Top Right Uber Elder Fragment, Combined with fragments of Shape, Knowledge and Emptiness it will grant access to fight Uber Elder. Chance to drop from The Elder"
 					}, 
 				"Fragment of Knowledge": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper" 
+					"text": "Top Left Uber Elder Fragment, Combined with fragments of Shape, Terror and Emptiness it will grant access to fight Uber Elder. Chance to drop from The Shaper"
 					}, 
 				"Fragment of Emptiness": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder" 
+					"text": "Bottom Right Uber Elder Fragment, Combined with fragments of Shape, Terror and Knowledge it will grant access to fight Uber Elder. Chance to drop from The Elder"
 					}, 
 				"Simulacrum": {
 					"text": "Placed into a map device it opens up 6 portals to a 30 wave fight. Increasing in difficulty with each wave. Aquired by combining 300 Simulacrum Splinters" 
@@ -2540,11 +2558,11 @@
 			"items": {
 				"Simple Robe": {
 					"comment": "COMMENT: the text property below provides infos about a whole basetype",
-					"text": null,
+					"text": "Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets.",
 					"items": {
 						"Tabula Rasa": {
 							"comment": "COMMENT: the text property below provides infos about an individual unique",
-							"text": "Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets."
+							"text": null
 						}
 					}
 				},
@@ -2620,7 +2638,7 @@
 					}
 				},
 				"Infernal Sword": {
-					"text": null,
+					"text": "Advised not to hide as Echoforge is not currently in the Exception rule. Starforge and Voidforge are detected due to being influenced",
 					"items": {
 						"Starforge": {
 							"text": "Overridden in Exceptions. Drops from The Shaper."
