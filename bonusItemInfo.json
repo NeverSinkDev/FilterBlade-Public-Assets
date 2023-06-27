@@ -409,25 +409,25 @@
 				   "Engineer's Shard": {
 					"text": "A stack of 20 shards becomes an Engineer's Orb (Harbingers or Harbinger and Map Currency related rewards drop only)" 
 					},
-					"Transmutation Shard": {
+				   "Transmutation Shard": {
 					"text": "A stack of 20 shards becomes an Orb of Transmutation."
 					},
 				   "Deregulation Scroll": {
 					"text": "Used to upgrade The Tempest's Binding to The Tempest's Liberation." 
 					},
-					"Electroshock Scroll": {
+				   "Electroshock Scroll": {
 					"text": "Used to upgrade The Rippling Thoughts to The Surging Thoughts." 
 					},
-					"Fragmentation Scroll": {
+				   "Fragmentation Scroll": {
 					"text": "Used to upgrade The Fracturing Spinner to The Shattered Divinity." 
 					},
-					"Haemocombustion Scroll": {
+				   "Haemocombustion Scroll": {
 					"text": "Used to upgrade The Enmity Divine to The Yielding Mortality."
 					},
-					"Specularity Scroll": {
+				   "Specularity Scroll": {
 					"text": "Used to upgrade The Unshattered Will to The Immortal Will." 
 					},
-					"Time-light Scroll": {
+				   "Time-light Scroll": {
 					"text": "Used to upgrade The Flow Untethered to The Torrent's Reclamation." 
 					}
 			}
