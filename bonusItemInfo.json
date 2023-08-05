@@ -1,4 +1,12 @@
 {
+	"itemTagDefinitions": {
+		"BreachCurrency": {
+			"displayName": "Breach",
+			"iconPath": "assets/img/Icons/AccordionIcons/Breachstone.png",
+			"description": "Since Breachstones drop predeterministic on breach boss fights, you will rarely edit them in the currency tierlist.",
+			"isHiddenByDefault": true
+		}
+	},
 	"comment": "These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
 	"bonusItemInfo": {
 		"Blueprint": {
@@ -347,19 +355,24 @@
 					"text": "Combine 10 Crescent Splinters to create The Maven's Writ (Maven Invitation drop only)" 
 					}, 
 				   "Blessing of Chayula": {
-					"text": "Upgrades a Chayula unique item or breachstone to a more powerful version (Chayula drop only)" 
+					"text": "Upgrades a Chayula unique item or breachstone to a more powerful version (Chayula drop only)",
+					"tags": ["BreachCurrency"]
 					}, 
 				   "Blessing of Uul-Netol": {
-					"text": "Upgrades a Uul-Netol unique item or breachstone to a more powerful version (Uul-Netol drop only)" 
+					"text": "Upgrades a Uul-Netol unique item or breachstone to a more powerful version (Uul-Netol drop only)",
+					"tags": ["BreachCurrency"]
 					}, 
 				   "Blessing of Esh": {
-					"text": "Upgrades a Esh unique item or breachstone to a more powerful version (Esh drop only)" 
+					"text": "Upgrades a Esh unique item or breachstone to a more powerful version (Esh drop only)",
+					"tags": ["BreachCurrency"]
 					}, 
 				   "Blessing of Tul": {
-					"text": "Upgrades a Tul unique item or breachstone to a more powerful version (Tul drop only)" 
+					"text": "Upgrades a Tul unique item or breachstone to a more powerful version (Tul drop only)",
+					"tags": ["BreachCurrency"]
 					}, 
 				   "Blessing of Xoph": {
-					"text": "Upgrades a Xoph unique item or breachstone to a more powerful version (Xoph drop only)" 
+					"text": "Upgrades a Xoph unique item or breachstone to a more powerful version (Xoph drop only)",
+					"tags": ["BreachCurrency"]
 					}, 
 				   "Burial Medallion": {
 					"text": "Brought to Dannig to refresh his vendor inventory." 
