@@ -1,430 +1,668 @@
 {
 	"itemTagDefinitions": {
-		"BreachCurrency": {
+
+		"//comment1": "Drop type tags",
+		"Generic": {
+			"displayName": "Generic",
+			"iconPath": "assets/img/Icons/AccordionIcons/Chaos.png",
+			"description": "Generic currency you can drop anywhere",
+			"isHiddenByDefault": false
+		},
+		"LeagueDrop": {
+			"displayName": "League Mechanic Drop",
+			"iconPath": "assets/img/Icons/AccordionIcons/Essence.png",
+			"description": "Drops from a league mechanic generically",
+			"isHiddenByDefault": false
+		},
+		"BossDrop": {
+			"displayName": "Boss or Special Drop",
+			"iconPath": "assets/img/Icons/AccordionIcons/AwakenersOrb.png",
+			"description": "Drops from a boss or other similar highly restricted source",
+			"isHiddenByDefault": false
+		},
+		"NonDrop": {
+			"displayName": "Non-Drop",
+			"iconPath": "assets/img/Icons/AccordionIcons/BestiaryOrb.png",
+			"description": "Does not drop or should not be able to drop under normal circumstances",
+			"isHiddenByDefault": true
+		},
+
+		"//comment2": "Drop source or common currency type tags",
+		"Breach": {
 			"displayName": "Breach",
 			"iconPath": "assets/img/Icons/AccordionIcons/Breachstone.png",
-			"description": "Since Breachstones drop predeterministic on breach boss fights, you will rarely edit them in the currency tierlist.",
+			"description": "Drops from Breach",
+			"isHiddenByDefault": false
+		},
+		"Harbinger": {
+			"displayName": "Harbinger",
+			"iconPath": "assets/img/Icons/AccordionIcons/FracturingOrb.png",
+			"description": "Drops from Harbinger",
+			"isHiddenByDefault": false
+		},
+		"Heist": {
+			"displayName": "Heist",
+			"iconPath": "assets/img/Icons/AccordionIcons/HeistGrandBlueprint.png",
+			"description": "Drops from Heist",
+			"isHiddenByDefault": false
+		},
+		"Beyond": {
+			"displayName": "Beyond",
+			"iconPath": "assets/img/Icons/AccordionIcons/TaintedOrbofFusing.png",
+			"description": "Drops from Beyond",
+			"isHiddenByDefault": false
+		},
+		"Harvest": {
+			"displayName": "Harvest",
+			"iconPath": "assets/img/Icons/AccordionIcons/HarvestSeed.png",
+			"description": "Drops from Harvest",
+			"isHiddenByDefault": false
+		},
+		"Lab": {
+			"displayName": "Lab",
+			"iconPath": "assets/img/Icons/AccordionIcons/UberLabOffering.png",
+			"description": "Drops from Lab",
+			"isHiddenByDefault": false
+		},
+		"Eldritch": {
+			"displayName": "Eldritch",
+			"iconPath": "assets/img/Icons/AccordionIcons/ExceptionalEldritchIchor.png",
+			"description": "Eldritch",
+			"isHiddenByDefault": false
+		},
+		"Report": {
+			"displayName": "Scouting Report",
+			"iconPath": "assets/img/Icons/AccordionIcons/ScoutingReport.png",
+			"description": "Scouting Report",
+			"isHiddenByDefault": false
+		},
+		"Catalyst": {
+			"displayName": "Catalyst",
+			"iconPath": "assets/img/Icons/AccordionIcons/ImbuedCatalyst.png",
+			"description": "Drops from Metamorph",
+			"isHiddenByDefault": false
+		},
+		"Expedition": {
+			"displayName": "Expedition",
+			"iconPath": "assets/img/Icons/AccordionIcons/ExpeditionLogbookMap.png",
+			"description": "Drops from Expedition",
+			"isHiddenByDefault": false
+		},
+		"Blight": {
+			"displayName": "Blight",
+			"iconPath": "assets/img/Icons/AccordionIcons/BlightOil.png",
+			"description": "Drops from Blight",
+			"isHiddenByDefault": false
+		},
+
+		"//comment3": "tags for highly specific items to give them some tag and provide isHiddenByDefault",
+		"Meme": {
+			"displayName": "Redacted",
+			"iconPath": "assets/img/Icons/AccordionIcons/FishingRod.png",
+			"description": "Redacted",
+			"isHiddenByDefault": true
+		},
+		"RuthlessOnly": {
+			"displayName": "Ruthless exclusive",
+			"iconPath": "assets/img/Icons/AccordionIcons/EternalOrb.png",
+			"description": "Can only drop in ruthless",
 			"isHiddenByDefault": true
 		}
 	},
-	"comment": "These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
+
+	"//comment1": "These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
 	"bonusItemInfo": {
 		"Blueprint": {
 			"Items": {
 				"Blueprint: Bunker": {
-					"text": "Enchanted Armaments" 
+					"text": "Enchanted Armaments"
 				},
 				"Blueprint: Record Office": {
-					"text": "Enchanted Armaments" 
+					"text": "Enchanted Armaments"
 				},
 				"Blueprint: Mansion": {
-					"text": "Enchanted Armaments" 
+					"text": "Enchanted Armaments"
 				},
 				"Blueprint: Smuglers Den": {
-					"text": "Trinkets or Currency" 
+					"text": "Trinkets or Currency"
 				},
 				"Blueprint: Underbelly": {
-					"text": "Trinkets or Currency" 
+					"text": "Trinkets or Currency"
 				},
 				"Blueprint: Laboratory": {
-					"text": "Replicas or Experimented Items" 
+					"text": "Replicas or Experimented Items"
 				},
 				"Blueprint: Prohibited Library": {
-					"text": "Replicas or Experimented Items" 
+					"text": "Replicas or Experimented Items"
 				},
 				"Blueprint: Tunnels": {
-					"text": "Unusual Gems" 
+					"text": "Unusual Gems"
 				},
 				"Blueprint: Repository": {
-					"text": "Unusual Gems" 
+					"text": "Unusual Gems"
 				}
 			}
 		},
+
 		"Currency": {
 			"items": {
+
+				"Prime Regrading Lens": {
+					"text": "Drops from Gem Blueprint<br>Change the type of quality of a skill gem with quality to another random quality",
+					"tags": ["Heist", "BossDrop"]
+				},
+				"Secondary Regrading Lens": {
+					"text": "Drops from Gem Blueprint<br>Change the type of quality of a support gem with quality to another random quality",
+					"tags": ["Heist", "BossDrop"]
+				},
+				"Tailoring Orb": {
+					"text": "Drops from Enchanted Armaments Blueprint<br>Adds or replaces an enchantment on a body armour. This may reforge the body armour's sockets",
+					"tags": ["Heist", "BossDrop"]
+				},
+				"Tempering Orb": {
+					"text": "Drops from Enchanted Armaments Blueprint<br>Adds or replaces an enchantment on a weapon. This may reforge the weapon's sockets",
+					"tags": ["Heist", "BossDrop"]
+				},
+
+				"Sacred Crystallised Lifeforce": {
+					"text": "Drops from Oshabi<br>Used at the Horticrafting bench in your hideout for high tier crafting options",
+					"tags": ["Harvest", "BossDrop"]
+				},
+				"Vivid Crystallised Lifeforce": {
+					"text": "Yellow harvest crafting material",
+					"tags": ["Harvest", "LeagueDrop"]
+				},
+				"Wild Crystallised Lifeforce": {
+					"text": "Purple harvest crafting material",
+					"tags": ["Harvest", "LeagueDrop"]
+				},
+				"Primal Crystallised Lifeforce": {
+					"text": "Blue harvest crafting material",
+					"tags": ["Harvest", "LeagueDrop"]
+				}, 
+
+				"Tainted Divine Teardrop": {
+					"text": "Unpredictably raises or lowers the tier of each modifier on a corrupted rare item",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Exalted Orb": {
+					"text": "Unpredictably adds or removes a modifier on a corrupted rare item",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Chaos Orb": {
+					"text": "Unpredictably either reforges a corrupted rare item with new random modifiers or removes all of its modifiers",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Orb of Fusing": {
+					"text": "Unpredictably adds or removes a link to the largest group of linked sockets on a corrupted item",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Mythic Orb": {
+					"text": "Unpredictably either upgrades a corrupted item to unique rarity or destroys it",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Chromatic Orb": {
+					"text": "Unpredictably reforges the colour of sockets on a corrupted item",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Jeweller's Orb": {
+					"text": "Unpredictably adds or removes a socket on a corrupted item",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Armourer's Scrap": {
+					"text": "Randomises the quality of a corrupted armour",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Blacksmith's Whetstone": {
+					"text": "Randomises the quality of a corrupted weapon",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+
+				"Tainted Blessing": {
+					"text": "Drops from Treasure Chests at the end of Lab<br>Can be placed in the Divine Font to allow enchantment of corrupted gloves, boots, helmets or belts",
+					"tags": ["Lab", "BossDrop"]
+				},
+
+				"Eldritch Chaos Orb": {
+					"text": "If The Searing Exarch is dominant, reroll prefix modifiers. If The Eater of Worlds is dominant, reroll suffix modifiers",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Eldritch Orb of Annulment": {
+					"text": "If The Searing Exarch is dominant, remove a prefix modifier. If The Eater of Worlds is dominant, remove a suffix modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Eldritch Exalted Orb": {
+					"text": "If The Searing Exarch is dominant, add a prefix modifier. If The Eater of Worlds is dominant, add a suffix modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Exceptional Eldritch Ember": {
+					"text": "Adds an Exceptional Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "BossDrop"]
+				},
+				"Exceptional Eldritch Ichor": {
+					"text": "Adds an Exceptional Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "BossDrop"]
+				},
+				"Grand Eldritch Ember": {
+					"text": "Adds a Grand Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Grand Eldritch Ichor": {
+					"text": "Adds a Grand Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Greater Eldritch Ember": {
+					"text": "Adds a Greater Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Greater Eldritch Ichor": {
+					"text": "Adds a Greater Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Lesser Eldritch Ember": {
+					"text": "Adds a Lesser Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Lesser Eldritch Ichor": {
+					"text": "Adds a Lesser Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+
+				"Comprehensive Scouting Report": {
+					"text": "Drops if you have Planar Tactitian Atlas node<br>Reroll all of Kirac's Atlas Missions, adding additional mission options",
+					"tags": ["Report", "BossDrop"]
+				},
+				"Operative's Scouting Report": {
+					"text": "Drops if you have Solidarity Atlas node<br>Reroll all of Kirac's Atlas Missions, granting missions with rewarding implicit modifiers",
+					"tags": ["Report", "BossDrop"]
+				},
+				"Otherworldly Scouting Report": {
+					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Breachstone",
+					"tags": ["Report", "BossDrop"]
+				},
+				"Blighted Scouting Report": {
+					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Blighted Map",
+					"tags": ["Report", "BossDrop"]
+				},
+				"Delirious Scouting Report": {
+					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, adding layers of Delirium to all non-Unique Maps",
+					"tags": ["Report", "BossDrop"]
+				},
+				"Singular Scouting Report": {
+					"text": "Reroll all of Kirac's Atlas Missions, including at least one Unique map",
+					"tags": ["Report", "Generic"]
+				},
+				"Influenced Scouting Report": {
+					"text": "Reroll all of Kirac's Atlas Missions, including at least one Shaper Guardian, Elder Guardian, or Elderslayer Map",
+					"tags": ["Report", "Generic"]
+				},
+				"Explorer's Scouting Report": {
+					"text": "Reroll all of Kirac's Atlas Missions, using uncompleted Maps where possible",
+					"tags": ["Report", "Generic"]
+				},
+				"Vaal Scouting Report": {
+					"text": "Reroll all of Kirac's Atlas Missions, corrupting all non-Unique Maps",
+					"tags": ["Report", "Generic"]
+				},
+				
+				"Oil Extractor": {
+					"text": "Drops with Distilled Fungus Atlas node<br>Destroys an Anointed Item to recover one of the Oils that was used to apply that Anointment",
+					"tags": ["Blight", "BossDrop", "LeagueDrop"]
+				},
+
+				"Fertile Catalyst": {
+					"text": "Adds quality that enhances Life and Mana modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Prismatic Catalyst": {
+					"text": "Adds quality that enhances Resistance modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Tempering Catalyst": {
+					"text": "Adds quality that enhances Defence modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Accelerating Catalyst": {
+					"text": "Adds quality that enhances Speed modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Unstable Catalyst": {
+					"text": "Adds quality that enhances Critical modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Intrinsic Catalyst": {
+					"text": "Adds quality that enhances Attribute modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Noxious Catalyst": {
+					"text": "Adds quality that enhances Physical and Chaos Damage modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Turbulent Catalyst": {
+					"text": "Adds quality that enhances Elemental Damage modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Abrasive Catalyst": {
+					"text": "Adds quality that enhances Attack modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Imbued Catalyst": {
+					"text": "Adds quality that enhances Caster modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+
+				"Blessing of Chayula": {
+					"text": "Drops from Chayula<br>Upgrades a Chayula unique item or breachstone to a more powerful version",
+					"tags": ["Breach", "BossDrop"]
+				},
+				"Blessing of Uul-Netol": {
+					"text": "Drops from Uul-Netol<br>Upgrades a Uul-Netol unique item or breachstone to a more powerful version",
+					"tags": ["Breach", "BossDrop"]
+				},
+				"Blessing of Esh": {
+					"text": "Drops from Esh<br>Upgrades a Esh unique item or breachstone to a more powerful version",
+					"tags": ["Breach", "BossDrop"]
+				},
+				"Blessing of Tul": {
+					"text": "Drops from Tul<br>Upgrades a Tul unique item or breachstone to a more powerful version",
+					"tags": ["Breach", "BossDrop"]
+				},
+				"Blessing of Xoph": {
+					"text": "Drops from Xoph<br>Upgrades a Xoph unique item or breachstone to a more powerful version",
+					"tags": ["Breach", "BossDrop"]
+				},
+
+				"Burial Medallion": {
+					"text": "Brought to Dannig to refresh his vendor inventory",
+					"tags": ["Expedition", "LeagueDrop"]
+				},
+				"Exotic Coinage": {
+					"text": "Brought to Tujen to refresh his vendor inventory",
+					"tags": ["Expedition", "LeagueDrop"]
+				},
+				"Astragali": {
+					"text": "Brought to Gwennen to refresh her vendor inventory",
+					"tags": ["Expedition", "LeagueDrop"]
+				},
+				"Scrap Metal": {
+					"text": "Brought to Rog to refresh his vendor inventory",
+					"tags": ["Expedition", "LeagueDrop"]
+				},
+
+				"//comment1": "some of those can techincally very rarely drop from mob that drops vendor price of the items",
+				"Fracturing Orb": {
+					"text": "Fracture a random modifier on a rare item with at least 4 modifiers, locking it in place",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Fracturing Shard": {
+					"text": "A stack of 20 shards becomes a Fracturing Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Ancient Orb": {
+					"text": "Reforges a unique equipment as another of the same item class",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Ancient Shard": {
+					"text": "A stack of 20 shards becomes an Ancient Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Harbinger's Orb": {
+					"text": "Reforges a map item as another of a higher tier",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Harbinger's Shard": {
+					"text": "A stack of 20 shards becomes a Harbinger's Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Horizon Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Horizons",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Engineer's Orb": {
+					"text": "Improves the quality of a Strongbox",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Engineer's Shard": {
+					"text": "A stack of 20 shards becomes an Engineer's Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Mirror Shard": {
+					"text": "A stack of 20 shards becomes a Mirror of Kalandra",
+					"tags": ["Harbinger", "LeagueDrop"] 
+				},
+				"Exalted Shard": {
+					"text": "A stack of 20 shards becomes an Exalted Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Annulment Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Annulment",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Regal Shard": {
+					"text": "A stack of 20 shards becomes a Regal Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Chaos Shard": {
+					"text": "A stack of 20 shards becomes a Chaos Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Alchemy Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Alchemy",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Binding Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Binding",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Alteration Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Alteration",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Transmutation Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Transmutation",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+
+				"Awakener's Orb": {
+					"text": "Drops from Sirus<br>Destroys an item, applying its influence to another of the same item class. The second item is reforged as a rare item with both influence types and new modifiers",
+					"tags": ["BossDrop"]
+				},
+				"Orb of Dominance": {
+					"text": "Drops from Sirus, Shaper and Elder<br>Removes one Influenced Modifier from an item with at least two Influenced Modifiers and upgrades another Influenced Modifier",
+					"tags": ["BossDrop"]
+				},
+				"Hunter's Exalted Orb": {
+					"text": "Drops from Al-Hezmin, The Hunter<br>Adds Hunter influence and a new Hunter modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Redeemer's Exalted Orb": {
+					"text": "Drops from Veritania, The Redeemer<br>Adds Redeemer influence and a new Redeemer modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Warlord's Exalted Orb": {
+					"text": "Drops from Drox, The warlord<br>Adds Warlord influence and a new Warlord modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Crusader's Exalted Orb": {
+					"text": "Drops from Baran, The Crusader<br>Adds Crusader influence and a new Crusader modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Orb of Conflict": {
+					"text": "Drops from Maven or in Maven's Crucible<br>Unpredictably raise the strength of one Searing Exarch or Eater of Worlds modifier on an item and lower the strength of another",
+					"tags": ["BossDrop"]
+				},
+				"Elevated Sextant": {
+					"text": "Drops from Maven<br>Adds or rerolls a modifier on a Voidstone",
+					"tags": ["BossDrop"]
+				},
+
+				"Mirror of Kalandra": {
+					"text": "Creates a mirrored copy of an item",
+					"tags": ["Generic"]
+				},
+				"Sacred Orb": {
+					"text": "Randomises the numeric values of base defences on an armour",
+					"tags": ["Generic"]
+				},
+				"Divine Orb": {
+					"text": "Randomises the numeric values of the random modifiers on an item",
+					"tags": ["Generic"]
+				},
+				"Exalted Orb": {
+					"text": "Augments a rare item with a new random modifier",
+					"tags": ["Generic"]
+				},
+				"Orb of Annulment": {
+					"text": "Removes a random modifier from an item",
+					"tags": ["Generic"]
+				},
+				"Veiled Chaos Orb": {
+					"text": "Reforges a rare item with new random modifiers, including a Veiled modifier. Can only be used on items that can have a Veiled modifier",
+					"tags": ["Generic"]
+				},
+				"Awakened Sextant": {
+					"text": "Adds or rerolls a modifier on a Voidstone",
+					"tags": ["Generic"]
+				},
+				"Orb of Unmaking": {
+					"text": "Grants an atlas passive skill refund point",
+					"tags": ["Generic"]
+				},
+				"Gemcutter's Prism": {
+					"text": "Improves the quality of a gem",
+					"tags": ["Generic"]
+				},
+				"Regal Orb": {
+					"text": "Upgrades a magic item to a rare item",
+					"tags": ["Generic"]
+				},
+				"Vaal Orb": {
+					"text": "Corrupts an item, modifying it unpredictably",
+					"tags": ["Generic"]
+				},
+				"Chaos Orb": {
+					"text": "Reforges a rare item with new random modifiers",
+					"tags": ["Generic"]
+				},
+				"Orb of Horizons": {
+					"text": "Reforges a map item as another of the same tier",
+					"tags": ["Generic"]
+				},
+				"Orb of Regret": {
+					"text": "Grants a passive skill refund point",
+					"tags": ["Generic"]
+				},
+				"Orb of Scouring": {
+					"text": "Removes all modifiers from an item",
+					"tags": ["Generic"]
+				},
+				"Blessed Orb": {
+					"text": "Randomises the numeric values of the implicit modifiers of an item",
+					"tags": ["Generic"]
+				},
+				"Orb of Fusing": {
+					"text": "Reforges the links between sockets on an item",
+					"tags": ["Generic"]
+				},
+				"Cartographer's Chisel": {
+					"text": "Improves the quality of a map",
+					"tags": ["Generic"]
+				},
+				"Orb of Alchemy": {
+					"text": "Upgrades a normal item to a rare item",
+					"tags": ["Generic"]
+				},
+				"Orb of Binding": {
+					"text": "Upgrades a normal item to a rare item with up to four linked sockets",
+					"tags": ["Generic"]
+				},
+				"Jeweller's Orb": {
+					"text": "Reforges the number of sockets on an item",
+					"tags": ["Generic"]
+				},
+				"Enkindling Orb": {
+					"text": "Adds an enchantment to a utility flask that will improve it but prevent it from gaining charges during its effect",
+					"tags": ["Generic"]
+				},
+				"Instilling Orb": {
+					"text": "Adds an enchantment to a utility flask that will cause it to be used when certain conditions are met",
+					"tags": ["Generic"]
+				},
+				"Glassblower's Bauble": {
+					"text": "Improves the quality of a flask",
+					"tags": ["Generic"]
+				},
+				"Chromatic Orb": {
+					"text": "Reforges the colour of sockets on an item",
+					"tags": ["Generic"]
+				},
+				"Orb of Chance": {
+					"text": "Upgrades a normal item to a random rarity",
+					"tags": ["Generic"]
+				},
+				"Orb of Alteration": {
+					"text": "Reforges a magic item with new random modifiers",
+					"tags": ["Generic"]
+				},
+				"Orb of Transmutation": {
+					"text": "Upgrades a normal item to a magic item",
+					"tags": ["Generic"]
+				},
+				"Orb of Augmentation": {
+					"text": "Augments a magic item with a new random modifier",
+					"tags": ["Generic"]
+				},
+				"Blacksmith's Whetstone": {
+					"text": "Improves the quality of a weapon",
+					"tags": ["Generic"]
+				},
+				"Armourer's Scrap": {
+					"text": "Improves the quality of an armour",
+					"tags": ["Generic"]
+				},
+				"Portal Scroll": {
+					"text": "Creates a portal to town",
+					"tags": ["Generic"]
+				},
+				"Scroll of Wisdom": {
+					"text": "Identifies an item",
+					"tags": ["Generic"]
+				},
+				"Stacked Deck": {
+					"text": "A stack of unknown divination cards",
+					"tags": ["Generic"]
+				},
+				"Surveyor's Compass": {
+					"text": "Stores a Sextant Modifier in an item",
+					"tags": ["Generic"]
+				},
+
 				"Albino Rhoa Feather": {
-					"text": "Redacted" 
-					}, 
-				   "Divine Orb": {
-					"text": "Randomises the numeric values of the random modifiers on an item." 
-					}, 
-				   "Elevated Sextant": {
-					"text": "Adds or rerolls a modifier on a Voidstone (Maven only drop)" 
-					}, 
-				   "Eternal Orb": {
-					"text": "Creates an imprint of an item for later restoration. The imprint can't be applied to Fractured Items (Ruthless only)" 
-					}, 
-				   "Fracturing Orb": {
-					"text": "Fracture a random modifier on a rare item with at least 4 modifiers, locking it in place." 
-					}, 
-				   "Fracturing Shard": {
-					"text": "A stack of 20 shards becomes a Fracturing Orb." 
-					}, 
-				   "Hunter's Exalted Orb": {
-					"text": "Adds Hunter influence and a new Hunter modifier to a rare item (Al-Hezmin, The Hunter only drop)" 
-					}, 
-				   "Mirror of Kalandra": {
-					"text": "Creates a mirrored copy of an item." 
-					}, 
-				   "Mirror Shard": {
-					"text": "A stack of 20 shards becomes a Mirror of Kalandra." 
-					}, 
-				   "Orb of Dominance": {
-					"text": "Removes one Influenced Modifier from an item with at least two Influenced Modifiers and upgrades another Influenced Modifier." 
-					}, 
-				   "Prime Regrading Lens": {
-					"text": "Change the type of quality of a skill gem with quality to another random quality (Grand Heist drop only)" 
-					}, 
-				   "Sacred Crystallised Lifeforce": {
-					"text": "Used at the Horticrafting bench in your hideout for high tier crafting options (Oshabi, Avatar of the Grove drop only)." 
-					}, 
-				   "Secondary Regrading Lens": {
-					"text": "Change the type of quality of a support gem with quality to another random quality (Grand Heist drop only)" 
-					}, 
-				   "Tailoring Orb": {
-					"text": "Adds or replaces an enchantment on a body armour. This may reforge the body armour's sockets (Grand Heist drop only)" 
-					}, 
-				   "Tainted Divine Teardrop": {
-					"text": "Unpredictably raises or lowers the tier of each modifier on a corrupted rare item (Beyond drop only)" 
-					}, 
-				   "Tempering Orb": {
-					"text": "Adds or replaces an enchantment on a weapon. This may reforge the weapon's sockets (Grand Heist drop only)" 
-					}, 
-				   "Tainted Exalted Orb": {
-					"text": "Unpredictably adds or removes a modifier on a corrupted rare item (Beyond drop only)" 
-					}, 
-				   "Awakener's Orb": {
-					"text": "Destroys an item, applying its influence to another of the same item class. The second item is reforged as a rare item with both influence types and new modifiers (Sirus, Awakener of Worlds drop only)" 
-					}, 
-				   "Sacred Orb": {
-					"text": "Randomises the numeric values of base defences on an armour" 
-					}, 
-				   "Orb of Conflict": {
-					"text": "Unpredictably raise the strength of one Searing Exarch or Eater of Worlds modifier on an item and lower the strength of another. Lesser modifiers that have their strength lowered will be removed (Maven or Mavens Crucible drop only)" 
-					}, 
-				   "Crusader's Exalted Orb": {
-					"text": "Adds Crusader influence and a new Crusader modifier to a rare item (Baran, The Crusader drop only)" 
-					}, 
-				   "Redeemer's Exalted Orb": {
-					"text": "Adds Redeemer influence and a new Redeemer modifier to a rare item (Veritania, The Redeemer drop only)" 
-					}, 
-				   "Tainted Blessing": {
-					"text": "Can be placed in the Divine Font to allow enchantment of corrupted gloves, boots, helmets or belts(Izaro's Treasure drop only)" 
-					}, 
-				   "Exceptional Eldritch Ember": {
-					"text": "Adds an Exceptional Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier (The Searing Exarch drop only)" 
-					}, 
-				   "Warlord's Exalted Orb": {
-					"text": "Adds Warlord influence and a new Warlord modifier to a rare item (Drox, The Warlord drop only)" 
-					}, 
-				   "Eldritch Chaos Orb": {
-					"text": "If The Searing Exarch is dominant, reroll prefix modifiers. If The Eater of Worlds is dominant, reroll suffix modifiers (Exarch, Eater spawned mobs drop only)" 
-					}, 
-				   "Exceptional Eldritch Ichor": {
-					"text": "Adds an Exceptional Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier (The Eater of Worlds drop only)" 
-					}, 
-				   "Eldritch Orb of Annulment": {
-					"text": "If The Searing Exarch is dominant, remove a prefix modifier. If The Eater of Worlds is dominant, remove a suffix modifier (Exarch, Eater spawned mobs or Eldritch horrors drop only)" 
-					}, 
-				   "Comprehensive Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, adding additional mission options (Requires Planar Tactician Atlas node)" 
-					}, 
-				   "Tainted Orb of Fusing": {
-					"text": "Unpredictably adds or removes a link to the largest group of linked sockets on a corrupted item (Beyond drop only)" 
-					}, 
-				   "Exalted Orb": {
-					"text": "Augments a rare item with a new random modifier" 
-					}, 
-				   "Tainted Mythic Orb": {
-					"text": "Unpredictably either upgrades a corrupted item to unique rarity or destroys it (Beyond only)" 
-					}, 
-				   "Eldritch Exalted Orb": {
-					"text": "If The Searing Exarch is dominant, add a prefix modifier. If The Eater of Worlds is dominant, add a suffix modifier (Exarch, Eater spawned mobs or Eldritch horrors drop only)" 
-					}, 
-				   "Ancient Orb": {
-					"text": "Reforges a unique equipment as another of the same item class (Harbingers or Harbinger related rewards drop only)" 
-					}, 
-				   "Veiled Chaos Orb": {
-					"text": "Reforges a rare item with new random modifiers, including a Veiled modifier. Can only be used on items that can have a Veiled modifier." 
-					}, 
-				   "Prismatic Catalyst": {
-					"text": "Adds quality that enhances Resistance modifiers on a ring, amulet or belt (Metamorph or Metamorph related rewards drop only)" 
-					}, 
-				   "Unstable Catalyst": {
-					"text": "Adds quality that enhances Critical modifiers on a ring, amulet or belt (Metamorph or Metamorph related rewards drop only)" 
-					}, 
-				   "Tainted Chaos Orb": {
-					"text": "Unpredictably either reforges a corrupted rare item with new random modifiers or removes all of its modifiers (Beyond drop only" 
-					}, 
-				   "Otherworldly Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, including at least one Breachstone (Requires Expect the Unexpected Atlas Node)" 
-					}, 
-				   "Grand Eldritch Ember": {
-					"text": "Adds a Grand Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier (Exarch influenced mobs or Black Star drop only)" 
-					}, 
-				   "Ritual Vessel": {
-					"text": "Stores the monsters slain for the first time from a completed Ritual Altar for future use (It can only be created by combining splinters)" 
-					}, 
-				   "Oil Extractor": {
-					"text": "Destroys an Anointed Item to recover one of the Oils that was used to apply that Anointment (Blight chest in Blight maps while Distilled Fungus Atlas node allocated)" 
-					}, 
-				   "Orb of Annulment": {
-					"text": "Removes a random modifier from an item (Harbingers or Harbinger related rewards drop only)" 
-					}, 
-				   "Blighted Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, including at least one Blighted Map (Requires Expect the Unexpected Atlas Node)" 
-					}, 
-				   "Fertile Catalyst": {
-					"text": "Adds quality that enhances Life and Mana modifiers on a ring, amulet or belt (Metamorph or Metamorph related rewards drop only)" 
-					}, 
-				   "Influenced Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, including at least one Shaper Guardian, Elder Guardian, or Elderslayer Map (T14+ Map drop only)" 
-					}, 
-				   "Grand Eldritch Ichor": {
-					"text": "Adds a Grand Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier (Infinite Hunger drop only)" 
-					}, 
-				   "Tainted Chromatic Orb": {
-					"text": "Unpredictably reforges the colour of sockets on a corrupted item (Beyond drop only)" 
-					}, 
-				   "Accelerating Catalyst": {
-					"text": "Adds quality that enhances Speed modifiers on a ring, amulet or belt (Metamorph or Metamorph related rewards drop only)" 
-					}, 
-				   "Singular Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, including at least one Unique map." 
-					}, 
-				   "Operative's Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, granting missions with rewarding implicit modifiers (Requires Solidarity Atlas Node)" 
-					}, 
-				   "Stacked Deck": {
-					"text": "A stack of unknown divination cards." 
-					}, 
-				   "Awakened Sextant": {
-					"text": "Adds or rerolls a modifier on a Voidstone." 
-					}, 
-				   "Harbinger's Orb": {
-					"text": "Reforges a map item as another of a higher tier (Harbingers or Harbinger and Map Currency related rewards drop only)" 
-					}, 
-				   "Surveyor's Compass": {
-					"text": "Stores a Sextant Modifier in an item" 
-					}, 
-				   "Greater Eldritch Ember": {
-					"text": "Adds a Greater Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier (Exarch influenced mob drop only)" 
-					}, 
-				   "Gemcutter's Prism": {
-					"text": "Improves the quality of a gem." 
-					}, 
-				   "Enkindling Orb": {
-					"text": "Adds an enchantment to a utility flask that will improve it but prevent it from gaining charges during its effect." 
-					}, 
-				   "Orb of Unmaking": {
-					"text": "Grants an atlas passive skill refund point" 
-					}, 
-				   "Exalted Shard": {
-					"text": "A stack of 20 shards becomes an Exalted Orb." 
-					}, 
-				   "Tempering Catalyst": {
-					"text": "Adds quality that enhances Defence modifiers on a ring, amulet or belt." 
-					}, 
-				   "Tainted Jeweller's Orb": {
-					"text": "Unpredictably adds or removes a socket on a corrupted item (Beyond drop only)" 
-					}, 
-				   "Tainted Armourer's Scrap": {
-					"text": "Randomises the quality of a corrupted armour (Beyond drop only)" 
-					}, 
-				   "Vaal Orb": {
-					"text": "Corrupts an item, modifying it unpredictably." 
-					}, 
-				   "Intrinsic Catalyst": {
-					"text": "Adds quality that enhances Attribute modifiers on a ring, amulet or belt (Metamorph or Metamorph related rewards drop only)" 
-					}, 
-				   "Greater Eldritch Ichor": {
-					"text": "Adds a Greater Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier (Eater influenced mob drop only)" 
-					}, 
-				   "Regal Orb": {
-					"text": "Upgrades a magic item to a rare item." 
-					}, 
-				   "Noxious Catalyst": {
-					"text": "Adds quality that enhances Physical and Chaos Damage modifiers on a ring, amulet or belt (Metamorph or Metamorph related rewards drop only)" 
-					}, 
-				   "Explorer's Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, using uncompleted Maps where possible." 
-					}, 
-				   "Vaal Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, corrupting all non-Unique Maps." 
-					}, 
-				   "Orb of Regret": {
-					"text": "Grants a passive skill refund point." 
-					}, 
-				   "Turbulent Catalyst": {
-					"text": "Adds quality that enhances Elemental Damage modifiers on a ring, amulet or belt (Metamorph or Metamorph related rewards drop only)" 
-					}, 
-				   "Orb of Scouring": {
-					"text": "Removes all modifiers from an item." 
-					}, 
-				   "Blessed Orb": {
-					"text": "Randomises the numeric values of the implicit modifiers of an item." 
-					}, 
-				   "Annulment Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Annulment (Harbingers or Harbinger and Map Currency related rewards drop only)" 
-					}, 
-				   "Instilling Orb": {
-					"text": "Adds an enchantment to a utility flask that will cause it to be used when certain conditions are met." 
-					}, 
-				   "Glassblower's Bauble": {
-					"text": "Improves the quality of a flask." 
-					}, 
-				   "Orb of Horizons": {
-					"text": "Reforges a map item as another of the same tier." 
-					}, 
-				   "Abrasive Catalyst": {
-					"text": "Adds quality that enhances Attack modifiers on a ring, amulet or belt (Metamorph or Metamorph related rewards drop only)" 
-					}, 
-				   "Lesser Eldritch Ember": {
-					"text": "Adds a Lesser Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier." 
-					}, 
-				   "Imbued Catalyst": {
-					"text": "Adds quality that enhances Caster modifiers on a ring, amulet or belt (Metamorph or Metamorph related rewards drop only)" 
-					}, 
-				   "Orb of Fusing": {
-					"text": "Reforges the links between sockets on an item." 
-					}, 
-				   "Cartographer's Chisel": {
-					"text": "Improves the quality of a map." 
-					}, 
-				   "Tainted Blacksmith's Whetstone": {
-					"text": "Randomises the quality of a corrupted weapon (Beyond drop only)" 
-					}, 
-				   "Lesser Eldritch Ichor": {
-					"text": "Adds a Lesser Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier." 
-					}, 
-				   "Chromatic Orb": {
-					"text": "Reforges the colour of sockets on an item." 
-					}, 
-				   "Orb of Alchemy": {
-					"text": "Upgrades a normal item to a rare item." 
-					}, 
-				   "Orb of Chance": {
-					"text": "Upgrades a normal item to a random rarity." 
-					}, 
-				   "Engineer's Orb": {
-					"text": "Improves the quality of a Strongbox." 
-					}, 
-				   "Orb of Alteration": {
-					"text": "Reforges a magic item with new random modifiers." 
-					}, 
-				   "Jeweller's Orb": {
-					"text": "Reforges the number of sockets on an item." 
-					}, 
-				   "Orb of Augmentation": {
-					"text": "Augments a magic item with a new random modifier." 
-					}, 
-				   "Orb of Binding": {
-					"text": "Upgrades a normal item to a rare item with up to four linked sockets." 
-					}, 
-				   "Vivid Crystallised Lifeforce": {
-					"text": "Yellow harvest crafting material" 
-					}, 
-				   "Portal Scroll": {
-					"text": "Creates a portal to town." 
-					}, 
-				   "Blacksmith's Whetstone": {
-					"text": "Improves the quality of a weapon" 
-					}, 
-				   "Orb of Transmutation": {
-					"text": "Upgrades a normal item to a magic item" 
-					}, 
-				   "Armourer's Scrap": {
-					"text": "Improves the quality of an armour" 
-					}, 
-				   "Wild Crystallised Lifeforce": {
-					"text": "Purple harvest crafting material" 
-					}, 
-				   "Primal Crystallised Lifeforce": {
-					"text": "Blue harvest crafting material" 
-					}, 
-				   "Scroll of Wisdom": {
-					"text": "Identifies an item." 
-					}, 
-				   "Chaos Orb": {
-					"text": "Reforges a rare item with new random modifiers." 
-					}, 
-				   "Delirious Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, adding layers of Delirium to all non-Unique Maps (Requires Expect the Unexpected Atlas Node)" 
-					}, 
-				   "Crescent Splinter": {
-					"text": "Combine 10 Crescent Splinters to create The Maven's Writ (Maven Invitation drop only)" 
-					}, 
-				   "Blessing of Chayula": {
-					"text": "Upgrades a Chayula unique item or breachstone to a more powerful version (Chayula drop only)",
-					"tags": ["BreachCurrency"]
-					}, 
-				   "Blessing of Uul-Netol": {
-					"text": "Upgrades a Uul-Netol unique item or breachstone to a more powerful version (Uul-Netol drop only)",
-					"tags": ["BreachCurrency"]
-					}, 
-				   "Blessing of Esh": {
-					"text": "Upgrades a Esh unique item or breachstone to a more powerful version (Esh drop only)",
-					"tags": ["BreachCurrency"]
-					}, 
-				   "Blessing of Tul": {
-					"text": "Upgrades a Tul unique item or breachstone to a more powerful version (Tul drop only)",
-					"tags": ["BreachCurrency"]
-					}, 
-				   "Blessing of Xoph": {
-					"text": "Upgrades a Xoph unique item or breachstone to a more powerful version (Xoph drop only)",
-					"tags": ["BreachCurrency"]
-					}, 
-				   "Burial Medallion": {
-					"text": "Brought to Dannig to refresh his vendor inventory." 
-					}, 
-				   "Exotic Coinage": {
-					"text": "Brought to Tujen to refresh his vendor inventory." 
-					}, 
-				   "Astragali": {
-					"text": "Brought to Gwennen to refresh her vendor inventory." 
-					}, 
-				   "Ritual Splinter": {
-					"text": "Combine 100 Splinters to create a Ritual Vessel (Ritual drop only)" 
-					}, 
-				   "Scrap Metal": {
-					"text": "Brought to Rog to refresh his vendor inventory." 
-					}, 
-				   "Ancient Shard": {
-					"text": "A stack of 20 shards becomes an Ancient Orb (Harbingers or Harbinger related rewards drop only)" 
-					}, 
-				   "Bestiary Orb": {
-					"text": "Stores a Beast in an item (Can not drop, Sold by Einhar, Beastmaster)" 
-					}, 
-				   "Facetor's Lens": {
-					"text": "Adds stored experience to a gem, up to its maximum level (Harvest crafted drop only)" 
-					}, 
-				   "Harbinger's Shard": {
-					"text": "A stack of 20 shards becomes a Harbinger's Orb (Harbingers or Harbinger and Map Currency related rewards drop only)" 
-					}, 
-				   "Alchemy Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Alchemy." 
-					}, 
-				   "Alteration Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Alteration." 
-					}, 
-				   "Binding Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Binding (Harbingers or Harbinger related rewards drop only)" 
-					}, 
-				   "Chaos Shard": {
-					"text": "A stack of 20 shards becomes a Chaos Orb." 
-					}, 
-				   "Horizon Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Horizons (Harbingers or Harbinger and Map Currency related rewards drop only)" 
-					}, 
-				   "Regal Shard": {
-					"text": "A stack of 20 shards becomes a Regal Orb." 
-					}, 
-				   "Engineer's Shard": {
-					"text": "A stack of 20 shards becomes an Engineer's Orb (Harbingers or Harbinger and Map Currency related rewards drop only)" 
-					}, 
-				   "Transmutation Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Transmutation." 
-					}
+					"text": "Redacted",
+					"tags": ["Meme"]
+				},
+				
+				"Bestiary Orb": {
+					"text": "Stores a Beast in an item",
+					"tags": ["NonDrop"]
+				},
+				"Facetor's Lens": {
+					"text": "Adds stored experience to a gem, up to its maximum level",
+					"tags": ["NonDrop"]
+				},
+				"Infused Engineer's Orb": {
+					"text": "Applies the itemised Sextant Modifier to the Voidstone",
+					"tags": ["NonDrop"]
+				},
+				"Charged Compass": {
+					"text": "Greatly improves the quality and rewards of a Strongbox and strengthens its defenders",
+					"tags": ["NonDrop"]
+				},
+
+				"Eternal Orb": {
+					"text": "Creates an imprint of an item for later restoration. The imprint can't be applied to Fractured Items",
+					"tags": ["RuthlessOnly"]
+				}
 			}
 		},
 		"Resonator": {
@@ -2552,11 +2790,11 @@
 		"Uniques": {
 			"items": {
 				"Simple Robe": {
-					"comment": "COMMENT: the text property below provides infos about a whole basetype",
+					"//comment": "COMMENT: the text property below provides infos about a whole basetype",
 					"text": null,
 					"items": {
 						"Tabula Rasa": {
-							"comment": "COMMENT: the text property below provides infos about an individual unique",
+							"//comment": "COMMENT: the text property below provides infos about an individual unique",
 							"text": "Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets."
 						}
 					}
