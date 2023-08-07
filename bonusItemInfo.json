@@ -5,25 +5,25 @@
 		"Generic": {
 			"displayName": "Generic",
 			"iconPath": "assets/img/Icons/AccordionIcons/Chaos.png",
-			"description": "Generic currency you can drop anywhere",
+			"description": "General currency, drops anywhere",
 			"isHiddenByDefault": false
 		},
 		"LeagueDrop": {
 			"displayName": "League Mechanic Drop",
 			"iconPath": "assets/img/Icons/AccordionIcons/Essence.png",
-			"description": "Drops from a league mechanic generically",
+			"description": "Primary Source: Specific league mechanics",
 			"isHiddenByDefault": false
 		},
 		"BossDrop": {
 			"displayName": "Boss or Special Drop",
 			"iconPath": "assets/img/Icons/AccordionIcons/AwakenersOrb.png",
-			"description": "Drops from a boss or other similar highly restricted source",
+			"description": "Primary Source: Specific encounter",
 			"isHiddenByDefault": false
 		},
 		"NonDrop": {
 			"displayName": "Non-Drop",
 			"iconPath": "assets/img/Icons/AccordionIcons/BestiaryOrb.png",
-			"description": "Does not drop or should not be able to drop under normal circumstances",
+			"description": "Primary Source: None, currently unobtainable in challenge leagues",
 			"isHiddenByDefault": true
 		},
 
@@ -31,25 +31,25 @@
 		"Breach": {
 			"displayName": "Breach",
 			"iconPath": "assets/img/Icons/AccordionIcons/Breachstone.png",
-			"description": "Drops from Breach",
+			"description": "Drops from Breach Encounters and Rewards",
 			"isHiddenByDefault": false
 		},
 		"Harbinger": {
 			"displayName": "Harbinger",
 			"iconPath": "assets/img/Icons/AccordionIcons/FracturingOrb.png",
-			"description": "Drops from Harbinger",
+			"description": "Drops from Harbinger encounters and Rewards",
 			"isHiddenByDefault": false
 		},
 		"Heist": {
 			"displayName": "Heist",
 			"iconPath": "assets/img/Icons/AccordionIcons/HeistGrandBlueprint.png",
-			"description": "Drops from Heist",
+			"description": "Drops from Heist related content",
 			"isHiddenByDefault": false
 		},
 		"Beyond": {
 			"displayName": "Beyond",
 			"iconPath": "assets/img/Icons/AccordionIcons/TaintedOrbofFusing.png",
-			"description": "Drops from Beyond",
+			"description": "Drops from Beyond demons",
 			"isHiddenByDefault": false
 		},
 		"Harvest": {
@@ -61,13 +61,13 @@
 		"Lab": {
 			"displayName": "Lab",
 			"iconPath": "assets/img/Icons/AccordionIcons/UberLabOffering.png",
-			"description": "Drops from Lab",
+			"description": "Drops from the Eternal Labyrinth",
 			"isHiddenByDefault": false
 		},
 		"Eldritch": {
 			"displayName": "Eldritch",
 			"iconPath": "assets/img/Icons/AccordionIcons/ExceptionalEldritchIchor.png",
-			"description": "Eldritch",
+			"description": "Drops from Exarch and Eater influenced monsters or bosses",
 			"isHiddenByDefault": false
 		},
 		"Report": {
@@ -79,19 +79,19 @@
 		"Catalyst": {
 			"displayName": "Catalyst",
 			"iconPath": "assets/img/Icons/AccordionIcons/ImbuedCatalyst.png",
-			"description": "Drops from Metamorph",
+			"description": "Drops from metamorph encounters",
 			"isHiddenByDefault": false
 		},
 		"Expedition": {
 			"displayName": "Expedition",
 			"iconPath": "assets/img/Icons/AccordionIcons/ExpeditionLogbookMap.png",
-			"description": "Drops from Expedition",
+			"description": "Drops from Expedition encounters",
 			"isHiddenByDefault": false
 		},
 		"Blight": {
 			"displayName": "Blight",
 			"iconPath": "assets/img/Icons/AccordionIcons/BlightOil.png",
-			"description": "Drops from Blight",
+			"description": "Drops from Blight encounters",
 			"isHiddenByDefault": false
 		},
 
@@ -106,7 +106,7 @@
 			"displayName": "Ruthless exclusive",
 			"iconPath": "assets/img/Icons/AccordionIcons/EternalOrb.png",
 			"description": "Can only drop in ruthless",
-			"isHiddenByDefault": true
+			"isHiddenByDefault": false
 		}
 	},
 
