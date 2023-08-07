@@ -9,25 +9,19 @@
 			"isHiddenByDefault": false
 		},
 		"LeagueDrop": {
-			"displayName": "LeagueDrop",
+			"displayName": "League Mechanic Drop",
 			"iconPath": "assets/img/Icons/AccordionIcons/Essence.png",
 			"description": "Drops from a league mechanic generically",
 			"isHiddenByDefault": false
 		},
 		"BossDrop": {
-			"displayName": "BossDrop",
+			"displayName": "Boss or Special Drop",
 			"iconPath": "assets/img/Icons/AccordionIcons/AwakenersOrb.png",
-			"description": "Drops from a boss or other similar single restricted source",
-			"isHiddenByDefault": true
-		},
-		"AtlasDrop": {
-			"displayName": "AtlasDrop",
-			"iconPath": "assets/img/Icons/AccordionIcons/ShaperOrb.png",
-			"description": "Drops only if you have an atlas node allocated",
-			"isHiddenByDefault": true
+			"description": "Drops from a boss or other similar highly restricted source",
+			"isHiddenByDefault": false
 		},
 		"NonDrop": {
-			"displayName": "NonDrop",
+			"displayName": "Non-Drop",
 			"iconPath": "assets/img/Icons/AccordionIcons/BestiaryOrb.png",
 			"description": "Does not drop or should not be able to drop under normal circumstances",
 			"isHiddenByDefault": true
@@ -77,25 +71,31 @@
 			"isHiddenByDefault": false
 		},
 		"Report": {
-			"displayName": "Report",
+			"displayName": "Scouting Report",
 			"iconPath": "assets/img/Icons/AccordionIcons/ScoutingReport.png",
-			"description": "Report",
+			"description": "Scouting Report",
 			"isHiddenByDefault": false
 		},
 		"Catalyst": {
-			"displayName": "Report",
+			"displayName": "Catalyst",
 			"iconPath": "assets/img/Icons/AccordionIcons/ImbuedCatalyst.png",
-			"description": "Report",
+			"description": "Drops from Metamorph",
 			"isHiddenByDefault": false
 		},
 		"Expedition": {
-			"displayName": "Report",
+			"displayName": "Expedition",
 			"iconPath": "assets/img/Icons/AccordionIcons/ExpeditionLogbookMap.png",
-			"description": "Report",
+			"description": "Drops from Expedition",
+			"isHiddenByDefault": false
+		},
+		"Blight": {
+			"displayName": "Blight",
+			"iconPath": "assets/img/Icons/AccordionIcons/BlightOil.png",
+			"description": "Drops from Blight",
 			"isHiddenByDefault": false
 		},
 
-		"//comment3": "tags for shit idk what to do with",
+		"//comment3": "tags for highly specific items to give them some tag and provide isHiddenByDefault",
 		"Meme": {
 			"displayName": "Redacted",
 			"iconPath": "assets/img/Icons/AccordionIcons/FishingRod.png",
@@ -110,7 +110,7 @@
 		}
 	},
 
-	"comment1": "These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
+	"//comment1": "These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
 	"bonusItemInfo": {
 		"Blueprint": {
 			"Items": {
@@ -270,23 +270,23 @@
 
 				"Comprehensive Scouting Report": {
 					"text": "Drops if you have Planar Tactitian Atlas node<br>Reroll all of Kirac's Atlas Missions, adding additional mission options",
-					"tags": ["Report", "AtlasDrop"]
+					"tags": ["Report", "BossDrop"]
 				},
 				"Operative's Scouting Report": {
 					"text": "Drops if you have Solidarity Atlas node<br>Reroll all of Kirac's Atlas Missions, granting missions with rewarding implicit modifiers",
-					"tags": ["Report", "AtlasDrop"]
+					"tags": ["Report", "BossDrop"]
 				},
 				"Otherworldly Scouting Report": {
 					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Breachstone",
-					"tags": ["Report", "AtlasDrop"]
+					"tags": ["Report", "BossDrop"]
 				},
 				"Blighted Scouting Report": {
 					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Blighted Map",
-					"tags": ["Report", "AtlasDrop"]
+					"tags": ["Report", "BossDrop"]
 				},
 				"Delirious Scouting Report": {
 					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, adding layers of Delirium to all non-Unique Maps",
-					"tags": ["Report", "AtlasDrop"]
+					"tags": ["Report", "BossDrop"]
 				},
 				"Singular Scouting Report": {
 					"text": "Reroll all of Kirac's Atlas Missions, including at least one Unique map",
@@ -307,7 +307,7 @@
 				
 				"Oil Extractor": {
 					"text": "Drops with Distilled Fungus Atlas node<br>Destroys an Anointed Item to recover one of the Oils that was used to apply that Anointment",
-					"tags": ["Blight", "AtlasDrop", "LeagueDrop"]
+					"tags": ["Blight", "BossDrop", "LeagueDrop"]
 				},
 
 				"Fertile Catalyst": {
@@ -420,11 +420,11 @@
 				},
 				"Engineer's Orb": {
 					"text": "Improves the quality of a Strongbox",
-					"tags": ["Harbinger", "LeagueDrop", "Meme"]
+					"tags": ["Harbinger", "LeagueDrop"]
 				},
 				"Engineer's Shard": {
 					"text": "A stack of 20 shards becomes an Engineer's Orb",
-					"tags": ["Harbinger", "LeagueDrop", "Meme"]
+					"tags": ["Harbinger", "LeagueDrop"]
 				},
 				"Mirror Shard": {
 					"text": "A stack of 20 shards becomes a Mirror of Kalandra",
@@ -632,16 +632,16 @@
 					"text": "A stack of unknown divination cards",
 					"tags": ["Generic"]
 				},
+				"Surveyor's Compass": {
+					"text": "Stores a Sextant Modifier in an item",
+					"tags": ["Generic"]
+				},
 
 				"Albino Rhoa Feather": {
 					"text": "Redacted",
 					"tags": ["Meme"]
 				},
-
-				"Surveyor's Compass": {
-					"text": "Stores a Sextant Modifier in an item",
-					"tags": ["NonDrop"]
-				},
+				
 				"Bestiary Orb": {
 					"text": "Stores a Beast in an item",
 					"tags": ["NonDrop"]
@@ -650,18 +650,15 @@
 					"text": "Adds stored experience to a gem, up to its maximum level",
 					"tags": ["NonDrop"]
 				},
+				"Infused Engineer's Orb": {
+					"text": "Applies the itemised Sextant Modifier to the Voidstone",
+					"tags": ["NonDrop"]
+				},
+				"Charged Compass": {
+					"text": "Greatly improves the quality and rewards of a Strongbox and strengthens its defenders",
+					"tags": ["NonDrop"]
+				},
 
-				"//comment2" : "those 3 most likely should not be in this section to begin with so im not adding any tags to those, move them to splinter section like other splinters",
-				"Ritual Splinter": {
-					"text": "Combine 100 Splinters to create a Ritual Vessel"
-				},
-				"Ritual Vessel": {
-					"text": "Stores the monsters slain for the first time from a completed Ritual Altar for future use"
-				},
-				"Crescent Splinter": {
-					"text": "Combine 10 Crescent Splinters to create The Maven's Writ"
-				},
-				
 				"Eternal Orb": {
 					"text": "Creates an imprint of an item for later restoration. The imprint can't be applied to Fractured Items",
 					"tags": ["RuthlessOnly"]
@@ -2793,11 +2790,11 @@
 		"Uniques": {
 			"items": {
 				"Simple Robe": {
-					"comment": "COMMENT: the text property below provides infos about a whole basetype",
+					"//comment": "COMMENT: the text property below provides infos about a whole basetype",
 					"text": null,
 					"items": {
 						"Tabula Rasa": {
-							"comment": "COMMENT: the text property below provides infos about an individual unique",
+							"//comment": "COMMENT: the text property below provides infos about an individual unique",
 							"text": "Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets."
 						}
 					}
