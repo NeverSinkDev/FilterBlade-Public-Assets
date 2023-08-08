@@ -1079,7 +1079,7 @@
 					"text": "Drops from Rogue Exiles.",
 					"tags": ["UniqueOutcome"]
 				},
-				"Arrogance of The Vaal": {
+				"Arrogance of the Vaal": {
 					"text": "Found in Ancient City, Sunken City, Vaal Pyramid.",
 					"tags": ["UniqueOutcome"]
 				},
@@ -1102,7 +1102,8 @@
 					"text": "Drops from The Eater of Worlds, The Elder, The Maven, The Searing Exach."
 				},
 				"Azure Rage": {
-					"text": "Found in Factory."
+					"text": "Found in Factory.",
+					"tags":	["MapOutcome"]
 				},
 				"Azyran's Reward": {
 					"text": "Found in Laboratory, Relic Chambers, Stagnation.",
@@ -1552,7 +1553,8 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"Pride of the First Ones": {
-					"text": "Found in Barrows, Caer Blaidd Wolfpack's Den, Grotto, Lair."
+					"text": "Found in Barrows, Caer Blaidd Wolfpack's Den, Grotto, Lair.",
+					"tags": ["UniqueOutcome"]
 				},
 				"Prometheus' Armoury": {
 					"text": "Drops from Haku (Jun)."
@@ -2315,7 +2317,8 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"The Sacrifice": {
-					"text": "Found in The Temple of Atzoatl."
+					"text": "Found in The Temple of Atzoatl.",
+					"tags": ["SixLinkOutcome"]
 				},
 				"The Saint's Treasure": {
 					"text": "Found in The Slums, The Marketplace, The Imperial Fields, The Grain Gate, Alleyways Map, Arcade Map, Bazaar Map, Ghetto Map, Port Map, Precinct Map.",
@@ -2362,8 +2365,7 @@
 				},
 				"The Side Quest": {
 					"text": "Found in Alleyways Map, Arachnid Tomb Map, Armoury Map, Castle Ruins Map, Forking River Map, Iceberg Map, Infested Valley Map, Mineral Pools Map, Primordial Blocks Map.",
-					"//comment2": "idk whats more appropriate here",
-					"tags": ["CurrencyOutcome", "MapOutcome"]
+					"tags": ["CurrencyOutcome"]
 				},
 				"The Sigil": {
 					"text": "Found in Overgrown Ruin Map, Overgrown Shrine Map."
@@ -2655,6 +2657,9 @@
 					"tags": ["GemOutcome"]
 				},
 				"Poisoned Faith": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Echoes of Love": {
 					"tags": ["UniqueOutcome"]
 				}
 			}
