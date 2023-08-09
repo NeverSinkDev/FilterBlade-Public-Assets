@@ -6,25 +6,29 @@
 			"displayName": "Generic",
 			"iconPath": "assets/img/Icons/AccordionIcons/Chaos.png",
 			"description": "General currency, drops anywhere",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency1"
 		},
 		"LeagueDrop": {
 			"displayName": "League Mechanic Drop",
 			"iconPath": "assets/img/Icons/AccordionIcons/Essence.png",
 			"description": "Primary Source: Specific league mechanics",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency1"
 		},
 		"BossDrop": {
 			"displayName": "Boss or Special Drop",
 			"iconPath": "assets/img/Icons/AccordionIcons/AwakenersOrb.png",
 			"description": "Primary Source: Specific encounter",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency1"
 		},
 		"NonDrop": {
 			"displayName": "Non-Drop",
 			"iconPath": "assets/img/Icons/AccordionIcons/BestiaryOrb.png",
 			"description": "Primary Source: None, currently unobtainable in challenge leagues",
-			"isHiddenByDefault": true
+			"isHiddenByDefault": true,
+			"group": "currency1"
 		},
 
 		"//comment2": "Drop source or common currency type tags",
@@ -32,67 +36,78 @@
 			"displayName": "Breach",
 			"iconPath": "assets/img/Icons/AccordionIcons/Breachstone.png",
 			"description": "Drops from Breach Encounters and Rewards",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 		"Harbinger": {
 			"displayName": "Harbinger",
 			"iconPath": "assets/img/Icons/AccordionIcons/FracturingOrb.png",
 			"description": "Drops from Harbinger encounters and Rewards",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 		"Heist": {
 			"displayName": "Heist",
 			"iconPath": "assets/img/Icons/AccordionIcons/HeistGrandBlueprint.png",
 			"description": "Drops from Heist related content",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 		"Beyond": {
 			"displayName": "Beyond",
 			"iconPath": "assets/img/Icons/AccordionIcons/TaintedOrbofFusing.png",
 			"description": "Drops from Beyond demons",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 		"Harvest": {
 			"displayName": "Harvest",
 			"iconPath": "assets/img/Icons/AccordionIcons/HarvestSeed.png",
 			"description": "Drops from Harvest",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 		"Lab": {
 			"displayName": "Lab",
 			"iconPath": "assets/img/Icons/AccordionIcons/UberLabOffering.png",
 			"description": "Drops from the Eternal Labyrinth",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 		"Eldritch": {
 			"displayName": "Eldritch",
 			"iconPath": "assets/img/Icons/AccordionIcons/ExceptionalEldritchIchor.png",
 			"description": "Drops from Exarch and Eater influenced monsters or bosses",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 		"Report": {
 			"displayName": "Scouting Report",
 			"iconPath": "assets/img/Icons/AccordionIcons/ScoutingReport.png",
 			"description": "Scouting Report",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 		"Catalyst": {
 			"displayName": "Catalyst",
 			"iconPath": "assets/img/Icons/AccordionIcons/ImbuedCatalyst.png",
 			"description": "Drops from metamorph encounters",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 		"Expedition": {
 			"displayName": "Expedition",
 			"iconPath": "assets/img/Icons/AccordionIcons/ExpeditionLogbookMap.png",
 			"description": "Drops from Expedition encounters",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 		"Blight": {
 			"displayName": "Blight",
 			"iconPath": "assets/img/Icons/AccordionIcons/BlightOil.png",
 			"description": "Drops from Blight encounters",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency2"
 		},
 
 		"//comment3": "tags for highly specific items to give them some tag and provide isHiddenByDefault",
@@ -100,13 +115,15 @@
 			"displayName": "Redacted",
 			"iconPath": "assets/img/Icons/AccordionIcons/FishingRod.png",
 			"description": "Redacted",
-			"isHiddenByDefault": true
+			"isHiddenByDefault": true,
+			"group": "currency3"
 		},
 		"RuthlessOnly": {
 			"displayName": "Ruthless exclusive",
 			"iconPath": "assets/img/Icons/AccordionIcons/EternalOrb.png",
 			"description": "Can only drop in ruthless",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "currency3"
 		},
 
 		"//comment4": "Divination card outcome tags",
@@ -114,31 +131,36 @@
 			"displayName": "Gem Outcome",
 			"iconPath": "assets/img/Icons/AccordionIcons/SkillGemRed1.png",
 			"description": "Gives a Gem reward when turned in",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "divination1"
 		},
 		"CurrencyOutcome": {
 			"displayName": "Currency Outcome",
 			"iconPath": "assets/img/Icons/AccordionIcons/Chaos.png",
 			"description": "Gives a Currency reward when turned in",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "divination1"
 		},
 		"UniqueOutcome": {
 			"displayName": "Unique Outcome",
 			"iconPath": "assets/img/Icons/AccordionIcons/Unique.png",
 			"description": "Gives a Unique item reward when turned in",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "divination1"
 		},
 		"SixLinkOutcome": {
 			"displayName": "Six Link Outcome",
 			"iconPath": "assets/img/Icons/AccordionIcons/Fusing.png",
 			"description": "Gives a Six-Link reward when turned in",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "divination1"
 		},
 		"MapOutcome": {
 			"displayName": "Map or Fragment Outcome",
 			"iconPath": "assets/img/Icons/AccordionIcons/Map.png",
 			"description": "Gives a Map, Fragment or other similar reward when turned in",
-			"isHiddenByDefault": false
+			"isHiddenByDefault": false,
+			"group": "divination1"
 		}
 	},
 
