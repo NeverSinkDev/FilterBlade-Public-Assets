@@ -161,6 +161,13 @@
 			"description": "Gives a Map, Fragment or other similar reward when turned in",
 			"isHiddenByDefault": false,
 			"group": "divination1"
+		},
+		"InfluencedOutcome": {
+			"displayName": "Influenced Outcome",
+			"iconPath": "intentionally blank",
+			"description": "Gives an item that is influenced",
+			"isHiddenByDefault": false,
+			"group": "divination1"
 		}
 	},
 
@@ -1039,7 +1046,8 @@
 					"text": "Found in Altered Distant Memory, Augmented Distant Memory, Cortex, Rewritten Distant Memory, Twisted Distant Memory"
 				},
 				"A Familiar Call": {
-					"text": "Drops from Guardian of the Chimera."
+					"text": "Drops from Guardian of the Chimera.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"A Fate Worse Than Death": {
 					"text": "Drops from Conquerors and Sirus.",
@@ -1110,7 +1118,8 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"Astral Protection": {
-					"text": "Found in The Moon Temple."
+					"text": "Found in The Moon Temple.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Atziri's Arsenal": {
 					"text": "Found in the Vaults of Atziri.",
@@ -1121,7 +1130,8 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"Auspicious Ambitions": {
-					"text": "Drops from The Eater of Worlds, The Elder, The Maven, The Searing Exach."
+					"text": "Drops from The Eater of Worlds, The Elder, The Maven, The Searing Exach.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Azure Rage": {
 					"text": "Found in Factory.",
@@ -1222,7 +1232,7 @@
 				},
 				"Costly Curio": {
 					"text": "Found in Museum, Relic Chamber.",
-					"tags": ["UniqueOutcome"]
+					"tags": ["InfluencedOutcome", "UniqueOutcome"]
 				},
 				"Council of Cats": {
 					"text": "Drops from Al-Hezmin The Hunter.",
@@ -1237,7 +1247,8 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"Dark Dreams": {
-					"text": "Drops from Minara Anemina (Rogue exile)."
+					"text": "Drops from Minara Anemina (Rogue exile).",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Dark Temptation": {
 					"text": "Found in hidden chests (Azurite Mine).",
@@ -1304,17 +1315,19 @@
 				},
 				"Draped in Dreams" : {
 					"text": "Unconfirmed",
-					"tags": ["SixLinkOutcome"]
+					"tags": ["SixLinkOutcome", "InfluencedOutcome"]
 				},
 				"Duality": {
-					"text": "Drops from Architects (Alva Temple)."
+					"text": "Drops from Architects (Alva Temple).",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Dying Anguish": {
 					"text": "Found in Arsenal, Colonade, Ghetto, Port, Precinct, Promenade.",
 					"tags": ["GemOutcome"]
 				},
 				"Dying Light" : {
-					"text": "Drops from The Shaper."
+					"text": "Drops from The Shaper.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Earth Drinker": {
 					"text": "Found in Desert, Desert Spring, Dry Sea, Dunes, The Oasis, The Foothills, The Vastiri Desert.",
@@ -1349,7 +1362,7 @@
 				},
 				"Fateful Meeting": {
 					"text": "Drops from Vaal Flesh Merchant with Vaal Oligarchs atlas passive (Alva incursions).",
-					"tags": ["UniqueOutcome"]
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
 				},
 				"Forbidden Power": {
 					"text": "Drops from map bosses: Cold River, Temple, The Solaris Temple, Twilight Temple, Harbour Bridge.",
@@ -1360,7 +1373,8 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"Further Invention": {
-					"text": "Found in Foundry, Vault."
+					"text": "Found in Foundry, Vault.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Gemcutter's Mercy": {
 					"text": "Drops from Gem chests (Azurite Mine).",
@@ -1436,7 +1450,7 @@
 				},
 				"Immortal Resolve": {
 					"text": "Drops from Amalgam of Nightmares (Carcass map boss).",
-					"tags": ["SixLinkOutcome"]
+					"tags": ["SixLinkOutcome", "InfluencedOutcome"]
 				},
 				"Imperfect Memories": {
 					"text": "Drops from Venaruis (Cortex Boss)."
@@ -1458,7 +1472,8 @@
 					"tags": ["MapOutcome", "UniqueOutcome"]
 				},
 				"Keeper's Corruption": {
-					"text": "Found in Chayula's Domain."
+					"text": "Found in Chayula's Domain.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Lachrymal Necrosis": {
 					"text": "Found in Basilica, Defiled Cathedral, The Chamber of Innocence, The Desecrated Chambers."
@@ -1521,6 +1536,10 @@
 					"text": "Found in Cemetery.",
 					"tags": ["MapOutcome"]
 				},
+				"Matryoshka":{
+					"text":"No confirmed drop location.",
+					"tags": ["InfluencedOutcome"]
+				},
 				"Mawr Blaidd": {
 					"text": "Found in Bramble Valley, Dark Forest, Forbidden Woods.",
 					"tags": ["UniqueOutcome"]
@@ -1553,7 +1572,8 @@
 					"tags": ["CurrencyOutcome"]
 				},
 				"Nook's Crown": {
-					"text": "Drops from Catarina (Jun Boss)."
+					"text": "Drops from Catarina (Jun Boss).",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Parasitic Passengers": {
 					"text": "Found in Arachnid Tomb, Channel, Infested Valley.",
@@ -1564,11 +1584,12 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"Perfection": {
-					"text": "Drops from Shaper Guardian bosses."
+					"text": "Drops from Shaper Guardian bosses.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Prejudice": {
 					"text": "Found in Redeemer maps, Legion divination chests.",
-					"tags": ["UniqueOutcome"]
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
 				},
 				"Pride Before the Fall": {
 					"text": "Found in Caldera, Volcano",
@@ -1579,7 +1600,8 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"Prometheus' Armoury": {
-					"text": "Drops from Haku (Jun)."
+					"text": "Drops from Haku (Jun).",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Prosperity": {
 					"text": "Found in Atoll, Beach, Coral Ruins, Coves, Estuary, Lighthouse, Pier, Port, Reef, Shore, Strand, Wharf."
@@ -1690,18 +1712,20 @@
 					"tags": ["GemOutcome"]
 				},
 				"The Aspirant": {
-						"text": "Drops from Oashabi(Harvest)."
+					"text": "Drops from Oashabi(Harvest).",
+					"tags": ["InfluencedOutcome"]
 				},
 				"The Astromancer": {
 					"text": "Drops from Corpse stitcher.",
-					"tags": ["UniqueOutcome"]
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
 				},
 				"The Avenger": {
 					"text": "Found in Maelström of Chaos, Lava Chamber Map, Mineral Pools Map,  Primordial Blocks Map, Underground Sea Map.",
 					"tags": ["UniqueOutcome"]
 				},
 				"The Awakened": {
-					"text": "Drops from Metamorph."
+					"text": "Drops from Metamorph.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"The Bargain": {
 					"text": "Drops from It that Fled(Jun)."
@@ -1711,7 +1735,8 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"The Bear Woman": {
-					"text": "Drops from map bosses: Barrows, Cemetery, Basilica."
+					"text": "Drops from map bosses: Barrows, Cemetery, Basilica.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"The Beast": {
 					"text": "Found in The Belly of the Beast Level 1, The Belly of the Beast Level 2, The Belly of the Beast (Act 9).",
@@ -1791,7 +1816,8 @@
 					"tags": ["SixLinkOutcome"]
 				},
 				"The Celestial Stone": {
-					"text": "Drops from Jeweller's Strongboxes."
+					"text": "Drops from Jeweller's Strongboxes.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"The Chains that Bind": {
 					"text": "Found in The Slave Pens, The Control Blocks, Shavronne's Tower, Cage Map, Cells Map, Dungeon Map, Pen Map.",
@@ -1894,7 +1920,7 @@
 				},
 				"The Dungeon Master": {
 					"text": "Found in Cage Map, Cells Map, Dungeon Map, Pen Map.",
-					"tags": ["UniqueOutcome"]
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
 				},
 				"The Easy Stroll": {
 					"text": "Found in Courtyard Map, Gardens Map, Orchard Map, Terrace Map.",
@@ -1914,13 +1940,14 @@
 				},
 				"The Endless Darkness": {
 					"text": "Found in The Beachhead, Infused Beachhead, Delve, Kirac's Memory.",
-					"tags": ["UniqueOutcome"]
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
 				},
 				"The Endurance": {
 					"text": "Found in The Mines, The Crystal Veins, The Tunnel, The Quarry, Crystal Ore Map, Dig Map, Excavation Map, Flooded Mine Map, Geode Map, Grotto Map."
 				},
 				"The Enforcer": {
-					"text": "Unconfirmed"
+					"text": "Unconfirmed",
+					"tags": ["InfluencedOutcome"]
 				},
 				"The Enlightened": {
 					"text": "Found in Belfry Map, Crimson Temple Map, Defiled Cathedral Map, Ivory Temple Map, Lookout Map, Temple Map.",
@@ -1986,7 +2013,7 @@
 				},
 				"The Forgotten Treasure": {
 					"text": "Found in Temple Map.",
-					"tags": ["UniqueOutcome"]
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
 				},
 				"The Formless Sea": {
 					"text": "Found in Coves Map, Reef Map, Strand Map, Whakawairua Tuahu.",
@@ -2039,7 +2066,8 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"The Hale Heart": {
-					"text": "Drops from the Elder Guardians."
+					"text": "Drops from the Elder Guardians.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"The Harvester": {
 					"text": "Found in The Imperial Fields, Castle Ruins Map, Fields Map.",
@@ -2100,7 +2128,8 @@
 					"text": "Drops from Ash Lessard(Exile)."
 				},
 				"The Jeweller's Boon": {
-					"text": "Found in Crystal Ore Map, Grotto Map, Mineral Pools Map, Primordial Blocks Map."
+					"text": "Found in Crystal Ore Map, Grotto Map, Mineral Pools Map, Primordial Blocks Map.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"The Journalist": {
 					"text": "Found in Alleyways Map, City Square Map, Crimson Temple Map, Defiled Cathedral Map, Haunted Mansion Map, Lookout Map, Silo Map."
@@ -2155,7 +2184,8 @@
 					"text": "Drops from K'tash the Hate Shepherd(Demon boss)."
 				},
 				"The Lord of Celebration": {
-					"text": "Found in Basilica Map, Chateau Map, Crimson Temple Map, Crimson Township Map, Haunted Mansion Map, Palace Map, Siege Map, Temple Map, Map, Villa Map."
+					"text": "Found in Basilica Map, Chateau Map, Crimson Temple Map, Crimson Township Map, Haunted Mansion Map, Palace Map, Siege Map, Temple Map, Map, Villa Map.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"The Lover": {
 					"text": "Found in Maelström of Chaos, Underground Sea Map."
@@ -2482,7 +2512,8 @@
 					"tags": ["MapOutcome"]
 				},
 				"The Tumbleweed": {
-					"text": "Found in Desert Spring Map, Dunes Map."
+					"text": "Found in Desert Spring Map, Dunes Map.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"The Twilight Moon": {
 					"text": "Found in Cold River Map, Moon Temple Map, Temple Map.",
@@ -2499,7 +2530,8 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"The Undisputed": {
-					"text": "Drops from Chayula."
+					"text": "Drops from Chayula.",
+					"tags": ["InfluencedOutcome"]
 				},
 				"The Unexpected Prize": {
 					"text": "Found in Palace Map, Residence Map, Villa Map.",
@@ -2547,7 +2579,7 @@
 				},
 				"The White Knight": {
 					"text": "Found in Trial of Stinging Doubt.",
-					"tags": ["SixLinkOutcome"]
+					"tags": ["SixLinkOutcome", "InfluencedOutcome"]
 				},
 				"The Whiteout": {
 					"text": "Drops from map boss: Canyon.",
@@ -2661,7 +2693,8 @@
 					"tags": ["CurrencyOutcome"]
 				},
 				"Void of the Elements": {
-					"text": "Drops from The Elder, Uber Elder"
+					"text": "Drops from The Elder, Uber Elder",
+					"tags": ["InfluencedOutcome"]
 				},
 				"Volatile Power": {
 					"text": "Found in The Mines, The Crystal Veins, The Tunnel, The Quarry, Crystal Ore Map, Dig Map, Excavation Map, Flooded Mine Map, Geode Map, Grotto Map.",
