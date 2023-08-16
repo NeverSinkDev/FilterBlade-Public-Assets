@@ -109,6 +109,13 @@
 			"isHiddenByDefault": false,
 			"group": "currency2"
 		},
+		"Ancestors": {
+			"displayName": "Ancestors",
+			"iconPath": "assets/img/Icons/AccordionIcons/HinekorasSight.png",
+			"description": "",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
 
 		"//comment3": "tags for highly specific items to give them some tag and provide isHiddenByDefault",
 		"Meme": {
@@ -715,6 +722,15 @@
 				"Eternal Orb": {
 					"text": "Creates an imprint of an item for later restoration. The imprint can't be applied to Fractured Items",
 					"tags": ["RuthlessOnly"]
+				},
+
+				"Hinekora's Lock": {
+					"text": "Allows an item to foresee the result of the next Currency item used on it",
+					"tags": ["Ancestors"]
+				},
+				"Silver Coin": {
+					"text": "Creates a portal to the Halls of the Dead from a Town or Hideout",
+					"tags": ["Ancestors"]
 				}
 			}
 		},
@@ -2683,6 +2699,12 @@
 				},
 				"Echoes of Love": {
 					"tags": ["UniqueOutcome"]
+				},
+				"Fire Of Unknown Origin": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Fortunate": {
+					"tags": ["CurrencyOutcome"]
 				}
 			}
 		},
