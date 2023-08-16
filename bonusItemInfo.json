@@ -529,6 +529,30 @@
 					"text": "A stack of 20 shards becomes an Orb of Transmutation",
 					"tags": ["Harbinger", "LeagueDrop"]
 				},
+				"Deregulation Scroll": {
+					"text": "Used to upgrade The Tempest's Binding to The Tempest's Liberation. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"] 
+					},
+				"Electroshock Scroll": {
+					"text": "Used to upgrade The Rippling Thoughts to The Surging Thoughts. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"]  
+					},
+				"Fragmentation Scroll": {
+					"text": "Used to upgrade The Fracturing Spinner to The Shattered Divinity. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"]  
+					},
+				"Haemocombustion Scroll": {
+					"text": "Used to upgrade The Enmity Divine to The Yielding Mortality. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"] 
+					},
+				"Specularity Scroll": {
+					"text": "Used to upgrade The Unshattered Will to The Immortal Will. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"]  
+					},
+				"Time-light Scroll": {
+					"text": "Used to upgrade The Flow Untethered to The Torrent's Reclamation. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"]  
+				},
 
 				"Awakener's Orb": {
 					"text": "Drops from Sirus<br>Destroys an item, applying its influence to another of the same item class. The second item is reforged as a rare item with both influence types and new modifiers",
