@@ -171,7 +171,7 @@
 		},
 		"InfluencedOutcome": {
 			"displayName": "Influenced Outcome",
-			"iconPath": "intentionally blank",
+			"iconPath": "assets/img/Icons/AccordionIcons/Voidorb.png",
 			"description": "Gives an item that is influenced",
 			"isHiddenByDefault": false,
 			"group": "divination1"
