@@ -213,6 +213,7 @@
 		},
 
 		"Currency": {
+			"displayTagsNextToItem": false,
 			"items": {
 				"Prime Regrading Lens": {
 					"text": "Drops from Gem Blueprint<br>Change the type of quality of a skill gem with quality to another random quality",
