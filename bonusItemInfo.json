@@ -3705,6 +3705,9 @@
 						},
 						"Fenumus' Toxins": {
 							"text": "Drops from Fenumus (Einhar Boss)."
+						},
+						"Sandstorm Visage": {
+							"text": "Drops from Lycia with corresponding relic equipped."
 						}
 					}
 				},
@@ -4102,6 +4105,9 @@
 					"items": {
 						"Gorgon's Gaze": {
 							"text": "Drops from Pillars of Arun boss."
+						},
+						"Akoya's Gaze": {
+							"text": "Reward from Tukohama tribe in Trial of the Ancestors"
 						}
 					}
 				},
@@ -4150,6 +4156,9 @@
 					"items": {
 						"Redblade Tramplers": {
 							"text": "Drops from Redblade Warband."
+						},
+						"Kahuturoa's Certainty": {
+							"text": "Reward from Rongokurai tribe in Trial of the Ancestors"
 						}
 					}
 				},
@@ -4237,6 +4246,9 @@
 						},
 						"Sacrificial Heart": {
 							"text": "Drops from The Vaal Omnitect."
+						},
+						"Defiance of Destiny": {
+							"text": "Reward for completing a tournament in Trial of the Ancestors"
 						}
 					}
 				},
@@ -4447,6 +4459,9 @@
 						},
 						"Survivor's Guilt": {
 							"text": "Does not drop. Sold in Ritual."
+						},
+						"Kaom's Binding": {
+							"text": "Reward from Ngamahu tribe in Trial of the Ancestors"
 						}
 					}
 				},
@@ -4478,6 +4493,9 @@
 						},
 						"Graven's Secret": {
 							"text": "Drops from The Maven."
+						},
+						"Bound Fate": {
+							"text": "Reward for completing a tournament in Trial of the Ancestors"
 						}
 					}
 				},
@@ -4529,6 +4547,9 @@
 						},
 						"Blackflame": {
 							"text": "Does not drop. Sold in Ritual."
+						},
+						"Original Sin": {
+							"text": "Drops from Lycia with corresponding relic equipped."
 						}
 					}
 				},
@@ -4737,6 +4758,86 @@
 						}
 					}
 				},
+				"Foul Staff": {
+					"text": null,
+					"items": {
+						"The Winds of Fate": {
+							"text": "Drops from Lycia with corresponding relic equipped."
+						}
+					}
+				},
+				"Agate Amulet": {
+					"text": null,
+					"items": {
+						"Eternal Damnation": {
+							"text": "Drops from Lycia with corresponding relic equipped."
+						}
+					}
+				},
+				"Sharktooth Arrow Quiver": {
+					"text": null,
+					"items": {
+						"Ahuana's Bite": {
+							"text": "Reforges a magic item with new random modifiers"
+						}
+					}
+				},
+				"Coral Ring": {
+					"text": null,
+					"items": {
+						"Honoured Alliance": {
+							"text": "Reward for completing a tournament in Trial of the Ancestors"
+						}
+					}
+				},
+				"Coral Amulet": {
+					"text": null,
+					"items": {
+						"Ikiaho's Promise": {
+							"text": "Reward from Arohongui tribe in Trial of the Ancestors"
+						}
+					}
+				},
+				"Ironwood Buckler": {
+					"text": null,
+					"items": {
+						"Kiloava's Bluster": {
+							"text": "Reward from Valako tribe in Trial of the Ancestors"
+						}
+					}
+				},
+				"Karui Sceptre": {
+					"text": null,
+					"items": {
+						"Maata's Teaching": {
+							"text": "Reward from Tawhoa tribe in Trial of the Ancestors"
+						}
+					}
+				},
+				"Engraved Greatsword": {
+					"text": null,
+					"items": {
+						"Rakiata's Dance": {
+							"text": "Reward from Tasalio tribe in Trial of the Ancestors"
+						}
+					}
+				},
+				"Moonstone Ring": {
+					"text": null,
+					"items": {
+						"Tawhanuku's Timing": {
+							"text": "Reward from Hinekora tribe in Trial of the Ancestors"
+						}
+					}
+				},
+				"Majestic Plate": {
+					"text": null,
+					"items": {
+						"Utula's Hunger": {
+							"text": "Reward from Kitava tribe in Trial of the Ancestors"
+						}
+					}
+				},
 				"Prismatic Jewel": {
 					"text": null,
 					"items": {
@@ -4878,6 +4979,9 @@
 						},
 						"Impossible Escape": {
 							"text": "Drops from The Maven."
+						},
+						"The Balance of Terror": {
+							"text": "Drops from Lycia with corresponding relic equipped."
 						}
 					}
 				},
@@ -4996,6 +5100,9 @@
 						},
 						"Forbidden Flame": {
 							"text": "Drops from The Searing Exarch."
+						},
+						"Warrior's Tale": {
+							"text": "Reward for completing a tournament in Trial of the Ancestors"
 						}
 					}
 				}
