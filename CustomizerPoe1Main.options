@@ -237,7 +237,7 @@ Chapter() {
 
         Title("Stacked Currency Drops (Endgame)");
 
-        // todo: build new GUI for this
+        // todo: build new GUI for this!
 
         Function CurrencyStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Currency", "DO"]); }
 
