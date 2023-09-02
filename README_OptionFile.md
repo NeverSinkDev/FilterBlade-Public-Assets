@@ -4,6 +4,9 @@ The .options files are designed by and for FilterBlade. It's a custom programmin
 
 The most important one is the Customizer.options file.
 
+These config files are synced between this public GitHub repo and our private repo. Meaning whenever we change anything in these config files in the private repo, it will be pushed to this public one too, meaning it will always be up to date (master branch only).
+On the other side: You can do PRs on Github for these files and, once accepted and mergd into master, these changes will be directled synced into our private repo, as if it's one big repo for everyone to collaborate on.
+
 ## General Syntax
 
 Most commands end with open and close brackets, sometimes with parameters inside.
