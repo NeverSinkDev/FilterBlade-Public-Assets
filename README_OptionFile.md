@@ -7,6 +7,14 @@ The most important one is the Customizer.options file.
 These config files are synced between this public GitHub repo and our private repo. Meaning whenever we change anything in these config files in the private repo, it will be pushed to this public one too, meaning it will always be up to date (master branch only).
 On the other side: You can do PRs on Github for these files and, once accepted and mergd into master, these changes will be directled synced into our private repo, as if it's one big repo for everyone to collaborate on.
 
+Sections in this file are marked with
+
+![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) for "Safe to edit" if the content has no technical impact and is just used to display information to the user,
+
+![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) for topics that usually don't do harm, but can definitely cause problems in some cases, and
+
+![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) if they have a massive impact on functionality and often left to the core FilterBlade dev team to edit.
+
 ## General Syntax
 
 Most commands end with open and close brackets, sometimes with parameters inside.
@@ -24,7 +32,7 @@ SomeCommand("hello world", true, 5, [true, false]);
 There is a VS-Code Extension for Syntax Highlight:
 https://marketplace.visualstudio.com/items?itemName=NeverSink.filterblade-options-language
 
-## Comments
+## ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Comments
 
 Comments are only available with the usual "//" prefix, which will turn everything to the right of it into a comment which is ignored by the compiler.
 Multi-line comments with e.g. "/*" are not supported.
@@ -35,7 +43,7 @@ ThisIsACommand(); // This is another comment :)
 /* This is invalid syntax */
 ```
 
-## QuickUI
+## ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) QuickUI
 
 Easily the most important command for the Customizer.
 This single command generates 95% of the entire editing GUI, including rule-titles, color editing, itemLevel slider, tierLists, ...
@@ -47,24 +55,25 @@ An example line would be: `QuickUI([0.0, "Loreweave Rings", "uniques;recipeuniqu
 
 It receives the following parameters:
 
-### Filter rule
+### ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Filter rule
 
 This is either just the name of a local search (see the "Searches" chapter below), or an array with 3 values:
 
-1. Version. New rules always have version "0.0". This version can be increased later. Increasing the first number will invaldate all user customizations done to this rule. This is required for breaking updates but has become relatively rare. The second number will only invalidate non-visual changes (e.g. not size and color).
+1. Version. New rules always have version "0.0". This version can be increased later. Increasing the first number will invaldate all user customizations done to this rule. This is required for breaking updates but has become relatively rare. The second number will only invalidate non-visual changes (e.g. not size and color). Usually, you don't need to change this.
 
 2. Technical name. This is one way to give a name to a rule for e.g. the search bar, but it is mainly used as identification. Having the same name for different rules is not allowed. Changing the name of a rule after initial release is also not recommended. This value is used for the save&load system and therefore very critical.
 
 3. TierTagSearch: Rules in the filter often have lines like `Show # $type->currency $tier->t1exalted`. This data can be used here to determine which rule the QuickUI is going to select. To use it, write the type (excluding "$type->"), then a semicolon, then the tier (including "$tier->"). In this example it would be `"currency;t1exalted"`.
 
-### SHD buttons
+### ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) SHD buttons
 
 SHD stands for "Show", "Hide" and "Disable" - the 3 buttons you can see on the left of the editor to toggle rules on and off.
 You can leave this as an empty string to not generate any buttons, or set it to "SHD" to show all options.
 The order of the letters does not matter. "SHD" and "HDS" ar equivalent.
 This parameter is ignored if the right button combination can be deferred from the filter (this only applies if "SH" or "SD" is specified).
+Never use Disable in tierlists, as this allows users to disable a tier and all items inside will not be handled within that tierlist and fall down into the pink "error" rule.
 
-### List of identifiers
+### ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) List of identifiers
 
 This is the fun part:
 
@@ -85,11 +94,20 @@ Exceptions are:
 - HasExplicitMod: Use "Mods" instead to generate the special multi-list and operator GUI
 - BaseType and other idents with long value lists. Use the TierList-config parameter instead.
 
-### Title
+Do not add additional filtering UIs to tierlists, as allowing the users to e.g. add "ItemLevel >= 60" to Uniques Tier 2 will cause all Tier 2 Uniques that don't fulfill this requirement to not be handled in the tierlist and all down into the pink "error" rule.
 
-Title for the GUI. Can be anything. If ommited, the filter rule name will be used.
+Otherwise, adding more options is usually okay, but be careful when removing options as removing the UI does not invalidate the changes that users made here. Not even section-resets will help here as they are controlled by the UI elements. These users will, once they even figured out the problem, use the "Review changes" module on "Advanced" to delete these old changes.
 
-### TierList-config
+These UIs don't edit the filter, but rather "expose" these properties to be "exposed" in the GUI to allow users to edit them.
+Meaning if you add an ItemLevel slider to a rule and that rule does filter by ItemLevel, the slider will display this value and allow the user to edit it.
+On the other hand, if that rule does not filter by ItemLevel yet, the slider will be on "any" and the user can add this filering if they desire.
+
+### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Title
+
+
+Title for the GUI. Can be anything. If ommited (null or empty string), the filter rule name will be used.
+
+### ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) TierList-config
 
 For tierlist-UIs, this array is required to generate the UI for the baseType list.
 The array has 3 elements:
@@ -98,47 +116,49 @@ The array has 3 elements:
 2. Config-Flags: Similar to the SHD parameter, this is a string with letters. The order does not matter. A = The "any" button will be displayed. O = the exact-match operator (==) will be used. D = allow duplicates within a tierlist, S = single-tier without drag&drop functionality.
 3. Item-stat/identifier. Optional, defaults to "BaseType"
 
-### Description
+Can be empty if you don't want to generate a tierlist UI.
+
+### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Description
 
 Optional. Generates a small description text for this rule.
 
 ## Sections and Grouping
 
-Chapter:
+### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Chapter:
 
 BIG groups of many accordions. Right now we have 6 chapters: General, Maps, EG, EG Rare, Campaign, Misc. Chapters do not have names or titles.
 ![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/0f317bd6-b516-4f4b-8aed-7a9f24584a58)
 
-Section:
+### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Section:
 
 Each Accordion (these buttons that you can click on to open their content) is a section. They have a title and an optional icon. If a section has an icon, all other sections within that same area should also have one for consistency sake - it just looks better. You can put one section into another, but not a 3rd into that. The GUI gets to narrow and many UI elements won't fit.
 ![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/78a47b6c-213d-4b2a-bf44-47dc0574d411)
 
-Box:
+### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Box:
 
 A tiny contains with darker background.
 ![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/84351286-7bc1-4e2e-8d6e-b69c699b3dff)
 
 ## Text & Title Commands:
 
-Title:
+### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Title:
 
 Used to divide chapters and groups of sections.
 
-SectionTitle:
+### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) SectionTitle:
 
 Mostly used as the title for each chapter.
 
-Description:
+### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Description:
 
 Smaller texts for details.
 
-## Advanced Commands:
+## ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Advanced Commands:
 
 Searches:
 Slowly going deprecated, rarely used. WIP
 
-## Custom Rules & New Tiers:
+## ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Custom Rules & New Tiers:
 
 This is an advanced topic. For now we don't expect people to work with these advanced commands.
 
