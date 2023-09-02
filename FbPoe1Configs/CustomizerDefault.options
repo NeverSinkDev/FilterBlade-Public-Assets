@@ -749,7 +749,7 @@ Chapter() {
 
     Section("Map-like items, Scarabs", "Scarab", "E") {
         Section("Endgame Atlas Boss Invitation", "MavensOrb", "E") {
-            Function MavenInvUI($s, $shd, $title) { QuickUI($s, $shd, [], $title, ["AtlasBossInvitations", "O"]); }
+            Function MavenInvUI($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AtlasBossInvitations", "O"]); }
 
             TierListToolBar();
 
