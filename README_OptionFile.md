@@ -15,6 +15,9 @@ Parameters can be normal primitive types, such as strings, numbers or booleans, 
 SomeCommand("hello world", true, 5, [true, false]);
 ```
 
+![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/dd273204-8a4c-40fa-9088-2fa1ce609375)
+
+
 There is a VS-Code Extension for Syntax Highlight:
 https://marketplace.visualstudio.com/items?itemName=NeverSink.filterblade-options-language
 
@@ -35,6 +38,9 @@ Easily the most important command for the Customizer.
 This single command generates 95% of the entire editing GUI, including rule-titles, color editing, itemLevel slider, tierLists, ...
 
 An example line would be: `QuickUI([0.0, "Loreweave Rings", "uniques;recipeuniquerings"], "SD", ["ItemLevel"]);`
+
+![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/0116ead3-1ab3-4222-bf2a-428abe9a6f23)
+
 
 It receives the following parameters:
 
