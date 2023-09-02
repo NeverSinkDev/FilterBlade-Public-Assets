@@ -49,6 +49,37 @@ In case of uniques, we can attach descriptions to the basetype itself or onto a 
 
 > In this example, we're attaching descriptions to the swords as seen above
 
+## Tags
+
+Each BaseType can also have "Tags":
+
+```json
+"Wild Crystallised Lifeforce": {
+  "text": "Purple harvest crafting material",
+  "tags": ["Harvest", "LeagueDrop"]
+}
+```
+
+These tags need to first be declared on root level in the "itemTagDefinitions" dictionary like this:
+
+```json
+"itemTagDefinitions": {
+  "Harvest": {
+    "displayName": "Harvest",
+    "iconPath": "assets/img/Icons/AccordionIcons/HarvestSeed.png",
+    "description": "Drops from Harvest",
+    "isHiddenByDefault": false,
+    "group": "currency2"
+  }
+}
+```
+
+These tags will be displayed on the item in the FilterBlade tierlists and also allows for filtering in the GUI:
+
+![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/47322344-3e59-4055-b46f-630859f7e358)
+
+![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/a250bb49-5d61-4f2d-b247-ddefdb8073ed)
+
 We'd welcome your pull request to help us populate and maintain these files!
 
 ### Quality Guidelines
