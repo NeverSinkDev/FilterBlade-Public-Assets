@@ -238,6 +238,7 @@ Chapter() {
         Title("Stacked Currency Drops (Endgame)");
 
         // todo: build new GUI for this!
+//        MultiTierThresholdEditor();
 
         Function CurrencyStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Currency", "DO"]); }
 
@@ -1075,6 +1076,8 @@ Chapter() {
         }
 
         BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2, "Tier 3", T3);
+
+//        MultiTierThresholdEditor(T1, T2, T3);
     }
 
     Section("Additional rules", "Lion") {
