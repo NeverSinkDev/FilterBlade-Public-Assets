@@ -1,19 +1,18 @@
 # Option-Files
 
-The .options files are designed by and for FilterBlade. It's a custom programming language to specify the structure and content of FilterBlade modules.
+The .options files are a domain language designed by and for FilterBlade. It is used to specify the contents of the overview and customizer screens.
 
 The most important one is the Customizer.options file.
 
-These config files are synced between this public GitHub repo and our private repo. Meaning whenever we change anything in these config files in the private repo, it will be pushed to this public one too, meaning it will always be up to date (master branch only).
-On the other side: You can do PRs on Github for these files and, once accepted and mergd into master, these changes will be directled synced into our private repo, as if it's one big repo for everyone to collaborate on.
+Changes in this repository (master branch only) will be automatically synced to the FilterBlade private repository and vice versa. PRs accepted on Github for these files will be directled synced into our private repository will end up on FilterBlade during the next push.
 
-Sections in this file are marked with
+Sections in this file are annoted with
 
-![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) for "Safe to edit" if the content has no technical impact and is just used to display information to the user,
+![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) for "Safe to edit" - little to no technical risk.
 
-![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) for topics that usually don't do harm, but can definitely cause problems in some cases, and
+![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) are usually safe to edit, but edge cases exist. We suggest contacting [discord](https://discord.com/invite/mye6xhF), if you want to submit a PR for those and need extra information.
 
-![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) if they have a massive impact on functionality and often left to the core FilterBlade dev team to edit.
+![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) for "Massive impact on functionality" and are usually best left to FilterBlade developers
 
 ## General Syntax
 
@@ -28,8 +27,8 @@ SomeCommand("hello world", true, 5, [true, false]);
 
 ![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/dd273204-8a4c-40fa-9088-2fa1ce609375)
 
+We recommend using the following VS-Code extension for syntax highlight:
 
-There is a VS-Code Extension for Syntax Highlight:
 https://marketplace.visualstudio.com/items?itemName=NeverSink.filterblade-options-language
 
 ## ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Comments
@@ -40,45 +39,46 @@ Multi-line comments with e.g. "/*" are not supported.
 ```
 // This is a comment
 ThisIsACommand(); // This is another comment :)
-/* This is invalid syntax */
+/* This is NOT valid syntax */
 ```
 
 ## ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) QuickUI
 
-Easily the most important command for the Customizer.
-This single command generates 95% of the entire editing GUI, including rule-titles, color editing, itemLevel slider, tierLists, ...
+The most important command for the Customizer.
+
+Dynamically generates 95% of the entire editing GUI, including rule-titles, color editing, itemLevel slider, tierLists and other UI elements.
 
 An example line would be: `QuickUI([0.0, "Loreweave Rings", "uniques;recipeuniquerings"], "SD", ["ItemLevel"]);`
 
 ![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/0116ead3-1ab3-4222-bf2a-428abe9a6f23)
 
-
 It receives the following parameters:
 
 ### ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Filter rule
 
-This is either just the name of a local search (see the "Searches" chapter below), or an array with 3 values:
+This is either just the name of a local filter-query (see the "Searches" chapter below), or an array with 3 values that inlines a filter-query:
 
-1. Version. New rules always have version "0.0". This version can be increased later. Increasing the first number will invaldate all user customizations done to this rule. This is required for breaking updates but has become relatively rare. The second number will only invalidate non-visual changes (e.g. not size and color). Usually, you don't need to change this.
+1. FILTER-QUERY-VERSION: New rules always have version "0.0". Usually, you do NOT need to change this. Increasing the first number will remove ALL user customizations done to this rule for ALL users. Required to handle major changes to the game and filter structure. The second number will only remove non-visual changes (e.g. not size and color).
 
-2. Technical name. This is one way to give a name to a rule for e.g. the search bar, but it is mainly used as identification. Having the same name for different rules is not allowed. Changing the name of a rule after initial release is also not recommended. This value is used for the save&load system and therefore very critical.
+2. FILTER-QUERY-ID: Unique name that identifies this query. Will be sometimes refered as 'filter-rule-name' Having the same name for different rules is not allowed. Changing the ID of a rule after initial release is also not recommended. This value is used for the save&load system and therefore very critical.
 
-3. TierTagSearch: Rules in the filter often have lines like `Show # $type->currency $tier->t1exalted`. This data can be used here to determine which rule the QuickUI is going to select. To use it, write the type (excluding "$type->"), then a semicolon, then the tier (including "$tier->"). In this example it would be `"currency;t1exalted"`.
+3. TIER-TAG-QUERY: Rules in the filter are anoted with type/tier lines: `Show # $type->currency $tier->t1exalted`. This data is used here to determine which rule the QuickUI is 'linked' to. Syntax: `"TYPE;TIER"` - first the type (excluding "$type->"), then a semicolon, then the tier (including "$tier->"). In this example it would be `"currency;t1exalted"`.
 
 ### ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) SHD buttons
 
 SHD stands for "Show", "Hide" and "Disable" - the 3 buttons you can see on the left of the editor to toggle rules on and off.
-You can leave this as an empty string to not generate any buttons, or set it to "SHD" to show all options.
-The order of the letters does not matter. "SHD" and "HDS" ar equivalent.
+Example: "SD" would generate a show and disable button. "S" only a show button. "SHD" all 3 buttons. "" would not generate any options.
+The order of the letters does not matter. "SHD" and "HDS" are equivalent.
 This parameter is ignored if the right button combination can be deferred from the filter (this only applies if "SH" or "SD" is specified).
-Never use Disable in tierlists, as this allows users to disable a tier and all items inside will not be handled within that tierlist and fall down into the pink "error" rule.
+
+Warning: Never use 'Disable' in full tierlists. Unmatched items (through disabled rules) in a tierlist will 'fall-through' and fall down into the pink "error" rule. Full tierlists (such as currency, uniques, divination cards) need to have every available basetype matched by a Show or Hide rule.
 
 ### ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) List of identifiers
 
 This is the fun part:
 
 This parameter is an array of strings. Each string will generate one GUI for this rule.
-Valid values include any filter-command, such as "ItemLevel" or "Corrpted".
+Valid values include any filter-command, such as "ItemLevel" or "Corrupted".
 The order of these values does not matter as they will be ordered automatically to improve consistency.
 This list can be empty.
 
@@ -94,18 +94,17 @@ Exceptions are:
 - HasExplicitMod: Use "Mods" instead to generate the special multi-list and operator GUI
 - BaseType and other idents with long value lists. Use the TierList-config parameter instead.
 
-Do not add additional filtering UIs to tierlists, as allowing the users to e.g. add "ItemLevel >= 60" to Uniques Tier 2 will cause all Tier 2 Uniques that don't fulfill this requirement to not be handled in the tierlist and all down into the pink "error" rule.
+Do not add additional filtering elements (such as itemlevel, corrupted...) to tierlists. as allowing the users to e.g. add "ItemLevel >= 60" to Uniques Tier 2 will cause all Tier 2 Uniques that don't fulfill this requirement to not be handled in the tierlist and all down into the pink "error" rule.
 
-Otherwise, adding more options is usually okay, but be careful when removing options as removing the UI does not invalidate the changes that users made here. Not even section-resets will help here as they are controlled by the UI elements. These users will, once they even figured out the problem, use the "Review changes" module on "Advanced" to delete these old changes.
+Otherwise, adding more options is usually okay, but be careful when removing options. The UI does not remove the changes that the users made here and users will be 'stuck' with invisible changes. Not even section-resets will help here as they are controlled by the UI elements. These users can (if they figure it out) use the "Review changes" module on "Advanced" to delete these old changes.
 
-These UIs don't edit the filter, but rather "expose" these properties to be "exposed" in the GUI to allow users to edit them.
-Meaning if you add an ItemLevel slider to a rule and that rule does filter by ItemLevel, the slider will display this value and allow the user to edit it.
+These UIs don't edit the filter directly, but rather "expose" properties of the filter in the GUI to allow users to edit them.
+If you add an ItemLevel slider to a rule and that rule does filter by ItemLevel, the slider will display this value and allow the user to edit it.
 On the other hand, if that rule does not filter by ItemLevel yet, the slider will be on "any" and the user can add this filering if they desire.
 
 ### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Title
 
-
-Title for the GUI. Can be anything. If ommited (null or empty string), the filter rule name will be used.
+Title for the GUI. Can be anything. If ommited (null or empty string), the filter rule name / query-id will be used.
 
 ### ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) TierList-config
 
@@ -131,7 +130,7 @@ BIG groups of many accordions. Right now we have 6 chapters: General, Maps, EG, 
 
 ### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Section:
 
-Each Accordion (these buttons that you can click on to open their content) is a section. They have a title and an optional icon. If a section has an icon, all other sections within that same area should also have one for consistency sake - it just looks better. You can put one section into another, but not a 3rd into that. The GUI gets to narrow and many UI elements won't fit.
+Each Accordion (these large-blue-expandable-buttons you can click on to open their content) is a section. They have a title and an optional icon. If a section has an icon, all other sections within that same area should also have one for consistency sake - it just looks better. You can put one section into another, but not a 3rd into that. The GUI gets to narrow and many UI elements won't fit.
 ![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/78a47b6c-213d-4b2a-bf44-47dc0574d411)
 
 ### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Box:
@@ -176,10 +175,10 @@ After defining the Function, you can call it by writing its name just like any o
 
 ### Conditionals:
 
-Conditionals are basically any new rule that is generated in FilterBlade and was not previously in the base filter.
+Custom rules and more. Conditionals are any new rule that is generated within FilterBlade and was not previously in the base filter.
 
 They can be simple, such as `Conditional("?AncTrialOmensNewTier") { }` where "?AncTrialOmensNewTier" is the ID/Name of the new rule-builder.
-All conditional IDs start with a questionmark. This simple setup is used on existing tierLists to add new custom tiers to it.
+All conditional IDs start with a questionmark. This setup is used on existing tierLists to add new custom tiers to it.
 
 Note that this command will only generate the rule-builder, but we still need the GUI for it. See ElementAdder_Tier.
 
