@@ -1,3 +1,13 @@
+// =============================================================================================================
+// This file determines the structure and content of the "Overview" tab item list. (previously called "StyleSummary" (SS))
+// It is the same file type and syntax as the Customizer optionFile, but with different commands.
+//
+// While using "Searches" is also possible in the Customizer, it's almost deprecated there but very much preferred in some cases here.
+// TierTagSearches (Search S0("skip", null, "uniques;t1") { }) always match the given rule, while normal Searches simulate the given
+// item and match whatever rule currently handles this item.
+// Meaning, TierTagSearches always show a certain rule and its current state, while Item Searches realistically show how the item is handled and can change rules if the original one changes.
+// =============================================================================================================
+
 StyleSection("COMMON CURRENCIES", "Hover over the scroll above for more information! ( recommended for new players ) <hr> Basic supplies used to perform common operations. They're not worth much, but important nonetheless. People frequently choose to hide some of them and buying them in bulk.") {
     Search S0("skip", "High Tier Supplies") { BaseType "Orb of Transmutation"; }
     Search S0("skip", "Low Tier Supplies") { BaseType "Armourer's Scrap"; }
@@ -54,16 +64,6 @@ StyleSection("Trial of the Ancestors", "Use silver coins to access the Trial - F
     Search S0("skip") { BaseType "Omen of Return"; }
     Search S0("skip") { BaseType "Hinekora's Lock"; }
     SS_Item("S0");
-
-            // Silver Coin
-            // Tattoo of the Ngamahu Firewalker
-            // Honoured Tattoo of the Hatungo
-            // Omen of Return
-            // Hinekora's Lock
-
-            // Forbidden Tome
-            // Sanctum Vaults Research
-            // relics
 }
 
 SS_Ad();

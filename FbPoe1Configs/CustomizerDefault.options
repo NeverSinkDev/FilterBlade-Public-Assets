@@ -1,10 +1,9 @@
 //==================================================================================================
-// NeverSink's Filter Optionfile.
+// NeverSink's Filter OptionFile
 //==================================================================================================
-// AUTHOR:	 Haggis, NeverSink and Tobnac
-// TYPE:		Default
+// AUTHOR:  NeverSink & Tobnac
+// TYPE:    Default
 //===================================================================================================
-// This file can be used as an example... a very advanced example.
 
 // Customizer/OptionFile Info
 Info_OptionVersion("1.1.4n");
@@ -22,48 +21,6 @@ Info_OptionAuthor("NeverSink & Tobnac");
 DefensiveSearch S10(1, "skip", "hidelayer;final"){ DropLevel 1; ItemLevel 60; Rarity Normal; SocketGroup "R"; };
 DefensiveSearch S10(1, "skip", "hidelayer;normalmagicendgame"){ DropLevel 1; ItemLevel 99; Rarity Normal; SocketGroup "R"; };
 DefensiveSearch S10(1, "skip", "hidelayer;raresendgame"){ DropLevel 1; ItemLevel 75; Rarity Rare; SocketGroup "R"; };
-
-//DefensiveSearch S10(1){ Class "Wand"; DropLevel 1; ItemLevel 65; Rarity Rare; SocketGroup "R"; };
-//DefensiveSearch S10(1){ BaseType "Flask"; Rarity Magic; ItemLevel 69; };
-//DefensiveSearch S10(1, "skip", "maps;restex"){ Class "Maps"; };
-
-//===================================================================================================
-// FUNCTIONS /// PATTERNS
-//===================================================================================================
-
-// WIP; wont work, different default params for different sections
-//Function HiddenTierUI_Std($s, $shd = "", $text = "Hidden Item Tier") { Box() { Title($text, "VisualTextBroadWarningText"); VisualEditor($s, $shd); List($s, $suggestions, $flags); } }
-//Function HiddenTierUI_Opera($s, $shd = "", $text = "Hidden Item Tier") { Box() { Title($text, "VisualTextBroadWarningText"); VisualEditor($s, $shd); List($s, $suggestions, $flags); } }
-//Box() { Title($text, "VisualTextBroadWarningText"); VisualEditor($s, $shd); List($s, $suggestions, "OH"); }
-//Box() { Title($text, "VisualTextBroadWarningText"); VisualEditor($s, $shd); List($s, $suggestions, "H"); }
-//Box() { Title($text, "VisualTextBroadWarningText"); VisualEditor($s, $shd); List($s, $suggestions, "H", "Prophecy"); }
-//Box() { Title($text, "VisualTextBroadWarningText"); VisualEditor($s, $shd); List($s, $suggestions); }
-// used for: "DeliriumOrbs", "BlightOils", "Resonators", "Fossils", "Splinters", "Incubators", "GearPlusFlasks", "GearPlusFlasks", "Divination Cards", "HeistExpBases", "MapFragmentsNoScarabs", "Scarabs", "UniqueMaps", "HeistContracts", "HeistBlueprints"
-
-//===================================================================================================
-// WayPoints /// ConditionalTargets /// InheritedSearches
-//===================================================================================================
-
-// EndGame Rare Targets
-// InheritedDeepSearch c0.alpha("skip", "skip", "6l;arm") { LinkedSockets 6; SocketGroup "RRRGGB"; ItemLevel 80; Rarity Normal; BaseType "Gladiator Plate"; }
-// InheritedDeepSearch c1.idmod.all("skip", "skip", "rareid;weapon_phys") { LinkedSockets 5; SocketGroup "RRGGB"; ItemLevel 80; Rarity Normal; BaseType "Gladiator Plate"; }
-
-// InheritedDeepSearch c5.hidelayer.normalmagic("skip", "skip", "hidelayer;normalmagicendgame") { LinkedSockets 3; SocketGroup "GGG"; ItemLevel 70; Rarity Normal; BaseType "Gladiator Plate"; }
-// InheritedDeepSearch c12.hide.all("skip", "skip", "hidelayer;final")              { LinkedSockets 3; SocketGroup "RRR"; ItemLevel 20; Rarity Normal; BaseType "Gladiator Plate"; }
-
-// EndGame Rare Targets
-// InheritedDeepSearch c6.rare.decorator.all("skip", "skip", "decorator->craftingrare;raredecoratorilvl75") { Quality 20; ItemLevel 68; Rarity Rare; Class Amulets; }
-// InheritedDeepSearch c6.rare.t1.all("skip", "skip", "rr;t1weapons") { ItemLevel 75; Rarity Rare; BaseType "Opal Wand"; }
-// InheritedDeepSearch c6.rare.t2.all("skip", "skip", "rr;t2weapons") { ItemLevel 75; Rarity Rare; BaseType "Corsair Sword"; }
-// InheritedDeepSearch WP_EGR_D("skip", "skip", "rr;t2weapons") { BaseType "Corsair Sword"; Rarity Rare; ItemLevel 75; }
-// InheritedSearch c6.rare.t3.all("skip", "skip", "rr;t3runedaggers") { ItemLevel 75; Rarity Rare; BaseType "Slaughter Knife"; }
-
-// Leveling Rare Targets
-// InheritedDeepSearch c11.leveling.all("skip", "skip", "leveling->flasks->utility;quicksilver") { ItemLevel 15; BaseType "Small Hybrid Flask"; }
-// InheritedDeepSearch c11.leveling.gear.all("skip", "skip", "leveling->rare->socketslinks;4linkrares") { SocketGroup "RGRG"; Rarity Rare; ItemLevel 60; }
-// InheritedDeepSearch c11.leveling.rares.low("skip", "skip", "leveling->rare->remaining;underlevel42") { Width 1; Height 3; Rarity Rare; ItemLevel 60; }
-// InheritedDeepSearch c11.leveling.act12.all("skip", "skip", "leveling->normalmagic->act1;castercraftrings") { BaseType "Topaz Ring"; Rarity Normal; ItemLevel 13; }
-// InheritedDeepSearch c11.leveling.firstlevels.all("skip", "skip", "decorators->leveling->magic;medium1") { Class "Body Armours"; Rarity Normal; ItemLevel 3; }
 
 //===================================================================================================
 // VENDOR RECIPES
@@ -395,12 +352,6 @@ Chapter() {
             Conditional("?HeistCustomCoins") { Show; BaseType == "Rogue's Marker"; StackSize > 250; SetTextColor 0 0 0 255; SetBackgroundColor 255 178 135 255; SetBorderColor 0 0 0 255; SetFontSize 45; }
             ElementAdder_Tier("?HeistCustomCoins", "CustomCoinFunc");
         }
-
-//        Section("Expedition Trade Re-Roll Currency", "ExpeditionArtifact") {
-            // "Astragali" + "Exotic Coinage" + "Burial Medallion" + "Scrap Metal"
-//            Description("To re-roll the trade-inventory of the Expedition vendors, you will need these currencies. Each vendor has their own item.");
-//            QuickUI([0.0, "Expedition Trade ReRoll Currency", "currency->expedition->reroll;any"], "SH", [], null, [null, "SO"]);
-//        }
 
         Section("Incubators", "Incubator", "E") {
             Function IncubatorTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ItemLevel"], $text, ["Incubators", "O"]); }
