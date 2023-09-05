@@ -222,6 +222,27 @@ Conditional("?SanctumRelicsNewTiersHidden") { }
 ElementAdder_Tier("?SanctumRelicsNewTiersHidden", null, true, "SanctumRelics", "OH");
 ```
 
-## TierListToolBar: WIP
+## ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) TierListToolBar:
+
+This command adds these buttons at the top of the section:
+
+![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/b9307335-5e63-483b-9985-eefda47f4e27)
+
+This command has multiple parameters, all of which are optional:
+
+1. Economy Name: Corresponds with the PoE Ninja economy data file. This file needs to be generated first, making this a parameter for FB devs only.
+2. Excluded Rules: If Economy is proviced, this is an array of Searches for rules that should be excluded from the Auto-Sort feature.
+3. Excluded Items: Same as above, but for individual items/BaseTypes
+4. Stat: Defaults to BaseType, usually not required.
+5. BonusItemInfo Section Name: If Economy Name is not available, enter the name of the section from the BonusItemInfo.json here to display its content in the item tooltips.
+
+Which buttons are generated is partically dynamic:
+
+- If you can add new tiers (via ElementAdder_Tier), the "Add tier" button is generated
+- If an economy name was specified, the "Show prices", "Auto-Sort" and "Configure" buttons are generated with the specified setup from the parameters.
+- Locks & Lock all buttons are always generated, as well as Reset Tiers and Compact mode.
+- If economyName or BonusItemInfo Section Name are specified and tags are present or you can filter by class, the UI filtering button is generated.
+
+ONLY use this command in sections where actual tierlists with at least 2 tiers are present.
 
 ## BaseTypeMatrix (multile rules/tiers): WIP
