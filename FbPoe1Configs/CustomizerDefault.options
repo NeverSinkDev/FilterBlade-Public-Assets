@@ -917,6 +917,8 @@ Chapter() {
         Section("Blueprints - Grand Heists", "HeistGrandBlueprint") {
             Function ContractList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ItemLevel"], $text, ["HeistBlueprints", "O"]); }
 
+            TierListToolBar(null, null, null, null, "Blueprint");
+
             ContractList([0.0, "Grand Heist Blueprint Tier 1", "heist->blueprint;handpicked"], "SH", "All Blueprints (for your tiering)");
 
             Search S1(0.0, "Grand Heist Blueprint Tier 2") { -BaseType "Blueprint: Bunker"; Class "Blueprints"; Rarity Magic; }
