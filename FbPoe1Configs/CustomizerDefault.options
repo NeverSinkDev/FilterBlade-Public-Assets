@@ -35,22 +35,22 @@ Chapter() {
         Title("Currency Generating Recipes");
 
         Section("Chromatic Orb", "Chromatic") {
-            Description("A chromatic orb is acquired by selling any Red-Green-Blue socket group item. The colors need to be linked, further links do not matter.  Hover over the scroll left for more info.", "'RGB' items", "The size of the item or its other stats don't matter. It's more efficient to pick up small RGB-items. Note that the order of colors or any additional sockets or links don't matter.");
+            Description("A chromatic orb is acquired by selling any Red-Green-Blue socket group item. The colors need to be linked, further links do not matter. Hover over the scroll left for more info.", "'RGB' items", "The size of the item or its other stats don't matter. It's more efficient to pick up small RGB-items. Note that the order of colors or any additional sockets or links don't matter.");
 
             QuickUI([0.0, "RGB Chromatic recipe EG small2x2", "endgamergb;rgbsmall1"], "SH", ["AreaLevel"], "Endgame: Small (2x2)");
             QuickUI([0.0, "RGB Chromatic recipe EG small1x3", "endgamergb;rgbsmall2"], "SH", ["AreaLevel", "Height"], "Endgame: Small (1x3, 1x4)");
             QuickUI([0.0, "RGB Chromatic recipe EG medium", "endgamergb;rgbmedium"], "SH", ["AreaLevel"], "Endgame: Medium-sized (2x3)");
-            QuickUI([0.0, "RGB Chromatic recipe EG large", "endgamergb;rgblarge"], "SD", ["AreaLevel"], "Endgame: Large (2x4)");
+            QuickUI([0.0, "RGB Chromatic recipe EG large", "endgamergb;rgblarge"], "SH", ["AreaLevel"], "Endgame: Large (2x4)");
 
             Box() { Title("Chromatic Recipe: Campaign");  Description("The campaign chromatic recipe can be changed in the 'Campaign -> Colors and Links' section");}
         }
 
         Section("Gemcutter's Prism", "GCP") {
-            Description("A Gemcutter's Prism is acquired by selling gems with a combined total of 40% quality to a vendor.");
+            Description("A Gemcutter's Prism is acquired by selling a gem with 20% quality or gems with a combined total of 40% quality to a vendor.");
 
-            QuickUI([0.0, "Gemcutter recipe high quality gems", "gems-generic;qt2"], "SD", ["Quality", "AreaLevel"], "");
-            QuickUI([0.0, "Gemcutter recipe mid quality gems", "gems-generic;qt3"], "SD", ["Quality", "AreaLevel"], "");
-            QuickUI([0.0, "Gemcutter recipe low quality gems", "gems-generic;qt4"], "SD", ["Quality", "AreaLevel"], "");
+            QuickUI([0.0, "Gemcutter recipe high quality gems", "gems-generic;qt2"], "SD", ["Quality", "AreaLevel"]);
+            QuickUI([0.0, "Gemcutter recipe mid quality gems", "gems-generic;qt3"], "SD", ["Quality", "AreaLevel"]);
+            QuickUI([0.0, "Gemcutter recipe low quality gems", "gems-generic;qt4"], "SD", ["Quality", "AreaLevel"]);
         }
         
         Section("Jeweller Orbs", "Jeweller") {
@@ -91,20 +91,20 @@ Chapter() {
         Section("+1 Skill Gem Recipes", "SkillGemRed1") {
             Description("By selling a total of 40% quality worth of gems with a specific tag (such as fire) together with a Rune Dagger, Wand, Sceptre or Staff you will be rewarded with a +1 global level to ALL tagged spell gems. This can be great for crafting, ssf or powerful weapons early on");
 
-            QuickUI([0.0, "+1 Skill Gem Recipe (Cold)", "gems-generic;plusonegemcold"], "SHD", ["Quality", "AreaLevel", "Corrupted"]);
-            QuickUI([0.0, "+1 Skill Gem Recipe (Fire)", "gems-generic;plusonegemfire"], "SHD", ["Quality", "AreaLevel", "Corrupted"]);
-            QuickUI([0.0, "+1 Skill Gem Recipe (Lightning)", "gems-generic;plusonegemlight"], "SHD", ["Quality", "AreaLevel", "Corrupted"]);
-            QuickUI([0.0, "+1 Skill Gem Recipe (Chaos)", "gems-generic;plusonegemchaos"], "SHD", ["Quality", "AreaLevel", "Corrupted"]);
-            QuickUI([0.0, "+1 Skill Gem Recipe (Physical)", "gems-generic;plusonegemphys"], "SHD", ["Quality", "AreaLevel", "Corrupted"]);
-            QuickUI([0.0, "+1 Skill Gem Recipe (Minion)", "gems-generic;plusonegemminion"], "SHD", ["Quality", "AreaLevel", "Corrupted"]);
+            QuickUI([0.0, "+1 Skill Gem Recipe (Cold)", "gems-generic;plusonegemcold"], "SD", ["Quality", "AreaLevel"]);
+            QuickUI([0.0, "+1 Skill Gem Recipe (Fire)", "gems-generic;plusonegemfire"], "SD", ["Quality", "AreaLevel"]);
+            QuickUI([0.0, "+1 Skill Gem Recipe (Lightning)", "gems-generic;plusonegemlight"], "SD", ["Quality", "AreaLevel"]);
+            QuickUI([0.0, "+1 Skill Gem Recipe (Chaos)", "gems-generic;plusonegemchaos"], "SD", ["Quality", "AreaLevel"]);
+            QuickUI([0.0, "+1 Skill Gem Recipe (Physical)", "gems-generic;plusonegemphys"], "SD", ["Quality", "AreaLevel"]);
+            QuickUI([0.0, "+1 Skill Gem Recipe (Minion)", "gems-generic;plusonegemminion"], "SD", ["Quality", "AreaLevel"]);
         }
 
         Title("Exclusive Item Recipes");
 
-        Section("Grasping Mail (Breach  Rings)", "BreachRing") {
+        Section("Grasping Mail (Breach Rings)", "BreachRing") {
             Description("Selling a total of 60 Breach Rings together to a vendor will reward you with the Grasping Mail rare item. This item can feature exclusive modifiers, such as the +50% to all defenses. Note that rerolling that item will not allow for new breach modifier to spawn. This rare can be very valuable for crafting.");
             QuickUI([2.0, "Breach Rings High ilvl", "rare->exotic->breachrings;high"], "SH", ["AreaLevel", "ItemLevel"]);
-            QuickUI([2.0, "Breach Rings", "rare->exotic->breachrings;any"], "SH", ["AreaLevel", "ItemLevel"], "", []);
+            QuickUI([2.0, "Breach Rings", "rare->exotic->breachrings;any"], "SH", ["AreaLevel", "ItemLevel"]);
         }
 
         Section("Loreweave Unique Rings", "Loreweave") {
