@@ -2497,7 +2497,6 @@ Chapter() {
             Search S0(1.0, "Untiered Uniques", "uniques;restex") { }
             Search S0(1.0, "Untiered Unique maps", "uniques->maps;restex") {  }
             Search S0(1.0, "Untiered Scarabs", "fragments->scarabs;restex") { }
-//            Search S0(0.0, "Untiered Scouting Reports", "currency->reports;restex") { }
             Search S0(1.0, "Untiered Vials", "vials;restex") { }
             Search S0(1.0, "Untiered Fragments", "fragments;restex") { }
             Search S0(1.0, "Untiered Fossils", "currency->fossil;restex") {  }
