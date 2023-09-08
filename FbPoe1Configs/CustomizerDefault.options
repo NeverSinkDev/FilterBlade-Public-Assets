@@ -797,6 +797,8 @@ Chapter() {
             // hide-tier
             Conditional("?AtlasMemoriesNewTierHidden") { }
             ElementAdder_Tier("?AtlasMemoriesNewTierHidden", null, true, "AtlasMemories", "HO");
+
+            QuickUI([0.0, "Untiered Atlas Master Memories", "exoticmap->memory;any"], "SH", [], "Remaining atlas memories"); // todo: whats the point? there are no bonus filter options, all bases are listed already and you cant remove them, only move into hide tier?
         }
 
         Title("Splinters");
@@ -889,6 +891,8 @@ Chapter() {
 
             Conditional("?HeistContractsNewTiersHidden") { }
             ElementAdder_Tier("?HeistContractsNewTiersHidden", null, true, "HeistContractsNormal", "HO");
+
+            QuickUI([1.0, "Untiered Heist Contracts", "heist->contract;exhide"], "SH"); // todo: there is no point in this rule??
         }
 
         Section("Unique Contracts", "HeistContract") {
@@ -2504,8 +2508,6 @@ Chapter() {
             Search S0(1.0, "Untiered Incubators", "currency->incubators;restex") { }
             Search S0(1.0, "Untiered Resonators", "currency->resonator;restex") {  }
             Search S0(1.0, "Untiered Map Items", "maps;restex") {  }
-            Search S0(1.0, "Untiered Heist Contracts", "heist->contract;exhide") {  }
-            Search S0(0.0, "Untiered Atlas Master Memories", "exoticmap->memory;any") { }
             Search S0(1.0, "Untiered Oils", "currency->oil;restex") { }
             Search S0(1.0, "Untiered Misc Map Items", "miscmapitems;restex") {  }
             Search S0(0.0, "Untiered Tattoos", "currency->trial->tattoo;restex") {  }
