@@ -1104,7 +1104,7 @@ Chapter() {
 
         Section("White Sockets") {
             QuickUI([0.0, "3 White sockets", "miscendgamerules;whitesocketweapons1h"], "SD", ["SocketedGearClasses", "ItemLevel", "Corrupted"], null, ["Gear", "SAO"]);
-            QuickUI([0.0, "6 White sockets", "socketslinks;whitesocketweapons2h"], "SD", ["SocketedGearClasses", "ItemLevel", "Corrupted"], null, ["Gear", "SAO"]);
+            QuickUI([0.0, "6 White sockets", "socketslinks;whitesocketweapons2h"], "SD", ["SixSocketClasses", "ItemLevel", "Corrupted"], null, ["Gear", "SAO"]);
         }
 
         Section("Double corrupted items") {
@@ -1119,8 +1119,8 @@ Chapter() {
 
         Section("4-links and 5-links") {
             Description("Usually the player will find enough 4-links by the time they're 68, however this can be useful for certain private leagues and ssf players with special plans");
-            QuickUI([0.0, "68+ 4 Links", "normalcraft->lowstrict;earlyendgame4link"], "SD", ["AreaLevel", "SocketedGearClasses", "Rarity"], "Early endgame 4-links:");
-            QuickUI([0.0, "Endgame 5 links b", "socketslinks;5links"], "SD", ["AreaLevel", "SocketedGearClasses", "ItemType"], "Endgame 5-linked items:");
+            QuickUI([0.0, "68+ 4 Links", "normalcraft->lowstrict;earlyendgame4link"], "SD", ["AreaLevel", "FourPlusSocketClasses", "Rarity"], "Early endgame 4-links:");
+            QuickUI([0.0, "Endgame 5 links b", "socketslinks;5links"], "SD", ["AreaLevel", "SixSocketClasses", "ItemType"], "Endgame 5-linked items:");
         }
     }
 
@@ -1889,14 +1889,14 @@ Chapter() {
 
             Description("5 linked items during leveling receive extra highlight and are often valuable at the start of new leagues");
 
-            QuickUI([0.0, "Leveling 5 links", "socketslinks;5linksleveling"], "SD", ["SocketedGearClasses"]);
+            QuickUI([0.0, "Leveling 5 links", "socketslinks;5linksleveling"], "SD", ["SixSocketClasses"]);
         }
 
         Section("4-Linked Gear", "Fusing") {
             Description("By adding e.g. 'GG', all 4-links will need to at least have 2 green colors to get highlighted. You can add one or multiple combinations of 'R', 'G' and 'B'. This is very useful to hide uninteresting linked items.");
 
-            QuickUI([0.0, "Leveling Rare 4 links", "leveling->rare->socketslinks;4linkrares"], "SD", ["Rarity", "AreaLevel", "SocketedGearClasses"], "4 links rare", ["SocketGroup", "SA", "SocketGroup"]);
-            QuickUI([0.0, "Leveling Magic/Normal 4 links", "leveling->normalmagic->4l;general"], "SD", ["Rarity", "AreaLevel", "SocketedGearClasses"], "4 links magic/normal", ["SocketGroup", "SA", "SocketGroup"]);
+            QuickUI([0.0, "Leveling Rare 4 links", "leveling->rare->socketslinks;4linkrares"], "SD", ["Rarity", "AreaLevel", "FourPlusSocketClasses"], "4 links rare", ["SocketGroup", "SA", "SocketGroup"]);
+            QuickUI([0.0, "Leveling Magic/Normal 4 links", "leveling->normalmagic->4l;general"], "SD", ["Rarity", "AreaLevel", "FourPlusSocketClasses"], "4 links magic/normal", ["SocketGroup", "SA", "SocketGroup"]);
         }
 
         Section("3-Linked Gear: General", "Fusing") {
