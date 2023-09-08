@@ -64,9 +64,9 @@ Chapter() {
         Section("Glassblower's Bauble", "Glassblower") {
             Description("Vendors will reward you with a glassblowers bauble upon selling them a single 20% quality flask or multiple quality flasks with a total quality of 40%.", "Glassblower Recipe", "It's recommended to at least use the threshold of 14. This allows you to get 1 glassblower per 3 mid quality flasks. Note that glassblowers can also be acquired by bying it for 8 whetstones from vendors and drop naturally, so the recipe is not very efficient.");
 
-            QuickUI([0.0, "Glassblower recipe top quality", "endgameflasks;any20qualflask"], "SD", ["Quality", "AreaLevel", "Rarity"]);
-            QuickUI([0.0, "Glassblower recipe mid quality", "endgameflasks;qualityhigh"], "SD", ["Quality", "AreaLevel", "Rarity"]);
-            QuickUI([0.0, "Glassblower recipe low quality", "endgameflasks;qualitylow"], "SD", ["Quality", "AreaLevel", "Rarity"]);
+            QuickUI([0.0, "Glassblower recipe top quality", "endgameflasks;any20qualflask"], "SD", ["Quality", "AreaLevel", "RarityNM"]);
+            QuickUI([0.0, "Glassblower recipe mid quality", "endgameflasks;qualityhigh"], "SD", ["Quality", "AreaLevel", "RarityNM"]);
+            QuickUI([0.0, "Glassblower recipe low quality", "endgameflasks;qualitylow"], "SD", ["Quality", "AreaLevel", "RarityNM"]);
 
             Description("You can find more quality flasks rules in the 'Endgame -> Flasks' and 'Campaign -> Flasks' sections.");
         }
@@ -1283,26 +1283,26 @@ Chapter() {
 
         Description("High item level (up to level 85) can roll higher mods than flasks of a lower level.");
         Section("High Level Flasks", "Flask") {
-            QuickUI([0.0, "High Level Flasks - iLvl 85", "endgameflasks;utility85"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "Rarity", "Identified"]);
-            QuickUI([0.0, "High Level Flasks - iLvl 84", "endgameflasks;utility84"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "Rarity", "Identified"]);
-            QuickUI([0.0, "High Level Flasks - iLvl 82", "endgameflasks;utility82"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "Rarity", "Identified"]);
+            QuickUI([0.0, "High Level Flasks - iLvl 85", "endgameflasks;utility85"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
+            QuickUI([0.0, "High Level Flasks - iLvl 84", "endgameflasks;utility84"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
+            QuickUI([0.0, "High Level Flasks - iLvl 82", "endgameflasks;utility82"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
         }
 
         Section("High Level Life & Mana Flasks", "FlaskLife") {
-            QuickUI([0.0, "High Level Life/Mana Flasks - iLvl 82", "endgameflasks;lifemana82"], "SHD", ["ItemLevel", "Quality", "AreaLevel", "Rarity"], null, ["Flasks", "SOA"]);
+            QuickUI([0.0, "High Level Life/Mana Flasks - iLvl 82", "endgameflasks;lifemana82"], "SHD", ["ItemLevel", "Quality", "AreaLevel", "RarityNM"], null, ["Flasks", "SOA"]);
         }
 
         Section("Exceptional Quality High Level Flasks", "FlaskLife") {
-            QuickUI([0.0, "Exceptional Quality Utility Flasks", "endgameflasks;overqualutil"], "SH", ["ItemLevel", "Quality", "Rarity", "Utility Flasks"]);
-            QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife"], "SH", ["ItemLevel", "Quality", "Rarity"], null, ["allFlasks", "SO"]);
+            QuickUI([0.0, "Exceptional Quality Utility Flasks", "endgameflasks;overqualutil"], "SH", ["ItemLevel", "Quality", "RarityNM", "Utility Flasks"]);
+            QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife"], "SH", ["ItemLevel", "Quality", "RarityNM"], null, ["allFlasks", "SO"]);
         }
 
         Divider();
 
         Section("Other Flasks", "Flask") {
-            QuickUI([0.0, "Early mapping flasks", "endgameflasks;earlymappingflasks"], "SH", ["Utility Flasks", "AreaLevel", "Rarity"]);
-            QuickUI([0.0, "Remaining Endgame utility flasks", "endgameflasks;anyutility"], "SHD", ["Utility Flasks", "AreaLevel", "Rarity"]);
-            QuickUI([0.0, "Endgame life flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "Rarity"], "Life & mana flasks", ["allFlasks", "SO"]);
+            QuickUI([0.0, "Early mapping flasks", "endgameflasks;earlymappingflasks"], "SH", ["Utility Flasks", "AreaLevel", "RarityNM"]);
+            QuickUI([0.0, "Remaining Endgame utility flasks", "endgameflasks;anyutility"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM"]);
+            QuickUI([0.0, "Endgame life flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "RarityNM"], "Life & mana flasks", ["allFlasks", "SO"]);
         }
     }
 
@@ -1934,7 +1934,7 @@ Chapter() {
     }
 
     Section("Flasks", "Flask") {
-        Function FlaskBox ($s, $shd = "SDH", $text) { QuickUI($s, $shd, ["Rarity", "Quality"], $text); }
+        Function FlaskBox ($s, $shd = "SDH", $text) { QuickUI($s, $shd, ["RarityNM", "Quality"], $text); }
 
         Section("Flask Progression","FlaskLife")
         {
@@ -1950,13 +1950,13 @@ Chapter() {
 
         Section ("Utility Flasks","Flask")
         {
-             QuickUI([0.0, "Leveling-Flasks-Handpicked-Utility", "leveling->flasks->utility;quicksilver"], SDH, ["Utility Flasks", "Rarity", "Quality", "AreaLevel"], "Quicksilver Flasks");
-             QuickUI([0.0, "Leveling-Flasks-Handpicked-Utility-Low", "leveling->flasks->utility;asortedutility"], SDH, ["Utility Flasks", "Rarity", "Quality", "AreaLevel"], "Handpicked Utility Flasks");
-             QuickUI([0.0, "Leveling-Flasks-Utility", "leveling->flasks->utility;any"], SDH, ["Utility Flasks", "Rarity", "Quality", "AreaLevel"], "Other Utility Flasks");
+             QuickUI([0.0, "Leveling-Flasks-Handpicked-Utility", "leveling->flasks->utility;quicksilver"], SDH, ["Utility Flasks", "RarityNM", "Quality", "AreaLevel"], "Quicksilver Flasks");
+             QuickUI([0.0, "Leveling-Flasks-Handpicked-Utility-Low", "leveling->flasks->utility;asortedutility"], SDH, ["Utility Flasks", "RarityNM", "Quality", "AreaLevel"], "Handpicked Utility Flasks");
+             QuickUI([0.0, "Leveling-Flasks-Utility", "leveling->flasks->utility;any"], SDH, ["Utility Flasks", "RarityNM", "Quality", "AreaLevel"], "Other Utility Flasks");
 
              Function UtilityFlaskCustomRuleUI ($s, $shd = "SHD", $title)
              {
-                QuickUI($s, $sdh, ["Utility Flasks", "Rarity", "Quality", "AreaLevel"], $title);
+                QuickUI($s, $sdh, ["Utility Flasks", "RarityNM", "Quality", "AreaLevel"], $title);
              }
 
              Conditional("?UtilityFlaskCustomRules") { Show; Class "Flask"; };
