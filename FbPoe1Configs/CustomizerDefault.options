@@ -164,38 +164,7 @@ Chapter() {
             ElementAdder_Tier("?CurrencyNewTiersHidden", null, true, "normalCurrency", "OH");
         }
 
-        Title("Currency Drops during the Campaign");
-
-        Section("Campaign Specific - General", "Regret") {
-            Function LevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["Currency", "DO"]); }
-
-            LevelingStackList([0.0, "Currency during leveling 0", "currency->leveling;binding"], "SH", "Currency during Campaign 0");
-            LevelingStackList([0.0, "Currency during leveling 1", "currency->leveling;trans"], "SH", "Currency during Campaign 1");
-            LevelingStackList([0.0, "Currency during leveling 2", "currency->leveling;aug"], "SH", "Currency during Campaign 2");
-            LevelingStackList([0.0, "Currency during leveling 3", "currency->leveling;portal"], "SH", "Currency during Campaign 3");
-            LevelingStackList([0.0, "Currency during leveling 4", "currency->leveling;wisdom"], "SH", "Currency during Campaign 4");
-            QuickUI([0.0, "Essences while leveling", "currency->leveling;essences"], "SH", ["AreaLevel"], "", ["essences"]);
-
-            Conditional("?CurrencyLevelingNewTiers") { Show; Class Currency; AreaLevel < 65; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?CurrencyLevelingNewTiers", "LevelingStackList");
-        }
-
-        Section("Campaign Specific - Stacked Drops", "Transmut") {
-            Function CurrencyLevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
-
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Transmutations", "currency->levelingstacked;trans"], "SD");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Augmentations", "currency->levelingstacked;aug"], "SD");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Portal Scrolls", "currency->levelingstacked;portal"], "SD");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Wisdom Scrolls", "currency->levelingstacked;wisdom"], "SD");
-
-            Conditional("?CurrencyLevelingStacksNewTiers") {  }
-            ElementAdder_Tier("?CurrencyLevelingStacksNewTiers", "CurrencyLevelingStackList");
-        }
-
         Title("Stacked Currency Drops (Endgame)");
-
-        // todo: build new GUI for this!
-//        MultiTierThresholdEditor();
 
         Function CurrencyStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Currency", "DO"]); }
 
@@ -241,6 +210,37 @@ Chapter() {
             CurrencyStackList([0.0, "Stacked Currency - Wisdom Large", "currency->stackedsupplieswisdom;t1"], "SD");
             CurrencyStackList([0.0, "Stacked Currency - Wisdom Medium", "currency->stackedsupplieswisdom;t2"], "SD");
             CurrencyStackList([0.0, "Stacked Currency - Wisdom Small", "currency->stackedsupplieswisdom;t3"], "SD");
+        }
+
+        // todo: build new GUI for this!
+        MultiTierThresholdEditor("StackSize");
+
+        Title("Currency Drops during the Campaign");
+
+        Section("Campaign Specific - General", "Regret") {
+            Function LevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["Currency", "DO"]); }
+
+            LevelingStackList([0.0, "Currency during leveling 0", "currency->leveling;binding"], "SH", "Currency during Campaign 0");
+            LevelingStackList([0.0, "Currency during leveling 1", "currency->leveling;trans"], "SH", "Currency during Campaign 1");
+            LevelingStackList([0.0, "Currency during leveling 2", "currency->leveling;aug"], "SH", "Currency during Campaign 2");
+            LevelingStackList([0.0, "Currency during leveling 3", "currency->leveling;portal"], "SH", "Currency during Campaign 3");
+            LevelingStackList([0.0, "Currency during leveling 4", "currency->leveling;wisdom"], "SH", "Currency during Campaign 4");
+            QuickUI([0.0, "Essences while leveling", "currency->leveling;essences"], "SH", ["AreaLevel"], "", ["essences"]);
+
+            Conditional("?CurrencyLevelingNewTiers") { Show; Class Currency; AreaLevel < 65; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+            ElementAdder_Tier("?CurrencyLevelingNewTiers", "LevelingStackList");
+        }
+
+        Section("Campaign Specific - Stacked Drops", "Transmut") {
+            Function CurrencyLevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
+
+            CurrencyLevelingStackList([0.0, "Stacked Campaign Transmutations", "currency->levelingstacked;trans"], "SD");
+            CurrencyLevelingStackList([0.0, "Stacked Campaign Augmentations", "currency->levelingstacked;aug"], "SD");
+            CurrencyLevelingStackList([0.0, "Stacked Campaign Portal Scrolls", "currency->levelingstacked;portal"], "SD");
+            CurrencyLevelingStackList([0.0, "Stacked Campaign Wisdom Scrolls", "currency->levelingstacked;wisdom"], "SD");
+
+            Conditional("?CurrencyLevelingStacksNewTiers") {  }
+            ElementAdder_Tier("?CurrencyLevelingStacksNewTiers", "CurrencyLevelingStackList");
         }
 
         Section("Add Custom Rules", "Firefly") {
@@ -428,7 +428,7 @@ Chapter() {
         UniqueList(S10, "S", "Boss-Drop Uniques:", "These basetypes have a expensive unique version that only drops from bosses and special encounters. They also have a cheap world-drop-version. Don't hide these, the filter has no way of telling, which one it is. If you really want to hide this tier, enable the option to have Show/Hide/Disable buttons everywhere in Advanced->Settings.");
         UniqueList(S8, "SH", "Unique Jewels:", "The filter can't disintinguish between expensive and cheap unique jewels. All of them are treated the same way!");
 //        UniqueList(S12, "SH", "Fated Boss Drop Uniques:", "These can only drop from Atlas Map Bosses. You got to check those yourself because they look the same as a normal unique.");
-        UniqueList(S7, "SH", "Early league Uniques:", "These uniques are possibly expensive or interesting at the start of the new league! This tier stays empty, after the first week of the new league");
+        UniqueList(S7, "SDH", "Early league Uniques:", "These uniques are possibly expensive or interesting at the start of the new league! This tier stays empty, after the first week of the new league");
         UniqueList(S3, "SH", "Tier 3 - semi-expensive uniques:");
         UniqueList(S11, "SH", "Tier 4 - Non-Drop Uniques:", "Hideable uniques with non-droppable expensive versions.");
         UniqueList(S6, "SH", "Tier 5 - cheap and hideable uniques:", "These uniques are worth very little. Note that the game and the meta changes fairly fast, so be careful with this section! Hiding this section at the start of new leagues and in SSF is a bad idea. You've been warned.");
@@ -965,7 +965,7 @@ Chapter() {
             QuickUI($s, $shd, ["RarityU", "ItemLevel", "Stats_All"], $title, ["rarityItems", "OS"], "Quickly highlight additional bases. If you need more power and options, there's a lot more custom rules lower in the customizer");
         }
 
-        Conditional("?CQuickEndgameCustomRule1", ["c3.gear.crafting-decorators"]) { Show; BaseType "Imbued Wand"; SetBorderColor 200 0 0; SetBackgroundColor 60 0 0; SetFontSize 40; ItemLevel >= 68; Rarity Normal; Corrupted False; Mirrored False; }
+        Conditional("?CQuickEndgameCustomRule1", ["c3.gear.crafting-decorators"]) { Show; BaseType == "Imbued Wand"; SetBorderColor 200 0 0; SetBackgroundColor 60 0 0; SetFontSize 40; ItemLevel >= 68; Rarity Normal; Corrupted False; Mirrored False; }
         ElementAdder_Tier("?CQuickEndgameCustomRule1", "CondShowBaseQuick");
     }
 
@@ -1031,7 +1031,7 @@ Chapter() {
         BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2, "Tier 3", T3);
 
         // FYI: only available on beta during development
-        MultiTierThresholdEditor(T1, T2, T3);
+//        MultiTierThresholdEditor("ItemLevel");
     }
 
     Section("Additional rules", "Lion") {
