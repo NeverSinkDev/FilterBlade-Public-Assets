@@ -3154,7 +3154,8 @@
 							"ruleLink": {
 								"entryName": "Unique Exception: Tabula Rasa",
 								"text": "Link to exception rule"
-							}
+							},
+							"priority": -1
 						}
 					}
 				},
