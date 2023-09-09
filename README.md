@@ -79,6 +79,11 @@ You can set negative priorities to put uniques at the bottom. This is most commo
 
 ![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/d1e1b385-fc07-430c-b5cc-ab36243e6345)
 
+Uniques with the exact same bonusInfo JSON will be grouped together:
+
+![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/c9803125-89b3-4b68-8998-5a0fa592f551)
+
+
 ## Tags
 
 Each BaseType can also have "Tags":
