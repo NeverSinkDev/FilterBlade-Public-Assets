@@ -24,7 +24,9 @@ Descriptions are attached through JSON code. The top level property describes th
   }
 ```
 
-In case of uniques, we can attach descriptions to the basetype itself or onto a specific unique type:
+In case of uniques, we can attach descriptions to the basetype itself or onto a specific unique type.
+
+Uniques also have support for more proprties:
 
 ```json
   "Uniques": {
@@ -33,13 +35,18 @@ In case of uniques, we can attach descriptions to the basetype itself or onto a 
         "text": null,
         "items": {
           "Starforge":{
-            "text": "Overridden in Exceptions. Drops from The Shaper."
+            "text": "Overridden in Exceptions. Drops from The Shaper.",
+            "ruleLink": {
+              "entryName": "Unique Shaper Sword",
+              "text": "Link to exception rule"
+            },
+            "priority": -1
           },
           "Voidforge":{
-            "text": "Overridden in Exceptions. Drops from The Uber Elder."
+            "hideInHoverBox": true
           },
           "Echoforge":{
-            "text": "Drops from The Maven."
+            "text": "Drops from The Maven."            
           }
         }
       }
@@ -47,7 +54,30 @@ In case of uniques, we can attach descriptions to the basetype itself or onto a 
   }
 ```
 
-> In this example, we're attaching descriptions to the swords as seen above
+> In this example, we're attaching descriptions to the swords as seen below
+
+
+### RuleLink
+
+The "ruleLink" propoperty adds a link in the hoverBox that, once clicked, will jump the user to the specified rule.
+
+The "text" property of the ruleLink object is the displayed text and has no technical meaning.
+
+The "entryName" property needs to match a rule-ID specified in the OptionFile to identify the right rule.
+
+### hideInHoverBox
+
+The "hideInHoverBox" flag allows you to hide uniques in the hoverBox completely.
+
+### Priority
+
+The "priority" number specified the order of uniques in the tooltip. If ommited, a default value of 0 is used for all uniques that have no priority, or no bonus info entry at all.
+
+If two uniques have the same priority, they are ordered by chaos price.
+
+You can set negative priorities to put uniques at the bottom. This is most commonly used to put uniques that are not relevant for the tierList (because they have a special exception rule) at the bottom.
+
+![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/d1e1b385-fc07-430c-b5cc-ab36243e6345)
 
 ## Tags
 
