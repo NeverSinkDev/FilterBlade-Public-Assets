@@ -3149,7 +3149,12 @@
 					"items": {
 						"Tabula Rasa": {
 							"//comment": "COMMENT: the text property below provides infos about an individual unique",
-							"text": "Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets."
+							"text": "Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets.",
+							"hideInHoverBox": false,
+							"ruleLink": {
+								"entryName": "Unique Exception: Tabula Rasa",
+								"text": "Link to exception rule"
+							}
 						}
 					}
 				},
