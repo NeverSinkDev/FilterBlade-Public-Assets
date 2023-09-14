@@ -1280,29 +1280,45 @@ Chapter() {
     }
 
     Section("Flasks", "Flask") {
-
-        Description("High item level (up to level 85) can roll higher mods than flasks of a lower level.");
-        Section("High Level Flasks", "Flask") {
+        Description("High item level (up to level 85) flasks can roll the highest tier mods.");
+        Section("High Level Utility Flasks", "Flask") {
             QuickUI([0.0, "High Level Flasks - iLvl 85", "endgameflasks;utility85"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
             QuickUI([0.0, "High Level Flasks - iLvl 84", "endgameflasks;utility84"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
             QuickUI([0.0, "High Level Flasks - iLvl 82", "endgameflasks;utility82"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
         }
 
         Section("High Level Life & Mana Flasks", "FlaskLife") {
-            QuickUI([0.0, "High Level Life/Mana Flasks - iLvl 82", "endgameflasks;lifemana82"], "SHD", ["ItemLevel", "Quality", "AreaLevel", "RarityNM"], null, ["Flasks", "SOA"]);
+            QuickUI([0.0, "High Level Life & Mana Flasks - iLvl 82", "endgameflasks;lifemana82"], "SHD", ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], null, ["Flasks", "SOA"]);
         }
 
-        Section("Exceptional Quality High Level Flasks", "FlaskLife") {
+        Section("Exceptional Quality High Level Flasks", "Flask") {
             QuickUI([0.0, "Exceptional Quality Utility Flasks", "endgameflasks;overqualutil"], "SH", ["ItemLevel", "Quality", "RarityNM", "Utility Flasks"]);
-            QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife"], "SH", ["ItemLevel", "Quality", "RarityNM"], null, ["allFlasks", "SO"]);
+            QuickUI([0.0, "Exceptional Quality Life & Mana Flasks", "endgameflasks;overquallife"], "SH", ["ItemLevel", "Quality", "RarityNM"], null, ["allFlasks", "SO"]);
         }
 
-        Divider();
+        Section("Other Endgame Utility Flasks", "Flask") {
+            QuickUI([0.0, "Early mapping ultility flasks", "endgameflasks;earlymappingflasks"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified"]);
+            QuickUI([0.0, "Endgame utility flasks", "endgameflasks;anyutility"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified"]);
 
-        Section("Other Flasks", "Flask") {
-            QuickUI([0.0, "Early mapping flasks", "endgameflasks;earlymappingflasks"], "SH", ["Utility Flasks", "AreaLevel", "RarityNM"]);
-            QuickUI([0.0, "Remaining Endgame utility flasks", "endgameflasks;anyutility"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM"]);
-            QuickUI([0.0, "Endgame life flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "RarityNM"], "Life & mana flasks", ["allFlasks", "SO"]);
+            Function EndgameUtilityFlaskCustomRuleUI ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $sdh, ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title);
+            }
+
+            Conditional("?EndgameUtilityFlaskCustomRules") { Show; Class "Flask"; };
+            ElementAdder_Tier("?EndgameUtilityFlaskCustomRules", "EndgameUtilityFlaskCustomRuleUI");
+        }
+
+        Section("Other Endgame Life & Mana Flasks", "Flask") {
+            QuickUI([0.0, "Early mapping life & mana flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "RarityNM", "Identified"], "Life & mana flasks", ["allFlasks", "SO"]);
+
+            Function EndgameLifeManaFlaskCustomRuleUI ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $sdh, ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title, ["allFlasks", "SO"]);
+            }
+
+            Conditional("?EndgameLifeManaFlaskCustomRules") { Show; Class "Flask"; };
+            ElementAdder_Tier("?EndgameLifeManaFlaskCustomRules", "EndgameLifeManaFlaskCustomRuleUI");
         }
     }
 
