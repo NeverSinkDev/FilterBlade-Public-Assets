@@ -1137,7 +1137,7 @@ Chapter() {
         }
 
         Section("Breach Grasping Mail", "BreachSplinter") {
-            QuickUI([1.0, "Grasping Mail", "exoticbases;exoticbasesmisc"], "SD", ["Rarity", "ItemLevel"], "", ["Gear", "OS"]);
+            QuickUI([1.0, "Grasping Mail", "exoticbases;exoticbasesmisc"], "SD", ["Rarity", "ItemLevel"]);
         }
 
         Section("Sacrificial Garbs", "SacrificeAtMidnight") {
