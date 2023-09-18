@@ -60,7 +60,7 @@ This is either just the name of a local filter-query (see the "Searches" chapter
 
 1. FILTER-QUERY-VERSION: New rules always have version "0.0". Usually, you do NOT need to change this. Increasing the first number will remove ALL user customizations done to this rule for ALL users. Required to handle major changes to the game and filter structure. The second number will only remove non-visual changes (e.g. not size and color).
 
-2. FILTER-QUERY-ID: Unique name that identifies this query. Will be sometimes refered as 'filter-rule-name' Having the same name for different rules is not allowed. Changing the ID of a rule after initial release is also not recommended. This value is used for the save&load system and therefore very critical.
+2. FILTER-QUERY-ID: Unique name that identifies this query. Will be sometimes referred as 'filter-rule-name' Having the same name for different rules is not allowed. Changing the ID of a rule is also not allowed as this value is used for the save&load system to identify this rule. Meaning any edit will cause existing changes to not find their old rule any more and cause invalidations. This value is therefore very critical. If you want to change the name, use the "Title" parameter of the QuickUI instead.
 
 3. TIER-TAG-QUERY: Rules in the filter are anoted with type/tier lines: `Show # $type->currency $tier->t1exalted`. This data is used here to determine which rule the QuickUI is 'linked' to. Syntax: `"TYPE;TIER"` - first the type (excluding "$type->"), then a semicolon, then the tier (including "$tier->"). In this example it would be `"currency;t1exalted"`.
 
@@ -168,6 +168,7 @@ Required for the "Add tier" functionality and custom rules to define how the GUI
 `Function <funcName>($s, $shd = "SHD", $text) { <content> }`
 
 Where <funcName> is an unique name you can define here. When using this func later, you do so by using this name.
+After that, in the brackets, we define which parameters which function receives when called. You can access the values of these parameters by writing their name (including the $-sign) in the content again.
 And <content> is any normal option file command - most commonly a single QuickUI, where you can use specify "$s" as filter rule (or search) instead of the actual value.
 Same for the $shd param, where we have given it a default of "SHD" which is required for new rules.
 

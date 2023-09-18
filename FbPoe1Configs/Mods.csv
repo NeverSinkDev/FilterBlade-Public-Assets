@@ -2908,3 +2908,13 @@ Baleful,1/3,Gain 21-26% of Physical Damage as Extra Chaos Damage,prefix,80,Unkno
 Otherworldly,,Slaying Enemies close together can attract monsters from Beyond this realm,prefix,68,Map
 Antagonist's,,20-30% increased number of Rare Monsters,prefix,68,Map
 Splitting,,Monsters fire 2 additional Projectiles,prefix,68,Map
+Taskmaster's,1/2,+1 to Level of all Minion Skill Gem,prefix,14,Helmet
+Overseer's,2/2,+2 to Level of all Minion Skill Gems,prefix,75,Helmet
+of Nonflammability,,(31–40)% chance to Avoid being Ignited,suffix,50,Unknown
+of Fireproofing,,(41–50)% chance to Avoid being Ignited,suffix,70,Unknown
+of Warming,,(31–40)% chance to Avoid being Frozen,suffix,50,Unknown
+of Heating,,(41–50)% chance to Avoid being Frozen,suffix,70,Unknown
+of Balance,,(21–24)% chance to Avoid being Stunned,suffix,50,Unknown
+of Poise,,(25–30)% chance to Avoid being Stunned,suffix,70,Unknown
+of Stemming,,(31–40)% chance to Avoid Bleeding,suffix,50,Unknown
+of the Tourniquet,,(41–50)% chance to Avoid Bleeding,suffix,70,Unknown
