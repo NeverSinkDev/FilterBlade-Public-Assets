@@ -1288,12 +1288,12 @@ Chapter() {
         }
 
         Section("High Level Life & Mana Flasks", "FlaskLife") {
-            QuickUI([0.0, "High Level Life & Mana Flasks - iLvl 82", "endgameflasks;lifemana82"], "SHD", ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], null, ["Flasks", "SOA"]);
+            QuickUI([0.0, "High Level Life/Mana Flasks - iLvl 82", "endgameflasks;lifemana82"], "SHD", ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], "High Level Life & Mana Flasks - iLvl 82", ["Flasks", "SOA"]);
         }
 
         Section("Exceptional Quality High Level Flasks", "Flask") {
             QuickUI([0.0, "Exceptional Quality Utility Flasks", "endgameflasks;overqualutil"], "SH", ["ItemLevel", "Quality", "RarityNM", "Utility Flasks"]);
-            QuickUI([0.0, "Exceptional Quality Life & Mana Flasks", "endgameflasks;overquallife"], "SH", ["ItemLevel", "Quality", "RarityNM"], null, ["allFlasks", "SO"]);
+            QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Exceptional Quality Life & Mana Flasks", ["allFlasks", "SO"]);
         }
 
         Section("Other Endgame Utility Flasks", "Flask") {
@@ -1302,7 +1302,7 @@ Chapter() {
 
             Function EndgameUtilityFlaskCustomRuleUI ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $sdh, ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title);
+                QuickUI($s, $shd, ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title);
             }
 
             Conditional("?EndgameUtilityFlaskCustomRules") { Show; Class "Flask"; };
