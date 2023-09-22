@@ -1305,19 +1305,19 @@ Chapter() {
                 QuickUI($s, $shd, ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title);
             }
 
-            Conditional("?EndgameUtilityFlaskCustomRules") { Show; Class "Flask"; };
+            Conditional("?EndgameUtilityFlaskCustomRules") { Show; Class "Flask"; Rarity Normal Magic; };
             ElementAdder_Tier("?EndgameUtilityFlaskCustomRules", "EndgameUtilityFlaskCustomRuleUI");
         }
 
-        Section("Other Endgame Life & Mana Flasks", "Flask") {
+        Section("Other Endgame Life & Mana Flasks", "FlaskLife") {
             QuickUI([0.0, "Early mapping life & mana flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "RarityNM", "Identified"], "Life & mana flasks", ["allFlasks", "SO"]);
 
             Function EndgameLifeManaFlaskCustomRuleUI ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $sdh, ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title, ["allFlasks", "SO"]);
+                QuickUI($s, $shd, ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title, ["allFlasks", "SO"]);
             }
 
-            Conditional("?EndgameLifeManaFlaskCustomRules") { Show; Class "Flask"; };
+            Conditional("?EndgameLifeManaFlaskCustomRules") { Show; Class "Flask"; Rarity Normal Magic; };
             ElementAdder_Tier("?EndgameLifeManaFlaskCustomRules", "EndgameLifeManaFlaskCustomRuleUI");
         }
     }
