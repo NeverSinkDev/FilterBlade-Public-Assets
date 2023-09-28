@@ -6,6 +6,8 @@ The most important one is the Customizer.options file.
 
 Changes in this repository (master branch only) will be automatically synced to the FilterBlade private repository and vice versa. PRs accepted on Github for these files will be directled synced into our private repository will end up on FilterBlade during the next push.
 
+When contributing, please verify your new option file is working correctly by uploading it on FilterBlade -> Advanced -> Upload filter -> Upload Option File, and checking the customizer sections you changed. Taking a look into the F12 browser dev tool console is also often helpful here.
+
 Sections in this file are annoted with
 
 ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) for "Safe to edit" - little to no technical risk.
