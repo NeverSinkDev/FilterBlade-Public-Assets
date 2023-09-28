@@ -907,6 +907,7 @@ Chapter() {
         }
 
         Section("Quest Contracts", "HeistContract") {
+            Warning("Quest Contracts Can't Be Hidden!");
             QuickUI([0.0, "Heist Quest Contracts", "questlikeexception;questheist"], "S", []);
         }
 
