@@ -3149,7 +3149,7 @@
 					"items": {
 						"Tabula Rasa": {
 							"//comment": "COMMENT: the text property below provides infos about an individual unique",
-							"text": "This is ",
+							"text": "Appearance of Tabula is not affected by this. It is overridden in exceptions. Click the link for more information.",
 							"hideInHoverBox": false,
 							"ruleLink": {
 								"entryName": "Unique Exception: Tabula Rasa",
@@ -5114,7 +5114,9 @@
 							"priority": -8
 						},
 						"Ngamahu Tiki": {
-							"hideInHoverBox": true
+							"text": "this is an alternate art version of the item and it cannot drop. if you see this something went wrong.",
+							"hideInHoverBox": true,
+							"priority": -100
 						}
 					}
 				},
