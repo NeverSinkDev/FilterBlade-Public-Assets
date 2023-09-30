@@ -3149,13 +3149,13 @@
 					"items": {
 						"Tabula Rasa": {
 							"//comment": "COMMENT: the text property below provides infos about an individual unique",
-							"text": "Tabula Rasa is excluded. It is an exception due to its always 6 white linked sockets.",
+							"text": "This is ",
 							"hideInHoverBox": false,
 							"ruleLink": {
 								"entryName": "Unique Exception: Tabula Rasa",
 								"text": "Link to exception rule"
 							},
-							"priority": -1
+							"priority": -9
 						}
 					}
 				},
@@ -3163,7 +3163,8 @@
 					"text": null,
 					"items": {
 						"The Squire": {
-							"text": "Detected via a special rule (using the 3 white sockets)! The oppressor can be safely hidden in the unique tierlist."
+							"text": "Detected via a special rule (using the 3 white sockets)! The oppressor can be safely hidden in the unique tierlist.",
+							"priority": -9
 						}
 					}
 				},
@@ -3171,10 +3172,12 @@
 					"text": null,
 					"items": {
 						"Duskdawn": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						},
 						"Disintegrator": {
-							"text": "Drops from The Uber Elder."
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
 						}
 					}
 				},
@@ -3182,10 +3185,12 @@
 					"text": null,
 					"items": {
 						"United in Dream": {
-							"text": "Drops from Chayula's Flawless Breachstone."
+							"text": "Drops from Chayula's Flawless Breachstone.",
+							"priority": -5
 						},
 						"Severed in Sleep": {
-							"text": "Drops from Chayula's Breach or Breachstone."
+							"text": "Drops from Chayula's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -3193,7 +3198,8 @@
 					"text": null,
 					"items": {
 						"Relic of the Pact": {
-							"text": "Drops from The Trialmaster."
+							"text": "Drops from The Trialmaster.",
+							"priority": -5
 						}
 					}
 				},
@@ -3201,7 +3207,8 @@
 					"text": null,
 					"items": {
 						"Arborix": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -3209,13 +3216,16 @@
 					"text": null,
 					"items": {
 						"Atziri's Disfavour": {
-							"text": "Drops from Uber Atziri."
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
 						},
 						"Uul-Netol's Embrace": {
-							"text": "Drops from Uul-Netol's Flawless Breachstone."
+							"text": "Drops from Uul-Netol's Flawless Breachstone.",
+							"priority": -5
 						},
 						"Uul-Netol's Kiss": {
-							"text": "Drops from Uul-Netol's Breach or Breachstone."
+							"text": "Drops from Uul-Netol's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -3223,10 +3233,12 @@
 					"text": null,
 					"items": {
 						"Doryani's Catalyst": {
-							"text": "Drops from Atziri."
+							"text": "Drops from Atziri.",
+							"priority": -5
 						},
 						"Yaomac's Accord": {
-							"text": "Drops from The Trialmaster."
+							"text": "Drops from The Trialmaster.",
+							"priority": -5
 						}
 					}
 				},
@@ -3234,13 +3246,16 @@
 					"text": null,
 					"items": {
 						"Starforge": {
-							"text": "Overridden in Exceptions. Drops from The Shaper."
+							"text": "Overridden in Exceptions. Drops from The Shaper.",
+							"priority": -9
 						},
 						"Voidforge": {
-							"text": "Overridden in Exceptions. Drops from The Uber Elder."
+							"text": "Overridden in Exceptions. Drops from The Uber Elder.",
+							"priority": -9
 						},
 						"Echoforge": {
-							"text": "Drops from The Maven."
+							"text": "Drops from The Maven.",
+							"priority": -5
 						}
 					}
 				},
@@ -3248,10 +3263,12 @@
 					"text": null,
 					"items": {
 						"Pledge of Hands": {
-							"text": "Drops from Atziri."
+							"text": "Drops from Atziri.",
+							"priority": -5
 						},
 						"Atziri's Rule": {
-							"text": "Drops from Uber Atziri."
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
 						}
 					}
 				},
@@ -3259,10 +3276,12 @@
 					"text": null,
 					"items": {
 						"Fate of the Vaal": {
-							"text": "Does not drop. Created with a Vial."
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
 						},
 						"Story of the Vaal": {
-							"text": "Drops from the Crucible of Flame in the Temple of Atzoatl."
+							"text": "Drops from the Crucible of Flame in the Temple of Atzoatl.",
+							"priority": -3
 						}
 					}
 				},
@@ -3270,7 +3289,8 @@
 					"text": null,
 					"items": {
 						"Witchhunter's Judgment": {
-							"text": "Drops from Oshabi (Harvest Boss)."
+							"text": "Drops from Oshabi (Harvest Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3278,7 +3298,8 @@
 					"text": null,
 					"items": {
 						"Kingmaker": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -3286,13 +3307,16 @@
 					"text": null,
 					"items": {
 						"The Rippling Thoughts": {
-							"text": "Does not drop. Created from Harbinger Pieces."
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
 						},
 						"The Surging Thoughts": {
-							"text": "Does not drop. Created by upgrading Rippling Thoughts via scroll."
+							"text": "Does not drop. Created by upgrading Rippling Thoughts via scroll.",
+							"priority": -10
 						},
 						"The Saviour": {
-							"text": "Drops from Sirus."
+							"text": "Drops from Sirus.",
+							"priority": -5
 						}
 					}
 				},
@@ -3300,10 +3324,12 @@
 					"text": null,
 					"items": {
 						"Hand of Wisdom and Action": {
-							"text": "Drops from Esh's Flawless Breachstone."
+							"text": "Drops from Esh's Flawless Breachstone.",
+							"priority": -5
 						},
 						"Hand of Thought and Motion": {
-							"text": "Drops from Esh's Breach or Breachstone."
+							"text": "Drops from Esh's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -3311,7 +3337,8 @@
 					"text": null,
 					"items": {
 						"Paradoxica": {
-							"text": "Drops from Syndicate Safehouse (Jun)."
+							"text": "Drops from Syndicate Safehouse (Jun).",
+							"priority": -3
 						}
 					}
 				},
@@ -3319,7 +3346,8 @@
 					"text": null,
 					"items": {
 						"The Goddess Scorned": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -3327,7 +3355,8 @@
 					"text": null,
 					"items": {
 						"Cameria's Avarice": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -3335,7 +3364,8 @@
 					"text": null,
 					"items": {
 						"Cerberus Limb": {
-							"text": "Drops from Ahuatotli (Delve)."
+							"text": "Drops from Ahuatotli (Delve).",
+							"priority": -5
 						}
 					}
 				},
@@ -3343,10 +3373,12 @@
 					"text": null,
 					"items": {
 						"The Enmity Divine": {
-							"text": "Does not drop. Created from Harbinger Pieces."
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
 						},
 						"The Yielding Mortality": {
-							"text": "Does not drop. Created by upgrading Enmity Divine via scroll."
+							"text": "Does not drop. Created by upgrading Enmity Divine via scroll.",
+							"priority": -10
 						}
 					}
 				},
@@ -3354,7 +3386,8 @@
 					"text": null,
 					"items": {
 						"The Fulcrum": {
-							"text": "Found in a Curio Display in Heist."
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
 						}
 					}
 				},
@@ -3362,7 +3395,8 @@
 					"text": null,
 					"items": {
 						"Shimmeron": {
-							"text": "Drops from The Elder."
+							"text": "Drops from The Elder.",
+							"priority": -5
 						}
 					}
 				},
@@ -3370,7 +3404,8 @@
 					"text": null,
 					"items": {
 						"Nebuloch": {
-							"text": "Drops from The Elder."
+							"text": "Drops from The Elder.",
+							"priority": -5
 						}
 					}
 				},
@@ -3378,7 +3413,8 @@
 					"text": null,
 					"items": {
 						"The Crimson Storm": {
-							"text": "Drops from Syndicate Safehouse (Jun)."
+							"text": "Drops from Syndicate Safehouse (Jun).",
+							"priority": -3
 						}
 					}
 				},
@@ -3386,7 +3422,8 @@
 					"text": null,
 					"items": {
 						"Xirgil's Crank": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
 						}
 					}
 				},
@@ -3394,13 +3431,16 @@
 					"text": null,
 					"items": {
 						"The Gluttonous Tide": {
-							"text": "Drops from The Eater of Worlds."
+							"text": "Drops from The Eater of Worlds.",
+							"priority": -5
 						},
 						"Xoph's Nurture": {
-							"text": "Drops from Xoph's Flawless Breachstone."
+							"text": "Drops from Xoph's Flawless Breachstone.",
+							"priority": -5
 						},
 						"Xoph's Inception": {
-							"text": "Drops from Xoph's Breach or Breachstone."
+							"text": "Drops from Xoph's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -3408,7 +3448,8 @@
 					"text": null,
 					"items": {
 						"Law of the Wilds": {
-							"text": "Drops from Oshabi (Harvest Boss)."
+							"text": "Drops from Oshabi (Harvest Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3416,7 +3457,8 @@
 					"text": null,
 					"items": {
 						"Hopeshredder": {
-							"text": "Drops from The Elder."
+							"text": "Drops from The Elder.",
+							"priority": -5
 						}
 					}
 				},
@@ -3424,7 +3466,8 @@
 					"text": null,
 					"items": {
 						"Nebulis": {
-							"text": "Drops from Cortex."
+							"text": "Drops from Cortex.",
+							"priority": -5
 						}
 					}
 				},
@@ -3432,10 +3475,12 @@
 					"text": null,
 					"items": {
 						"Tulfall": {
-							"text": "Drops from Tul's Flawless Breachstone."
+							"text": "Drops from Tul's Flawless Breachstone.",
+							"priority": -5
 						},
 						"Tulborn": {
-							"text": "Drops from Tul's Breach or Breachstone."
+							"text": "Drops from Tul's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -3443,7 +3488,8 @@
 					"text": null,
 					"items": {
 						"The Iron Mass": {
-							"text": "Found in a Curio Display in Heist."
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
 						}
 					}
 				},
@@ -3451,7 +3497,8 @@
 					"text": null,
 					"items": {
 						"The Hidden Blade": {
-							"text": "Found in a Curio Display in Heist."
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
 						}
 					}
 				},
@@ -3459,7 +3506,8 @@
 					"text": null,
 					"items": {
 						"Cane of Kulemak": {
-							"text": "Drops from Catarina (Jun Boss)."
+							"text": "Drops from Catarina (Jun Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3467,10 +3515,12 @@
 					"text": null,
 					"items": {
 						"Soul Ripper": {
-							"text": "Does not drop. Created with a Vial (Alva Temple)."
+							"text": "Does not drop. Created with a Vial (Alva Temple).",
+							"priority": -10
 						},
 						"Soul Catcher": {
-							"text": "Drops from The Vaal Omnitect (Alva Temple)."
+							"text": "Drops from The Vaal Omnitect (Alva Temple).",
+							"priority": -5
 						}
 					}
 				},
@@ -3478,7 +3528,8 @@
 					"text": null,
 					"items": {
 						"Bottled Faith": {
-							"text": "Drops from Cortex."
+							"text": "Drops from Cortex.",
+							"priority": -5
 						}
 					}
 				},
@@ -3486,10 +3537,12 @@
 					"text": null,
 					"items": {
 						"Dying Sun": {
-							"text": "Drops from The Shaper."
+							"text": "Drops from The Shaper.",
+							"priority": -5
 						},
 						"Coruscating Elixir": {
-							"text": "Does not drop. Obtained from a Divination Card set."
+							"text": "Does not drop. Obtained from a Divination Card set.",
+							"priority": -10
 						}
 					}
 				},
@@ -3497,7 +3550,8 @@
 					"text": null,
 					"items": {
 						"Cinderswallow Urn": {
-							"text": "Drops from Catarina (Jun Boss)."
+							"text": "Drops from Catarina (Jun Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3505,7 +3559,8 @@
 					"text": null,
 					"items": {
 						"Oriath's End": {
-							"text": "Drops from Sirus."
+							"text": "Drops from Sirus.",
+							"priority": -5
 						}
 					}
 				},
@@ -3513,7 +3568,8 @@
 					"text": null,
 					"items": {
 						"Vessel of Vinktar": {
-							"text": "Drops from The Vinktar Square."
+							"text": "Drops from The Vinktar Square.",
+							"priority": -5
 						}
 					}
 				},
@@ -3521,10 +3577,12 @@
 					"text": null,
 					"items": {
 						"Atziri's Promise": {
-							"text": "Drops from Atziri."
+							"text": "Drops from Atziri.",
+							"priority": -5
 						},
 						"Progenesis": {
-							"text": "Drops from The Uber Maven."
+							"text": "Drops from The Uber Maven.",
+							"priority": -5
 						}
 					}
 				},
@@ -3532,7 +3590,8 @@
 					"text": null,
 					"items": {
 						"Atziri's Reflection": {
-							"text": "Drops from Uber Atziri."
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
 						}
 					}
 				},
@@ -3540,7 +3599,8 @@
 					"text": null,
 					"items": {
 						"Farrul's Fur": {
-							"text": "Drops from Farrul (Einhar Boss)."
+							"text": "Drops from Farrul (Einhar Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3548,7 +3608,8 @@
 					"text": null,
 					"items": {
 						"Doppelgänger Guise": {
-							"text": "Drops from The Maven."
+							"text": "Drops from The Maven.",
+							"priority": -5
 						}
 					}
 				},
@@ -3556,7 +3617,8 @@
 					"text": null,
 					"items": {
 						"Atziri's Acuity": {
-							"text": "Drops from Uber Atziri."
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
 						}
 					}
 				},
@@ -3564,7 +3626,8 @@
 					"text": null,
 					"items": {
 						"Tombfist": {
-							"text": "Drops from Abyssal Depths."
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
 						}
 					}
 				},
@@ -3572,16 +3635,20 @@
 					"text": null,
 					"items": {
 						"Apep's Supremacy": {
-							"text": "Does not drop. Created with a Vial (Alva Temple)."
+							"text": "Does not drop. Created with a Vial (Alva Temple).",
+							"priority": -10
 						},
 						"Apep's Slumber": {
-							"text": "Drops from the Cultivar Chamber in the Temple of Atzoatl."
+							"text": "Drops from the Cultivar Chamber in the Temple of Atzoatl.",
+							"priority": -3
 						},
 						"Esh's Visage": {
-							"text": "Drops from Esh's Flawless Breachstone."
+							"text": "Drops from Esh's Flawless Breachstone.",
+							"priority": -5
 						},
 						"Esh's Mirror": {
-							"text": "Drops from Esh's Breach or Breachstone."
+							"text": "Drops from Esh's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -3589,10 +3656,12 @@
 					"text": null,
 					"items": {
 						"The Eternity Shroud": {
-							"text": "Drops from The Uber Elder."
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
 						},
 						"Saqawal's Nest": {
-							"text": "Drops from Saqawal (Einhar Boss)."
+							"text": "Drops from Saqawal (Einhar Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3600,7 +3669,8 @@
 					"text": null,
 					"items": {
 						"Atziri's Splendour": {
-							"text": "Drops from Uber Atziri."
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
 						}
 					}
 				},
@@ -3608,10 +3678,12 @@
 					"text": null,
 					"items": {
 						"Bubonic Trail": {
-							"text": "Drops from Abyssal Depths."
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
 						},
 						"Voidwalker": {
-							"text": "Drops from The Shaper."
+							"text": "Drops from The Shaper.",
+							"priority": -5
 						}
 					}
 				},
@@ -3619,10 +3691,12 @@
 					"text": null,
 					"items": {
 						"Shroud of the Lightless": {
-							"text": "Drops from Abyssal Depths."
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
 						},
 						"Stasis Prison": {
-							"text": "Drops from the Unrelenging Timeless Emblem."
+							"text": "Drops from the Unrelenging Timeless Emblem.",
+							"priority": -5
 						}
 					}
 				},
@@ -3630,10 +3704,12 @@
 					"text": null,
 					"items": {
 						"Doryani's Delusion": {
-							"text": "Drops in Doryani's Machinarium."
+							"text": "Drops in Doryani's Machinarium.",
+							"priority": -8
 						},
 						"Steppan Eard": {
-							"text": "Drops from Renegades Warband."
+							"text": "Drops from Renegades Warband.",
+							"priority": -1
 						}
 					}
 				},
@@ -3641,7 +3717,8 @@
 					"text": null,
 					"items": {
 						"Command of the Pit": {
-							"text": "Drops from Kurgal (Delve Boss)."
+							"text": "Drops from Kurgal (Delve Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3649,7 +3726,8 @@
 					"text": null,
 					"items": {
 						"Death's Door": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
 						}
 					}
 				},
@@ -3657,7 +3735,8 @@
 					"text": null,
 					"items": {
 						"Offering to the Serpent": {
-							"text": "Drops from Cortex."
+							"text": "Drops from Cortex.",
+							"priority": -5
 						}
 					}
 				},
@@ -3665,10 +3744,12 @@
 					"text": null,
 					"items": {
 						"Lightpoacher": {
-							"text": "Drops from Abyssal Depths."
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
 						},
 						"Forbidden Shako": {
-							"text": "Drops from Oshabi (Harvest Boss)."
+							"text": "Drops from Oshabi (Harvest Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3676,19 +3757,24 @@
 					"text": null,
 					"items": {
 						"Crown of the Tyrant": {
-							"text": "Drops from Aul (Delve Boss)."
+							"text": "Drops from Aul (Delve Boss).",
+							"priority": -5
 						},
 						"Mask of the Stitched Demon": {
-							"text": "Does not drop. Created with a Vial (Alva Temple)."
+							"text": "Does not drop. Created with a Vial (Alva Temple).",
+							"priority": -10
 						},
 						"Mask of the Spirit Drinker": {
-							"text": "Drops from the Sanctum of Immortality in the Temple of Atzoatl."
+							"text": "Drops from the Sanctum of Immortality in the Temple of Atzoatl.",
+							"priority": -3
 						},
 						"Mask of the Tribunal": {
-							"text": "Drops from a Distant Memory boss."
+							"text": "Drops from a Distant Memory boss.",
+							"priority": -5
 						},
 						"Craiceann's Chitin": {
-							"text": "Drops from Craiceann (Einhar Boss)."
+							"text": "Drops from Craiceann (Einhar Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3696,10 +3782,12 @@
 					"text": null,
 					"items": {
 						"The Tempest's Binding": {
-							"text": "Does not drop. Created from Harbinger Pieces."
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
 						},
 						"The Tempest's Liberation": {
-							"text": "Does not drop. Created by upgrading Tempest's Binding via scroll."
+							"text": "Does not drop. Created by upgrading Tempest's Binding via scroll.",
+							"priority": -10
 						}
 					}
 				},
@@ -3707,13 +3795,16 @@
 					"text": null,
 					"items": {
 						"The Devouring Diadem": {
-							"text": "Drops from Catarina (Jun Boss)."
+							"text": "Drops from Catarina (Jun Boss).",
+							"priority": -5
 						},
 						"Fenumus' Toxins": {
-							"text": "Drops from Fenumus (Einhar Boss)."
+							"text": "Drops from Fenumus (Einhar Boss).",
+							"priority": -5
 						},
 						"Sandstorm Visage": {
-							"text": "Drops from Lycia with corresponding relic equipped."
+							"text": "Drops from Lycia with corresponding relic equipped.",
+							"priority": -8
 						}
 					}
 				},
@@ -3721,7 +3812,8 @@
 					"text": null,
 					"items": {
 						"Loreweave": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -3729,10 +3821,12 @@
 					"text": null,
 					"items": {
 						"The Surrender": {
-							"text": "Drops from Uul-Netol's Flawless Breachstone."
+							"text": "Drops from Uul-Netol's Flawless Breachstone.",
+							"priority": -5
 						},
 						"The Anticipation": {
-							"text": "Drops from Uul-Netol's Breach or Breachstone."
+							"text": "Drops from Uul-Netol's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -3740,13 +3834,16 @@
 					"text": null,
 					"items": {
 						"Slavedriver's Hand": {
-							"text": "Does not drop. Created with a Vial."
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
 						},
 						"Architect's Hand": {
-							"text": "Drops from the Defense Research Lab in the Temple of Atzoatl."
+							"text": "Drops from the Defense Research Lab in the Temple of Atzoatl.",
+							"priority": -3
 						},
 						"Abhorrent Interrogation": {
-							"text": "Drops from Oshabi (Harvest Boss)."
+							"text": "Drops from Oshabi (Harvest Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3754,7 +3851,8 @@
 					"text": null,
 					"items": {
 						"Fenumus' Shroud": {
-							"text": "Drops from Fenumus (Einhar Boss)."
+							"text": "Drops from Fenumus (Einhar Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3762,10 +3860,12 @@
 					"text": null,
 					"items": {
 						"Omeyocan": {
-							"text": "Does not drop. Created with a Vial (Alva Temple)."
+							"text": "Does not drop. Created with a Vial (Alva Temple).",
+							"priority": -10
 						},
 						"Dance of the Offered": {
-							"text": "Drops from the Lightning Workshop in the Temple of Atzoatl."
+							"text": "Drops from the Lightning Workshop in the Temple of Atzoatl.",
+							"priority": -3
 						}
 					}
 				},
@@ -3773,7 +3873,8 @@
 					"text": null,
 					"items": {
 						"Indigon": {
-							"text": "Drops from The Uber Elder."
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
 						}
 					}
 				},
@@ -3781,19 +3882,24 @@
 					"text": null,
 					"items": {
 						"Invictus Solaris": {
-							"text": "Drops from the Twilight Temple."
+							"text": "Drops from the Twilight Temple.",
+							"priority": -8
 						},
 						"Unyielding Flame": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
 						},
 						"Broken Faith": {
-							"text": "Drops from Renegades Warband."
+							"text": "Drops from Renegades Warband.",
+							"priority": -1
 						},
 						"The Unshattered Will": {
-							"text": "Does not drop. Created from Harbinger Pieces."
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
 						},
 						"The Immortal Will": {
-							"text": "Does not drop. Created with a Scroll."
+							"text": "Does not drop. Created with a Scroll.",
+							"priority": -10
 						}
 					}
 				},
@@ -3801,7 +3907,8 @@
 					"text": null,
 					"items": {
 						"Craiceann's Carapace": {
-							"text": "Drops from Craiceann (Einhar Boss)."
+							"text": "Drops from Craiceann (Einhar Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3809,10 +3916,12 @@
 					"text": null,
 					"items": {
 						"Fenumus' Weave": {
-							"text": "Drops from Fenumus (Einhar Boss)."
+							"text": "Drops from Fenumus (Einhar Boss).",
+							"priority": -5
 						},
 						"Soul Ascension": {
-							"text": "Drops from The Uber Uber Elder."
+							"text": "Drops from The Uber Uber Elder.",
+							"priority": -5
 						}
 					}
 				},
@@ -3820,13 +3929,16 @@
 					"text": null,
 					"items": {
 						"The Red Trail": {
-							"text": "Drops from Uul-Netol's Flawless Breachstone."
+							"text": "Drops from Uul-Netol's Flawless Breachstone.",
+							"priority": -5
 						},
 						"The Infinite Pursuit": {
-							"text": "Drops from Uul-Netol's Breach or Breachstone."
+							"text": "Drops from Uul-Netol's Breach or Breachstone.",
+							"priority": -3
 						},
 						"Doryani's Delusion": {
-							"text": "Drops in Doryani's Machinarium."
+							"text": "Drops in Doryani's Machinarium.",
+							"priority": -8
 						}
 					}
 				},
@@ -3834,7 +3946,8 @@
 					"text": null,
 					"items": {
 						"The Vertex": {
-							"text": "Drops from Uber Atziri."
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
 						}
 					}
 				},
@@ -3842,7 +3955,8 @@
 					"text": null,
 					"items": {
 						"Brinerot Flag": {
-							"text": "Drops from Brinerot Warband."
+							"text": "Drops from Brinerot Warband.",
+							"priority": -1
 						}
 					}
 				},
@@ -3850,10 +3964,12 @@
 					"text": null,
 					"items": {
 						"The Perfect Form": {
-							"text": "Drops from Tul's Flawless Breachstone."
+							"text": "Drops from Tul's Flawless Breachstone.",
+							"priority": -5
 						},
 						"The Snowblind Grace": {
-							"text": "Drops from Tul's Breach or Breachstone."
+							"text": "Drops from Tul's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -3861,10 +3977,12 @@
 					"text": null,
 					"items": {
 						"The Fracturing Spinner": {
-							"text": "Does not drop. Created from Harbinger Pieces."
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
 						},
 						"The Shattered Divinity": {
-							"text": "Does not drop. Created by upgrading Fracturing Spinner with a Scroll."
+							"text": "Does not drop. Created by upgrading Fracturing Spinner with a Scroll.",
+							"priority": -10
 						}
 					}
 				},
@@ -3872,7 +3990,8 @@
 					"text": null,
 					"items": {
 						"Magna Eclipsis": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -3880,7 +3999,8 @@
 					"text": null,
 					"items": {
 						"Farrul's Bite": {
-							"text": "Drops from Farrul (Einhar Boss)."
+							"text": "Drops from Farrul (Einhar Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3888,7 +4008,8 @@
 					"text": null,
 					"items": {
 						"Crown of the Inward Eye": {
-							"text": "Drops from Sirus."
+							"text": "Drops from Sirus.",
+							"priority": -5
 						}
 					}
 				},
@@ -3896,7 +4017,8 @@
 					"text": null,
 					"items": {
 						"The Queen's Hunger": {
-							"text": "Drops from Catarina (Jun Boss)."
+							"text": "Drops from Catarina (Jun Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -3904,10 +4026,12 @@
 					"text": null,
 					"items": {
 						"Cloak of Tawm'r Isley": {
-							"text": "Drops from Elreon's chest in a Syndicate Safehouse."
+							"text": "Drops from Elreon's chest in a Syndicate Safehouse.",
+							"priority": -3
 						},
 						"Garb of the Ephemeral": {
-							"text": "Drops from Cortex."
+							"text": "Drops from Cortex.",
+							"priority": -5
 						}
 					}
 				},
@@ -3915,10 +4039,12 @@
 					"text": null,
 					"items": {
 						"Fenumus' Spinnerets": {
-							"text": "Drops from Fenumus (Einhar Boss)."
+							"text": "Drops from Fenumus (Einhar Boss).",
+							"priority": -5
 						},
 						"The Stampede": {
-							"text": "Drops in Blighted Maps."
+							"text": "Drops in Blighted Maps.",
+							"priority": -5
 						}
 					}
 				},
@@ -3926,7 +4052,8 @@
 					"text": null,
 					"items": {
 						"The Admiral": {
-							"text": "Drops from Admiral Darnaw (Unique Heist Contract Boss)"
+							"text": "Drops from Admiral Darnaw (Unique Heist Contract Boss)",
+							"priority": -8
 						}
 					}
 				},
@@ -3934,10 +4061,12 @@
 					"text": null,
 					"items": {
 						"Shaper's Touch": {
-							"text": "Drops from The Shaper."
+							"text": "Drops from The Shaper.",
+							"priority": -5
 						},
 						"Hands of the High Templar": {
-							"text": "Drops from Sirus."
+							"text": "Drops from Sirus.",
+							"priority": -5
 						}
 					}
 				},
@@ -3945,10 +4074,12 @@
 					"text": null,
 					"items": {
 						"Winds of Change": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
 						},
 						"Hateforge": {
-							"text": "Drops from The Trialmaster."
+							"text": "Drops from The Trialmaster.",
+							"priority": -5
 						}
 					}
 				},
@@ -3956,13 +4087,16 @@
 					"text": null,
 					"items": {
 						"Farrul's Chase": {
-							"text": "Drops from Farrul (Einhar Boss)."
+							"text": "Drops from Farrul (Einhar Boss).",
+							"priority": -5
 						},
 						"Doryani's Delusion": {
-							"text": "Drops in Doryani's Machinarium."
+							"text": "Drops in Doryani's Machinarium.",
+							"priority": -8
 						},
 						"Atziri's Step": {
-							"text": "Drops from Atziri."
+							"text": "Drops from Atziri.",
+							"priority": -5
 						}
 					}
 				},
@@ -3970,10 +4104,12 @@
 					"text": null,
 					"items": {
 						"Farrul's Pounce": {
-							"text": "Drops from Farrul (Einhar Boss)."
+							"text": "Drops from Farrul (Einhar Boss).",
+							"priority": -5
 						},
 						"Breathstealer": {
-							"text": "Drops in Blighted Maps."
+							"text": "Drops in Blighted Maps.",
+							"priority": -5
 						}
 					}
 				},
@@ -3981,13 +4117,16 @@
 					"text": null,
 					"items": {
 						"The Formless Inferno": {
-							"text": "Drops from Xoph's Flawless Breachstone."
+							"text": "Drops from Xoph's Flawless Breachstone.",
+							"priority": -5
 						},
 						"The Formless Flame": {
-							"text": "Drops from Xoph's Breach or Breachstone."
+							"text": "Drops from Xoph's Breach or Breachstone.",
+							"priority": -3
 						},
 						"Echoes of Creation": {
-							"text": "Drops from The Shaper."
+							"text": "Drops from The Shaper.",
+							"priority": -5
 						}
 					}
 				},
@@ -3995,7 +4134,8 @@
 					"text": null,
 					"items": {
 						"Hand of the Fervent": {
-							"text": "Does not drop. Sold in Ritual."
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
 						}
 					}
 				},
@@ -4003,7 +4143,8 @@
 					"text": null,
 					"items": {
 						"Vix Lunaris": {
-							"text": "Drops from the Twilight Temple."
+							"text": "Drops from the Twilight Temple.",
+							"priority": -8
 						}
 					}
 				},
@@ -4011,7 +4152,8 @@
 					"text": null,
 					"items": {
 						"Hale Negator": {
-							"text": "Drops from Kurgal (Delve Boss)."
+							"text": "Drops from Kurgal (Delve Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4019,7 +4161,8 @@
 					"text": null,
 					"items": {
 						"Craiceann's Tracks": {
-							"text": "Drops from Craiceann (Einhar Boss)."
+							"text": "Drops from Craiceann (Einhar Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4027,7 +4170,8 @@
 					"text": null,
 					"items": {
 						"Cowl of the Thermophile": {
-							"text": "Drops from Blighted Maps."
+							"text": "Drops from Blighted Maps.",
+							"priority": -5
 						}
 					}
 				},
@@ -4035,7 +4179,8 @@
 					"text": null,
 					"items": {
 						"Bitterbind Point": {
-							"text": "Drops from Catarina (Jun Boss)."
+							"text": "Drops from Catarina (Jun Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4043,10 +4188,12 @@
 					"text": null,
 					"items": {
 						"Saqawal's Flock": {
-							"text": "Drops from Saqawal (Einhar Boss)."
+							"text": "Drops from Saqawal (Einhar Boss).",
+							"priority": -5
 						},
 						"Cowl of the Cryophile": {
-							"text": "Drops from Blighted Map."
+							"text": "Drops from Blighted Map.",
+							"priority": -5
 						}
 					}
 				},
@@ -4054,7 +4201,8 @@
 					"text": null,
 					"items": {
 						"Viridi's Veil": {
-							"text": "Drops from The Maven."
+							"text": "Drops from The Maven.",
+							"priority": -5
 						}
 					}
 				},
@@ -4062,7 +4210,8 @@
 					"text": null,
 					"items": {
 						"Saqawal's Talons": {
-							"text": "Drops from Saqawal (Einhar Boss)."
+							"text": "Drops from Saqawal (Einhar Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4070,7 +4219,8 @@
 					"text": null,
 					"items": {
 						"Saqawal's Winds": {
-							"text": "Drops from Saqawal (Einhar Boss)."
+							"text": "Drops from Saqawal (Einhar Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4078,7 +4228,8 @@
 					"text": null,
 					"items": {
 						"Craiceann's Pincers": {
-							"text": "Drops from Craiceann (Einhar Boss)."
+							"text": "Drops from Craiceann (Einhar Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4086,7 +4237,9 @@
 					"text": null,
 					"items": {
 						"Brinerot Whalers": {
-							"text": "Drops from Brinerot Warband."
+							"text": "Drops from Brinerot Warband.",
+							"priority": -1
+							
 						}
 					}
 				},
@@ -4094,7 +4247,8 @@
 					"text": null,
 					"items": {
 						"Cowl of the Ceraunophile": {
-							"text": "Drops from Blighted Map."
+							"text": "Drops from Blighted Map.",
+							"priority": -5
 						}
 					}
 				},
@@ -4102,7 +4256,8 @@
 					"text": null,
 					"items": {
 						"Font of Thunder": {
-							"text": "Found in a Curio Display in Heist."
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
 						}
 					}
 				},
@@ -4110,10 +4265,12 @@
 					"text": null,
 					"items": {
 						"Gorgon's Gaze": {
-							"text": "Drops from Pillars of Arun boss."
+							"text": "Drops from Pillars of Arun boss.",
+							"priority": -5
 						},
 						"Akoya's Gaze": {
-							"text": "Reward from Tukohama tribe in Trial of the Ancestors"
+							"text": "Reward from Tukohama tribe in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4121,7 +4278,8 @@
 					"text": null,
 					"items": {
 						"Annihilation's Approach": {
-							"text": "Drops from The Uber Searing Exarch."
+							"text": "Drops from The Uber Searing Exarch.",
+							"priority": -5
 						}
 					}
 				},
@@ -4129,7 +4287,8 @@
 					"text": null,
 					"items": {
 						"Mutewind Pennant": {
-							"text": "Drops from Mutewind Warband."
+							"text": "Drops from Mutewind Warband.",
+							"priority": -1
 						}
 					}
 				},
@@ -4137,7 +4296,8 @@
 					"text": null,
 					"items": {
 						"Mutewind Whispersteps": {
-							"text": "Drops from Mutewind Warband."
+							"text": "Drops from Mutewind Warband.",
+							"priority": -1
 						}
 					}
 				},
@@ -4145,7 +4305,8 @@
 					"text": null,
 					"items": {
 						"Steelworm": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
 						}
 					}
 				},
@@ -4153,7 +4314,8 @@
 					"text": null,
 					"items": {
 						"Redblade Banner": {
-							"text": "Drops from Redblade Warband."
+							"text": "Drops from Redblade Warband.",
+							"priority": -1
 						}
 					}
 				},
@@ -4161,10 +4323,12 @@
 					"text": null,
 					"items": {
 						"Redblade Tramplers": {
-							"text": "Drops from Redblade Warband."
+							"text": "Drops from Redblade Warband.",
+							"priority": -1
 						},
 						"Kahuturoa's Certainty": {
-							"text": "Reward from Rongokurai tribe in Trial of the Ancestors"
+							"text": "Reward from Rongokurai tribe in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4172,13 +4336,16 @@
 					"text": null,
 					"items": {
 						"Blasphemer's Grasp": {
-							"text": "Drops from The Elder."
+							"text": "Drops from The Elder.",
+							"priority": -5
 						},
 						"Storm's Gift": {
-							"text": "Drops from a Distant Memory boss."
+							"text": "Drops from a Distant Memory boss.",
+							"priority": -5
 						},
 						"Entropic Devastation": {
-							"text": "Drops from The Uber Shaper."
+							"text": "Drops from The Uber Shaper.",
+							"priority": -5
 						}
 					}
 				},
@@ -4186,7 +4353,8 @@
 					"text": null,
 					"items": {
 						"Dawnbreaker": {
-							"text": "Drops from The Searing Exarch."
+							"text": "Drops from The Searing Exarch.",
+							"priority": -5
 						}
 					}
 				},
@@ -4194,7 +4362,8 @@
 					"text": null,
 					"items": {
 						"Expedition's End": {
-							"text": "Found in a Curio Display in Heist."
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -5
 						}
 					}
 				},
@@ -4202,7 +4371,8 @@
 					"text": null,
 					"items": {
 						"Plume of Pursuit": {
-							"text": "Drops from Janaar (Harvest Boss)."
+							"text": "Drops from Janaar (Harvest Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4210,7 +4380,8 @@
 					"text": null,
 					"items": {
 						"The Scales of Justice": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
 						}
 					}
 				},
@@ -4218,7 +4389,8 @@
 					"text": null,
 					"items": {
 						"Temptation Step": {
-							"text": "Drops from The Trialmaster."
+							"text": "Drops from The Trialmaster.",
+							"priority": -5
 						}
 					}
 				},
@@ -4226,7 +4398,8 @@
 					"text": null,
 					"items": {
 						"The Fledgling": {
-							"text": "Drops from Nashta (Unique Heist Contract Boss)."
+							"text": "Drops from Nashta (Unique Heist Contract Boss).",
+							"priority": -8
 						}
 					}
 				},
@@ -4234,13 +4407,16 @@
 					"text": null,
 					"items": {
 						"Hyperboreus": {
-							"text": "Drops from Syndicate Safehouse."
+							"text": "Drops from Syndicate Safehouse.",
+							"priority": -3
 						},
 						"Cyclopean Coil": {
-							"text": "Drops from The Elder."
+							"text": "Drops from The Elder.",
+							"priority": -5
 						},
 						"Bear's Girdle": {
-							"text": "Drops from Ersi (Harvest Boss)."
+							"text": "Drops from Ersi (Harvest Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4248,13 +4424,16 @@
 					"text": null,
 					"items": {
 						"Zerphi's Heart": {
-							"text": "Does not drop. Created with a Vial."
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
 						},
 						"Sacrificial Heart": {
-							"text": "Drops from The Vaal Omnitect."
+							"text": "Drops from The Vaal Omnitect.",
+							"priority": -5
 						},
 						"Defiance of Destiny": {
-							"text": "Reward for completing a tournament in Trial of the Ancestors"
+							"text": "Reward for completing a tournament in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4262,10 +4441,12 @@
 					"text": null,
 					"items": {
 						"The Pandemonius": {
-							"text": "Drops from Tul's Flawless Breachstone."
+							"text": "Drops from Tul's Flawless Breachstone.",
+							"priority": -5
 						},
 						"The Halcyon": {
-							"text": "Drops from Tul's Breach or Breachstone."
+							"text": "Drops from Tul's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -4273,10 +4454,12 @@
 					"text": null,
 					"items": {
 						"Xoph's Blood": {
-							"text": "Drops from Xoph's Flawless Breachstone."
+							"text": "Drops from Xoph's Flawless Breachstone.",
+							"priority": -5
 						},
 						"Xoph's Heart": {
-							"text": "Drops from Xoph's Breach or Breachstone."
+							"text": "Drops from Xoph's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -4284,31 +4467,40 @@
 					"text": null,
 					"items": {
 						"Solstice Vigil": {
-							"text": "Drops from The Shaper."
+							"text": "Drops from The Shaper.",
+							"priority": -5
 						},
 						"Presence of Chayula": {
-							"text": "Does not drop. Created with a Blessing of Chayula."
+							"text": "Does not drop. Created with a Blessing of Chayula.",
+							"priority": -10
 						},
 						"Aul's Uprising": {
-							"text": "Drops from Aul (Delve Boss)."
+							"text": "Drops from Aul (Delve Boss).",
+							"priority": -5
 						},
 						"Impresence": {
-							"text": "Drops from The Elder."
+							"text": "Drops from The Elder.",
+							"priority": -5
 						},
 						"Stranglegasp": {
-							"text": "Drops from Blight-ravaged map."
+							"text": "Drops from Blight-ravaged map.",
+							"priority": -5
 						},
 						"Ashes of the Stars": {
-							"text": "Drops from The Eater of Worlds."
+							"text": "Drops from The Eater of Worlds.",
+							"priority": -5
 						},
 						"Crystallised Omniscience": {
-							"text": "Drops from The Searing Exarch."
+							"text": "Drops from The Searing Exarch.",
+							"priority": -5
 						},
 						"The Eternal Struggle": {
-							"text": "Drops from The Black Star and from The Infinite Hunger."
+							"text": "Drops from The Black Star and from The Infinite Hunger.",
+							"priority": -5
 						},
 						"Leadership's Price": {
-							"text": "Drops from Contract: The Twins (Unique Heist Contact Boss)."
+							"text": "Drops from Contract: The Twins (Unique Heist Contact Boss).",
+							"priority": -8
 						}
 					}
 				},
@@ -4316,25 +4508,32 @@
 					"text": null,
 					"items": {
 						"Putembo's Mountain": {
-							"text": "Drops from Aul (Delve Boss)."
+							"text": "Drops from Aul (Delve Boss).",
+							"priority": -5
 						},
 						"Putembo's Meadow": {
-							"text": "Drops from Kurgal (Delve Boss)."
+							"text": "Drops from Kurgal (Delve Boss).",
+							"priority": -5
 						},
 						"Putembo's Valley": {
-							"text": "Drops from Ahuatotli (Delve Boss)."
+							"text": "Drops from Ahuatotli (Delve Boss).",
+							"priority": -5
 						},
 						"Precursor's Emblem": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						},
 						"Circle of Regret": {
-							"text": "Drops from a Distant Memory boss."
+							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"priority": -9
 						},
 						"Astral Projector": {
-							"text": "Drops from Metamorph in Tane's Lab."
+							"text": "Drops from Metamorph in Tane's Lab.",
+							"priority": -5
 						},
 						"Nimis": {
-							"text": "Drops from The Uber Eater of Worlds."
+							"text": "Drops from The Uber Eater of Worlds.",
+							"priority": -5
 						}
 					}
 				},
@@ -4342,10 +4541,12 @@
 					"text": null,
 					"items": {
 						"The Taming": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						},
 						"Precursor's Emblem": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -4353,7 +4554,8 @@
 					"text": null,
 					"items": {
 						"Precursor's Emblem": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -4361,22 +4563,28 @@
 					"text": null,
 					"items": {
 						"Precursor's Emblem": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						},
 						"Ahkeli's Meadow": {
-							"text": "Drops from Aul (Delve Boss)."
+							"text": "Drops from Aul (Delve Boss).",
+							"priority": -5
 						},
 						"Ahkeli's Valley": {
-							"text": "Drops from Kurgal (Delve Boss)."
+							"text": "Drops from Kurgal (Delve Boss).",
+							"priority": -5
 						},
 						"Ahkeli's Mountain": {
-							"text": "Drops from Ahuatotli (Delve Boss)."
+							"text": "Drops from Ahuatotli (Delve Boss).",
+							"priority": -5
 						},
 						"Circle of Anguish": {
-							"text": "Drops from a Distant Memory boss."
+							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"priority": -9
 						},
 						"Warrior's Legacy": {
-							"text": "Drops from Metamorph in Tane's Lab."
+							"text": "Drops from Metamorph in Tane's Lab.",
+							"priority": -5
 						}
 					}
 				},
@@ -4384,22 +4592,28 @@
 					"text": null,
 					"items": {
 						"Precursor's Emblem": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						},
 						"Uzaza's Valley": {
-							"text": "Drops from Aul (Delve Boss)."
+							"text": "Drops from Aul (Delve Boss).",
+							"priority": -5
 						},
 						"Uzaza's Mountain": {
-							"text": "Drops from Kurgal (Delve Boss)."
+							"text": "Drops from Kurgal (Delve Boss).",
+							"priority": -5
 						},
 						"Uzaza's Meadow": {
-							"text": "Drops from Ahuatotli (Delve Boss)."
+							"text": "Drops from Ahuatotli (Delve Boss).",
+							"priority": -5
 						},
 						"Circle of Fear": {
-							"text": "Drops from a Distant Memory boss."
+							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"priority": -9
 						},
 						"Call of the Void": {
-							"text": "Drops from The Uber Elder."
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
 						}
 					}
 				},
@@ -4407,10 +4621,12 @@
 					"text": null,
 					"items": {
 						"Choir of the Storm": {
-							"text": "Drops from Esh's Flawless Breachstone."
+							"text": "Drops from Esh's Flawless Breachstone.",
+							"priority": -5
 						},
 						"Voice of the Storm": {
-							"text": "Drops from Esh's Breach or Breachstone."
+							"text": "Drops from Esh's Breach or Breachstone.",
+							"priority": -3
 						}
 					}
 				},
@@ -4418,25 +4634,32 @@
 					"text": null,
 					"items": {
 						"The Pariah": {
-							"text": "Drops from Renegades Warband."
+							"text": "Drops from Renegades Warband.",
+							"priority": -1
 						},
 						"Vivinsect": {
-							"text": "Drops from Syndicate Safehouse."
+							"text": "Drops from Syndicate Safehouse.",
+							"priority": -3
 						},
 						"Brinerot Mark": {
-							"text": "Drops from Brinerot Warband."
+							"text": "Drops from Brinerot Warband.",
+							"priority": -1
 						},
 						"Redblade Band": {
-							"text": "Drops from Redblade Warband."
+							"text": "Drops from Redblade Warband.",
+							"priority": -1
 						},
 						"Mutewind Seal": {
-							"text": "Drops from Mutewind Warband."
+							"text": "Drops from Mutewind Warband.",
+							"priority": -1
 						},
 						"Rotblood Promise": {
-							"text": "Does not drop. Sold in Ritual."
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
 						},
 						"Triumvirate Authority": {
-							"text": "Drops from Atziri and Uber Atziri."
+							"text": "Drops from Atziri and Uber Atziri.",
+							"priority": -5
 						}
 					}
 				},
@@ -4444,13 +4667,16 @@
 					"text": null,
 					"items": {
 						"Coward's Legacy": {
-							"text": "Does not drop. Created with a Vial."
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
 						},
 						"Coward's Chains": {
-							"text": "Drops from the Hybridization Chamber in the Temple of Atzoatl."
+							"text": "Drops from the Hybridization Chamber in the Temple of Atzoatl.",
+							"priority": -3
 						},
 						"Chains of Emancipation": {
-							"text": "Drops from Friedrich Tarollo (Unique Heist Contact Boss)."
+							"text": "Drops from Friedrich Tarollo (Unique Heist Contact Boss).",
+							"priority": -8
 						}
 					}
 				},
@@ -4458,16 +4684,20 @@
 					"text": null,
 					"items": {
 						"Doryani's Invitation": {
-							"text": "Drops from Atziri."
+							"text": "Drops from Atziri.",
+							"priority": -5
 						},
 						"Mother's Embrace": {
-							"text": "Drops from Metamorph in Tane's Lab."
+							"text": "Drops from Metamorph in Tane's Lab.",
+							"priority": -5
 						},
 						"Survivor's Guilt": {
-							"text": "Does not drop. Sold in Ritual."
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
 						},
 						"Kaom's Binding": {
-							"text": "Reward from Ngamahu tribe in Trial of the Ancestors"
+							"text": "Reward from Ngamahu tribe in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4475,10 +4705,12 @@
 					"text": null,
 					"items": {
 						"Mark of the Shaper": {
-							"text": "Drops from The Uber Elder."
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
 						},
 						"Polaric Devastation": {
-							"text": "Drops from The Black Star."
+							"text": "Drops from The Black Star.",
+							"priority": -5
 						}
 					}
 				},
@@ -4486,22 +4718,28 @@
 					"text": null,
 					"items": {
 						"The Flow Untethered": {
-							"text": "Does not drop. Created from Harbinger Pieces."
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
 						},
 						"The Torrent's Reclamation": {
-							"text": "Does not drop. Created by upgrading Flow Untethered with a Scroll."
+							"text": "Does not drop. Created by upgrading Flow Untethered with a Scroll.",
+							"priority": -10
 						},
 						"Arn's Anguish": {
-							"text": "Drops from The Maven."
+							"text": "Drops from The Maven.",
+							"priority": -5
 						},
 						"Olesya's Delight": {
-							"text": "Drops from The Maven."
+							"text": "Drops from The Maven.",
+							"priority": -5
 						},
 						"Graven's Secret": {
-							"text": "Drops from The Maven."
+							"text": "Drops from The Maven.",
+							"priority": -5
 						},
 						"Bound Fate": {
-							"text": "Reward for completing a tournament in Trial of the Ancestors"
+							"text": "Reward for completing a tournament in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4509,7 +4747,8 @@
 					"text": null,
 					"items": {
 						"The Retch": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -4517,7 +4756,8 @@
 					"text": null,
 					"items": {
 						"The Felbog Fang": {
-							"text": "Drops from Namharim (Harvest Boss)."
+							"text": "Drops from Namharim (Harvest Boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4525,7 +4765,8 @@
 					"text": null,
 					"items": {
 						"Circle of Guilt": {
-							"text": "Drops from a Distant Memory boss."
+							"text": "Drops from a Distant Memory boss.",
+							"priority": -5
 						}
 					}
 				},
@@ -4533,7 +4774,8 @@
 					"text": null,
 					"items": {
 						"Fated End": {
-							"text": "Found in a Curio Display in Heist."
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
 						}
 					}
 				},
@@ -4541,7 +4783,8 @@
 					"text": null,
 					"items": {
 						"Mark of the Elder": {
-							"text": "Drops from The Uber Elder."
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
 						}
 					}
 				},
@@ -4549,13 +4792,16 @@
 					"text": null,
 					"items": {
 						"Circle of Nostalgia": {
-							"text": "Drops from a Distant Memory boss."
+							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"priority": -9
 						},
 						"Blackflame": {
-							"text": "Does not drop. Sold in Ritual."
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
 						},
 						"Original Sin": {
-							"text": "Drops from Lycia with corresponding relic equipped."
+							"text": "Drops from Lycia with corresponding relic equipped.",
+							"priority": -8
 						}
 					}
 				},
@@ -4563,7 +4809,8 @@
 					"text": null,
 					"items": {
 						"The Burden of Truth": {
-							"text": "Drops from Sirus."
+							"text": "Drops from Sirus.",
+							"priority": -5
 						}
 					}
 				},
@@ -4571,7 +4818,8 @@
 					"text": null,
 					"items": {
 						"Darkness Enthroned": {
-							"text": "Drops from Abyssal Depths."
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
 						}
 					}
 				},
@@ -4579,7 +4827,8 @@
 					"text": null,
 					"items": {
 						"Fury Valve": {
-							"text": "Drops from Metamorph in Tane's Lab."
+							"text": "Drops from Metamorph in Tane's Lab.",
+							"priority": -5
 						}
 					}
 				},
@@ -4587,7 +4836,8 @@
 					"text": null,
 					"items": {
 						"Sudden Dawn": {
-							"text": "Drops from The Black Star."
+							"text": "Drops from The Black Star.",
+							"priority": -5
 						}
 					}
 				},
@@ -4595,7 +4845,8 @@
 					"text": null,
 					"items": {
 						"Sporeguard": {
-							"text": "Drops from Blighted Map."
+							"text": "Drops from Blighted Map.",
+							"priority": -5
 						}
 					}
 				},
@@ -4603,7 +4854,8 @@
 					"text": null,
 					"items": {
 						"Perepiteia": {
-							"text": "Drops from a Distant Memory boss."
+							"text": "Drops from a Distant Memory boss.",
+							"priority": -5
 						}
 					}
 				},
@@ -4611,7 +4863,8 @@
 					"text": null,
 					"items": {
 						"Mahuxotl's Machination": {
-							"text": "Drops from The Trialmaster."
+							"text": "Drops from The Trialmaster.",
+							"priority": -5
 						}
 					}
 				},
@@ -4619,7 +4872,8 @@
 					"text": null,
 					"items": {
 						"Actum": {
-							"text": "Found in a Curio Display in Heist."
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
 						}
 					}
 				},
@@ -4627,7 +4881,8 @@
 					"text": null,
 					"items": {
 						"Crest of Desire": {
-							"text": "Found in a Curio Display in Heist."
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
 						}
 					}
 				},
@@ -4635,7 +4890,8 @@
 					"text": null,
 					"items": {
 						"Shattershard": {
-							"text": "Found in a Curio Display in Heist."
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
 						}
 					}
 				},
@@ -4643,7 +4899,8 @@
 					"text": null,
 					"items": {
 						"Maw of Mischief": {
-							"text": "Does not drop. Obtained from a Divination Card set."
+							"text": "Does not drop. Obtained from a Divination Card set.",
+							"priority": -10
 						}
 					}
 				},
@@ -4651,7 +4908,8 @@
 					"text": null,
 					"items": {
 						"Legacy of Fury": {
-							"text": "Drops from The Maven."
+							"text": "Drops from The Maven.",
+							"priority": -5
 						}
 					}
 				},
@@ -4659,7 +4917,8 @@
 					"text": null,
 					"items": {
 						"Qotra's Regulator": {
-							"text": "Does not drop. Sold in Ritual."
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
 						}
 					}
 				},
@@ -4667,16 +4926,20 @@
 					"text": null,
 					"items": {
 						"Olroth's Resolve": {
-							"text": "Drops from Olroth (expedition boss)."
+							"text": "Drops from Olroth (expedition boss).",
+							"priority": -5
 						},
 						"Starlight Chalice": {
-							"text": "Drops from Uthred (expedition boss)."
+							"text": "Drops from Uthred (expedition boss).",
+							"priority": -5
 						},
 						"Vorana's Preparation": {
-							"text": "Drops from Vorana (expedition boss)."
+							"text": "Drops from Vorana (expedition boss).",
+							"priority": -5
 						},
 						"Elixir of the Unbroken Circle": {
-							"text": "Drops from Medved (expedition boss)."
+							"text": "Drops from Medved (expedition boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4684,7 +4947,8 @@
 					"text": null,
 					"items": {
 						"Cadigan's Crown": {
-							"text": "Drops from Olroth (expedition boss)."
+							"text": "Drops from Olroth (expedition boss).",
+							"priority": -5
 						}
 					}
 				},
@@ -4692,27 +4956,53 @@
 					"text": null,
 					"items": {
 						"Vorana's March": {
-							"text": "Drops from Olroth (expedition boss)."
+							"text": "Drops from Olroth (expedition boss).",
+							"priority": -5
 						}
 					}
 				},
 				"Runic Sollerets": {
-					"text": "Drops from Expedition."
+					"text": null,
+					"items": {
+						"Olroth's Charge": {
+							"text": "Drops from Expedition.",
+							"priority": -3
+						}
+					}
 				},
 				"Runic Helm": {
-					"text": "Drops from Expedition."
+					"text": null,
+					"items": {
+						"Faithguard": {
+							"text": "Drops from Expedition.",
+							"priority": -3
+						}
+					}
 				},
 				"Runic Gages": {
-					"text": "Drops from Expedition."
+					"text": null,
+					"items": {
+						"Nightgrip": {
+							"text": "Drops from Expedition.",
+							"priority": -3
+						}
+					}
 				},
 				"Runic Gauntlets": {
-					"text": "Drops from Expedition."
+					"text": null,
+					"items": {
+						"Medved's Challenge": {
+							"text": "Drops from Expedition.",
+							"priority": -3
+						}
+					}
 				},
 				"Unset Amulet": {
 					"text": null,
 					"items": {
 						"Uul-Netol's Vow": {
-							"text": "Drops from Flawless Breachstone."
+							"text": "Drops from Flawless Breachstone.",
+							"priority": -5
 						}
 					}
 				},
@@ -4720,7 +5010,8 @@
 					"text": null,
 					"items": {
 						"The Annihilating Light": {
-							"text": "Drops from The Searing Exarch."
+							"text": "Drops from The Searing Exarch.",
+							"priority": -5
 						}
 					}
 				},
@@ -4728,7 +5019,18 @@
 					"text": null,
 					"items": {
 						"Voidfletcher": {
-							"text": "Drops from The Uber Elder."
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Two-Point Arrow Quiver": {
+					"text": null,
+					"items": {
+						"Asphyxia's Wrath": {
+							"text": "this is an alternate art version of the item and it cannot drop. if you see this something went wrong.",
+							"hideInHoverBox": true,
+							"priority": -100
 						}
 					}
 				},
@@ -4736,7 +5038,8 @@
 					"text": null,
 					"items": {
 						"Black Zenith": {
-							"text": "Drops from The Infinite Hunger."
+							"text": "Drops from The Infinite Hunger.",
+							"priority": -5
 						}
 					}
 				},
@@ -4744,7 +5047,8 @@
 					"text": null,
 					"items": {
 						"Ceaseless Feast": {
-							"text": "Drops from The Infinite Hunger."
+							"text": "Drops from The Infinite Hunger.",
+							"priority": -5
 						}
 					}
 				},
@@ -4752,7 +5056,8 @@
 					"text": null,
 					"items": {
 						"Inextricable Fate": {
-							"text": "Drops from The Eater of Worlds."
+							"text": "Drops from The Eater of Worlds.",
+							"priority": -5
 						}
 					}
 				},
@@ -4760,7 +5065,8 @@
 					"text": null,
 					"items": {
 						"Dawnstrider": {
-							"text": "Drops from The Searing Exarch."
+							"text": "Drops from The Searing Exarch.",
+							"priority": -5
 						}
 					}
 				},
@@ -4768,7 +5074,8 @@
 					"text": null,
 					"items": {
 						"The Winds of Fate": {
-							"text": "Drops from Lycia with corresponding relic equipped."
+							"text": "Drops from Lycia with corresponding relic equipped.",
+							"priority": -8
 						}
 					}
 				},
@@ -4776,7 +5083,8 @@
 					"text": null,
 					"items": {
 						"Eternal Damnation": {
-							"text": "Drops from Lycia with corresponding relic equipped."
+							"text": "Drops from Lycia with corresponding relic equipped.",
+							"priority": -8
 						}
 					}
 				},
@@ -4784,7 +5092,8 @@
 					"text": null,
 					"items": {
 						"Ahuana's Bite": {
-							"text": "Reward from Ramako tribe in Trial of the Ancestors"
+							"text": "Reward from Ramako tribe in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4792,7 +5101,8 @@
 					"text": null,
 					"items": {
 						"Honoured Alliance": {
-							"text": "Reward for completing a tournament in Trial of the Ancestors"
+							"text": "Reward for completing a tournament in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4800,7 +5110,11 @@
 					"text": null,
 					"items": {
 						"Ikiaho's Promise": {
-							"text": "Reward from Arohongui tribe in Trial of the Ancestors"
+							"text": "Reward from Arohongui tribe in Trial of the Ancestors",
+							"priority": -8
+						},
+						"Ngamahu Tiki": {
+							"hideInHoverBox": true
 						}
 					}
 				},
@@ -4808,7 +5122,8 @@
 					"text": null,
 					"items": {
 						"Kiloava's Bluster": {
-							"text": "Reward from Valako tribe in Trial of the Ancestors"
+							"text": "Reward from Valako tribe in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4816,7 +5131,8 @@
 					"text": null,
 					"items": {
 						"Maata's Teaching": {
-							"text": "Reward from Tawhoa tribe in Trial of the Ancestors"
+							"text": "Reward from Tawhoa tribe in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4824,7 +5140,8 @@
 					"text": null,
 					"items": {
 						"Rakiata's Dance": {
-							"text": "Reward from Tasalio tribe in Trial of the Ancestors"
+							"text": "Reward from Tasalio tribe in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4832,7 +5149,8 @@
 					"text": null,
 					"items": {
 						"Tawhanuku's Timing": {
-							"text": "Reward from Hinekora tribe in Trial of the Ancestors"
+							"text": "Reward from Hinekora tribe in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4840,7 +5158,8 @@
 					"text": null,
 					"items": {
 						"Utula's Hunger": {
-							"text": "Reward from Kitava tribe in Trial of the Ancestors"
+							"text": "Reward from Kitava tribe in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				},
@@ -4848,16 +5167,20 @@
 					"text": null,
 					"items": {
 						"Emperor's Mastery": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
 						},
 						"Watcher's Eye": {
-							"text": "Drops from The Elder."
+							"text": "Drops from The Elder.",
+							"priority": -5
 						},
 						"Sublime Vision": {
-							"text": "Drops from The Uber Shaper."
+							"text": "Drops from The Uber Shaper.",
+							"priority": -5
 						},
 						"The Anima Stone": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -4877,7 +5200,8 @@
 					"text": null,
 					"items": {
 						"Amanamu's Gaze": {
-							"text": "Drops from Abyssal Depths."
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
 						}
 					}
 				},
@@ -4885,7 +5209,8 @@
 					"text": null,
 					"items": {
 						"Kurgal's Gaze": {
-							"text": "Drops from Abyssal Depths."
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
 						}
 					}
 				},
@@ -4893,7 +5218,8 @@
 					"text": null,
 					"items": {
 						"Ulaman's Gaze": {
-							"text": "Drops from Abyssal Depths."
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
 						}
 					}
 				},
@@ -4901,7 +5227,8 @@
 					"text": null,
 					"items": {
 						"Tecrod's Gaze": {
-							"text": "Drops from Abyssal Depths."
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
 						}
 					}
 				},
@@ -4909,85 +5236,112 @@
 					"text": null,
 					"items": {
 						"Grand Spectrum": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
 						},
 						"Emperor's Wit": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
 						},
 						"Apex Mode": {
-							"text": "Drops from Contract: Breaking the Unbreakable."
+							"text": "Drops from Contract: Breaking the Unbreakable.",
+							"priority": -8
 						},
 						"Nadir Mode": {
-							"text": "Drops from Contract: Breaking the Unbreakable."
+							"text": "Drops from Contract: Breaking the Unbreakable.",
+							"priority": -8
 						},
 						"Melding of the Flesh": {
-							"text": "Drops from The Eater of Worlds."
+							"text": "Drops from The Eater of Worlds.",
+							"priority": -5
 						},
 						"Primordial Harmony": {
-							"text": "Drops from Primeval Chamber in Delve."
+							"text": "Drops from Primeval Chamber in Delve.",
+							"priority": -5
 						},
 						"Rational Doctrine": {
-							"text": "Drops from Uber Cortex."
+							"text": "Overridden in exceptions. Drops from Uber Cortex.",
+							"priority": -9
 						},
 						"Tempered Mind": {
-							"text": "Drops from The Vaal Omnitect."
+							"text": "Drops from The Vaal Omnitect.",
+							"priority": -5
 						},
 						"The Blue Dream": {
-							"text": "Drops from Chayula's Breach or Breachstone."
+							"text": "Drops from Chayula's Breach or Breachstone.",
+							"priority": -3
 						},
 						"The Blue Nightmare": {
-							"text": "Drops from Chayula's Flawless Breachstone."
+							"text": "Drops from Chayula's Flawless Breachstone.",
+							"priority": -5
 						},
 						"Transcendent Mind": {
-							"text": "Does not drop. Created with a Vial."
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
 						},
 						"Brute Force Solution": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Energy From Within": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Fertile Mind": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Fevered Mind": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Fortress Covenant": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Healthy Mind": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Powerlessness": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Reckless Defence": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Soul's Wick": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"To Dust": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Combat Focus": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						},
 						"Endless Misery": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						},
 						"Dead Reckoning": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						},
 						"Forbidden Flesh": {
-							"text": "Drops from The Eater of Worlds."
+							"text": "Drops from The Eater of Worlds.",
+							"priority": -5
 						},
 						"Impossible Escape": {
-							"text": "Drops from The Maven."
+							"text": "Drops from The Maven.",
+							"priority": -5
 						},
 						"The Balance of Terror": {
-							"text": "Drops from Lycia with corresponding relic equipped."
+							"text": "Drops from Lycia with corresponding relic equipped.",
+							"priority": -8
 						}
 					}
 				},
@@ -4995,58 +5349,76 @@
 					"text": null,
 					"items": {
 						"Grand Spectrum": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
 						},
 						"Emperor's Cunning": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
 						},
 						"Primordial Eminence": {
-							"text": "Drops from Primeval Chamber in Delve."
+							"text": "Drops from Primeval Chamber in Delve.",
+							"priority": -5
 						},
 						"Tempered Spirit": {
-							"text": "Drops from The Vaal Omnitect."
+							"text": "Drops from The Vaal Omnitect.",
+							"priority": -5
 						},
 						"Transcendent Spirit": {
-							"text": "Does not drop. Created with a Vial."
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
 						},
 						"The Green Dream": {
-							"text": "Drops from Chayula's Breach or Breachstone."
+							"text": "Drops from Chayula's Breach or Breachstone.",
+							"priority": -3
 						},
 						"The Green Nightmare": {
-							"text": "Drops from Chayula's Flawless Breachstone."
+							"text": "Drops from Chayula's Flawless Breachstone.",
+							"priority": -5
 						},
 						"Careful Planning": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Chill of Corruption": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Fluid Motion": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Hidden Potential": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Pacifism": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Quickening Covenant": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Seething Fury": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Self-Flagellation": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"The Golden Rule": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Combat Focus": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						},
 						"Spirit Guards": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						}
 					}
 				},
@@ -5054,61 +5426,80 @@
 					"text": null,
 					"items": {
 						"Grand Spectrum": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
 						},
 						"Emperor's Might": {
-							"text": "Drops from The Lord's Labyrinth."
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
 						},
 						"Dissolution of the Flesh": {
-							"text": "Drops from The Searing Exarch."
+							"text": "Drops from The Searing Exarch.",
+							"priority": -5
 						},
 						"Primordial Might": {
-							"text": "Drops from Primeval Chamber in Delve."
+							"text": "Drops from Primeval Chamber in Delve.",
+							"priority": -5
 						},
 						"Split Personality": {
-							"text": "Drops from Simulacrum."
+							"text": "Drops from Simulacrum.",
+							"priority": -5
 						},
 						"Thread of Hope": {
-							"text": "Drops from Sirus."
+							"text": "Drops from Sirus.",
+							"priority": -5
 						},
 						"Tempered Flesh": {
-							"text": "Drops from The Vaal Omnitect."
+							"text": "Drops from The Vaal Omnitect.",
+							"priority": -5
 						},
 						"The Red Nightmare": {
-							"text": "Drops from Chayula's Flawless Breachstone."
+							"text": "Drops from Chayula's Flawless Breachstone.",
+							"priority": -5
 						},
 						"The Red Dream": {
-							"text": "Drops from Chayula's Breach or Breachstone."
+							"text": "Drops from Chayula's Breach or Breachstone.",
+							"priority": -3
 						},
 						"Transcendent Flesh": {
-							"text": "Does not drop. Created with a Vial."
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
 						},
 						"Combat Focus": {
-							"text": "Does not drop. Created with a vendor recipe."
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
 						},
 						"Atziri's Reign": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Efficient Training": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Energised Armour": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Fragility": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Inertia": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Rain of Splinters": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted."
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"priority": -9
 						},
 						"Forbidden Flame": {
-							"text": "Drops from The Searing Exarch."
+							"text": "Drops from The Searing Exarch.",
+							"priority": -5
 						},
 						"Warrior's Tale": {
-							"text": "Reward for completing a tournament in Trial of the Ancestors"
+							"text": "Reward for completing a tournament in Trial of the Ancestors",
+							"priority": -8
 						}
 					}
 				}
