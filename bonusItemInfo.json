@@ -3164,6 +3164,10 @@
 					"items": {
 						"The Squire": {
 							"text": "Detected via a special rule (using the 3 white sockets)! The oppressor can be safely hidden in the unique tierlist.",
+							"ruleLink": {
+								"entryName": "Unique Exception: The Squire",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						}
 					}
@@ -3247,10 +3251,18 @@
 					"items": {
 						"Starforge": {
 							"text": "Overridden in Exceptions. Drops from The Shaper.",
+							"ruleLink": {
+								"entryName": "Unique Shaper Sword",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Voidforge": {
 							"text": "Overridden in Exceptions. Drops from The Uber Elder.",
+							"ruleLink": {
+								"entryName": "Unique Shaper Sword",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Echoforge": {
@@ -3692,7 +3704,11 @@
 					"items": {
 						"Shroud of the Lightless": {
 							"text": "Drops from Abyssal Depths.",
-							"priority": -5
+							"ruleLink": {
+								"entryName": "Unique Exception: Two Abyss Socket Uniques",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
 						},
 						"Stasis Prison": {
 							"text": "Drops from the Unrelenging Timeless Emblem.",
@@ -4525,6 +4541,10 @@
 						},
 						"Circle of Regret": {
 							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Synthesis Rings",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Astral Projector": {
@@ -4580,6 +4600,10 @@
 						},
 						"Circle of Anguish": {
 							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Synthesis Rings",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Warrior's Legacy": {
@@ -4609,6 +4633,10 @@
 						},
 						"Circle of Fear": {
 							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Synthesis Rings",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Call of the Void": {
@@ -4793,6 +4821,10 @@
 					"items": {
 						"Circle of Nostalgia": {
 							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Synthesis Rings",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Blackflame": {
@@ -5263,6 +5295,10 @@
 						},
 						"Rational Doctrine": {
 							"text": "Overridden in exceptions. Drops from Uber Cortex.",
+							"ruleLink": {
+								"entryName": "Synthesis Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Tempered Mind": {
@@ -5283,42 +5319,82 @@
 						},
 						"Brute Force Solution": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Energy From Within": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Fertile Mind": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Fevered Mind": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Fortress Covenant": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Healthy Mind": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Powerlessness": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Reckless Defence": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Soul's Wick": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"To Dust": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Combat Focus": {
@@ -5380,38 +5456,74 @@
 						},
 						"Careful Planning": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Chill of Corruption": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Fluid Motion": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Hidden Potential": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Pacifism": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Quickening Covenant": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Seething Fury": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Self-Flagellation": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"The Golden Rule": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Combat Focus": {
@@ -5473,26 +5585,50 @@
 						},
 						"Atziri's Reign": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Efficient Training": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Energised Armour": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Fragility": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Inertia": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Rain of Splinters": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						},
 						"Forbidden Flame": {
