@@ -1456,7 +1456,7 @@ Chapter() {
         Section("Cluster Jewels: Custom Rule") {
             Title("Any Enchantment");
             Search CS0("skip", "skip", "jewels->clustereco;n12_i84_t1") { }
-            Conditional("?ClusterJewelNewTier", [0]) { Show; Class Jewel; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+            Conditional("?ClusterJewelNewTier", [0]) { Show; Class Jewel; Rarity Normal Magic Rare; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
             ElementAdder_Tier("?ClusterJewelNewTier", "ClusterJewelTierList_NoEnch");
 
             Divider();
