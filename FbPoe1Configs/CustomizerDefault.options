@@ -243,6 +243,8 @@ Chapter() {
             ElementAdder_Tier("?CurrencyLevelingStacksNewTiers", "CurrencyLevelingStackList");
         }
 
+        Title("Custom");
+
         Section("Add Custom Rules", "Firefly") {
             Conditional("?CurrencyStackNewTiers", ["c9.currency.stacked.all"], "notSimpleBuilder") { Show; Class Currency; StackSize >= 3; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
             ElementAdder_Tier("?CurrencyStackNewTiers", "CurrencyStackList");
@@ -1187,7 +1189,7 @@ Chapter() {
 
         Section("Betrayal Veiled Mods", "Scarab") {
             Function VeilModTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel"], $text, ["Item Mods", "D", "HasExplicitMod"]); }
-            Function VeilMods($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel"], $text); }
+            Function VeilMods($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel", "Mods"], $text); }
 
             VeilModTierList([0.0, "Betrayal Veiled Mods Tier 1", "exoticmods;t1veil"], "SD", "Veiled Mods - Expensive Member-Specific Mods");
             VeilModTierList([0.0, "Betrayal Veiled Mods Tier 2", "exoticmods;t2veil"], "SD", "Veiled Mods - Member-Specific Mods");
