@@ -479,52 +479,6 @@ Chapter() {
 // CURRENT LEAGUE
 //===================================================================================================
 
-    Section("Events", "LingeringBronzeStalkerSentinel") {
-
-        Function SentinelList($s, $shd = "SHD", $text = "Sentinel Tier") { QuickUI($s, $shd, ["ItemLevel", "Rarity"], $text, ["Sentinels", "OD"]); }
-
-        Section("Pandemonium Sentinels", "OminousMachine") {
-            Description("Sentinels that are not tiered by any of the entries below will be hidden!");
-            SentinelList([0.0, "Pandemonium Sentinels Tier 1", "sentinel->drones;pandet1"], "SD");
-            SentinelList([0.0, "Pandemonium Sentinels Tier 2", "sentinel->drones;pandet2"], "SD");
-            SentinelList([0.0, "Rare Pandemonium Sentinels", "sentinel->drones;pander"], "SD", "Other Pandenels (rare)");
-            SentinelList([0.0, "Pandemonium Sentinels", "sentinel->drones;pandem"], "SD", "Other Pandenels (magic)");
-            SentinelList([0.0, "Pandemonium Sentinels during leveling", "sentinel->drones;pandelvl"], "SD", "Pandenels during Campaign (if other rules are disabled)");
-        }
-        Section("Stalker Sentinels", "LingeringBronzeStalkerSentinel") {
-            Description("Sentinels that are not tiered by any of the entries below will be hidden!");
-            SentinelList([0.0, "Stalker Sentinels Tier 1", "sentinel->drones;stalkert1"], "SD");
-            SentinelList([0.0, "Stalker Sentinels Tier 2", "sentinel->drones;stalkert2"], "SD");
-            SentinelList([0.0, "Rare Stalker Sentinels", "sentinel->drones;stalkerr"], "SD", "Other Stalkernels (rare)");
-            SentinelList([0.0, "Stalker Sentinels", "sentinel->drones;stalkerm"], "SD", "Other Stalkernels (magic)");
-            SentinelList([0.0, "Stalker Sentinels during leveling", "sentinel->drones;stalkerlvl"], "SD", "Stalkernels during Campaign (if other rules are disabled)");
-        }
-        Section("Apex Sentinels", "ThreateningObsidianApexSentinelofDanger") {
-            Description("Sentinels that are not tiered by any of the entries below will be hidden!");
-            SentinelList([0.0, "Apex Sentinels Tier 1", "sentinel->drones;apext1"], "SD");
-            SentinelList([0.0, "Apex Sentinels Tier 2", "sentinel->drones;apext2"], "SD");
-            SentinelList([0.0, "Rare Apex Sentinels", "sentinel->drones;apexr"], "SD", "Other Apexnels (rare)");
-            SentinelList([0.0, "Apex Sentinels", "sentinel->drones;apexm"], "SD", "Other Apexnels (magic)");
-            SentinelList([0.0, "Apex Sentinels during leveling", "sentinel->drones;apexlvl"], "SD", "Apexnels during Campaign (if other rules are disabled)");
-        }
-
-        Section("Sentinels wit good mods", "OminousMachine") {
-            Function ModItemUI($s, $shd = "SHD", $text = "New Mod Filering tier") { QuickUI($s, $shd, ["ItemLevel", "DropLevel", "Rarity", "Corrupted", "AllGearClasses", "Mods"], $text, ["Gear", "SA"]); }
-            ModItemUI([0.0, "Sentinels with good mods T1", "magicid;t1sentinel"], "SH");
-            ModItemUI([0.0, "Sentinels with good mods T2", "magicid;t2sentinel"], "SH");
-        }
-
-        Section("Power Cores & Recombinators", "TransformingPowerCore") {
-            QuickUI([0.0, "Sentinel Power Cores (special)", "currency->sentinel;t2"], "SH", ["AreaLevel"], null, ["Currency", "O"]);
-            QuickUI([0.0, "Sentinel Power Core (basic)", "currency->sentinel;t3"], "SH", []);
-            QuickUI([0.0, "Recombinators", "currency->sentinel;t1"], "SH", ["AreaLevel"], null, ["Currency", "SO"]);
-        }
-
-        Section("Unique Sentinels", "OminousMachine") {
-            QuickUI([0.0, "Unique Sentinels", "uniques;exsentinel"], "SH", []);
-        }
-    }
-
     Section("Current League: Trial & Sanctum", "OmenOfRefreshment")
     {
         Title("Trial of the Ancestors Items&Rewards");
@@ -604,6 +558,52 @@ Chapter() {
             QuickUI([0.0, "Unique Relics", "artefact->sanctifiedrelics;uniquerelics"], "S");
         }
     }
+
+        Section("November Event: Sentinel", "LingeringBronzeStalkerSentinel") {
+
+            Function SentinelList($s, $shd = "SHD", $text = "Sentinel Tier") { QuickUI($s, $shd, ["ItemLevel", "Rarity"], $text, ["Sentinels", "OD"]); }
+
+            Section("Pandemonium Sentinels", "OminousMachine") {
+                Description("Sentinels that are not tiered by any of the entries below will be hidden!");
+                SentinelList([0.0, "Pandemonium Sentinels Tier 1", "sentinel->drones;pandet1"], "SD");
+                SentinelList([0.0, "Pandemonium Sentinels Tier 2", "sentinel->drones;pandet2"], "SD");
+                SentinelList([0.0, "Rare Pandemonium Sentinels", "sentinel->drones;pander"], "SD", "Other Pandenels (rare)");
+                SentinelList([0.0, "Pandemonium Sentinels", "sentinel->drones;pandem"], "SD", "Other Pandenels (magic)");
+                SentinelList([0.0, "Pandemonium Sentinels during leveling", "sentinel->drones;pandelvl"], "SD", "Pandenels during Campaign (if other rules are disabled)");
+            }
+            Section("Stalker Sentinels", "LingeringBronzeStalkerSentinel") {
+                Description("Sentinels that are not tiered by any of the entries below will be hidden!");
+                SentinelList([0.0, "Stalker Sentinels Tier 1", "sentinel->drones;stalkert1"], "SD");
+                SentinelList([0.0, "Stalker Sentinels Tier 2", "sentinel->drones;stalkert2"], "SD");
+                SentinelList([0.0, "Rare Stalker Sentinels", "sentinel->drones;stalkerr"], "SD", "Other Stalkernels (rare)");
+                SentinelList([0.0, "Stalker Sentinels", "sentinel->drones;stalkerm"], "SD", "Other Stalkernels (magic)");
+                SentinelList([0.0, "Stalker Sentinels during leveling", "sentinel->drones;stalkerlvl"], "SD", "Stalkernels during Campaign (if other rules are disabled)");
+            }
+            Section("Apex Sentinels", "ThreateningObsidianApexSentinelofDanger") {
+                Description("Sentinels that are not tiered by any of the entries below will be hidden!");
+                SentinelList([0.0, "Apex Sentinels Tier 1", "sentinel->drones;apext1"], "SD");
+                SentinelList([0.0, "Apex Sentinels Tier 2", "sentinel->drones;apext2"], "SD");
+                SentinelList([0.0, "Rare Apex Sentinels", "sentinel->drones;apexr"], "SD", "Other Apexnels (rare)");
+                SentinelList([0.0, "Apex Sentinels", "sentinel->drones;apexm"], "SD", "Other Apexnels (magic)");
+                SentinelList([0.0, "Apex Sentinels during leveling", "sentinel->drones;apexlvl"], "SD", "Apexnels during Campaign (if other rules are disabled)");
+            }
+
+            Section("Sentinels wit good mods", "OminousMachine") {
+                Function ModItemUI($s, $shd = "SHD", $text = "New Mod Filering tier") { QuickUI($s, $shd, ["ItemLevel", "DropLevel", "Rarity", "Corrupted", "AllGearClasses", "Mods"], $text, ["Gear", "SA"]); }
+                ModItemUI([0.0, "Sentinels with good mods T1", "magicid;t1sentinel"], "SH");
+                ModItemUI([0.0, "Sentinels with good mods T2", "magicid;t2sentinel"], "SH");
+            }
+
+            Section("Power Cores & Recombinators", "TransformingPowerCore") {
+                QuickUI([0.0, "Sentinel Power Cores (special)", "currency->sentinel;t2"], "SH", ["AreaLevel"], null, ["Currency", "O"]);
+                QuickUI([0.0, "Sentinel Power Core (basic)", "currency->sentinel;t3"], "SH", []);
+                QuickUI([0.0, "Recombinators", "currency->sentinel;t1"], "SH", ["AreaLevel"], null, ["Currency", "SO"]);
+            }
+
+            Section("Unique Sentinels", "OminousMachine") {
+                QuickUI([0.0, "Unique Sentinels", "uniques;exsentinel"], "SH", []);
+            }
+        }
 }
 
 //===================================================================================================
