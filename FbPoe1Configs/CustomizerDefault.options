@@ -1999,7 +1999,6 @@ Chapter() {
     }
 
     Section("Flasks", "Flask") {
-        Function FlaskBox ($s, $shd = "SDH", $text) { QuickUI($s, $shd, ["RarityNM", "Quality"], $text); }
 
         Section("Flask Progression","FlaskLife")
         {
@@ -2008,6 +2007,7 @@ Chapter() {
             DeepSearchMulti S1(0.0, "Leveling-Flasks-Life-Progression", 0, 12){ +BaseType "Life Flasks"; !Class "Life Flasks"; +AreaLevel <= 64; -Quality = 0; Rarity Normal; }
             DeepSearchMulti S2(0.0, "Leveling-Flasks-Mana-Progression", 0, 12){ +BaseType "Mana Flasks"; !Class "Mana Flasks"; +AreaLevel <= 64; -Quality = 0; Rarity Normal; }
 
+            Function FlaskBox ($s, $shd = "SDH", $text) { QuickUI($s, $shd, ["RarityNM", "Quality", "ItemLevel"], $text); }
             FlaskBox(S0, SH, "Hybrid Flasks");
             FlaskBox(S1, SH, "Life Flasks");
             FlaskBox(S2, SH, "Mana Flasks");
