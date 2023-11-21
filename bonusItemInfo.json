@@ -181,7 +181,7 @@
 	"//comment1": "These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
 	"bonusItemInfo": {
 		"Blueprint": {
-			"Items": {
+			"items": {
 				"Blueprint: Bunker": {
 					"text": "Enchanted Armaments"
 				},
