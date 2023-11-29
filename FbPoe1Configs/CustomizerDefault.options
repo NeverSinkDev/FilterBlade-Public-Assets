@@ -137,6 +137,17 @@ Chapter() {
 
         Title("Main");
 
+        MultiTierThresholdEditor(
+            ["Currency God Tier 1", "Currency God Tier 2", "Currency High Tier 1", "Currency High Tier 2", "Currency High Tier 3", "Currency Mid Tier 1", "Currency Mid Tier 2", "Currency Basic Tier 1", "Currency Basic Tier 2", "Currency Basic Tier 3", "Currency Basic Tier 4" ],
+            ["Stacked Currency - T1, Huge", "Stacked Currency - T2, Huge", "Stacked Currency - T3, Huge", "Stacked Currency - T4, Huge", "Stacked Currency - T5, Huge", "Stacked Currency - T6, Huge", "Stacked Currency - T7, Huge", "Stacked Currency - T1, Large", "Stacked Currency - T2, Large", "Stacked Currency - T3, Large", "Stacked Currency - T4, Large", "Stacked Currency - T5, Large", "Stacked Currency - T6, Large", "Stacked Currency - T7, Large", "Stacked Currency - High Supply Large", "Stacked Currency - High Supply Medium", "Stacked Currency - High Supply Small", "Stacked Currency - Low Supply Large", "Stacked Currency - Low Supply Medium", "Stacked Currency - Low Supply Small", "Stacked Currency - Portal Large", "Stacked Currency - Portal Medium", "Stacked Currency - Portal Small", "Stacked Currency - Wisdom Large", "Stacked Currency - Wisdom Medium", "Stacked Currency - Wisdom Small"],
+            "BaseType",
+            "StackSize",
+            [],
+            [["Currency Basic Tier 1",    "Stacked Currency - High Supply Small", "Stacked Currency - High Supply Large"],
+                ["Currency Basic Tier 2", "Stacked Currency - Low Supply Small", "Stacked Currency - Low Supply Large"],
+                ["Currency Basic Tier 3", "Stacked Currency - Portal Small", "Stacked Currency - Portal Large"],
+                ["Currency Basic Tier 4", "Stacked Currency - Wisdom Small", "Stacked Currency - Wisdom Large"]]);
+
         Section("General Currency", "Chaos", "E") {
             Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["normalCurrency", "O"]); }
 
@@ -211,9 +222,6 @@ Chapter() {
             CurrencyStackList([0.0, "Stacked Currency - Wisdom Medium", "currency->stackedsupplieswisdom;t2"], "SD");
             CurrencyStackList([0.0, "Stacked Currency - Wisdom Small", "currency->stackedsupplieswisdom;t3"], "SD");
         }
-
-        // todo: build new GUI for this!
-        MultiTierThresholdEditor("StackSize");
 
         Title("Currency Drops during the Campaign");
 
@@ -2403,30 +2411,30 @@ Chapter() {
 //            ModItemUI([1.0, "ModFilter: Magic - Caster", "magicid;damagemods"], "SD");
 //            ModItemUI([1.0, "ModFilter: Magic - 35% Movement speed boots", "magicid;speed"], "SD");
 
-            ModItemUI([0.0, "ModFiltering: Magic - Plus 2 All Minion Skills Helmet", "magicid;t1minionhelm"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Caster", "magicid;t1caster"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Projectile", "magicid;t1proj"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Amulet", "magicid;t1amu"], "SH", []);
+            ModItemUI([0.0, "ModFiltering: Magic - Plus 2 All Minion Skills Helmet", "magicid;t1minionhelm"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Caster", "magicid;t1caster"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Projectile", "magicid;t1proj"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Amulet", "magicid;t1amu"], "SH");
             Divider();
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Gloves", "magicid;recogloves"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Boots", "magicid;recoboots"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Helmets", "magicid;recohelmets"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Weapons", "magicid;recoweapons"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Rings", "magicid;recorings"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Fire Caster", "magicid;recocasterfire"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Cold Caster", "magicid;recocastercold"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Lightning Caster", "magicid;recocasterlight"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Physical Caster", "magicid;recocasterphys"], "SH", []);
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Gloves", "magicid;recogloves"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Boots", "magicid;recoboots"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Helmets", "magicid;recohelmets"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Weapons", "magicid;recoweapons"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Rings", "magicid;recorings"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Fire Caster", "magicid;recocasterfire"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Cold Caster", "magicid;recocastercold"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Lightning Caster", "magicid;recocasterlight"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Physical Caster", "magicid;recocasterphys"], "SH");
             Divider();
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Quiver", "magicid;t2quiver"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Caster", "magicid;t2caster"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Amulet", "magicid;t2amu"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Shield", "magicid;t2shield"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Suppression", "magicid;t2suppress"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Physical", "magicid;t2purephys"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T2 DoT Wand", "magicid;t2dotwand"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Sceptre", "magicid;t2sceptre"], "SH", []);
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Elemental Weapons", "magicid;t2eleweapons"], "SH", []);
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Quiver", "magicid;t2quiver"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Caster", "magicid;t2caster"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Amulet", "magicid;t2amu"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Shield", "magicid;t2shield"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Suppression", "magicid;t2suppress"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Physical", "magicid;t2purephys"], "SH"]);
+            ModItemUI([0.0, "ModFiltering: Magic - T2 DoT Wand", "magicid;t2dotwand"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Sceptre", "magicid;t2sceptre"], "SH");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Elemental Weapons", "magicid;t2eleweapons"], "SH");
         }
     }
 

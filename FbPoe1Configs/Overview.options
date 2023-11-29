@@ -436,9 +436,9 @@ SS_Ad();
 SS_SectionTitle("Currency Stacks");
 
 StyleSection("Stacked Currencies", "Endgame currency drops are evaluated based on their stacksize based on the ingame economy. Large stacks get a stronger highlight!") {
-    Search S0("skip", "Currency: High Tier, Large Stacks") { BaseType "Ancient Shard"; StackSize 6; }
-    Search S0("skip", "Currency: High Tier, Medium Stacks") { BaseType "Ancient Shard"; StackSize 3; }
-    Search S0("skip", "Currency: High Tier, Small Stacks") { BaseType "Ancient Shard"; StackSize 1; }
+    Search S0("skip") { BaseType "Ancient Shard"; StackSize 6; }
+    Search S0("skip") { BaseType "Ancient Shard"; StackSize 3; }
+    Search S0("skip") { BaseType "Ancient Shard"; StackSize 1; }
     SS_Item("S0");
 }
 
