@@ -91,7 +91,7 @@
 		"Catalyst": {
 			"displayName": "Catalyst",
 			"iconPath": "assets/img/Icons/AccordionIcons/ImbuedCatalyst.png",
-			"description": "Drops from metamorph encounters",
+			"description": "Drops from ultimatum encounters",
 			"isHiddenByDefault": false,
 			"group": "currency2"
 		},
@@ -180,55 +180,15 @@
 
 	"//comment1": "These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
 	"bonusItemInfo": {
-		"Blueprint": {
-			"items": {
-				"Blueprint: Bunker": {
-					"text": "Enchanted Armaments"
-				},
-				"Blueprint: Record Office": {
-					"text": "Enchanted Armaments"
-				},
-				"Blueprint: Mansion": {
-					"text": "Enchanted Armaments"
-				},
-				"Blueprint: Smuglers Den": {
-					"text": "Trinkets or Currency"
-				},
-				"Blueprint: Underbelly": {
-					"text": "Trinkets or Currency"
-				},
-				"Blueprint: Laboratory": {
-					"text": "Replicas or Experimented Items"
-				},
-				"Blueprint: Prohibited Library": {
-					"text": "Replicas or Experimented Items"
-				},
-				"Blueprint: Tunnels": {
-					"text": "Unusual Gems"
-				},
-				"Blueprint: Repository": {
-					"text": "Unusual Gems"
-				}
-			}
-		},
-
 		"Currency": {
 			"displayTagsNextToItem": false,
 			"items": {
-				"Prime Regrading Lens": {
-					"text": "Drops from Gem Blueprint<br>Change the type of quality of a skill gem with quality to another random quality",
-					"tags": ["Heist", "BossDrop"]
-				},
-				"Secondary Regrading Lens": {
-					"text": "Drops from Gem Blueprint<br>Change the type of quality of a support gem with quality to another random quality",
-					"tags": ["Heist", "BossDrop"]
-				},
 				"Tailoring Orb": {
-					"text": "Drops from Enchanted Armaments Blueprint<br>Adds or replaces an enchantment on a body armour. This may reforge the body armour's sockets",
+					"text": "Drops from Blueprints<br>Adds or replaces an enchantment on a body armour. This may reforge the body armour's sockets",
 					"tags": ["Heist", "BossDrop"]
 				},
 				"Tempering Orb": {
-					"text": "Drops from Enchanted Armaments Blueprint<br>Adds or replaces an enchantment on a weapon. This may reforge the weapon's sockets",
+					"text": "Drops from Blueprints<br>Adds or replaces an enchantment on a weapon. This may reforge the weapon's sockets",
 					"tags": ["Heist", "BossDrop"]
 				},
 
@@ -284,11 +244,6 @@
 				"Tainted Blacksmith's Whetstone": {
 					"text": "Randomises the quality of a corrupted weapon",
 					"tags": ["Beyond", "LeagueDrop"]
-				},
-
-				"Tainted Blessing": {
-					"text": "Drops from Treasure Chests at the end of Lab<br>Can be placed in the Divine Font to allow enchantment of corrupted gloves, boots, helmets or belts",
-					"tags": ["Lab", "BossDrop"]
 				},
 
 				"Eldritch Chaos Orb": {
@@ -416,6 +371,10 @@
 				},
 				"Imbued Catalyst": {
 					"text": "Adds quality that enhances Caster modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Tainted Catalyst": {
+					"text": "Applies a random quality type and amount to a corrupted ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 
@@ -754,15 +713,6 @@
 				"Eternal Orb": {
 					"text": "Creates an imprint of an item for later restoration. The imprint can't be applied to Fractured Items",
 					"tags": ["RuthlessOnly"]
-				},
-
-				"Hinekora's Lock": {
-					"text": "Allows an item to foresee the result of the next Currency item used on it",
-					"tags": ["Ancestors"]
-				},
-				"Silver Coin": {
-					"text": "Creates a portal to the Halls of the Dead from a Town or Hideout",
-					"tags": ["Ancestors"]
 				}
 			}
 		},
@@ -881,9 +831,6 @@
 				"Abyssal Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Abyss Items reward type"
 				},
-				"Amorphous Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Metamorph reward type"
-				},
 				"Armoursmith's Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Armour reward type"
 				},
@@ -899,9 +846,6 @@
 				"Diviner's Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Divination Cards reward type"
 				},
-				"Fine Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Currency Items reward type"
-				},
 				"Foreboding Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Harbinger Items reward type"
 				},
@@ -910,9 +854,6 @@
 				},
 				"Fragmented Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Fragments reward type"
-				},
-				"Imperial Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Labyrinth Items reward type"
 				},
 				"Jeweller's Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Trinkets reward type"
@@ -1011,9 +952,6 @@
 				"Diviner's Incubator" : {
 					"text" : "Awards Stacked Decks."
 				},
-				"Enchanted Incubator" : {
-					"text" : "Awards an Enchanted Helmet."
-				},
 				"Foreboding Incubator" : {
 					"text" : "Awards Currency Shards or a Harbinger item."
 				},
@@ -1031,9 +969,6 @@
 				},
 				"Maddening Incubator" : {
 					"text" : "Awards a Delirium item. Usually simulacrum splinters or delirium orbs"
-				},
-				"Morphing Incubator" : {
-					"text" : "Awards a Metamorph item. Usually catalysts."
 				},
 				"Obscured Incubator" : {
 					"text" : "Awards a Breach item. Usually splinters or scarabs."
@@ -1342,17 +1277,9 @@
 					"text": "Drops from map bosses: Lava Chamber, Underground Sea(Maelstrom of Chaos), Mineral Pools.",
 					"tags": ["CurrencyOutcome"]
 				},
-				"Divine Justice": {
-					"text": "Drops from an Armourer's Strongbox.",
-					"tags": ["UniqueOutcome"]
-				},
 				"Doedre's Madness": {
 					"text": "Drops from Doedre and similar boss models.",
 					"tags": ["UniqueOutcome"]
-				},
-				"Doryani's Epiphany": {
-					"text": "Unconfirmed, Prohibited Library.",
-					"tags": ["CurrencyOutcome"]
 				},
 				"Draped in Dreams" : {
 					"text": "Unconfirmed",
@@ -1361,10 +1288,6 @@
 				"Duality": {
 					"text": "Drops from Architects (Alva Temple).",
 					"tags": ["InfluencedOutcome"]
-				},
-				"Dying Anguish": {
-					"text": "Found in Arsenal, Colonade, Ghetto, Port, Precinct, Promenade.",
-					"tags": ["GemOutcome"]
 				},
 				"Dying Light" : {
 					"text": "Drops from The Shaper.",
@@ -1713,10 +1636,6 @@
 					"text": "Drops from Baran.",
 					"tags": ["UniqueOutcome"]
 				},
-				"Terrible Secret of Space": {
-					"text": "Drops from map bosses: Alleyways, Coves, Vault, Peninsula, Grotto.",
-					"tags": ["GemOutcome"]
-				},
 				"The Academic": {
 					"text": "Found in Academy Map, Museum Map",
 					"tags": ["UniqueOutcome"]
@@ -1765,7 +1684,7 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"The Awakened": {
-					"text": "Drops from Metamorph.",
+					"text": "Found in the Gardens, Haunted Mansion, Palace, Tower and Underground Sea maps, as well as the Death and Taxes, Hallowed Ground and Maelström of Chaos Unique Maps.",
 					"tags": ["InfluencedOutcome"]
 				},
 				"The Bargain": {
@@ -1793,10 +1712,6 @@
 				},
 				"The Blazing Fire": {
 					"text": "Found in (Act 5 zones), Alleyways Map, City Square Map, Crimson Temple Map, Defiled Cathedral Map, Haunted Mansion Map, Lookout Map, Silo Map.",
-					"tags": ["UniqueOutcome"]
-				},
-				"The Blessing of Moosh": {
-					"text": "Found in The Lord's Labyrinth,  Darkshrines.",
 					"tags": ["UniqueOutcome"]
 				},
 				"The Body": {
@@ -2129,10 +2044,6 @@
 				"The Hoarder": {
 					"text": "Found in Maelström of Chaos, Mineral Pools Map, Underground Sea Map, Vaults of Atziri, Vault Map.",
 					"tags": ["CurrencyOutcome"]
-				},
-				"The Hook": {
-					"text": "Drops from Venarius(Cortex boss).",
-					"tags": ["GemOutcome"]
 				},
 				"The Hunger": {
 					"text": "Found in The Belly of the Beast, The Harvest (area), The Belly of the Beast (Act 9), The Rotting Core, Carcass Map, Core Map, Malformation Map, Phantasmagoria Map.",
@@ -2545,7 +2456,7 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"The Transformation": {
-					"text": "Drops from Metamorph.",
+					"text": "Found in the Gardens, Haunted Mansion, Palace, Tower and Underground Sea maps, as well as the Death and Taxes, Hallowed Ground and Maelström of Chaos Unique Maps.",
 					"tags": ["CurrencyOutcome"]
 				},
 				"The Trial": {
@@ -2763,6 +2674,9 @@
 				},
 				"The Fortunate": {
 					"tags": ["CurrencyOutcome"]
+				},
+				"Assassin's Gift": {
+					"tags": ["UniqueOutcome"]
 				}
 			}
 		},
@@ -2770,13 +2684,13 @@
 		"Fragment": {
 			"items": {
 				"Gift to the Goddess": {
-					"text": "The final Aspirant's Trial contains a Divine Font, which allows you to enchant an item six additional times. Can be found in treasure chests at the end of the Eternal and Enriched Eternal Labyrinth."
+					"text": null
 				},
 				"Timeless Maraketh Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Maraketh Splinters"
 				},
 				"Dedication to the Goddess": {
-					"text": "The final Aspirant's Trial contains a Divine Font, which allows you to enchant belts. Can be found in treasure chests at the end of the Eternal and Enriched Eternal Labyrinth."
+					"text": null
 				},
 				"Tribute to the Goddess": {
 					"text": "The Labyrinth's rewards are enriched."
@@ -3046,19 +2960,6 @@
 					"text": "Area contains 2 additional Legion Encounters, Each Legion contains a war hoard and general"
 				},
 
-				"Rusted Metamorph Scarab": {
-					"text": "Area contains Metamorph monsters"
-				},
-				"Polished Metamorph Scarab": {
-					"text": "Area contains Metamorph monsters, Bosses which drop an itemised sample drop an additional sample"
-				},
-				"Gilded Metamorph Scarab": {
-					"text": "Area contains Metamorph monsters, All metamorph monsters have rewards, Bosses which drop an itemised sample drop an additional sample"
-				},
-				"Winged Metamorph Scarab": {
-					"text": "Area contains Metamorph monsters, All metamorph monsters have rewards, Bosses which drop an itemised sample drop 2 additional samples"
-				},
-
 				"Rusted Reliquary Scarab": {
 					"text": "50% More unique items found in area"
 				},
@@ -3115,14 +3016,6 @@
 
 		"UniqueMap": {
 			"items": {
-				"Engraved Ultimatum": {
-					"text": null,
-					"items": {
-						"The Tower of Ordeals": {
-							"text": "Does not drop. Created from Ultimatum Aspects."
-						}
-					}
-				},
 				"Courtyard Map": {
 					"text": null,
 					"items": {
@@ -4228,6 +4121,10 @@
 						"Saqawal's Talons": {
 							"text": "Drops from Saqawal (Einhar Boss).",
 							"priority": -5
+						},
+						"Gamblesprint": {
+							"text": "Drops from the Ultimatum.",
+							"priority": -5
 						}
 					}
 				},
@@ -4283,10 +4180,6 @@
 						"Gorgon's Gaze": {
 							"text": "Drops from Pillars of Arun boss.",
 							"priority": -5
-						},
-						"Akoya's Gaze": {
-							"text": "Reward from Tukohama tribe in Trial of the Ancestors",
-							"priority": -8
 						}
 					}
 				},
@@ -4341,10 +4234,6 @@
 						"Redblade Tramplers": {
 							"text": "Drops from Redblade Warband.",
 							"priority": -1
-						},
-						"Kahuturoa's Certainty": {
-							"text": "Reward from Rongokurai tribe in Trial of the Ancestors",
-							"priority": -8
 						}
 					}
 				},
@@ -4446,10 +4335,6 @@
 						"Sacrificial Heart": {
 							"text": "Drops from The Vaal Omnitect.",
 							"priority": -5
-						},
-						"Defiance of Destiny": {
-							"text": "Reward for completing a tournament in Trial of the Ancestors",
-							"priority": -8
 						}
 					}
 				},
@@ -4547,10 +4432,6 @@
 							},
 							"priority": -9
 						},
-						"Astral Projector": {
-							"text": "Drops from Metamorph in Tane's Lab.",
-							"priority": -5
-						},
 						"Nimis": {
 							"text": "Drops from The Uber Eater of Worlds.",
 							"priority": -5
@@ -4605,10 +4486,6 @@
 								"text": "Link to exception rule"
 							},
 							"priority": -9
-						},
-						"Warrior's Legacy": {
-							"text": "Drops from Metamorph in Tane's Lab.",
-							"priority": -5
 						}
 					}
 				},
@@ -4715,17 +4592,9 @@
 							"text": "Drops from Atziri.",
 							"priority": -5
 						},
-						"Mother's Embrace": {
-							"text": "Drops from Metamorph in Tane's Lab.",
-							"priority": -5
-						},
 						"Survivor's Guilt": {
 							"text": "Does not drop. Sold in Ritual.",
 							"priority": -10
-						},
-						"Kaom's Binding": {
-							"text": "Reward from Ngamahu tribe in Trial of the Ancestors",
-							"priority": -8
 						}
 					}
 				},
@@ -4764,10 +4633,6 @@
 						"Graven's Secret": {
 							"text": "Drops from The Maven.",
 							"priority": -5
-						},
-						"Bound Fate": {
-							"text": "Reward for completing a tournament in Trial of the Ancestors",
-							"priority": -8
 						}
 					}
 				},
@@ -4851,15 +4716,6 @@
 					"items": {
 						"Darkness Enthroned": {
 							"text": "Drops from Abyssal Depths.",
-							"priority": -5
-						}
-					}
-				},
-				"Turquoise Amulet": {
-					"text": null,
-					"items": {
-						"Fury Valve": {
-							"text": "Drops from Metamorph in Tane's Lab.",
 							"priority": -5
 						}
 					}
@@ -5120,31 +4976,9 @@
 						}
 					}
 				},
-				"Sharktooth Arrow Quiver": {
-					"text": null,
-					"items": {
-						"Ahuana's Bite": {
-							"text": "Reward from Ramako tribe in Trial of the Ancestors",
-							"priority": -8
-						}
-					}
-				},
-				"Coral Ring": {
-					"text": null,
-					"items": {
-						"Honoured Alliance": {
-							"text": "Reward for completing a tournament in Trial of the Ancestors",
-							"priority": -8
-						}
-					}
-				},
 				"Coral Amulet": {
 					"text": null,
 					"items": {
-						"Ikiaho's Promise": {
-							"text": "Reward from Arohongui tribe in Trial of the Ancestors",
-							"priority": -8
-						},
 						"Ngamahu Tiki": {
 							"text": "this is an alternate art version of the item and it cannot drop. if you see this something went wrong.",
 							"hideInHoverBox": true,
@@ -5152,48 +4986,12 @@
 						}
 					}
 				},
-				"Ironwood Buckler": {
+				"Gold Ring": {
 					"text": null,
 					"items": {
-						"Kiloava's Bluster": {
-							"text": "Reward from Valako tribe in Trial of the Ancestors",
-							"priority": -8
-						}
-					}
-				},
-				"Karui Sceptre": {
-					"text": null,
-					"items": {
-						"Maata's Teaching": {
-							"text": "Reward from Tawhoa tribe in Trial of the Ancestors",
-							"priority": -8
-						}
-					}
-				},
-				"Engraved Greatsword": {
-					"text": null,
-					"items": {
-						"Rakiata's Dance": {
-							"text": "Reward from Tasalio tribe in Trial of the Ancestors",
-							"priority": -8
-						}
-					}
-				},
-				"Moonstone Ring": {
-					"text": null,
-					"items": {
-						"Tawhanuku's Timing": {
-							"text": "Reward from Hinekora tribe in Trial of the Ancestors",
-							"priority": -8
-						}
-					}
-				},
-				"Majestic Plate": {
-					"text": null,
-					"items": {
-						"Utula's Hunger": {
-							"text": "Reward from Kitava tribe in Trial of the Ancestors",
-							"priority": -8
+						"Ixchel's Temptation": {
+							"text": "Drops from the Ultimatum.",
+							"priority": -5
 						}
 					}
 				},
@@ -5381,14 +5179,6 @@
 							},
 							"priority": -9
 						},
-						"Soul's Wick": {
-							"text": "Overridden in Exceptions. Only Drops Corrupted.",
-							"ruleLink": {
-								"entryName": "Corrupted Unique Jewels",
-								"text": "Link to exception rule"
-							},
-							"priority": -9
-						},
 						"To Dust": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
 							"ruleLink": {
@@ -5398,14 +5188,6 @@
 							"priority": -9
 						},
 						"Combat Focus": {
-							"text": "Does not drop. Created with a vendor recipe.",
-							"priority": -10
-						},
-						"Endless Misery": {
-							"text": "Does not drop. Created with a vendor recipe.",
-							"priority": -10
-						},
-						"Dead Reckoning": {
 							"text": "Does not drop. Created with a vendor recipe.",
 							"priority": -10
 						},
@@ -5529,10 +5311,6 @@
 						"Combat Focus": {
 							"text": "Does not drop. Created with a vendor recipe.",
 							"priority": -10
-						},
-						"Spirit Guards": {
-							"text": "Does not drop. Created with a vendor recipe.",
-							"priority": -10
 						}
 					}
 				},
@@ -5634,10 +5412,6 @@
 						"Forbidden Flame": {
 							"text": "Drops from The Searing Exarch.",
 							"priority": -5
-						},
-						"Warrior's Tale": {
-							"text": "Reward for completing a tournament in Trial of the Ancestors",
-							"priority": -8
 						}
 					}
 				}
