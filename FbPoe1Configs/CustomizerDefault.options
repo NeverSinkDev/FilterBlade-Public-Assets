@@ -41,8 +41,13 @@ Chapter() {
             QuickUI([0.0, "RGB Chromatic recipe EG small1x3", "endgamergb;rgbsmall2"], "SH", ["AreaLevel", "Height"], "Endgame: Small (1x3, 1x4)");
             QuickUI([0.0, "RGB Chromatic recipe EG medium", "endgamergb;rgbmedium"], "SH", ["AreaLevel"], "Endgame: Medium-sized (2x3)");
             QuickUI([0.0, "RGB Chromatic recipe EG large", "endgamergb;rgblarge"], "SH", ["AreaLevel"], "Endgame: Large (2x4)");
-
+            Divider();
             Box() { Title("Chromatic Recipe: Campaign");  Description("The campaign chromatic recipe can be changed in the 'Campaign -> Colors and Links' section");}
+            Divider();
+            QuickUI([0.0, "RGB Chromatic recipe rare small 1", "rr;rgbsmall1"], "SH", ["AreaLevel"], "Endgame Rare: Small (2x2)");
+            QuickUI([0.0, "RGB Chromatic recipe rare small 2", "rr;rgbsmall2"], "SH", ["AreaLevel", "Height"], "Endgame Rare: Small (1x3, 1x4)");
+            QuickUI([0.0, "RGB Chromatic recipe rare medium", "rr;rgbmedium"], "SH", ["AreaLevel"], "Endgame Rare: Medium (2x3)");
+            QuickUI([0.0, "RGB Chromatic recipe rare large", "rr;rgblarge"], "SH", ["AreaLevel"], "Endgame Rare: Large (2x4)");
         }
 
         Section("Gemcutter's Prism", "GCP") {
@@ -487,131 +492,10 @@ Chapter() {
 // CURRENT LEAGUE
 //===================================================================================================
 
-    Section("Current League: Trial & Sanctum", "OmenOfRefreshment")
-    {
-        Title("Trial of the Ancestors Items&Rewards");
-
-        Section("Silver Coin", "NewSilverCoin3.22AncestorTrial") {
-            QuickUI([0.0, "Silver Coins", "currency->trial->orblike;coins"], "SH", [], null, null, "Silver coins acts as key to participate in the Trial of the Ancestors.");
-        }
-
-        Section("Hinekora's Lock", "HinekorasLock") {
-            // crafting prediction items thingy
-            QuickUI([0.0, "Hinekora's Lock", "currency->trial->orblike;t1"], "S", [], null, null, "Hinekor's lock is a valuable reward from the trial. Once applied on an item, you'll foresee the outcome of currency items used on the same item - until you'll actually use one of them.");
-        }
-
-        Section("Tattoos", "HonouredTattoooftheWiseMan") {
-            Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
-
-            Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
-            TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH");
-            TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH");
-            TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH");
-            TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH");
-
-            // new tiers
-            Conditional("?AncTrialTattooTier") { }
-            ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
-
-            // hide tier
-            Conditional("?AncTrialTattooHidden") { }
-            ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
-        }
-
-        Section("Omens", "OmenoftheSoulDevourer") {
-            Function OmenFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialOmens", "O"]); }
-
-            Description("Omens will trigger certain effects as long as they are in your inventory. The omen is then consumed.");
-            OmenFunc([0.0, "Omens Tier 1", "currency->trial->omen;t1"], "SH");
-            OmenFunc([0.0, "Omens Tier 2", "currency->trial->omen;t2"], "SH");
-            OmenFunc([0.0, "Omens Tier 3", "currency->trial->omen;t3"], "SH");
-            OmenFunc([0.0, "Omens Tier 4", "currency->trial->omen;t4"], "SH");
-
-            // new tiers
-            Conditional("?AncTrialOmensNewTier") { }
-            ElementAdder_Tier("?AncTrialOmensNewTier", "OmenFunc");
-
-            // hide tier
-            Conditional("?AncTrialOmensHidden") { }
-            ElementAdder_Tier("?AncTrialOmensHidden", null, true, "AncTrialOmens", "OH");
-        }
-
-        Title("Sanctum Items&Rewards");
-
-        Section("Forbidden Tome - Itemized Sanctum", "SanctumForbiddenTome") {
-            Description("Forbidden tomes are used to access the forbidden sanctum. This rule also handles the itemized versions.");
-            // todo: add more tiers and ilvl filtering like for contracts later
-//          QuickUI([0.0, "New Sanctum Run", "exoticmap->sanctum;handpicked"], "SH", []); // Forbidden Tome -> new run
-            QuickUI([0.0, "Itemized Sanctum", "exoticmap->sanctum;any"], "SH", []); // Sanctum Vaults Research -> started run
-        }
-
-        Section("Sanctum Relics", "SanctumRelic") {
-            Function SanctumRelicsUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Rarity"], $text, ["SanctumRelics", "O"]); }
-            Description("Relics drop in the sanctum and provide sanctum-exclusive benefits to your runs.");
-
-            SanctumRelicsUI([0.0, "Forbidden Sanctum Relics Tier 1", "artefact->sanctifiedrelics;selectedrelics"], "SH");
-            QuickUI([0.0, "Remaining Forbidden Sanctum Relics", "artefact->sanctifiedrelics;anyrelic"], "SH");
-
-            // new tiers
-            Conditional("?SanctumRelicsNewTiers") { }
-            ElementAdder_Tier("?SanctumRelicsNewTiers", "SanctumRelicsUI");
-
-            // hide tier
-            Conditional("?SanctumRelicsNewTiersHidden") { }
-            ElementAdder_Tier("?SanctumRelicsNewTiersHidden", null, true, "SanctumRelics", "OH");
-        }
-
-        Section("Sanctum Special Relics", "SanctifiedSanctumRelic") {
-            Description("Unique Relics enable 'challenge runs' in the sanctum that grant improved rewards as well!");
-            QuickUI([0.0, "Unique Relics", "artefact->sanctifiedrelics;uniquerelics"], "S");
-        }
+    Section("Current League: Affliction", "JuggernautsUrsineCharmoftheChampion") {
+        QuickUI([0.0, "Affliction Items: Charms, Corpses & Tinctures", "artefact->affliction;any"], "SH", [], "", null, "Since these items can only be obtained by purchasing them from a vendor and don't drop naturally in the world, there is no need for any special filtering or highlight.");
+        QuickUI([0.0, "Transfigured Gems", "gems-exceptional;altany"], "SH", [], "", null, "Since these gems can only be created by using the Divine Font at the end of the Eternal Labyrinth and can't drop naturally in the world, there is no need for any special filtering or highlight.");
     }
-
-        Section("November Event: Sentinel", "LingeringBronzeStalkerSentinel") {
-
-            Function SentinelList($s, $shd = "SHD", $text = "Sentinel Tier") { QuickUI($s, $shd, ["ItemLevel", "Rarity"], $text, ["Sentinels", "OD"]); }
-
-            Section("Pandemonium Sentinels", "OminousMachine") {
-                Description("Sentinels that are not tiered by any of the entries below will be hidden!");
-                SentinelList([0.0, "Pandemonium Sentinels Tier 1", "sentinel->drones;pandet1"], "SD");
-                SentinelList([0.0, "Pandemonium Sentinels Tier 2", "sentinel->drones;pandet2"], "SD");
-                SentinelList([0.0, "Rare Pandemonium Sentinels", "sentinel->drones;pander"], "SD", "Other Pandenels (rare)");
-                SentinelList([0.0, "Pandemonium Sentinels", "sentinel->drones;pandem"], "SD", "Other Pandenels (magic)");
-                SentinelList([0.0, "Pandemonium Sentinels during leveling", "sentinel->drones;pandelvl"], "SD", "Pandenels during Campaign (if other rules are disabled)");
-            }
-            Section("Stalker Sentinels", "LingeringBronzeStalkerSentinel") {
-                Description("Sentinels that are not tiered by any of the entries below will be hidden!");
-                SentinelList([0.0, "Stalker Sentinels Tier 1", "sentinel->drones;stalkert1"], "SD");
-                SentinelList([0.0, "Stalker Sentinels Tier 2", "sentinel->drones;stalkert2"], "SD");
-                SentinelList([0.0, "Rare Stalker Sentinels", "sentinel->drones;stalkerr"], "SD", "Other Stalkernels (rare)");
-                SentinelList([0.0, "Stalker Sentinels", "sentinel->drones;stalkerm"], "SD", "Other Stalkernels (magic)");
-                SentinelList([0.0, "Stalker Sentinels during leveling", "sentinel->drones;stalkerlvl"], "SD", "Stalkernels during Campaign (if other rules are disabled)");
-            }
-            Section("Apex Sentinels", "ThreateningObsidianApexSentinelofDanger") {
-                Description("Sentinels that are not tiered by any of the entries below will be hidden!");
-                SentinelList([0.0, "Apex Sentinels Tier 1", "sentinel->drones;apext1"], "SD");
-                SentinelList([0.0, "Apex Sentinels Tier 2", "sentinel->drones;apext2"], "SD");
-                SentinelList([0.0, "Rare Apex Sentinels", "sentinel->drones;apexr"], "SD", "Other Apexnels (rare)");
-                SentinelList([0.0, "Apex Sentinels", "sentinel->drones;apexm"], "SD", "Other Apexnels (magic)");
-                SentinelList([0.0, "Apex Sentinels during leveling", "sentinel->drones;apexlvl"], "SD", "Apexnels during Campaign (if other rules are disabled)");
-            }
-
-            Section("Sentinels wit good mods", "OminousMachine") {
-                Function ModItemUI($s, $shd = "SHD", $text = "New Mod Filering tier") { QuickUI($s, $shd, ["ItemLevel", "DropLevel", "Rarity", "Corrupted", "AllGearClasses", "Mods"], $text, ["Gear", "SA"]); }
-                ModItemUI([0.0, "Sentinels with good mods T1", "magicid;t1sentinel"], "SH");
-                ModItemUI([0.0, "Sentinels with good mods T2", "magicid;t2sentinel"], "SH");
-            }
-
-            Section("Power Cores & Recombinators", "TransformingPowerCore") {
-                QuickUI([0.0, "Sentinel Power Cores (special)", "currency->sentinel;t2"], "SH", ["AreaLevel"], null, ["Currency", "O"]);
-                QuickUI([0.0, "Sentinel Power Core (basic)", "currency->sentinel;t3"], "SH", []);
-                QuickUI([0.0, "Recombinators", "currency->sentinel;t1"], "SH", ["AreaLevel"], null, ["Currency", "SO"]);
-            }
-
-            Section("Unique Sentinels", "OminousMachine") {
-                QuickUI([0.0, "Unique Sentinels", "uniques;exsentinel"], "SH", []);
-            }
-        }
 }
 
 //===================================================================================================
@@ -720,6 +604,11 @@ Chapter() {
             QuickUI([0.0, "Map appearance T1", "maps;maps_d_t1"], "SH", [], "Highlight - T1"]);
         }
 
+        Section("Hide unusable maps") {
+            QuickUI([0.0, "Hide corrupted non-rare maps", "maphiders;corruptedmaphider"], "SHD", ["Rarity", "MapTier"]);
+            QuickUI([0.0, "Hide corrupted mirrored maps", "maphiders;mirroredmaphider"], "SHD", ["Rarity", "MapTier"]);
+        }
+
         Section("Shaper, Elder and Conqueror Maps") {
             Search ElderMap(0.0, "Map appearance (ElderMap)") { Class Maps; HasInfluence Elder; Rarity Normal; }
             Search ShaperMap(0.0, "Map appearance (ShaperMap)") { Class Maps; HasInfluence Shaper; Rarity Normal; }
@@ -773,6 +662,8 @@ Chapter() {
 
         Section("Itemized League Areas", "InscribedUltimatum") {
             QuickUI([1.0, "Chronicle of Atzoatl (Incursion Temple Map Item)", "miscmapitemsextra;itemizedleagues"], "SH", [], "Itemized League Areas");
+            QuickUI([0.0, "Ultimatum Boss Area", "artefact->piece;vaal"], "SH", []);
+            QuickUI([0.0, "Itemized Sanctum", "exoticmap->sanctum;any"], "SH", []); // Sanctum Vaults Research -> started run
         }
 
         Section("Reliquary Keys", "VaalReliquaryKey") {
@@ -844,7 +735,10 @@ Chapter() {
         Section("Atlas Memories", "AtlasMemory") {
             Function AtlasMemoryUiFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["AtlasMemories", "O"]); }
 
-            AtlasMemoryUiFunc([0.0, "Atlas Master Memories Tier 1", "exoticmap->memory;handpicked"], "SH");
+            QuickUI([0.0, "Atlas Master Memories with good mods", "exoticmap->memory;t1"], "SD", ["Mods"], null, ["AtlasMemories", "OAS"]);
+            Divider();
+
+            AtlasMemoryUiFunc([0.0, "Atlas Master Memories Tier 1", "exoticmap->memory;any"], "SH");
 
             // new tiers
             Conditional("?AtlasMemoriesNewTier") { }
@@ -853,8 +747,6 @@ Chapter() {
             // hide-tier
             Conditional("?AtlasMemoriesNewTierHidden") { }
             ElementAdder_Tier("?AtlasMemoriesNewTierHidden", null, true, "AtlasMemories", "HO");
-
-            QuickUI([0.0, "Untiered Atlas Master Memories", "exoticmap->memory;any"], "SH", [], "Remaining atlas memories"); // todo: whats the point? there are no bonus filter options, all bases are listed already and you cant remove them, only move into hide tier?
         }
 
         Title("Splinters");
@@ -928,7 +820,7 @@ Chapter() {
 
         Section("Special Unique Maps") {
             QuickUI([0.0, "T16 Harbinger Map", "uniques->maps;exharbinger"], "SD", [], "Tier 16 Harbinger Map");
-            QuickUI([0.0, "Ultimatum Trialmaster Map Piece", "artefact->piece;ultimatum"], "SH", []);
+//            QuickUI([0.0, "Ultimatum Trialmaster Map Piece", "artefact->piece;ultimatum"], "SH", []);
         }
     }
 
@@ -940,7 +832,7 @@ Chapter() {
 
             ContractList([0.0, "Heist Contract T3", "heist->contract;handpicked"], "SH", "All Contracts (for your tiering)");
 
-            QuickUI([0.0, "Remaining Contracts", "heist->contract;any"], "SH", [], "", [], "Remaining contracts that were not caught be the rules above due to possible ItemLevel requirements."););
+//            QuickUI([0.0, "Remaining Contracts", "heist->contract;any"], "SH", [], "", [], "Remaining contracts that were not caught be the rules above due to possible ItemLevel requirements."););
 
             Conditional("?HeistContractNewTiers") { Show; Class "Contracts"; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
             ElementAdder_Tier("?HeistContractNewTiers", "ContractList");
@@ -1110,6 +1002,10 @@ Chapter() {
             BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2, "Tier 3", T3);
         }
 
+        Section("Exotic Unique Bases") {
+            QuickUI([0.0, "Exotic Unique Bases", "exoticbases;exoticuniquebases"], "SH", ["Rarity", "ItemLevel"], null, ["gear", "OS"]);
+        }
+
         Section("Synthesised items") {
             Description("Some itemclasses like 'amulets' are completely covered through the class-based filtering below and don't need representing through the matrix.");
             QuickUI([0.0, "Synthesised items T1", "exotic->synthesised;synthselected"], "SD", ["ItemLevel", "DropLevel", "Identified", "BTM"]);
@@ -1131,27 +1027,32 @@ Chapter() {
             Divider();
 
             QuickUI([0.0, "Fractured items, classes", "exotic->fractured;fractspecial"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Fractured Exotic Classes");
-//            QuickUI([0.0, "Fractured items, medium", "exotic->fractured;fractrandom"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
+            QuickUI([0.0, "Fractured items, medium", "exotic->fractured;fractothers"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
         }
 
         Section("Enchanted items") {
             Description("Enchanted items, particularly helmets, can sometimes be very expensive and are worth checking up on.");
 
-            DeepSearch S0(0.0, "Enchanted items (helmets)", "exotic->enchanted;helmets") { AnyEnchantment True; Rarity Normal; Class Helmets; BaseType "Ursine Pelt"; }
-            DeepSearch S1(0.0, "Enchanted items (remaining)", "exotic->enchanted;glovesboots") { AnyEnchantment True; Rarity Normal; Class Gloves; BaseType "Vaal Gauntlets"; }
-            Search S2(0.0, "Heist Enchantments") { BaseType "Vaal Regalia"; Rarity Rare; AnyEnchantment True; }
+//            DeepSearch S0(0.0, "Enchanted items (helmets)", "exotic->enchanted;others") { AnyEnchantment True; Rarity Normal; Class Helmets; BaseType "Ursine Pelt"; }
+//            DeepSearch S1(0.0, "Enchanted items (remaining)", "exotic->enchanted;glovesboots") { AnyEnchantment True; Rarity Normal; Class Gloves; BaseType "Vaal Gauntlets"; }
+//            Search S2(0.0, "Heist Enchantments", "exotic->enchanted;exotic") { BaseType "Vaal Regalia"; Rarity Rare; AnyEnchantment True; }
 
-            QuickUI(S0, "SD", ["Corrupted", "ItemLevel", "DropLevel"], "", ["Gear", "ASO"]);
-            QuickUI(S1, "SD", ["Corrupted", "ItemLevel", "DropLevel"], "", ["Gear", "ASO"]);
-            QuickUI(S2, "SD");
+//            QuickUI([0.0, "", "exotic->enchanted;t1"], "SH", []);
+//            QuickUI([0.0, "", "exotic->enchanted;t2"], "SH", []);
 
-            Function EnchantedItemsFunc ($s, $shd = "SHD", $title)
-            {
-                QuickUI($s, $shd, ["LabEnchantmentClasses", "BaseType", "Rarity", "Stats_RareGear"], $title, ["Enchantments", "OS", "HasEnchantment"]);
-            }
+//            QuickUI(S0, "SD", ["Corrupted", "ItemLevel", "DropLevel"], "", ["Gear", "ASO"]);
+//            QuickUI(S1, "SD", ["Corrupted", "ItemLevel", "DropLevel"], "", ["Gear", "ASO"]);
+//            QuickUI(S2, "SD");
 
-            Conditional("?CEnchantedItems", [0]) { Show; SetBorderColor 0 240 190 240; SetFontSize 40; Class == "Boots" "Gloves" "Helmets"; Rarity Normal Magic Rare; AnyEnchantment True; MinimapIcon 2 White Hexagon; PlayEffect White Temp; }
-            ElementAdder_Tier("?CEnchantedItems", "EnchantedItemsFunc");
+            QuickUI([0.0, "Enchanted items", "exotic->enchanted;exotic"], "SH", ["Corrupted", "ItemLevel", "DropLevel", "Rarity"]);
+
+//            Function EnchantedItemsFunc ($s, $shd = "SHD", $title)
+//            {
+//                QuickUI($s, $shd, ["LabEnchantmentClasses", "BaseType", "Rarity", "Stats_RareGear"], $title, ["Enchantments", "OS", "HasEnchantment"]);
+//            }
+
+//            Conditional("?CEnchantedItems", [0]) { Show; SetBorderColor 0 240 190 240; SetFontSize 40; Class == "Boots" "Gloves" "Helmets"; Rarity Normal Magic Rare; AnyEnchantment True; MinimapIcon 2 White Hexagon; PlayEffect White Temp; }
+//            ElementAdder_Tier("?CEnchantedItems", "EnchantedItemsFunc");
         }
 
         Section("30+ Quality Items", "") // Regalia
@@ -1182,6 +1083,69 @@ Chapter() {
     }
 
     Section("League-specific items and mods", "Talisman") {
+
+        Section("Hinekora's Lock", "HinekorasLock") {
+            // crafting prediction items thingy
+            QuickUI([0.0, "Hinekora's Lock", "currency->trial->orblike;t1"], "S", [], null, null, "Hinekor's lock is a valuable reward from the trial. Once applied on an item, you'll foresee the outcome of currency items used on the same item - until you'll actually use one of them.");
+        }
+
+        Section("Tattoos", "HonouredTattoooftheWiseMan") {
+            Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
+
+            Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
+            TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH");
+            TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH");
+            TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH");
+            TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH");
+
+            // new tiers
+            Conditional("?AncTrialTattooTier") { }
+            ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
+
+            // hide tier
+            Conditional("?AncTrialTattooHidden") { }
+            ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
+        }
+
+        Section("Omens", "OmenoftheSoulDevourer") {
+            Function OmenFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialOmens", "O"]); }
+
+            Description("Omens will trigger certain effects as long as they are in your inventory. The omen is then consumed.");
+            OmenFunc([0.0, "Omens Tier 1", "currency->trial->omen;t1"], "SH");
+            OmenFunc([0.0, "Omens Tier 2", "currency->trial->omen;t2"], "SH");
+            OmenFunc([0.0, "Omens Tier 3", "currency->trial->omen;t3"], "SH");
+            OmenFunc([0.0, "Omens Tier 4", "currency->trial->omen;t4"], "SH");
+
+            // new tiers
+            Conditional("?AncTrialOmensNewTier") { }
+            ElementAdder_Tier("?AncTrialOmensNewTier", "OmenFunc");
+
+            // hide tier
+            Conditional("?AncTrialOmensHidden") { }
+            ElementAdder_Tier("?AncTrialOmensHidden", null, true, "AncTrialOmens", "OH");
+        }
+
+        Section("Sanctum Relics", "SanctumRelic") {
+            Function SanctumRelicsUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Rarity"], $text, ["SanctumRelics", "O"]); }
+            Description("Relics drop in the sanctum and provide sanctum-exclusive benefits to your runs.");
+
+            SanctumRelicsUI([0.0, "Forbidden Sanctum Relics Tier 1", "artefact->sanctifiedrelics;selectedrelics"], "SH");
+            QuickUI([0.0, "Remaining Forbidden Sanctum Relics", "artefact->sanctifiedrelics;anyrelic"], "SH");
+
+            // new tiers
+            Conditional("?SanctumRelicsNewTiers") { }
+            ElementAdder_Tier("?SanctumRelicsNewTiers", "SanctumRelicsUI");
+
+            // hide tier
+            Conditional("?SanctumRelicsNewTiersHidden") { }
+            ElementAdder_Tier("?SanctumRelicsNewTiersHidden", null, true, "SanctumRelics", "OH");
+        }
+
+        Section("Sanctum Special Relics", "SanctifiedSanctumRelic") {
+            Description("Unique Relics enable 'challenge runs' in the sanctum that grant improved rewards as well!");
+            QuickUI([0.0, "Unique Relics", "artefact->sanctifiedrelics;uniquerelics"], "S");
+            QuickUI([0.0, "Sanctum Sanctified Relics", "artefact->sanctifiedrelics;anysanctified"], "SH", []);
+        }
 
         Section ("Crucible Item Passive Trees", "PrimevalRemnantCrucibleMap") {
             QuickUI([0.0, "Items with Crucible passive tree", "exotic->crucible;crucibleany"], "SH", ["DropLevel", "Rarity", "ItemLevel"]);
@@ -1325,11 +1289,11 @@ Chapter() {
 
         Divider();
 
-        Section("Disabled Sanctum Gear", "SanctifiedSanctumRelic") {
-            Description("Invocations allow corrupting a sanctified relic and giving them a keystone implicit. These ARE tradable.");
-            QuickUI([0.0, "Sanctum Invocations T2", "currency->invocations;t2"], "S", [], "Currently disabled: Invocations", []);
-            QuickUI([0.0, "Forbidden Sanctum Sanctified Relics", "artefact->sanctifiedrelics;anysanctified"], "SH", ["Rarity"], "Currently disabled: Sanctified Relics", []);
-        }
+//        Section("Disabled Sanctum Gear", "SanctifiedSanctumRelic") {
+//            Description("Invocations allow corrupting a sanctified relic and giving them a keystone implicit. These ARE tradable.");
+//            QuickUI([0.0, "Sanctum Invocations T2", "currency->invocations;t2"], "S", [], "Currently disabled: Invocations", []);
+//            QuickUI([0.0, "Forbidden Sanctum Sanctified Relics", "artefact->sanctifiedrelics;anysanctified"], "SH", ["Rarity"], "Currently disabled: Sanctified Relics", []);
+//        }
 
         Section("Currently Disabled: Kalandra Rings") { // IoliteRing
             QuickUI([0.0, "Kalandra Lake exclusive Bases", "exoticbases;exoticlakekala"], "SH", ["Rarity", "ItemLevel"], null, ["Gear", "OS"]);
@@ -1998,7 +1962,7 @@ Chapter() {
                 QuickUI($s, $shd, ["SocketedGearClasses", "ItemLevel", "ItemType", "LinkedSockets", "Rarity", "Sockets"], $title);
             }
 
-            DeepSearch S0("skip", "skip", "leveling->normalmagic->act1;casterweapons") { }
+            DeepSearch S0("skip", "skip", "leveling->rare->armours;general") { }
             Conditional("?CLvlSockets", [0]) { Show; Sockets >= "BB"; SetBorderColor 200 0 0; SetFontSize 38; Class == "Helmets" "Gloves" "Boots" "Body Armours" "Shields"; Rarity Normal Magic; };
 
             SocketFunction("?CLvlSockets", "SD", "Racing Sockets");
@@ -2011,9 +1975,9 @@ Chapter() {
         Section("Flask Progression","FlaskLife")
         {
             Description("This section combines 30 different rules that will highlight the best available life, mana and hybrid flasks, during your Campaign progress.");
-            DeepSearchMulti S0(0.0, "Leveling-Flasks-Hybrid-Progression", 0, 6){ +BaseType "Hybrid Flask"; !Class "Hybrid Flasks"; +AreaLevel <= 65; -Quality = 0; Rarity Normal; }
-            DeepSearchMulti S1(0.0, "Leveling-Flasks-Life-Progression", 0, 12){ +BaseType "Life Flasks"; !Class "Life Flasks"; +AreaLevel <= 64; -Quality = 0; Rarity Normal; }
-            DeepSearchMulti S2(0.0, "Leveling-Flasks-Mana-Progression", 0, 12){ +BaseType "Mana Flasks"; !Class "Mana Flasks"; +AreaLevel <= 64; -Quality = 0; Rarity Normal; }
+            DeepSearchMulti S0(0.0, "Leveling-Flasks-Hybrid-Progression", 1, 6){ +BaseType "Hybrid Flask"; Class == "Hybrid Flasks"; +AreaLevel <= 65; -Quality = 0; Rarity Normal; }
+            DeepSearchMulti S1(0.0, "Leveling-Flasks-Life-Progression", 1, 12){ +BaseType "Life Flasks"; Class == "Life Flasks"; +AreaLevel <= 64; -Quality = 0; Rarity Normal; }
+            DeepSearchMulti S2(0.0, "Leveling-Flasks-Mana-Progression", 1, 12){ +BaseType "Mana Flasks"; Class == "Mana Flasks"; +AreaLevel <= 64; -Quality = 0; Rarity Normal; }
 
             Function FlaskBox ($s, $shd = "SDH", $text) { QuickUI($s, $shd, ["RarityNM", "Quality", "ItemLevel"], $text); }
             FlaskBox(S0, SH, "Hybrid Flasks");
@@ -2070,12 +2034,28 @@ Chapter() {
         }
 
         Section("Melee gear") {
-            DeepSearchMulti S1(0.0, "Leveling Rare Melee Progression", 0, 10) { -BaseType "Gemini Claw"; Class "Claws"; DropLevel >= 65; !ItemLevel <= 67; Rarity Rare; }
-            QuickUI(S1, "SD", ["AllGearClasses", "Sockets", "AreaLevel"], "", [], "These section combines many rules and will show the current top available base-types.");
+            Search S0(0.0, "Leveling Rare Melee Progression 1", "leveling->rare->melee;l1") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 2", "leveling->rare->melee;l2") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 3", "leveling->rare->melee;l3") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 4", "leveling->rare->melee;l4") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 5", "leveling->rare->melee;l5") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 6", "leveling->rare->melee;l6") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 7", "leveling->rare->melee;l7") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 8", "leveling->rare->melee;l8") { }
+
+            QuickUI(S0, "SD", ["AllGearClasses", "Sockets", "AreaLevel"], "", [], "These section combines many rules and will show the current top available base-types.");
         }
 
         Section("Archer gear") {
-            DeepSearchMulti S0(0.0, "Leveling Rare Bow Progression", 0, 10) { -BaseType "Short Bow"; Class "Bows"; DropLevel >= 65; !ItemLevel <= 67; Rarity Rare; }
+            Search S0(0.0, "Leveling Rare Bow Progression 1", "leveling->rare->archer;l1") { }
+            Search S0(0.0, "Leveling Rare Bow Progression 2", "leveling->rare->archer;l2") { }
+            Search S0(0.0, "Leveling Rare Bow Progression 3", "leveling->rare->archer;l3") { }
+            Search S0(0.0, "Leveling Rare Bow Progression 4", "leveling->rare->archer;l4") { }
+            Search S0(0.0, "Leveling Rare Bow Progression 5", "leveling->rare->archer;l5") { }
+            Search S0(0.0, "Leveling Rare Bow Progression 6", "leveling->rare->archer;l6") { }
+            Search S0(0.0, "Leveling Rare Bow Progression 7", "leveling->rare->archer;l7") { }
+            Search S0(0.0, "Leveling Rare Bow Progression 8", "leveling->rare->archer;l8") { }
+
             QuickUI(S0, "SD", ["AllGearClasses", "Sockets", "AreaLevel"], "", [], "These section combines many rules and will show the current top available base-types.");
             QuickUI([0.0, "Leveling rare quivers", "leveling->rare->armours;quivers"], "SD", ["ItemLevel", "DropLevel"]);
         }
@@ -2145,19 +2125,19 @@ Chapter() {
         Function ItemProgUI($s) { QuickUI($s, "", ["Rarity", "Sockets", "LinkedSockets", "AreaLevel", "Corrupted", "Progression"], "Item Progression Editor"); }
 
         Section("Personal Item Progression #1") {
-            DeepSearch S0("skip", "skip", "leveling->rare->socketslinks;4linkrares") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
+            DeepSearch S0("skip", "skip", "leveling->rare->caster;earlylevels") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
             Conditional("?LvlItemProgression1", [0], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
             ItemProgUI("?LvlItemProgression1");
         }
 
         Section("Personal Item Progression #2") {
-            DeepSearch S0("skip", "skip", "leveling->rare->socketslinks;4linkrares") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
+            DeepSearch S0("skip", "skip", "leveling->rare->caster;earlylevels") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
             Conditional("?LvlItemProgression2", [0], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
             ItemProgUI("?LvlItemProgression2");
         }
 
         Section("Personal Item Progression #3") {
-            DeepSearch S0("skip", "skip", "leveling->rare->socketslinks;4linkrares") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
+            DeepSearch S0("skip", "skip", "leveling->rare->caster;earlylevels") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
             Conditional("?LvlItemProgression3", [0], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
             ItemProgUI("?LvlItemProgression3");
         }
@@ -2442,11 +2422,11 @@ Chapter() {
 
         Description("Noteworthy gems are highlighted here. Quality based gem highlight - mostly for the GCP recipe - can be found in the 'Vendor Recipes' section.");
 
-        Section("Top Alt. Quality & Awakened Gems", "TopAwakeGem", "E") {
+        Section("Top Awakened Gems", "TopAwakeGem", "E") {
             QuickUI([0.0, "Top Awakened Support Gems", "gems-exceptional;awat1"], "S", ["GemLevel", "Quality"], "Expensive Awakened Gems", ["Gems", "OD"]);
-            QuickUI([0.0, "Support Gems Divergent", "gems-exceptional;divt1"], "S", ["GemLevel", "Quality"], "Expensive Divergent Gems", ["Gems", "DO"]);
-            QuickUI([0.0, "Support Gems Phantasmal", "gems-exceptional;phat1"], "S", ["GemLevel", "Quality"], "Expensive Phantasmal Gems", ["Gems", "OD"]);
-            QuickUI([0.0, "Support Gems Anomalous", "gems-exceptional;anot1"], "S", ["GemLevel", "Quality"], "Expensive Anomalous Gems", ["Gems", "DO"]);
+//            QuickUI([0.0, "Support Gems Divergent", "gems-exceptional;divt1"], "S", ["GemLevel", "Quality"], "Expensive Divergent Gems", ["Gems", "DO"]);
+//            QuickUI([0.0, "Support Gems Phantasmal", "gems-exceptional;phat1"], "S", ["GemLevel", "Quality"], "Expensive Phantasmal Gems", ["Gems", "OD"]);
+//            QuickUI([0.0, "Support Gems Anomalous", "gems-exceptional;anot1"], "S", ["GemLevel", "Quality"], "Expensive Anomalous Gems", ["Gems", "DO"]);
         }
 
         Section("Top Gems, high level and quality", "SkillGemRed1", "E") {
@@ -2456,10 +2436,9 @@ Chapter() {
             QuickUI([0.0, "Top Gems, lvl 21, 23q", "gems-exceptional;2123any"], "SH", ["GemLevel", "Quality"]);
         }
 
-        Section("Awakened and Alternate Quality Gems", "AwakeGem", "E") {
+        Section("Awakened Gems", "AwakeGem", "E") {
             Description("Awakened gems are obtained by slaying conquerors and are a powered up version of normal support gems");
             QuickUI([0.0, "Awakened Support Gems", "gems-exceptional;awaany"], "SH", [], "");
-            QuickUI([0.0, "Alternate Quality Gems Heist", "gems-exceptional;altany"], "SH", [], "Alternate Quality Gems");
         }
 
         Section("Exceptional Gems - Special gems", "Empower", "E") {
@@ -2511,24 +2490,27 @@ Chapter() {
     Section("Misc. Items", "GoldenKey") {
 
         Section("Valuable Linked items", "Fusing") {
-            Search S0(0.0, "6 links (height 3)") { Rarity Normal; Class "Body Armours"; SocketGroup "RRGBRR"; }
+//            Search S0(0.0, "6 links (height 3)") { Rarity Normal; Class "Body Armours"; SocketGroup "RRGBRR"; }
             Search S4(0.0, "6 links (height 4)") { Rarity Normal; Class "Bows"; SocketGroup "RRGBRR"; }
-            QuickUI(S0, "S", ["Corrupted"], "Good 6 links - uncorrupted armors");
+            QuickUI([0.0, "Top Tier 6 Links", "6l;hightier"], "SH", ["Mirrored", "Corrupted", "ItemLevel", "Rarity"], null, ["gear", "SO"]);
+//            QuickUI(S0, "S", ["Corrupted"], "Good 6 links - uncorrupted armors");
             QuickUI(S4, "S", ["Corrupted"], "Other 6 links - corrupted or weapons");
             QuickUI([0.0, "5 linked uniques", "uniques;5link"], "SD");
             QuickUI([0.0, "6 linked uniques", "uniques;ex6link"], "SD");
             QuickUI([0.0, "6 Socket Uniques", "uniques;6s"], "SD");
         }
 
-        Section("Metamorph Samples", "MetamorphSampleOrganHeart") {
-            Search S2(0.0, "Metamorph Samples") { BaseType "Metamorph Heart"; }
-            QuickUI(S2, "SH", ["ItemLevel"]);
-        }
+//        Section("Metamorph Samples", "MetamorphSampleOrganHeart") {
+//            Search S2(0.0, "Metamorph Samples", "metamorph;any") { BaseType "Metamorph Heart"; }
+//            QuickUI(S2, "SH", ["ItemLevel"]);
+//        }
 
         Section("Unique Exceptions", "Tabula") {
             Search S1("0.0", "Unique Exception: Tabula Rasa") { BaseType "Simple Robe"; SocketGroup "WWWWWW"; Rarity Unique; }
             Search S2("0.0", "Unique Exception: Two Abyss Socket Uniques", "uniques;2xabyss") { BaseType "Steelscale Gauntlets"; SocketGroup "A A"; Rarity Unique; }
             Search S3("0.0", "Unique Exception: Beachhead Pieces") { Rarity Unique; BaseType "Legion Sword Piece"; }
+
+            QuickUI([0.0, "Unique Exception: Kaom's Heart", "uniques;exkaom"], "SH", []);
 
             QuickUI(S1, "SH", [], "", [], "Because of its always present 6 white, linked sockets, Tabula Rasa is a unique that can always be identified with certainty, even though Thousand Ribbons has the same BaseType.");
             QuickUI(["0.0", "Unique Exception: The Squire", "uniques;exsquire"], "S", [], "", [], "The squire always drops with 3 white sockets and we use that data to identify it!");

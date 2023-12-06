@@ -55,14 +55,11 @@ StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. Th
     SS_Item("S0");
 }
 
-SS_SectionTitle("Current League: 3.22 Trial of the Ancestors");
+SS_SectionTitle("Current League: 3.23 Affliction");
 
-StyleSection("Trial of the Ancestors", "Use silver coins to access the Trial - Fight alongside (and against) ancestral warriors in a tournament. Win to rise in the tournament ranks and earn tattoos, gear and omens") {
-    Search S0("skip") { BaseType "Silver Coin"; }
-    Search S0("skip") { BaseType "Tattoo of the Ngamahu Firewalker"; }
-    Search S0("skip") { BaseType "Honoured Tattoo of the Hatungo"; }
-    Search S0("skip") { BaseType "Omen of Return"; }
-    Search S0("skip") { BaseType "Hinekora's Lock"; }
+StyleSection("Affliction", "This league introduces over a hundred new Transfigured Gems, Charms that allow you to build your own Wildwood Ascendancy tree and Tinctures, which are toggleable flasks!") {
+    Search S0("skip") { BaseType "Raise Zombie of Falling"; TransfiguredGem True; }
+    Search S0("skip") { BaseType "Ashbark Tincture"; Class Tincture; Rarity Magic; ItemLevel 75; }
     SS_Item("S0");
 }
 
