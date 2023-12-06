@@ -2290,6 +2290,7 @@ Chapter() {
             ModItemUI([0.0, "ModFilter: Ele+Chaos Caster Weapons, light", "rareid;caster_lightweapont2"], "SD", "Lightning caster");
             ModItemUI([0.0, "ModFilter: Ele+Chaos Caster Weapons, chaos", "rareid;caster_chaosweapont2"], "SD", "Chaos caster");
             ModItemUI([0.0, "ModFilter: Physical Caster Weapons", "rareid;caster_physweapont2"], "SD", "Physical caster");
+            ModItemUI([0.0, "ModFilter: BladeBlast", "rareid;bladeblast_2core"], "SD", "Blade Blast Daggers");
         }
 
         Section("Gem Weapons") {
