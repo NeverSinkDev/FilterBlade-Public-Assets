@@ -37,17 +37,22 @@ Chapter() {
         Section("Chromatic Orb", "Chromatic") {
             Description("A chromatic orb is acquired by selling any Red-Green-Blue socket group item. The colors need to be linked, further links do not matter. Hover over the scroll left for more info.", "'RGB' items", "The size of the item or its other stats don't matter. It's more efficient to pick up small RGB-items. Note that the order of colors or any additional sockets or links don't matter.");
 
-            QuickUI([0.0, "RGB Chromatic recipe EG small2x2", "endgamergb;rgbsmall1"], "SH", ["AreaLevel"], "Endgame: Small (2x2)");
-            QuickUI([0.0, "RGB Chromatic recipe EG small1x3", "endgamergb;rgbsmall2"], "SH", ["AreaLevel", "Height"], "Endgame: Small (1x3, 1x4)");
-            QuickUI([0.0, "RGB Chromatic recipe EG medium", "endgamergb;rgbmedium"], "SH", ["AreaLevel"], "Endgame: Medium-sized (2x3)");
-            QuickUI([0.0, "RGB Chromatic recipe EG large", "endgamergb;rgblarge"], "SH", ["AreaLevel"], "Endgame: Large (2x4)");
-            Divider();
+            Search S0(1.0, "RGB Chromatic recipe EG small2x2", "endgamergb;rgbsmall1") {}
+            Search S1(1.0, "RGB Chromatic recipe EG small1x3", "endgamergb;rgbsmall2") {}
+            Search S2(1.0, "RGB Chromatic recipe EG medium", "endgamergb;rgbmedium") {}
+            Search S3(1.0, "RGB Chromatic recipe EG large", "endgamergb;rgblarge") {}
+
+            Search S0(1.0, "RGB Chromatic recipe rare small 1", "rr;rgbsmall1") {}
+            Search S1(1.0, "RGB Chromatic recipe rare small 2", "rr;rgbsmall2") {}
+            Search S2(1.0, "RGB Chromatic recipe rare medium", "rr;rgbmedium") {}
+            Search S3(1.0, "RGB Chromatic recipe rare large", "rr;rgblarge") {}
+
+            QuickUI(S0, "SH", ["AreaLevel"], "Endgame: Small (2x2)");
+            QuickUI(S1, "SH", ["AreaLevel", "Height"], "Endgame: Small (1x3, 1x4)");
+            QuickUI(S2, "SH", ["AreaLevel"], "Endgame: Medium-sized (2x3)");
+            QuickUI(S3, "SH", ["AreaLevel"], "Endgame: Large (2x4)");
+
             Box() { Title("Chromatic Recipe: Campaign");  Description("The campaign chromatic recipe can be changed in the 'Campaign -> Colors and Links' section");}
-            Divider();
-            QuickUI([0.0, "RGB Chromatic recipe rare small 1", "rr;rgbsmall1"], "SH", ["AreaLevel"], "Endgame Rare: Small (2x2)");
-            QuickUI([0.0, "RGB Chromatic recipe rare small 2", "rr;rgbsmall2"], "SH", ["AreaLevel", "Height"], "Endgame Rare: Small (1x3, 1x4)");
-            QuickUI([0.0, "RGB Chromatic recipe rare medium", "rr;rgbmedium"], "SH", ["AreaLevel"], "Endgame Rare: Medium (2x3)");
-            QuickUI([0.0, "RGB Chromatic recipe rare large", "rr;rgblarge"], "SH", ["AreaLevel"], "Endgame Rare: Large (2x4)");
         }
 
         Section("Gemcutter's Prism", "GCP") {
