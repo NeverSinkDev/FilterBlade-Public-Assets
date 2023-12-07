@@ -57,9 +57,8 @@ StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. Th
 
 SS_SectionTitle("Current League: 3.23 Affliction");
 
-StyleSection("Affliction", "This league introduces over a hundred new Transfigured Gems, Charms that allow you to build your own Wildwood Ascendancy tree and Tinctures, which are toggleable flasks!") {
-    Search S0("skip") { BaseType "Raise Zombie of Falling"; TransfiguredGem True; }
-    Search S0("skip") { BaseType "Ashbark Tincture"; Class Tincture; Rarity Magic; ItemLevel 75; }
+StyleSection("Affliction", "Over a hundred new Transfigured Gems (don't drop, obtained in lab) and exclusive extra-ascendancy items, such as Charms and Tinctures!") {
+    Search S0("skip") { BaseType "Ashbark Tincture"; Rarity Magic; ItemLevel 75; }
     SS_Item("S0");
 }
 
@@ -316,12 +315,6 @@ StyleSection("Special: Synthesis", "Synthesed items have a special implicit. Som
 StyleSection("Special: Fractured", "Fractured items have a permanent mod that can't be removed or changed. These make for good crafting bases, especially when combined with eldritch currency.") {
     Search S0("skip", null, "exotic->fractured;fractt1") { ItemLevel 74; Corrupted False; Rarity Rare; FracturedItem True; BaseType "Onyx Amulet"; }
     Search S0("skip", null, "exotic->fractured;fractt2") { ItemLevel 74; Corrupted False; Rarity Rare; FracturedItem True; BaseType "Tenderizer"; }
-    SS_Item("S0");
-}
-
-StyleSection("Special: Enchanted", "Some helmet enchantments can be extraordinary valuable.") {
-    Search S0("skip", null, "exotic->enchanted;helmets") { ItemLevel 74; Identified True; Corrupted False; Rarity Rare;AnyEnchantment True; BaseType "Hubris Circlet"; }
-    Search S0("skip", null, "exotic->enchanted;glovesboots") { ItemLevel 74; Identified True; Corrupted False; Rarity Rare; AnyEnchantment True; }
     SS_Item("S0");
 }
 
