@@ -2918,3 +2918,6 @@ of Balance,,(21–24)% chance to Avoid being Stunned,suffix,50,Unknown
 of Poise,,(25–30)% chance to Avoid being Stunned,suffix,70,Unknown
 of Stemming,,(31–40)% chance to Avoid Bleeding,suffix,50,Unknown
 of the Tourniquet,,(41–50)% chance to Avoid Bleeding,suffix,70,Unknown
+of Crystal Prisons,,Essences imprison a Rogue Exile - Essences found are a tier higher - Corrupting Imprisoned Monsters cannot release them - Monsters Imprisoned by a Shrieking Essence will be Duplicated when released - Imprisoned Monsters drop an additional Rare 'Item with an Essence Modifier,suffix,81,Memory
+of Harvest Beasts,,Areas contain Einhar - Areas can contain capturable Harvest Beasts,suffix,81,Memory
+of the Sacred Grove,,Crops in Area are larger in size - Harvest Seeds in Area are at least Tier 2,suffix,81,Memory
