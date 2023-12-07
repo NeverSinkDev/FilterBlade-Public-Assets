@@ -1002,10 +1002,6 @@ Chapter() {
             BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2, "Tier 3", T3);
         }
 
-        Section("Exotic Unique Bases") {
-            QuickUI([0.0, "Exotic Unique Bases", "exoticbases;exoticuniquebases"], "SH", ["Rarity", "ItemLevel"], null, ["gear", "OS"]);
-        }
-
         Section("Synthesised items") {
             Description("Some itemclasses like 'amulets' are completely covered through the class-based filtering below and don't need representing through the matrix.");
             QuickUI([0.0, "Synthesised items T1", "exotic->synthesised;synthselected"], "SD", ["ItemLevel", "DropLevel", "Identified", "BTM"]);
@@ -2530,9 +2526,11 @@ Chapter() {
             QuickUI([0.0, "Unique with Crucible Tree", "uniques;excrucibleunique"], "SH", [], null, ["GearPlusFlasks", "OAS"]);
         }
 
-        Section("Fishing Rod", "FishingRod") {
+        Section("Fishing Rod and Bricked Uniques", "FishingRod") {
             Search S3("0.0", "Fishing Rod") { Class "Fishing Rods"; BaseType "Fishing Rod"; Rarity "Normal"; }
             QuickUI(S3, "SH", [], "", [], ["On the Hook", "YOU'VE BEEN CAPTURED! STUPID EXILE!", "Fishing rods are just incredibly rare. They don't have any secrets or special purposes at all. NeverSink assures that he was not forced to write this message and that the international fishing council of Wraeclast did not impose their supreme will upon him, but merely acted as advisors."]);
+
+            QuickUI([0.0, "Bricked Uniques", "exoticbases;exoticuniquebases"], "SH", ["Rarity", "ItemLevel"], null, ["gear", "OS"]);
         }
 
         Section("Quest & quest-like items", "GoldenKey") {
