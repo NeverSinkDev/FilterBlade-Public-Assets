@@ -740,9 +740,6 @@ Chapter() {
         Section("Atlas Memories", "AtlasMemory") {
             Function AtlasMemoryUiFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["AtlasMemories", "O"]); }
 
-            QuickUI([0.0, "Atlas Master Memories with good mods", "exoticmap->memory;t1"], "SD", ["Mods"], null, ["AtlasMemories", "OAS"]);
-            Divider();
-
             AtlasMemoryUiFunc([0.0, "Atlas Master Memories Tier 1", "exoticmap->memory;any"], "SH");
 
             // new tiers
@@ -752,6 +749,10 @@ Chapter() {
             // hide-tier
             Conditional("?AtlasMemoriesNewTierHidden") { }
             ElementAdder_Tier("?AtlasMemoriesNewTierHidden", null, true, "AtlasMemories", "HO");
+
+            Divider();
+
+            QuickUI([0.0, "Atlas Master Memories with good mods", "exoticmap->memory;t1"], "SD", ["Mods"], null, ["AtlasMemories", "OAS"]);
         }
 
         Title("Splinters");
