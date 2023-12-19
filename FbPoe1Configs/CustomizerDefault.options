@@ -921,7 +921,7 @@ Chapter() {
 
         Function CondShowBaseQuick ($s, $shd = "SHD", $title)
         {
-            QuickUI($s, $shd, ["RarityU", "ItemLevel", "Stats_All"], $title, ["rarityItems", "OS"], "Quickly highlight additional bases. If you need more power and options, there's a lot more custom rules lower in the customizer");
+            QuickUI($s, $shd, ["RarityU", "ItemLevel", "Corrupted", "Stats_All"], $title, ["rarityItems", "OS"], "Quickly highlight additional bases. If you need more power and options, there's a lot more custom rules lower in the customizer");
         }
 
         Conditional("?CQuickEndgameCustomRule1", ["c3.gear.crafting-decorators"]) { Show; BaseType == "Imbued Wand"; SetBorderColor 200 0 0; SetBackgroundColor 60 0 0; SetFontSize 40; ItemLevel >= 68; Rarity Normal; Corrupted False; Mirrored False; }
