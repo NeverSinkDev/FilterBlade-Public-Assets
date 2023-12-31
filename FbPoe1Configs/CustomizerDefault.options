@@ -418,6 +418,29 @@ Chapter() {
             Conditional("?VialNewTiersHidden") { }
             ElementAdder_Tier("?VialNewTiersHidden", null, true, "IncursionVials", "OH");
         }
+
+        Section("Hinekora's Lock", "HinekorasLock") {
+            // crafting prediction items thingy
+            QuickUI([0.0, "Hinekora's Lock", "currency->trial->orblike;t1"], "S", [], null, null, "Hinekor's lock is a valuable reward from the trial. Once applied on an item, you'll foresee the outcome of currency items used on the same item - until you'll actually use one of them.");
+        }
+
+        Section("Omens", "OmenoftheSoulDevourer", "E") {
+            Function OmenFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialOmens", "O"]); }
+
+            Description("Omens will trigger certain effects as long as they are in your inventory. The omen is then consumed.");
+            OmenFunc([0.0, "Omens Tier 1", "currency->trial->omen;t1"], "SH");
+            OmenFunc([0.0, "Omens Tier 2", "currency->trial->omen;t2"], "SH");
+            OmenFunc([0.0, "Omens Tier 3", "currency->trial->omen;t3"], "SH");
+            OmenFunc([0.0, "Omens Tier 4", "currency->trial->omen;t4"], "SH");
+
+            // new tiers
+            Conditional("?AncTrialOmensNewTier") { }
+            ElementAdder_Tier("?AncTrialOmensNewTier", "OmenFunc");
+
+            // hide tier
+            Conditional("?AncTrialOmensHidden") { }
+            ElementAdder_Tier("?AncTrialOmensHidden", null, true, "AncTrialOmens", "OH");
+        }
     }
 
     Section("Unique items", "Unique", "E") {
@@ -1086,11 +1109,6 @@ Chapter() {
 
     Section("League-specific items and mods", "Talisman") {
 
-        Section("Hinekora's Lock", "HinekorasLock") {
-            // crafting prediction items thingy
-            QuickUI([0.0, "Hinekora's Lock", "currency->trial->orblike;t1"], "S", [], null, null, "Hinekor's lock is a valuable reward from the trial. Once applied on an item, you'll foresee the outcome of currency items used on the same item - until you'll actually use one of them.");
-        }
-
         Section("Tattoos", "HonouredTattoooftheWiseMan") {
             Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
 
@@ -1107,24 +1125,6 @@ Chapter() {
             // hide tier
             Conditional("?AncTrialTattooHidden") { }
             ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
-        }
-
-        Section("Omens", "OmenoftheSoulDevourer") {
-            Function OmenFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialOmens", "O"]); }
-
-            Description("Omens will trigger certain effects as long as they are in your inventory. The omen is then consumed.");
-            OmenFunc([0.0, "Omens Tier 1", "currency->trial->omen;t1"], "SH");
-            OmenFunc([0.0, "Omens Tier 2", "currency->trial->omen;t2"], "SH");
-            OmenFunc([0.0, "Omens Tier 3", "currency->trial->omen;t3"], "SH");
-            OmenFunc([0.0, "Omens Tier 4", "currency->trial->omen;t4"], "SH");
-
-            // new tiers
-            Conditional("?AncTrialOmensNewTier") { }
-            ElementAdder_Tier("?AncTrialOmensNewTier", "OmenFunc");
-
-            // hide tier
-            Conditional("?AncTrialOmensHidden") { }
-            ElementAdder_Tier("?AncTrialOmensHidden", null, true, "AncTrialOmens", "OH");
         }
 
         Section("Sanctum Relics", "SanctumRelic") {
