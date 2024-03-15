@@ -32,10 +32,10 @@ Chapter() {
 
     Section("Vendor Recipes", "Chromatic") {
 
-        Title("Currency Generating Recipes");
+        Title("Currency Reward Recipes");
 
         Section("Chromatic Orb", "Chromatic") {
-            Description("A chromatic orb is acquired by selling any Red-Green-Blue socket group item. The colors need to be linked, further links do not matter. Hover over the scroll left for more info.", "'RGB' items", "The size of the item or its other stats don't matter. It's more efficient to pick up small RGB-items. Note that the order of colors or any additional sockets or links don't matter.");
+            Description("1 Chromatic orb - reward for selling an item with a Red-Green-Blue socket group. The 3 colors need to be linked order and other sockets don't matter. Hover over the scroll left for more info.", "'RGB' items", "It's more efficient to pick up small RGB-items. This recipe is mostly useful during the early stages of a league/character progression. Later on the player usually finds enough natural chromatic orbs to sustain their coloring needs, without needing to do recipes.");
 
             Search S0(1.0, "RGB Chromatic recipe EG small2x2", "endgamergb;rgbsmall1") {}
             Search S1(1.0, "RGB Chromatic recipe EG small1x3", "endgamergb;rgbsmall2") {}
@@ -48,7 +48,7 @@ Chapter() {
             Search S3(1.0, "RGB Chromatic recipe rare large", "rr;rgblarge") {}
 
             QuickUI(S0, "SH", ["AreaLevel"], "Endgame: Small (2x2)");
-            QuickUI(S1, "SH", ["AreaLevel", "Height"], "Endgame: Small (1x3, 1x4)");
+            QuickUI(S1, "SH", ["AreaLevel",  "Height"], "Endgame: Small (1x3, 1x4)");
             QuickUI(S2, "SH", ["AreaLevel"], "Endgame: Medium-sized (2x3)");
             QuickUI(S3, "SH", ["AreaLevel"], "Endgame: Large (2x4)");
 
@@ -56,7 +56,7 @@ Chapter() {
         }
 
         Section("Gemcutter's Prism", "GCP") {
-            Description("A Gemcutter's Prism is acquired by selling a gem with 20% quality or gems with a combined total of 40% quality to a vendor.");
+            Description("1 Gemcutter's Prism - reward for selling a single gem with 20% quality gem or multiple gems with a combined total of 40% quality to a vendor.");
 
             QuickUI([0.0, "Gemcutter recipe high quality gems", "gems-generic;qt2"], "SD", ["Quality", "AreaLevel"]);
             QuickUI([0.0, "Gemcutter recipe mid quality gems", "gems-generic;qt3"], "SD", ["Quality", "AreaLevel"]);
@@ -64,7 +64,7 @@ Chapter() {
         }
         
         Section("Jeweller Orbs", "Jeweller") {
-            Description("Vendors will reward you with 7 Jeweller's Orbs upon selling them an item with 6 sockets.");
+            Description("7 Jeweller's Orb - reward for selling an item with 6 sockets.");
 
             QuickUI([0.0, "Jeweller recipe 6 sockets (large)", "socketslinks;6sockets4h"], "SD", ["AreaLevel", "Height"]);
             QuickUI([0.0, "Jeweller recipe 6 sockets", "socketslinks;6sockets"], "SD", ["AreaLevel", "Height"]);
@@ -72,7 +72,7 @@ Chapter() {
         }
 
         Section("Glassblower's Bauble", "Glassblower") {
-            Description("Vendors will reward you with a glassblowers bauble upon selling them a single 20% quality flask or multiple quality flasks with a total quality of 40%.", "Glassblower Recipe", "It's recommended to at least use the threshold of 14. This allows you to get 1 glassblower per 3 mid quality flasks. Note that glassblowers can also be acquired by bying it for 8 whetstones from vendors and drop naturally, so the recipe is not very efficient.");
+            Description("1 Glassblower's Bauble - reward for selling a single 20% quality flask or multiple quality flasks with a total quality of 40%.", "Glassblower Recipe", "It's recommended to at least use the threshold of 14. This allows you to get 1 glassblower per 3 mid quality flasks. Note that glassblowers can also be acquired by buying it for 8 whetstones from vendors and drop naturally, so the recipe is not very efficient. That being said, glassblowers are in high demand at the start of the league, not only for quality, but also to apply instilling orb recipes onto the player flasks.");
 
             QuickUI([0.0, "Glassblower recipe top quality", "endgameflasks;any20qualflask"], "SD", ["Quality", "AreaLevel", "RarityNM"]);
             QuickUI([0.0, "Glassblower recipe mid quality", "endgameflasks;qualityhigh"], "SD", ["Quality", "AreaLevel", "RarityNM"]);
@@ -82,7 +82,7 @@ Chapter() {
         }
 
         Section("Cartographer's Chisel", "Chisel") {
-            Description("You get a cartographer's chisel by vendoring a 20% quality Gavel, Rock Breaker, or Stone Hammer together with any map. This recipe is considered too slow for most purposes and it's not recommendend");
+            Description("1 Cartographer's Chisel - reward for vendoring a 20% quality Gavel, Rock Breaker, or Stone Hammer together with any map. Not recommended as it's considered too slow.");
 
             DeepSearch S1(0.0, "Chisel recipe mid quality A", "chiselrecipe;chiselhighqualnormal") { BaseType "Stone Hammer"; Quality 15; Rarity Normal; Corrupted False; }
             DeepSearch S1(0.0, "Chisel recipe mid quality B", "chiselrecipe;chiselhighqualmagic") { BaseType "Stone Hammer"; Quality 18; Rarity Magic; Corrupted False; }
@@ -99,7 +99,7 @@ Chapter() {
         Title("Build-Specific Recipes");
 
         Section("+1 Skill Gem Recipes", "SkillGemRed1") {
-            Description("By selling a total of 40% quality worth of gems with a specific tag (such as fire) together with a Rune Dagger, Wand, Sceptre or Staff you will be rewarded with a +1 global level to ALL tagged spell gems. This can be great for crafting, ssf or powerful weapons early on");
+            Description("By selling a total of 40% quality worth of gems with a specific tag (such as fire) together with a Wand, Sceptre, Rune Dagger or Staff you will be rewarded with a weapon with a +1 GLOBAL level to ALL tagged spell gems. This is a powerful weapon early in the endgame.");
 
             QuickUI([0.0, "+1 Skill Gem Recipe (Cold)", "gems-generic;plusonegemcold"], "SD", ["Quality", "AreaLevel"]);
             QuickUI([0.0, "+1 Skill Gem Recipe (Fire)", "gems-generic;plusonegemfire"], "SD", ["Quality", "AreaLevel"]);
@@ -112,13 +112,13 @@ Chapter() {
         Title("Exclusive Item Recipes");
 
         Section("Grasping Mail (Breach Rings)", "BreachRing") {
-            Description("Selling a total of 60 Breach Rings together to a vendor will reward you with the Grasping Mail rare item. This item can feature exclusive modifiers, such as the +50% to all defenses. Note that rerolling that item will not allow for new breach modifier to spawn. This rare can be very valuable for crafting.");
+            Description("Selling a total of 60 Breach Rings together to a vendor will reward you with the Grasping Mail rare item. This item can feature exclusive modifiers, such as the +50% to all defenses. Rerolling the grasping mail will NOT spawn the exclusive mods again.");
             QuickUI([2.0, "Breach Rings High ilvl", "rare->exotic->breachrings;high"], "SH", ["AreaLevel", "ItemLevel"]);
             QuickUI([2.0, "Breach Rings", "rare->exotic->breachrings;any"], "SH", ["AreaLevel", "ItemLevel"]);
         }
 
         Section("Loreweave Unique Rings", "Loreweave") {
-            Description("Selling a total of 60 Unique Rings together to a vendor will reward you with the Loreweave Unique body armour.");
+            Description("Selling a total of any 60 Unique Rings together to a vendor will reward you with the Loreweave Unique body armour.");
             QuickUI([0.0, "Loreweave Rings", "uniques;recipeuniquerings"], "SD", ["ItemLevel"]);
         }
     }
@@ -162,13 +162,13 @@ Chapter() {
             Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["normalCurrency", "O"]); }
 
             TierListToolBar("Currency", [], ["Sacred Crystallised Lifeforce", "Primal Crystallised Lifeforce", "Vivid Crystallised Lifeforce", "Wild Crystallised Lifeforce"]); // ignore lifeforce because it always drops in huge stacks and poeNinja only considers the individual price
-            Description("Drag & drop the basetypes to change their tier. Add new tiers at the bottom or in the toolbar. Hover over the wisdom scroll to receive additional advise for currency management.", "Currency Strategy", "Path of Exile rewards speed. It's an efficient strategy to save time by picking up just the minimum amount of scrolls, scraps, augments and other low currency. You can even completely stop picking them up. Do note that you can sell transmutation orbs and whetstones for a 1:4 wisdom scroll gain and armorer scraps for 1:2 wisdom scrolls. You can also buy a portal gem to save on portal scrolls. Another efficient technique is to hide low currencies entirely - but with the maximum font size, but show them, while ALT is pressed.");
+            Description("DRAG & DROP items to change the tier. Add new tiers at the bottom or in the toolbar. Hover over the wisdom scroll to receive additional advise for currency management.", "Currency Strategy", "Path of Exile rewards speed. It's an efficient strategy to save time by picking up just the minimum amount of scrolls, scraps, augments and other low currency. You can even completely stop picking them up. Sell transmutation orbs and whetstones for a 1:4 wisdom scroll gain and armorer scraps for 1:2 wisdom scrolls. You can also buy a portal gem to save on portal scrolls. <hr> You can use the 'Stacked Tiering Mode' above to automate behaviour for stacked item drops! <hr> This list is already economy-updated if you're using the SC/HC base filter! <hr> Remember that there are special rules for currency during the campaign and for stacked currency.");
 
-            CurrencyList([3.0, "Currency God Tier 1", "currency;t1exalted"], "S", "God Tier 1:");
-            CurrencyList([3.0, "Currency God Tier 2", "currency;t2divine"], "S", "God Tier 2:");
-            CurrencyList([3.0, "Currency High Tier 1", "currency;t3annul"], "SH", "High Tier 1:");
-            CurrencyList([3.0, "Currency High Tier 2", "currency;t4chaos"], "SH", "High Tier 2:");
-            CurrencyList([3.0, "Currency High Tier 3", "currency;t5alchemy"], "SH", "High Tier 3:");
+            CurrencyList([3.0, "Currency God Tier 1", "currency;t1exalted"], "S", "God Tier 1 (Divine Tier):");
+            CurrencyList([3.0, "Currency God Tier 2", "currency;t2divine"], "S", "God Tier 2 (Exalted Tier):");
+            CurrencyList([3.0, "Currency High Tier 1", "currency;t3annul"], "SH", "High Tier 1 (Annulment Tier):");
+            CurrencyList([3.0, "Currency High Tier 2", "currency;t4chaos"], "SH", "High Tier 2 (Chaos Tier):");
+            CurrencyList([3.0, "Currency High Tier 3", "currency;t5alchemy"], "SH", "High Tier 3 (Alchemy Tier):");
             CurrencyList([3.0, "Currency Mid Tier 1", "currency;t6chrom"], "SH", "Mid Tier 1:");
             CurrencyList([3.0, "Currency Mid Tier 2", "currency;t7chance"], "SH", "Mid Tier 2:");
             CurrencyList([3.0, "Currency Basic Tier 1", "currency;t8trans"], "SH", "Basic Tier 1:");
@@ -188,6 +188,7 @@ Chapter() {
         Title("Stacked Currency Drops (Endgame)");
 
         Function CurrencyStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Currency", "DO"]); }
+        Function CurrencyStackListWithArea($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
 
         Section("Large Stacks", "Chaos", "E") {
             CurrencyStackList([0.0, "Stacked Currency - T1, Huge", "currency->stackedsix;t1"], "SD", "Stacked Currency, T1, Large");
@@ -210,27 +211,27 @@ Chapter() {
         }
 
         Section("Supplies - High Tier", "Transmut") {
-            CurrencyStackList([0.0, "Stacked Currency - High Supply Large", "currency->stackedsupplieshigh;t1"], "SD");
-            CurrencyStackList([0.0, "Stacked Currency - High Supply Medium", "currency->stackedsupplieshigh;t2"], "SD");
-            CurrencyStackList([0.0, "Stacked Currency - High Supply Small", "currency->stackedsupplieshigh;t3"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Large", "currency->stackedsupplieshigh;t1"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Medium", "currency->stackedsupplieshigh;t2"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Small", "currency->stackedsupplieshigh;t3"], "SD");
         }
 
         Section("Supplies - Low Tier", "ArmourerScrap") {
-            CurrencyStackList([0.0, "Stacked Currency - Low Supply Large", "currency->stackedsupplieslow;t1"], "SD");
-            CurrencyStackList([0.0, "Stacked Currency - Low Supply Medium", "currency->stackedsupplieslow;t2"], "SD");
-            CurrencyStackList([0.0, "Stacked Currency - Low Supply Small", "currency->stackedsupplieslow;t3"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - Low Supply Large", "currency->stackedsupplieslow;t1"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - Low Supply Medium", "currency->stackedsupplieslow;t2"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - Low Supply Small", "currency->stackedsupplieslow;t3"], "SD");
         }
 
         Section("Portal Scrolls", "PortalScroll") {
-            CurrencyStackList([0.0, "Stacked Currency - Portal Large", "currency->stackedsuppliesportal;t1"], "SD");
-            CurrencyStackList([0.0, "Stacked Currency - Portal Medium", "currency->stackedsuppliesportal;t2"], "SD");
-            CurrencyStackList([0.0, "Stacked Currency - Portal Small", "currency->stackedsuppliesportal;t3"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - Portal Large", "currency->stackedsuppliesportal;t1"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - Portal Medium", "currency->stackedsuppliesportal;t2"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - Portal Small", "currency->stackedsuppliesportal;t3"], "SD");
         }
 
         Section("Scroll of Wisdom", "WisdomScroll") {
-            CurrencyStackList([0.0, "Stacked Currency - Wisdom Large", "currency->stackedsupplieswisdom;t1"], "SD");
-            CurrencyStackList([0.0, "Stacked Currency - Wisdom Medium", "currency->stackedsupplieswisdom;t2"], "SD");
-            CurrencyStackList([0.0, "Stacked Currency - Wisdom Small", "currency->stackedsupplieswisdom;t3"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - Wisdom Large", "currency->stackedsupplieswisdom;t1"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - Wisdom Medium", "currency->stackedsupplieswisdom;t2"], "SD");
+            CurrencyStackListWithArea([0.0, "Stacked Currency - Wisdom Small", "currency->stackedsupplieswisdom;t3"], "SD");
         }
 
         Title("Currency Drops during the Campaign");
@@ -263,9 +264,11 @@ Chapter() {
 
         Title("Custom");
 
-        Section("Add Custom Rules", "Firefly") {
+        Section("Add Custom Currency Rules", "Firefly") {
+            Description("For all your special AreaLevel & StackSize Currency needs!"");
+
             Conditional("?CurrencyStackNewTiers", ["c9.currency.stacked.all"], "notSimpleBuilder") { Show; Class Currency; StackSize >= 3; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?CurrencyStackNewTiers", "CurrencyStackList");
+            ElementAdder_Tier("?CurrencyStackNewTiers", "CurrencyStackListWithArea");
         }
     }
 
@@ -279,12 +282,12 @@ Chapter() {
             Conditional("?EssenceHighlight", ["c9.currency.essences.all"]) { Show; Class Currency; SetFontSize 40; PlayAlertSound 2 300; SetBorderColor 0 0 0; SetTextColor 0 0 0; SetBackgroundColor 180 0 230; }
             QuickUI("?EssenceHighlight", "SDH", ["EssenceTypes"], "Highlight Essences by type:");
 
-            QuickUI(S0, "SH", ["AreaLevel"], "", ["essences"]);
-            QuickUI([0.0, "Essences T3", "currency->essence;t2"], "SH", ["AreaLevel"], "", ["essences"]);
-            QuickUI([0.0, "Essences T4", "currency->essence;t3"], "SH", ["AreaLevel"], "", ["essences"]);
-            QuickUI([0.0, "Essences T5", "currency->essence;t4"], "SH", ["AreaLevel"], "", ["essences"]);
-            QuickUI([0.0, "Essences T6", "currency->essence;t5"], "SH", ["AreaLevel"], "", ["essences"]);
-            QuickUI([0.0, "Essences T7", "currency->essence;t6"], "SH", ["AreaLevel"], "", ["essences"]);
+            QuickUI(S0, "SH", ["AreaLevel"], "T1 and Corruption-Exclusive Essences", ["essences"]);
+            QuickUI([0.0, "Essences T3", "currency->essence;t2"], "SH", ["AreaLevel"], "T2 Essences ", ["essences"]);
+            QuickUI([0.0, "Essences T4", "currency->essence;t3"], "SH", ["AreaLevel"], "T3 Essences ", ["essences"]);
+            QuickUI([0.0, "Essences T5", "currency->essence;t4"], "SH", ["AreaLevel"], "T4 Essences ", ["essences"]);
+            QuickUI([0.0, "Essences T6", "currency->essence;t5"], "SH", ["AreaLevel"], "T5 Essences ", ["essences"]);
+            QuickUI([0.0, "Essences T7", "currency->essence;t6"], "SH", ["AreaLevel"], "T6 and T7 Essences", ["essences"]);
 
             QuickUI([0.0, "Remaining essences", "currency->essence;exhide"], "SH", [], "", [], "Remaining essences that were not caught be the rules above due to possible AreaLevel requirements.");
         }
@@ -373,6 +376,16 @@ Chapter() {
             ElementAdder_Tier("?HeistCustomCoins", "CustomCoinFunc");
         }
 
+        Section("High Level Incubator Exceptions", "Incubator", "E") {
+            // high level
+            Function IncubatorILvlTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Incubators", "ItemLevel"], $text); }
+            Search SS(0.0, "High Level Incubators", "currency->incubators;leveledex") { BaseType "Thaumaturge's Incubator"; ItemLevel 85; }
+            IncubatorILvlTierList(SS, "SD", "High Level Incubators");
+
+            Conditional("?LegionIncubatorsNewTier", ["c9.currency.incubators.all"], "notSimpleBuilder") { Show; Class Incubator; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+            ElementAdder_Tier("?LegionIncubatorsNewTier", "IncubatorILvlTierList");
+        }
+
         Section("Incubators", "Incubator", "E") {
             Function IncubatorTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ItemLevel"], $text, ["Incubators", "O"]); }
 
@@ -386,22 +399,17 @@ Chapter() {
             Conditional("?IncubatorNewTiersHidden") { }
             ElementAdder_Tier("?IncubatorNewTiersHidden", null, true, "Incubators", "OH");
 
-            QuickUI([0.0, "Remaining Incubators", "currency->incubators;exhide"], "SH", [] , "", [], "Remaining Incubators, which are not matched by any of the above rules, probably due to unmet ItemLevel requirements.");
-
             Divider();
 
-            // high level
-            Function IncubatorILvlTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Incubators", "ItemLevel"], $text); }
-            Search SS(0.0, "High Level Incubators", "currency->incubators;leveledex") { BaseType "Thaumaturge's Incubator"; ItemLevel 85; }
-            IncubatorILvlTierList(SS, "SD", "High Level Incubators");
-
-            Conditional("?LegionIncubatorsNewTier", ["c9.currency.incubators.all"], "notSimpleBuilder") { Show; Class Incubator; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?LegionIncubatorsNewTier", "IncubatorILvlTierList");
+            Box() // Why is the box missing here without the command?
+            {
+                QuickUI([0.0, "Remaining Incubators", "currency->incubators;exhide"], "SH", [] , "", [], "Remaining Incubators, which are not matched by any of the above rules, probably due to unmet ItemLevel requirements.");
+            }
         }
 
         Section("Harbinger Upgrade Items", "HarvestSeed") {
             Search S1(0.0, "Harvest Currencies", "currency->others;harbinger") { BaseType "Fragmentation Scroll"; }
-            QuickUI(S1, "SH", [], "", ["all", "SO"]);
+            QuickUI(S1, "SH", [], "Harbinger Uniques Upgrade Scrolls", ["all", "SO"]);
         }
 
         Section("Incursion Vials", "IncursionVial", "E") {
@@ -427,7 +435,7 @@ Chapter() {
         Section("Omens", "OmenoftheSoulDevourer", "E") {
             Function OmenFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialOmens", "O"]); }
 
-            Description("Omens will trigger certain effects as long as they are in your inventory. The omen is then consumed.");
+            Description("Omens automatically trigger upon a certain condition when placed in your inventory. The omen is then consumed.");
             OmenFunc([0.0, "Omens Tier 1", "currency->trial->omen;t1"], "SH");
             OmenFunc([0.0, "Omens Tier 2", "currency->trial->omen;t2"], "SH");
             OmenFunc([0.0, "Omens Tier 3", "currency->trial->omen;t3"], "SH");
@@ -451,7 +459,7 @@ Chapter() {
         // we want (especially the hide-rule) to be low, so that corrupted uniques, 6 sockets, etc. are still shown, and only the regular normal unique is hidden
         // because of that, we HAVE TO list S10 (boss-drop uniques) first in the exceptionEntries, because that way it's the first referenced entry
         TierListToolBar("Uniques", [S10, S2, S7, S8, S11], ["Ruby Flask"]);
-        Warning("IMPORTANT: Path of Exile lootfilters can't distinguish between different uniques with the same BaseTypes.");
+        Warning("IMPORTANT: Filters can NEVER distinguish between different uniques with the same BaseTypes. The filter can't tell if a leather belt is a HEADHUNTER or a wurm's molt. Even if it's identified!");
 
         // we meed to keep these searches defined to reference them in the ecoLoader (auto-sort-excluded entries)
         Search S0(8.1, "Uniques Tier 1", "uniques;t1") { Rarity Unique; BaseType "Glorious Plate"; }
@@ -466,17 +474,17 @@ Chapter() {
 //        Search S12(8.1, "Uniques (fated boss drop)", "uniques;fatedbossdrop") {  }
 
         UniqueList(S0, "S", "Tier 1:", "Tier 1 uniques are always an expensive and lucky find!");
-        UniqueList(S1, "S", "Tier 2:", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
-        UniqueList(S2, "SH", "Multi-Base Uniques:", "Some BaseTypes have both: very valuable uniques AND cheap uniques. The filter can't say which one dropped. These multi-base uniques get more highlight, but play the low-tier unique sound.");
-        UniqueList(S10, "S", "Boss-Drop Uniques:", "These basetypes have a expensive unique version that only drops from bosses and special encounters. They also have a cheap world-drop-version. Don't hide these, the filter has no way of telling, which one it is. If you really want to hide this tier, enable the option to have Show/Hide/Disable buttons everywhere in Advanced->Settings.");
-        UniqueList(S8, "SH", "Unique Jewels:", "The filter can't disintinguish between expensive and cheap unique jewels. All of them are treated the same way!");
+        UniqueList(S1, "SH", "Tier 2:", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
+        UniqueList(S2, "SH", "Multi-Base Uniques:", "Some BaseTypes have both: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these!");
+        UniqueList(S10, "S", "Boss-Drop Uniques:", "A potentially expensive unique version of this item drops only from bosses! The world drop unique is fairly cheap! If you want to hide this tier: remember to check the hidden items dropped by bosses! Enable hiding this tier in Advanced->Settings.");
+        UniqueList(S8, "S", "Unique Jewels:", "The filter can't disintinguish between expensive and cheap unique jewels. All of them are treated the same way!");
 //        UniqueList(S12, "SH", "Fated Boss Drop Uniques:", "These can only drop from Atlas Map Bosses. You got to check those yourself because they look the same as a normal unique.");
         UniqueList(S7, "SDH", "Early league Uniques:", "These uniques are possibly expensive or interesting at the start of the new league! This tier stays empty, after the first week of the new league");
-        UniqueList(S3, "SH", "Tier 3 - semi-expensive uniques:");
-        UniqueList(S11, "SH", "Tier 4 - Non-Drop Uniques:", "Hideable uniques with non-droppable expensive versions.");
-        UniqueList(S6, "SH", "Tier 5 - cheap and hideable uniques:", "These uniques are worth very little. Note that the game and the meta changes fairly fast, so be careful with this section! Hiding this section at the start of new leagues and in SSF is a bad idea. You've been warned.");
+        UniqueList(S3, "SH", "Tier 3 - semi-expensive uniques:", "These uniques are not too valuable, unless they roll very well. Keep your filter updated, if you want to hide this section!");
+        UniqueList(S11, "SH", "Tier 4 - Non-Drop Uniques:", "These uniques have an expensive version that is ONLY obtained through special means, such as vendor recipes.");
+        UniqueList(S6, "SH", "Tier 5 - Cheap uniques:", "These uniques are worth very little. Keep your filter updated, if you want to hide this section! Hiding this section at the start of new leagues and in SSF is a bad idea.");
 
-        Description("The Tabula Rasa & The Squire unique are exceptions and can be edited under 'Misc. Items' at the bottom of the customizer.<br>Replica uniques can be found in the endgame -> league item section.");
+        Description("SPECIAL CASES: The Tabula Rasa & The Squire unique are exceptions and can be edited under 'Misc. Items' at the bottom of the customizer.<br>Replica uniques can be found in the endgame -> league item section.");
 
         Conditional("?UniqueNewTiers") { Show; Rarity Unique; SetTextColor 175 96 37 255; SetBackgroundColor 0 0 0 255; SetBorderColor 175 96 37 255; SetFontSize 42; PlayAlertSound 3 300; }
         ElementAdder_Tier("?UniqueNewTiers", "UniqueList");
@@ -565,12 +573,13 @@ Chapter() {
 
         Section("Hide based on tier") {
             Conditional("?HideALLMapsByTier", ["c9.maps.generic.t16"]) { Hide; Class Maps; HasInfluence None; MapTier < 8; }
-            Box() { Description("This does not affect shaped/elder maps."); }
+            Box() { Description("This does NOT affect shaped, elder, guardian, unique and other special maps."); }
             QuickUI("?HideALLMapsByTier", "HD", ["MapTier", "AreaLevel"], "Hide by tier");
         }
     }
 
-    Section("Maps - General Configuration", "Map") {
+    Section("Maps - Normal & Special", "Map") {
+        Title("Normal Map Progression and Visuals");
 
         Section("Decorators") {
             Box() { Description("Decorators highlight specific characteristics of an item, by changing the appearance, without deciding whether it is hidden or shown."); }
@@ -632,10 +641,12 @@ Chapter() {
             QuickUI([0.0, "Map appearance T1", "maps;maps_d_t1"], "SH", [], "Highlight - T1"]);
         }
 
-        Section("Hide unusable maps") {
+        Section("Hide unmodifiable magic maps") {
             QuickUI([0.0, "Hide corrupted non-rare maps", "maphiders;corruptedmaphider"], "SHD", ["Rarity", "MapTier"]);
             QuickUI([0.0, "Hide corrupted mirrored maps", "maphiders;mirroredmaphider"], "SHD", ["Rarity", "MapTier"]);
         }
+
+        Title("Exotic Maps");
 
         Section("Shaper, Elder and Conqueror Maps") {
             Search ElderMap(0.0, "Map appearance (ElderMap)") { Class Maps; HasInfluence Elder; Rarity Normal; }
@@ -672,33 +683,37 @@ Chapter() {
         }
     }
 
-    Section("Map-like items, Scarabs", "Scarab", "E") {
-        Section("Endgame Atlas Boss Invitation", "MavensOrb", "E") {
-            Function MavenInvUI($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AtlasBossInvitations", "O"]); }
+    Section("Maps - Unique", "OlmecsSanctumMap", "E") {
 
-            TierListToolBar();
+        Section("Unique Maps Tiering", null, "E") {
+            Function UniqueMaps ($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["UniqueMaps", "O"]); }
 
-            MavenInvUI([0.0, "Maven's Invitation Boss", "exotic->invitation;t1"], "SH", "Maven's Invitations - T1");
-            MavenInvUI([0.0, "Maven's Invitation Boss Tier 2", "exotic->invitation;t2"], "SH", "Maven's Invitations - T2");
-            MavenInvUI([0.0, "Maven's Invitation Area", "exotic->invitation;t3"], "SH", "Maven's Invitations - T3");
+            TierListToolBar("UniqueMap", [], []);
 
-            Conditional("?MavenInviteNewTier") { }
-            ElementAdder_Tier("?MavenInviteNewTier", "MavenInvUI");
+            UniqueMaps([0.0, "Unique Maps T1", "uniques->maps;t1"], "SH", "Unique Maps Tier 1");
+            UniqueMaps([0.0, "Unique Maps T3", "uniques->maps;t2"], "SH", "Unique Maps Tier 2");
+            UniqueMaps([0.0, "Unique Maps T2", "uniques->maps;t3"], "SH", "Unique Maps Tier 3");
+            UniqueMaps([0.0, "Unique Maps T4", "uniques->maps;t4"], "SH", "Unique Maps Tier 4");
 
-            QuickUI([1.0, "Maven's invitations", "questlike;invitations"], "S", [], "Maven's Quest-Only Invitations");
+            Conditional("?UniqueMapTier") { Show; Rarity Unique; Class Maps; SetFontSize 45; SetBorderColor 175 96 37 255; PlayAlertSound 4 300; MinimapIcon 2 Brown Square; PlayEffect Brown; }
+            ElementAdder_Tier("?UniqueMapTier", "UniqueMaps");
+
+            Conditional("?UniqueMapNewTiersHidden") {  }
+            ElementAdder_Tier("?UniqueMapNewTiersHidden", null, true, "UniqueMaps", "HO");
         }
 
-        Section("Itemized League Areas", "InscribedUltimatum") {
-            QuickUI([1.0, "Chronicle of Atzoatl (Incursion Temple Map Item)", "miscmapitemsextra;itemizedleagues"], "SH", [], "Itemized League Areas");
-            QuickUI([0.0, "Ultimatum Boss Area", "artefact->piece;vaal"], "SH", []);
-            QuickUI([0.0, "Itemized Sanctum", "exoticmap->sanctum;any"], "SH", []); // Sanctum Vaults Research -> started run
+        Section("Special Unique Maps") {
+            QuickUI([0.0, "T16 Harbinger Map", "uniques->maps;exharbinger"], "SD", [], "Tier 16 Harbinger Map");
         }
 
-        Section("Reliquary Keys", "VaalReliquaryKey") {
-            QuickUI([1.0, "Special map items", "miscmapitemsextra;relickeys"], "S", [], "Reliquary Keys", ["all", "SO"]);
-            QuickUI([0.0, "Other Reliquary Keys", "miscmapitemsextra;relickeyssafe"], "S", []);
+        Section("Highlight specific unique maps") {
+            Function UniqueMaps ($s, $shd = "SHD", $title) { QuickUI($s, $shd, ["MapTier"], $title, ["UniqueMaps", "SOA"]); }
+            Conditional("?UniqueMapRule", ["c9.maps.unique.all"]) { Show; Rarity Unique; Class Maps; SetFontSize 45; SetBorderColor 175 96 37 255; PlayAlertSound 4 300; MinimapIcon 2 Brown Square; PlayEffect Brown; }
+            ElementAdder_Tier("?UniqueMapRule", "UniqueMaps");
         }
+    }
 
+    Section("Fragments and Scarabs", "Scarab", "E") {
         Section("Map Fragments", "SacrificeAtMidnight", "E") {
             Function FragmentsFunc($s, $shd = "SHD", $title, $descr = false) { QuickUI($s, $shd, [], $title, ["MapFragmentsNoScarabs", "O"], $descr); }
 
@@ -721,22 +736,6 @@ Chapter() {
             FragmentsFunc([1.0, "Stacked Map Fragments T3", "fragments->stacked;t3"], "SD", "Stacked Sacrifice Fragments:");
         }
 
-        Section("Breachstones", "Breachstone") {
-            Function BreachstoneFunc($s, $shd = "SHD", $title, $descr = false) { QuickUI($s, $shd, [], $title, ["Breachstones", "O"], $descr); }
-
-            TierListToolBar();
-
-            BreachstoneFunc([0.0, "Breachstones Tier 1", "breachstone;t1"], "SH");
-            BreachstoneFunc([0.0, "Breachstones Tier 2", "breachstone;t2"], "SH");
-            BreachstoneFunc([0.0, "Breachstones Tier 3", "breachstone;t3"], "SH");
-
-            Conditional("?BreachstonesNewTier") { }
-            ElementAdder_Tier("?BreachstonesNewTier", "BreachstoneFunc");
-
-            Conditional("?BreachstonesNewTiersHidden") { }
-            ElementAdder_Tier("?BreachstonesNewTiersHidden", null, true, "Breachstones", "OH");
-        }
-
         Section("Scarabs", "Scarab", "E") {
             Function ScarabTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Scarabs", "O"]); }
 
@@ -755,12 +754,55 @@ Chapter() {
             ElementAdder_Tier("?ScarabNewTiersHidden", null, true, "Scarabs", "OH");
         }
 
-        Section("Stacked Scarabs", "Scarab") {
+        Section("Stacked Scarabs", "Scarab", "E") {
             Function StackedScarabsFunc($s, $shd = "SD", $title) { QuickUI($s, $shd, [], $title, ["Scarabs", "SO"]); }
             StackedScarabsFunc([1.0, "Stacked Scarabs", "fragments->stackedscarabs;t3"], "SD");
         }
+    }
 
-        Section("Atlas Memories", "AtlasMemory") {
+    Section("Invitations, Splinters and Map-Likes", "InscribedUltimatum", "E") {
+        Section("Endgame Atlas Boss Invitation", "MavensOrb", "E") {
+            Function MavenInvUI($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AtlasBossInvitations", "O"]); }
+
+            TierListToolBar();
+
+            MavenInvUI([0.0, "Maven's Invitation Boss", "exotic->invitation;t1"], "SH", "Maven's Invitations - T1");
+            MavenInvUI([0.0, "Maven's Invitation Boss Tier 2", "exotic->invitation;t2"], "SH", "Maven's Invitations - T2");
+            MavenInvUI([0.0, "Maven's Invitation Area", "exotic->invitation;t3"], "SH", "Maven's Invitations - T3");
+
+            Conditional("?MavenInviteNewTier") { }
+            ElementAdder_Tier("?MavenInviteNewTier", "MavenInvUI");
+
+            QuickUI([1.0, "Maven's invitations", "questlike;invitations"], "S", [], "Maven's Quest-Only Invitations");
+        }
+
+        Section("Ultimatum, Sanctum, Incursion", "InscribedUltimatum") {
+            QuickUI([1.0, "Chronicle of Atzoatl (Incursion Temple Map Item)", "miscmapitemsextra;itemizedleagues"], "SH", [], "Incursion and Ultimatum");
+            QuickUI([0.0, "Itemized Sanctum", "exoticmap->sanctum;any"], "SH", []); // Sanctum Vaults Research -> started run
+        }
+
+        Section("Reliquary Keys", "VaalReliquaryKey") {
+            QuickUI([1.0, "Special map items", "miscmapitemsextra;relickeys"], "S", [], "Reliquary Keys", ["all", "SO"]);
+            QuickUI([0.0, "Other Reliquary Keys", "miscmapitemsextra;relickeyssafe"], "S", []);
+        }
+
+        Section("Breachstones", "Breachstone", "E") {
+            Function BreachstoneFunc($s, $shd = "SHD", $title, $descr = false) { QuickUI($s, $shd, [], $title, ["Breachstones", "O"], $descr); }
+
+            TierListToolBar();
+
+            BreachstoneFunc([0.0, "Breachstones Tier 1", "breachstone;t1"], "SH");
+            BreachstoneFunc([0.0, "Breachstones Tier 2", "breachstone;t2"], "SH");
+            BreachstoneFunc([0.0, "Breachstones Tier 3", "breachstone;t3"], "SH");
+
+            Conditional("?BreachstonesNewTier") { }
+            ElementAdder_Tier("?BreachstonesNewTier", "BreachstoneFunc");
+
+            Conditional("?BreachstonesNewTiersHidden") { }
+            ElementAdder_Tier("?BreachstonesNewTiersHidden", null, true, "Breachstones", "OH");
+        }
+
+        Section("Atlas Memories", "AtlasMemory", "E") {
             Function AtlasMemoryUiFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["AtlasMemories", "O"]); }
 
             AtlasMemoryUiFunc([0.0, "Atlas Master Memories Tier 1", "exoticmap->memory;any"], "SH");
@@ -776,6 +818,12 @@ Chapter() {
             Divider();
 
             QuickUI([0.0, "Atlas Master Memories with good mods", "exoticmap->memory;t1"], "SD", ["Mods"], null, ["AtlasMemories", "OAS"]);
+        }
+
+        Section("Expedition Logbooks") { // ExpeditionLogbookMap
+            // Expedition Logbook
+            Description("Logbooks lead you to maps which contain one huge Expedition event, similar to Blighted Maps. You can use the upper section to give certain logbooks more highlight.");
+            QuickUI([0.0, "Expedition Logbook Maps", "expedition->logbook;any"], "SH", []);
         }
 
         Title("Splinters");
@@ -822,38 +870,7 @@ Chapter() {
         }
     }
 
-    Section("Unique Maps", "OlmecsSanctumMap", "E") {
-
-        Section("Unique Maps Tiering", null, "E") {
-            Function UniqueMaps ($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["UniqueMaps", "O"]); }
-
-            TierListToolBar("UniqueMap", [], []);
-
-            UniqueMaps([0.0, "Unique Maps T1", "uniques->maps;t1"], "SH", "Unique Maps Tier 1");
-            UniqueMaps([0.0, "Unique Maps T3", "uniques->maps;t2"], "SH", "Unique Maps Tier 2");
-            UniqueMaps([0.0, "Unique Maps T2", "uniques->maps;t3"], "SH", "Unique Maps Tier 3");
-            UniqueMaps([0.0, "Unique Maps T4", "uniques->maps;t4"], "SH", "Unique Maps Tier 4");
-
-            Conditional("?UniqueMapTier") { Show; Rarity Unique; Class Maps; SetFontSize 45; SetBorderColor 175 96 37 255; PlayAlertSound 4 300; MinimapIcon 2 Brown Square; PlayEffect Brown; }
-            ElementAdder_Tier("?UniqueMapTier", "UniqueMaps");
-
-            Conditional("?UniqueMapNewTiersHidden") {  }
-            ElementAdder_Tier("?UniqueMapNewTiersHidden", null, true, "UniqueMaps", "HO");
-        }
-
-        Section("Highlight specific unique maps") {
-            Function UniqueMaps ($s, $shd = "SHD", $title) { QuickUI($s, $shd, ["MapTier"], $title, ["UniqueMaps", "SOA"]); }
-            Conditional("?UniqueMapRule", ["c9.maps.unique.all"]) { Show; Rarity Unique; Class Maps; SetFontSize 45; SetBorderColor 175 96 37 255; PlayAlertSound 4 300; MinimapIcon 2 Brown Square; PlayEffect Brown; }
-            ElementAdder_Tier("?UniqueMapRule", "UniqueMaps");
-        }
-
-        Section("Special Unique Maps") {
-            QuickUI([0.0, "T16 Harbinger Map", "uniques->maps;exharbinger"], "SD", [], "Tier 16 Harbinger Map");
-//            QuickUI([0.0, "Ultimatum Trialmaster Map Piece", "artefact->piece;ultimatum"], "SH", []);
-        }
-    }
-
-    Section("Heist Contracts, Expedition Logbooks", "HeistGrandBlueprint") {
+    Section("Heist Contracts and Blueprints", "HeistGrandBlueprint") {
         Warning("Path of Exile lootfilters can't filter contracts by their required heist jobs or reward value!");
 
         Section("Contracts", "HeistContract") {
@@ -918,15 +935,6 @@ Chapter() {
 
             Conditional("?CCustomHeistBlueprintRules", ["c9.maplike.all"]) { Show; Class Blueprint; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; }
             ElementAdder_Tier("?CCustomHeistBlueprintRules", "CondShowBase");
-        }
-
-        Divider();
-
-        Section("Expedition Logbooks") { // ExpeditionLogbookMap
-            // Expedition Logbook
-            Description("Logbooks lead you to maps which contain one huge Expedition event, similar to Blighted Maps. You can use the upper section to give certain logbooks more highlight.");
-//            QuickUI([0.0, "Expedition Logbook Maps High", "expedition->logbook->high;any"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Expedition Logbook Maps", "expedition->logbook;any"], "SH", []);
         }
     }
 }
@@ -2523,6 +2531,8 @@ Chapter() {
             QuickUI([0.0, "Double corrupted uniques", "uniques;2xcorrupteduniques"], "SD", [], null, ["GearPlusFlasks", "OAS"]);
             QuickUI([0.0, "Uniques with corrupted implicit", "uniques;corrupteduniques"], "SH", ["ItemLevel", "AllGearClasses"]);
             QuickUI(S3, "SH");
+            QuickUI([0.0, "Adorned Jewel Pieces", "artefact->piece;vaal"], "SH", [], "Adorned Jewel Pieces");
+
             QuickUI([0.0, "Unique Exception: High Level Vinktar", "uniques;highvinktar"], "SD");
             QuickUI([0.0, "Uber Impresence Unique", "uniques;exuberimpresence"], "SD", [], "Double-Curse Impresence", ["GearPlusFlasks", "OAS"], "This rule detects the very rare double-impresence drop that can only happen when fighting the uber-uber-elder. The drop is detected via the influence.");
             QuickUI([0.0, "Unique Exception: Synthesis Rings", "uniques;exsynth"], "SD", ["AllGearClasses"], "Synthesized Rings", ["GearPlusFlasks", "OAS"], "These rings drop from the synthesized memory bosses");
@@ -2530,6 +2540,7 @@ Chapter() {
             QuickUI([0.0, "Synthesis Jewels", "uniques;exrationaljewel"], "SH", ["AllGearClassesPlusJewel"], "Rational Doctrine Jewel", ["GearPlusFlasks", "OAS"], "This rule detects the synthesised rational doctrine jewel that rarely drops from the uber-cortex encounter.");
             QuickUI([0.0, "Unique Shaper Sword", "uniques;exforgesword"], "SH", [], "Starforge and Voidforge", ["GearPlusFlasks", "OAS"], "These uniques are rare drops from the shaper and uber elder fights. Note that the third sword - the echoforge is not detected by these rules. It's not advised to hide infernal unique swords from filtering.");
             QuickUI([0.0, "Unique with Crucible Tree", "uniques;excrucibleunique"], "SH", [], null, ["GearPlusFlasks", "OAS"]);
+
         }
 
         Section("Fishing Rod and Bricked Uniques", "FishingRod") {
