@@ -538,7 +538,7 @@ Chapter() {
 // MAPS
 //===================================================================================================
 Chapter() {
-    SectionTitle("Maps and Map-like Items");
+    SectionTitle("Maps, Fragments and Map-like Items");
 
     Section("Maps - Highlight and Hide", "Firefly") {
 
@@ -942,11 +942,261 @@ Chapter() {
 Chapter() { Ad(); }
 
 //===================================================================================================
+// RARES
+//===================================================================================================
+
+Chapter() {
+
+    SectionTitle("Endgame - Rare Tiering (lvl 68+)", "ImpClaw");
+
+    Section("Add custom Show/Hide rule (EG rares)", "Firefly") {
+
+        Box() { YTLink("IfJaYYj5kXk", "Chaos Recipe Filter Tutorial"); }
+
+        Description("Augment the filter with entirely new rules, such as 'hide all belts', 'highlight all gemini claws in a special color', 'hide all evasion type armors, gloves, shields, and boots' or 'show all corrupted rares'.", "Additional Endgame Rules", "This section is designed to be foolproof. It will have no effect on 6 links, leveling items, elder/shaper items, uniques, atlas bases (such as Steel Rings), abyss belts, fishing rods and other special bases. These sections frequently feature the 'strictness' dropdown menu. This tool defines how many rules are overwritten by your custom rules. I recommend playing around with the loot simulator, while switching back and forth to the customizer to get familiar with this section");
+
+        Section("Mode: Hide identified rares", "WisdomScroll") {
+            QuickUI([1.0, "Hide remaining identified rares", "rareoptional;idhider"], "HD", ["ItemLevel", "DropLevel", "AllGearClasses"], "", [], "Hide all remaining identified items that were not highlighted by the mod filtering rules.");
+        }
+
+        Section("Highlight rares by Base", "Firefly") {
+            Function CondShowBase ($s, $shd = "SD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "DropLevel", "Height", "Width", "Sockets", "Stats_RareGear"], $title, ["Gear", "OS"]);
+            }
+
+            Description("Give specific BaseTypes more highlighting here.");
+
+            Conditional("?CRareShowBases", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; }
+            ElementAdder_Tier("?CRareShowBases", "CondShowBase");
+        }
+
+        Section("Highlight rares by Armour Type", "Firefly") {
+            Description("Highlight gear by their type, like Evasion or Evasion-EnergyShield items.");
+
+            Conditional("?CRareShowItemTypes", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
+
+            Function CondShowType ($s, $shd = "SD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "ArmourClasses", "ItemLevel","DropLevel", "LinkedSockets", "Sockets", "Stats_RareGear"], $title);
+            }
+
+            ElementAdder_Tier("?CRareShowItemTypes", "CondShowType");
+        }
+
+        Section("Highlight rares by item slot", "Firefly") {
+
+            Function CondShowClass ($s, $shd = "SD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "AllGearClasses", "ItemLevel", "DropLevel", "Height", "Width", "LinkedSockets", "Sockets", "Stats_RareGear"], $title);
+            }
+
+            Description("Highlight specific item classes here.");
+
+            Conditional("?CRareShowClasses", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; }
+            ElementAdder_Tier("?CRareShowClasses", "CondShowClass");
+        }
+
+        Section("Highlight chromatic Rares", "Chromatic") {
+
+            Function CondShowClass ($s, $shd = "SD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "AllGearClasses", "ItemLevel", "DropLevel", "Height", "Width", "LinkedSockets", "Sockets", "Stats_RareGear"], $title);
+            }
+
+            Description("By default rares have a higher evaluation priority than chromatic recipes. This can be changed here.");
+
+            Conditional("?CRareShowRGB", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Show; SetBorderColor 0 0 0; SetBackgroundColor 150 150 150; SetFontSize 40; ItemLevel >= 68; Rarity Rare; SocketGroup RGB; }
+            ElementAdder_Tier("?CRareShowRGB", "CondShowClass");
+        }
+
+        Section("Hide rares by Base", "Annulment") {
+            Function CondHideBase ($s, $shd = "HD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "DropLevel", "Height", "Width", "LinkedSockets", "Sockets", "Stats_RareGear"], $title, ["Gear", "OS"]);
+            }
+
+            Conditional("?CRareHideBases", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Hide; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
+            ElementAdder_Tier("?CRareHideBases", "CondHideBase");
+        }
+
+        Section("Hide rares by Armour Type", "Annulment") {
+            Conditional("?CRareHideItemTypes", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Hide; ItemLevel >= 68; Rarity Rare; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
+
+            Function CondHideType ($s, $shd = "HD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "ArmourClasses", "ItemLevel", "DropLevel", "LinkedSockets", "Sockets", "Stats_RareGear"], $title);
+            }
+
+            ElementAdder_Tier("?CRareHideItemTypes", "CondHideType");
+        }
+
+        Section("Hide rares by item slot", "Annulment") {
+            Function CondHideClass ($s, $shd = "HD", $title)
+            {
+                // todo: a LOT of these are VERY damn similar -> remove e.g. height & width, so that they will appear in AddAttribute?
+                QuickUI($s, $shd, ["CondTargetSelection", "AllGearClasses", "ItemLevel", "DropLevel", "Height", "Width", "LinkedSockets", "Sockets", "Stats_RareGear"], $title);
+            }
+
+            Description("Hide uninteresting items, such as bows for melee characters or melee weapons for casters.");
+
+            Conditional("?CRareHideClasses", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Hide; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
+            ElementAdder_Tier("?CRareHideClasses", "CondHideClass");
+        }
+
+        Section("Hide rares by Tier", "Annulment") {
+            Description("Note: The section 'hide and highlight rares by type' section can be used to achieve the same result, while also having control over classes and levels.");
+            Conditional("?CRareSimpleHide", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Hide; Class "Helmets" "Gloves" "Boots" "Body Armours" "Shields" "Quivers" "Wands" "Rune Dagger" "Warstaves" "Daggers" "Sceptres" "Bows" "Claws" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces"; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
+            QuickUI("?CRareSimpleHide", "HD", ["CondTargetSelection", "LinkedSockets", "ItemLevel", "Sockets"], "Hide Rares By Tier");
+        }
+
+        Section ("Corrupted Rares", "Vaal Orb") {
+            Description("Sextants and other events can produce identified or rare corrupted items.");
+            Conditional("?CorruptedRares", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Show; Corrupted True; Rarity Rare; ItemLevel >= 68; SetFontSize 28; SetBorderColor 180 70 0; }
+
+            QuickUI("?CorruptedRares", "SD", ["AllGearClasses", "ItemLevel", "DropLevel", "Height", "Width", "CorruptedMods", "Sockets", "CondTargetSelection"], "Special Treatment: Corrupted Rares");
+        }
+    }
+
+    Section("Identified endgame rares", "WisdomScroll") {
+        QuickUI([1.0, "Identified endgame rares", "rr;identifieditemhandling"], "SHD", ["AllGearClasses", "ItemLevel", "DropLevel", "Mirrored", "Identified", "Corrupted", "CorruptedMods"], "", [], "The filter will check identified rares for interesting mod combinations and highlight these items. By setting this rule to HIDE all items that have NOT passed the 'interesting identified mods check' will be hidden. This is useful if you're still searching for specific rare combinations, but would like to reduce the number of items visible.");
+    }
+
+    Section("Decorators", "Chromatic") {
+        Box() { Description("Decorators highlight specific characteristics of an item, by changing the appearance, without deciding whether it is hidden or shown."); }
+
+        Section("Decorators: Size") {
+            QuickUI([1.0, "Endgame rare deco tiny", "decorators->rareeg;tinyrares"], "SD", ["Width", "Height"], "Decorator: Tiny");
+            QuickUI([1.0, "Endgame rare deco medium 1", "decorators->rareeg;mediumrares1"], "SD", ["Width", "Height"], "Decorator: Medium (1x3)");
+            QuickUI([1.0, "Endgame rare deco medium 2", "decorators->rareeg;mediumrares2"], "SD", ["Width", "Height"], "Decorator: Medium (2x2)");
+            QuickUI([1.0, "Endgame rare deco large", "decorators->rareeg;largerares"], "SD", ["Width", "Height"], "Decorator: Large");
+        }
+
+        Section("Decorators: ItemLevel") {
+            QuickUI([1.0, "Endgame rare deco ilvl 86", "decorators->rareeg;ilvl86"], "SD", ["ItemLevel"], "Decorator: ItemLevel 86");
+            QuickUI([1.0, "Endgame rare deco ilvl 84", "decorators->rareeg;ilvl84"], "SD", ["ItemLevel"], "Decorator: ItemLevel 84");
+            QuickUI([1.0, "Endgame rare deco ilvl 75", "decorators->rareeg;ilvl75"], "SD", ["ItemLevel"], "Decorator: ItemLevel 75");
+            QuickUI([1.0, "Endgame rare deco ilvl 68", "decorators->rareeg;ilvl68"], "SD", ["ItemLevel"], "Decorator: ItemLevel 68");
+        }
+
+        Section("Decorators: Corrupted") {
+            QuickUI([1.0, "Endgame rare deco corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted Implicit");
+            QuickUI([1.0, "Endgame rare deco corrupted", "decorators->rareeg;corruptedrares"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted - No implicit");
+        }
+    }
+
+    Section("Jewellery", "Ring") {
+        Search S1(1.0, "Rare rings/amulets T1", "rr->amuring;t1"]) { }
+        Search S2(1.0, "Rare rings/amulets T2", "rr->amuring;t2"]) { }
+        Search S3(1.0, "Rare rings/amulets T3", "rr->amuring;t3"]) { }
+
+        Search B1(1.0, "Rare belts T1", "rr->belts;t1"]) { }
+        Search B2(1.0, "Rare belts T2", "rr->belts;t2"]) { }
+        Search B3(1.0, "Rare belts T3", "rr->belts;t3"]) { }
+
+        Section("Rings and Amulets") {
+            QuickUI(S1, "SD", ["AreaLevel"]);
+            QuickUI(S2, "SD", ["AreaLevel"]);
+            QuickUI(S3, "SD", ["AreaLevel"]);
+        }
+
+        Section("Belts") {
+            QuickUI(B1, "SD", ["AreaLevel"]);
+            QuickUI(B2, "SD", ["AreaLevel"]);
+            QuickUI(B3, "SD", ["AreaLevel"]);
+        }
+
+        BaseTypeMatrix(false, "Tier 1", S1, B1, "Tier 2", S2, B2, "Tier 3", S3, B3);
+    }
+
+    Section("Weapons and Armours", "RoyalBurgonet") {
+        Description("Pro tip: You can disable whole sections by right-clicking the section and clicking on 'Turn OFF all rules'");
+
+        Function EgRares($s) { QuickUI($s, "SH", ["ItemLevel"]); }
+        Function EgRaresArmours($s) { QuickUI($s, "SH", ["BaseDefencePercentile", "ItemLevel"]); }
+
+        Search T1Wep(1.0, "Tier 1 rare weapons", "rr;t1weapons") { }
+        Search T1Arm(0.0, "Tier 1 rare armours", "rr;t1armours") { }
+
+        Search T2Wep(1.0, "Tier 2 rare weapons", "rr;t2weapons") { }
+        Search T2Arm(1.0, "Tier 2 rare armours", "rr;t2armours") { }
+
+        Search T3Dagger(1.0, "Endgame-Rares-T3-Daggers", "rr;t3daggers") { }
+        Search T3RuneDag(1.0, "Endgame-Rares-T3-Rune Dagger", "rr;t3runedaggers") { }
+        Search T3WarStaff(1.0, "Endgame-Rares-T3-Warstaff", "rr;t3warstaves") { }
+        Search T3Wand(1.0, "Endgame-Rares-T3-Wands", "rr;t3wands") { }
+        Search T3Scepter(1.0, "Endgame-Rares-T3-Sceptres", "rr;t3sceptres") { }
+        Search T3Claw(1.0, "Endgame-Rares-T3-Claws", "rr;t3claws") { }
+        Search T3Foil(1.0, "Endgame-Rares-T3-Foils", "rr;t3foils") { }
+        Search T3Sword1H(1.0, "Endgame-Rares-T3-1HSwords", "rr;t3swords1h") { }
+        Search T3Maces1H(1.0, "Endgame-Rares-T3-1HMaces", "rr;t3maces1h") { }
+        Search T3Axe1H(1.0, "Endgame-Rares-T3-1HAxe", "rr;t3axes1h") { }
+        Search T3Staff(1.0, "Endgame-Rares-T3-2HStaves", "rr;t3staves") { }
+        Search T3Sword2H(1.0, "Endgame-Rares-T3-2HSwords", "rr;t3swords2h") { }
+        Search T3Axe2H(1.0, "Endgame-Rares-T3-2HAxes", "rr;t3axes2h") { }
+        Search T3Mace2H(1.0, "Endgame-Rares-T3-2HMaces", "rr;t3maces2h") { }
+        Search T3Bow(1.0, "Endgame-Rares-T3-Bows", "rr;t3bows") { }
+        Search T3Boot(1.0, "Endgame-Rares-T3-ArmBoots", "rr;t3boots") { }
+        Search T3Glove(1.0, "Endgame-Rares-T3-ArmGloves", "rr;t3gloves") { }
+        Search T3Helm(1.0, "Endgame-Rares-T3-ArmHelmets", "rr;t3helmets") { }
+        Search T3Body(1.0, "Endgame-Rares-T3-BodyArmours", "rr;t3body") { }
+        Search T3Shield(1.0, "Endgame-Rares-T3-Small-Shields", "rr;t3shields") { }
+        Search T3Quiv(1.0, "Endgame-Rares-T3-Quivers", "rr;t3quivers") { }
+
+        Search T4(0.0, "Endgame Tier 4 Rares", "rr;t4endgamerares") { }
+
+        Section("Tier 1") {
+            EgRares(T1Wep);
+            EgRaresArmours(T1Arm);
+        }
+
+        Section("Tier 2") {
+            EgRares(T2Wep);
+            EgRaresArmours(T2Arm);
+        }
+
+        Section("Tier 3") {
+            EgRares(T3Dagger);
+            EgRares(T3RuneDag);
+            EgRares(T3WarStaff);
+            EgRares(T3Wand);
+            EgRares(T3Scepter);
+            EgRares(T3Claw);
+            EgRares(T3Foil);
+            EgRares(T3Sword1H);
+            EgRares(T3Maces1H);
+            EgRares(T3Axe1H);
+            EgRares(T3Staff);
+            EgRares(T3Sword2H);
+            EgRares(T3Axe2H);
+            EgRares(T3Mace2H);
+            EgRares(T3Bow);
+            EgRaresArmours(T3Boot);
+            EgRaresArmours(T3Glove);
+            EgRaresArmours(T3Helm);
+            EgRaresArmours(T3Body);
+            EgRaresArmours(T3Shield);
+            EgRares(T3Quiv);
+        }
+
+        Section("Tier 4") {
+            EgRares(T4);
+        }
+
+        BaseTypeMatrix(true,
+            "Tier 1", T1Wep, T1Arm,
+            "Tier 2", T2Wep, T2Arm,
+            "Tier 3", T3Dagger, T3RuneDag, T3WarStaff, T3Wand, T3Scepter, T3Claw, T3Foil, T3Sword1H, T3Maces1H, T3Axe1H, T3Staff, T3Sword2H, T3Axe2H, T3Mace2H, T3Bow, T3Boot, T3Glove, T3Helm, T3Body, T3Shield, T3Quiv
+        );
+    }
+}
+
+//===================================================================================================
 // CRAFTING
 //===================================================================================================
 
 Chapter() {
-    SectionTitle("Endgame - General (lvl 68+)");
+    SectionTitle("Endgame - Special Rares & Crafting (lvl 68+)");
     
     Section("Highlight specific bases (endgame)", "Firefly") {
 
@@ -1013,37 +1263,152 @@ Chapter() {
     }
 
     Section("Fractured items", "FracturingOrb") {
-        Description("Some itemclasses like 'Jewels' are completely covered through the class-based filtering below and don't need representing through the matrix.");
-        Search S0(0.0, "Fractured items, tier 1", "exotic->fractured;fractt1") {}
-        Search S1(0.0, "Fractured items, tier 2", "exotic->fractured;fractt2") {}
-        QuickUI(S0, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
-        QuickUI(S1, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
-        BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1);
+        Section("Fractured item tiering") {
+                Description("Some itemclasses like 'Jewels' are completely covered through the class-based filtering below and don't need representing through the matrix.");
+                Search S0(0.0, "Fractured items, tier 1", "exotic->fractured;fractt1") {}
+                Search S1(0.0, "Fractured items, tier 2", "exotic->fractured;fractt2") {}
+                QuickUI(S0, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
+                QuickUI(S1, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
+                BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1);
+        }
 
-        Divider();
+        Section("Fractured Special Cases")
+        {
+            QuickUI([0.0, "Fractured items, classes", "exotic->fractured;fractspecial"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Fractured Exotic Classes");
+        }
 
-        QuickUI([0.0, "Fractured items, classes", "exotic->fractured;fractspecial"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Fractured Exotic Classes");
-        QuickUI([0.0, "Fractured items, medium", "exotic->fractured;fractothers"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
+        Section("All other (untiered) fractured items")
+        {
+            QuickUI([0.0, "Fractured items, others", "exotic->fractured;fractothers"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Other fractured items");
+        }
     }
 
     Section("Veiled Items", "VeiledChaosOrb") {
         Function VeilModTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel"], $text, ["Item Mods", "D", "HasExplicitMod"]); }
         Function VeilMods($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel", "Mods"], $text); }
 
-        VeilModTierList([0.0, "Betrayal Veiled Mods Tier 1", "exoticmods;t1veil"], "SD", "Veiled Mods - Expensive Member-Specific Mods");
-        VeilModTierList([0.0, "Betrayal Veiled Mods Tier 2", "exoticmods;t2veil"], "SD", "Veiled Mods - Member-Specific Mods");
-        VeilMods([0.0, "Item with multiple Betrayal Veiled Mods", "exoticmods;duoveil"], "SD");
+        Section("Member Specific Veiled Items")
+        {
+            VeilModTierList([0.0, "Betrayal Veiled Mods Tier 1", "exoticmods;t1veil"], "SD", "Veiled Mods - Expensive Member-Specific Mods");
+            VeilModTierList([0.0, "Betrayal Veiled Mods Tier 2", "exoticmods;t2veil"], "SD", "Veiled Mods - Member-Specific Mods");
+        }
 
-        DeepSearch S4(0.0, "Betrayal Veiled Mods Small 1", "exoticmods;smallveil1") { BaseType "Wool Shoes"; Rarity Rare; Width 2; Height 2; }
-        DeepSearch S4(0.0, "Betrayal Veiled Mods Small 2", "exoticmods;smallveil2") { BaseType "Driftwood Wand"; Rarity Rare; Width 1; Height 3; }
+        Section("Generic Veiled Items")
+        {
+            VeilMods([0.0, "Item with multiple Betrayal Veiled Mods", "exoticmods;duoveil"], "SD");
 
-        VeilMods(S4, "SD", "Remaining Small Veiled Mod Items");
-        VeilMods([0.0, "Betrayal Veiled Mods", "exoticmods;veilrest"], "SD", "Remaining Veiled Mod Items");
+            DeepSearch S4(0.0, "Betrayal Veiled Mods Small 1", "exoticmods;smallveil1") { BaseType "Wool Shoes"; Rarity Rare; Width 2; Height 2; }
+            DeepSearch S4(0.0, "Betrayal Veiled Mods Small 2", "exoticmods;smallveil2") { BaseType "Driftwood Wand"; Rarity Rare; Width 1; Height 3; }
 
-        // new tiers
-        Conditional("?VeiledModsNewTiers") { Show; Identified True; SetFontSize 45; SetBorderColor 0 240 190 240; PlayEffect White Temp; MinimapIcon 2 White Hexagon; HasExplicitMod "Veil"; }
-        ElementAdder_Tier("?VeiledModsNewTiers", "VeilModTierList");
+            VeilMods(S4, "SD", "Remaining Small Veiled Mod Items");
+            VeilMods([0.0, "Betrayal Veiled Mods", "exoticmods;veilrest"], "SD", "Remaining Veiled Mod Items");
+
+            // new tiers
+            Conditional("?VeiledModsNewTiers") { Show; Identified True; SetFontSize 45; SetBorderColor 0 240 190 240; PlayEffect White Temp; MinimapIcon 2 White Hexagon; HasExplicitMod "Veil"; }
+            ElementAdder_Tier("?VeiledModsNewTiers", "VeilModTierList");
+        }
     }
+
+    Section ("Influenced Items", "Voidorb", "E") {
+            Function BaseTypeBox($s, $text, $descr = "") { QuickUI($s, "SD", ["ItemLevel"], $text, ["Gear", "DO"], $descr); }
+
+            Description("To add more influenced item rules to the filter, use the 'Add additional Rules' section of the Customizer to do so.");
+
+            Section("Common") {
+                Box() { Description("These rules have priority over other tier 1 or tier 2 rules respectively."); }
+
+                Search T1(0.0, "Common Influenced Rares - Tier 1", "influenced->common;t1_exo") { }
+                Search T2(0.0, "Common Influenced Rares - Tier 2", "influenced->common;t2_exo") { }
+
+                QuickUI(T1, "SD", ["ItemLevel"], "Top influenced bases", [], "Extremely exclusive drop-restricted bases, such as heist and ritual bases.");
+                QuickUI(T2, "SD", ["ItemLevel"], "Exclusive atlas bases", []);
+
+                BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2);
+
+                Divider();
+
+                QuickUI([0.0, "Common Influenced Rares - Tier 2 High ItemLevel", "influenced->common;t2_86"], "SD", ["ItemLevel", "BTM"], "High level meta bases");
+            }
+
+            Section("Searing Exarch") {
+                Function EldrInflFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"], $text, ["Gear", "AOS"]); }
+
+                QuickUI([0.0, "Good Exarch Influence Bases", "rare->exarch;anyhigh"], "SD", ["HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted", "BTM"]);
+                QuickUI([0.0, "Remaining Exarch Influenced Items", "rare->exarch;any"], "SD", ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"]);
+                Divider();
+                Conditional("?EldrInflNewTiers") { Show; Rarity Normal Magic Rare; SetTextColor 0 0 0 255; SetBackgroundColor 145 215 230 225; SetBorderColor 0 100 150 255; SetFontSize 40; PlayAlertSound 2 300; }
+                ElementAdder_Tier("?EldrInflNewTiers", "EldrInflFunc");
+            }
+
+            Section("Eater of Worlds") {
+                Function EldrInflFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"], $text, ["Gear", "AOS"]); }
+
+                QuickUI([0.0, "Good Eater of Worlds Influence Bases", "rare->eater;anyhigh"], "SD", ["HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted", "BTM"]);
+                QuickUI([0.0, "Remaining Eater of Worlds Influenced Items", "rare->eater;any"], "SD", ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"]);
+            }
+
+            Section("Shaper Items", null, "E") {
+                BaseTypeBox([0.0, "Shaper items T1 ilvl 82", "rare->shaper;t11"], "Tier 1-1 Shaper");
+                BaseTypeBox([0.0, "Shaper items T1 ilvl 84", "rare->shaper;t12"], "Tier 1-2 Shaper");
+                BaseTypeBox([0.0, "Shaper items T1 ilvl 85", "rare->shaper;t13"], "Tier 1-3 Shaper");
+                Divider();
+                BaseTypeBox([0.0, "Shaper items T2 Bases a", "rare->shaper;t21"], "Tier 2-1 Shaper");
+                BaseTypeBox([0.0, "Shaper items T2 Bases b", "rare->shaper;t22"], "Tier 2-2 Shaper");
+            }
+
+            Section("Elder Items", null, "E") {
+                BaseTypeBox([0.0, "Elder items T1 ilvl 82", "rare->elder;t11"], "Tier 1-1 Elder");
+                BaseTypeBox([0.0, "Elder items T1 ilvl 84", "rare->elder;t12"], "Tier 1-2 Elder");
+                BaseTypeBox([0.0, "Elder items T1 ilvl 85", "rare->elder;t13"], "Tier 1-3 Elder");
+                Divider();
+                BaseTypeBox([0.0, "Elder items T2 Bases a", "rare->elder;t21"], "Tier 2-1 Elder");
+                BaseTypeBox([0.0, "Elder items T2 Bases b", "rare->elder;t22"], "Tier 2-2 Elder");
+            }
+
+            Section("Hunter Items", null, "E") {
+                BaseTypeBox([0.0, "Hunter - T1-1", "rare->hunter;t11"], "Tier 1-1 Hunter");
+                BaseTypeBox([0.0, "Hunter - T1-2", "rare->hunter;t12"], "Tier 1-2 Hunter");
+                BaseTypeBox([0.0, "Hunter - T1-3", "rare->hunter;t13"], "Tier 1-3 Hunter");
+                Divider();
+                BaseTypeBox([0.0, "Hunter - T2-1", "rare->hunter;t21"], "Tier 2-1 Hunter");
+                BaseTypeBox([0.0, "Hunter - T2-2", "rare->hunter;t22"], "Tier 2-2 Hunter");
+            }
+
+            Section("Crusader Items", null, "E") {
+                BaseTypeBox([0.0, "Crusader - T1-1", "rare->crusader;t11"], "Tier 1-1 Crusader");
+                BaseTypeBox([0.0, "Crusader - T1-2", "rare->crusader;t12"], "Tier 1-2 Crusader");
+                BaseTypeBox([0.0, "Crusader - T1-3", "rare->crusader;t13"], "Tier 1-3 Crusader");
+                Divider();
+                BaseTypeBox([0.0, "Crusader - T2-1", "rare->crusader;t21"], "Tier 2-1 Crusader");
+                BaseTypeBox([0.0, "Crusader - T2-2", "rare->crusader;t22"], "Tier 2-2 Crusader");
+            }
+
+            Section("Redeemer Items", null, "E") {
+                BaseTypeBox([0.0, "Redeemer - T1-1", "rare->redeemer;t11"], "Tier 1-1 Redeemer");
+                BaseTypeBox([0.0, "Redeemer - T1-2", "rare->redeemer;t12"], "Tier 1-2 Redeemer");
+                BaseTypeBox([0.0, "Redeemer - T1-3", "rare->redeemer;t13"], "Tier 1-3 Redeemer");
+                Divider();
+                BaseTypeBox([0.0, "Redeemer - T2-1", "rare->redeemer;t21"], "Tier 2-1 Redeemer");
+                BaseTypeBox([0.0, "Redeemer - T2-2", "rare->redeemer;t22"], "Tier 2-2 Redeemer");
+            }
+
+            Section("Warlord Items", null, "E") {
+                BaseTypeBox([0.0, "Warlord - T1-1", "rare->warlord;t11"], "Tier 1-1 Warlord");
+                BaseTypeBox([0.0, "Warlord - T1-2", "rare->warlord;t12"], "Tier 1-2 Warlord");
+                BaseTypeBox([0.0, "Warlord - T1-3", "rare->warlord;t13"], "Tier 1-3 Warlord");
+                Divider();
+                BaseTypeBox([0.0, "Warlord - T2-1", "rare->warlord;t21"], "Tier 2-1 Warlord");
+                BaseTypeBox([0.0, "Warlord - T2-2", "rare->warlord;t22"], "Tier 2-2 Warlord");
+            }
+
+            Divider();
+
+            Section("Remaining Influenced Items") {
+                QuickUI([0.0, "Remaining High Level Influenced Items", "rare->any;anytoplevel"], "SHD", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses"]);
+                QuickUI([0.0, "Small Influenced Items", "rare->any;anytrinket"], "SDH", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses"]);
+                QuickUI([0.0, "Remaining new Influenced Items", "rare->any;any"], "SHD", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses"], "Remaining Influenced Rares");
+            }
+        }
 
     Section("Additional rules", "Lion") {
 
@@ -1261,357 +1626,6 @@ Chapter() {
         Section("Currently Unobtainable: Kalandra Rings") { // IoliteRing
             QuickUI([0.0, "Kalandra Lake exclusive Bases", "exoticbases;exoticlakekala"], "SH", ["Rarity", "ItemLevel"], null, ["Gear", "OS"]);
         }
-    }
-}
-
-//===================================================================================================
-// RARES
-//===================================================================================================
-
-Chapter() {
-
-    SectionTitle("Endgame - Rare Items (lvl 68+)", "ImpClaw");
-
-    Section("Add custom Show/Hide rule (EG rares)", "Firefly") {
-
-        Box() { YTLink("IfJaYYj5kXk", "Chaos Recipe Filter Tutorial"); }
-
-        Description("Augment the filter with entirely new rules, such as 'hide all belts', 'highlight all gemini claws in a special color', 'hide all evasion type armors, gloves, shields, and boots' or 'show all corrupted rares'.", "Additional Endgame Rules", "This section is designed to be foolproof. It will have no effect on 6 links, leveling items, elder/shaper items, uniques, atlas bases (such as Steel Rings), abyss belts, fishing rods and other special bases. These sections frequently feature the 'strictness' dropdown menu. This tool defines how many rules are overwritten by your custom rules. I recommend playing around with the loot simulator, while switching back and forth to the customizer to get familiar with this section");
-
-        Section("Mode: Hide identified rares", "WisdomScroll") {
-            QuickUI([1.0, "Hide remaining identified rares", "rareoptional;idhider"], "HD", ["ItemLevel", "DropLevel", "AllGearClasses"], "", [], "Hide all remaining identified items that were not highlighted by the mod filtering rules.");
-        }
-
-        Section("Highlight rares by Base", "Firefly") {
-            Function CondShowBase ($s, $shd = "SD", $title)
-            {
-                QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "DropLevel", "Height", "Width", "Sockets", "Stats_RareGear"], $title, ["Gear", "OS"]);
-            }
-
-            Description("Give specific BaseTypes more highlighting here.");
-
-            Conditional("?CRareShowBases", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; }
-            ElementAdder_Tier("?CRareShowBases", "CondShowBase");
-        }
-
-        Section("Highlight rares by Armour Type", "Firefly") {
-            Description("Highlight gear by their type, like Evasion or Evasion-EnergyShield items.");
-
-            Conditional("?CRareShowItemTypes", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
-
-            Function CondShowType ($s, $shd = "SD", $title)
-            {
-                QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "ArmourClasses", "ItemLevel","DropLevel", "LinkedSockets", "Sockets", "Stats_RareGear"], $title);
-            }
-
-            ElementAdder_Tier("?CRareShowItemTypes", "CondShowType");
-        }
-
-        Section("Highlight rares by item slot", "Firefly") {
-
-            Function CondShowClass ($s, $shd = "SD", $title)
-            {
-                QuickUI($s, $shd, ["CondTargetSelection", "AllGearClasses", "ItemLevel", "DropLevel", "Height", "Width", "LinkedSockets", "Sockets", "Stats_RareGear"], $title);
-            }
-
-            Description("Highlight specific item classes here.");
-
-            Conditional("?CRareShowClasses", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; }
-            ElementAdder_Tier("?CRareShowClasses", "CondShowClass");
-        }
-
-        Section("Highlight chromatic Rares", "Chromatic") {
-
-            Function CondShowClass ($s, $shd = "SD", $title)
-            {
-                QuickUI($s, $shd, ["CondTargetSelection", "AllGearClasses", "ItemLevel", "DropLevel", "Height", "Width", "LinkedSockets", "Sockets", "Stats_RareGear"], $title);
-            }
-
-            Description("By default rares have a higher evaluation priority than chromatic recipes. This can be changed here.");
-
-            Conditional("?CRareShowRGB", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Show; SetBorderColor 0 0 0; SetBackgroundColor 150 150 150; SetFontSize 40; ItemLevel >= 68; Rarity Rare; SocketGroup RGB; }
-            ElementAdder_Tier("?CRareShowRGB", "CondShowClass");
-        }
-
-        Section("Hide rares by Base", "Annulment") {
-            Function CondHideBase ($s, $shd = "HD", $title)
-            {
-                QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "DropLevel", "Height", "Width", "LinkedSockets", "Sockets", "Stats_RareGear"], $title, ["Gear", "OS"]);
-            }
-
-            Conditional("?CRareHideBases", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Hide; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
-            ElementAdder_Tier("?CRareHideBases", "CondHideBase");
-        }
-
-        Section("Hide rares by Armour Type", "Annulment") {
-            Conditional("?CRareHideItemTypes", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Hide; ItemLevel >= 68; Rarity Rare; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
-
-            Function CondHideType ($s, $shd = "HD", $title)
-            {
-                QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "ArmourClasses", "ItemLevel", "DropLevel", "LinkedSockets", "Sockets", "Stats_RareGear"], $title);
-            }
-
-            ElementAdder_Tier("?CRareHideItemTypes", "CondHideType");
-        }
-
-        Section("Hide rares by item slot", "Annulment") {
-            Function CondHideClass ($s, $shd = "HD", $title)
-            {
-                // todo: a LOT of these are VERY damn similar -> remove e.g. height & width, so that they will appear in AddAttribute?
-                QuickUI($s, $shd, ["CondTargetSelection", "AllGearClasses", "ItemLevel", "DropLevel", "Height", "Width", "LinkedSockets", "Sockets", "Stats_RareGear"], $title);
-            }
-
-            Description("Hide uninteresting items, such as bows for melee characters or melee weapons for casters.");
-
-            Conditional("?CRareHideClasses", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Hide; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
-            ElementAdder_Tier("?CRareHideClasses", "CondHideClass");
-        }
-
-        Section("Hide rares by Tier", "Annulment") {
-            Description("Note: The section 'hide and highlight rares by type' section can be used to achieve the same result, while also having control over classes and levels.");
-            Conditional("?CRareSimpleHide", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Hide; Class "Helmets" "Gloves" "Boots" "Body Armours" "Shields" "Quivers" "Wands" "Rune Dagger" "Warstaves" "Daggers" "Sceptres" "Bows" "Claws" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces"; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
-            QuickUI("?CRareSimpleHide", "HD", ["CondTargetSelection", "LinkedSockets", "ItemLevel", "Sockets"], "Hide Rares By Tier");
-        }
-
-        Section ("Corrupted Rares", "Vaal Orb") {
-            Description("Sextants and other events can produce identified or rare corrupted items.");
-            Conditional("?CorruptedRares", ["c6.rare.generic.all", "c3.gear.crafting86.all", "c6.rare.t3.all", "c6.rare.t2.all", "c6.rare.t1.all", "c6.rare.decorator.all"]) { Show; Corrupted True; Rarity Rare; ItemLevel >= 68; SetFontSize 28; SetBorderColor 180 70 0; }
-
-            QuickUI("?CorruptedRares", "SD", ["AllGearClasses", "ItemLevel", "DropLevel", "Height", "Width", "CorruptedMods", "Sockets", "CondTargetSelection"], "Special Treatment: Corrupted Rares");
-        }
-    }
-
-    Section("Decorators", "Chromatic") {
-        Box() { Description("Decorators highlight specific characteristics of an item, by changing the appearance, without deciding whether it is hidden or shown."); }
-
-        Section("Decorators: Size") {
-            QuickUI([1.0, "Endgame rare deco tiny", "decorators->rareeg;tinyrares"], "SD", ["Width", "Height"], "Decorator: Tiny");
-            QuickUI([1.0, "Endgame rare deco medium 1", "decorators->rareeg;mediumrares1"], "SD", ["Width", "Height"], "Decorator: Medium (1x3)");
-            QuickUI([1.0, "Endgame rare deco medium 2", "decorators->rareeg;mediumrares2"], "SD", ["Width", "Height"], "Decorator: Medium (2x2)");
-            QuickUI([1.0, "Endgame rare deco large", "decorators->rareeg;largerares"], "SD", ["Width", "Height"], "Decorator: Large");
-        }
-
-        Section("Decorators: ItemLevel") {
-            QuickUI([1.0, "Endgame rare deco ilvl 86", "decorators->rareeg;ilvl86"], "SD", ["ItemLevel"], "Decorator: ItemLevel 86");
-            QuickUI([1.0, "Endgame rare deco ilvl 84", "decorators->rareeg;ilvl84"], "SD", ["ItemLevel"], "Decorator: ItemLevel 84");
-            QuickUI([1.0, "Endgame rare deco ilvl 75", "decorators->rareeg;ilvl75"], "SD", ["ItemLevel"], "Decorator: ItemLevel 75");
-            QuickUI([1.0, "Endgame rare deco ilvl 68", "decorators->rareeg;ilvl68"], "SD", ["ItemLevel"], "Decorator: ItemLevel 68");
-        }
-
-        Section("Decorators: Corrupted") {
-            QuickUI([1.0, "Endgame rare deco corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted Implicit");
-            QuickUI([1.0, "Endgame rare deco corrupted", "decorators->rareeg;corruptedrares"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted - No implicit");
-        }
-    }
-
-    Section("Jewellery", "Ring") {
-        Search S1(1.0, "Rare rings/amulets T1", "rr->amuring;t1"]) { }
-        Search S2(1.0, "Rare rings/amulets T2", "rr->amuring;t2"]) { }
-        Search S3(1.0, "Rare rings/amulets T3", "rr->amuring;t3"]) { }
-
-        Search B1(1.0, "Rare belts T1", "rr->belts;t1"]) { }
-        Search B2(1.0, "Rare belts T2", "rr->belts;t2"]) { }
-        Search B3(1.0, "Rare belts T3", "rr->belts;t3"]) { }
-
-        Section("Rings and Amulets") {
-            QuickUI(S1, "SD", ["AreaLevel"]);
-            QuickUI(S2, "SD", ["AreaLevel"]);
-            QuickUI(S3, "SD", ["AreaLevel"]);
-        }
-
-        Section("Belts") {
-            QuickUI(B1, "SD", ["AreaLevel"]);
-            QuickUI(B2, "SD", ["AreaLevel"]);
-            QuickUI(B3, "SD", ["AreaLevel"]);
-        }
-
-        BaseTypeMatrix(false, "Tier 1", S1, B1, "Tier 2", S2, B2, "Tier 3", S3, B3);
-    }
-
-    Section("Weapons and Armours", "RoyalBurgonet") {
-        Description("Pro tip: You can disable whole sections by right-clicking the section and clicking on 'Turn OFF all rules'");
-
-        Function EgRares($s) { QuickUI($s, "SH", ["ItemLevel"]); }
-        Function EgRaresArmours($s) { QuickUI($s, "SH", ["BaseDefencePercentile", "ItemLevel"]); }
-
-        Search T1Wep(1.0, "Tier 1 rare weapons", "rr;t1weapons") { }
-        Search T1Arm(0.0, "Tier 1 rare armours", "rr;t1armours") { }
-
-        Search T2Wep(1.0, "Tier 2 rare weapons", "rr;t2weapons") { }
-        Search T2Arm(1.0, "Tier 2 rare armours", "rr;t2armours") { }
-
-        Search T3Dagger(1.0, "Endgame-Rares-T3-Daggers", "rr;t3daggers") { }
-        Search T3RuneDag(1.0, "Endgame-Rares-T3-Rune Dagger", "rr;t3runedaggers") { }
-        Search T3WarStaff(1.0, "Endgame-Rares-T3-Warstaff", "rr;t3warstaves") { }
-        Search T3Wand(1.0, "Endgame-Rares-T3-Wands", "rr;t3wands") { }
-        Search T3Scepter(1.0, "Endgame-Rares-T3-Sceptres", "rr;t3sceptres") { }
-        Search T3Claw(1.0, "Endgame-Rares-T3-Claws", "rr;t3claws") { }
-        Search T3Foil(1.0, "Endgame-Rares-T3-Foils", "rr;t3foils") { }
-        Search T3Sword1H(1.0, "Endgame-Rares-T3-1HSwords", "rr;t3swords1h") { }
-        Search T3Maces1H(1.0, "Endgame-Rares-T3-1HMaces", "rr;t3maces1h") { }
-        Search T3Axe1H(1.0, "Endgame-Rares-T3-1HAxe", "rr;t3axes1h") { }
-        Search T3Staff(1.0, "Endgame-Rares-T3-2HStaves", "rr;t3staves") { }
-        Search T3Sword2H(1.0, "Endgame-Rares-T3-2HSwords", "rr;t3swords2h") { }
-        Search T3Axe2H(1.0, "Endgame-Rares-T3-2HAxes", "rr;t3axes2h") { }
-        Search T3Mace2H(1.0, "Endgame-Rares-T3-2HMaces", "rr;t3maces2h") { }
-        Search T3Bow(1.0, "Endgame-Rares-T3-Bows", "rr;t3bows") { }
-        Search T3Boot(1.0, "Endgame-Rares-T3-ArmBoots", "rr;t3boots") { }
-        Search T3Glove(1.0, "Endgame-Rares-T3-ArmGloves", "rr;t3gloves") { }
-        Search T3Helm(1.0, "Endgame-Rares-T3-ArmHelmets", "rr;t3helmets") { }
-        Search T3Body(1.0, "Endgame-Rares-T3-BodyArmours", "rr;t3body") { }
-        Search T3Shield(1.0, "Endgame-Rares-T3-Small-Shields", "rr;t3shields") { }
-        Search T3Quiv(1.0, "Endgame-Rares-T3-Quivers", "rr;t3quivers") { }
-
-        Search T4(0.0, "Endgame Tier 4 Rares", "rr;t4endgamerares") { }
-
-        Section("Tier 1") {
-            EgRares(T1Wep);
-            EgRaresArmours(T1Arm);
-        }
-
-        Section("Tier 2") {
-            EgRares(T2Wep);
-            EgRaresArmours(T2Arm);
-        }
-
-        Section("Tier 3") {
-            EgRares(T3Dagger);
-            EgRares(T3RuneDag);
-            EgRares(T3WarStaff);
-            EgRares(T3Wand);
-            EgRares(T3Scepter);
-            EgRares(T3Claw);
-            EgRares(T3Foil);
-            EgRares(T3Sword1H);
-            EgRares(T3Maces1H);
-            EgRares(T3Axe1H);
-            EgRares(T3Staff);
-            EgRares(T3Sword2H);
-            EgRares(T3Axe2H);
-            EgRares(T3Mace2H);
-            EgRares(T3Bow);
-            EgRaresArmours(T3Boot);
-            EgRaresArmours(T3Glove);
-            EgRaresArmours(T3Helm);
-            EgRaresArmours(T3Body);
-            EgRaresArmours(T3Shield);
-            EgRares(T3Quiv);
-        }
-
-        Section("Tier 4") {
-            EgRares(T4);
-        }
-
-        BaseTypeMatrix(true,
-            "Tier 1", T1Wep, T1Arm,
-            "Tier 2", T2Wep, T2Arm,
-            "Tier 3", T3Dagger, T3RuneDag, T3WarStaff, T3Wand, T3Scepter, T3Claw, T3Foil, T3Sword1H, T3Maces1H, T3Axe1H, T3Staff, T3Sword2H, T3Axe2H, T3Mace2H, T3Bow, T3Boot, T3Glove, T3Helm, T3Body, T3Shield, T3Quiv
-        );
-    }
-
-    Section ("Influenced Rares", "Voidorb", "E") {
-        Function BaseTypeBox($s, $text, $descr = "") { QuickUI($s, "SD", ["ItemLevel"], $text, ["Gear", "DO"], $descr); }
-
-        Description("To add more influenced item rules to the filter, use the 'Add additional Rules' section of the Customizer to do so.");
-
-        Section("Common") {
-            Box() { Description("These rules have priority over other tier 1 or tier 2 rules respectively."); }
-
-            Search T1(0.0, "Common Influenced Rares - Tier 1", "influenced->common;t1_exo") { }
-            Search T2(0.0, "Common Influenced Rares - Tier 2", "influenced->common;t2_exo") { }
-
-            QuickUI(T1, "SD", ["ItemLevel"], "Top influenced bases", [], "Extremely exclusive drop-restricted bases, such as heist and ritual bases.");
-            QuickUI(T2, "SD", ["ItemLevel"], "Exclusive atlas bases", []);
-
-            BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2);
-
-            Divider();
-
-            QuickUI([0.0, "Common Influenced Rares - Tier 2 High ItemLevel", "influenced->common;t2_86"], "SD", ["ItemLevel", "BTM"], "High level meta bases");
-        }
-
-        Section("Searing Exarch") {
-            Function EldrInflFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"], $text, ["Gear", "AOS"]); }
-
-            QuickUI([0.0, "Good Exarch Influence Bases", "rare->exarch;anyhigh"], "SD", ["HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted", "BTM"]);
-            QuickUI([0.0, "Remaining Exarch Influenced Items", "rare->exarch;any"], "SD", ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"]);
-            Divider();
-            Conditional("?EldrInflNewTiers") { Show; Rarity Normal Magic Rare; SetTextColor 0 0 0 255; SetBackgroundColor 145 215 230 225; SetBorderColor 0 100 150 255; SetFontSize 40; PlayAlertSound 2 300; }
-            ElementAdder_Tier("?EldrInflNewTiers", "EldrInflFunc");
-        }
-
-        Section("Eater of Worlds") {
-            Function EldrInflFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"], $text, ["Gear", "AOS"]); }
-
-            QuickUI([0.0, "Good Eater of Worlds Influence Bases", "rare->eater;anyhigh"], "SD", ["HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted", "BTM"]);
-            QuickUI([0.0, "Remaining Eater of Worlds Influenced Items", "rare->eater;any"], "SD", ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"]);
-        }
-
-        Section("Shaper Items", null, "E") {
-            BaseTypeBox([0.0, "Shaper items T1 ilvl 82", "rare->shaper;t11"], "Tier 1-1 Shaper");
-            BaseTypeBox([0.0, "Shaper items T1 ilvl 84", "rare->shaper;t12"], "Tier 1-2 Shaper");
-            BaseTypeBox([0.0, "Shaper items T1 ilvl 85", "rare->shaper;t13"], "Tier 1-3 Shaper");
-            Divider();
-            BaseTypeBox([0.0, "Shaper items T2 Bases a", "rare->shaper;t21"], "Tier 2-1 Shaper");
-            BaseTypeBox([0.0, "Shaper items T2 Bases b", "rare->shaper;t22"], "Tier 2-2 Shaper");
-        }
-
-        Section("Elder Items", null, "E") {
-            BaseTypeBox([0.0, "Elder items T1 ilvl 82", "rare->elder;t11"], "Tier 1-1 Elder");
-            BaseTypeBox([0.0, "Elder items T1 ilvl 84", "rare->elder;t12"], "Tier 1-2 Elder");
-            BaseTypeBox([0.0, "Elder items T1 ilvl 85", "rare->elder;t13"], "Tier 1-3 Elder");
-            Divider();
-            BaseTypeBox([0.0, "Elder items T2 Bases a", "rare->elder;t21"], "Tier 2-1 Elder");
-            BaseTypeBox([0.0, "Elder items T2 Bases b", "rare->elder;t22"], "Tier 2-2 Elder");
-        }
-
-        Section("Hunter Items", null, "E") {
-            BaseTypeBox([0.0, "Hunter - T1-1", "rare->hunter;t11"], "Tier 1-1 Hunter");
-            BaseTypeBox([0.0, "Hunter - T1-2", "rare->hunter;t12"], "Tier 1-2 Hunter");
-            BaseTypeBox([0.0, "Hunter - T1-3", "rare->hunter;t13"], "Tier 1-3 Hunter");
-            Divider();
-            BaseTypeBox([0.0, "Hunter - T2-1", "rare->hunter;t21"], "Tier 2-1 Hunter");
-            BaseTypeBox([0.0, "Hunter - T2-2", "rare->hunter;t22"], "Tier 2-2 Hunter");
-        }
-
-        Section("Crusader Items", null, "E") {
-            BaseTypeBox([0.0, "Crusader - T1-1", "rare->crusader;t11"], "Tier 1-1 Crusader");
-            BaseTypeBox([0.0, "Crusader - T1-2", "rare->crusader;t12"], "Tier 1-2 Crusader");
-            BaseTypeBox([0.0, "Crusader - T1-3", "rare->crusader;t13"], "Tier 1-3 Crusader");
-            Divider();
-            BaseTypeBox([0.0, "Crusader - T2-1", "rare->crusader;t21"], "Tier 2-1 Crusader");
-            BaseTypeBox([0.0, "Crusader - T2-2", "rare->crusader;t22"], "Tier 2-2 Crusader");
-        }
-
-        Section("Redeemer Items", null, "E") {
-            BaseTypeBox([0.0, "Redeemer - T1-1", "rare->redeemer;t11"], "Tier 1-1 Redeemer");
-            BaseTypeBox([0.0, "Redeemer - T1-2", "rare->redeemer;t12"], "Tier 1-2 Redeemer");
-            BaseTypeBox([0.0, "Redeemer - T1-3", "rare->redeemer;t13"], "Tier 1-3 Redeemer");
-            Divider();
-            BaseTypeBox([0.0, "Redeemer - T2-1", "rare->redeemer;t21"], "Tier 2-1 Redeemer");
-            BaseTypeBox([0.0, "Redeemer - T2-2", "rare->redeemer;t22"], "Tier 2-2 Redeemer");
-        }
-
-        Section("Warlord Items", null, "E") {
-            BaseTypeBox([0.0, "Warlord - T1-1", "rare->warlord;t11"], "Tier 1-1 Warlord");
-            BaseTypeBox([0.0, "Warlord - T1-2", "rare->warlord;t12"], "Tier 1-2 Warlord");
-            BaseTypeBox([0.0, "Warlord - T1-3", "rare->warlord;t13"], "Tier 1-3 Warlord");
-            Divider();
-            BaseTypeBox([0.0, "Warlord - T2-1", "rare->warlord;t21"], "Tier 2-1 Warlord");
-            BaseTypeBox([0.0, "Warlord - T2-2", "rare->warlord;t22"], "Tier 2-2 Warlord");
-        }
-
-        Divider();
-
-        Section("Remaining Influenced Items") {
-            QuickUI([0.0, "Remaining High Level Influenced Items", "rare->any;anytoplevel"], "SHD", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses"]);
-            QuickUI([0.0, "Small Influenced Items", "rare->any;anytrinket"], "SDH", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses"]);
-            QuickUI([0.0, "Remaining new Influenced Items", "rare->any;any"], "SHD", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses"], "Remaining Influenced Rares");
-        }
-    }
-
-    Section("Identified endgame rares", "WisdomScroll") {
-        QuickUI([1.0, "Identified endgame rares", "rr;identifieditemhandling"], "SHD", ["AllGearClasses", "ItemLevel", "DropLevel", "Mirrored", "Identified", "Corrupted", "CorruptedMods"], "", [], "This rule has less priority than tier 1 & 2 rares and jewelry. It's designed for Ultimatum rewards, that are not caught by the fairly exclusive identified mod sections.");
     }
 }
 
