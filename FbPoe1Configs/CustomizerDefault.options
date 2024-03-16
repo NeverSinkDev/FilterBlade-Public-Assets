@@ -962,12 +962,6 @@ Chapter() {
     Section("Crafting", "Regalia") {
         Description("High level, specific crafting bases are in high demand early in the league and can be useful in SSF environments. This section handles non-influenced versions of these items.");
 
-        Section("Expensive 86+ atlas bases", null, "E") {
-            TierListToolBar();
-            Description("This section contains all bases that are currently worth around 10++ chaos, no matter the rarity. Only atlas bases (and some exceptions) are allowed in this section.");
-            QuickUI([0.0, "Expensive Crafting Bases", "crafting->expensive;any"], "SH", ["ItemLevel", "Rarity"], "", ["Gear", "SO"]);
-        }
-
         Section("Decorators (generic crafting bases)") {
             Box() { Description("Decorators highlight specific characteristics of an item, by changing the appearance, without deciding whether it is hidden or shown."); }
             QuickUI([1.0, "Endgame crafting deco rare ilvl 86", "decorator->craftingrare;raredecoratorilvl86"], "SD", ["ItemLevel"], "Decorator: ItemLevel 86+ rares");
@@ -979,12 +973,6 @@ Chapter() {
             QuickUI([1.0, "Endgame crafting deco normal", "decorator->craftingrare;normaldecorator"], "SD", ["ItemLevel"], "Decorator: Normal items");
             QuickUI([1.0, "Endgame crafting deco normal trinkets", "decorator->craftingrare;normaldecoratorjwlry"], "SD", ["ItemLevel"], "Decorator: Normal trinkets");
         }
-
-        Section("Early endgame harvest bases") {
-            QuickUI([1.0, "Early endgame harvest crafting bases", "normalcraft->extra;any"], "SH", ["ItemLevel", "Rarity"], "", ["Gear", "SO"]);
-        }
-
-        Divider();
 
         Function RarityCraftBox ($s, $text) { QuickUI($s, "SD", ["ItemLevel", "Rarity"], $text); }
 
@@ -1024,7 +1012,69 @@ Chapter() {
 //        MultiTierThresholdEditor("ItemLevel");
     }
 
+    Section("Fractured items", "FracturingOrb") {
+        Description("Some itemclasses like 'Jewels' are completely covered through the class-based filtering below and don't need representing through the matrix.");
+        Search S0(0.0, "Fractured items, tier 1", "exotic->fractured;fractt1") {}
+        Search S1(0.0, "Fractured items, tier 2", "exotic->fractured;fractt2") {}
+        QuickUI(S0, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
+        QuickUI(S1, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
+        BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1);
+
+        Divider();
+
+        QuickUI([0.0, "Fractured items, classes", "exotic->fractured;fractspecial"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Fractured Exotic Classes");
+        QuickUI([0.0, "Fractured items, medium", "exotic->fractured;fractothers"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
+    }
+
+    Section("Veiled Items", "VeiledChaosOrb") {
+        Function VeilModTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel"], $text, ["Item Mods", "D", "HasExplicitMod"]); }
+        Function VeilMods($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel", "Mods"], $text); }
+
+        VeilModTierList([0.0, "Betrayal Veiled Mods Tier 1", "exoticmods;t1veil"], "SD", "Veiled Mods - Expensive Member-Specific Mods");
+        VeilModTierList([0.0, "Betrayal Veiled Mods Tier 2", "exoticmods;t2veil"], "SD", "Veiled Mods - Member-Specific Mods");
+        VeilMods([0.0, "Item with multiple Betrayal Veiled Mods", "exoticmods;duoveil"], "SD");
+
+        DeepSearch S4(0.0, "Betrayal Veiled Mods Small 1", "exoticmods;smallveil1") { BaseType "Wool Shoes"; Rarity Rare; Width 2; Height 2; }
+        DeepSearch S4(0.0, "Betrayal Veiled Mods Small 2", "exoticmods;smallveil2") { BaseType "Driftwood Wand"; Rarity Rare; Width 1; Height 3; }
+
+        VeilMods(S4, "SD", "Remaining Small Veiled Mod Items");
+        VeilMods([0.0, "Betrayal Veiled Mods", "exoticmods;veilrest"], "SD", "Remaining Veiled Mod Items");
+
+        // new tiers
+        Conditional("?VeiledModsNewTiers") { Show; Identified True; SetFontSize 45; SetBorderColor 0 240 190 240; PlayEffect White Temp; MinimapIcon 2 White Hexagon; HasExplicitMod "Veil"; }
+        ElementAdder_Tier("?VeiledModsNewTiers", "VeilModTierList");
+    }
+
     Section("Additional rules", "Lion") {
+
+        Title("Early League Options");
+
+        Section("Early endgame harvest bases") {
+            QuickUI([1.0, "Early endgame harvest crafting bases", "normalcraft->extra;any"], "SH", ["ItemLevel", "Rarity"], "", ["Gear", "SO"]);
+        }
+
+        Section("White Sockets") {
+            QuickUI([0.0, "3 White sockets", "miscendgamerules;whitesocketweapons1h"], "SD", ["SocketedGearClasses", "ItemLevel", "Corrupted"], null, ["Gear", "SAO"]);
+            QuickUI([0.0, "6 White sockets", "socketslinks;whitesocketweapons2h"], "SD", ["SixSocketClasses", "ItemLevel", "Corrupted"], null, ["Gear", "SAO"]);
+        }
+
+        Section("4-links and 5-links") {
+            Description("Usually the player will find enough 4-links by the time they're 68, however this can be useful for certain private leagues and ssf players with special plans");
+            QuickUI([0.0, "68+ 4 Links", "normalcraft->lowstrict;earlyendgame4link"], "SD", ["AreaLevel", "FourPlusSocketClasses", "Rarity"], "Early endgame 4-links:");
+            QuickUI([0.0, "Endgame 5 links b", "socketslinks;5links"], "SD", ["AreaLevel", "SixSocketClasses", "ItemType"], "Endgame 5-linked items:");
+        }
+
+        Title("Special Properties");
+
+        Section("Synthesised items") {
+            Description("Some itemclasses like 'amulets' are completely covered through the class-based filtering below and don't need representing through the matrix.");
+            QuickUI([0.0, "Synthesised items T1", "exotic->synthesised;synthselected"], "SD", ["ItemLevel", "DropLevel", "Identified", "BTM"]);
+
+            Divider();
+
+            QuickUI([0.0, "Synthesised items classes", "exotic->synthesised;synthclasses"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified"]);
+            QuickUI([0.0, "Synthesised items", "exotic->synthesised;synthrandom"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified"]);
+        }
 
         Section("Perfection BaseTypes") {
             Description("In the 3.16 update the base armour value of armour/es/evasion on items can vary by 15%. This value is inherent and can only be changed with a sacred orb. The filter attempts to highlight items with perfect base defense stats for the best crafting results");
@@ -1039,53 +1089,15 @@ Chapter() {
             BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2, "Tier 3", T3);
         }
 
-        Section("Synthesised items") {
-            Description("Some itemclasses like 'amulets' are completely covered through the class-based filtering below and don't need representing through the matrix.");
-            QuickUI([0.0, "Synthesised items T1", "exotic->synthesised;synthselected"], "SD", ["ItemLevel", "DropLevel", "Identified", "BTM"]);
-
-            Divider();
-
-            QuickUI([0.0, "Synthesised items classes", "exotic->synthesised;synthclasses"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified"]);
-            QuickUI([0.0, "Synthesised items", "exotic->synthesised;synthrandom"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified"]);
+        Section("Economy-Based Expensive 86+ bases", null, "E") {
+            TierListToolBar();
+            Description("This section contains all bases that are currently worth around 10++ chaos, no matter the rarity. Only atlas bases (and some exceptions) are allowed in this section.");
+            QuickUI([0.0, "Expensive Crafting Bases", "crafting->expensive;any"], "SH", ["ItemLevel", "Rarity"], "", ["Gear", "SO"]);
         }
 
-        Section("Fractured items") {
-            Description("Some itemclasses like 'Jewels' are completely covered through the class-based filtering below and don't need representing through the matrix.");
-            Search S0(0.0, "Fractured items, tier 1", "exotic->fractured;fractt1") {}
-            Search S1(0.0, "Fractured items, tier 2", "exotic->fractured;fractt2") {}
-            QuickUI(S0, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
-            QuickUI(S1, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
-            BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1);
-
-            Divider();
-
-            QuickUI([0.0, "Fractured items, classes", "exotic->fractured;fractspecial"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Fractured Exotic Classes");
-            QuickUI([0.0, "Fractured items, medium", "exotic->fractured;fractothers"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
-        }
-
-        Section("Enchanted items") {
-            Description("Enchanted items, particularly helmets, can sometimes be very expensive and are worth checking up on.");
-
-//            DeepSearch S0(0.0, "Enchanted items (helmets)", "exotic->enchanted;others") { AnyEnchantment True; Rarity Normal; Class Helmets; BaseType "Ursine Pelt"; }
-//            DeepSearch S1(0.0, "Enchanted items (remaining)", "exotic->enchanted;glovesboots") { AnyEnchantment True; Rarity Normal; Class Gloves; BaseType "Vaal Gauntlets"; }
-//            Search S2(0.0, "Heist Enchantments", "exotic->enchanted;exotic") { BaseType "Vaal Regalia"; Rarity Rare; AnyEnchantment True; }
-
-//            QuickUI([0.0, "", "exotic->enchanted;t1"], "SH", []);
-//            QuickUI([0.0, "", "exotic->enchanted;t2"], "SH", []);
-
-//            QuickUI(S0, "SD", ["Corrupted", "ItemLevel", "DropLevel"], "", ["Gear", "ASO"]);
-//            QuickUI(S1, "SD", ["Corrupted", "ItemLevel", "DropLevel"], "", ["Gear", "ASO"]);
-//            QuickUI(S2, "SD");
-
+        Section("Exotic Enchanted items") {
+            Description("This is mostly relevant for heist-based drops");
             QuickUI([0.0, "Enchanted items", "exotic->enchanted;exotic"], "SH", ["Corrupted", "ItemLevel", "DropLevel", "Rarity"]);
-
-//            Function EnchantedItemsFunc ($s, $shd = "SHD", $title)
-//            {
-//                QuickUI($s, $shd, ["LabEnchantmentClasses", "BaseType", "Rarity", "Stats_RareGear"], $title, ["Enchantments", "OS", "HasEnchantment"]);
-//            }
-
-//            Conditional("?CEnchantedItems", [0]) { Show; SetBorderColor 0 240 190 240; SetFontSize 40; Class == "Boots" "Gloves" "Helmets"; Rarity Normal Magic Rare; AnyEnchantment True; MinimapIcon 2 White Hexagon; PlayEffect White Temp; }
-//            ElementAdder_Tier("?CEnchantedItems", "EnchantedItemsFunc");
         }
 
         Section("30+ Quality Items", "") // Regalia
@@ -1093,10 +1105,7 @@ Chapter() {
             QuickUI([0.0, "High Quality items", "normalcraft->lowstrict;overquality"], "SHD", ["Quality", "ItemLevel", "DropLevel", "AllGearClasses"]);
         }
 
-        Section("White Sockets") {
-            QuickUI([0.0, "3 White sockets", "miscendgamerules;whitesocketweapons1h"], "SD", ["SocketedGearClasses", "ItemLevel", "Corrupted"], null, ["Gear", "SAO"]);
-            QuickUI([0.0, "6 White sockets", "socketslinks;whitesocketweapons2h"], "SD", ["SixSocketClasses", "ItemLevel", "Corrupted"], null, ["Gear", "SAO"]);
-        }
+        Title("Corruption-Based Properties");
 
         Section("Double corrupted items") {
             QuickUI([0.0, "Double corrupted items", "exotic->corruptions;doublecorruptedjwlry"], "SD", ["ItemLevel", "Rarity", "AllGearClassesPlusJewel"], "Double corrupted handpicked items");
@@ -1107,61 +1116,24 @@ Chapter() {
             Description("ItemLevel 80+ quivers can roll valuable chain corruptions. This rule helps detecting these.");
             QuickUI([0.0, "Corrupted rare quivers", "exotic->corruptions;singlecorruptedquivers"], "SD", ["ItemLevel", "Rarity", "AllGearClassesPlusJewel"], "Single corrupted rare quivers");
         }
-
-        Section("4-links and 5-links") {
-            Description("Usually the player will find enough 4-links by the time they're 68, however this can be useful for certain private leagues and ssf players with special plans");
-            QuickUI([0.0, "68+ 4 Links", "normalcraft->lowstrict;earlyendgame4link"], "SD", ["AreaLevel", "FourPlusSocketClasses", "Rarity"], "Early endgame 4-links:");
-            QuickUI([0.0, "Endgame 5 links b", "socketslinks;5links"], "SD", ["AreaLevel", "SixSocketClasses", "ItemType"], "Endgame 5-linked items:");
-        }
     }
 
     Section("League-specific items and mods", "Talisman") {
 
-        Section("Tattoos", "HonouredTattoooftheWiseMan") {
-            Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
+        Title("Exotic Bases");
 
-            Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
-            TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH");
-            TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH");
-            TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH");
-            TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH");
-
-            // new tiers
-            Conditional("?AncTrialTattooTier") { }
-            ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
-
-            // hide tier
-            Conditional("?AncTrialTattooHidden") { }
-            ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
+        Section("Talismans", "Talisman") {
+            Function TalismanUI($s) { QuickUI($s, "SH", ["ItemLevel", "Mods", "Talisman"]); }
+            TalismanUI([1.0, "Talismans T1 Attack", "rare->exotic->talisman;t1attacktalisman"]);
+            TalismanUI([1.0, "Talismans T1 Caster", "rare->exotic->talisman;t1castertalisman"]);
+            TalismanUI([1.0, "Talismans T1 DoT", "rare->exotic->talisman;t1dottalisman"]);
+            TalismanUI([1.0, "Talismans T2 Stats", "rare->exotic->talisman;t2stattalisman"]);
+            QuickUI([1.0, "Exotic Talisman Bases", "exoticbases;exotictalismanbases"], "SH", ["ItemLevel", "Talisman"]);
+            QuickUI([1.0, "Talismans T3 Bases", "rare->exotic->talisman;t3decenttypetalisman"], "SH", ["ItemLevel", "Talisman"]);
+            QuickUI([1.0, "Remaining Talismans", "rare->exotic->talisman;any"], "SH", ["ItemLevel"]);
         }
 
-        Section("Sanctum Relics", "SanctumRelic") {
-            Function SanctumRelicsUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Rarity"], $text, ["SanctumRelics", "O"]); }
-            Description("Relics drop in the sanctum and provide sanctum-exclusive benefits to your runs.");
-
-            SanctumRelicsUI([0.0, "Forbidden Sanctum Relics Tier 1", "artefact->sanctifiedrelics;selectedrelics"], "SH");
-            QuickUI([0.0, "Remaining Forbidden Sanctum Relics", "artefact->sanctifiedrelics;anyrelic"], "SH");
-
-            // new tiers
-            Conditional("?SanctumRelicsNewTiers") { }
-            ElementAdder_Tier("?SanctumRelicsNewTiers", "SanctumRelicsUI");
-
-            // hide tier
-            Conditional("?SanctumRelicsNewTiersHidden") { }
-            ElementAdder_Tier("?SanctumRelicsNewTiersHidden", null, true, "SanctumRelics", "OH");
-        }
-
-        Section("Sanctum Special Relics", "SanctifiedSanctumRelic") {
-            Description("Unique Relics enable 'challenge runs' in the sanctum that grant improved rewards as well!");
-            QuickUI([0.0, "Unique Relics", "artefact->sanctifiedrelics;uniquerelics"], "S");
-            QuickUI([0.0, "Sanctum Sanctified Relics", "artefact->sanctifiedrelics;anysanctified"], "SH", []);
-        }
-
-        Section ("Crucible Item Passive Trees", "PrimevalRemnantCrucibleMap") {
-            QuickUI([0.0, "Items with Crucible passive tree", "exotic->crucible;crucibleany"], "SH", ["DropLevel", "Rarity", "ItemLevel"]);
-        }
-
-        Section("'Ward' BaseTypes & Iron Flask", "ExpeditionArtifact") {
+        Section("Expedition Ward-Bases", "ExpeditionArtifact") {
             // Runic Helm, Runic Crest, Runic Crown
             Description("Expedition introduced a new defence mechanic, Ward, in addition to the traditional ones like Armour or Evasion. Ward can only be found on these new BaseTypes:");
             QuickUI([0.0, "Expedition Ward Bases", "exoticbases;exoticexpeditionbases"], "SH", ["ItemLevel", "Rarity", "ExpeditionWardBases"]);
@@ -1192,12 +1164,6 @@ Chapter() {
             ElementAdder_Tier("?HeistExpBasesNewTiersHidden", null, true, "HeistExpBases", "OH");
         }
 
-        Section("Heist Trinkets", "HeistTrinket") {
-            // info: these are always corrupted and rare
-            Search S0(0.0, "Heist Trinkets") { BaseType "Thief's Trinket"; Class "Trinkets"; Rarity Rare; }
-            QuickUI(S0, "SH", ["ItemLevel", "AreaLevel"]);
-        }
-
         Section("Replica Uniques", "HeistReplicaUnique", "E") {
             Function ReplicaUniqueList($s, $shd = "SHD", $text, $descr = false) { QuickUI($s, $shd, [], $text, ["GearPlusFlasks", "O"], $descr); }
 
@@ -1215,35 +1181,11 @@ Chapter() {
             ElementAdder_Tier("?ReplicaUniquesNewTiersHidden", null, true, "GearPlusFlasks", "OH");
         }
 
-        Section("Betrayal Veiled Mods", "Scarab") {
-            Function VeilModTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel"], $text, ["Item Mods", "D", "HasExplicitMod"]); }
-            Function VeilMods($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel", "Mods"], $text); }
-
-            VeilModTierList([0.0, "Betrayal Veiled Mods Tier 1", "exoticmods;t1veil"], "SD", "Veiled Mods - Expensive Member-Specific Mods");
-            VeilModTierList([0.0, "Betrayal Veiled Mods Tier 2", "exoticmods;t2veil"], "SD", "Veiled Mods - Member-Specific Mods");
-            VeilMods([0.0, "Item with multiple Betrayal Veiled Mods", "exoticmods;duoveil"], "SD");
-
-            DeepSearch S4(0.0, "Betrayal Veiled Mods Small 1", "exoticmods;smallveil1") { BaseType "Wool Shoes"; Rarity Rare; Width 2; Height 2; }
-            DeepSearch S4(0.0, "Betrayal Veiled Mods Small 2", "exoticmods;smallveil2") { BaseType "Driftwood Wand"; Rarity Rare; Width 1; Height 3; }
-
-            VeilMods(S4, "SD", "Remaining Small Veiled Mod Items");
-            VeilMods([0.0, "Betrayal Veiled Mods", "exoticmods;veilrest"], "SD", "Remaining Veiled Mod Items");
-
-            // new tiers
-            Conditional("?VeiledModsNewTiers") { Show; Identified True; SetFontSize 45; SetBorderColor 0 240 190 240; PlayEffect White Temp; MinimapIcon 2 White Hexagon; HasExplicitMod "Veil"; }
-            ElementAdder_Tier("?VeiledModsNewTiers", "VeilModTierList");
-        }
+        Title("Special Properties");
 
         Section("Abyss socketed items", "AbyssJewel") {
             Search S0(0.0, "Abyss Socketed Rares") { BaseType "Glorious Plate"; SocketGroup "RA"; Rarity Rare; }
             QuickUI(S0, "SD", ["DropLevel", "ItemLevel", "SocketedGearClasses"]);
-        }
-
-        Section("Delve Mods", "DelveResonator") {
-            DeepSearch S2(0.0, "Fractured Delve Mods", "exoticmods;delvefractured") { }
-            QuickUI(S2, "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "SAO"]]);
-            QuickUI([0.0, "Delve mods T1", "exoticmods;delve"], "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "ASO"]]);
-            QuickUI([0.0, "Delve mods T2", "exoticmods;crafting"], "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "OAS"]]);
         }
 
         Section("Blight Annointed Items", "BlightOil") {
@@ -1254,10 +1196,9 @@ Chapter() {
             QuickUI([0.0, "Extractable Silver Blight Annointments", "exotic->enchanted;enchantedringssilveroil"], "SD");
         }
 
-        Section("Incursion Mods", "IncursionHelmet") {
-//            DeepSearch S5(0.0, "Incursion Mod Map", "exoticmods;") { Identified True; Class Maps; HasExplicitMod ["Vaal"]; Rarity Magic; }
-//            IncursionModUI(S5, "Incursion Map Mods");
+        Title("Exotic Identified Mods");
 
+        Section("Identified Mods: Incursion", "IncursionHelmet") {
             Function IncursionModUI($s, $title) { QuickUI($s, "SD", ["AllGearClasses", "Mods", "ItemLevel", "DropLevel"], $title); }
             IncursionModUI([0.0, "Incursion Boots Mods", "exoticmods;incursionspeedtraps"]);
             IncursionModUI([0.0, "Incursion Body Mods", "exoticmods;incursionlifechest"]);
@@ -1271,234 +1212,54 @@ Chapter() {
             IncursionModUI([0.0, "Incursion Mod Item rare", "exoticmods;incursionrandom"]);
         }
 
-        Section("Bestiary Mods", "BestiaryOrb") {
+        Section("Identified Mods: Delve", "DelveResonator") {
+            DeepSearch S2(0.0, "Fractured Delve Mods", "exoticmods;delvefractured") { }
+            QuickUI(S2, "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "SAO"]]);
+            QuickUI([0.0, "Delve mods T1", "exoticmods;delve"], "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "ASO"]]);
+            QuickUI([0.0, "Delve mods T2", "exoticmods;crafting"], "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "OAS"]]);
+        }
+
+        Section("Identified Mods: Essence", "Essence") {
+            QuickUI([0.0, "Essence Mods", "exoticmods;essence"], "SD", ["ItemLevel", "AllGearClasses", "DropLevel"], "", ["Item Mods", "S", "HasExplicitMod"]);
+        }
+
+        Section("Identified Mods: Bestiary", "BestiaryOrb") {
             QuickUI([1.0, "Assorted Bestiary Mod Items", "exoticmods;bestiaryvaluable"], "SD", ["AllGearClasses", "DropLevel", "ItemLevel", "Mods"]);
             QuickUI([0.0, "Bestiary Mod Items", "exoticmods;bestiaryother"], "SD", ["AllGearClasses", "DropLevel", "ItemLevel", "Mods"]);
         }
 
-        Section("Essences Mods", "Essence") {
-            QuickUI([0.0, "Essence Mods", "exoticmods;essence"], "SD", ["ItemLevel", "AllGearClasses", "DropLevel"], "", ["Item Mods", "S", "HasExplicitMod"]);
-        }
-
-        Section("Talismans", "Talisman") {
-            Function TalismanUI($s) { QuickUI($s, "SH", ["ItemLevel", "Mods", "Talisman"]); }
-            TalismanUI([1.0, "Talismans T1 Attack", "rare->exotic->talisman;t1attacktalisman"]);
-            TalismanUI([1.0, "Talismans T1 Caster", "rare->exotic->talisman;t1castertalisman"]);
-            TalismanUI([1.0, "Talismans T1 DoT", "rare->exotic->talisman;t1dottalisman"]);
-            TalismanUI([1.0, "Talismans T2 Stats", "rare->exotic->talisman;t2stattalisman"]);
-            QuickUI([1.0, "Exotic Talisman Bases", "exoticbases;exotictalismanbases"], "SH", ["ItemLevel", "Talisman"]);
-            QuickUI([1.0, "Talismans T3 Bases", "rare->exotic->talisman;t3decenttypetalisman"], "SH", ["ItemLevel", "Talisman"]);
-            QuickUI([1.0, "Remaining Talismans", "rare->exotic->talisman;any"], "SH", ["ItemLevel"]);
-        }
-
-        Section("Warband Mods", "Warband")
+        Section("Identified Mods: Warband", "Warband")
         {
             Description("Warband bases are magic items rarely dropped by Warbands. These bases drop identified and have a special affix and can only appear on a specific class. Hover over the wisdom scroll to find out more.", "Warband Items", "Redblade (fire) warbands may drop a helmet with the '10% physical damage taken is converted to fire damage'. The Brinerot may drop gloves with the '% increased damage while using a flask' mod and the Mutewind may drop 'Cannot be frozen' boots. Chaos warbands may drop weapons with a single elemental penetration bonus. These items are fairly exotic and may be used for crafting. Please note that if you put the entry on 'Hide', you can click 'alt' to see hidden items, to check if the warband dropped any special magic gear upon their demise. This is convenient, because identified items can also drop due to several sextant and leaguestone effects.");
             QuickUI([0.0, "Warband items", "exoticmods;warband"], "SD", ["ItemLevel", "AllGearClasses", "Mods"]);
         }
 
-        Divider();
+        Title("Currently Unobtainable");
 
-//        Section("Disabled Sanctum Gear", "SanctifiedSanctumRelic") {
-//            Description("Invocations allow corrupting a sanctified relic and giving them a keystone implicit. These ARE tradable.");
-//            QuickUI([0.0, "Sanctum Invocations T2", "currency->invocations;t2"], "S", [], "Currently disabled: Invocations", []);
-//            QuickUI([0.0, "Forbidden Sanctum Sanctified Relics", "artefact->sanctifiedrelics;anysanctified"], "SH", ["Rarity"], "Currently disabled: Sanctified Relics", []);
-//        }
+        Section ("Currently Unobtainable: Crucible Items", "PrimevalRemnantCrucibleMap") {
+            QuickUI([0.0, "Items with Crucible passive tree", "exotic->crucible;crucibleany"], "SH", ["DropLevel", "Rarity", "ItemLevel"]);
+        }
 
-        Section("Currently Disabled: Kalandra Rings") { // IoliteRing
+        Section("Currently Unobtainable: Tattoos", "HonouredTattoooftheWiseMan") {
+            Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
+
+            Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
+            TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH");
+            TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH");
+            TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH");
+            TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH");
+
+            // new tiers
+            Conditional("?AncTrialTattooTier") { }
+            ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
+
+            // hide tier
+            Conditional("?AncTrialTattooHidden") { }
+            ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
+        }
+
+        Section("Currently Unobtainable: Kalandra Rings") { // IoliteRing
             QuickUI([0.0, "Kalandra Lake exclusive Bases", "exoticbases;exoticlakekala"], "SH", ["Rarity", "ItemLevel"], null, ["Gear", "OS"]);
-        }
-    }
-
-    Section("Flasks", "Flask") {
-        Description("High item level (up to level 85) flasks can roll the highest tier mods.");
-        Section("High Level Utility Flasks", "Flask") {
-            QuickUI([0.0, "High Level Flasks - iLvl 85", "endgameflasks;utility85"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
-            QuickUI([0.0, "High Level Flasks - iLvl 84", "endgameflasks;utility84"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
-            QuickUI([0.0, "High Level Flasks - iLvl 82", "endgameflasks;utility82"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
-        }
-
-        Section("High Level Life & Mana Flasks", "FlaskLife") {
-            QuickUI([0.0, "High Level Life/Mana Flasks - iLvl 82", "endgameflasks;lifemana82"], "SHD", ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], "High Level Life & Mana Flasks - iLvl 82", ["Flasks", "SOA"]);
-        }
-
-        Section("Exceptional Quality High Level Flasks", "Flask") {
-            QuickUI([0.0, "Exceptional Quality Utility Flasks", "endgameflasks;overqualutil"], "SH", ["ItemLevel", "Quality", "RarityNM", "Utility Flasks"]);
-            QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Exceptional Quality Life & Mana Flasks", ["allFlasks", "SO"]);
-        }
-
-        Section("Other Endgame Utility Flasks", "Flask") {
-            QuickUI([0.0, "Early mapping ultility flasks", "endgameflasks;earlymappingflasks"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified"]);
-            QuickUI([0.0, "Endgame utility flasks", "endgameflasks;anyutility"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified"]);
-
-            Function EndgameUtilityFlaskCustomRuleUI ($s, $shd = "SHD", $title)
-            {
-                QuickUI($s, $shd, ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title);
-            }
-
-            Conditional("?EndgameUtilityFlaskCustomRules") { Show; Class "Flask"; Rarity Normal Magic; };
-            ElementAdder_Tier("?EndgameUtilityFlaskCustomRules", "EndgameUtilityFlaskCustomRuleUI");
-        }
-
-        Section("Other Endgame Life & Mana Flasks", "FlaskLife") {
-            QuickUI([0.0, "Early mapping life & mana flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "RarityNM", "Identified"], "Life & mana flasks", ["allFlasks", "SO"]);
-
-            Function EndgameLifeManaFlaskCustomRuleUI ($s, $shd = "SHD", $title)
-            {
-                QuickUI($s, $shd, ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title, ["allFlasks", "SO"]);
-            }
-
-            Conditional("?EndgameLifeManaFlaskCustomRules") { Show; Class "Flask"; Rarity Normal Magic; };
-            ElementAdder_Tier("?EndgameLifeManaFlaskCustomRules", "EndgameLifeManaFlaskCustomRuleUI");
-        }
-    }
-
-    Section("Jewels", "CobaltJewel") {
-
-        Section("Normal Jewels") {
-            Search S1(0.0, "Rare Jewels") { BaseType "Crimson Jewel"; Rarity Rare; }
-
-            QuickUI([0.0, "Magic Jewels", "jewels->generic;anymagic"], "SH", ["Jewels", "ItemLevel"], "", [], "Magic jewels for crafting and corrupting.");
-            QuickUI(0, "SH", ["Jewels", "ItemLevel"], "", [], "Rare jewels are solid pickups. They're small and can be very valuable.");
-        }
-
-        Section("Normal Jewels: Special") {
-            QuickUI([0.0, "ModFiltering: Jewels 2 Corrupted", "jewels->special;1modcorrupted"], "SH", ["ItemLevel", "DropLevel", "Corrupted", "Mods"], "Jewels with corrupted implicit");
-            QuickUI([0.0, "ModFiltering: Jewels 3", "jewels->special;1moduncorrupted"], "SH", ["ItemLevel", "DropLevel", "Corrupted", "Mods"], "Jewels with interesting mods");
-        }
-
-        Section("Abyss Jewels") {
-            Description("There are 4 types of jewels, one for each build archetype:<br>- 'Murderous' for melee<br>- 'Searching' for bows/wanders<br>- 'Hypnotic' for spellcasters<br>- 'Ghastly' for summoners", "Abyss Jewels", "Abyss Jewels have itemlevel depending rolls. If you want to craft abyss jewels, it's highly recommended to use ItemLevel 84 material.");
-
-            QuickUI([0.0, "Corrupted Abyss Jewels", "jewels->abyss;corruptedabyssjewel"], "SD", ["Abyss Jewels", "ItemLevel"]);
-            QuickUI([0.0, "Abyss Jewels rare ilvl 86", "jewels->abyss;veryhighrare"], "SH", ["Abyss Jewels", "ItemLevel"], "Rare Abyss Jewels - ilvl 86");
-            QuickUI([0.0, "Abyss Jewels magic ilvl 86", "jewels->abyss;veryhighmagic"], "SH", ["Abyss Jewels", "ItemLevel"], "Magic Abyss Jewels - ilvl 86");
-            Divider();
-            QuickUI([0.0, "Abyss Jewels rare ilvl 82", "jewels->abyss;highrare"], "SH", ["Abyss Jewels", "ItemLevel"], "Rare Abyss Jewels - ilvl 82");
-            QuickUI([0.0, "Abyss Jewels magic ilvl 82", "jewels->abyss;highmagic"], "SH", ["Abyss Jewels", "ItemLevel"], "Magic Abyss Jewels - ilvl 82");
-            Divider();
-            QuickUI([0.0, "Abyss Jewels rare", "jewels->abyss;anyrare"], "SH", ["Abyss Jewels", "ItemLevel"], "Rare Abyss Jewels");
-            QuickUI([0.0, "Abyss Jewels magic", "jewels->abyss;anymagic"], "SH", ["Abyss Jewels", "ItemLevel"], "Magic Abyss Jewels");
-        }
-
-        Section("Jewels during Campaign") {
-            QuickUI([0.0, "Campaign Abyss Jewels", "jewels->leveling;abyss"], "SH", ["Rarity", "ItemLevel", "Abyss Jewels"]);
-            QuickUI([0.0, "Campaign Jewels", "jewels->leveling;generic"], "SH", ["Rarity", "ItemLevel", "Jewels"]);
-        }
-
-        Function ClusterJewelTierList_Ench($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ClusterJewels", "ItemLevel", "EnchantmentPassiveNum", "Rarity"], null, ["ClusterJewelEnchantments", "D", "EnchantmentPassiveNode"], $text); }
-        Function ClusterJewelTierList_NoEnch($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ClusterJewels", "ItemLevel", "EnchantmentPassiveNum", "Rarity"], $text); }
-
-        Section("Cluster Jewels: Top Enchantments", null, "E") {
-            Warning("This section is economy based: it's generated based on poe.ninja economy data. This section is not perfect. Hide the general section on your own risk.");
-
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 12 Notes", "jewels->clustereco;n12_i84_t1"], "SDH");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 12 Notes", "jewels->clustereco;n12_i75_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 12 Notes", "jewels->clustereco;n12_i68_t1"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 11 Notes", "jewels->clustereco;n11_i84_t1"], "SDH");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 11 Notes", "jewels->clustereco;n11_i75_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 11 Notes", "jewels->clustereco;n11_i68_t1"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 10 Notes", "jewels->clustereco;n10_i84_t1"], "SDH");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 10 Notes", "jewels->clustereco;n10_i75_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 10 Notes", "jewels->clustereco;n10_i68_t1"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 9 Notes", "jewels->clustereco;n9_i84_t1"], "SDH");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 9 Notes", "jewels->clustereco;n9_i75_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 9 Notes", "jewels->clustereco;n9_i68_t1"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 8 Notes", "jewels->clustereco;n8_i84_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 8 Notes", "jewels->clustereco;n8_i75_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 8 Notes", "jewels->clustereco;n8_i68_t1"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 6 Notes", "jewels->clustereco;n6_i84_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 6 Notes", "jewels->clustereco;n6_i75_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 6 Notes", "jewels->clustereco;n6_i68_t1"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 4 Notes", "jewels->clustereco;n4_i84_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 4 Notes", "jewels->clustereco;n4_i75_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 4 Notes", "jewels->clustereco;n4_i68_t1"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 3 Notes", "jewels->clustereco;n3_i84_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 3 Notes", "jewels->clustereco;n3_i75_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 3 Notes", "jewels->clustereco;n3_i68_t1"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 2 Notes", "jewels->clustereco;n2_i84_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 2 Notes", "jewels->clustereco;n2_i75_t1"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 2 Notes", "jewels->clustereco;n2_i68_t1"], "SHD");
-        }
-
-        Section("Cluster Jewels: Good Enchantments", null, "E") {
-            Warning("This section is economy based: it's generated based on poe.ninja economy data. This section is not perfect. Hide the general section on your own risk.");
-
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 12 Notes", "jewels->clustereco;n12_i84_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 12 Notes", "jewels->clustereco;n12_i75_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 12 Notes", "jewels->clustereco;n12_i68_t2"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 11 Notes", "jewels->clustereco;n11_i84_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 11 Notes", "jewels->clustereco;n11_i75_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 11 Notes", "jewels->clustereco;n11_i68_t2"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 10 Notes", "jewels->clustereco;n10_i84_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 10 Notes", "jewels->clustereco;n10_i75_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 10 Notes", "jewels->clustereco;n10_i68_t2"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 9 Notes", "jewels->clustereco;n9_i84_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 9 Notes", "jewels->clustereco;n9_i75_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 9 Notes", "jewels->clustereco;n9_i68_t2"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 8 Notes", "jewels->clustereco;n8_i84_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 8 Notes", "jewels->clustereco;n8_i75_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 8 Notes", "jewels->clustereco;n8_i68_t2"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 6 Notes", "jewels->clustereco;n6_i84_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 6 Notes", "jewels->clustereco;n6_i75_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 6 Notes", "jewels->clustereco;n6_i68_t2"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 4 Notes", "jewels->clustereco;n4_i84_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 4 Notes", "jewels->clustereco;n4_i75_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 4 Notes", "jewels->clustereco;n4_i68_t2"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 3 Notes", "jewels->clustereco;n3_i84_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 3 Notes", "jewels->clustereco;n3_i75_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 3 Notes", "jewels->clustereco;n3_i68_t2"], "SHD");
-            Divider();
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 2 Notes", "jewels->clustereco;n2_i84_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 2 Notes", "jewels->clustereco;n2_i75_t2"], "SHD");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 2 Notes", "jewels->clustereco;n2_i68_t2"], "SHD");
-        }
-
-        Section("Cluster Jewels: Any Enchantment") {
-            ClusterJewelTierList_NoEnch([0.0, "Good High Level Very Large Cluster Jewels", "jewels->cluster;optimal1highlarge"], "SH", null);
-            ClusterJewelTierList_NoEnch([0.0, "Good High Level Large Cluster Jewels", "jewels->cluster;optimalhighlarge"], "SH", null);
-            ClusterJewelTierList_NoEnch([0.0, "Good Large Cluster Jewels", "jewels->cluster;highlarge"], "SH", null);
-            ClusterJewelTierList_NoEnch([0.0, "Large Cluster Jewels", "jewels->cluster;large"], "SH", null);
-            Divider();
-            ClusterJewelTierList_NoEnch([0.0, "Good High Level Medium Cluster Jewels", "jewels->cluster;optimalhighmedium"], "SH", null);
-            ClusterJewelTierList_NoEnch([0.0, "Good Medium Cluster Jewels", "jewels->cluster;highmedium"], "SH", null);
-            ClusterJewelTierList_NoEnch([0.0, "Medium Cluster Jewels", "jewels->cluster;medium"], "SH", null);
-            Divider();
-            ClusterJewelTierList_NoEnch([0.0, "High Level Small Cluster Jewels", "jewels->cluster;highsmall"], "SH", null);
-            ClusterJewelTierList_NoEnch([0.0, "Small Cluster Jewels", "jewels->cluster;small"], "SH", null);
-        }
-
-        Section("Cluster Jewels: Custom Rule") {
-            Title("Any Enchantment");
-            Search CS0("skip", "skip", "jewels->clustereco;n12_i84_t1") { }
-            Conditional("?ClusterJewelNewTier", [0]) { Show; Class Jewel; Rarity Normal Magic Rare; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?ClusterJewelNewTier", "ClusterJewelTierList_NoEnch");
-
-            Divider();
-
-            Title("Enchantment Filtering");
-            Function ClusterJewelFunc ($s, $shd = "SHD", $title)
-            {
-                QuickUI($s, $shd, ["Rarity", "ClusterJewels", "ItemLevel", "AreaLevel", "CorruptedMods", "EnchantmentPassiveNum", "Identified", "Corrupted"], $title, ["ClusterJewelEnchantments", "S", "EnchantmentPassiveNode"]);
-            }
-
-            Conditional("?CClusterJewelEnchantRule", [0]) { Show; SetBorderColor 0 240 190 240; SetFontSize 40; Class "Jewels"; AnyEnchantment True; BaseType "Small Cluster Jewel" "Medium Cluster Jewel" "Large Cluster Jewel"; MinimapIcon 2 White Hexagon; PlayEffect White Temp; }
-            ElementAdder_Tier("?CClusterJewelEnchantRule", "ClusterJewelFunc");
         }
     }
 }
@@ -1851,6 +1612,233 @@ Chapter() {
 
     Section("Identified endgame rares", "WisdomScroll") {
         QuickUI([1.0, "Identified endgame rares", "rr;identifieditemhandling"], "SHD", ["AllGearClasses", "ItemLevel", "DropLevel", "Mirrored", "Identified", "Corrupted", "CorruptedMods"], "", [], "This rule has less priority than tier 1 & 2 rares and jewelry. It's designed for Ultimatum rewards, that are not caught by the fairly exclusive identified mod sections.");
+    }
+}
+
+Chapter() {
+    SectionTitle("Other Endgame Gear");
+
+    Section("Flasks", "Flask") {
+        Description("High item level (up to level 85) flasks can roll the highest tier mods.");
+        Section("High Level Utility Flasks", "Flask") {
+            QuickUI([0.0, "High Level Flasks - iLvl 85", "endgameflasks;utility85"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
+            QuickUI([0.0, "High Level Flasks - iLvl 84", "endgameflasks;utility84"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
+            QuickUI([0.0, "High Level Flasks - iLvl 82", "endgameflasks;utility82"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
+        }
+
+        Section("High Level Life & Mana Flasks", "FlaskLife") {
+            QuickUI([0.0, "High Level Life/Mana Flasks - iLvl 82", "endgameflasks;lifemana82"], "SHD", ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], "High Level Life & Mana Flasks - iLvl 82", ["Flasks", "SOA"]);
+        }
+
+        Section("Exceptional Quality High Level Flasks", "Flask") {
+            QuickUI([0.0, "Exceptional Quality Utility Flasks", "endgameflasks;overqualutil"], "SH", ["ItemLevel", "Quality", "RarityNM", "Utility Flasks"]);
+            QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Exceptional Quality Life & Mana Flasks", ["allFlasks", "SO"]);
+        }
+
+        Section("Other Endgame Utility Flasks", "Flask") {
+            QuickUI([0.0, "Early mapping ultility flasks", "endgameflasks;earlymappingflasks"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified"]);
+            QuickUI([0.0, "Endgame utility flasks", "endgameflasks;anyutility"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified"]);
+
+            Function EndgameUtilityFlaskCustomRuleUI ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $shd, ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title);
+            }
+
+            Conditional("?EndgameUtilityFlaskCustomRules") { Show; Class "Flask"; Rarity Normal Magic; };
+            ElementAdder_Tier("?EndgameUtilityFlaskCustomRules", "EndgameUtilityFlaskCustomRuleUI");
+        }
+
+        Section("Other Endgame Life & Mana Flasks", "FlaskLife") {
+            QuickUI([0.0, "Early mapping life & mana flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "RarityNM", "Identified"], "Life & mana flasks", ["allFlasks", "SO"]);
+
+            Function EndgameLifeManaFlaskCustomRuleUI ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $shd, ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title, ["allFlasks", "SO"]);
+            }
+
+            Conditional("?EndgameLifeManaFlaskCustomRules") { Show; Class "Flask"; Rarity Normal Magic; };
+            ElementAdder_Tier("?EndgameLifeManaFlaskCustomRules", "EndgameLifeManaFlaskCustomRuleUI");
+        }
+    }
+
+    Section("Jewels", "CobaltJewel") {
+
+        Section("Normal Jewels") {
+            Search S1(0.0, "Rare Jewels") { BaseType "Crimson Jewel"; Rarity Rare; }
+
+            QuickUI([0.0, "Magic Jewels", "jewels->generic;anymagic"], "SH", ["Jewels", "ItemLevel"], "", [], "Magic jewels for crafting and corrupting.");
+            QuickUI(0, "SH", ["Jewels", "ItemLevel"], "", [], "Rare jewels are solid pickups. They're small and can be very valuable.");
+        }
+
+        Section("Normal Jewels: Special") {
+            QuickUI([0.0, "ModFiltering: Jewels 2 Corrupted", "jewels->special;1modcorrupted"], "SH", ["ItemLevel", "DropLevel", "Corrupted", "Mods"], "Jewels with corrupted implicit");
+            QuickUI([0.0, "ModFiltering: Jewels 3", "jewels->special;1moduncorrupted"], "SH", ["ItemLevel", "DropLevel", "Corrupted", "Mods"], "Jewels with interesting mods");
+        }
+
+        Section("Abyss Jewels") {
+            Description("There are 4 types of jewels, one for each build archetype:<br>- 'Murderous' for melee<br>- 'Searching' for bows/wanders<br>- 'Hypnotic' for spellcasters<br>- 'Ghastly' for summoners", "Abyss Jewels", "Abyss Jewels have itemlevel depending rolls. If you want to craft abyss jewels, it's highly recommended to use ItemLevel 84 material.");
+
+            QuickUI([0.0, "Corrupted Abyss Jewels", "jewels->abyss;corruptedabyssjewel"], "SD", ["Abyss Jewels", "ItemLevel"]);
+            QuickUI([0.0, "Abyss Jewels rare ilvl 86", "jewels->abyss;veryhighrare"], "SH", ["Abyss Jewels", "ItemLevel"], "Rare Abyss Jewels - ilvl 86");
+            QuickUI([0.0, "Abyss Jewels magic ilvl 86", "jewels->abyss;veryhighmagic"], "SH", ["Abyss Jewels", "ItemLevel"], "Magic Abyss Jewels - ilvl 86");
+            Divider();
+            QuickUI([0.0, "Abyss Jewels rare ilvl 82", "jewels->abyss;highrare"], "SH", ["Abyss Jewels", "ItemLevel"], "Rare Abyss Jewels - ilvl 82");
+            QuickUI([0.0, "Abyss Jewels magic ilvl 82", "jewels->abyss;highmagic"], "SH", ["Abyss Jewels", "ItemLevel"], "Magic Abyss Jewels - ilvl 82");
+            Divider();
+            QuickUI([0.0, "Abyss Jewels rare", "jewels->abyss;anyrare"], "SH", ["Abyss Jewels", "ItemLevel"], "Rare Abyss Jewels");
+            QuickUI([0.0, "Abyss Jewels magic", "jewels->abyss;anymagic"], "SH", ["Abyss Jewels", "ItemLevel"], "Magic Abyss Jewels");
+        }
+
+        Section("Jewels during Campaign") {
+            QuickUI([0.0, "Campaign Abyss Jewels", "jewels->leveling;abyss"], "SH", ["Rarity", "ItemLevel", "Abyss Jewels"]);
+            QuickUI([0.0, "Campaign Jewels", "jewels->leveling;generic"], "SH", ["Rarity", "ItemLevel", "Jewels"]);
+        }
+
+        Function ClusterJewelTierList_Ench($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ClusterJewels", "ItemLevel", "EnchantmentPassiveNum", "Rarity"], null, ["ClusterJewelEnchantments", "D", "EnchantmentPassiveNode"], $text); }
+        Function ClusterJewelTierList_NoEnch($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ClusterJewels", "ItemLevel", "EnchantmentPassiveNum", "Rarity"], $text); }
+
+        Section("Cluster Jewels: Top Enchantments", null, "E") {
+            Warning("This section is economy based: it's generated based on poe.ninja economy data. This section is not perfect. Hide the general section on your own risk.");
+
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 12 Notes", "jewels->clustereco;n12_i84_t1"], "SDH");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 12 Notes", "jewels->clustereco;n12_i75_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 12 Notes", "jewels->clustereco;n12_i68_t1"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 11 Notes", "jewels->clustereco;n11_i84_t1"], "SDH");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 11 Notes", "jewels->clustereco;n11_i75_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 11 Notes", "jewels->clustereco;n11_i68_t1"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 10 Notes", "jewels->clustereco;n10_i84_t1"], "SDH");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 10 Notes", "jewels->clustereco;n10_i75_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 10 Notes", "jewels->clustereco;n10_i68_t1"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 9 Notes", "jewels->clustereco;n9_i84_t1"], "SDH");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 9 Notes", "jewels->clustereco;n9_i75_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 9 Notes", "jewels->clustereco;n9_i68_t1"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 8 Notes", "jewels->clustereco;n8_i84_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 8 Notes", "jewels->clustereco;n8_i75_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 8 Notes", "jewels->clustereco;n8_i68_t1"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 6 Notes", "jewels->clustereco;n6_i84_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 6 Notes", "jewels->clustereco;n6_i75_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 6 Notes", "jewels->clustereco;n6_i68_t1"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 4 Notes", "jewels->clustereco;n4_i84_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 4 Notes", "jewels->clustereco;n4_i75_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 4 Notes", "jewels->clustereco;n4_i68_t1"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 3 Notes", "jewels->clustereco;n3_i84_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 3 Notes", "jewels->clustereco;n3_i75_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 3 Notes", "jewels->clustereco;n3_i68_t1"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 2 Notes", "jewels->clustereco;n2_i84_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 2 Notes", "jewels->clustereco;n2_i75_t1"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 2 Notes", "jewels->clustereco;n2_i68_t1"], "SHD");
+        }
+
+        Section("Cluster Jewels: Good Enchantments", null, "E") {
+            Warning("This section is economy based: it's generated based on poe.ninja economy data. This section is not perfect. Hide the general section on your own risk.");
+
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 12 Notes", "jewels->clustereco;n12_i84_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 12 Notes", "jewels->clustereco;n12_i75_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 12 Notes", "jewels->clustereco;n12_i68_t2"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 11 Notes", "jewels->clustereco;n11_i84_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 11 Notes", "jewels->clustereco;n11_i75_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 11 Notes", "jewels->clustereco;n11_i68_t2"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 10 Notes", "jewels->clustereco;n10_i84_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 10 Notes", "jewels->clustereco;n10_i75_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 10 Notes", "jewels->clustereco;n10_i68_t2"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 9 Notes", "jewels->clustereco;n9_i84_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 9 Notes", "jewels->clustereco;n9_i75_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 9 Notes", "jewels->clustereco;n9_i68_t2"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 8 Notes", "jewels->clustereco;n8_i84_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 8 Notes", "jewels->clustereco;n8_i75_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 8 Notes", "jewels->clustereco;n8_i68_t2"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 6 Notes", "jewels->clustereco;n6_i84_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 6 Notes", "jewels->clustereco;n6_i75_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 6 Notes", "jewels->clustereco;n6_i68_t2"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 4 Notes", "jewels->clustereco;n4_i84_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 4 Notes", "jewels->clustereco;n4_i75_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 4 Notes", "jewels->clustereco;n4_i68_t2"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 3 Notes", "jewels->clustereco;n3_i84_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 3 Notes", "jewels->clustereco;n3_i75_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 3 Notes", "jewels->clustereco;n3_i68_t2"], "SHD");
+            Divider();
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 2 Notes", "jewels->clustereco;n2_i84_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 2 Notes", "jewels->clustereco;n2_i75_t2"], "SHD");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 2 Notes", "jewels->clustereco;n2_i68_t2"], "SHD");
+        }
+
+        Section("Cluster Jewels: Any Enchantment") {
+            ClusterJewelTierList_NoEnch([0.0, "Good High Level Very Large Cluster Jewels", "jewels->cluster;optimal1highlarge"], "SH", null);
+            ClusterJewelTierList_NoEnch([0.0, "Good High Level Large Cluster Jewels", "jewels->cluster;optimalhighlarge"], "SH", null);
+            ClusterJewelTierList_NoEnch([0.0, "Good Large Cluster Jewels", "jewels->cluster;highlarge"], "SH", null);
+            ClusterJewelTierList_NoEnch([0.0, "Large Cluster Jewels", "jewels->cluster;large"], "SH", null);
+            Divider();
+            ClusterJewelTierList_NoEnch([0.0, "Good High Level Medium Cluster Jewels", "jewels->cluster;optimalhighmedium"], "SH", null);
+            ClusterJewelTierList_NoEnch([0.0, "Good Medium Cluster Jewels", "jewels->cluster;highmedium"], "SH", null);
+            ClusterJewelTierList_NoEnch([0.0, "Medium Cluster Jewels", "jewels->cluster;medium"], "SH", null);
+            Divider();
+            ClusterJewelTierList_NoEnch([0.0, "High Level Small Cluster Jewels", "jewels->cluster;highsmall"], "SH", null);
+            ClusterJewelTierList_NoEnch([0.0, "Small Cluster Jewels", "jewels->cluster;small"], "SH", null);
+        }
+
+        Section("Cluster Jewels: Custom Rule") {
+            Title("Any Enchantment");
+            Search CS0("skip", "skip", "jewels->clustereco;n12_i84_t1") { }
+            Conditional("?ClusterJewelNewTier", [0]) { Show; Class Jewel; Rarity Normal Magic Rare; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+            ElementAdder_Tier("?ClusterJewelNewTier", "ClusterJewelTierList_NoEnch");
+
+            Divider();
+
+            Title("Enchantment Filtering");
+            Function ClusterJewelFunc ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $shd, ["Rarity", "ClusterJewels", "ItemLevel", "AreaLevel", "CorruptedMods", "EnchantmentPassiveNum", "Identified", "Corrupted"], $title, ["ClusterJewelEnchantments", "S", "EnchantmentPassiveNode"]);
+            }
+
+            Conditional("?CClusterJewelEnchantRule", [0]) { Show; SetBorderColor 0 240 190 240; SetFontSize 40; Class "Jewels"; AnyEnchantment True; BaseType "Small Cluster Jewel" "Medium Cluster Jewel" "Large Cluster Jewel"; MinimapIcon 2 White Hexagon; PlayEffect White Temp; }
+            ElementAdder_Tier("?CClusterJewelEnchantRule", "ClusterJewelFunc");
+        }
+    }
+
+    Section("Exotic Gear Slots", "HeistTrinket")
+    {
+        Section("Heist Trinkets", "HeistTrinket") {
+            // info: these are always corrupted and rare
+            Search S0(0.0, "Heist Trinkets") { BaseType "Thief's Trinket"; Class "Trinkets"; Rarity Rare; }
+            QuickUI(S0, "SH", ["ItemLevel", "AreaLevel"]);
+        }
+
+        Section("Sanctum Relics", "SanctumRelic") {
+            Function SanctumRelicsUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Rarity"], $text, ["SanctumRelics", "O"]); }
+            Description("Relics drop in the sanctum and provide sanctum-exclusive benefits to your runs.");
+
+            SanctumRelicsUI([0.0, "Forbidden Sanctum Relics Tier 1", "artefact->sanctifiedrelics;selectedrelics"], "SH");
+            QuickUI([0.0, "Remaining Forbidden Sanctum Relics", "artefact->sanctifiedrelics;anyrelic"], "SH");
+
+            // new tiers
+            Conditional("?SanctumRelicsNewTiers") { }
+            ElementAdder_Tier("?SanctumRelicsNewTiers", "SanctumRelicsUI");
+
+            // hide tier
+            Conditional("?SanctumRelicsNewTiersHidden") { }
+            ElementAdder_Tier("?SanctumRelicsNewTiersHidden", null, true, "SanctumRelics", "OH");
+        }
+
+        Section("Sanctum Special Relics", "SanctifiedSanctumRelic") {
+            Description("Unique Relics enable 'challenge runs' in the sanctum that grant improved rewards as well!");
+            QuickUI([0.0, "Unique Relics", "artefact->sanctifiedrelics;uniquerelics"], "S");
+            QuickUI([0.0, "Sanctum Sanctified Relics", "artefact->sanctifiedrelics;anysanctified"], "SH", []);
+        }
     }
 }
 
