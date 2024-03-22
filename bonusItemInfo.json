@@ -192,6 +192,11 @@
 					"tags": ["Heist", "BossDrop"]
 				},
 
+				"Veiled Orb": {
+					"text": "Drops from Catarina<br>Removes a random modifier and adds a random veiled modifier to a rare item.",
+					"tags": ["BossDrop"]
+				},
+
 				"Sacred Crystallised Lifeforce": {
 					"text": "Drops from Oshabi<br>Used at the Horticrafting bench in your hideout for high tier crafting options",
 					"tags": ["Harvest", "BossDrop"]
@@ -542,10 +547,6 @@
 					"text": "Drops from Maven or in Maven's Crucible<br>Unpredictably raise the strength of one Searing Exarch or Eater of Worlds modifier on an item and lower the strength of another",
 					"tags": ["BossDrop"]
 				},
-				"Elevated Sextant": {
-					"text": "Drops from Maven<br>Adds or rerolls a modifier on a Voidstone",
-					"tags": ["BossDrop"]
-				},
 
 				"Mirror of Kalandra": {
 					"text": "Creates a mirrored copy of an item",
@@ -565,14 +566,6 @@
 				},
 				"Orb of Annulment": {
 					"text": "Removes a random modifier from an item",
-					"tags": ["Generic"]
-				},
-				"Veiled Chaos Orb": {
-					"text": "Reforges a rare item with new random modifiers, including a Veiled modifier. Can only be used on items that can have a Veiled modifier",
-					"tags": ["Generic"]
-				},
-				"Awakened Sextant": {
-					"text": "Adds or rerolls a modifier on a Voidstone",
 					"tags": ["Generic"]
 				},
 				"Orb of Unmaking": {
@@ -683,8 +676,8 @@
 					"text": "A stack of unknown divination cards",
 					"tags": ["Generic"]
 				},
-				"Surveyor's Compass": {
-					"text": "Stores a Sextant Modifier in an item",
+				"Veiled Scarab": {
+					"text": "A stack of unknown scarabs",
 					"tags": ["Generic"]
 				},
 
@@ -702,11 +695,6 @@
 					"tags": ["NonDrop"]
 				},
 				"Infused Engineer's Orb": {
-					"text": "Applies the itemised Sextant Modifier to the Voidstone",
-					"tags": ["NonDrop"]
-				},
-				"Charged Compass": {
-					"text": "Greatly improves the quality and rewards of a Strongbox and strengthens its defenders",
 					"tags": ["NonDrop"]
 				},
 
@@ -1523,14 +1511,6 @@
 					"text": "Found in Cold River, Forbidden Woods, Frozen Cabins, Glacier, Iceberg, Summit.",
 					"tags": ["UniqueOutcome"]
 				},
-				"Monochrome": {
-					"text": "Found in Unique maps.",
-					"tags": ["CurrencyOutcome"]
-				},
-				"More is Never Enough": {
-					"text": "Drops from map bosses: Cold River, Sunken City, Fields, Cemetery, Infested Valley, Summit, Reef, Siege, Terrace.",
-					"tags": ["MapOutcome"]
-				},
 				"No Traces": {
 					"text": "Found in Mausoleum, Relic Chambers, Sepulchre, The Ossuary, The Reliquary.",
 					"tags": ["CurrencyOutcome"]
@@ -1585,10 +1565,6 @@
 				"Rebirth": {
 					"text": "Found in Act 9 zones.",
 					"tags": ["UniqueOutcome", "SixLinkOutcome"]
-				},
-				"Rebirth and Renewal": {
-					"text": "Unconfirmed",
-					"tags": ["MapOutcome"]
 				},
 				"Reckless Ambition": {
 					"text": "Drops from The Eradicator.",
@@ -2624,10 +2600,6 @@
 					"text": "Found in Arena Map, Pit of the Chimera Map, Colosseum Map, Pit Map.",
 					"tags": ["UniqueOutcome"]
 				},
-				"Underground Forest": {
-					"text": "Found in Petrified forest biome, Fractured walls(Delve).",
-					"tags": ["CurrencyOutcome"]
-				},
 				"Unrequited Love": {
 					"text": "Found in The Temple of Decay Level 1, Maze Map, Vaal Pyramid Map, Vaal Temple Map.",
 					"tags": ["CurrencyOutcome"]
@@ -2677,6 +2649,24 @@
 				},
 				"Assassin's Gift": {
 					"tags": ["UniqueOutcome"]
+				},
+				"The Blessing of Moosh": {
+					"tags": ["GemOutcome"]
+				},
+				"Divine Justice": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Doryani's Epiphany": {
+					"tags": ["GemOutcome"]
+				},
+				"Dying Anguish": {
+					"tags": ["GemOutcome"]
+				},
+				"The Hook": {
+					"tags": ["GemOutcome"]
+				},
+				"Terrible Secret of Space": {
+					"tags": ["GemOutcome"]
 				}
 			}
 		},
@@ -2817,200 +2807,7 @@
 
 		"Scarab": {
 			"items": {
-				"Rusted Abyss Scarab": {
-					"text": "Area contains 1 additional Abyss"
-				},
-				"Polished Abyss Scarab": {
-					"text": "Area contains 1 additional Abyss, Abysses in Area spawn 50% increased Monsters"
-				},
-				"Gilded Abyss Scarab": {
-					"text": "Area contains 2 additional Abysses, Abysses in Area spawn 50% increased Monsters"
-				},
-				"Winged Abyss Scarab": {
-					"text": "Area contains 3 additional Abysses, Abysses in Area spawn 100% increased Monsters"
-				},
 
-				"Rusted Ambush Scarab": {
-					"text": "Area contains 3 additional Strongboxes"
-				},
-				"Polished Ambush Scarab": {
-					"text": "Area contains 4 additional Strongboxes"
-				},
-				"Gilded Ambush Scarab": {
-					"text": "Area contains 5 additional Strongboxes"
-				},
-				"Winged Ambush Scarab": {
-					"text": "Area contains 9 additional Strongboxes"
-				},
-
-				"Rusted Bestiary Scarab": {
-					"text": "Area contains an additional Red Beast"
-				},
-				"Polished Bestiary Scarab": {
-					"text": "Area contains 2 additional Red Beasts"
-				},
-				"Gilded Bestiary Scarab": {
-					"text": "Area contains 3 additional Red Beasts"
-				},
-				"Winged Bestiary Scarab": {
-					"text": "Area contains 5 additional Red Beasts"
-				},
-
-				"Rusted Blight Scarab": {
-					"text": "Area contains a Blight Encounter"
-				},
-				"Polished Blight Scarab": {
-					"text": "Encounter contains up to 1 additional boss"
-				},
-				"Gilded Blight Scarab": {
-					"text": "Encounter has +1 additional boss and 50% for additional reward from chests"
-				},
-				"Winged Blight Scarab": {
-					"text": "Encounter has +1 additional boss, 50% for additional reward from chests and lanes have additional reward chest"
-				},
-
-				"Rusted Breach Scarab": {
-					"text": "Area contains an additional Breach"
-				},
-				"Polished Breach Scarab": {
-					"text": "Area contains an additional Breach, Breaches contain an additional boss' clasped hand"
-				},
-				"Gilded Breach Scarab": {
-					"text": "Area contains an additional Breach, Breaches contain an additional boss' clasped hand. Hands drop double splinters"
-				},
-				"Winged Breach Scarab": {
-					"text": "Area contains 2 additional Breaches, Breaches contain an additional boss' clasped hand. Hands drop double splinters"
-				},
-
-				"Rusted Cartography Scarab": {
-					"text": "20% More maps found in area"
-				},
-				"Polished Cartography Scarab": {
-					"text": "35% More maps found in area"
-				},
-				"Gilded Cartography Scarab": {
-					"text": "50% More maps found in area"
-				},
-				"Winged Cartography Scarab": {
-					"text": "85% More maps found in area"
-				},
-
-				"Rusted Divination Scarab": {
-					"text": "50% More divination cards found in area"
-				},
-				"Polished Divination Scarab": {
-					"text": "100% More divination cards found in area"
-				},
-				"Gilded Divination Scarab": {
-					"text": "150% More divination cards found in area"
-				},
-				"Winged Divination Scarab": {
-					"text": "250% More divination cards found in area"
-				},
-
-				"Rusted Elder Scarab": {
-					"text": "30% More rare Elder items found in area"
-				},
-				"Polished Elder Scarab": {
-					"text": "60% More rare Elder items found in area"
-				},
-				"Gilded Elder Scarab": {
-					"text": "90% More rare Elder items found in area"
-				},
-				"Winged Elder Scarab": {
-					"text": "150% More rare Elder items found in area"
-				},
-
-				"Rusted Expedition Scarab": {
-					"text": "Area contains an additional Expedition Encounter"
-				},
-				"Polished Expedition Scarab": {
-					"text": "Expedition Encounters have 20% more explosives and 25% additional runic monster markers"
-				},
-				"Gilded Expedition Scarab": {
-					"text": "Expedition Encountershave 20% more explosives and 50% additional runic monster markers"
-				},
-				"Winged Expedition Scarab": {
-					"text": "Expedition Encounters have 20% more explosives, 50% additional runic monster markers and +1 to Remanant suffix"
-				},
-
-				"Rusted Harbinger Scarab": {
-					"text": "Area contains an additional Harbinger"
-				},
-				"Polished Harbinger Scarab": {
-					"text": "Area contains 3 additional Harbingers"
-				},
-				"Gilded Harbinger Scarab": {
-					"text": "Area contains 4 additional Harbingers"
-				},
-				"Winged Harbinger Scarab": {
-					"text": "Area contains 7 additional Harbingers"
-				},
-
-				"Rusted Legion Scarab": {
-					"text": "Area contains an additional Legion Encounter"
-				},
-				"Polished Legion Scarab": {
-					"text": "Area contains an additional Legion Encounter, Each Legion contains a war hoard"
-				},
-				"Gilded Legion Scarab": {
-					"text": "Area contains an additional Legion Encounter, Each Legion contains a war hoard and general"
-				},
-				"Winged Legion Scarab": {
-					"text": "Area contains 2 additional Legion Encounters, Each Legion contains a war hoard and general"
-				},
-
-				"Rusted Reliquary Scarab": {
-					"text": "50% More unique items found in area"
-				},
-				"Polished Reliquary Scarab": {
-					"text": "100% More unique items found in area"
-				},
-				"Gilded Reliquary Scarab": {
-					"text": "150% More unique items found in area"
-				},
-				"Winged Reliquary Scarab": {
-					"text": "250% More unique items found in area"
-				},
-
-				"Rusted Shaper Scarab": {
-					"text": "30% More rare Shaper items found in area"
-				},
-				"Polished Shaper Scarab": {
-					"text": "60% More rare Shaper items found in area"
-				},
-				"Gilded Shaper Scarab": {
-					"text": "90% More rare Shaper items found in area"
-				},
-				"Winged Shaper Scarab": {
-					"text": "150% More rare Shaper items found in area"
-				},
-
-				"Rusted Sulphite Scarab": {
-					"text": "Map owner gains 20% more suphite. Area contains Niko"
-				},
-				"Polished Sulphite Scarab": {
-					"text": "Map owner gains 40% more suphite. Area contains Niko"
-				},
-				"Gilded Sulphite Scarab": {
-					"text": "Map owner gains 60% more suphite. Area contains Niko"
-				},
-				"Winged Sulphite Scarab": {
-					"text": "Map owner gains 100% more suphite. Area contains Niko"
-				},
-
-				"Rusted Torment Scarab": {
-					"text": "Area is haunted by 3 additional Tormented Spirits"
-				},
-				"Polished Torment Scarab": {
-					"text": "Area is haunted by 5 additional Tormented Spirits"
-				},
-				"Gilded Torment Scarab": {
-					"text": "Area is haunted by 7 additional Tormented Spirits"
-				},
-				"Winged Torment Scarab": {
-					"text": "Area is haunted by 12 additional Tormented Spirits"
-				}
 			}
 		},
 
@@ -4244,10 +4041,6 @@
 							"text": "Drops from The Elder.",
 							"priority": -5
 						},
-						"Storm's Gift": {
-							"text": "Drops from a Distant Memory boss.",
-							"priority": -5
-						},
 						"Entropic Devastation": {
 							"text": "Drops from The Uber Shaper.",
 							"priority": -5
@@ -4278,6 +4071,10 @@
 						"Plume of Pursuit": {
 							"text": "Drops from Janaar (Harvest Boss).",
 							"priority": -5
+						},
+						"Wraithlord": {
+							"text": "Drops from T17 boss.",
+							"priority": -3
 						}
 					}
 				},
@@ -4402,6 +4199,10 @@
 						"Leadership's Price": {
 							"text": "Drops from Contract: The Twins (Unique Heist Contact Boss).",
 							"priority": -8
+						},
+						"Yoke of Suffering": {
+							"text": "Drops from T17 boss.",
+							"priority": -3
 						}
 					}
 				},
@@ -4992,6 +4793,33 @@
 						"Ixchel's Temptation": {
 							"text": "Drops from the Ultimatum.",
 							"priority": -5
+						}
+					}
+				},
+				"Shadow Sceptre": {
+					"text": null,
+					"items": {
+						"The Dark Seer": {
+							"text": "Drops from T17 boss.",
+							"priority": -3
+						}
+					}
+				},
+				"Murder Mitts": {
+					"text": null,
+					"items": {
+						"Malachai's Mark": {
+							"text": "Drops from T17 boss.",
+							"priority": -3
+						}
+					}
+				},
+				"Lacewood Spirit Shield": {
+					"text": null,
+					"items": {
+						"Manastorm": {
+							"text": "Drops from T17 boss.",
+							"priority": -3
 						}
 					}
 				},
