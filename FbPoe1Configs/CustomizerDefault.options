@@ -427,10 +427,10 @@ Chapter() {
             ElementAdder_Tier("?VialNewTiersHidden", null, true, "IncursionVials", "OH");
         }
 
-        Section("Hinekora's Lock", "HinekorasLock") {
-            // crafting prediction items thingy
-            QuickUI([0.0, "Hinekora's Lock", "currency->trial->orblike;t1"], "S", [], null, null, "Hinekor's lock is a valuable reward from the trial. Once applied on an item, you'll foresee the outcome of currency items used on the same item - until you'll actually use one of them.");
-        }
+//        Section("Hinekora's Lock", "HinekorasLock") {
+//            // crafting prediction items thingy
+//            QuickUI([0.0, "Hinekora's Lock", "currency->trial->orblike;t1"], "S", [], null, null, "Hinekor's lock is a valuable reward from the trial. Once applied on an item, you'll foresee the outcome of currency items used on the same item - until you'll actually use one of them.");
+//        }
 
         Section("Omens", "OmenoftheSoulDevourer", "E") {
             Function OmenFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialOmens", "O"]); }
@@ -458,13 +458,14 @@ Chapter() {
         // important: the first search we ever reference (NOT declare) here is what determines the position of the hide-rule and new tiers.
         // we want (especially the hide-rule) to be low, so that corrupted uniques, 6 sockets, etc. are still shown, and only the regular normal unique is hidden
         // because of that, we HAVE TO list S10 (boss-drop uniques) first in the exceptionEntries, because that way it's the first referenced entry
-        TierListToolBar("Uniques", [S10, S2, S7, S8, S11], ["Ruby Flask"]);
+        TierListToolBar("Uniques", [S10, S2, SMulti, S7, S8, S11], ["Ruby Flask"]);
         Warning("IMPORTANT: Filters can NEVER distinguish between different uniques with the same BaseTypes. The filter can't tell if a leather belt is a HEADHUNTER or a wurm's molt. Even if it's identified!");
 
         // we meed to keep these searches defined to reference them in the ecoLoader (auto-sort-excluded entries)
         Search S0(8.1, "Uniques Tier 1", "uniques;t1") { Rarity Unique; BaseType "Glorious Plate"; }
         Search S1(8.1, "Uniques Tier 2", "uniques;t2") { Rarity Unique; BaseType "Rotfeather Talisman"; }
         Search S2(8.1, "Uniques (MultiBase)", "uniques;multispecial") { Rarity Unique; BaseType "Gold Amulet"; }
+        Search SMulti(8.1, "Uniques (MultiBaseHigh)", "uniques;multispecialhigh") { Rarity Unique; BaseType "Leather Belt"; }
         Search S3(8.1, "Uniques (Remaining)", "uniques;t3") { Rarity Unique; BaseType "Vaal Axe"; }
         Search S6(8.1, "Uniques (Hideable trash)", "uniques;hideable") { Rarity Unique; BaseType "Bone Armour"; }
         Search S7(8.1, "Uniques (early league)", "uniques;earlyleague") { Rarity Unique; BaseType "Deerskin Gloves"; }
@@ -475,6 +476,7 @@ Chapter() {
 
         UniqueList(S0, "S", "Tier 1:", "Tier 1 uniques are always an expensive and lucky find!");
         UniqueList(S1, "SH", "Tier 2:", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
+        UniqueList(SMulti, "SH", "Top Multi-Base Uniques:", "These BaseTypes can be insanely valuable and rare uniques, or very common worthless ones.");
         UniqueList(S2, "SH", "Multi-Base Uniques:", "Some BaseTypes have both: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these!");
         UniqueList(S10, "S", "Boss-Drop Uniques:", "A potentially expensive unique version of this item drops only from bosses! The world drop unique is fairly cheap! If you want to hide this tier: remember to check the hidden items dropped by bosses! Enable hiding this tier in Advanced->Settings.");
         UniqueList(S8, "S", "Unique Jewels:", "The filter can't disintinguish between expensive and cheap unique jewels. All of them are treated the same way!");
@@ -528,7 +530,14 @@ Chapter() {
 // CURRENT LEAGUE
 //===================================================================================================
 
-    Section("Current League: Affliction", "JuggernautsUrsineCharmoftheChampion") {
+    Section("Current League: Necropolis", "AllflameEmberofTul") {
+        QuickUI([0.0, "Necropolis WIP TODO1", "necropolis;t2"], "SH", []);
+        QuickUI([0.0, "Necropolis WIP TODO2", "necropolis;t3"], "SH", []);
+
+        QuickUI([0.0, "Necropolis Special Mods", "exoticmods;necropoliscraft"], "SH", []);
+        QuickUI([0.0, "Dropped rares in special zones", "rare->utility->droppeditems;any"], "SH", [], "Necropolis Crafting Results");
+
+        // TODO: MOVE
         QuickUI([0.0, "Affliction Items: Charms, Corpses & Tinctures", "artefact->affliction;any"], "SH", [], "", null, "Since these items can only be obtained by purchasing them from a vendor and don't drop naturally in the world, there is no need for any special filtering or highlight.");
         QuickUI([0.0, "Transfigured Gems", "gems-exceptional;altany"], "SH", [], "", null, "Since these gems can only be created by using the Divine Font at the end of the Eternal Labyrinth and can't drop naturally in the world, there is no need for any special filtering or highlight.");
     }
@@ -623,6 +632,7 @@ Chapter() {
             Search T10(0.1, "Map appearance T10") { MapTier 10; Class Maps; Rarity "Normal"; }
 
             Description("The map has the same tier as the one you're currently in.");
+            QuickUI([0.0, "Map appearance T17", "maps->t17uber;any"], "SH", [], "Highlight - T17:");
             QuickUI(T16, "SH", [], "Highlight - T16:");
             QuickUI(T15, "SH", [], "Highlight - T15:");
             QuickUI(T14, "SH", [], "Highlight - T14:");
@@ -661,6 +671,8 @@ Chapter() {
             QuickUI([0.0, "Delirium Maps", "maps->enchanted;any"], "SHD", ["MapTier"], "Delirium and other enchanted maps");
             QuickUI([1.0, "Maps with Implicits (high tier)", "maps->implicitmod;t1"], "SD", ["MapTier"]");
             QuickUI([1.0, "Maps with Implicits", "maps->implicitmod;any"], "SD", ["MapTier"]);
+            QuickUI([0.0, "High with Corrupted Implicit (high tier)", "maps->corruptedimplicit;t1"], "SH", ["MapTier"]);
+            QuickUI([0.0, "High with Corrupted Implicit", "maps->corruptedimplicit;any"], "SH", ["MapTier"]);
         }
 
         Section("Blighted Maps") {
@@ -678,9 +690,9 @@ Chapter() {
             ElementAdder_Tier("?BlightedMapNewTier", "BlightedMapTier");
         }
 
-        Section("Beyond Maps (identified)") {
-            QuickUI([0.0, "ModFiltering: Maps 1", "maps->identified;nemesisbeyond"], "SD", ["MapTier", "Mods"], "Beyond Maps");
-        }
+//        Section("Beyond Maps (identified)") {
+//            QuickUI([0.0, "ModFiltering: Maps 1", "maps->identified;nemesisbeyond"], "SD", ["MapTier", "Mods"], "Beyond Maps");
+//        }
     }
 
     Section("Maps - Unique", "OlmecsSanctumMap", "E") {
@@ -779,6 +791,7 @@ Chapter() {
         Section("Ultimatum, Sanctum, Incursion", "InscribedUltimatum") {
             QuickUI([1.0, "Chronicle of Atzoatl (Incursion Temple Map Item)", "miscmapitemsextra;itemizedleagues"], "SH", [], "Incursion and Ultimatum");
             QuickUI([0.0, "Itemized Sanctum", "exoticmap->sanctum;any"], "SH", []); // Sanctum Vaults Research -> started run
+            QuickUI([0.0, "Itemized Sanctum (high level)", "exoticmap->sanctum;ilvl83"], "SH", ["ItemLevel"]);
         }
 
         Section("Reliquary Keys", "VaalReliquaryKey") {
@@ -1083,6 +1096,10 @@ Chapter() {
             QuickUI([1.0, "Endgame rare deco corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted Implicit");
             QuickUI([1.0, "Endgame rare deco corrupted", "decorators->rareeg;corruptedrares"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted - No implicit");
         }
+
+        Section("Decorators: Sockets") {
+            QuickUI([1.0, "Endgame rare deco 4 links", "decorators->rareeg;fourlinkedrares"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: 4 Links");
+        }
     }
 
     Section("Jewellery", "Ring") {
@@ -1267,9 +1284,11 @@ Chapter() {
                 Description("Some itemclasses like 'Jewels' are completely covered through the class-based filtering below and don't need representing through the matrix.");
                 Search S0(0.0, "Fractured items, tier 1", "exotic->fractured;fractt1") {}
                 Search S1(0.0, "Fractured items, tier 2", "exotic->fractured;fractt2") {}
+                Search S2(0.0, "Fractured items, tier 3", "exotic->fractured;fractt3") {}
                 QuickUI(S0, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
                 QuickUI(S1, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
-                BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1);
+                QuickUI(S2, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
+                BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1, "Tier 3", S2);
         }
 
         Section("Fractured Special Cases")
@@ -1291,6 +1310,7 @@ Chapter() {
         {
             VeilModTierList([0.0, "Betrayal Veiled Mods Tier 1", "exoticmods;t1veil"], "SD", "Veiled Mods - Expensive Member-Specific Mods");
             VeilModTierList([0.0, "Betrayal Veiled Mods Tier 2", "exoticmods;t2veil"], "SD", "Veiled Mods - Member-Specific Mods");
+            VeilMods([0.0, "Betrayal Veiled Fractured Mods", "exoticmods;fracturedveiled"], "SH", "Veiled Fractured Mods");
         }
 
         Section("Generic Veiled Items")
@@ -1445,13 +1465,11 @@ Chapter() {
             Description("In the 3.16 update the base armour value of armour/es/evasion on items can vary by 15%. This value is inherent and can only be changed with a sacred orb. The filter attempts to highlight items with perfect base defense stats for the best crafting results");
             Search T1(0.0, "Perfect Armours T1", "crafting->perfectarmours;t1") { }
             Search T2(0.0, "Perfect Armours T2", "crafting->perfectarmours;t2") { }
-            Search T3(0.0, "Perfect Armours T3", "crafting->perfectarmours;t3") { }
 
             QuickUI(T1, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "RarityU"]);
             QuickUI(T2, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "RarityU"]);
-            QuickUI(T3, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "RarityU"]);
 
-            BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2, "Tier 3", T3);
+            BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2);
         }
 
         Section("Economy-Based Expensive 86+ bases", null, "E") {
@@ -1645,6 +1663,7 @@ Chapter() {
         }
 
         Section("Exceptional Quality High Level Flasks", "Flask") {
+            QuickUI([0.0, "High Level Flasks - Max Quality Corruption", "endgameflasks;overqualcorrupted"], "SH", ["RarityNM", "Utility Flasks", "ItemLevel", "Quality"]);
             QuickUI([0.0, "Exceptional Quality Utility Flasks", "endgameflasks;overqualutil"], "SH", ["ItemLevel", "Quality", "RarityNM", "Utility Flasks"]);
             QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Exceptional Quality Life & Mana Flasks", ["allFlasks", "SO"]);
         }
@@ -1687,6 +1706,7 @@ Chapter() {
         Section("Normal Jewels: Special") {
             QuickUI([0.0, "ModFiltering: Jewels 2 Corrupted", "jewels->special;1modcorrupted"], "SH", ["ItemLevel", "DropLevel", "Corrupted", "Mods"], "Jewels with corrupted implicit");
             QuickUI([0.0, "ModFiltering: Jewels 3", "jewels->special;1moduncorrupted"], "SH", ["ItemLevel", "DropLevel", "Corrupted", "Mods"], "Jewels with interesting mods");
+            QuickUI([0.0, "Magic Jewels with corrupted implicit", "jewels->special;any"], "SH", ["ItemLevel", "DropLevel", "Corrupted", "Rarity", "CorruptedMods"]);
         }
 
         Section("Abyss Jewels") {
@@ -2355,6 +2375,7 @@ Chapter() {
         Section("Rings") {
             BasicModItemUI([0.0, "ModFiltering: Rings1", "rareid;ring_attack"], "Attacks Rings");
             BasicModItemUI([0.0, "ModFiltering: Rings3", "rareid;ring_caster"], "Caster Rings");
+            BasicModItemUI([0.0, "ModFiltering: Minion Ring", "rareid;ring_minion"], "Minion Rings");
         }
 
         Section("Amulets") {
@@ -2409,15 +2430,15 @@ Chapter() {
             ModItemUI([0.0, "ModFiltering: Magic - T1 Projectile", "magicid;t1proj"], "SH");
             ModItemUI([0.0, "ModFiltering: Magic - T1 Amulet", "magicid;t1amu"], "SH");
             Divider();
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Gloves", "magicid;recogloves"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Boots", "magicid;recoboots"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Helmets", "magicid;recohelmets"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Weapons", "magicid;recoweapons"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Rings", "magicid;recorings"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Fire Caster", "magicid;recocasterfire"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Cold Caster", "magicid;recocastercold"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Lightning Caster", "magicid;recocasterlight"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Physical Caster", "magicid;recocasterphys"], "SH");
+//            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Gloves", "magicid;recogloves"], "SH");
+//            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Boots", "magicid;recoboots"], "SH");
+//            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Helmets", "magicid;recohelmets"], "SH");
+//            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Weapons", "magicid;recoweapons"], "SH");
+//            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Rings", "magicid;recorings"], "SH");
+//            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Fire Caster", "magicid;recocasterfire"], "SH");
+//            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Cold Caster", "magicid;recocastercold"], "SH");
+//            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Lightning Caster", "magicid;recocasterlight"], "SH");
+//            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Physical Caster", "magicid;recocasterphys"], "SH");
             Divider();
             ModItemUI([0.0, "ModFiltering: Magic - T2 Quiver", "magicid;t2quiver"], "SH");
             ModItemUI([0.0, "ModFiltering: Magic - T2 Caster", "magicid;t2caster"], "SH");
@@ -2504,10 +2525,9 @@ Chapter() {
 
         Section("Valuable Linked items", "Fusing") {
 //            Search S0(0.0, "6 links (height 3)") { Rarity Normal; Class "Body Armours"; SocketGroup "RRGBRR"; }
-            Search S4(0.0, "6 links (height 4)") { Rarity Normal; Class "Bows"; SocketGroup "RRGBRR"; }
             QuickUI([0.0, "Top Tier 6 Links", "6l;hightier"], "SH", ["Mirrored", "Corrupted", "ItemLevel", "Rarity"], null, ["gear", "SO"]);
 //            QuickUI(S0, "S", ["Corrupted"], "Good 6 links - uncorrupted armors");
-            QuickUI(S4, "S", ["Corrupted"], "Other 6 links - corrupted or weapons");
+            QuickUI([0.0, "6 links (height 4)", "6l;others"], "DS", ["Corrupted"], "Other 6 links - corrupted or weapons");
             QuickUI([0.0, "5 linked uniques", "uniques;5link"], "SD");
             QuickUI([0.0, "6 linked uniques", "uniques;ex6link"], "SD");
             QuickUI([0.0, "6 Socket Uniques", "uniques;6s"], "SD");
@@ -2530,6 +2550,7 @@ Chapter() {
             QuickUI(S2, "SD", ["Sockets"], "", ["GearPlusFlasks", "OSA"]);
             QuickUI([0.0, "Unique Exception: 4 White Triad Grip", "uniques;extriadgrip"], "SH", ["Sockets"]);
             QuickUI([0.0, "Unique Exception: Three Abyss Socket Uniques", "uniques;3xabyss"], "SD", ["Sockets"], "", ["GearPlusFlasks", "OSA"], "Specifically detects the Shroud of the lightless unique with 3 abyss sockets that drops very rarely from lich-abyss encounters");
+            QuickUI([0.0, "Unique Exception: Four Abyss Socket Uniques", "uniques;4xabysshelmet"], "SH", ["Sockets"], "", ["GearPlusFlasks", "OSA"]);
             QuickUI([0.0, "Double corrupted uniques", "uniques;2xcorrupteduniques"], "SD", [], null, ["GearPlusFlasks", "OAS"]);
             QuickUI([0.0, "Uniques with corrupted implicit", "uniques;corrupteduniques"], "SH", ["ItemLevel", "AllGearClasses"]);
             QuickUI(S3, "SH");

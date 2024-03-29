@@ -8,14 +8,14 @@
 // Meaning, TierTagSearches always show a certain rule and its current state, while Item Searches realistically show how the item is handled and can change rules if the original one changes.
 // =============================================================================================================
 
-StyleSection("COMMON CURRENCIES", "Hover over the scroll above for more information! ( recommended for new players ) <hr> Basic supplies used to perform common operations. They're not worth much, but important nonetheless. People frequently choose to hide some of them and buying them in bulk.") {
-    Search S0("skip", "High Tier Supplies") { BaseType "Orb of Transmutation"; }
-    Search S0("skip", "Low Tier Supplies") { BaseType "Armourer's Scrap"; }
-    Search S0("skip", "Wisdom Scrolls") { BaseType "Scroll of Wisdom"; StackSize 1; }
-    Search S0("skip", "Portal Scrolls") { BaseType "Portal Scroll"; StackSize 1; }
+StyleSection("COMMON CURRENCIES", "Basic supplies used to perform common operations. They're not worth much, but are important nonetheless. People frequently hide them or buy them in bulk.<hr> Hover over the scroll above for more information! ( recommended for new players )") {
+    Search S0("skip", "High Tier Supplies") { BaseType "Orb of Transmutation"; StackSize 4; AreaLevel 70; }
+    Search S0("skip", "Low Tier Supplies") { BaseType "Armourer's Scrap"; StackSize 4; AreaLevel 70; }
+    Search S0("skip", "Wisdom Scrolls") { BaseType "Scroll of Wisdom"; StackSize 4; AreaLevel 70; }
+    Search S0("skip", "Portal Scrolls") { BaseType "Portal Scroll"; StackSize 4; AreaLevel 70; }
     SS_Item("S0");
 
-    SS_InfoBox(["Detailed explanation", "Low currencies are important supplies, but picking all of them may be inefficient and tedious. Higher strictness versions of the filter hide some of the common currency types to preserve screen clarity and speed. <hr> You can sell transmutation, armorer and blacksmith currencies to vendors to receive 1:2 or 1:4 wisdom scrolls and use a portal gem later on instead of portal scrolls (drop-only or obtained through 'The Realm' divination card.)<hr> Every time you pick up an item, you have to stop. Optimized characters are better off focusing on the good drops and ignoring the plethora of cheap drops. As your character becomes more optimized, increasing the strictness level of the filter is advised. <hr>"]);
+    SS_InfoBox(["Detailed explanation", "Vendor transmutation or blacksmith currencies to receive 1:4 wisdom scrolls or use a portal gem instead of portal scrolls to save clicking-time. <hr> The filter has individual rules for stacked and single currency drops and additional rules for the campaign section of the game. <hr> Every time you pick up an item, you have to stop. Optimized characters are better off focusing on the good drops and ignoring the plethora of cheap drops. As your character becomes more optimized, increasing the strictness level of the filter is advised. <hr>"]);
 }
 
 StyleSection("MID-TIER CURRENCY", "Rather common, but unless sold in bulk, not too expensive. Often used in basic crafting.") {
@@ -25,10 +25,10 @@ StyleSection("MID-TIER CURRENCY", "Rather common, but unless sold in bulk, not t
     Search S0("skip", "Chance Orbs") { BaseType "Orb of Chance"; }
     SS_Item("S0");
 
-    SS_InfoBox(["Detailed explanation", "The tiering of these items differs. The filter is created based on the current economy. So if certain items are in high demand or low supply, they might end up going into higher tiers. Note that you have to redownload the filter to get the latest economy data."]);
+    SS_InfoBox(["Detailed explanation", "The site is updated every 4 hours and the tiering of the items may differ. Items might change their tier based on high or low demand. Note that you have to redownload/sync the filter to get the latest economy data! <hr> Don't underrate chance orbs! You can buy maps from Kirac at the start of the league to quickly progress through the atlas! <hr> Alterations, jeweller's and chromatics can also be reliably obtained by doing vendor recipes."]);
 }
 
-StyleSection("RARE CURRENCY", "High tier currency are used for 3 things: as money for trades between players (especially the Chaos Orb), for their strong effects and to pay NPC's to perform crafts and other services. These are desired drops and it's almost always recommended to pick them up.") {
+StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act as trade goods for players. Chaos Orbs and Divine Orbs are pretty much the standard way to pay for most trades. These are desired drops and it's almost always recommended to pick them up.") {
     Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
     Search S0("skip", "Exalted Orbs") { BaseType "Exalted Orb"; }
     Search S0("skip", "Annulment Orbs") { BaseType "Orb of Annulment"; }
@@ -36,16 +36,16 @@ StyleSection("RARE CURRENCY", "High tier currency are used for 3 things: as mone
     Search S0("skip", "Alchemy Orbs") { BaseType "Orb of Alchemy"; }
     SS_Item("S0");
 
-	SS_InfoBox(["Detailed explanation", "These items are shown on all strictnesses. <hr>All high tier currencies make the same sound. When you hear it - you know 'something dropped'. You can click on the currency preview to hear the sound by the way. <hr> They also come with a minimap-icon. The icons can be seen next to the item preview labels on FilterBlade. <hr> You can change all of these settings in the customize screen here. To quickly jump to the settings for a certain item, right click the item label."]);
+	SS_InfoBox(["Detailed explanation", "Items have a sound that is linked to their value-tier. All high tier currencies make the same sound. When you hear it - you know 'something dropped'. You can click on the currency preview to hear the sound <hr> They also come with a minimap-icon. The icons can be seen next to the item preview labels on FilterBlade. <hr> You can change all of these settings in the customizer screen here. To quickly jump to the settings for a certain item, right click the item label or CTRL+click the item."]);
 }
 
-StyleSection("TOP-VALUE ITEMS", "All top tier items have the same white background and drop-sound. These items include 6-links, top tier currency, valuable uniques, great divination cards and everything else that is worth a LOT.") {
+StyleSection("TOP-VALUE ITEMS", "All top tier items have the same white background and drop-sound. They also come with a red beam and a huge red star on the minimap. These items include top tier currencies, valuable uniques, great divination cards, reliquary keys and everything else that is worth a LOT.") {
+    Search S0("skip", "MIRROR OF KALANDRA!!!") { BaseType "Mirror of Kalandra"; }
     Search S0("skip", null, "uniques;t1") { BaseType "Glorious Plate"; ItemLevel 83; Rarity "Unique"; }
     Search S0("skip", null, "divination;t1") { BaseType "House of Mirrors"; }
-    Search S0("skip", "MIRROR OF KALANDRA!!!") { BaseType "Mirror of Kalandra"; }
 
     SS_Item("S0");
-    SS_InfoBox(["Detailed explanation", "All T1-items in the TIERLIST page in the filterblade header have such a white background."]);
+    SS_InfoBox(["Detailed explanation", "It should be noted that other items without the white background can be just as, if not more valuable. However, with other items it often comes down to mods, luck and crafting, while the white background items are pretty much always great!"]);
 }
 
 StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. These rules have priority over normal currency rules, but only apply in areas under level 68. Great for new leagues!") {
@@ -55,10 +55,11 @@ StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. Th
     SS_Item("S0");
 }
 
-SS_SectionTitle("Current League: 3.23 Affliction");
+SS_SectionTitle("Current League: 3.24 Necropolis");
 
-StyleSection("Affliction", "Over a hundred new Transfigured Gems (don't drop, obtained in lab) and exclusive extra-ascendancy items, such as Charms and Tinctures!") {
-    Search S0("skip") { BaseType "Ashbark Tincture"; Rarity Magic; ItemLevel 75; }
+StyleSection("Allflames", "Preview the monsters of the next zone or map and edit which monsters have which mods, or use an Allflame to completely replace them.") {
+    Search S0("skip") { BaseType "Flaring Allflame Ember of Abyss"; }
+    Search S0("skip") { BaseType "Allflame Ember of Beidat"; }
     SS_Item("S0");
 }
 
@@ -66,40 +67,40 @@ SS_Ad();
 
 SS_SectionTitle("Notable Drops");
 
-StyleSection("Unique items", "There are hundreds of uniques! Some are in high demand, others are worthless or very niche. The filter can't distinguish between uniques with the same baseType. Bases with a blue beam/map icon can drop as a cheap or expensive version.") {
+StyleSection("Unique items", "There are hundreds of uniques! Some are in high demand, others are worthless or very niche. The filter can't distinguish between uniques with the same baseType. Bases with a blue or purple beam/map icon could potentially be very expensive.") {
     Search S0("skip", null, "uniques;t2") {  }
     Search S0("skip", null, "uniques;t3") {  }
     Search S0("skip", null, "uniques;hideable") {  }
 
     SS_Item("S0");
-    SS_InfoBox(["Detailed explanation", "Filterblade tiers items based on the ingame economy. It's a good practice to update the filter weekly, while you're actively playing. <hr> The economy  sometimes has large meta-shifts! A cheap unique can become very expensive very fast (or vice versa)!"]);
+    SS_InfoBox(["Detailed explanation", "Filterblade tiering is based on the ingame economy. It's a good practice to update the filter weekly. <hr> The economy  sometimes has large meta-shifts! A cheap unique can become very expensive very fast (or vice versa)!"]);
 }
 
-StyleSection("SOMETIMES LUCKY", "The blue map icon and blue beam on items signalizes that it can be expensive, if you're lucky. A 'leather belt' can be a cheap unique or an expensive headhunter and the filter can't tell them apart.") {
+StyleSection("SOMETIMES LUCKY", "The blue or purple map icons and beams signalize that are drop CAN be quite valuable... if you're lucky. A unique  Leather Belt can very very rarely be an expensive headhunter and the filter can't tell them apart.") {
     Search S0("skip", null, "uniques;multispecial") {  }
     Search S0("skip", null, "uniques;exjewels") {  }
 
     SS_Item("S0");
-    SS_InfoBox(["Detailed explanation", "The same blue icon and beam is used for items with potentially valuable or unique mods, such as incursion-mod items."]);
+    SS_InfoBox(["Detailed explanation", "Generally speaking the purple icon is used for the items with a higher chance to be good. On top of that the small blue stars are usually indicative of a basetypes with good boss-drops."]);
 }
 
-StyleSection("Map Fragments", "Map fragment open a special map when combined together. They're all usually worth picking up and some can be quite pricy.") {
+StyleSection("Fragments & Scarabs", "Map fragment open a unique encounter if used if the other pieces of the set. Most scarabs on the other hand add both challenge and reward to a map encounter. Some of these can be very pricy!") {
     Search S0("skip", null, "fragments;t2") {  }
     Search S0("skip", null, "fragments;t3") {  }
     Search S0("skip", null, "fragments;t4") {  }
 
     SS_Item("S0");
-    SS_InfoBox(["Detailed explanation", "Sacrifice Fragments can be obtained from Corrupted Zones, Corrupted Map bosses and the 'Her Mask' card. You can add a fragments to the map device in combination with a map to give the map 5% extra quantity or run a full set of fragments to access a special boss fight. <hr> There exist many different fragment types that grant access to diferent bosses."]);
+    SS_InfoBox(["Detailed explanation", "Most fragments can also be added onto a map to increase it's quantity, if you're not interested in the encounter itself. This is commonly done with sacrifice fragments."]);
  }
 
- StyleSection("DIVINATION CARDS", "Divination Cards have vastly different price ranges and are tiered depending on their value, usefulness and rarity.") {
+ StyleSection("DIVINATION CARDS", "Divination Cards have vastly different price and rarity ranges and are tiered based on their value.") {
     Search S0("skip", null, "divination;t2") {  }
     Search S0("skip", null, "divination;t3") {  }
     Search S0("skip", null, "divination;t4") {  }
     Search S0("skip", null, "divination;t5") {  }
     SS_Item("S0");
 
-    SS_InfoBox(["Detailed explanation", "Divination cards grant you a specific item reward upon completing the set and giving it to Lily in your hideout. Each card type drops in certain places or sometimes by certain enemies, allowing players to farm them (although some cards grant extremely expensive items and are thus incredibly rare themselves).<hr> Periodically returning to filterblade and redownloading the latest filter is recommended to stay up-to-date.<hr> Also I choose to give 1-card-set cards, such as Chaotic Disposition and the Void a higher tier, because they feel significantly more satisfying"]);
+    SS_InfoBox(["Detailed explanation", "Divination cards grant you a specific item reward upon completing the set. Each card type drops in specific zones or by specific enemies, allowing players to farm them (although some cards can be super rare regardless).<hr> The divination card economy is quite volatile. Periodically returning to FilterBlade and redownloading the latest filter is recommended to stay up-to-date."]);
 }
 
 StyleSection("Skill Gems", "Currently expensive gems are highlighted by the filter. Additionally the filter will highlight gems with special properties, such as higher levels, quality etc.") {
