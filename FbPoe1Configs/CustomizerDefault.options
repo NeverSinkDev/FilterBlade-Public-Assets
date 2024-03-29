@@ -547,8 +547,10 @@ Chapter() {
         }
 
         Section("Special rares") {
-            QuickUI([0.0, "Necropolis Special Mods", "exoticmods;necropoliscraft"], "SH", []);
-            QuickUI([0.0, "Dropped rares in special zones", "rare->utility->droppeditems;any"], "SH", [], "Necropolis Crafting Results");
+            Description("Necropolis items with Necropolis-Exclusive mods are highlighte dusing this rule");
+            QuickUI([0.0, "Identified Mods: Necropolis", "exoticmods;necropoliscraft"], "SH", []);
+            Description("This rule (attempts) to highlight any item crafted in the Necropolis hideout area");
+            QuickUI([0.0, "Crafting-Zone Dropped Items", "rare->utility->droppeditems;any"], "SH", [], "Crafting-Zone Dropped Items");
         }
     }
 }
@@ -642,7 +644,6 @@ Chapter() {
             Search T10(0.1, "Map appearance T10") { MapTier 10; Class Maps; Rarity "Normal"; }
 
             Description("The map has the same tier as the one you're currently in.");
-            QuickUI([0.0, "Map appearance T17", "maps->t17uber;any"], "SH", [], "Highlight - T17:");
             QuickUI(T16, "SH", [], "Highlight - T16:");
             QuickUI(T15, "SH", [], "Highlight - T15:");
             QuickUI(T14, "SH", [], "Highlight - T14:");
@@ -668,11 +669,12 @@ Chapter() {
 
         Title("Exotic Maps");
 
-        Section("Shaper, Elder and Conqueror Maps") {
+        Section("Shaper, Elder, T17 and Conqueror Maps") {
             Search ElderMap(0.0, "Map appearance (ElderMap)") { Class Maps; HasInfluence Elder; Rarity Normal; }
             Search ShaperMap(0.0, "Map appearance (ShaperMap)") { Class Maps; HasInfluence Shaper; Rarity Normal; }
             QuickUI("ElderMap", "S", ["MapTier"], "Elder Influenced Maps & Guardians:");
             QuickUI("ShaperMap", "S", ["MapTier"], "Shaper Influenced Maps & Guardians:");
+            QuickUI([0.0, "Map appearance T17", "maps->t17uber;any"], "SH", [], "Highlight - T17:");
             QuickUI([0.0, "New Influenced Maps", "maps->influenced;infconquerors"], "S", [], "Conqueror Influenced Maps");
         }
 
@@ -1082,7 +1084,7 @@ Chapter() {
     }
 
     Section("Identified endgame rares", "WisdomScroll") {
-        QuickUI([1.0, "Identified endgame rares", "rr;identifieditemhandling"], "SHD", ["AllGearClasses", "ItemLevel", "DropLevel", "Mirrored", "Identified", "Corrupted", "CorruptedMods"], "", [], "The filter will check identified rares for interesting mod combinations and highlight these items. By setting this rule to HIDE all items that have NOT passed the 'interesting identified mods check' will be hidden. This is useful if you're still searching for specific rare combinations, but would like to reduce the number of items visible.");
+        QuickUI([1.0, "Endgame Rares: Identified, Corrupted, Mirrored", "rr;identifieditemhandling"], "SHD", ["AllGearClasses", "ItemLevel", "DropLevel", "Mirrored", "Identified", "Corrupted", "CorruptedMods"], "", [], "The filter will check identified rares for interesting mod combinations and highlight these items. By setting this rule to HIDE all items that have NOT passed the 'interesting identified mods check' will be hidden. This is useful if you're still searching for specific rare combinations, but would like to reduce the number of items visible.");
     }
 
     Section("Decorators", "Chromatic") {
