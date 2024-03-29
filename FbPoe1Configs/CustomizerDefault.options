@@ -1083,8 +1083,10 @@ Chapter() {
         }
     }
 
-    Section("Identified endgame rares", "WisdomScroll") {
-        QuickUI([1.0, "Endgame Rares: Identified, Corrupted, Mirrored", "rr;identifieditemhandling"], "SHD", ["AllGearClasses", "ItemLevel", "DropLevel", "Mirrored", "Identified", "Corrupted", "CorruptedMods"], "", [], "The filter will check identified rares for interesting mod combinations and highlight these items. By setting this rule to HIDE all items that have NOT passed the 'interesting identified mods check' will be hidden. This is useful if you're still searching for specific rare combinations, but would like to reduce the number of items visible.");
+    Section("Rares: Identified, Corrupted, Mirrored", "WisdomScroll") {
+        QuickUI([0.0, "Unidentified Corrupted rares with 0 custom mods", "hidelayer;corruptedrares"], "SHD", ["AllGearClasses", "ItemLevel", "DropLevel", "Mirrored", "Identified", "Corrupted", "CorruptedMods"]);
+        QuickUI([0.0, "Unidentified Mirrored rares with 0  custom mods", "hidelayer;mirroredrares"], "SHD", ["AllGearClasses", "ItemLevel", "DropLevel", "Mirrored", "Identified", "Corrupted", "CorruptedMods"]);
+        QuickUI([1.0, "Identified endgame rares", "rr;identifieditemhandling"], "SHD", ["AllGearClasses", "ItemLevel", "DropLevel", "Mirrored", "Identified", "Corrupted", "CorruptedMods"], "", [], "The filter will check identified rares for interesting mod combinations and highlight these items. By setting this rule to HIDE all items that have NOT passed the 'interesting identified mods check' will be hidden. This is useful if you're still searching for specific rare combinations, but would like to reduce the number of items visible.");
     }
 
     Section("Decorators", "Chromatic") {
