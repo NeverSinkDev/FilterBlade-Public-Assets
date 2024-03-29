@@ -1594,6 +1594,24 @@ Chapter() {
             QuickUI([0.0, "Extractable Silver Blight Annointments", "exotic->enchanted;enchantedringssilveroil"], "SD");
         }
 
+        Section("Tattoos", "HonouredTattoooftheWiseMan") {
+            Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
+
+            Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
+            TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH");
+            TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH");
+            TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH");
+            TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH");
+
+            // new tiers
+            Conditional("?AncTrialTattooTier") { }
+            ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
+
+            // hide tier
+            Conditional("?AncTrialTattooHidden") { }
+            ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
+        }
+
         Title("Exotic Identified Mods");
 
         Section("Identified Mods: Incursion", "IncursionHelmet") {
@@ -1642,23 +1660,7 @@ Chapter() {
             QuickUI([0.0, "Affliction Items: Charms, Corpses & Tinctures", "artefact->affliction;any"], "SH", [], "", null, "Since these items can only be obtained by purchasing them from a vendor and don't drop naturally in the world, there is no need for any special filtering or highlight.");
         }
 
-        Section("Currently Unobtainable: Tattoos", "HonouredTattoooftheWiseMan") {
-            Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
 
-            Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
-            TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH");
-            TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH");
-            TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH");
-            TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH");
-
-            // new tiers
-            Conditional("?AncTrialTattooTier") { }
-            ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
-
-            // hide tier
-            Conditional("?AncTrialTattooHidden") { }
-            ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
-        }
 
         Section("Currently Unobtainable: Kalandra Rings") { // IoliteRing
             QuickUI([0.0, "Kalandra Lake exclusive Bases", "exoticbases;exoticlakekala"], "SH", ["Rarity", "ItemLevel"], null, ["Gear", "OS"]);
