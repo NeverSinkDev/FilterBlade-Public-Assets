@@ -531,6 +531,7 @@ Chapter() {
 //===================================================================================================
 
     Section("Current League: Necropolis", "AllflameEmberofTul") {
+        // todo: tierlist stuff! :/
         QuickUI([0.0, "Necropolis WIP TODO1", "necropolis;t2"], "SH", []);
         QuickUI([0.0, "Necropolis WIP TODO2", "necropolis;t3"], "SH", []);
 
@@ -778,9 +779,9 @@ Chapter() {
 
             TierListToolBar();
 
-            MavenInvUI([0.0, "Maven's Invitation Boss", "exotic->invitation;t1"], "SH", "Maven's Invitations - T1");
-            MavenInvUI([0.0, "Maven's Invitation Boss Tier 2", "exotic->invitation;t2"], "SH", "Maven's Invitations - T2");
-            MavenInvUI([0.0, "Maven's Invitation Area", "exotic->invitation;t3"], "SH", "Maven's Invitations - T3");
+            MavenInvUI([0.0, "Maven's Invitation Boss", "exotic->invitation;t1"], "SH", "Atlas Boss Invitations - T1");
+            MavenInvUI([0.0, "Maven's Invitation Boss Tier 2", "exotic->invitation;t2"], "SH", "Atlas Boss Invitations - T2");
+            MavenInvUI([0.0, "Maven's Invitation Area", "exotic->invitation;t3"], "SH", "Atlas Boss Invitations - T3");
 
             Conditional("?MavenInviteNewTier") { }
             ElementAdder_Tier("?MavenInviteNewTier", "MavenInvUI");
