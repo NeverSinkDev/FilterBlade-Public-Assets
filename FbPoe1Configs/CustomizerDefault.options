@@ -1297,9 +1297,9 @@ Chapter() {
     Section("Fractured items", "FracturingOrb") {
         Section("Fractured item tiering") {
                 Description("Some itemclasses like 'Jewels' are completely covered through the class-based filtering below and don't need representing through the matrix.");
-                Search S0(0.0, "Fractured items, tier 1", "exotic->fractured;fractt1") {}
-                Search S1(0.0, "Fractured items, tier 2", "exotic->fractured;fractt2") {}
-                Search S2(0.0, "Fractured items, tier 3", "exotic->fractured;fractt3") {}
+                Search S0(0.1, "Fractured items, tier 1", "exotic->fractured;fractt1") {}
+                Search S1(0.1, "Fractured items, tier 2", "exotic->fractured;fractt2") {}
+                Search S2(0.1, "Fractured items, tier 3", "exotic->fractured;fractt3") {}
                 QuickUI(S0, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
                 QuickUI(S1, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
                 QuickUI(S2, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"]);
@@ -1478,8 +1478,8 @@ Chapter() {
 
         Section("Perfection BaseTypes") {
             Description("In the 3.16 update the base armour value of armour/es/evasion on items can vary by 15%. This value is inherent and can only be changed with a sacred orb. The filter attempts to highlight items with perfect base defense stats for the best crafting results");
-            Search T1(0.0, "Perfect Armours T1", "crafting->perfectarmours;t1") { }
-            Search T2(0.0, "Perfect Armours T2", "crafting->perfectarmours;t2") { }
+            Search T1(0.1, "Perfect Armours T1", "crafting->perfectarmours;t1") { }
+            Search T2(0.1, "Perfect Armours T2", "crafting->perfectarmours;t2") { }
 
             QuickUI(T1, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "RarityU"]);
             QuickUI(T2, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "RarityU"]);
