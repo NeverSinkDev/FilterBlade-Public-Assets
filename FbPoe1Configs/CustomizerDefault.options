@@ -478,7 +478,7 @@ Chapter() {
         UniqueList(S1, "SH", "Tier 2:", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
         UniqueList(SMulti, "SH", "Top Multi-Base Uniques:", "These BaseTypes can be insanely valuable and rare uniques, or very common worthless ones.");
         UniqueList(S2, "SH", "Multi-Base Uniques:", "Some BaseTypes have both: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these!");
-        UniqueList(S10, "S", "Boss-Drop Uniques:", "A potentially expensive unique version of this item drops only from bosses! The world drop unique is fairly cheap! If you want to hide this tier: remember to check the hidden items dropped by bosses! Enable hiding this tier in Advanced->Settings.");
+        UniqueList(S10, "SH", "Boss-Drop Uniques:", "A potentially expensive unique version of this item drops only from bosses! The world drop unique is fairly cheap! If you want to hide this tier: remember to check the hidden items dropped by bosses! Enable hiding this tier in Advanced->Settings.");
         UniqueList(S8, "S", "Unique Jewels:", "The filter can't disintinguish between expensive and cheap unique jewels. All of them are treated the same way!");
 //        UniqueList(S12, "SH", "Fated Boss Drop Uniques:", "These can only drop from Atlas Map Bosses. You got to check those yourself because they look the same as a normal unique.");
         UniqueList(S7, "SDH", "Early league Uniques:", "These uniques are possibly expensive or interesting at the start of the new league! This tier stays empty, after the first week of the new league");
