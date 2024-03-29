@@ -531,16 +531,25 @@ Chapter() {
 //===================================================================================================
 
     Section("Current League: Necropolis", "AllflameEmberofTul") {
-        // todo: tierlist stuff! :/
-        QuickUI([0.0, "Necropolis WIP TODO1", "necropolis;t2"], "SH", []);
-        QuickUI([0.0, "Necropolis WIP TODO2", "necropolis;t3"], "SH", []);
 
-        QuickUI([0.0, "Necropolis Special Mods", "exoticmods;necropoliscraft"], "SH", []);
-        QuickUI([0.0, "Dropped rares in special zones", "rare->utility->droppeditems;any"], "SH", [], "Necropolis Crafting Results");
+        Section("Allflames") {
+            Function AllflameTierFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["NecropolisAllflames", "O"]); }
 
-        // TODO: MOVE
-        QuickUI([0.0, "Affliction Items: Charms, Corpses & Tinctures", "artefact->affliction;any"], "SH", [], "", null, "Since these items can only be obtained by purchasing them from a vendor and don't drop naturally in the world, there is no need for any special filtering or highlight.");
-        QuickUI([0.0, "Transfigured Gems", "gems-exceptional;altany"], "SH", [], "", null, "Since these gems can only be created by using the Divine Font at the end of the Eternal Labyrinth and can't drop naturally in the world, there is no need for any special filtering or highlight.");
+            AllflameTierFunc([0.0, "Allflames Tier 2", "necropolis;t2"], "SH");
+            AllflameTierFunc([0.0, "Allflames Tier 3", "necropolis;t3"], "SH");
+
+            // new tiers
+            Conditional("?AllflameNewTier") { }
+            ElementAdder_Tier("?AllflameNewTier", "AllflameTierFunc");
+
+            Conditional("?AllflameNewTierHidden") { }
+            ElementAdder_Tier("?AllflameNewTierHidden", null, true, "NecropolisAllflames", "OH");
+        }
+
+        Section("Special rares") {
+            QuickUI([0.0, "Necropolis Special Mods", "exoticmods;necropoliscraft"], "SH", []);
+            QuickUI([0.0, "Dropped rares in special zones", "rare->utility->droppeditems;any"], "SH", [], "Necropolis Crafting Results");
+        }
     }
 }
 
@@ -1624,6 +1633,10 @@ Chapter() {
             QuickUI([0.0, "Items with Crucible passive tree", "exotic->crucible;crucibleany"], "SH", ["DropLevel", "Rarity", "ItemLevel"]);
         }
 
+        Section("Currently Unobtainable: Affliction Items", "JuggernautsUrsineCharmoftheChampion") {
+            QuickUI([0.0, "Affliction Items: Charms, Corpses & Tinctures", "artefact->affliction;any"], "SH", [], "", null, "Since these items can only be obtained by purchasing them from a vendor and don't drop naturally in the world, there is no need for any special filtering or highlight.");
+        }
+
         Section("Currently Unobtainable: Tattoos", "HonouredTattoooftheWiseMan") {
             Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
 
@@ -2484,6 +2497,8 @@ Chapter() {
             QuickUI([0.0, "Special Gems Tier 1", "gems-special;specialworlddrops"], "SH", ["GemLevel", "Quality"], null, ["Gems", "DO"]]);
             QuickUI([1.0, "Gems T1", "gems-special;exspecial"], "SD", ["GemLevel", "Quality", "Corrupted"], "Special Gems Tier 2", ["Gems", "DO"]);
             QuickUI([0.0, "Special Gems with level", "gems-special;exspeciale3"], "SH", ["GemLevel", "Quality"], null, ["Gems", "DO"]]);
+            Divider();
+            QuickUI([0.0, "Transfigured Gems", "gems-exceptional;altany"], "SH", [], "", null, "Since these gems can only be created by using the Divine Font at the end of the Eternal Labyrinth and can't drop naturally in the world, there is no need for any special filtering or highlight.");
         }
 
         Section("Leveled Gems", "SkillGemGreen2") {
