@@ -2940,7 +2940,7 @@
 					"text": null,
 					"items": {
 						"Starforge": {
-							"text": "Overridden in Exceptions. Drops from The Shaper.",
+							"text": "Overridden in Exceptions. Drops from The Uber Shaper.",
 							"ruleLink": {
 								"entryName": "Unique Shaper Sword",
 								"text": "Link to exception rule"
@@ -3017,7 +3017,7 @@
 							"priority": -10
 						},
 						"The Saviour": {
-							"text": "Drops from Sirus.",
+							"text": "Drops from Uber Sirus.",
 							"priority": -5
 						}
 					}
@@ -3168,7 +3168,7 @@
 					"text": null,
 					"items": {
 						"Nebulis": {
-							"text": "Drops from Cortex.",
+							"text": "Drops from Uber Cortex.",
 							"priority": -5
 						}
 					}
@@ -3261,7 +3261,7 @@
 					"text": null,
 					"items": {
 						"Oriath's End": {
-							"text": "Drops from Sirus.",
+							"text": "Drops from Uber Sirus.",
 							"priority": -5
 						}
 					}
@@ -3358,7 +3358,7 @@
 					"text": null,
 					"items": {
 						"The Eternity Shroud": {
-							"text": "Drops from The Uber Elder.",
+							"text": "Drops from The Uber Uber Elder.",
 							"priority": -5
 						},
 						"Saqawal's Nest": {
@@ -3475,7 +3475,7 @@
 							"priority": -3
 						},
 						"Mask of the Tribunal": {
-							"text": "Drops from a Distant Memory boss.",
+							"text": "Drops from Uber Cortex.",
 							"priority": -5
 						},
 						"Craiceann's Chitin": {
@@ -3831,7 +3831,7 @@
 							"priority": -3
 						},
 						"Echoes of Creation": {
-							"text": "Drops from The Shaper.",
+							"text": "Drops from Uber Shaper.",
 							"priority": -5
 						}
 					}
@@ -3868,6 +3868,10 @@
 					"items": {
 						"Craiceann's Tracks": {
 							"text": "Drops from Craiceann (Einhar Boss).",
+							"priority": -5
+						},
+						"The Tempest Rising": {
+							"text": "Drops from Uber Sirus.",
 							"priority": -5
 						}
 					}
@@ -3907,7 +3911,7 @@
 					"text": null,
 					"items": {
 						"Viridi's Veil": {
-							"text": "Drops from The Maven.",
+							"text": "Drops from The Uber Maven.",
 							"priority": -5
 						}
 					}
@@ -4185,11 +4189,11 @@
 							"priority": -5
 						},
 						"Ashes of the Stars": {
-							"text": "Drops from The Eater of Worlds.",
+							"text": "Drops from The Uber Eater of Worlds.",
 							"priority": -5
 						},
 						"Crystallised Omniscience": {
-							"text": "Drops from The Searing Exarch.",
+							"text": "Drops from The Uber Searing Exarch.",
 							"priority": -5
 						},
 						"The Eternal Struggle": {
@@ -4242,6 +4246,10 @@
 				"Prismatic Ring": {
 					"text": null,
 					"items": {
+						"Circle of Ambition": {
+							"text": "Drops from Uber Cortex.",
+							"priority": -5
+						},
 						"The Taming": {
 							"text": "Does not drop. Created with a vendor recipe.",
 							"priority": -10
@@ -4318,7 +4326,7 @@
 							"priority": -9
 						},
 						"Call of the Void": {
-							"text": "Drops from The Uber Elder.",
+							"text": "Drops from The Uber Uber Elder.",
 							"priority": -5
 						}
 					}
@@ -4434,6 +4442,10 @@
 						"Graven's Secret": {
 							"text": "Drops from The Maven.",
 							"priority": -5
+						},
+						"Nevalius Inheritance": {
+							"text": "Crafted in Necropolis",
+							"priority": -8
 						}
 					}
 				},
@@ -4543,7 +4555,7 @@
 					"text": null,
 					"items": {
 						"Perepiteia": {
-							"text": "Drops from a Distant Memory boss.",
+							"text": "Drops from Cortex.",
 							"priority": -5
 						}
 					}
@@ -4699,7 +4711,7 @@
 					"text": null,
 					"items": {
 						"The Annihilating Light": {
-							"text": "Drops from The Searing Exarch.",
+							"text": "Drops from The Uber Searing Exarch.",
 							"priority": -5
 						}
 					}
@@ -4823,6 +4835,87 @@
 						}
 					}
 				},
+				"Vanguard Belt": {
+					"text": null,
+					"items": {
+						"The Tides of Time": {
+							"text": "Drops from The Uber Shaper.",
+							"priority": -5
+						}
+					}
+				},
+				"Prophecy Wand": {
+					"text": null,
+					"items": {
+						"Grace of the Goddess": {
+							"text": "Drops from The Uber Maven.",
+							"priority": -5
+						}
+					}
+				},
+				"Pig-Faced Bascinet": {
+					"text": null,
+					"items": {
+						"The Devourer of Minds": {
+							"text": "Drops from The Uber Uber Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Cabalist Regalia": {
+					"text": null,
+					"items": {
+						"The Apostate": {
+							"text": "Drops from Uber Cortex.",
+							"priority": -5
+						}
+					}
+				},
+				"Zealot Helmet": {
+					"text": null,
+					"items": {
+						"Ravenous Passion": {
+							"text": "Drops from The Uber Eater of Worlds.",
+							"priority": -5
+						}
+					}
+				},
+				"Goliath Gauntlets": {
+					"text": null,
+					"items": {
+						"The Celestial Brace": {
+							"text": "Drops from The Uber Searing Exarch.",
+							"priority": -5
+						}
+					}
+				},
+				"Mesh Gloves": {
+					"text": null,
+					"items": {
+						"The Hand of Phrecia": {
+							"text": "Crafted in Necropolis",
+							"priority": -8
+						}
+					}
+				},
+				"Shackled Boots": {
+					"text": null,
+					"items": {
+						"Veruso's Ambition": {
+							"text": "Crafted in Necropolis",
+							"priority": -8
+						}
+					}
+				},
+				"Diamond Ring": {
+					"text": null,
+					"items": {
+						"Grattus Signet": {
+							"text": "Crafted in Necropolis",
+							"priority": -8
+						}
+					}
+				},
 				"Prismatic Jewel": {
 					"text": null,
 					"items": {
@@ -4835,8 +4928,12 @@
 							"priority": -5
 						},
 						"Sublime Vision": {
-							"text": "Drops from The Uber Shaper.",
+							"text": "Drops from The Uber Shaper or Uber Uber Elder.",
 							"priority": -5
+						},
+						"The Perandus Pact": {
+							"text": "Crafted in Necropolis",
+							"priority": -8
 						},
 						"The Anima Stone": {
 							"text": "Does not drop. Created with a vendor recipe.",
@@ -5024,7 +5121,7 @@
 							"priority": -5
 						},
 						"Impossible Escape": {
-							"text": "Drops from The Maven.",
+							"text": "Drops from The Uber Maven.",
 							"priority": -5
 						},
 						"The Balance of Terror": {
