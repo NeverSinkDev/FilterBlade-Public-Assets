@@ -805,8 +805,8 @@ Chapter() {
 
         Section("Ultimatum, Sanctum, Incursion", "InscribedUltimatum") {
             QuickUI([1.0, "Chronicle of Atzoatl (Incursion Temple Map Item)", "miscmapitemsextra;itemizedleagues"], "SH", [], "Incursion and Ultimatum");
-            QuickUI([0.0, "Itemized Sanctum", "exoticmap->sanctum;any"], "SH", []); // Sanctum Vaults Research -> started run
-            QuickUI([0.0, "Itemized Sanctum (high level)", "exoticmap->sanctum;ilvl83"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Itemized Sanctum", "exoticmap->sanctum;any"], "SH", [], "Forbidden Tome / Sanctum"); // Sanctum Vaults Research -> started run
+            QuickUI([0.0, "Itemized Sanctum (high level)", "exoticmap->sanctum;ilvl83"], "SH", ["ItemLevel"], "Forbidden Tome / Sanctum (high level)");
         }
 
         Section("Reliquary Keys", "VaalReliquaryKey") {
