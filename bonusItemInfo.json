@@ -2807,6 +2807,379 @@
 
 		"Scarab": {
 			"items": {
+				"Breach Scarab": {
+					"text": "Area contains 2 additional Breaches"
+				},
+				"Breach Scarab of the Dreamer": {
+					"text": "Breaches in Area will always belong to Chayula"
+				},
+				"Breach Scarab of Lordship": {
+					"text": "Breaches in Area each contain a Breachlord"
+				},
+				"Breach Scarab of Splintering": {
+					"text": "Breach Monsters in Area drop 50% more Breach Splinters<br>Clasped Hands in Area drop 50% more Breach Splinters"
+				},
+				"Breach Scarab of Snares": {
+					"text": "Breaches in Area have 5 to 10 additional Clasped Hands<br>Clasped Hands in Area are guarded by a rare Breach Monster"
+				},
+				"Breach Scarab of Resonant Cascade": {
+					"text": "Breaches in Areas open and close 10% faster for each Breach already opened<br>Monsters from Breaches in Areas have increased Difficulty and Reward foreach Breach already opened"
+				},
+
+				"Cartography Scarab": {
+					"text": "50% increased Maps found in Area"
+				},
+				"Cartography Scarab of Ascension": {
+					"text": "Maps found in Area are a tier higher, up to Tier 16"
+				},
+				"Cartography Scarab of Singularity": {
+					"text": "A Unique Map will drop from the Final Map Boss"
+				},
+				"Cartography Scarab of Corruption": {
+					"text": "Non-Unique Maps found in Area are Corrupted with 8 Modifiers"
+				},
+				"Cartography Scarab of Duplication": {
+					"text": "Maps found in Area have a 30% chance to be Duplicated"
+				},
+
+				"Reliquary Scarab": {
+					"text": "100% increased Unique Items found in Area"
+				},
+				"Reliquary Scarab of Overlords": {
+					"text": "Unique Monsters in Area drop an additional Unique Item"
+				},
+				"Reliquary Scarab of Vision": {
+					"text": "Area contains The Nameless Seer"
+				},
+
+				"Bestiary Scarab": {
+					"text": "Area contains Einhar"
+				},
+				"Bestiary Scarab of the Herd": {
+					"text": "Area contains 5 additional Red Beasts if it contains Einhar"
+				},
+				"Bestiary Scarab of Duplicating": {
+					"text": "Create a copy of Beasts captured in Area"
+				},
+				"Bestiary Scarab of the Shadowed Crow": {
+					"text": "Area contains The Black Mórrigan if it contains Einhar"
+				},
+
+				"Influencing Scarab of the Shaper": {
+					"text": "Adds Shaper Influence outcome to Area"
+				},
+				"Influencing Scarab of the Elder": {
+					"text": "Adds Elder Influence outcome to Area"
+				},
+				"Influencing Scarab of Hordes": {
+					"text": "Influenced Monster Packs in Area have 40% increased Pack Size"
+				},
+				"Influencing Scarab of Conversion": {
+					"text": "Tier 14+ Maps found in Area have a chance to drop as Shaper Guardian, Elder Guardian, Conqueror or Unique Synthesised Maps instead"
+				},
+
+				"Sulphite Scarab": {
+					"text": "Area contains Niko"
+				},
+				"Sulphite Scarab of Greed": {
+					"text": "Map owner gains 150% more Sulphite"
+				},
+				"Sulphite Scarab of Fumes": {
+					"text": "Sulphite found in Map Area releases Enraging Fumes<br>Monsters affected by Enraging Fumes have 500% increased Item Quantity<br>Sulphite in your maps is guarded by Monsters from the Azurite Mine"
+				},
+
+				"Divination Scarab": {
+					"text": "150% increased Divination Cards found in Area"
+				},
+				"Divination Scarab of Curation": {
+					"text": "10% more Divination Cards found in Area per different Favoured Map<br>Divination card drops in Area are replaced by those of your Favoured Maps"
+				},
+				"Divination Scarab of Completion": {
+					"text": "Divination cards which drop in Area have a 20% chance to drop as a full stack instead"
+				},
+				
+				"Torment Scarab": {
+					"text": "Area is haunted by 5 additional Tormented Spirits"
+				},
+				"Torment Scarab of Peculiarity": {
+					"text": "Tormented Spirits in Area are replaced with unusual variants"
+				},
+				"Torment Scarab of Release": {
+					"text": "Tormented Spirits in Area have a 25% chance to be set free when Possessed Monsters are slain"
+				},
+				"Torment Scarab of Possession": {
+					"text": "Rare Monsters in Area have a quarter chance to be Possessed by up to 1 Tormented Spirit"
+				},
+
+				"Ambush Scarab": {
+					"text": "Area contains 5 additional Strongboxes"
+				},
+				"Ambush Scarab of Hidden Compartments": {
+					"text": "15% Chance for Strongboxes in Area to be openable again"
+				},
+				"Ambush Scarab of Potency": {
+					"text": "75% Increased effect of Explicit Modifiers on Strongboxes in Area"
+				},
+				"Ambush Scarab of Containment": {
+					"text": "Area contains many additional Strongboxes<br>Area's inhabitants are lying in ambush"
+				},
+				"Ambush Scarab of Discernment": {
+					"text": "Strongboxes in Area are more likely to be rarer varieties"
+				},
+
+				"Harbinger Scarab": {
+					"text": "Area contains 3 additional Harbingers"
+				},
+				"Harbinger Scarab of Discernment": {
+					"text": "Harbingers in Area drop rarer currency shards<br>Harbingers in Area drop a single type of currency shard"
+				},
+				"Harbinger Scarab of Regency": {
+					"text": "Harbingers in Area have a 50% chance to be replaced by a powerful Harbinger Boss"
+				},
+				"Harbinger Scarab of Warhoards": {
+					"text": "Currency shards dropped by Harbingers in Area are duplicated"
+				},
+
+				"Expedition Scarab": {
+					"text": "Area contains an Expedition Encounter"
+				},
+				"Expedition Scarab of Runefinding": {
+					"text": "Expedition Encounters in Area have 100% increased number of Runic Monster Markers"
+				},
+				"Expedition Scarab of Verisium Powder": {
+					"text": "Expedition Encounters in Area have 20% increased number of Explosives<br>80% increased Explosive Radius"
+				},
+				"Expedition Scarab of the Skald": {
+					"text": "Expedition Encounters in Area are lead by Dannig"
+				},
+				"Expedition Scarab of Archaeology": {
+					"text": "Remnants in Expedition Encounters in Area have 2 additional Suffixes and Prefixes"
+				},
+
+				"Legion Scarab": {
+					"text": "Area contains an additional Legion Encounter"
+				},
+				"Legion Scarab of Officers": {
+					"text": "Legion Factions in Area have 5 additional Sergeants"
+				},
+				"Legion Scarab of Command": {
+					"text": "Legion Factions in Area are accompanied by a General"
+				},
+				"Legion Scarab of The Sekhema": {
+					"text": "Legion Encounters in Area always contain the Maraketh Faction"
+				},
+				"Legion Scarab of Eternal Conflict": {
+					"text": "Legion Monsters in Area can be broken out of Stasis multiple times<br>Legion Monsters in Area gain increased Difficulty and Reward for each time they are broken out"
+				},
+
+				"Abyss Scarab": {
+					"text": "Area contains an additional Abyss"
+				},
+				"Abyss Scarab of Multitudes": {
+					"text": "Abysses in Area spawn 75% increased Monsters"
+				},
+				"Abyss Scarab of Edifice": {
+					"text": "Abysses in Area that do not lead to an Abyssal Depths lead to a Stygian Spire<br>Abysses in Area spawn Hoards as they travel"
+				},
+				"Abyss Scarab of Emptiness": {
+					"text": "Rare Abyss Monsters in Area have a 50% chance to drop an additional Rare item with an Abyssal socket"
+				},
+				"Abyss Scarab of Profound Depth": {
+					"text": "Monsters from Abysses in Areas have increased Difficulty and Reward for each prior Pit in that Abyss"
+				},
+
+				"Anarchy Scarab": {
+					"text": "Area contains 4 additional Rogue Exiles"
+				},
+				"Anarchy Scarab of Gigantification": {
+					"text": "Rogue Exiles in Area have a 30% chance to be replaced with a Rogue Giant"
+				},
+				"Anarchy Scarab of Partnership": {
+					"text": "Rogue Exiles in Area have a 50% chance to appear in pairs"
+				},
+
+				"Essence Scarab": {
+					"text": "Area contains 2 additional Essences"
+				},
+				"Essence Scarab of Ascent": {
+					"text": "Essences found in Area are a tier higher"
+				},
+				"Essence Scarab of Stability": {
+					"text": "Using a Remnant of Corruption in Area can only result in upgrading or transforming Essences"
+				},
+				"Essence Scarab of Calcification": {
+					"text": "Rare monsters that are natural inhabitants of the Area are imprisoned by Essences"
+				},
+				"Essence Scarab of Adaptation": {
+					"text": "Imprisoned Monsters released in Areas grant a random Essence Modifier to another Imprisoned Monster in the Area<br>Imprisoned Monsters in Areas have increased Difficulty and Reward for each Essence Modifier"
+				},
+
+				"Domination Scarab": {
+					"text": "Area contains 2 additional Shrines"
+				},
+				"Domination Scarab of Abnormality": {
+					"text": "Area contains an additional Unusual Shrine"
+				},
+				"Domination Scarab of Teachings": {
+					"text": "Shrine buffs in Area also grant 30% increased Experience gained"
+				},
+				"Domination Scarab of Terrors": {
+					"text": "Shrines in Area are guarded by an Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
+				},
+
+				"Ritual Scarab of Selectiveness": {
+					"text": "Rerolling Favours at Ritual Altars in Area has no cost the first 2 times<br>Ritual Altars in Area allow rerolling Favours 1 additional time"
+				},
+				"Ritual Scarab of Recognition": {
+					"text": "Unique enemies slain at Ritual Altars in Area grant 200% more Tribute"
+				},
+				"Ritual Scarab of Abundance": {
+					"text": "Rituals in Area offer 100% increased Favours"
+				},
+
+				"Harvest Scarab": {
+					"text": "Area contains the Sacred Grove"
+				},
+				"Harvest Scarab of Doubling": {
+					"text": "Lifeforce dropped by Harvest Monsters in Area is duplicated<br>Harvest Monsters in Area have 100% more Life"
+				},
+				"Harvest Scarab of Cornucopia": {
+					"text": "If Area contains the Sacred Grove, it will contain up to 1 additional Tier 4 seed of each type, if possible"
+				},
+
+				"Incursion Scarab": {
+					"text": "Area contains Alva"
+				},
+				"Incursion Scarab of Invasion": {
+					"text": "Area contains 12-16 additional packs of Incursion Monsters"
+				},
+				"Incursion Scarab of Champions": {
+					"text": "Incursions in Area have a 35% chance for all Monsters to be at least Magic<br>Incursions in Area have 15% increased Pack Size"
+				},
+				"Incursion Scarab of Timelines": {
+					"text": "Final Architect slain in Area will drop an Itemised Temple<br>Itemised Temples dropped in Area are generated based on current Temple layout, but with randomised room tiers"
+				},
+
+				"Betrayal Scarab": {
+					"text": "Area contains Jun"
+				},
+				"Betrayal Scarab of Intelligence": {
+					"text": "150% Increased Intelligence gained from Immortal Syndicate targets encountered in Area"
+				},
+				"Betrayal Scarab of Reinforcements": {
+					"text": "Immortal Syndicate Members in Area have 50% increased chance to be accompanied by reinforcements"
+				},
+				"Betrayal Scarab of Perpetuation": {
+					"text": "Defeated Immortal Syndicate targets in Area have a 50% chance to drop an additional Scarab"
+				},
+
+				"Beyond Scarab": {
+					"text": "Slaying enemies close together in Area can attract monsters from Beyond this realm"
+				},
+				"Beyond Scarab of Corruption": {
+					"text": "Items dropped by Beyond Demons in Area are Corrupted"
+				},
+				"Beyond Scarab of Haemophilia": {
+					"text": "Beyond Portals in Area have 30% increased Merging Radius"
+				},
+				"Beyond Scarab of Resurgence": {
+					"text": "Beyond Bosses in Area are enraged on low life<br>Beyond Bosses in Area drop 100% increased Tainted Currency<br>Beyond Portals in Area have 30% increased chance to spawn a Unique Boss"
+				},
+				"Beyond Scarab of the Invasion": {
+					"text": "Unique Monsters slain in Area create 8 to 12 additional Beyond Portals"
+				},
+
+				"Ultimatum Scarab": {
+					"text": "Area contains an Ultimatum Encounter"
+				},
+				"Ultimatum Scarab of Bribing": {
+					"text": "Ultimatum Monsters grant 150% increased Experience<br>Ultimatum Encounters grant rewards as though you completed 2 additional Rounds"
+				},
+				"Ultimatum Scarab of Dueling": {
+					"text": "Ultimatum Encounters in Area will always lead to a Unique Boss if possible"
+				},
+				"Ultimatum Scarab of Catalysing": {
+					"text": "Ultimatum Encounters in Area will only offer Catalysts as Rewards"
+				},
+				"Ultimatum Scarab of Inscription": {
+					"text": "Ultimatum Encounter rewards in Area offering Catalysts will offer Inscribed Ultimatums instead"
+				},
+
+				"Delirium Scarab": {
+					"text": "Area contains a Mirror of Delirium"
+				},
+				"Delirium Scarab of Mania": {
+					"text": "Delirium Reward Meters fill 100% faster in Area"
+				},
+				"Delirium Scarab of Paranoia": {
+					"text": "Delirium Encounters in Area generate 2 additional Reward types"
+				},
+				"Delirium Scarab of Neuroses": {
+					"text": "Delirium Encounters in Area contain all Unique Delirium Bosses<br>Can only be used with Tier 11+ Maps"
+				},
+				"Delirium Scarab of Delusions": {
+					"text": "Maps found in Area have layers of Delirium"
+				},
+
+				"Blight Scarab": {
+					"text": "Area contains a Blight Encounter"
+				},
+				"Blight Scarab of Bounty": {
+					"text": "Blight Chests in Area have a 20% chance to be openable again"
+				},
+				"Blight Scarab of Oils": {
+					"text": "Blight Oils found in Area are 1 tier higher"
+				},
+				"Blight Scarab of Blooming": {
+					"text": "Blight Encounters in Area have up to 3 additional Unique Bosses<br>Unique enemies in Blight Encounters have 100% increased life<br>Tier 14+ Blighted Maps found in Area drop as Blight-Ravaged Maps instead"
+				},
+				"Blight Scarab of Invigoration": {
+					"text": "Each Empowering Tower in Areas grants Blighted Monsters in range increased Difficulty and Reward"
+				},
+
+				"Scarab of Monstrous Lineage": {
+					"text": "40% increased Magic Pack Size"
+				},
+				"Scarab of Adversaries": {
+					"text": "Area contains 4 additional Packs with Mirrored Rare Monsters"
+				},
+				"Mysterious Scarab": {
+					"text": "Area contains 40-60 additional Clusters of Mysterious Barrels"
+				},
+				"Scarab of Hunted Traitors": {
+					"text": "Area contains Hunted Traitors"
+				},
+				"Scarab of Stability": {
+					"text": "Portals to Area have a 50% chance to not be consumed on use"
+				},
+				"Scarab of Wisps": {
+					"text": "Monsters in Area have a chance to be Empowered by 1000 Wildwood Wisps"
+				},
+				"Scarab of Radiant Storms": {
+					"text": "Area contains a Resplendent Tempest"
+				},
+
+				"Horned Scarab of Bloodlines": {
+					"text": "All Monster packs in Area are at least Magic"
+				},
+				"Horned Scarab of Nemeses": {
+					"text": "Rare Monsters in Area have 2 additional Modifiers"
+				},
+				"Horned Scarab of Preservation": {
+					"text": "Other Scarabs are not consumed on use"
+				},
+				"Horned Scarab of Awakening": {
+					"text": "You can select one Imbued crafting option on the Map Device"
+				},
+				"Horned Scarab of Tradition": {
+					"text": "All Rare Monsters in Area have at least one Reward Modifier<br>Player Modifiers to Item Rarity and Item Quantity do not apply in Area"
+				},
+				"Horned Scarab of Glittering": {
+					"text": "Players in Area gain increased Item Rarity and Item Quantity for each Monster slain recently, up to 200% and 100% respectively"
+				},
+				"Horned Scarab of Pandemonium": {
+					"text": "Monster packs in Area have a 15% chance to be replaced by a random Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
+				}
 
 			}
 		},
@@ -4077,8 +4450,8 @@
 							"priority": -5
 						},
 						"Wraithlord": {
-							"text": "Drops from T17 boss.",
-							"priority": -3
+							"text": "Overridden in exceptions. Drops from T17 Ziggurat Map boss.",
+							"priority": -9
 						}
 					}
 				},
@@ -4205,7 +4578,7 @@
 							"priority": -8
 						},
 						"Yoke of Suffering": {
-							"text": "Drops from T17 boss.",
+							"text": "Drops from T17 Fortress Map boss.",
 							"priority": -3
 						}
 					}
@@ -4812,7 +5185,7 @@
 					"text": null,
 					"items": {
 						"The Dark Seer": {
-							"text": "Drops from T17 boss.",
+							"text": "Drops from T17 Sanctuary Map boss.",
 							"priority": -3
 						}
 					}
@@ -4821,7 +5194,7 @@
 					"text": null,
 					"items": {
 						"Malachai's Mark": {
-							"text": "Drops from T17 boss.",
+							"text": "Drops from T17 Abomination Map boss.",
 							"priority": -3
 						}
 					}
@@ -4830,7 +5203,7 @@
 					"text": null,
 					"items": {
 						"Manastorm": {
-							"text": "Drops from T17 boss.",
+							"text": "Drops from T17 Citadel Map boss.",
 							"priority": -3
 						}
 					}
@@ -4913,6 +5286,15 @@
 						"Grattus Signet": {
 							"text": "Crafted in Necropolis",
 							"priority": -8
+						}
+					}
+				},
+				"Glorious Plate": {
+					"text": null,
+					"items": {
+						"Kaom's Heart": {
+							"text": "Overridden in exceptions",
+							"priority": -9
 						}
 					}
 				},
