@@ -550,7 +550,7 @@ Chapter() {
         }
 
         Section("Special rares") {
-            Description("Necropolis items with Necropolis-Exclusive mods are highlighte dusing this rule");
+            Description("Necropolis items with Necropolis-Exclusive mods are highlighted using this rule");
             QuickUI([0.0, "Identified Mods: Necropolis", "exoticmods;necropoliscraft"], "SH", []);
             Description("This rule (attempts) to highlight any item crafted in the Necropolis hideout area");
             QuickUI([0.0, "Crafting-Zone Dropped Items", "rare->utility->droppeditems;any"], "SH", [], "Crafting-Zone Dropped Items");
