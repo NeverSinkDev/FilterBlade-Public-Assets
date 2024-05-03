@@ -203,7 +203,7 @@ StyleSection("Generic Jewels", "Jewel sockets are an important part of most buil
     Search S0("skip", "Magic Generic Jewel") { Rarity Magic; BaseType "Viridian Jewel"; ItemLevel 80;}
     SS_Item("S0");
 
-    SS_InfoBox(["Detailed explanation", "Generic jewels come in 3 types: red, green and blue. The red ones have affinities towards rolling melee mods and physical defense, green ones focus on bows, daggers, evasion etc and blue ones focus on spellcasters, energy shield and minions. <hr> A particulary valuable corruption result is the 'corrupting blood cannot be inflicted on you' implicit. <hr> Jewels with 3+ crit damage mltipliers and/or a life roll tend to be extremely valuable."]);
+    SS_InfoBox(["Detailed explanation", "Generic jewels come in 3 types: red, green and blue. The red ones have affinities towards rolling melee mods and physical defense, green ones focus on bows, daggers, evasion etc and blue ones focus on spellcasters, energy shield and minions. <hr> A particularly valuable corruption result is the 'corrupting blood cannot be inflicted on you' implicit. <hr> Jewels with 3+ crit damage multipliers and/or a life roll tend to be extremely valuable."]);
 }
 
 StyleSection("Abyss Jewels", "Abyss Jewels can be socketed into the tree or abyssal sockets in items. They come in 4 versions and roll better mods on high itemlevels.") {
@@ -358,7 +358,7 @@ SS_Ad();
 
 SS_SectionTitle("Leveling items");
 
-StyleSection("Leveling: Flasks", "While leveling: the current (for that zone) top tier life/mana/hybrid flasks will receive a red/blue/purple border. Upgrade these regulary.") {
+StyleSection("Leveling: Flasks", "While leveling: the current (for that zone) top tier life/mana/hybrid flasks will receive a red/blue/purple border. Upgrade these regularly.") {
      Search S0("skip", "Leveling: Life Flask") { BaseType "Large Life Flask"; ItemLevel 6; Rarity Normal; }
      Search S0("skip", "Leveling: Mana Flask") { BaseType "Large Mana Flask"; ItemLevel 6; Rarity Normal; }
      Search S0("skip", "Leveling: Hybrid Flask") { BaseType "Small Hybrid Flask"; Rarity Normal; ItemLevel 10; }
