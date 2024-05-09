@@ -3412,7 +3412,7 @@
 					"text": null,
 					"items": {
 						"Paradoxica": {
-							"text": "Drops from Syndicate Safehouse (Jun).",
+							"text": "Drops from Intervention Safehouse members",
 							"priority": -3
 						}
 					}
@@ -3488,7 +3488,7 @@
 					"text": null,
 					"items": {
 						"The Crimson Storm": {
-							"text": "Drops from Syndicate Safehouse (Jun).",
+							"text": "Drops from Fortification Safehouse members",
 							"priority": -3
 						}
 					}
@@ -4486,7 +4486,7 @@
 					"text": null,
 					"items": {
 						"Hyperboreus": {
-							"text": "Drops from Syndicate Safehouse.",
+							"text": "Drops from Transportation Safehouse members",
 							"priority": -3
 						},
 						"Cyclopean Coil": {
@@ -4725,7 +4725,7 @@
 							"priority": -1
 						},
 						"Vivinsect": {
-							"text": "Drops from Syndicate Safehouse.",
+							"text": "Drops from Research Safehouse members",
 							"priority": -3
 						},
 						"Brinerot Mark": {
@@ -5502,10 +5502,6 @@
 							"text": "Drops from The Eater of Worlds.",
 							"priority": -5
 						},
-						"Impossible Escape": {
-							"text": "Drops from The Uber Maven.",
-							"priority": -5
-						},
 						"The Balance of Terror": {
 							"text": "Drops from Lycia with corresponding relic equipped.",
 							"priority": -8
@@ -5618,6 +5614,10 @@
 						"Combat Focus": {
 							"text": "Does not drop. Created with a vendor recipe.",
 							"priority": -10
+						},
+						"Impossible Escape": {
+							"text": "Drops from The Uber Maven.",
+							"priority": -5
 						}
 					}
 				},
@@ -5719,6 +5719,75 @@
 						"Forbidden Flame": {
 							"text": "Drops from The Searing Exarch.",
 							"priority": -5
+						},
+						"The Adorned": {
+							"text": "Created with a recipe or drops from unique vaal side area.",
+							"priority": -8
+						}
+					}
+				},
+				"Candlestick Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Second Sacrament": {
+							"text": "Lycia drops the Winds of Fate."
+						}
+					}
+				},
+				"Censer Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Blood of Innocence": {
+							"text": "Lycia drops the Balance of Terror."
+						},
+						"The Hour of Divinity": {
+							"text": "Duplicates up to 2 random Offer Rewards"
+						}
+					}
+				},
+				"Coffer Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The First Crest": {
+							"text": "Aureus Coins are converted to Experience/Relics/Tainted Currency"
+						}
+					}
+				},
+				"Papyrus Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Original Scripture": {
+							"text": "Lycia drops the Original Sin"
+						}
+					}
+				},
+				"Processional Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Chains of Castigation": {
+							"text": "Lycia drops Sandstorm Visage"
+						},
+						"The Gilded Chalice": {
+							"text": "Duplicates up to 4 random Offer Rewards"
+						}
+					}
+				},
+				"Tome Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Broken Censer": {
+							"text": "Lycia drops 2 additional Forbidden Tomes"
+						},
+						"The Power and the Promise": {
+							"text": "Lycia drops Eternal Damnation"
+						}
+					}
+				},
+				"Urn Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Night Lamp": {
+							"text": "Lycia drops an additional Forbidden Tome"
 						}
 					}
 				}
