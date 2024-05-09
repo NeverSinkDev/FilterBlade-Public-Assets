@@ -2648,7 +2648,8 @@ Chapter() {
         Section("Stacked Divination Cards", "StackedDeck") {
             Function StackedDivCardFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Divination Cards", "OA"]); }
 
-            StackedDivCardFunc([0.0, "Stacked Divination Cards", "divination;exstack"], "SH");
+            Description("Designed to highlight T4 and T5 divination cards if they drop in a stack. Useful, if you want to see the cards only if they're stacked.")
+            StackedDivCardFunc([0.0, "Stacked Divination Cards", "divination;exstack"], "SH", "Stacked Low Tier Div Cards");
 
             // new tiers
             Conditional("?StackedDivCardsNewTier") { }
