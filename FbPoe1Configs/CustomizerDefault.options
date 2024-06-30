@@ -798,7 +798,7 @@ Chapter() {
         Section("Ultimatum, Sanctum, Incursion", "InscribedUltimatum") {
             QuickUI([1.0, "Chronicle of Atzoatl (Incursion Temple Map Item)", "miscmapitemsextra;itemizedleagues"], "SH", [], "Incursion and Ultimatum", "", "Note: There's sadly NO way to filter these by reward, health percentage, rooms etc.");
 
-            QuickUI([0.0, "Itemized Sanctum (high level)", "exoticmap->sanctum;ilvl83"], "SH", ["ItemLevel"], "Forbidden Tome / Sanctum (high level)");
+            QuickUI([0.0, "Itemized Sanctum (high level)", "exoticmap->sanctum;ilvl83"], "SH", ["ItemLevel"], "Forbidden Tome (high level)");
             QuickUI([0.0, "Itemized Sanctum", "exoticmap->sanctum;any"], "SH", [], "Forbidden Tome / Sanctum"); // Sanctum Vaults Research -> started run
         }
 
@@ -2375,12 +2375,9 @@ Chapter() {
 
         Title("Weapons");
 
-        Section("Physical Weapons") {
+        Section("Attack Weapons") {
             ModItemUI([0.0, "ModFilter: Veiled Phys Weapons", "rareid;weapon_phys"], "SD", "Phys Weapons 1");
             ModItemUI([0.0, "ModFilter: Phys Weapons, 2", "rareid;weapon_physpure"], "SD", "Phys Weapons 2");
-        }
-
-        Section("Elemental Weapons") {
             ModItemUI([0.0, "ModFilter: Ele Weapons, 3", "rareid;weapon_ele"], "SD", "Ele Weapons 1");
             ModItemUI([0.0, "ModFilter: Ele Weapons, 4", "rareid;weapon_elepure"], "SD", "Ele Weapons 2");
         }
@@ -2392,6 +2389,7 @@ Chapter() {
             ModItemUI([0.0, "ModFilter: Ele+Chaos Caster Weapons, chaos", "rareid;caster_chaosweapont2"], "SD", "Chaos caster");
             ModItemUI([0.0, "ModFilter: Physical Caster Weapons", "rareid;caster_physweapont2"], "SD", "Physical caster");
             ModItemUI([0.0, "ModFilter: BladeBlast", "rareid;bladeblast_2core"], "SD", "Blade Blast Daggers");
+            ModItemUI([0.0, "ModFilter: Spellslinger Weapons, 4", "rareid;caster_slingert2"], "SD", "Spellslinger Weapons");
         }
 
         Section("Gem Weapons") {
@@ -2400,24 +2398,19 @@ Chapter() {
             ModItemUI([0.0, "Mod items D", "rareid;gem_staves"], "SD", "Gem Staves");
         }
 
-        Section("Spellslinger Weapons") {
-            ModItemUI([0.0, "ModFilter: Spellslinger Weapons, 4", "rareid;caster_slingert2"], "SD", "Spellslinger Weapons");
+        Section("Quivers") {
+            BasicModItemUI([0.0, "ModFiltering: Quiver1", "rareid;quiv_hit"], "Hit Quivers");
+            BasicModItemUI([0.0, "ModFiltering: Quiver, DoT", "rareid;quiv_dot"], "DoT Quivers");
         }
 
-        Title("Gear");
+        Title("Gear & Jewellery");
 
-        Section("Boots") {
+        Section("Boots, Gloves, Helmets") {
             BasicModItemUI([0.0, "ModFiltering: Boots 1", "rareid;boots_life_based"], "Life Boots");
-            BasicModItemUI([0.0, "ModFiltering: Boots ES 3", "rareid;boots_es_based"], "ES Boots");
-        }
-
-        Section("Gloves") {
             BasicModItemUI([0.0, "ModFiltering: Gloves1", "rareid;gloves_life_based"], "Life Gloves");
-            BasicModItemUI([0.0, "ModFiltering: Gloves3", "rareid;gloves_es_based"], "ES Gloves");
-        }
-
-        Section("Helmets") {
             BasicModItemUI([0.0, "ModFiltering: Helmets1", "rareid;helmet_life_based"], "Life Helmets");
+            BasicModItemUI([0.0, "ModFiltering: Boots ES 3", "rareid;boots_es_based"], "ES Boots");
+            BasicModItemUI([0.0, "ModFiltering: Gloves3", "rareid;gloves_es_based"], "ES Gloves");
             BasicModItemUI([0.0, "ModFiltering: Helmets ES 3", "rareid;helmet_es_based"], "ES Helmets");
         }
 
@@ -2435,36 +2428,21 @@ Chapter() {
             BasicModItemUI([0.0, "ModFiltering: Shields Def", "rareid;shield_defensefocus"], "Shields Def");
         }
 
-        Title("Jewellery");
-
-        Section("Belts") {
+        Section("Jewellery") {
+            Title("Belts");
             BasicModItemUI([0.0, "ModFiltering: Belts1", "rareid;belt_general"], "Belts");
-        }
-
-        Section("Rings") {
+            Title("Rings");
             BasicModItemUI([0.0, "ModFiltering: Rings1", "rareid;ring_attack"], "Attacks Rings");
             BasicModItemUI([0.0, "ModFiltering: Rings3", "rareid;ring_caster"], "Caster Rings");
             BasicModItemUI([0.0, "ModFiltering: Minion Ring", "rareid;ring_minion"], "Minion Rings");
-        }
-
-        Section("Amulets") {
+            Title("Amulets");
             BasicModItemUI([0.0, "ModFiltering: Amulets +1 All Gems", "rareid;amu_exalter"], "Amulets with +1 to all skill gems");
-            Divider();
             BasicModItemUI([0.0, "ModFiltering: Amulets1", "rareid;amu_1coreattack"], "Attack Amulets");
             BasicModItemUI([0.0, "ModFiltering: Amulets3", "rareid;amu_2coreattack"], "Attack Amulets");
-            Divider();
             BasicModItemUI([0.0, "ModFiltering: Amulets4", "rareid;amu_1corecaster"], "Caster Amulets");
             BasicModItemUI([0.0, "ModFiltering: Amulets5", "rareid;amu_2corecaster"], "Caster Amulets");
-            Divider();
             BasicModItemUI([0.0, "ModFiltering: Amulets DoT 1", "rareid;amu_1coredot"], "DoT Caster Amulets");
             BasicModItemUI([0.0, "ModFiltering: Amulets DoT 2", "rareid;amu_2coredot"], "DoT Caster Amulets");
-        }
-
-        Title("Misc.");
-
-        Section("Quivers") {
-            BasicModItemUI([0.0, "ModFiltering: Quiver1", "rareid;quiv_hit"], "Hit Quivers");
-            BasicModItemUI([0.0, "ModFiltering: Quiver, DoT", "rareid;quiv_dot"], "DoT Quivers");
         }
 
         Section("Jewels") {
@@ -2493,11 +2471,6 @@ Chapter() {
 //            ModItemUI([1.0, "ModFilter: Magic - Physical weapons", "magicid;phys"], "SD");
 //            ModItemUI([1.0, "ModFilter: Magic - Caster", "magicid;damagemods"], "SD");
 //            ModItemUI([1.0, "ModFilter: Magic - 35% Movement speed boots", "magicid;speed"], "SD");
-
-            ModItemUI([0.0, "ModFiltering: Magic - Plus 2 All Minion Skills Helmet", "magicid;t1minionhelm"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Caster", "magicid;t1caster"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Projectile", "magicid;t1proj"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T1 Amulet", "magicid;t1amu"], "SH");
 //            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Gloves", "magicid;recogloves"], "SH");
 //            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Boots", "magicid;recoboots"], "SH");
 //            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Helmets", "magicid;recohelmets"], "SH");
@@ -2507,15 +2480,20 @@ Chapter() {
 //            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Cold Caster", "magicid;recocastercold"], "SH");
 //            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Lightning Caster", "magicid;recocasterlight"], "SH");
 //            ModItemUI([0.0, "ModFiltering: Magic - T1 Recombinator Physical Caster", "magicid;recocasterphys"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Quiver", "magicid;t2quiver"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Caster", "magicid;t2caster"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Amulet", "magicid;t2amu"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Shield", "magicid;t2shield"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Suppression", "magicid;t2suppress"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Physical", "magicid;t2purephys"], "SH"]);
-            ModItemUI([0.0, "ModFiltering: Magic - T2 DoT Wand", "magicid;t2dotwand"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Sceptre", "magicid;t2sceptre"], "SH");
-            ModItemUI([0.0, "ModFiltering: Magic - T2 Elemental Weapons", "magicid;t2eleweapons"], "SH");
+
+            ModItemUI([0.0, "ModFiltering: Magic - Plus 2 All Minion Skills Helmet", "magicid;t1minionhelm"], "SH", "+2 MinionGem Helmets");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Caster", "magicid;t1caster"], "SH", "+1 All Spell Weapons");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Projectile", "magicid;t1proj"], "SH", "+2 Proj Bows");
+            ModItemUI([0.0, "ModFiltering: Magic - T1 Amulet", "magicid;t1amu"], "SH", "+1 All Skill Amulets");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Quiver", "magicid;t2quiver"], "SH", "+1 Proj Quivers");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Caster", "magicid;t2caster"], "SH", "+1 to Gem Type Weapons");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Amulet", "magicid;t2amu"], "SH", "+1 to Gem Type Amu");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Shield", "magicid;t2shield"], "SH", "+2% Max Resist Shield");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Suppression", "magicid;t2suppress"], "SH", "Top Suppression Items");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Physical", "magicid;t2purephys"], "SH"], "Merciless&Dictator Phys Weapons");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 DoT Wand", "magicid;t2dotwand"], "SH", "DoT Wands");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Sceptre", "magicid;t2sceptre"], "SH", "DoT Sceptres");
+            ModItemUI([0.0, "ModFiltering: Magic - T2 Elemental Weapons", "magicid;t2eleweapons"], "SH", "Top Elemental Caster Weapons");
         }
     }
     Section("Misc. Items", "GoldenKey") {
@@ -2537,7 +2515,7 @@ Chapter() {
 
             QuickUI([1.0, "Maven's invitations", "questlike;invitations"], "S", [], "Maven's Quest-Only Invitations");
             QuickUI([0.0, "Quest Items", "questlikeexception;questitems"], "S", [], "Random Quest Items");
-            QuickUI([0.0, "Labyrinth Items", "questlike;labyrinthconsumable"], "S", [], "Labyrinth Items (Keys and Trinkets, NOT Offerings)");
+            QuickUI([0.0, "Labyrinth Items", "questlike;labyrinthconsumable"], "S", [], "Lab-Items (Keys and Trinkets)");
             QuickUI([0.0, "Incursion Item", "questlike;incursionconsumable"], "S", [], "Incursion Stones of Passage");
             QuickUI([0.0, "Heist Target", "heisttarget;any"], "S", [], "Heist Target");
             QuickUI([0.0, "Atlas Voidstones", "artefact->trinkets;any"], "SD", []);
@@ -2585,15 +2563,11 @@ Chapter() {
 
     Section("Optional filter modules", "Animate Weapon") {
 
-        Description("These fairly exotic or build-specific functions are disabled in all filter sub-versions by default. You can use this menu to enable them.");
+        Description("ANIMATE WEAPON: This section should only interest Animate Weapon skill-gem users. Please note that if you use Cloak/Transfigured AW Gems, you'll have to activate multiple entries below, not only one. This entry has a lower priority than crafting, chancing, and other valuable normal/magic weapons.");
 
-        Section("Animate weapon mode") {
-            Description("This section should only interest Animate Weapon skill-gem users. Please note that if you use Cloak/Spirit Guards, you'll have to activate multiple entries below, not only one. This entry has a lower priority than crafting, chancing, and other valuable normal/magic weapons.");
-
-            QuickUI([0.0, "Animate weapon (normal)", "animatedweapons;normalmelee"], SHD);
-            QuickUI([0.0, "Animate weapon (Spirit Guards)", "animatedweapons;normalranged"], SHD);
-            QuickUI([0.0, "Animate weapon (Cloak of Tawm'r Isley)", "animatedweapons;magicmelee"], SHD);
-            QuickUI([0.0, "Animate weapon (Spirit Guards + Cloak)", "animatedweapons;magicranged"], SHD);
-        }
+        QuickUI([0.0, "Animate weapon (normal)", "animatedweapons;normalmelee"], SHD, [], "AW: Default Mode");
+        QuickUI([0.0, "Animate weapon (Spirit Guards)", "animatedweapons;normalranged"], SHD, [], "AW: Ranged Arms");
+        QuickUI([0.0, "Animate weapon (Cloak of Tawm'r Isley)", "animatedweapons;magicmelee"], SHD, [], "AW: Cloak");
+        QuickUI([0.0, "Animate weapon (Spirit Guards + Cloak)", "animatedweapons;magicranged"], SHD, [], "AW: Cloak + Ranged");
     }
 }
