@@ -68,9 +68,9 @@ Chapter() {
         Section("Jeweller's Orbs", "Jeweller") {
             Description("7 Jeweller's Orb - reward for selling an item with 6 sockets.");
 
-            QuickUI([0.0, "6 sockets (large)", "socketslinks;6sockets4h"], "SD", ["AreaLevel", "Height"]);
-            QuickUI([0.0, "6 sockets", "socketslinks;6sockets"], "SD", ["AreaLevel", "Height"]);
-            QuickUI([0.0, "6sock-5links", "socketslinks;5link6sockets"], "SD", ["AreaLevel", "Height"], "6 Sockets with 5 links");
+            QuickUI([0.0, "Jeweller recipe 6 sockets (large)", "socketslinks;6sockets4h"], "SD", ["AreaLevel", "Height"], "6 sockets (large)");
+            QuickUI([0.0, "Jeweller recipe 6 sockets", "socketslinks;6sockets"], "SD", ["AreaLevel", "Height"], "6 sockets");
+            QuickUI([0.0, "Jeweller recipe 6sock-5links", "socketslinks;5link6sockets"], "SD", ["AreaLevel", "Height"], "6sock-5links");
         }
 
         Title("Build & Special-Item Recipes");
