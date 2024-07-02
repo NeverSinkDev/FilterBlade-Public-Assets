@@ -1404,12 +1404,12 @@ Chapter() {
             QuickUI(S0, "SD", ["DropLevel", "ItemLevel", "SocketedGearClasses"]);
         }
 
-        Section("Blight Annointed Items", "BlightOil") {
-            QuickUI([0.0, "Blight Annointed Items", "exotic->enchanted;anointedamulets"], "SHD", ["ItemLevel", "DropLevel", "Corrupted", "JewelleryClasses"]);
+        Section("Blight Anointed Items", "BlightOil") {
+            QuickUI([0.0, "Blight Annointed Items", "exotic->enchanted;anointedamulets"], "SHD", ["ItemLevel", "DropLevel", "Corrupted", "JewelleryClasses"], "Anointed Amulets&Rings");
 
-            Warning("The rules below ONLY work for annointed rings. As of now PoE filters can't distinguish amulet annointments.");
-            QuickUI([0.0, "Extractable Gold Blight Annointments", "exotic->enchanted;enchantedringsgoldoil"], "SD", "", "Gold Oil Ring Annointments");
-            QuickUI([0.0, "Extractable Silver Blight Annointments", "exotic->enchanted;enchantedringssilveroil"], "SD", "", "Silver Oil Ring Annointments");
+            Warning("The rules below ONLY work for annointed rings. As of now PoE filters can't distinguish amulet anointments.");
+            QuickUI([0.0, "Extractable Gold Blight Annointments", "exotic->enchanted;enchantedringsgoldoil"], "SD", "", "Gold Oil Ring Anointments");
+            QuickUI([0.0, "Extractable Silver Blight Annointments", "exotic->enchanted;enchantedringssilveroil"], "SD", "", "Silver Oil Ring Anointments");
         }
 
         Title("Exotic Identified Mods");
