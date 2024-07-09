@@ -2231,8 +2231,6 @@ Chapter() {
         }
     }
 
-    Section("Exotic Unique Rules", "Tabula")
-    {
         Section("Exotics: Links&Sockets", "Tabula") {
             Search S1("0.0", "Unique Exception: Tabula Rasa") { BaseType "Simple Robe"; SocketGroup "WWWWWW"; Rarity Unique; }
             Title("Uniques with high Socket/Link Number");
@@ -2240,9 +2238,9 @@ Chapter() {
             QuickUI([0.0, "5 linked uniques", "uniques;5link"], "SD");
             QuickUI([0.0, "6 Socket Uniques", "uniques;6s"], "SD");
             Title("Specific Uniques With Exotics Sockets");
-            QuickUI(["0.0", "Unique Exception: The Squire", "uniques;exsquire"], "S", [], "The Squire", [], "The squire always drops with 3 white sockets and we use that data to identify it! This may lead to you getting bamboozeled by a corrupted oppressor unique!");
-            QuickUI(S1, "SH", [], "Tabula Rasa", [], "Because of its always present 6 white, linked sockets, Tabula Rasa is a unique that can always be identified with certainty, even though Thousand Ribbons has the same BaseType.");
-            QuickUI([0.0, "Unique Exception: Kaom's Heart", "uniques;exkaom"], "SH", [], "Kaom's Heart", ["GearPlusFlasks", "OAS"]);
+            QuickUI(["0.0", "Unique Exception: The Squire", "uniques;exsquire"], "S", [], "The Squire", [], "This rule detects The Squire using the fact that it always drops with 3 white sockets.<br>This rule can occasionally show The Oppressor with 3 white sockets.");
+            QuickUI(S1, "SH", [], "Tabula Rasa", [], "This rule detects Tabula Rasa using the fact that it always drops with 6 white linked sockets.<br>This can extremely rarely show Thousand Ribbons with 6 white linked sockets");
+            QuickUI([0.0, "Unique Exception: Kaom's Heart", "uniques;exkaom"], "SH", [], "Kaom's Heart", ["GearPlusFlasks", "OAS"], "This rule detects Kaom's Heart using the fact that it has no sockets.<br>You can detect other socketless uniques in this rule by adding their basetypes:<br>Kaom's Roots: Titan Greaves<br>The Grey Spire: Judgement Staff");
         }
 
         Section("Exotics: Replica Uniques", "HeistReplicaUnique", "E") {
@@ -2264,16 +2262,17 @@ Chapter() {
 
         Section("Exotics: Abyss Sockets") {
             Search S2("0.0", "Unique Exception: Two Abyss Socket Uniques", "uniques;2xabyss") { BaseType "Steelscale Gauntlets"; SocketGroup "A A"; Rarity Unique; }
-            QuickUI([0.0, "Unique Exception: Four Abyss Socket Uniques", "uniques;4xabysshelmet"], "SH", ["Sockets"], "Wraithlord (4A)", ["GearPlusFlasks", "OSA"]);
-            QuickUI([0.0, "Unique Exception: Three Abyss Socket Uniques", "uniques;3xabyss"], "SD", ["Sockets"], "Shroud of the Lightless (3A)", ["GearPlusFlasks", "OSA"], "Specifically detects the Shroud of the lightless unique with 3 abyss sockets that drops very rarely from lich-abyss encounters");
-            QuickUI(S2, "SD", ["Sockets"], "Abyss Uniques (2A Sockets)", ["GearPlusFlasks", "OSA"]);
+            QuickUI([0.0, "Unique Exception: Four Abyss Socket Uniques", "uniques;4xabysshelmet"], "SH", ["Sockets"], "Wraithlord (4A)", ["GearPlusFlasks", "OSA"], "This rule detects Wraithlord using the fact that it always has 4 Abyssal Sockets");
+            QuickUI([0.0, "Unique Exception: Three Abyss Socket Uniques", "uniques;3xabyss"], "SD", ["Sockets"], "Shroud of the Lightless (3A)", ["GearPlusFlasks", "OSA"], "This rule detects Shroud of the Lightless variation with 3 Abyssal Sockets ");
+            QuickUI(S2, "SD", ["Sockets"], "Abyss Uniques (2A Sockets)", ["GearPlusFlasks", "OSA"], "This rule detects 2 Abyssal Socket variations of Tombfist, Command of the Pit, Lightpoacher, Hale Negator and Bubonic Trail.<br>You can also add Carnal Armour to this rule to make it detect 2 Abyssal Socket variation of Shroud of the Lightless");
         }
 
         Section("Exotics: Influenced&Synthesized") {
-            QuickUI([0.0, "Synthesis Jewels", "uniques;exrationaljewel"], "SH", ["AllGearClassesPlusJewel"], "Rational Doctrine Jewel", ["GearPlusFlasks", "OAS"], "This rule detects the synthesised rational doctrine jewel that rarely drops from the uber-cortex encounter.");
-            QuickUI([0.0, "Uber Impresence Unique", "uniques;exuberimpresence"], "SD", [], "Double-Curse Impresence", ["GearPlusFlasks", "OAS"], "This rule detects the very rare double-impresence drop that can only happen when fighting the uber-uber-elder. The drop is detected via the influence.");
-            QuickUI([0.0, "Unique Shaper Sword", "uniques;exforgesword"], "SH", [], "Starforge and Voidforge", ["GearPlusFlasks", "OAS"], "These uniques are rare drops from the shaper and uber elder fights. Note that the third sword - the echoforge is not detected by these rules. It's not advised to hide infernal unique swords from filtering.");
-            QuickUI([0.0, "Unique Exception: Synthesis Rings", "uniques;exsynth"], "SD", ["AllGearClasses"], "Synthesized Uniques", ["GearPlusFlasks", "OAS"], "These rings drop from the synthesized memory bosses");
+            QuickUI([0.0, "Synthesis Jewels", "uniques;exrationaljewel"], "SH", ["AllGearClassesPlusJewel"], "Rational Doctrine Jewel", ["GearPlusFlasks", "OAS"], "This rule detects Rational Doctrine using the fact that it is Synthesised.");
+            QuickUI([0.0, "Unique Exception: Synthesis Rings", "uniques;exsynth"], "SD", ["AllGearClasses"], "Synthesized Uniques", ["GearPlusFlasks", "OAS"], "This rule detects Circle of Guilt, Circle of Anguish, Circle of Fear, Circle of Nostalgia and Circle of Regret rings using the fact that they are Synthesised.<br>You can detect other Synthesised uniques in this rule or in Rational Doctrine rule by adding their basetypes:<br>Garb of the Ephemeral: Savant's Robe<br>Mask of the Tribulan: Magistrate Crown<br>Nebulis: Void Sceptre<br>Offering to the Serpent: Legion Gloves");
+            QuickUI([0.0, "Uber Impresence Unique", "uniques;exuberimpresence"], "SD", [], "Double-Curse Impresence", ["GearPlusFlasks", "OAS"], "This rule detects the very rare two-curse Impresence that drops from Uber Uber Elder using the fact that it has both Shaper and Elder influence.<br>You can detect other items that have both Shaper and Elder influences in this rule by adding their basetypes:<br>Indigon: Hubris Circlet<br>Voidfletcher: Primal Arrow Quiver<br>Disintegrator: Maelström Staff<br>Call of the Void: Sapphire Ring<br>Eternity Shroud: Blood Raiment<br>Voidforge: Infernal Sword");
+            QuickUI([0.0, "Unique Shaper Sword", "uniques;exforgesword"], "SH", [], "Starforge and Voidforge", ["GearPlusFlasks", "OAS"], "This rule detects Starforge and Voidforge using the fact that they have one of the Elder or Shaper influence.<br>Note that this rule does not detect Echoforge so if you disable Infernal Sword it will still hide that.<br>You can detect other items that have either of Shaper or Elder influences in this rule by adding their basetypes:<br>Mark of the Shaper: Opal Ring<br>Soul Ascension: Carnal Mitts<br>Shaper's Touch: Crusader Gloves<br>Voidwalker: Murder Boots<br>Solstice Vigil and Impresence: Onyx Amulet<br>Echoes of Creation: Royal Burgonet<br>The Tides of Time: Vanguard Belt<br>Entropic Devastation and Blasphemer's Grasp: Assassin's Mitts<br>Cyclopean Coil: Leather Belt<br>Hopeshredder: Ranger Bow<br>Shimmeron: Tornado Wand");
+            
         }
 
         Section("Exotics: Corrupted Uniques") {
