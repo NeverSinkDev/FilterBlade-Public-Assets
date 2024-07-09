@@ -2231,6 +2231,8 @@ Chapter() {
         }
     }
 
+    Section("Exotic Unique Rules", "Tabula")
+    {
         Section("Exotics: Links&Sockets", "Tabula") {
             Search S1("0.0", "Unique Exception: Tabula Rasa") { BaseType "Simple Robe"; SocketGroup "WWWWWW"; Rarity Unique; }
             Title("Uniques with high Socket/Link Number");
