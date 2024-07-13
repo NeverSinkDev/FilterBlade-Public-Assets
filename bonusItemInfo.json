@@ -4451,6 +4451,10 @@
 						},
 						"Wraithlord": {
 							"text": "Overridden in exceptions. Drops from T17 Ziggurat Map boss.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Four Abyss Socket Uniques",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						}
 					}
@@ -5294,6 +5298,10 @@
 					"items": {
 						"Kaom's Heart": {
 							"text": "Overridden in exceptions",
+							"ruleLink": {
+								"entryName": "Unique Exception: Kaom's Heart",
+								"text": "Link to exception rule"
+							},
 							"priority": -9
 						}
 					}
