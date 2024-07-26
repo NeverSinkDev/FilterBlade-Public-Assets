@@ -242,10 +242,10 @@ StyleSection("Chromatic Orb", "All red-green-blue linked items sell for exactly 
     SS_InfoBox(["Detailed explanation", "Small items like Wands or Boots have additional highlighting for the recipe because the reward of it is always the same, no matter the item size. As your build gets faster you might want to disable this highlight, as you might have enough chromatics at this point."]);
 }
 
-StyleSection("Cartographer's Chisel", "Selling a 20% hammer, gavel, or rock breaker together with any map will award you with a Cartographer's Chisel. This recipe is rather low profit and not recommended by most players.") {
+StyleSection("Cartographer's Chisel", "Selling a 20% gavel together with any map will award you with a Cartographer's Chisel. This recipe is rather low profit and not recommended by most players.") {
     Search S0("skip", "20%q chisel recipe") { BaseType "Gavel"; ItemLevel 66; Quality 20; SocketGroup "R RG"; Rarity Normal; Corrupted False; }
-    Search S0("skip", "15%q+ chisel recipe") { BaseType "Rock Breaker"; ItemLevel 66; Quality 15; SocketGroup "RB G"; Rarity Normal; Corrupted False; }
-    Search S0("skip", "random qual chisel recipe") { BaseType "Stone Hammer"; ItemLevel 66; Quality 5; SocketGroup "B R R"; Rarity Normal; Corrupted False; }
+    Search S0("skip", "15%q+ chisel recipe") { BaseType "Gavel"; ItemLevel 66; Quality 15; SocketGroup "RB G"; Rarity Normal; Corrupted False; }
+    Search S0("skip", "random qual chisel recipe") { BaseType "Gavel"; ItemLevel 66; Quality 5; SocketGroup "B R R"; Rarity Normal; Corrupted False; }
     SS_Item("S0");
 }
 

@@ -108,12 +108,12 @@ Chapter() {
         }
 
         Section("Cartographer's Chisel", "Chisel") {
-            Description("Not recommended as it's considered too slow. A Cartographer's Chisel is the reward for vendoring a 20% quality Gavel, Rock Breaker, or Stone Hammer together with any map.");
+            Description("Not recommended as it's considered too slow. A Cartographer's Chisel is the reward for vendoring a 20% quality Gavel together with any map.");
 
-            DeepSearch S1(0.0, "Chisel recipe mid quality A", "chiselrecipe;chiselhighqualnormal") { BaseType "Stone Hammer"; Quality 15; Rarity Normal; Corrupted False; }
-            DeepSearch S1(0.0, "Chisel recipe mid quality B", "chiselrecipe;chiselhighqualmagic") { BaseType "Stone Hammer"; Quality 18; Rarity Magic; Corrupted False; }
-            DeepSearch S2(0.0, "Chisel recipe low quality A", "chiselrecipe;chiselanyqualmagic") { BaseType "Stone Hammer"; Quality 12; Rarity Magic; Corrupted False; }
-            DeepSearch S2(0.0, "Chisel recipe low quality B", "chiselrecipe;chiselanyqualnormal") { BaseType "Stone Hammer"; Rarity Normal; Corrupted False; }
+            DeepSearch S1(0.0, "Chisel recipe mid quality A", "chiselrecipe;chiselhighqualnormal") { BaseType "Gavel"; Quality 15; Rarity Normal; Corrupted False; }
+            DeepSearch S1(0.0, "Chisel recipe mid quality B", "chiselrecipe;chiselhighqualmagic") { BaseType "Gavel"; Quality 18; Rarity Magic; Corrupted False; }
+            DeepSearch S2(0.0, "Chisel recipe low quality A", "chiselrecipe;chiselanyqualmagic") { BaseType "Gavel"; Quality 12; Rarity Magic; Corrupted False; }
+            DeepSearch S2(0.0, "Chisel recipe low quality B", "chiselrecipe;chiselanyqualnormal") { BaseType "Gavel"; Rarity Normal; Corrupted False; }
 
             QuickUI([0.0, "Chisel recipe top quality", "chiselrecipe;chisel20"], "SD", ["AreaLevel", "Quality", "Rarity"], "Maximum Quality");
             QuickUI(1, "SD", ["AreaLevel", "Quality", "Rarity"], "Magic Rarity, High Quality");
