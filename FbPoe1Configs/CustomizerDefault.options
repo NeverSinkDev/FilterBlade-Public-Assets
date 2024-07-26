@@ -820,8 +820,8 @@ Chapter() {
 
             FragmentsFunc([1.1, "Map Fragments T1", "fragments;t1"], "SH", "S Tier");
             FragmentsFunc([1.1, "Map Fragments T2", "fragments;t2"], "SH", "A Tier");
-            FragmentsFunc([1.1, "Map Fragments T3", "fragments;t3"], "SH", "B Tier");
-            FragmentsFunc([1.1, "Map Fragments T4 (remaining)", "fragments;t4"], "SH", "Others");
+            FragmentsFunc([1.1, "Map Fragments T3", "fragments;t4"], "SH", "B Tier");
+            FragmentsFunc([1.1, "Map Fragments T4 (remaining)", "fragments;t5"], "SH", "Others");
 
             Conditional("?MapFragmentNoBreachNewTier") { Show; Class "Map Fragments"; SetFontSize 45; SetBorderColor 0 0 0 255; PlayAlertSound 2 300; MinimapIcon 2 White Triangle; PlayEffect White; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; }
             ElementAdder_Tier("?MapFragmentNoBreachNewTier", "FragmentsFunc");
