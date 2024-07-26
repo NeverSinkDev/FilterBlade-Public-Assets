@@ -2640,7 +2640,7 @@ Chapter() {
         }
 
         Description("This rule (attempts) to highlight any item dropped in misc. hideout areas, such as the Bestiary or Azurite mine");
-        QuickUI([0.0, "Crafting-Zone Dropped Items", "rare->utility->droppeditems;any"], "SH", [], "Crafting-Zone Dropped Items");
+        QuickUI([0.0, "Crafting-Zone Dropped Items", "rare->utility->droppeditems;any"], "SHD", [], "Crafting-Zone Dropped Items");
     }
 
     Section("Optional filter modules", "Animate Weapon") {
