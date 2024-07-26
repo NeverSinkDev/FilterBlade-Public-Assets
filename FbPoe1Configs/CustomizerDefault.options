@@ -196,7 +196,7 @@ Chapter() {
             CurrencyStackList([0.0, "Stacked Currency - T7, Large", "currency->stackedthree;t7"], "SD", "E- Tier (Small Stack)");
         }
 
-        Section("Stacked Supplies: Transmutes, Armourer+", "Transmut") {
+        Section("Stacked Supplies: Trans, Armour+", "Transmut") {
             Title("Higher Supplies: Transmutes, Whetstones");
             CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Large", "currency->stackedsupplieshigh;t1"], "SD", "Higher Supplies: 10+ Stack");
             CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Medium", "currency->stackedsupplieshigh;t2"], "SD", "Higher Supplies: 5+ Stack");
@@ -578,8 +578,8 @@ Chapter() {
         }
 
         Section("Tinctures") {
-            QuickUI([0.0, "High Quality & ItemLevel Tinctures", "endgametinctures;overqual1"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
-            QuickUI([0.0, "Quality & High ItemLevel Tinctures", "endgametinctures;overqual2"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
+            QuickUI([0.0, "High Quality & ItemLevel Tinctures", "endgametinctures;overqual1"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"], "High Quality & ItemLevel");
+            QuickUI([0.0, "Quality & High ItemLevel Tinctures", "endgametinctures;overqual2"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"], "Quality & High ItemLevel");
             QuickUI([0.0, "High ItemLevel Tinctures", "endgametinctures;tinc82"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
             QuickUI([0.0, "Remaining Endgame Tinctures", "endgametinctures;any"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
             QuickUI([0.0, "Tinctures during campaign", "leveling->tincture;any"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
