@@ -55,7 +55,7 @@ StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. Th
     SS_Item("S0");
 }
 
-SS_SectionTitle("Current League: 3.24 Settlers of Kalguur");
+SS_SectionTitle("Current League: 3.25 Settlers of Kalguur");
 
 StyleSection("Gold", "You can find gold all throughout the game. Use it to hire workers and build your settlement.") {
     Search S0("skip") { BaseType "Gold"; StackSize 1; }
