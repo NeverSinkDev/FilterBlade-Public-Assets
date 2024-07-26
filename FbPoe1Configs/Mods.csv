@@ -2410,10 +2410,11 @@ of the Despot,1/6,Minions have 37-40% increased maximum Life,suffix,82,Weapon-Ca
 of Coordination,3/3,Minions have 16-20% increased Movement Speed,suffix,1,Weapon-Can-Roll-Minion-Modifiers
 of Orchestration,2/3,Minions have 21-25% increased Movement Speed,suffix,23,Weapon-Can-Roll-Minion-Modifiers
 of Masterminding,1/3,Minions have 26-30% increased Movement Speed,suffix,40,Weapon-Can-Roll-Minion-Modifiers
-of Adjustment,4/4,Minions have +11-15% to all Elemental Resistances,suffix,8,Weapon-Can-Roll-Minion-Modifiers
-of Acclimatisation,3/4,Minions have +16-20% to all Elemental Resistances,suffix,20,Weapon-Can-Roll-Minion-Modifiers
-of Adaptation,2/4,Minions have +21-25% to all Elemental Resistances,suffix,30,Weapon-Can-Roll-Minion-Modifiers
-of Evolution,1/4,Minions have +26-30% to all Elemental Resistances,suffix,40,Weapon-Can-Roll-Minion-Modifiers
+of Adjustment,5/5,Minions have +11-15% to all Elemental Resistances,suffix,8,Weapon-Can-Roll-Minion-Modifiers
+of Acclimatisation,4/5,Minions have +16-20% to all Elemental Resistances,suffix,20,Weapon-Can-Roll-Minion-Modifiers
+of Adaptation,3/5,Minions have +21-25% to all Elemental Resistances,suffix,30,Weapon-Can-Roll-Minion-Modifiers
+of Evolution,2/5,Minions have +26-30% to all Elemental Resistances,suffix,40,Weapon-Can-Roll-Minion-Modifiers
+of Metamorphosis,1/5,Minions have +(27-30)% to all Elemental Resistances,suffix,61,Ring-Can-Roll-Minion-Modifiers
 Runner's,6/6,10% increased Movement Speed,prefix,1,Boots
 Sprinter's,5/6,15% increased Movement Speed,prefix,15,Boots
 Sprinter's,,15-25% increased Movement Speed,prefix,5,Boots
@@ -2933,3 +2934,118 @@ of Tormented Souls,,Rare and Unique Monsters found in Areas are Possessed and th
 Otherworldly,,Slaying Enemies close together can attract monsters from Beyond this realm,prefix,68,Map
 Antagonist's,,20-30% increased number of Rare Monsters,prefix,68,Map
 Splitting,,Monsters fire 2 additional Projectiles,prefix,68,Map
+Steadfast,7/7,x% increased Chance to Block,prefix,1,"Str-Shield, Str-Dex-Shield, Str-Int-Shield"
+Unrelenting,6/7,x% increased Chance to Block,prefix,1,"Str-Shield, Str-Dex-Shield, Str-Int-Shield"
+Adamant,5/7,x% increased Chance to Block,prefix,1,"Str-Shield, Str-Dex-Shield, Str-Int-Shield"
+Warded,4/7,x% increased Chance to Block,prefix,1,"Str-Shield, Str-Dex-Shield, Str-Int-Shield"
+Unwavering,3/7,x% increased Chance to Block,prefix,1,"Str-Shield, Str-Dex-Shield, Str-Int-Shield"
+Enduring,2/7,x% increased Chance to Block,prefix,1,"Str-Shield, Str-Dex-Shield, Str-Int-Shield"
+Unyielding,1/7,x% increased Chance to Block,prefix,1,"Str-Shield, Str-Dex-Shield, Str-Int-Shield"
+of Haunting,,Various Mods,suffix,,Unknown
+Haunted,,Various Mods,prefix,,Unknown
+Cleaving,,(6-8)% increased Attack Speed with Axes,prefix,,Jewel
+Sinister,,(14-16)% increased Damage with Axes,prefix,,Jewel
+Parrying,,+1% Chance to BlockAttack Damage while Dual Wielding,prefix,,Jewel
+Shielding,,+1% Chance to BlockAttack Damage while holding a Shield,prefix,,Jewel
+Deflecting,,+1% Chance to BlockAttack Damage while wielding a Staff,prefix,,Jewel
+Volleying,,(6-8)% increased Attack Speed with Bows,prefix,,Jewel
+Fierce,,(14-16)% increased Damage with Bows,prefix,,Jewel
+Chaotic,,(9-13)% increased Chaos Damage,prefix,,Jewel
+Ripping,,(6-8)% increased Attack Speed with Claws,prefix,,Jewel
+Savage,,(14-16)% increased Damage with Claws,prefix,,Jewel
+Avalanching,,(14-18)% increased Critical Strike Chance with Cold Skills,prefix,,Jewel
+Arctic,,+(15-18)% to Critical Strike Multiplier with Cold Skills,prefix,,Jewel
+Chilling,,(14-16)% increased Cold Damage,prefix,,Jewel
+Cryomantic,,(3-5)% increased Cast Speed with Cold Skills,prefix,,Jewel
+Slicing,,(6-8)% increased Attack Speed with Daggers,prefix,,Jewel
+Lethal,,(14-16)% increased Damage with Daggers,prefix,,Jewel
+Harmonic,,(4-6)% increased Attack Speed while Dual Wielding,prefix,,Jewel
+Resonant,,(3-5)% increased Cast Speed while Dual Wielding,prefix,,Jewel
+Technical,,(14-18)% increased AttackCritical Strike Chance while Dual Wielding,prefix,,Jewel
+Puncturing,,+(15-18)% to Critical Strike Multiplier while Dual Wielding,prefix,,Jewel
+Gladiator's,,(12-14)% increased Attack Damage while Dual Wielding,prefix,,Jewel
+Dissipating,,+1% Chance to BlockSpell Damage while Dual Wielding,prefix,,Jewel
+Sorcerer's,,(14-16)% increased Spell Damage while Dual Wielding,prefix,,Jewel
+Serene,,(4-6)% faster start of Energy Shield Recharge,prefix,,Jewel
+Shimmering,,(6-8)% increased maximum Energy Shield,prefix,,Jewel
+Fevered,,(6-8)% increased Energy Shield Recharge Rate,prefix,,Jewel
+Incinerating,,(14-18)% increased Critical Strike Chance with Fire Skills,prefix,,Jewel
+Infernal,,+(15-18)% to Critical Strike Multiplier with Fire Skills,prefix,,Jewel
+Flaming,,(14-16)% increased Fire Damage,prefix,,Jewel
+Pyromantic,,(3-5)% increased Cast Speed with Fire Skills,prefix,,Jewel
+Armoured,,(14-18)% increased Armour,prefix,,Jewel
+Evasive,,(14-18)% increased Evasion Rating,prefix,,Jewel
+Energetic,,(12-15)% increased Mana Regeneration Rate,prefix,,Jewel
+Hungering,,(0.2-0.4)% of Physical Attack Damage Leeched as Life,prefix,,Jewel
+Thundering,,(14-18)% increased Critical Strike Chance with Lightning Skills,prefix,,Jewel
+Surging,,+(15-18)% to Critical Strike Multiplier with Lightning Skills,prefix,,Jewel
+Humming,,(14-16)% increased Lightning Damage,prefix,,Jewel
+Electromantic,,(3-5)% increased Cast Speed with Lightning Skills,prefix,,Jewel
+Beating,,(6-8)% increased Attack Speed with Maces or Sceptres,prefix,,Jewel
+Brutal,,(14-16)% increased Damage with Maces or Sceptres,prefix,,Jewel
+Thirsting,,(0.2-0.4)% of Physical Attack Damage Leeched as Mana,prefix,,Jewel
+Sabotage,,(14-16)% increased Mine Damage,prefix,,Jewel
+Arming,,(6-8)% increased Mine Throwing Speed,prefix,,Jewel
+Leadership,,Minions deal (14-16)% increased Damage,prefix,,Jewel
+Master's,,Minions have (8-12)% increased maximum Life,prefix,,Jewel
+Piercing,,+(15-18)% to Critical Strike Multiplier with One Handed Melee Weapons,prefix,,Jewel
+Harming,,(14-18)% increased Critical Strike Chance with One Handed Melee Weapons,prefix,,Jewel
+Bandit's,,(4-6)% increased Attack Speed with One Handed Melee Weapons,prefix,,Jewel
+Soldier's,,(12-14)% increased Damage with One Handed Weapons,prefix,,Jewel
+Vivid,,(5-7)% increased maximum Life,prefix,,Jewel
+Enlightened,,(8-10)% increased maximum Mana,prefix,,Jewel
+Sharpened,,(14-16)% increased Global Physical Damage,prefix,,Jewel
+Flanking,,(12-14)% increased Attack Damage while holding a Shield,prefix,,Jewel
+Charging,,(4-6)% increased Attack Speed while holding a Shield,prefix,,Jewel
+Warding,,(3-5)% increased Cast Speed while holding a Shield,prefix,,Jewel
+Thwarting,,+1% Chance to BlockSpell Damage while holding a Shield,prefix,,Jewel
+Battlemage's,,(14-16)% increased Spell Damage while holding a Shield,prefix,,Jewel
+Blunt,,(6-8)% increased Attack Speed with Staves,prefix,,Jewel
+Wright's,,(3-5)% increased Cast Speed while wielding a Staff,prefix,,Jewel
+Judging,,(14-16)% increased Damage with Staves,prefix,,Jewel
+Halting,,+1% Chance to BlockSpell Damage while wielding a Staff,prefix,,Jewel
+Wizard's,,(14-16)% increased Spell Damage while wielding a Staff,prefix,,Jewel
+Fencing,,(6-8)% increased Attack Speed with Swords,prefix,,Jewel
+Vicious,,(14-16)% increased Damage with Swords,prefix,,Jewel
+Shaman's,,(12-16)% increased Totem Damage,prefix,,Jewel
+Carved,,(8-12)% increased TotemLife,prefix,,Jewel
+Trapping,,(14-16)% increased Trap Damage,prefix,,Jewel
+Honed,,(6-8)% increased Trap Throwing Speed,prefix,,Jewel
+Rupturing,,+(15-18)% to Critical Strike Multiplier with Two Handed Melee Weapons,prefix,,Jewel
+Sundering,,(14-18)% increased Critical Strike Chance with Two Handed Melee Weapons,prefix,,Jewel
+Warrior's,,(4-6)% increased Attack Speed with Two Handed Melee Weapons,prefix,,Jewel
+Champion's,,(12-14)% increased Damage with Two Handed Weapons,prefix,,Jewel
+of the Convocation,,Grants Level 1 Convocation Skill,suffix,45,Shield-Can-Roll-Minion-Modifiers
+Martinet's,,=+1 to Level of all Minion Skill Gems,Prefix,60,Weapon-Can-Roll-Minion-Modifiers
+Baroness's,,Minions deal (10-19)% increased Damage,Prefix,2,Weapon-Can-Roll-Minion-Modifiers
+Viscountess's,,Minions deal (20-29)% increased Damage,Prefix,11,Weapon-Can-Roll-Minion-Modifiers
+Marchioness's,,Minions deal (30-39)% increased Damage,Prefix,23,Weapon-Can-Roll-Minion-Modifiers
+Countess's,,Minions deal (40-54)% increased Damage,Prefix,35,Weapon-Can-Roll-Minion-Modifiers
+Duchess's,,Minions deal (55-69)% increased Damage,Prefix,46,Weapon-Can-Roll-Minion-Modifiers
+Princess's,,Minions deal (70-84)% increased Damage,Prefix,58,Weapon-Can-Roll-Minion-Modifiers
+Queen's,,Minions deal (85-99)% increased Damage,Prefix,64,Weapon-Can-Roll-Minion-Modifiers
+Empress's,,Minions deal (100-109)% increased Damage,Prefix,84,Weapon-Can-Roll-Minion-Modifiers
+of the Convocation,,Grants Level 1 ConvocationSkill,Suffix,45,Weapon-Can-Roll-Minion-Modifiers
+of Luck,,Minions have (10-19)% increased Critical Strike Chance,Suffix,11,Weapon-Can-Roll-Minion-Modifiers
+of Fortune,,Minions have (20-39)% increased Critical Strike Chance,Suffix,21,Weapon-Can-Roll-Minion-Modifiers
+of Providence,,Minions have (40-59)% increased Critical Strike Chance,Suffix,28,Weapon-Can-Roll-Minion-Modifiers
+of Serendipity,,Minions have (60-79)% increased Critical Strike Chance,Suffix,41,Weapon-Can-Roll-Minion-Modifiers
+of Determinism,,Minions have (80-99)% increased Critical Strike Chance,Suffix,59,Weapon-Can-Roll-Minion-Modifiers
+of Destiny,,Minions have (100-109)% increased Critical Strike Chance,Suffix,76,Weapon-Can-Roll-Minion-Modifiers
+of Adjustment,,Minions have +(11-15)% to all Elemental Resistances,Suffix,8,Weapon-Can-Roll-Minion-Modifiers
+of Acclimatisation,,Minions have +(16-20)% to all Elemental Resistances,Suffix,24,Weapon-Can-Roll-Minion-Modifiers
+of Adaptation,,Minions have +(21-23)% to all Elemental Resistances,Suffix,37,Weapon-Can-Roll-Minion-Modifiers
+of Evolution,,Minions have +(24-26)% to all Elemental Resistances,Suffix,50,Weapon-Can-Roll-Minion-Modifiers
+of Metamorphosis,,Minions have +(27-30)% to all Elemental Resistances,Suffix,61,Weapon-Can-Roll-Minion-Modifiers
+of the Administrator,,Minions have (13-17)% increased maximum Life,Suffix,10,Weapon-Can-Roll-Minion-Modifiers
+of the Rector,,Minions have (18-22)% increased maximum Life,Suffix,26,Weapon-Can-Roll-Minion-Modifiers
+of the Overseer,,Minions have (23-27)% increased maximum Life,Suffix,42,Weapon-Can-Roll-Minion-Modifiers
+of the Taskmaster,,Minions have (28-32)% increased maximum Life,Suffix,58,Weapon-Can-Roll-Minion-Modifiers
+of the Slavedriver,,Minions have (33-36)% increased maximum Life,Suffix,74,Weapon-Can-Roll-Minion-Modifiers
+of the Despot,,Minions have (37-40)% increased maximum Life,Suffix,82,Weapon-Can-Roll-Minion-Modifiers
+of Impermeability,,Minions have +(3-4)% to all maximum Elemental Resistances,Suffix,68,Weapon-Can-Roll-Minion-Modifiers
+of Countervailing,,Minions have +(5-6)% to all maximum Elemental Resistances,Suffix,75,Weapon-Can-Roll-Minion-Modifiers
+of Imperviousness,,Minions have +(7-8)% to all maximum Elemental Resistances,Suffix,81,Weapon-Can-Roll-Minion-Modifiers
+of the Guard,,Minions have (7-9)% additional Physical Damage Reduction,Suffix,68,Weapon-Can-Roll-Minion-Modifiers
+of the Brigade,,Minions have (10-12)% additional Physical Damage Reduction,Suffix,75,Weapon-Can-Roll-Minion-Modifiers
+of the Phalanx,,Minions have (13-15)% additional Physical Damage Reduction,Suffix,81,Weapon-Can-Roll-Minion-Modifiers

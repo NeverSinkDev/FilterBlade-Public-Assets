@@ -10,7 +10,7 @@
 
 StyleSection("COMMON CURRENCIES", "Basic supplies used to perform common operations. They're not worth much, but are important nonetheless. People frequently hide them or buy them in bulk.<hr> Hover over the scroll above for more information! ( recommended for new players )") {
     Search S0("skip", "High Tier Supplies") { BaseType "Orb of Transmutation"; StackSize 4; AreaLevel 70; }
-    Search S0("skip", "Low Tier Supplies") { BaseType "Armourer's Scrap"; StackSize 4; AreaLevel 70; }
+    Search S0("skip", "Low Tier Supplies") { BaseType "Orb of Augmentation"; StackSize 4; AreaLevel 70; }
     Search S0("skip", "Wisdom Scrolls") { BaseType "Scroll of Wisdom"; StackSize 4; AreaLevel 70; }
     Search S0("skip", "Portal Scrolls") { BaseType "Portal Scroll"; StackSize 4; AreaLevel 70; }
     SS_Item("S0");
@@ -55,11 +55,11 @@ StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. Th
     SS_Item("S0");
 }
 
-SS_SectionTitle("Current League: 3.24 Necropolis");
+SS_SectionTitle("Current League: 3.24 Settlers of Kalguur");
 
-StyleSection("Allflames", "Preview the monsters of the next zone or map and edit which monsters have which mods, or use an Allflame to completely replace them.") {
-    Search S0("skip") { BaseType "Flaring Allflame Ember of Abyss"; }
-    Search S0("skip") { BaseType "Allflame Ember of Beidat"; }
+StyleSection("Gold", "You can find gold all throughout the game. Use it to hire workers and build your settlement.") {
+    Search S0("skip") { BaseType "Gold"; StackSize 1; }
+    Search S0("skip") { BaseType "Gold"; StackSize 1000; }
     SS_Item("S0");
 }
 
@@ -268,7 +268,7 @@ StyleSection("Chancing Bases", "By applying an 'Orb of Chance' on these bases, y
 }
 
 StyleSection("Perfect Defenses", "The inherent base defenses on every item vary by up to 15%. Selected itemLevel 86 items with perfect defense rolls get a special highlight. These bases are great for crafting.") {
-    Search S0("skip", null, "crafting->perfectarmours;t2") { BaseType "Hubris Circlet"; BaseDefencePercentile 100; ItemLevel 86; Rarity Normal; }
+    Search S0("skip", null, "crafting->qualityperfection;body1") { BaseType "Hubris Circlet"; BaseDefencePercentile 100; ItemLevel 86; Rarity Normal; }
     SS_Item("S0");
 }
 

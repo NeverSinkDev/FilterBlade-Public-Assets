@@ -226,6 +226,7 @@ Chapter() {
             Description("Supplies and specific currencies are much more important during the campaign.");
             LevelingStackList([0.0, "Currency during leveling 0", "currency->leveling;binding"], "SH", "Campaign: Binding Orbs");
             QuickUI([0.0, "Essences while leveling", "currency->leveling;essences"], "SH", ["AreaLevel"], "Campaign: Essences", ["essences"]);
+            LevelingStackList([0.0, "Currency during leveling 5", "currency->leveling;chance"], "SH", "Campaign: Chance+");
             LevelingStackList([0.0, "Currency during leveling 1", "currency->leveling;trans"], "SH", "Campaign: Transmutes+");
             LevelingStackList([0.0, "Currency during leveling 2", "currency->leveling;aug"], "SH", "Campaign: Armourers+");
             LevelingStackList([0.0, "Currency during leveling 3", "currency->leveling;portal"], "SH", "Campaign: Portals");
@@ -238,6 +239,7 @@ Chapter() {
         Section("Campaign Specific - Stacked Drops", "Transmut") {
             Function CurrencyLevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
 
+            CurrencyLevelingStackList([0.0, "Stacked Campaign Chance", "currency->levelingstacked;chance"], "SD", "Campaign: Stacked Chance Orbs+");
             CurrencyLevelingStackList([0.0, "Stacked Campaign Transmutations", "currency->levelingstacked;trans"], "SD", "Campaign: Stacked Transmutes+");
             CurrencyLevelingStackList([0.0, "Stacked Campaign Augmentations", "currency->levelingstacked;aug"], "SD", "Campaign: Stacked Augments+");
             CurrencyLevelingStackList([0.0, "Stacked Campaign Portal Scrolls", "currency->levelingstacked;portal"], "SD", "Campaign: Stacked Portals");
@@ -336,7 +338,8 @@ Chapter() {
             OilTierList([0.0, "Blight Oils T1", "currency->oil;t1"], "SH", "S Tier");
             OilTierList([0.0, "Blight Oils T2", "currency->oil;t2"], "SH", "A Tier");
             OilTierList([0.0, "Blight Oils T3", "currency->oil;t3"], "SH", "B Tier");
-            OilTierList([0.0, "Blight Oils T4", "currency->oil;t4"], "SH", "Others");
+            OilTierList([0.0, "Blight Oils T4", "currency->oil;t4"], "SH", "C Tier");
+            OilTierList([0.0, "Blight Oils T5", "currency->oil;t5"], "SH", "Others");
             QuickUI([0.0, "Remaining Oils", "currency->oil;exhide"], "SH", [], "", false, "Untiered oils, which are not matched by any of the above rules, probably due to unmet AreaLevel requirements.");
 
             Conditional("?BlightOilNewTier") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
@@ -410,6 +413,8 @@ Chapter() {
         Section("Omens", "OmenoftheSoulDevourer", "E") {
             Function OmenFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialOmens", "O"]); }
 
+            TierListToolBar();
+
             Description("Omens automatically trigger upon a certain condition when placed in your inventory. The omen is then consumed.");
             OmenFunc([0.0, "Omens Tier 1", "currency->trial->omen;t1"], "SH", "S Tier");
             OmenFunc([0.0, "Omens Tier 2", "currency->trial->omen;t2"], "SH", "A Tier");
@@ -427,6 +432,8 @@ Chapter() {
 
         Section("Tattoos", "HonouredTattoooftheWiseMan", "E") {
             Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
+
+            TierListToolBar();
 
             Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
             TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH", "S Tier");
@@ -521,7 +528,9 @@ Chapter() {
         }
 
         Section("Exotics: Stacked Card Drops", "StackedDeck") {
-            Description("This section will receive more rules during the 3.25 league update :)");
+
+        Description("Card added here will receive a higher highlight if dropped in a stack!");
+            QuickUI([0.0, "Stacked High Tier Div Cards", "divination;excustomstack"], $shd, ["StackSize"], null, ["Divination Cards", "OS"]);
 
             Function StackedDivCardFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Divination Cards", "OA"]); }
 
@@ -537,30 +546,67 @@ Chapter() {
 // CURRENT LEAGUE
 //===================================================================================================
 
-    Section("Current League: Necropolis", "AllflameEmberofTul") {
+    Section("Current League: Settlers of Kalguur", "SettlersSunRune") {
 
-        Section("Allflames") {
-            Function AllflameTierFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["NecropolisAllflames", "O"]); }
-
-            AllflameTierFunc([0.0, "Allflames Tier 2", "necropolis;t2"], "SH");
-            AllflameTierFunc([0.0, "Allflames Tier 3", "necropolis;t3"], "SH");
-            AllflameTierFunc([0.0, "Allflames Tier 4", "necropolis;t4"], "SH");
-
-            // new tiers
-            Conditional("?AllflameNewTier") { }
-            ElementAdder_Tier("?AllflameNewTier", "AllflameTierFunc");
-
-            Conditional("?AllflameNewTierHidden") { }
-            ElementAdder_Tier("?AllflameNewTierHidden", null, true, "NecropolisAllflames", "OH");
-
-            QuickUI([0.0, "Allfflames during Campaign", "necropolis;leveling"], "SH", []);
+        Section("Gold") {
+            Description("Gold is auto-picked-up! You will even pick up the gold if the rules are disabled.");
+            QuickUI([0.0, "Settlers Gold - Huge Stack", "gold;stack3"], "SH", ["StackSize", "AreaLevel"], "Goldpile: Massive");
+            QuickUI([0.0, "Settlers Gold - Medium Stack", "gold;stack2"], "SH", ["StackSize", "AreaLevel"], "Goldpile: Huge");
+            QuickUI([0.0, "Settlers Gold - Small Stack", "gold;stack1"], "SH", ["StackSize", "AreaLevel"], "Goldpile: Large");
+            QuickUI([0.0, "Settlers Gold - Tiny Stack", "gold;stacklvl1"], "SH", ["StackSize", "AreaLevel"], "Goldpile: Large (leveling only)");
+            QuickUI([0.0, "Settlers Gold - No Stack", "gold;anyother"], "SH", ["StackSize", "AreaLevel"], "Goldpile: Any");
         }
 
-        Section("Special rares") {
-            Description("Necropolis items with Necropolis-Exclusive mods are highlighted using this rule");
-            QuickUI([0.0, "Identified Mods: Necropolis", "exoticmods;necropoliscraft"], "SH", []);
-            Description("This rule (attempts) to highlight any item crafted in the Necropolis hideout area");
-            QuickUI([0.0, "Crafting-Zone Dropped Items", "rare->utility->droppeditems;any"], "SH", [], "Crafting-Zone Dropped Items");
+        Section("Runes") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function SettlerRunesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B: Rune;C:Stackable Currency", "O"]); }
+            TierListToolBar();
+
+            SettlerRunesFunc([0.0, "Settlers Runes Tier 1", "runes;t1"], "SH", "S Tier");
+            SettlerRunesFunc([0.0, "Settlers Runes Tier 2", "runes;t2"], "SH", "A Tier");
+            SettlerRunesFunc([0.0, "Settlers Runes Tier 3", "runes;t3"], "SH", "B Tier");
+            SettlerRunesFunc([0.0, "Settlers Runes Tier 4", "runes;t4"], "SH", "C Tier");
+            SettlerRunesFunc([0.0, "Settlers Runes Tier 5", "runes;t5"], "SH", "D Tier");
+
+            // new tiers
+            Conditional("?SettlerRunesNewTier") { }
+            ElementAdder_Tier("?SettlerRunesNewTier", "SettlerRunesFunc");
+
+            // hide tier
+            Conditional("?SettlerRunesNewTiersHidden") { }
+            ElementAdder_Tier("?SettlerRunesNewTiersHidden", null, true, "B: Rune;C:Stackable Currency", "OH");
+        }
+
+        Section("Tinctures") {
+            QuickUI([0.0, "High Quality & ItemLevel Tinctures", "endgametinctures;overqual1"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
+            QuickUI([0.0, "Quality & High ItemLevel Tinctures", "endgametinctures;overqual2"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
+            QuickUI([0.0, "High ItemLevel Tinctures", "endgametinctures;tinc82"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
+            QuickUI([0.0, "Remaining Endgame Tinctures", "endgametinctures;any"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
+            QuickUI([0.0, "Tinctures during campaign", "leveling->tincture;any"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
+        }
+
+        Section("Corpses") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function CorpsesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Corpses", "O"]); }
+            TierListToolBar();
+
+            CorpsesFunc([0.0, "Corpses Tier 1", "corpses;t1"], "SH", "S Tier");
+            CorpsesFunc([0.0, "Corpses Tier 2", "corpses;t2"], "SH", "A Tier");
+            CorpsesFunc([0.0, "Corpses Tier 3", "corpses;t3"], "SH", "B Tier");
+            CorpsesFunc([0.0, "Corpses Tier 4", "corpses;t4"], "SH", "C Tier");
+            CorpsesFunc([0.0, "Corpses Tier 5", "corpses;t5"], "SH", "D Tier");
+
+            // new tiers
+            Conditional("?CorpsesNewTier") { }
+            ElementAdder_Tier("?CorpsesNewTier", "CorpsesFunc");
+
+            // hide tier
+            Conditional("?CorpsesNewTiersHidden") { }
+            ElementAdder_Tier("?CorpsesNewTiersHidden", null, true, "C:Corpses", "OH");
+        }
+
+        Section("New Bases, Chisels, Mist") {
+            Description("These new items have been integrated into existing tierlists.");
         }
     }
 
@@ -592,6 +638,7 @@ Chapter() {
             Conditional("?HideALLMapsByTier", ["c9.maps.generic.t16"]) { Hide; Class Maps; HasInfluence None; MapTier < 8; }
             QuickUI([0.0, "Hide corrupted non-rare maps", "maphiders;corruptedmaphider"], "HD", ["Rarity", "MapTier"]);
             QuickUI([0.0, "Hide corrupted mirrored maps", "maphiders;mirroredmaphider"], "HD", ["Rarity", "MapTier"], "Hide Mirrored non-rare maps");
+            QuickUI("?HideALLMapsByTier", "HD", ["MapTier", "AreaLevel"], "Hide by tier");
 
             Conditional("?CShowMapsQuality", ["c9.maps.decorators.all"]) { Show; Class Maps; Quality >= 20; SetFontSize 40; SetBackgroundColor 180 70 50 220; PlayAlertSound 5 300; SetTextColor 0 0 0; MinimapIcon 2 Brown Square; PlayEffect Brown; }
             Conditional("?CShowMapsRareRarity", ["c9.maps.decorators.all"]) { Show; Class Maps; Rarity Rare; SetFontSize 40; SetBackgroundColor 180 70 50 220; PlayAlertSound 5 300; SetTextColor 0 0 0; MinimapIcon 2 Brown Square; PlayEffect Brown; }
@@ -603,7 +650,11 @@ Chapter() {
             QuickUI("?CShowMapsMagicRarity", "SHD", ["MapTier"], "Highlight magic maps");
             QuickUI("?CShowMapsCorrupted", "SHD", ["MapTier", "Rarity"], "Highlight corrupted maps");
 
-            QuickUI("?HideALLMapsByTier", "HD", ["MapTier", "AreaLevel"], "Hide by tier");
+
+            QuickUI([1.0, "Maps with Implicits (high tier)", "maps->implicitmod;t1"], "SD", ["MapTier"], "maps with implicits (T14+)");
+            QuickUI([1.0, "Maps with Implicits", "maps->implicitmod;any"], "SD", ["MapTier"], "Maps with implicits");
+            QuickUI([0.0, "High with Corrupted Implicit (high tier)", "maps->corruptedimplicit;t1"], "SD", ["MapTier"], "With corrupted mod (T14+)");
+            QuickUI([0.0, "High with Corrupted Implicit", "maps->corruptedimplicit;any"], "SD", ["MapTier"], "With corrupted mod");
         }
 
         Section("Custom Rule: Highlight specific maps", "Firefly") {
@@ -649,6 +700,9 @@ Chapter() {
             QuickUI([1.0, "Map decorator low red tier", "maps;deco_zone2general"], "SD", ["MapTier"], "Decorator: T11+ maps");
             QuickUI([1.0, "Map decorator yellow tier", "maps;deco_zone3general"], "SD", ["MapTier"], "Decorator: T6+ maps");
             QuickUI([1.0, "Map decorator white tier", "maps;deco_zone4general"], "SD", ["MapTier"], "Decorator: T1+ maps");
+
+            QuickUI([0.0, "Decorator: Maps with Implicits", "maps;decor_implicit"], "SH", []);
+            QuickUI([0.0, "Decorator: Maps with Corrupts", "maps;deco_corruptedmod"], "SH", []);
         }
 
         Section("Normal Maps") {
@@ -687,15 +741,13 @@ Chapter() {
             QuickUI([0.0, "New Influenced Maps", "maps->influenced;infconquerors"], "SH", [], "Conqueror Maps");
             QuickUI("ShaperMap", "SH", ["MapTier"], "Shaper Maps:");
             QuickUI("ElderMap", "SH", ["MapTier"], "Elder Maps:");
+            QuickUI([0.0, "Vaal Temple Map", "maps->vaaltemple;any"], "SH", []);
         }
 
-        Section("Delirium and other enchanted maps") {
+        Section("Delirium and 8-Mod maps") {
+            QuickUI([0.0, "8-Mod Corrupted Maps", "maps->corruptedspecial;mod8"], "SH", ["MapTier"]);
             QuickUI([0.0, "Delirium High Maps", "maps->enchanted;t1"], "SHD", ["MapTier"], "Delirium or Enchanted (T14+)");
             QuickUI([0.0, "Delirium Maps", "maps->enchanted;any"], "SHD", ["MapTier"], "Delirium or Enchanted");
-            QuickUI([1.0, "Maps with Implicits (high tier)", "maps->implicitmod;t1"], "SD", ["MapTier"], "maps with implicits (T14+)");
-            QuickUI([1.0, "Maps with Implicits", "maps->implicitmod;any"], "SD", ["MapTier"], "Maps with implicits");
-            QuickUI([0.0, "High with Corrupted Implicit (high tier)", "maps->corruptedimplicit;t1"], "SH", ["MapTier"], "With corrupted mod (T14+)");
-            QuickUI([0.0, "High with Corrupted Implicit", "maps->corruptedimplicit;any"], "SH", ["MapTier"], "With corrupted mod");
         }
 
         Section("Blighted Maps") {
@@ -744,7 +796,9 @@ Chapter() {
             ScarabTierList([0.0, "Betrayal Scarabs T1", "fragments->scarabs;t1"], "SH", "S Tier");
             ScarabTierList([0.0, "Betrayal Scarabs T2", "fragments->scarabs;t2"], "SH", "A Tier");
             ScarabTierList([0.0, "Betrayal Scarabs T3", "fragments->scarabs;t3"], "SH", "B Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T4", "fragments->scarabs;t4"], "SH", "Others");
+            ScarabTierList([0.0, "Betrayal Scarabs T4", "fragments->scarabs;t4"], "SH", "C Tier");
+            ScarabTierList([0.0, "Betrayal Scarabs T5", "fragments->scarabs;t5"], "SH", "D Tier");
+            ScarabTierList([0.0, "Betrayal Scarabs T6", "fragments->scarabs;t6"], "SH", "Others");
 
             // new tiers
             Conditional("?ScarabNewTiers") { Show; Class "Map Fragments"; SetFontSize 45; SetTextColor 159 15 213 255; SetBorderColor 159 15 213 255; SetBackgroundColor 0 0 0 255; PlayAlertSound 2 300; PlayEffect Yellow; MinimapIcon 2 Yellow Hexagon; }
@@ -1072,7 +1126,12 @@ Chapter() {
         }
     }
 
-    Section("Rares: Identified, Corrupted, Mirrored", "WisdomScroll") {
+    Section("Hide Corrupted, Outleveled, [...] Rares", "WisdomScroll") {
+        Description("These rules are enabled in higher strictness. They hide lower rares if they drop in high level zones.");
+        QuickUI([0.0, "Hide Lower Rares in High Maps 1", "hidelayer;rrihide1"], "HD", ["ItemLevel", "AreaLevel", "DropLevel", "AllGearClasses"], "Hide <75 in 82+ Zones: Very-Strict", []);
+        QuickUI([0.0, "Hide Lower Rares in High Maps 2", "hidelayer;rrihide2"], "HD", ["ItemLevel", "AreaLevel", "DropLevel", "AllGearClasses"], "Hide <60 in 82+ Zones: Strict", []);
+        QuickUI([0.0, "Hide Lower Rares in High Maps 3", "hidelayer;rrihide3"], "HD", ["ItemLevel", "AreaLevel", "DropLevel", "AllGearClasses"], "Hide <50 in 78+ Zones: Strict", []);
+        QuickUI([0.0, "Hide Lower Rares in High Maps 4", "hidelayer;rrihide4"], "HD", ["ItemLevel", "AreaLevel", "DropLevel", "AllGearClasses"], "Hide <40 in 73+ Zones: Semi-Strict", []);
 
         Description("By default the filter will hide all (unidentified) corrupted/mirrored rares without an implicit. This of course excludes 6-links and all kind of other exotic items");
         QuickUI([0.0, "Unidentified Corrupted rares with 0 custom mods", "hidelayer;corruptedrares"], "SHD", ["AllGearClasses", "ItemLevel", "DropLevel", "Mirrored", "Identified", "Corrupted", "CorruptedMods"], "Unid corrupted rares: no implicit");
@@ -1094,6 +1153,9 @@ Chapter() {
             QuickUI([1.0, "Endgame rare deco ilvl 84", "decorators->rareeg;ilvl84"], "SD", ["ItemLevel"], "Decorator: ItemLevel 84");
             QuickUI([1.0, "Endgame rare deco ilvl 75", "decorators->rareeg;ilvl75"], "SD", ["ItemLevel"], "Decorator: ItemLevel 75");
             QuickUI([1.0, "Endgame rare deco ilvl 68", "decorators->rareeg;ilvl68"], "SD", ["ItemLevel"], "Decorator: ItemLevel 68");
+            QuickUI([0.0, "Endgame rare deco Atlas Bases Tier 1", "decorators->rareeg;atlasgear1"], "SH", ["ItemLevel", "AreaLevel"], "Decorator: Atlas Bases S Tier", ["gear", "OS"]);
+            QuickUI([0.0, "Endgame rare deco Atlas Bases Tier 2", "decorators->rareeg;atlasgear2"], "SH", ["ItemLevel", "AreaLevel"], "Decorator: Atlas Bases A Tier", ["gear", "OS"]);
+            QuickUI([0.0, "Endgame rare deco Atlas Bases Tier 3", "decorators->rareeg;atlasgear3"], "SH", ["ItemLevel", "AreaLevel"], "Decorator: Atlas Bases B Tier", ["gear", "OS"]);
             QuickUI([1.0, "Endgame rare deco corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted Implicit");
             QuickUI([1.0, "Endgame rare deco corrupted", "decorators->rareeg;corruptedrares"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted - No implicit");
             QuickUI([1.0, "Endgame rare deco 4 links", "decorators->rareeg;fourlinkedrares"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: 4 Links");
@@ -1119,83 +1181,22 @@ Chapter() {
     }
 
     Section("Weapons and Armours", "RoyalBurgonet") {
-        Description("Pro tip: You can disable whole sections by right-clicking the section and clicking on 'Turn OFF all rules'");
+        Function EgRaresArmours($s) { QuickUI($s, "SH", ["BaseDefencePercentile", "ItemLevel", "Quality"]); }
 
-        Function EgRares($s) { QuickUI($s, "SH", ["ItemLevel"]); }
-        Function EgRaresArmours($s) { QuickUI($s, "SH", ["BaseDefencePercentile", "ItemLevel"]); }
-
-        Search T1Wep(1.0, "Tier 1 rare weapons", "rr;t1weapons") { }
-        Search T1Arm(0.0, "Tier 1 rare armours", "rr;t1armours") { }
-
-        Search T2Wep(1.0, "Tier 2 rare weapons", "rr;t2weapons") { }
-        Search T2Arm(1.0, "Tier 2 rare armours", "rr;t2armours") { }
-
-        Search T3Dagger(1.0, "Endgame-Rares-T3-Daggers", "rr;t3daggers") { }
-        Search T3RuneDag(1.0, "Endgame-Rares-T3-Rune Dagger", "rr;t3runedaggers") { }
-        Search T3WarStaff(1.0, "Endgame-Rares-T3-Warstaff", "rr;t3warstaves") { }
-        Search T3Wand(1.0, "Endgame-Rares-T3-Wands", "rr;t3wands") { }
-        Search T3Scepter(1.0, "Endgame-Rares-T3-Sceptres", "rr;t3sceptres") { }
-        Search T3Claw(1.0, "Endgame-Rares-T3-Claws", "rr;t3claws") { }
-        Search T3Foil(1.0, "Endgame-Rares-T3-Foils", "rr;t3foils") { }
-        Search T3Sword1H(1.0, "Endgame-Rares-T3-1HSwords", "rr;t3swords1h") { }
-        Search T3Maces1H(1.0, "Endgame-Rares-T3-1HMaces", "rr;t3maces1h") { }
-        Search T3Axe1H(1.0, "Endgame-Rares-T3-1HAxe", "rr;t3axes1h") { }
-        Search T3Staff(1.0, "Endgame-Rares-T3-2HStaves", "rr;t3staves") { }
-        Search T3Sword2H(1.0, "Endgame-Rares-T3-2HSwords", "rr;t3swords2h") { }
-        Search T3Axe2H(1.0, "Endgame-Rares-T3-2HAxes", "rr;t3axes2h") { }
-        Search T3Mace2H(1.0, "Endgame-Rares-T3-2HMaces", "rr;t3maces2h") { }
-        Search T3Bow(1.0, "Endgame-Rares-T3-Bows", "rr;t3bows") { }
-        Search T3Boot(1.0, "Endgame-Rares-T3-ArmBoots", "rr;t3boots") { }
-        Search T3Glove(1.0, "Endgame-Rares-T3-ArmGloves", "rr;t3gloves") { }
-        Search T3Helm(1.0, "Endgame-Rares-T3-ArmHelmets", "rr;t3helmets") { }
-        Search T3Body(1.0, "Endgame-Rares-T3-BodyArmours", "rr;t3body") { }
-        Search T3Shield(1.0, "Endgame-Rares-T3-Small-Shields", "rr;t3shields") { }
-        Search T3Quiv(1.0, "Endgame-Rares-T3-Quivers", "rr;t3quivers") { }
-
+        Search T1Wep(2.0, "Tier 1 rares", "rr;t1") { }
+        Search T2Wep(1.0, "Tier 2 rares", "rr;t2") { }
+        Search T3Dagger(1.0, "Tier 3 rares", "rr;t3") { }
         Search T4(0.0, "Endgame Tier 4 Rares", "rr;t4endgamerares") { }
 
-        Section("Tier 1") {
-            EgRares(T1Wep);
-            EgRaresArmours(T1Arm);
-        }
-
-        Section("Tier 2") {
-            EgRares(T2Wep);
-            EgRaresArmours(T2Arm);
-        }
-
-        Section("Tier 3") {
-            EgRares(T3Dagger);
-            EgRares(T3RuneDag);
-            EgRares(T3WarStaff);
-            EgRares(T3Wand);
-            EgRares(T3Scepter);
-            EgRares(T3Claw);
-            EgRares(T3Foil);
-            EgRares(T3Sword1H);
-            EgRares(T3Maces1H);
-            EgRares(T3Axe1H);
-            EgRares(T3Staff);
-            EgRares(T3Sword2H);
-            EgRares(T3Axe2H);
-            EgRares(T3Mace2H);
-            EgRares(T3Bow);
-            EgRaresArmours(T3Boot);
-            EgRaresArmours(T3Glove);
-            EgRaresArmours(T3Helm);
-            EgRaresArmours(T3Body);
-            EgRaresArmours(T3Shield);
-            EgRares(T3Quiv);
-        }
-
-        Section("Tier 4") {
-            EgRares(T4);
-        }
+            EgRaresArmours(T1Wep);
+            EgRaresArmours(T2Wep);
+            EgRaresArmours(T3Dagger);
+            EgRaresArmours(T4);
 
         BaseTypeMatrix(true,
-            "Tier 1", T1Wep, T1Arm,
-            "Tier 2", T2Wep, T2Arm,
-            "Tier 3", T3Dagger, T3RuneDag, T3WarStaff, T3Wand, T3Scepter, T3Claw, T3Foil, T3Sword1H, T3Maces1H, T3Axe1H, T3Staff, T3Sword2H, T3Axe2H, T3Mace2H, T3Bow, T3Boot, T3Glove, T3Helm, T3Body, T3Shield, T3Quiv
+            "Tier 1", T1Wep,
+            "Tier 2", T2Wep,
+            "Tier 3", T3Dagger
         );
     }
 }
@@ -1212,31 +1213,33 @@ Chapter() {
         Search S0(0.1, "Fractured items, tier 1", "exotic->fractured;fractt1") {}
         Search S1(0.1, "Fractured items, tier 2", "exotic->fractured;fractt2") {}
         Search S2(0.1, "Fractured items, tier 3", "exotic->fractured;fractt3") {}
-        QuickUI(S0, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Tier 1");
-        QuickUI(S1, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Tier 2");
-        QuickUI(S2, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Tier 3");
-        QuickUI([0.0, "Fractured items, others", "exotic->fractured;fractothers"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Tier 4/Untiered");
+        QuickUI(S0, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified", "Quality"], "Tier 1");
+        QuickUI(S1, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified", "Quality"], "Tier 2");
+        QuickUI(S2, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified", "Quality"], "Tier 3");
+        QuickUI([0.0, "Fractured items, others", "exotic->fractured;fractothers"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified", "Quality"], "Tier 4/Untiered");
         BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1, "Tier 3", S2);
     }
 
     Section("Veiled Items", "VeiledChaosOrb") {
-        Function VeilModTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel"], $text, ["Item Mods", "D", "HasExplicitMod"]); }
-        Function VeilMods($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel", "Mods"], $text); }
+        Function VeilModTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel", "Quality"], $text, ["Item Mods", "D", "HasExplicitMod"]); }
+        Function VeilMods($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel", "Mods", "Quality", "Height", "Width"], $text); }
 
-            VeilModTierList([0.0, "Betrayal Veiled Mods Tier 1", "exoticmods;t1veil"], "SD", "Veiled - Member-Specific Mods T1");
-            VeilModTierList([0.0, "Betrayal Veiled Mods Tier 2", "exoticmods;t2veil"], "SD", "Veiled - Member-Specific Mods T2");
+        VeilModTierList([0.0, "Betrayal Veiled Mods Tier 1", "exoticmods;t1veil"], "SD", "Veiled - Member-Specific Mods T1");
+        VeilModTierList([0.0, "Betrayal Veiled Mods Tier 2", "exoticmods;t2veil"], "SD", "Veiled - Member-Specific Mods T2");
 
-            VeilMods([0.0, "Item with multiple Betrayal Veiled Mods", "exoticmods;duoveil"], "SD", "Veiled - 2 mods 1 item");
+        VeilMods([0.0, "Item with multiple Betrayal Veiled Mods", "exoticmods;duoveil"], "SD", "Veiled - 2 mods 1 item");
 
-            DeepSearch S4(0.0, "Betrayal Veiled Mods Small 1", "exoticmods;smallveil1") { BaseType "Wool Shoes"; Rarity Rare; Width 2; Height 2; }
-            DeepSearch S4(0.0, "Betrayal Veiled Mods Small 2", "exoticmods;smallveil2") { BaseType "Driftwood Wand"; Rarity Rare; Width 1; Height 3; }
+        DeepSearch S4(0.0, "Betrayal Veiled Mods Small 1", "exoticmods;smallveil1") { BaseType "Wool Shoes"; Rarity Rare; Width 2; Height 2; }
+        DeepSearch S5(0.0, "Betrayal Veiled Mods Small 2", "exoticmods;smallveil2") { BaseType "Driftwood Wand"; Rarity Rare; Width 1; Height 3; }
 
-            VeilMods(S4, "SD", "Veiled - Small Items");
-            VeilMods([0.0, "Betrayal Veiled Mods", "exoticmods;veilrest"], "SD", "Veiled - Remaining Items");
+        VeilMods(S4, "SD", "Veiled - Small Items: 2x2");
+        VeilMods(S5, "SD", "Veiled - Small Items: 1x4");
 
-            // new tiers
-            Conditional("?VeiledModsNewTiers") { Show; Identified True; SetFontSize 45; SetBorderColor 0 240 190 240; PlayEffect White Temp; MinimapIcon 2 White Hexagon; HasExplicitMod "Veil"; }
-            ElementAdder_Tier("?VeiledModsNewTiers", "VeilModTierList");
+        VeilMods([0.0, "Betrayal Veiled Mods", "exoticmods;veilrest"], "SD", "Veiled - Remaining Items");
+
+        // new tiers
+        Conditional("?VeiledModsNewTiers") { Show; Identified True; SetFontSize 45; SetBorderColor 0 240 190 240; PlayEffect White Temp; MinimapIcon 2 White Hexagon; HasExplicitMod "Veil"; }
+        ElementAdder_Tier("?VeiledModsNewTiers", "VeilModTierList");
     }
 
     Section("Linked Items", "Fusing") {
@@ -1261,7 +1264,7 @@ Chapter() {
             QuickUI([1.0, "Endgame crafting deco normal trinkets", "decorator->craftingrare;normaldecoratorjwlry"], "SD", ["ItemLevel"], "Decorator: Normal trinkets");
         }
 
-        Function RarityCraftBox ($s, $text) { QuickUI($s, "SD", ["ItemLevel", "Rarity"], $text); }
+        Function RarityCraftBox ($s, $text) { QuickUI($s, "SD", ["ItemLevel", "Rarity", "Quality"], $text); }
 
         DeepSearch T1(3.0, "86 normal crafting bases T1", "normalcraft->i86;t1") { ItemLevel 86; Rarity Normal; BaseType "Steel Ring"; }
         DeepSearch T1(3.0, "84 normal crafting bases T1", "normalcraft->i84;t1") { ItemLevel 84; Rarity Normal; BaseType "Steel Ring"; }
@@ -1276,16 +1279,17 @@ Chapter() {
         DeepSearch T3(3.0, "low normal crafting bases T3", "normalcraft->rest;t3") { ItemLevel 80; Rarity Normal; BaseType "Lion Pelt"; }
 
         Section("Enable&Disable Tiers") {
-        RarityCraftBox(T1:0, "T1 - ILVL86+");
-        RarityCraftBox(T1:1, "T1 - ILVL84+");
-        RarityCraftBox(T1:2, "T1 - ILVL68+");
-        RarityCraftBox(T2:0, "T2 - ILVL86+");
-        RarityCraftBox(T2:1, "T2 - ILVL84+");
-        RarityCraftBox(T2:2, "T2 - ILVL68+");
-        RarityCraftBox(T3:0, "T3 - ILVL86+");
-        RarityCraftBox(T3:1, "T3 - ILVL84+");
-        RarityCraftBox(T3:2, "T3 - ILVL68+");
+            RarityCraftBox(T1:0, "T1 - ILVL86+");
+            RarityCraftBox(T1:1, "T1 - ILVL84+");
+            RarityCraftBox(T1:2, "T1 - ILVL68+");
+            RarityCraftBox(T2:0, "T2 - ILVL86+");
+            RarityCraftBox(T2:1, "T2 - ILVL84+");
+            RarityCraftBox(T2:2, "T2 - ILVL68+");
+            RarityCraftBox(T3:0, "T3 - ILVL86+");
+            RarityCraftBox(T3:1, "T3 - ILVL84+");
+            RarityCraftBox(T3:2, "T3 - ILVL68+");
         }
+
         Title("Control WHAT items are in what tier:");
         BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2, "Tier 3", T3);
 
@@ -1293,37 +1297,83 @@ Chapter() {
 //        MultiTierThresholdEditor("ItemLevel");
     }
 
-    Section("Additional rules", "Lion") {
+    Section("Overquality, Synthesised and Others", "Lion") {
 
         Title("Early League Options");
 
         Section("Early endgame harvest bases") {
-            QuickUI([1.0, "Early endgame harvest crafting bases", "normalcraft->extra;any"], "SH", ["ItemLevel", "Rarity"], "Early Endgame Crafting Bases", ["Gear", "SO"]);
+            QuickUI([1.0, "Early endgame harvest crafting bases", "normalcraft->extra;any"], "SH", ["ItemLevel", "Rarity", "Quality"], "Early Endgame Crafting Bases", ["Gear", "SO"]);
+        }
+
+        Title("Overquality (21+)");
+
+        Section("Overquality Armours") {
+            Description("Items can rarely drop uncorrupted with 20-30 quality. These rules look for the right combination of basetype, level and quality.");
+
+            Search Body(0.0, "Overquality Body T1", "crafting->qualityperfection;body1") { }
+            Search Boot(0.0, "Overquality Boots T1", "crafting->qualityperfection;boots1") { }
+            Search Shield(0.0, "Overquality Shields T1", "crafting->qualityperfection;shields1") { }
+            Search Glove(0.0, "Overquality Gloves T1", "crafting->qualityperfection;gloves1") { }
+            Search Helm(0.0, "Overquality Helmets T1", "crafting->qualityperfection;helmets1") { }
+
+            Search Body(0.0, "Overquality Body T2", "crafting->qualityperfection;body2") { }
+            Search Boot(0.0, "Overquality Boots T2", "crafting->qualityperfection;boots2") { }
+            Search Shield(0.0, "Overquality Shields T2", "crafting->qualityperfection;shields2") { }
+            Search Glove(0.0, "Overquality Gloves T2", "crafting->qualityperfection;gloves2") { }
+            Search Helm(0.0, "Overquality Helmets T2", "crafting->qualityperfection;helmets2") { }
+
+            Search Body(0.0, "Overquality Body T3", "crafting->qualityperfection;body3") { }
+            Search Boot(0.0, "Overquality Boots T3", "crafting->qualityperfection;boots3") { }
+            Search Shield(0.0, "Overquality Shields T3", "crafting->qualityperfection;shields3") { }
+            Search Glove(0.0, "Overquality Gloves T3", "crafting->qualityperfection;gloves3") { }
+            Search Helm(0.0, "Overquality Helmets T3", "crafting->qualityperfection;helmets3") { }
+
+            Title("High Quality and Perfection");
+            QuickUI(0, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 30, High Base, Type: Body");
+            QuickUI(1, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 30, High Base, Type: Boots");
+            QuickUI(2, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 30, High Base, Type: Shields");
+            QuickUI(3, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 30, High Base, Type: Gloves");
+            QuickUI(4, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 30, High Base, Type: Helmets");
+            Title("High Quality, no Perfection");
+            QuickUI(5, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 29+, Type: Body");
+            QuickUI(6, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 29+, Type: Boots");
+            QuickUI(7, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 29+, Type: Shields");
+            QuickUI(8, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 29+, Type: Gloves");
+            QuickUI(9, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 29+, Type: Helmets");
+            Title("Quality, no Perfection");
+            QuickUI(10, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 24+, Type: Body");
+            QuickUI(11, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 24+, Type: Boots");
+            QuickUI(12, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 24+, Type: Shields");
+            QuickUI(13, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 24+, Type: Gloves");
+            QuickUI(14, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 24+, Type: Helmets");
+
+            BaseTypeMatrix(true, "Tier 1", Body, Boot, Shield, Glove, Helm);
+        }
+
+        Section("Overquality Weapons") {
+            Search T1(0.0, "Perfect weapons tier 1, high quaity", "crafting->qualityperfection;weapont1q1") { }
+            Search T2(0.0, "Perfect weapons tier 2, high quaity", "crafting->qualityperfection;weapont2q1") { }
+            Search T1(0.0, "Perfect weapons tier 1, low quaity", "crafting->qualityperfection;weapont1q2") { }
+            Search T2(0.0, "Perfect weapons tier 2, low quaity", "crafting->qualityperfection;weapont2q2") { }
+            QuickUI(0, "SH", ["Corrupted", "ItemLevel", "Rarity", "Quality"], "Tier 1, 29+ Quality");
+            QuickUI(1, "SH", ["Corrupted", "ItemLevel", "Rarity", "Quality"], "Tier 2, 29+ Quality");
+            QuickUI(2, "SH", ["Corrupted", "ItemLevel", "Rarity", "Quality"], "Tier 1, 24+ Quality");
+            QuickUI(3, "SH", ["Corrupted", "ItemLevel", "Rarity", "Quality"], "Tier 2, 24+ Quality");
+            BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2);
         }
 
         Title("Special Properties");
 
         Section("Synthesised items") {
-            QuickUI([0.0, "Synthesised items T1", "exotic->synthesised;synthselected"], "SD", ["ItemLevel", "DropLevel", "Identified", "BTM"], "Synthesised - Best Bases");
-            QuickUI([0.0, "Synthesised items classes", "exotic->synthesised;synthclasses"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified"], "Synthesises - Important Classes");
-            QuickUI([0.0, "Synthesised items", "exotic->synthesised;synthrandom"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified"], "Synthesised - Others");
-        }
-
-        Section("Perfection BaseTypes") {
-            Description("The base armour value of armour/es/evasion on items can vary by 15%. This value is inherent and can only be changed with a sacred orb. The filter attempts to highlight items with perfect base defense stats for the best crafting results");
-            Search T1(0.1, "Perfect Armours T1", "crafting->perfectarmours;t1") { }
-            Search T2(0.1, "Perfect Armours T2", "crafting->perfectarmours;t2") { }
-
-            QuickUI(T1, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "RarityU"]);
-            QuickUI(T2, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "RarityU"]);
-
-            BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2);
+            QuickUI([0.0, "Synthesised items T1", "exotic->synthesised;synthselected"], "SD", ["ItemLevel", "DropLevel", "Identified", "BTM", "Quality"], "Synthesised - Best Bases");
+            QuickUI([0.0, "Synthesised items classes", "exotic->synthesised;synthclasses"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified", "Quality"], "Synthesises - Important Classes");
+            QuickUI([0.0, "Synthesised items", "exotic->synthesised;synthrandom"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified", "Quality"], "Synthesised - Others");
         }
 
         Section("Economy-Based Expensive 86+ bases", null, "E") {
             TierListToolBar();
             Description("This section contains all bases that are currently worth around 10++ chaos, no matter the rarity. Only atlas bases (and some exceptions) are allowed in this section.");
-            QuickUI([0.0, "Expensive Crafting Bases", "crafting->expensive;any"], "SH", ["ItemLevel", "Rarity"], "", ["Gear", "SO"]);
+            QuickUI([0.0, "Expensive Crafting Bases", "crafting->expensive;any"], "SH", ["ItemLevel", "Rarity", "Quality"], "", ["Gear", "SO"]);
         }
 
         Section("Noteworthy Corrupted Items") {
@@ -1348,6 +1398,9 @@ Chapter() {
             Description("Items that have a fractured and veiled mod. It is NOT garantueed that the veiled mod is the fractured one");
             VeilMods([0.0, "Betrayal Veiled Fractured Mods", "exoticmods;fracturedveiled"], "SH", "Fractured+Veiled Items");
             QuickUI([0.0, "Fractured items, classes", "exotic->fractured;fractspecial"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Fractured Exotic Classes");
+
+            Description("Necropolis items with Necropolis-Exclusive mods are highlighted using this rule");
+            QuickUI([0.0, "Identified Mods: Necropolis", "exoticmods;necropoliscraft"], "SH", []);
         }
     }
 
@@ -1374,6 +1427,11 @@ Chapter() {
 
         Section("Breach Grasping Mail", "BreachSplinter") {
             QuickUI([1.0, "Grasping Mail", "exoticbases;exoticbasesmisc"], "SD", ["Rarity", "ItemLevel"]);
+        }
+
+        Section("Stygian Vise") {
+            QuickUI([0.0, "Stygian Vise, High ItemLevel", "exoticbaseslower;stygian86"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Stygian Vise", "exoticbaseslower;stygian"], "SH", []);
         }
 
         Section("Sacrificial Garbs", "SacrificeAtMidnight") {
@@ -1407,9 +1465,9 @@ Chapter() {
         Section("Blight Anointed Items", "BlightOil") {
             QuickUI([0.0, "Blight Annointed Items", "exotic->enchanted;anointedamulets"], "SHD", ["ItemLevel", "DropLevel", "Corrupted", "JewelleryClasses"], "Anointed Amulets&Rings");
 
-            Warning("The rules below ONLY work for annointed rings. As of now PoE filters can't distinguish amulet anointments.");
-            QuickUI([0.0, "Extractable Gold Blight Annointments", "exotic->enchanted;enchantedringsgoldoil"], "SD", "", "Gold Oil Ring Anointments");
-            QuickUI([0.0, "Extractable Silver Blight Annointments", "exotic->enchanted;enchantedringssilveroil"], "SD", "", "Silver Oil Ring Anointments");
+//            Warning("The rules below ONLY work for annointed rings. As of now PoE filters can't distinguish amulet anointments.");
+//            QuickUI([0.0, "Extractable Gold Blight Annointments", "exotic->enchanted;enchantedringsgoldoil"], "SD", "", "Gold Oil Ring Anointments");
+//            QuickUI([0.0, "Extractable Silver Blight Annointments", "exotic->enchanted;enchantedringssilveroil"], "SD", "", "Silver Oil Ring Anointments");
         }
 
         Title("Exotic Identified Mods");
@@ -1453,15 +1511,13 @@ Chapter() {
         Title("Currently Unobtainable");
 
         Section("Currently Unobtainable", "JuggernautsUrsineCharmoftheChampion") {
-            QuickUI([0.0, "Affliction Items: Charms, Corpses & Tinctures", "artefact->affliction;any"], "SH", [], "Affliction Items", null, "Since these items can only be obtained by purchasing them from a vendor and don't drop naturally in the world, there is no need for any special filtering or highlight.");
-            QuickUI([0.0, "Sanctum Sanctified Relics", "artefact->sanctifiedrelics;anysanctified"], "SH", []);
             QuickUI([0.0, "Items with Crucible passive tree", "exotic->crucible;crucibleany"], "SH", ["DropLevel", "Rarity", "ItemLevel"]);
             QuickUI([0.0, "Kalandra Lake exclusive Bases", "exoticbases;exoticlakekala"], "SH", ["Rarity", "ItemLevel"], null, ["Gear", "OS"]);
         }
     }
 
      Section ("Influenced Items", "Voidorb", "E") {
-        Function BaseTypeBox($s, $text, $descr = "") { QuickUI($s, "SD", ["ItemLevel"], $text, ["Gear", "DO"], $descr); }
+        Function BaseTypeBox($s, $text, $descr = "") { QuickUI($s, "SD", ["ItemLevel", "Quality"], $text, ["Gear", "DO"], $descr); }
 
         Description("To add more influenced item rules to the filter, use the 'Add additional Rules' section of the Customizer to do so.");
 
@@ -1471,8 +1527,8 @@ Chapter() {
             Search T1(0.0, "Common Influenced Rares - Tier 1", "influenced->common;t1_exo") { }
             Search T2(0.0, "Common Influenced Rares - Tier 2", "influenced->common;t2_exo") { }
 
-            QuickUI(T1, "SD", ["ItemLevel"], "Top influenced bases", [], "Extremely exclusive drop-restricted bases, such as heist and ritual bases.");
-            QuickUI(T2, "SD", ["ItemLevel"], "Exclusive atlas bases", []);
+            QuickUI(T1, "SD", ["ItemLevel", "Quality"], "Top influenced bases", [], "Extremely exclusive drop-restricted bases, such as heist and ritual bases.");
+            QuickUI(T2, "SD", ["ItemLevel", "Quality"], "Exclusive atlas bases", []);
 
             BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2);
 
@@ -1484,8 +1540,8 @@ Chapter() {
         Section("Searing Exarch") {
             Function EldrInflFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"], $text, ["Gear", "AOS"]); }
 
-            QuickUI([0.0, "Good Exarch Influence Bases", "rare->exarch;anyhigh"], "SD", ["HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted", "BTM"], "T1 - Exarch");
-            QuickUI([0.0, "Remaining Exarch Influenced Items", "rare->exarch;any"], "SD", ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"], "T2 - Exarch");
+            QuickUI([0.0, "Good Exarch Influence Bases", "rare->exarch;anyhigh"], "SD", ["HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted", "BTM", "Quality"], "T1 - Exarch");
+            QuickUI([0.0, "Remaining Exarch Influenced Items", "rare->exarch;any"], "SD", ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted", "Quality"], "T2 - Exarch");
             Conditional("?EldrInflNewTiers") { Show; Rarity Normal Magic Rare; SetTextColor 0 0 0 255; SetBackgroundColor 145 215 230 225; SetBorderColor 0 100 150 255; SetFontSize 40; PlayAlertSound 2 300; }
             ElementAdder_Tier("?EldrInflNewTiers", "EldrInflFunc");
         }
@@ -1493,8 +1549,8 @@ Chapter() {
         Section("Eater of Worlds") {
             Function EldrInflFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"], $text, ["Gear", "AOS"]); }
 
-            QuickUI([0.0, "Good Eater of Worlds Influence Bases", "rare->eater;anyhigh"], "SD", ["HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted", "BTM"], "T1 - Eater of Worlds");
-            QuickUI([0.0, "Remaining Eater of Worlds Influenced Items", "rare->eater;any"], "SD", ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted"], "T2 - Eater of Worlds");
+            QuickUI([0.0, "Good Eater of Worlds Influence Bases", "rare->eater;anyhigh"], "SD", ["HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted", "BTM", "Quality"], "T1 - Eater of Worlds");
+            QuickUI([0.0, "Remaining Eater of Worlds Influenced Items", "rare->eater;any"], "SD", ["AllGearClasses", "HasSearingExarchImplicit", "HasEaterOfWorldsImplicit", "Rarity", "ItemLevel", "DropLevel", "Corrupted", "Quality"], "T2 - Eater of Worlds");
         }
 
         Section("Shaper Items", null, "E") {
@@ -1546,9 +1602,9 @@ Chapter() {
         }
 
         Section("Remaining Influenced Items") {
-            QuickUI([0.0, "Remaining High Level Influenced Items", "rare->any;anytoplevel"], "SHD", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses"], "Remaining High Level Influenced");
-            QuickUI([0.0, "Small Influenced Items", "rare->any;anytrinket"], "SDH", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses"]);
-            QuickUI([0.0, "Remaining new Influenced Items", "rare->any;any"], "SHD", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses"], "Remaining Influenced Rares");
+            QuickUI([0.0, "Remaining High Level Influenced Items", "rare->any;anytoplevel"], "SHD", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses", "Quality"], "Remaining High Level Influenced");
+            QuickUI([0.0, "Small Influenced Items", "rare->any;anytrinket"], "SDH", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses", "Quality"]);
+            QuickUI([0.0, "Remaining new Influenced Items", "rare->any;any"], "SHD", ["HasInfluence", "ItemLevel", "DropLevel", "AllGearClasses", "Quality"], "Remaining Influenced Rares");
         }
     }
 }
@@ -1558,6 +1614,8 @@ Chapter() {
 
     Section("Chancing Bases", "Skyforth") {
         Description("Chancing is considered to be very inefficient by most PoE players, but some enjoy it a lot. Boss drops, recipe-exclusive or league exclusive drops can not be chanced.");
+
+        QuickUI([0.0, "High Quality Chancing", "crafting->qualityperfection;qualchancing"], "SH", ["AreaLevel", "Quality", "BaseDefencePercentile"], $text, ["gearPlusFlasks", "SO"]);
 
         Function ChancingList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["gearPlusFlasks", "SO"]); }
 
@@ -1574,7 +1632,7 @@ Chapter() {
             QuickUI([0.0, "High Level Flasks - iLvl 85", "endgameflasks;utility85"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
             QuickUI([0.0, "High Level Flasks - iLvl 84", "endgameflasks;utility84"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
             QuickUI([0.0, "High Level Flasks - iLvl 82", "endgameflasks;utility82"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
-            QuickUI([0.0, "Early mapping ultility flasks", "endgameflasks;earlymappingflasks"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified"]);
+            QuickUI([0.0, "Early mapping ultility flasks", "endgameflasks;earlymappingflasks"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified", "Quality"]);
             QuickUI([0.0, "Endgame utility flasks", "endgameflasks;anyutility"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified"], "Other Endgame Utility Flasks");
 
             Function EndgameUtilityFlaskCustomRuleUI ($s, $shd = "SHD", $title)
@@ -1589,7 +1647,7 @@ Chapter() {
         Section("Endgame Life & Mana Flasks", "FlaskLife") {
             QuickUI([0.0, "High Level Life/Mana Flasks - iLvl 82", "endgameflasks;lifemana82"], "SHD", ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], "Perfect Level Life&Mana Flasks", ["Flasks", "SOA"]);
 
-            QuickUI([0.0, "Early mapping life & mana flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "RarityNM", "Identified"], "Early Endgame Life&Mana Flasks", ["allFlasks", "SO"]);
+            QuickUI([0.0, "Early mapping life & mana flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "RarityNM", "Identified", "Quality"], "Early Endgame Life&Mana Flasks", ["allFlasks", "SO"]);
 
             Function EndgameLifeManaFlaskCustomRuleUI ($s, $shd = "SHD", $title)
             {
@@ -1602,9 +1660,15 @@ Chapter() {
 
         Section("Exceptional Quality Flasks", "Glassblower") {
             QuickUI([0.0, "High Level Flasks - Max Quality Corruption", "endgameflasks;overqualcorrupted"], "SH", ["RarityNM", "Utility Flasks", "ItemLevel", "Quality"], "Over-Quality Corrupted Flasks");
-            QuickUI([0.0, "Exceptional Quality Utility Flasks", "endgameflasks;overqualutil"], "SH", ["ItemLevel", "Quality", "RarityNM", "Utility Flasks"], "Over-Quality Utility Flasks");
-            QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Over-Quality Life&Mana", ["allFlasks", "SO"]);
+
+            QuickUI([0.0, "Exceptional Quality Utility Flasks", "endgameflasks;overqualutil1"], "SH", ["ItemLevel", "Quality", "RarityNM", "Utility Flasks"], "Over-Quality Utility Flasks");
+            QuickUI([0.0, "High Quality Utility Flasks", "endgameflasks;overqualutil2"], "SH", ["ItemLevel", "Quality", "RarityNM", "Utility Flasks"], "Over-Quality Utility Flasks");
+
+            QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife1"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Over-Quality Life&Mana", ["allFlasks", "SO"]);
+            QuickUI([0.0, "High Quality Life Flasks", "endgameflasks;overquallife2"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Over-Quality Life&Mana", ["allFlasks", "SO"]);
         }
+
+        // todo: new rule
     }
 
     Section("Jewels", "CobaltJewel") {
@@ -1941,27 +2005,38 @@ Chapter() {
 
         Section("Jewellery & Armours") {
 
-            QuickUI([0.0, "Leveling Rare Rustic Sash", "leveling->rare->universal;rusticsash"], "SD", ["ItemLevel"], "", ["Gear", "SO"], "Special jewellery");
+//            QuickUI([0.0, "Leveling Rare Rustic Sash", "leveling->rare->universal;rusticsash"], "SD", ["ItemLevel"], "", ["Gear", "SO"], "Special jewellery");
             ClassBox([0.0, "Leveling Rare Accessories", "leveling->rare->universal;jewellery"], "SD", "Rare Accessories");
-            QuickUI([0.0, "Leveling rare boots", "leveling->rare->armours;bootsfocus"], "SD", ["ItemType", "ItemLevel", "DropLevel", "Sockets"], "Boots");
-            QuickUI([0.0, "Leveling small rare armours", "leveling->rare->armours;general"], "SD", ["ItemType", "ItemLevel", "DropLevel", "Sockets", "AllGearClasses"], "Gloves, Helmets");
-            QuickUI([0.0, "Leveling rare shields", "leveling->rare->armours;shields"], "SD", ["ItemType", "ItemLevel", "DropLevel", "Height", "Sockets"], "Shields");
-            QuickUI([0.0, "Leveling rare body armours", "leveling->rare->armours;bodyarmours"], "SD", ["ItemType", "ItemLevel", "DropLevel", "Sockets"], "Body Armours");
+            QuickUI([0.0, "Leveling rare boots", "leveling->rare->armours;bootsfocus"], "SD", ["ItemType", "ItemLevel", "DropLevel", "Sockets", "Quality"], "Boots");
+            QuickUI([0.0, "Leveling small rare armours", "leveling->rare->armours;general"], "SD", ["ItemType", "ItemLevel", "DropLevel", "Sockets", "AllGearClasses", "Quality"], "Gloves, Helmets");
+            QuickUI([0.0, "Leveling rare shields", "leveling->rare->armours;shields"], "SD", ["ItemType", "ItemLevel", "DropLevel", "Height", "Sockets", "Quality"], "Shields");
+            QuickUI([0.0, "Leveling rare body armours", "leveling->rare->armours;bodyarmours"], "SD", ["ItemType", "ItemLevel", "DropLevel", "Sockets", "Quality"], "Body Armours");
         }
 
         Section("Weapon Highlight") {
             Description("Disabling any of the following sections will only remove the highlight (not hide the items). The rares will be caught under 'Remaining Rares'. It's recommended to only keep the parts on you care about.");
 
-            Search S0(0.0, "Leveling Rare Melee Progression 1", "leveling->rare->melee;l1") { }
-            Search S0(0.0, "Leveling Rare Melee Progression 2", "leveling->rare->melee;l2") { }
-            Search S0(0.0, "Leveling Rare Melee Progression 3", "leveling->rare->melee;l3") { }
-            Search S0(0.0, "Leveling Rare Melee Progression 4", "leveling->rare->melee;l4") { }
-            Search S0(0.0, "Leveling Rare Melee Progression 5", "leveling->rare->melee;l5") { }
-            Search S0(0.0, "Leveling Rare Melee Progression 6", "leveling->rare->melee;l6") { }
-            Search S0(0.0, "Leveling Rare Melee Progression 7", "leveling->rare->melee;l7") { }
-            Search S0(0.0, "Leveling Rare Melee Progression 8", "leveling->rare->melee;l8") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 1", "leveling->rare->melee2h;l1") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 2", "leveling->rare->melee2h;l2") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 3", "leveling->rare->melee2h;l3") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 4", "leveling->rare->melee2h;l4") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 5", "leveling->rare->melee2h;l5") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 6", "leveling->rare->melee2h;l6") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 7", "leveling->rare->melee2h;l7") { }
+            Search S0(0.0, "Leveling Rare Melee Progression 8", "leveling->rare->melee2h;l8") { }
 
-            QuickUI(S0, "SD", ["AllGearClasses", "Sockets", "AreaLevel"], "Melee (progression)", [], "These section combines many rules and will show the current top available base-types.");
+            QuickUI(S0, "SD", ["AllGearClasses", "Sockets", "AreaLevel", "Quality"], "Melee 2H (progression)", [], "These section combines many rules and will show the current top available base-types.");
+
+            Search M1H(0.0, "Leveling Rare Melee 1H Progression 1", "leveling->rare->melee1h;l1") { }
+            Search M1H(0.0, "Leveling Rare Melee 1H Progression 2", "leveling->rare->melee1h;l2") { }
+            Search M1H(0.0, "Leveling Rare Melee 1H Progression 3", "leveling->rare->melee1h;l3") { }
+            Search M1H(0.0, "Leveling Rare Melee 1H Progression 4", "leveling->rare->melee1h;l4") { }
+            Search M1H(0.0, "Leveling Rare Melee 1H Progression 5", "leveling->rare->melee1h;l5") { }
+            Search M1H(0.0, "Leveling Rare Melee 1H Progression 6", "leveling->rare->melee1h;l6") { }
+            Search M1H(0.0, "Leveling Rare Melee 1H Progression 7", "leveling->rare->melee1h;l7") { }
+            Search M1H(0.0, "Leveling Rare Melee 1H Progression 8", "leveling->rare->melee1h;l8") { }
+
+            QuickUI(M1H, "SD", ["AllGearClasses", "Sockets", "AreaLevel", "Quality"], "Melee 1H (progression)", [], "These section combines many rules and will show the current top available base-types.");
 
             Search S1(0.0, "Leveling Rare Bow Progression 1", "leveling->rare->archer;l1") { }
             Search S1(0.0, "Leveling Rare Bow Progression 2", "leveling->rare->archer;l2") { }
@@ -1972,7 +2047,7 @@ Chapter() {
             Search S1(0.0, "Leveling Rare Bow Progression 7", "leveling->rare->archer;l7") { }
             Search S1(0.0, "Leveling Rare Bow Progression 8", "leveling->rare->archer;l8") { }
 
-            QuickUI(S1, "SD", ["AllGearClasses", "Sockets", "AreaLevel"], "Bows (progression)", [], "These section combines many rules and will show the current top available base-types.");
+            QuickUI(S1, "SD", ["AllGearClasses", "Sockets", "AreaLevel", "Quality"], "Bows (progression)", [], "These section combines many rules and will show the current top available base-types.");
             QuickUI([0.0, "Leveling rare quivers", "leveling->rare->armours;quivers"], "SD", ["ItemLevel", "DropLevel"], "Quivers");
 
             QuickUI([0.0, "Leveling rare caster weapons", "leveling->rare->caster;general"], "SD", ["AllGearClasses", "ItemLevel", "DropLevel", "Sockets"], "Caster");
@@ -1983,10 +2058,10 @@ Chapter() {
 
         Section("Remaining rares") {
             QuickUI([1.0, "Leveling Rare RGB Chromatic recipe", "leveling->rare->remaining;chromaticrares"], "SD", ["ItemLevel", "Rarity", "Sockets"], "Rare Chromatics");
-            QuickUI([0.0, "Remaining leveling rares, high-level", "leveling->rare->remaining;underlevel68"], "SD", ["ItemLevel", "AreaLevel", "AllGearClasses", "Sockets"], "Level 42-68");
-            QuickUI([0.0, "Remaining leveling rares, mid-level", "leveling->rare->remaining;underlevel42"], "SD", ["ItemLevel", "AreaLevel", "AllGearClasses", "Sockets"], "Level 24-42");
-            QuickUI([0.0, "Remaining leveling rares, low-level", "leveling->rare->remaining;underlevel24"], "SD", ["ItemLevel", "AreaLevel", "AllGearClasses", "Sockets"], "Level 16-24");
-            QuickUI([0.0, "Remaining leveling rares, start", "leveling->rare->remaining;underlevel16"], "SD", ["ItemLevel", "AreaLevel", "AllGearClasses"], "Level 1-16");
+            QuickUI([0.0, "Remaining leveling rares, high-level", "leveling->rare->remaining;underlevel68"], "SD", ["ItemLevel", "AreaLevel", "AllGearClasses", "Sockets", "Quality"], "Level 42-68");
+            QuickUI([0.0, "Remaining leveling rares, mid-level", "leveling->rare->remaining;underlevel42"], "SD", ["ItemLevel", "AreaLevel", "AllGearClasses", "Sockets", "Quality"], "Level 24-42");
+            QuickUI([0.0, "Remaining leveling rares, low-level", "leveling->rare->remaining;underlevel24"], "SD", ["ItemLevel", "AreaLevel", "AllGearClasses", "Sockets", "Quality"], "Level 16-24");
+            QuickUI([0.0, "Remaining leveling rares, start", "leveling->rare->remaining;underlevel16"], "SD", ["ItemLevel", "AreaLevel", "AllGearClasses", "Quality"], "Level 1-16");
         }
     }
 
@@ -2039,22 +2114,22 @@ Chapter() {
 
         Description("Item progressions highlight the best available class (such as only 1h Axe or Claw) available on your level. Select up to 3 types below and we'll create the progression in just 1 click. The filter also comes with a default item progression. It's less precise than the custom ones, but covers multiple classes.");
 
-        Function ItemProgUI($s) { QuickUI($s, "", ["Rarity", "Sockets", "LinkedSockets", "AreaLevel", "Corrupted", "Progression"], "Item Progression Editor"); }
+        DeepSearchMulti S3(0.0, "Leveling-Progression-Full", 0, 15) { -BaseType "Gemini Claw"; Class "Claws"; +DropLevel <= 65; !ItemLevel < 65; Rarity Normal; SocketGroup GGG; }
+        QuickUI(S3, "SHD", ["Sockets", "LinkedSockets", "Corrupted", "AllGearClasses", "BaseArmour", "BaseEvasion", "BaseEnergyShield", "Quality"], "Default Item Progression");
 
-            DeepSearchMulti S3(0.0, "Leveling-Progression-Full", 0, 15) { -BaseType "Gemini Claw"; Class "Claws"; +DropLevel <= 65; !ItemLevel < 65; Rarity Normal; SocketGroup GGG; }
-            QuickUI(S3, "SHD", ["Sockets", "LinkedSockets", "Corrupted", "AllGearClasses", "BaseArmour", "BaseEvasion", "BaseEnergyShield"], "Default Item Progression");
+        Function ItemProgUI($s) { QuickUI($s, "", ["Rarity", "Sockets", "LinkedSockets", "AreaLevel", "Corrupted", "Progression", "Quality"], "Item Progression Editor"); }
 
-            DeepSearch S0("skip", "skip", "leveling->rare->caster;earlylevels") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
-            Conditional("?LvlItemProgression1", [1], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
-            ItemProgUI("?LvlItemProgression1");
+        DeepSearch S0("skip", "skip", "leveling->rare->caster;earlylevels") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
+        Conditional("?LvlItemProgression1", [1], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
+        ItemProgUI("?LvlItemProgression1");
 
-            DeepSearch S1("skip", "skip", "leveling->rare->caster;earlylevels") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
-            Conditional("?LvlItemProgression2", [2], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
-            ItemProgUI("?LvlItemProgression2");
+        DeepSearch S1("skip", "skip", "leveling->rare->caster;earlylevels") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
+        Conditional("?LvlItemProgression2", [2], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
+        ItemProgUI("?LvlItemProgression2");
 
-            DeepSearch S2("skip", "skip", "leveling->rare->caster;earlylevels") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
-            Conditional("?LvlItemProgression3", [3], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
-            ItemProgUI("?LvlItemProgression3");
+        DeepSearch S2("skip", "skip", "leveling->rare->caster;earlylevels") { SocketGroup "RGBR"; ItemLevel 20; BaseType "Driftwood Wand"; }
+        Conditional("?LvlItemProgression3", [3], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
+        ItemProgUI("?LvlItemProgression3");
     }
 
     Section("Other Normal and magic Items", "ShabbyJerkin") {
@@ -2178,8 +2253,9 @@ Chapter() {
             QuickUI([0.0, "Awakened Support Gems", "gems-exceptional;awaany"], "SH", [], "Awakened Gems: Others");
 
             Title("Empower Class");
-            QuickUI([0.0, "Special Gems with level", "gems-special;exspeciale3"], "SH", ["GemLevel", "Quality"], "Empower-Class: High Level", ["Gems", "DO"]]);
-            QuickUI([0.0, "Special Gems Tier 1", "gems-special;specialworlddrops"], "SH", ["GemLevel", "Quality"], "Empower-Class: High Value", ["Gems", "DO"]]);
+            QuickUI([0.0, "Special Gems with high level", "gems-special;exspeciale4"], "SH", ["GemLevel", "Quality", "Corrupted"], "Empower-Class: Very High Level", ["Gems", "DO"]);
+            QuickUI([0.0, "Special Gems with level", "gems-special;exspeciale3"], "SH", ["GemLevel", "Quality", "Corrupted"], "Empower-Class: High Level", ["Gems", "DO"]]);
+            QuickUI([0.0, "Special Gems Tier 1", "gems-special;specialworlddrops"], "SH", ["GemLevel", "Quality", "Corrupted"], "Empower-Class: High Value", ["Gems", "DO"]]);
             QuickUI([1.0, "Gems T1", "gems-special;exspecial"], "SD", ["GemLevel", "Quality", "Corrupted"], "Empower-Class: Others", ["Gems", "DO"]);
 
             Title("Other Special Gems");
@@ -2546,20 +2622,24 @@ Chapter() {
             Search S0(1.0, "Untiered Fragments", "fragments;restex") { }
             Search S0(1.0, "Untiered Fossils", "currency->fossil;restex") {  }
             Search S0(1.0, "Untiered Replica Uniques", "uniques->replicas;restex") {  }
+            Search S0(1.0, "Untiered Corpses", "corpses;restex") {  }
             Search S0(1.0, "Untiered Incubators", "currency->incubators;restex") { }
             Search S0(1.0, "Untiered Resonators", "currency->resonator;restex") {  }
             Search S0(1.0, "Untiered Map Items", "maps;restex") {  }
             Search S0(1.0, "Untiered Oils", "currency->oil;restex") { }
             Search S0(1.0, "Untiered Misc Map Items", "miscmapitems;restex") {  }
             Search S0(0.0, "Untiered Tattoos", "currency->trial->tattoo;restex") {  }
+            Search S0(0.0, "Untiered SettlerRunes", "runes;restex") {  }
             Search S0(0.0, "Untiered Omens", "currency->trial->omen;restex") {  }
             Search S0(1.0, "Untiered Delirium Orbs", "currency->deliriumorbs;restex") {  }
             Search S0(3.0, "Unhandled error items", "anyremaining;restex") {  }
-            Search S0(3.0, "Untiered Necropolis Allflames", "necropolis;restex") {  }
             Search S0(0.0, "Untiered Breachstones", "breachstone;restex") {  }
 
             QuickUI(S0, "S", [], "Untiered items");
         }
+
+        Description("This rule (attempts) to highlight any item dropped in misc. hideout areas, such as the Bestiary or Azurite mine");
+        QuickUI([0.0, "Crafting-Zone Dropped Items", "rare->utility->droppeditems;any"], "SH", [], "Crafting-Zone Dropped Items");
     }
 
     Section("Optional filter modules", "Animate Weapon") {
