@@ -86,7 +86,6 @@ StyleSection("SOMETIMES LUCKY", "The blue or purple map icons and beams signaliz
 
 StyleSection("Fragments & Scarabs", "Map fragment open a unique encounter if used if the other pieces of the set. Most scarabs on the other hand add both challenge and reward to a map encounter. Some of these can be very pricy!") {
     Search S0("skip", null, "fragments;t2") {  }
-    Search S0("skip", null, "fragments;t3") {  }
     Search S0("skip", null, "fragments;t4") {  }
 
     SS_Item("S0");
