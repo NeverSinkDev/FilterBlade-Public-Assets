@@ -1365,9 +1365,9 @@ Chapter() {
         Title("Special Properties");
 
         Section("Synthesised items") {
-            QuickUI([0.0, "Synthesised items T1", "exotic->synthesised;synthselected"], "SD", ["ItemLevel", "DropLevel", "Identified", "BTM", "Quality"], "Synthesised - Best Bases");
-            QuickUI([0.0, "Synthesised items classes", "exotic->synthesised;synthclasses"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified", "Quality"], "Synthesises - Important Classes");
-            QuickUI([0.0, "Synthesised items", "exotic->synthesised;synthrandom"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified", "Quality"], "Synthesised - Others");
+            QuickUI([0.0, "Synthesised items T1", "exotic->synthesised;synthselected"], "SD", ["ItemLevel", "DropLevel", "Identified", "BTM", "Quality"], "Synth: Selected bases");
+            QuickUI([0.0, "Synthesised items classes", "exotic->synthesised;synthclasses"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified", "Quality"], "Synth: Selected Classes");
+            QuickUI([0.0, "Synthesised items", "exotic->synthesised;synthrandom"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified", "Quality"], "Synth: All Others");
         }
 
         Section("Economy-Based Expensive 86+ bases", null, "E") {
@@ -1396,7 +1396,7 @@ Chapter() {
 
             Function VeilMods($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AllGearClasses", "DropLevel", "ItemLevel", "Mods"], $text); }
             Description("Items that have a fractured and veiled mod. It is NOT garantueed that the veiled mod is the fractured one");
-            VeilMods([0.0, "Betrayal Veiled Fractured Mods", "exoticmods;fracturedveiled"], "SH", "Fractured+Veiled Items");
+            VeilMods([0.0, "Betrayal Veiled Fractured Mods", "exoticmods;fracturedveiled"], "SH", "Fractured+Veiled/Incursion Items");
             QuickUI([0.0, "Fractured items, classes", "exotic->fractured;fractspecial"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified"], "Fractured Exotic Classes");
 
             Description("Necropolis items with Necropolis-Exclusive mods are highlighted using this rule");
@@ -1786,8 +1786,8 @@ Chapter() {
             ClusterJewelTierList_NoEnch([0.0, "Good Large Cluster Jewels", "jewels->cluster;highlarge"], "SH", "Size:L, nodes:8");
             ClusterJewelTierList_NoEnch([0.0, "Large Cluster Jewels", "jewels->cluster;large"], "SH", "Size:L");
             Title("Other Medium Cluster Jewels");
-            ClusterJewelTierList_NoEnch([0.0, "Good High Level Medium Cluster Jewels", "jewels->cluster;optimalhighmedium"], "SH", "Size:M, nodes:5-6, lvl84+");
-            ClusterJewelTierList_NoEnch([0.0, "Good Medium Cluster Jewels", "jewels->cluster;highmedium"], "SH", "Size:M, nodes:5-6");
+            ClusterJewelTierList_NoEnch([0.0, "Good High Level Medium Cluster Jewels", "jewels->cluster;optimalhighmedium"], "SH", "Size:M, nodes:4-5, lvl84+");
+            ClusterJewelTierList_NoEnch([0.0, "Good Medium Cluster Jewels", "jewels->cluster;highmedium"], "SH", "Size:M, nodes:4-5");
             ClusterJewelTierList_NoEnch([0.0, "Medium Cluster Jewels", "jewels->cluster;medium"], "SH", "Size:M");
             Title("Other Small Cluster Jewels");
             ClusterJewelTierList_NoEnch([0.0, "High Level Small Cluster Jewels", "jewels->cluster;highsmall"], "SH", "Size:S, nodes:2-3, lvl84+");
@@ -2313,7 +2313,8 @@ Chapter() {
         Section("Exotics: Links&Sockets", "Tabula") {
             Search S1("0.0", "Unique Exception: Tabula Rasa") { BaseType "Simple Robe"; SocketGroup "WWWWWW"; Rarity Unique; }
             Title("Uniques with high Socket/Link Number");
-            QuickUI([0.0, "6 linked uniques", "uniques;ex6link"], "SD");
+            Warning("This rule also affects 'Skin of the Loyal', 'Skin of the Lords' and 'Oni-Goroshi'!");
+            QuickUI([0.0, "6 linked uniques", "uniques;ex6link"], "S");
             QuickUI([0.0, "5 linked uniques", "uniques;5link"], "SD");
             QuickUI([0.0, "6 Socket Uniques", "uniques;6s"], "SD");
             Title("Specific Uniques With Exotics Sockets");
