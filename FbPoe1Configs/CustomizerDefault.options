@@ -578,11 +578,11 @@ Chapter() {
         }
 
         Section("Tinctures") {
-            QuickUI([0.0, "High Quality & ItemLevel Tinctures", "endgametinctures;overqual1"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"], "High Quality & ItemLevel");
-            QuickUI([0.0, "Quality & High ItemLevel Tinctures", "endgametinctures;overqual2"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"], "Quality & High ItemLevel");
-            QuickUI([0.0, "High ItemLevel Tinctures", "endgametinctures;tinc82"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
-            QuickUI([0.0, "Remaining Endgame Tinctures", "endgametinctures;any"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
-            QuickUI([0.0, "Tinctures during campaign", "leveling->tincture;any"], "SH", ["Rarity", "ItemLevel", "Quality", "Tinctures"]);
+            QuickUI([0.0, "High Quality & ItemLevel Tinctures", "endgametinctures;overqual1"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"], "High Quality & ItemLevel");
+            QuickUI([0.0, "Quality & High ItemLevel Tinctures", "endgametinctures;overqual2"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"], "Quality & High ItemLevel");
+            QuickUI([0.0, "High ItemLevel Tinctures", "endgametinctures;tinc82"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"]);
+            QuickUI([0.0, "Remaining Endgame Tinctures", "endgametinctures;any"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"]);
+            QuickUI([0.0, "Tinctures during campaign", "leveling->tincture;any"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"]);
         }
 
         Section("Corpses") {
