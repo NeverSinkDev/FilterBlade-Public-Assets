@@ -333,11 +333,6 @@
 					"tags": ["Report", "Generic"]
 				},
 
-				"Oil Extractor": {
-					"text": "Drops with Distilled Fungus Atlas node<br>Destroys an Anointed Item to recover one of the Oils that was used to apply that Anointment",
-					"tags": ["Blight", "BossDrop", "LeagueDrop"]
-				},
-
 				"Fertile Catalyst": {
 					"text": "Adds quality that enhances Life and Mana modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
@@ -705,26 +700,26 @@
 
 				"Maven's Chisel of Avarice": {
 					"text": "Improves the quality of a map enhancing Currency found",
-					"tags": ["Generic"]
+					"tags": ["BossDrop"]
 				},
 				"Maven's Chisel of Divination": {
 					"text": "Improves the quality of a map enhancing Divination Cards found",
-					"tags": ["Generic"]
+					"tags": ["BossDrop"]
 				},
 				"Maven's Chisel of Procurement": {
 					"text": "Improves the quality of a map enhancing Item Rarity",
-					"tags": ["Generic"]
+					"tags": ["BossDrop"]
 				},
 				"Maven's Chisel of Proliferation": {
 					"text": "Improves the quality of a map enhancing Pack Size",
-					"tags": ["Generic"]
+					"tags": ["BossDrop"]
 				},
 				"Maven's Chisel of Scarabs": {
 					"text": "Improves the quality of a map enhancing Scarabs found",
-					"tags": ["Generic"]
+					"tags": ["BossDrop"]
 				},
 				"Reflecting Mist": {
-					"text": "Can be used on a Ring or Amulet to randomly enhance or invert modifier values",
+					"text": "Unpredictably reflects a rare amulet or ring, breaking it into two mirrored halves with reflected modifiers",
 					"tags": ["LeagueDrop"]
 				}
 			}
@@ -888,6 +883,9 @@
 				},
 				"Whispering Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Essences reward type"
+				},
+				"Fine Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Currency Items reward type"
 				}
 			}
 		},
@@ -2178,6 +2176,27 @@
 				},
 				"The Friendship": {
 					"tags": ["UniqueOutcome"]
+				},
+				"Toxic Tidings": {
+					"tags": ["UniqueOutcome"]
+				},
+				"I See Brothers": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Temperance": {
+					"tags": ["MapOutcome"]
+				},
+				"Lonely Warrior": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Friendship": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Father's Love": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Avian Pursuit": {
+					"tags": ["MapOutcome"]
 				}
 			}
 		},
@@ -2337,27 +2356,17 @@
 					"text": "Breaches in Areas open and close 10% faster for each Breach already opened<br>Monsters from Breaches in Areas have increased Difficulty and Reward foreach Breach already opened"
 				},
 
-				"Cartography Scarab": {
-					"text": "50% increased Maps found in Area"
+				"Cartography Scarab of Escalation": {
+					"text": "10% increased Maps found in Area for each Map Modifier affecting Area"
 				},
-				"Cartography Scarab of Ascension": {
-					"text": "Maps found in Area are a tier higher, up to Tier 16"
+				"Cartography Scarab of the Multitude": {
+					"text": "Area contains 8 to 12 additional packs of Difficult and Rewarding Monsters which drop 300% increased Maps"
 				},
 				"Cartography Scarab of Corruption": {
 					"text": "Non-Unique Maps found in Area are Corrupted with 8 Modifiers"
 				},
-				"Cartography Scarab of Duplication": {
-					"text": "Maps found in Area have a 30% chance to be Duplicated"
-				},
-
-				"Reliquary Scarab": {
-					"text": "100% increased Unique Items found in Area"
-				},
-				"Reliquary Scarab of Overlords": {
-					"text": "Unique Monsters in Area drop an additional Unique Item"
-				},
-				"Reliquary Scarab of Vision": {
-					"text": "Area contains The Nameless Seer"
+				"Cartography Scarab of Risk": {
+					"text": "Area has an additional random Modifier"
 				},
 
 				"Bestiary Scarab": {
@@ -2384,24 +2393,24 @@
 				},
 
 				"Sulphite Scarab": {
-					"text": "Area contains Niko"
+					"text": "Area contains Niko<br>Map owner gains 150% more Sulphite"
 				},
 				"Sulphite Scarab of Fumes": {
 					"text": "Sulphite found in Map Area releases Enraging Fumes<br>Monsters affected by Enraging Fumes have 50% increased Item Quantity<br>Sulphite in your maps is guarded by Monsters from the Azurite Mine"
 				},
 
-				"Divination Scarab": {
-					"text": "150% increased Divination Cards found in Area"
+				"Divination Scarab of Pilfering": {
+					"text": "Divination Cards which drop in Area are stolen by a Final Map Boss<br>That Final Map Boss has increased Toughness and deals increased Damage the more Divination Cards they have stolen<br>That Final Map Boss duplicates all stolen Divination Cards when defeated"
 				},
-				"Divination Scarab of Curation": {
-					"text": "10% more Divination Cards found in Area per different Favoured Map<br>Divination card drops in Area are replaced by those of your Favoured Maps"
+				"Divination Scarab of Plenty": {
+					"text": "Up to 3 Packs of Magic Monsters in Area have 800% increased chance to drop Divination Cards"
 				},
-				"Divination Scarab of Completion": {
-					"text": "Divination cards which drop in Area have a 20% chance to drop as a full stack instead"
+				"Divination Scarab of The Cloister": {
+					"text": "Area contains 8 to 12 additional packs of Doedre's Devoted<br>Doedre's Devoted have 1% additional chance to drop a Stacked Deck"
 				},
 				
 				"Torment Scarab": {
-					"text": "Area is haunted by 5 additional Tormented Spirits"
+					"text": "Area is haunted by 3 additional Tormented Spirits<br>Tormented Spirits in Area have a 25% chance to be set free when Possessed Monsters are slain"
 				},
 				"Torment Scarab of Peculiarity": {
 					"text": "Tormented Spirits in Area are replaced with unusual variants"
@@ -2429,8 +2438,8 @@
 				"Harbinger Scarab": {
 					"text": "Area contains 3 additional Harbingers"
 				},
-				"Harbinger Scarab of Discernment": {
-					"text": "Harbingers in Area drop rarer currency shards<br>Harbingers in Area drop a single type of currency shard"
+				"Harbinger Scarab of Obelisks": {
+					"text": "Harbingers in Area spawn Empowered Obelisks<br>Empowered Obelisks drop Currency Shards when defeated"
 				},
 				"Harbinger Scarab of Regency": {
 					"text": "Harbingers in Area have a 50% chance to be replaced by a powerful Harbinger Boss"
@@ -2507,11 +2516,11 @@
 				"Domination Scarab": {
 					"text": "Area contains 2 additional Shrines"
 				},
-				"Domination Scarab of Abnormality": {
-					"text": "Area contains an additional Unusual Shrine"
+				"Domination Scarab of Apparitions": {
+					"text": "Area contains 2 additional Apparition Shrines"
 				},
-				"Domination Scarab of Teachings": {
-					"text": "Shrine buffs in Area also grant 30% increased Experience gained"
+				"Domination Scarab of Evolution": {
+					"text": "Area contains an additional Evolving Shrine"
 				},
 				"Domination Scarab of Terrors": {
 					"text": "Shrines in Area are guarded by an Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
@@ -2520,8 +2529,8 @@
 				"Ritual Scarab of Selectiveness": {
 					"text": "Rerolling Favours at Ritual Altars in Area has no cost the first 2 times<br>Ritual Altars in Area allow rerolling Favours 1 additional time"
 				},
-				"Ritual Scarab of Recognition": {
-					"text": "Unique enemies slain at Ritual Altars in Area grant 200% more Tribute"
+				"Ritual Scarab of Wisps": {
+					"text": "Ritual Altars in Area spawn a Wildwood Wisp<br>Wildwood Wisps grant 70% increased Tribute Gained to nearby Players"
 				},
 				"Ritual Scarab of Abundance": {
 					"text": "Rituals in Area offer 100% increased Favours"
@@ -2583,17 +2592,17 @@
 					"text": "Ultimatum Encounters in Area will always lead to a Unique Boss if possible"
 				},
 				"Ultimatum Scarab of Catalysing": {
-					"text": "Ultimatum Encounters in Area will only offer Catalysts as Rewards"
+					"text": "Ultimatum Encounters in Area will only offer Catalysts as Rewards to the Map Owner"
 				},
 				"Ultimatum Scarab of Inscription": {
-					"text": "Ultimatum Encounter rewards in Area offering Catalysts will offer Inscribed Ultimatums instead"
+					"text": "Ultimatum Encounter rewards in Area offering Catalysts will offer Inscribed Ultimatums to the Map Owner instead"
 				},
 
 				"Delirium Scarab": {
 					"text": "Area contains a Mirror of Delirium"
 				},
 				"Delirium Scarab of Mania": {
-					"text": "Delirium Reward Meters fill 100% faster in Area"
+					"text": "Delirium Reward Meters fill 100% faster in Area<br>Delirium in Area increases 50% faster with distance from the mirror"
 				},
 				"Delirium Scarab of Paranoia": {
 					"text": "Delirium Encounters in Area generate 2 additional Reward types"
@@ -2609,7 +2618,7 @@
 					"text": "Area contains a Blight Encounter"
 				},
 				"Blight Scarab of the Blightheart": {
-					"text": "Blight Oils found in Area are 1 tier higher"
+					"text": "Blight Encounters in Area have one Blighted Chest<br>Blight Encounters in Area spawn many more waves of Enemies<br>Blighted Chests in Area grow larger and more rewarding the more Blighted Enemies are slain"
 				},
 				"Blight Scarab of Blooming": {
 					"text": "Blight Encounters in Area have up to 3 additional Unique Bosses<br>Unique enemies in Blight Encounters have 100% increased life<br>Tier 14+ Blighted Maps found in Area drop as Blight-Ravaged Maps instead"
@@ -2618,17 +2627,23 @@
 					"text": "Each Empowering Tower in Areas grants Blighted Monsters in range increased Difficulty and Reward"
 				},
 
-				"Scarab of Monstrous Lineage": {
-					"text": "40% increased Magic Pack Size"
-				},
 				"Scarab of Adversaries": {
 					"text": "Area contains 4 additional Packs with Mirrored Rare Monsters"
 				},
-				"Mysterious Scarab": {
-					"text": "Area contains 40-60 additional Clusters of Mysterious Barrels"
+				"Scarab of Bisection": {
+					"text": "Allows you to select the Nullify Prefixes or Nullify Suffixes crafting options on the Map Device"
+				},
+				"Scarab of Divinity": {
+					"text": "Up to 2 additional Rare Monsters in Area will be Pantheon-Touched<br>Apparitions spawned by Pantheon-Touched Monsters deal 100% increased damage"
 				},
 				"Scarab of Hunted Traitors": {
 					"text": "Area contains Hunted Traitors"
+				},
+				"Scarab of Monstrous Lineage": {
+					"text": "40% increased Magic Pack Size"
+				},
+				"Scarab of Radiant Storms": {
+					"text": "Area contains a Resplendent Tempest"
 				},
 				"Scarab of Stability": {
 					"text": "Portals to Area have a 50% chance to not be consumed on use"
@@ -2636,15 +2651,9 @@
 				"Scarab of Wisps": {
 					"text": "Monsters in Area have a chance to be Empowered by 2000 Wildwood Wisps"
 				},
-				"Scarab of Radiant Storms": {
-					"text": "Area contains a Resplendent Tempest"
-				},
-				"Scarab of Bisection": {
-					"text": "Allows you to select the Nullify Prefixes or Nullify Suffixes crafting options on the Map Device"
-				},
 
 				"Horned Scarab of Bloodlines": {
-					"text": "All Monster packs in Area are at least Magic"
+					"text": "Area has 150% increased Magic Monsters"
 				},
 				"Horned Scarab of Nemeses": {
 					"text": "Rare Monsters in Area have 2 additional Modifiers"
@@ -2656,13 +2665,23 @@
 					"text": "You can select one Imbued crafting option on the Map Device"
 				},
 				"Horned Scarab of Tradition": {
-					"text": "All Rare Monsters in Area have at least one Reward Modifier<br>Player Modifiers to Item Rarity and Item Quantity do not apply in Area"
+					"text": "All Rare and Unique Monsters in Area have dropped items transformed by a Reward Modifier"
 				},
 				"Horned Scarab of Glittering": {
 					"text": "Players in Area gain increased Item Rarity and Item Quantity for each Monster slain recently, up to 200% and 100% respectively"
 				},
 				"Horned Scarab of Pandemonium": {
 					"text": "Monster packs in Area have a 15% chance to be replaced by a random Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
+				},
+
+				"Titanic Scarab": {
+					"text": "Unique Monsters have 2% increased Toughness, Damage, Rarity and Quantity of items dropped per 1% increased Pack Size of Area"
+				},
+				"Titanic Scarab of Legend": {
+					"text": "Unique Monsters in Area have 2 additional Monster Modifiers"
+				},
+				"Titanic Scarab of Treasures": {
+					"text": "Unique Monsters in Area have 2 additional Rewards<br>Unique Monsters in Area have 30% increased Toughness"
 				}
 
 			}
@@ -4108,8 +4127,12 @@
 					"text": null,
 					"items": {
 						"Circle of Ambition": {
-							"text": "Drops from Uber Cortex.",
-							"priority": -5
+							"text": "Overridden in exceptions. Drops from Uber Cortex.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Synthesis Rings",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
 						},
 						"The Taming": {
 							"text": "Does not drop. Created with a vendor recipe.",
@@ -4809,6 +4832,72 @@
 					"items": {
 						"Pragmatism": {
 							"text": "Drops from the King in the Mists",
+							"priority": -5
+						}
+					}
+				},
+				"Siege Helmet": {
+					"text": null,
+					"items": {
+						"Kaom's Command": {
+							"text": "Does not drop. Obtained from shipping resources to Ngakanu or Te Onui.",
+							"priority": -10
+						}
+					}
+				},
+				"Phantom Mace": {
+					"text": null,
+					"items": {
+						"Serle's Masterwork": {
+							"text": "Does not drop. Obtained from shipping resources to Riben Fell, Pondium, or Kalguur.",
+							"priority": -10
+						}
+					}
+				},
+				"Piledriver": {
+					"text": null,
+					"items": {
+						"Tawhoa's Felling": {
+							"text": "Does not drop. Obtained from shipping resources to Ngakanu or Te Onui.",
+							"priority": -10
+						}
+					}
+				},
+				"Studded Belt": {
+					"text": null,
+					"items": {
+						"Ynda's Stand": {
+							"text": "Does not drop. Obtained from shipping resources to Riben Fell, Pondium, or Kalguur.",
+							"priority": -10
+						}
+					}
+				},
+				"Nameless Ring": {
+					"text": "Sold in Ritual."
+				},
+				"Antique Gauntlets": {
+					"text": null,
+					"items": {
+						"Admiral's Arrogance": {
+							"text": "Drops from the Admiral Valerius",
+							"priority": -5
+						}
+					}
+				},
+				"Ezomyte Blade": {
+					"text": null,
+					"items": {
+						"The Living Blade": {
+							"text": "Drops from the Sasan",
+							"priority": -5
+						}
+					}
+				},
+				"Girded Tower Shield": {
+					"text": null,
+					"items": {
+						"Svalinn": {
+							"text": "Drops from the The Black Knight",
 							"priority": -5
 						}
 					}
