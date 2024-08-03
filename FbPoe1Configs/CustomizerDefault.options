@@ -1153,9 +1153,9 @@ Chapter() {
             QuickUI([1.0, "Endgame rare deco ilvl 84", "decorators->rareeg;ilvl84"], "SD", ["ItemLevel"], "Decorator: ItemLevel 84");
             QuickUI([1.0, "Endgame rare deco ilvl 75", "decorators->rareeg;ilvl75"], "SD", ["ItemLevel"], "Decorator: ItemLevel 75");
             QuickUI([1.0, "Endgame rare deco ilvl 68", "decorators->rareeg;ilvl68"], "SD", ["ItemLevel"], "Decorator: ItemLevel 68");
-            QuickUI([0.0, "Endgame rare deco Atlas Bases Tier 1", "decorators->rareeg;atlasgear1"], "SH", ["ItemLevel", "AreaLevel"], "Decorator: Atlas Bases S Tier", ["gear", "OS"]);
-            QuickUI([0.0, "Endgame rare deco Atlas Bases Tier 2", "decorators->rareeg;atlasgear2"], "SH", ["ItemLevel", "AreaLevel"], "Decorator: Atlas Bases A Tier", ["gear", "OS"]);
-            QuickUI([0.0, "Endgame rare deco Atlas Bases Tier 3", "decorators->rareeg;atlasgear3"], "SH", ["ItemLevel", "AreaLevel"], "Decorator: Atlas Bases B Tier", ["gear", "OS"]);
+            QuickUI([0.0, "Endgame rare deco Atlas Bases Tier 3", "decorators->rareeg;atlasgear3"], "SH", ["ItemLevel", "AreaLevel"], "Decorator: Atlas Bases T1 Tier", ["gear", "OS"]);
+            QuickUI([0.0, "Endgame rare deco Atlas Bases Tier 2", "decorators->rareeg;atlasgear2"], "SH", ["ItemLevel", "AreaLevel"], "Decorator: Atlas Bases T2 Tier", ["gear", "OS"]);
+            QuickUI([0.0, "Endgame rare deco Atlas Bases Tier 1", "decorators->rareeg;atlasgear1"], "SH", ["ItemLevel", "AreaLevel"], "Decorator: Atlas Bases T3 Tier", ["gear", "OS"]);
             QuickUI([1.0, "Endgame rare deco corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted Implicit");
             QuickUI([1.0, "Endgame rare deco corrupted", "decorators->rareeg;corruptedrares"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted - No implicit");
             QuickUI([1.0, "Endgame rare deco 4 links", "decorators->rareeg;fourlinkedrares"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: 4 Links");
