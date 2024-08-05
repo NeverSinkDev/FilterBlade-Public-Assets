@@ -1229,8 +1229,8 @@ Chapter() {
 
         VeilMods([0.0, "Item with multiple Betrayal Veiled Mods", "exoticmods;duoveil"], "SD", "Veiled - 2 mods 1 item");
 
-        DeepSearch S4(0.0, "Betrayal Veiled Mods Small 1", "exoticmods;smallveil1") { BaseType "Wool Shoes"; Rarity Rare; Width 2; Height 2; }
-        DeepSearch S5(0.0, "Betrayal Veiled Mods Small 2", "exoticmods;smallveil2") { BaseType "Driftwood Wand"; Rarity Rare; Width 1; Height 3; }
+        DeepSearch S4(1.0, "Betrayal Veiled Mods Small 1", "exoticmods;smallveil1") { BaseType "Wool Shoes"; Rarity Rare; Width 2; Height 2; }
+        DeepSearch S5(1.0, "Betrayal Veiled Mods Small 2", "exoticmods;smallveil2") { BaseType "Driftwood Wand"; Rarity Rare; Width 1; Height 3; }
 
         VeilMods(S4, "SD", "Veiled - Small Items: 2x2");
         VeilMods(S5, "SD", "Veiled - Small Items: 1x4");
