@@ -1616,8 +1616,6 @@ Chapter() {
     Section("Chancing Bases", "Skyforth") {
         Description("Chancing is considered to be very inefficient by most PoE players, but some enjoy it a lot. Boss drops, recipe-exclusive or league exclusive drops can not be chanced.");
 
-        QuickUI([0.0, "High Quality Chancing", "crafting->qualityperfection;qualchancing"], "SH", ["AreaLevel", "Quality", "BaseDefencePercentile"], $text, ["gearPlusFlasks", "SO"]);
-
         Function ChancingList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["gearPlusFlasks", "SO"]); }
 
         ChancingList([1.0, "Chancing bases (normal)", "chancing;t2"], "SD", "Meta-Uniques Chancing Bases:");
@@ -1625,6 +1623,8 @@ Chapter() {
 
         Conditional("?ChancingBaseNewTiers") { }
         ElementAdder_Tier("?ChancingBaseNewTiers", "ChancingList");
+
+        QuickUI([0.0, "High Quality Chancing", "crafting->qualityperfection;qualchancing"], "SH", ["AreaLevel", "Quality", "BaseDefencePercentile"], $text, ["gearPlusFlasks", "SO"]);
     }
 
     Section("Flasks", "Flask") {
