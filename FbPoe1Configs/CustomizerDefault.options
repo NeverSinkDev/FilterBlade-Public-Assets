@@ -1180,12 +1180,12 @@ Chapter() {
         Search B2(1.0, "Rare belts T2", "rr->belts;t2"]) { }
         Search B3(1.0, "Rare belts T3", "rr->belts;t3"]) { }
 
-            QuickUI(S1, "SD", ["AreaLevel"]);
-            QuickUI(B1, "SD", ["AreaLevel"]);
-            QuickUI(S2, "SD", ["AreaLevel"]);
-            QuickUI(B2, "SD", ["AreaLevel"]);
-            QuickUI(S3, "SD", ["AreaLevel"]);
-            QuickUI(B3, "SD", ["AreaLevel"]);
+        QuickUI(S1, "SD", ["AreaLevel","ItemLevel"]);
+        QuickUI(B1, "SD", ["AreaLevel","ItemLevel"]);
+        QuickUI(S2, "SD", ["AreaLevel","ItemLevel"]);
+        QuickUI(B2, "SD", ["AreaLevel","ItemLevel"]);
+        QuickUI(S3, "SD", ["AreaLevel","ItemLevel"]);
+        QuickUI(B3, "SD", ["AreaLevel","ItemLevel"]);
 
         BaseTypeMatrix(false, "Tier 1", S1, B1, "Tier 2", S2, B2, "Tier 3", S3, B3);
     }
