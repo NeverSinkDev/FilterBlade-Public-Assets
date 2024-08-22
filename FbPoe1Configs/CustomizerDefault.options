@@ -419,7 +419,9 @@ Chapter() {
             OmenFunc([0.0, "Omens Tier 1", "currency->trial->omen;t1"], "SH", "S Tier");
             OmenFunc([0.0, "Omens Tier 2", "currency->trial->omen;t2"], "SH", "A Tier");
             OmenFunc([0.0, "Omens Tier 3", "currency->trial->omen;t3"], "SH", "B Tier");
-            OmenFunc([0.0, "Omens Tier 4", "currency->trial->omen;t4"], "SH", "Others");
+            OmenFunc([0.0, "Omens Tier 4", "currency->trial->omen;t4"], "SH", "C Tier");
+            OmenFunc([0.0, "Omens Tier 5", "currency->trial->omen;t5"], "SH", "Others");
+
 
             // new tiers
             Conditional("?AncTrialOmensNewTier") { }
@@ -547,6 +549,14 @@ Chapter() {
 //===================================================================================================
 
     Section("Current League: Settlers of Kalguur", "SettlersSunRune") {
+
+        Section("Uniques for Disenchanting") {
+            Description("These rules will NEVER override T1, T2 and valuable multibase drops. Since the disenchanter only has limited space, we use dust/slot as the primary value.");
+
+            QuickUI([0.0, "Dusting Uniques T1", "uniques;exdust1"], "SD", [], "5000+ Dust/Slot Uniques");
+            QuickUI([0.0, "Dusting Uniques T2", "uniques;exdust2"], "SD", [], "2500+ Dust/Slot Uniques");
+            QuickUI([0.0, "Dusting Uniques T3", "uniques;exdust3"], "SD", [], "1250+ Dust/Slot Uniques");
+        }
 
         Section("Gold") {
             Description("Gold is auto-picked-up! You will even pick up the gold if the rules are disabled.");
@@ -1328,6 +1338,12 @@ Chapter() {
             Search Glove(0.0, "Overquality Gloves T3", "crafting->qualityperfection;gloves3") { }
             Search Helm(0.0, "Overquality Helmets T3", "crafting->qualityperfection;helmets3") { }
 
+            Search Body (0.0, "Perfection T1 Body", "crafting->qualityperfection;bodyp1") { }
+            Search Boot (0.0, "Perfection T1 Boots", "crafting->qualityperfection;bootsp1") { }
+            Search Shield (0.0, "Perfection T1 Shields", "crafting->qualityperfection;shieldsp1") { }
+            Search Glove (0.0, "Perfection T1 Gloves", "crafting->qualityperfection;glovesp1") { }
+            Search Helm (0.0, "Perfection T1 Helmets", "crafting->qualityperfection;helmetsp1") { }
+
             Title("High Quality and Perfection");
             QuickUI(0, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 30, High Base, Type: Body");
             QuickUI(1, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 30, High Base, Type: Boots");
@@ -1346,6 +1362,12 @@ Chapter() {
             QuickUI(12, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 24+, Type: Shields");
             QuickUI(13, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 24+, Type: Gloves");
             QuickUI(14, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Qual: 24+, Type: Helmets");
+            Title("Perfection, Any Quality");
+            QuickUI(15, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Perfection 100%, Type: Body");
+            QuickUI(16, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Perfection 100%, Type: Boots");
+            QuickUI(17, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Perfection 100%, Type: Shields");
+            QuickUI(18, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Perfection 100%, Type: Gloves");
+            QuickUI(19, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Perfection 100%, Type: Helmets");
 
             BaseTypeMatrix(true, "Tier 1", Body, Boot, Shield, Glove, Helm);
         }
@@ -2545,7 +2567,7 @@ Chapter() {
             BasicModItemUI([0.0, "ModFiltering: Corrupted Quivers Dot", "corruptedid;quiv_dot"], "Corrupted Quivers (dot-mix)");
         }
 
-        Section("Magic items") {
+        Section("Uncorrupted Single Valuable Mods") {
 //            ModItemUI([0.0, "ModFilter: Magic - Amulets with +1 to all gems", "magicid;allskills"], "SD");
 //            ModItemUI([1.0, "ModFilter: Magic - Physical weapons", "magicid;phys"], "SD");
 //            ModItemUI([1.0, "ModFilter: Magic - Caster", "magicid;damagemods"], "SD");
