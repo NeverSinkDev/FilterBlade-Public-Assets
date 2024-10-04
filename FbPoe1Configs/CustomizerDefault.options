@@ -1656,7 +1656,7 @@ Chapter() {
             QuickUI([0.0, "High Level Flasks - iLvl 85", "endgameflasks;utility85"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
             QuickUI([0.0, "High Level Flasks - iLvl 84", "endgameflasks;utility84"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
             QuickUI([0.0, "High Level Flasks - iLvl 82", "endgameflasks;utility82"], "SHD", ["Utility Flasks", "ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"]);
-            QuickUI([0.0, "Early mapping ultility flasks", "endgameflasks;earlymappingflasks"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified", "Quality"]);
+            QuickUI([0.0, "Early mapping ultility flasks", "endgameflasks;earlymappingflasks"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified", "Quality"], "Early mapping utility flasks");
             QuickUI([0.0, "Endgame utility flasks", "endgameflasks;anyutility"], "SHD", ["Utility Flasks", "AreaLevel", "RarityNM", "Identified"], "Other Endgame Utility Flasks");
 
             Function EndgameUtilityFlaskCustomRuleUI ($s, $shd = "SHD", $title)
