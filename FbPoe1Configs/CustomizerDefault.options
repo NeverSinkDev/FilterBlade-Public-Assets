@@ -2336,8 +2336,7 @@ Chapter() {
         Section("Exotics: Links&Sockets", "Tabula") {
             Search S1("0.0", "Unique Exception: Tabula Rasa") { BaseType "Simple Robe"; SocketGroup "WWWWWW"; Rarity Unique; }
             Title("Uniques with high Socket/Link Number");
-            Warning("This rule also affects 'Skin of the Loyal', 'Skin of the Lords' and 'Oni-Goroshi'!");
-            QuickUI([0.0, "6 linked uniques", "uniques;ex6link"], "S");
+            QuickUI([0.0, "6 linked uniques", "uniques;ex6link"], "S", [], null, [], "WARN:This rule also affects 'Skin of the Loyal', 'Skin of the Lords' and 'Oni-Goroshi'!");
             QuickUI([0.0, "5 linked uniques", "uniques;5link"], "SD");
             QuickUI([0.0, "6 Socket Uniques", "uniques;6s"], "SD");
             Title("Specific Uniques With Exotics Sockets");
