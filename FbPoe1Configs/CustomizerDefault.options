@@ -756,7 +756,7 @@ Chapter() {
         }
 
         Section("Delirium and 8-Mod maps") {
-            QuickUI([0.0, "8-Mod Corrupted Maps", "maps->corruptedspecial;mod8"], "SH", ["MapTier"]);
+            QuickUI([0.0, "8-Mod Corrupted Maps", "maps->corruptedspecial;mod8"], "SH", ["MapTier"], null, ["Maps", "ASO"]);
             QuickUI([0.0, "Delirium High Maps", "maps->enchanted;t1"], "SHD", ["MapTier"], "Delirium or Enchanted (T14+)");
             QuickUI([0.0, "Delirium Maps", "maps->enchanted;any"], "SHD", ["MapTier"], "Delirium or Enchanted");
         }
@@ -820,7 +820,7 @@ Chapter() {
         }
 
         Section("Stacked T4 Scarabs", "Scarab", "E") {
-            Function StackedScarabsFunc($s, $shd = "SD", $title) { QuickUI($s, $shd, [], $title, ["Scarabs", "SO"]); }
+            Function StackedScarabsFunc($s, $shd = "SD", $title) { QuickUI($s, $shd, ["StackSize"], $title, ["Scarabs", "SO"]); }
             StackedScarabsFunc([1.0, "Stacked Scarabs", "fragments->stackedscarabs;t3"], "SD");
         }
 
@@ -842,7 +842,7 @@ Chapter() {
         }
 
         Section("Stacked Sacrifice Fragments", "SacrificeAtMidnight") {
-            Function FragmentsFunc($s, $shd = "SD", $title, $descr = false) { QuickUI($s, $shd, [], $title, ["MapFragmentsNoScarabs", "SO"], $descr); }
+            Function FragmentsFunc($s, $shd = "SD", $title, $descr = false) { QuickUI($s, $shd, ["StackSize"], $title, ["MapFragmentsNoScarabs", "SO"], $descr); }
             FragmentsFunc([1.0, "Stacked Map Fragments T3", "fragments->stacked;t3"], "SD", "Stacked Sacrifice Fragments:");
         }
     }
@@ -1551,8 +1551,8 @@ Chapter() {
             Search T1(0.0, "Common Influenced Rares - Tier 1", "influenced->common;t1_exo") { }
             Search T2(0.0, "Common Influenced Rares - Tier 2", "influenced->common;t2_exo") { }
 
-            QuickUI(T1, "SD", ["ItemLevel", "Quality"], "Top influenced bases", [], "Extremely exclusive drop-restricted bases, such as heist and ritual bases.");
-            QuickUI(T2, "SD", ["ItemLevel", "Quality"], "Exclusive atlas bases", []);
+            QuickUI(T1, "SD", ["ItemLevel", "Quality"], "Top influenced bases (tier 1)", [], "Extremely exclusive drop-restricted bases, such as heist and ritual bases.");
+            QuickUI(T2, "SD", ["ItemLevel", "Quality"], "Exclusive atlas bases (tier 2)", []);
 
             BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2);
 
@@ -2381,7 +2381,7 @@ Chapter() {
             QuickUI([0.0, "Unique Exception: 4 White Triad Grip", "uniques;extriadgrip"], "SH", ["Sockets"], "Triad Grip (4White)");
             QuickUI([0.0, "Double corrupted uniques", "uniques;2xcorrupteduniques"], "SD", [], null, ["GearPlusFlasks", "OAS"]);
             QuickUI([0.0, "Corrupted Unique Jewels", "uniques;exjewelscorrupted"], "SH", [], "Corruption-Outcome Jewels", ["GearPlusFlasks", "OAS"], "This rule usually detects jewels that turn unique through corruption outcomes. Do note that there is a small chance that a non-corruption specific jewel might get corrupted and displayed via this rule. It's not recommended to hide this rule, especially since some of the corruption outcomes (such as a rain of splinters) can be quite valuable");
-            QuickUI([0.0, "Uniques with corrupted implicit", "uniques;corrupteduniques"], "SH", ["ItemLevel", "AllGearClasses"]);
+            QuickUI([0.0, "Uniques with corrupted implicit", "uniques;corrupteduniques"], "SH", ["ItemLevel", "AllGearClasses"], null, ["GearPlusFlasks", "OAS"]);
         }
 
         Section("Exotics: Others") {
@@ -2537,13 +2537,14 @@ Chapter() {
             BasicModItemUI([0.0, "ModFiltering: Rings3", "rareid;ring_caster"], "Caster Rings");
             BasicModItemUI([0.0, "ModFiltering: Minion Ring", "rareid;ring_minion"], "Minion Rings");
             Title("Amulets");
+            Description("Core mods are highly valuable single mods, such as +1 to all fire gems or T1 dot multiplier. Items with fewer core mods require better other matching (auxiliary) mods.");
             BasicModItemUI([0.0, "ModFiltering: Amulets +1 All Gems", "rareid;amu_exalter"], "Amulets with +1 to all skill gems");
-            BasicModItemUI([0.0, "ModFiltering: Amulets1", "rareid;amu_1coreattack"], "Attack Amulets");
-            BasicModItemUI([0.0, "ModFiltering: Amulets3", "rareid;amu_2coreattack"], "Attack Amulets");
-            BasicModItemUI([0.0, "ModFiltering: Amulets4", "rareid;amu_1corecaster"], "Caster Amulets");
-            BasicModItemUI([0.0, "ModFiltering: Amulets5", "rareid;amu_2corecaster"], "Caster Amulets");
-            BasicModItemUI([0.0, "ModFiltering: Amulets DoT 1", "rareid;amu_1coredot"], "DoT Caster Amulets");
-            BasicModItemUI([0.0, "ModFiltering: Amulets DoT 2", "rareid;amu_2coredot"], "DoT Caster Amulets");
+            BasicModItemUI([0.0, "ModFiltering: Amulets1", "rareid;amu_1coreattack"], "Attack Amulets: 1 core mod");
+            BasicModItemUI([0.0, "ModFiltering: Amulets3", "rareid;amu_2coreattack"], "Attack Amulets: 2 core mods");
+            BasicModItemUI([0.0, "ModFiltering: Amulets4", "rareid;amu_1corecaster"], "Caster Amulets: 1 core mod");
+            BasicModItemUI([0.0, "ModFiltering: Amulets5", "rareid;amu_2corecaster"], "Caster Amulets: 2 core mods");
+            BasicModItemUI([0.0, "ModFiltering: Amulets DoT 1", "rareid;amu_1coredot"], "DoT Caster Amulets: 1 core mod");
+            BasicModItemUI([0.0, "ModFiltering: Amulets DoT 2", "rareid;amu_2coredot"], "DoT Caster Amulets: 2 core mods");
         }
 
         Section("Jewels") {
