@@ -1,0 +1,13 @@
+Class,BaseType,DropLevel,Rarity,Height,Width,Sockets,Quality,Corrupted,SubGroup A,SubGroup B,SubGroup Tier,Game:Strength,Game:Dexterity,Game:Intelligence,Game:Damage From,Game:Damage To,Game:APS,Game:DPS,Game:Crit,Game:Implicit 1,Game:Implicit 2,Game:Armour,Game:Armour Max,Game:Evasion,Game:Evasion Max,Game:Energy Shield,Game:Energy Shield Max,Game:Block
+Stackable Currency,Mirror of Kalandra,35,,1,1,,,,defa,,1,,,,,,,,,,,,,,,,,
+Stackable Currency,Exalted Orb,35,,1,1,,,,defa,,2,,,,,,,,,,,,,,,,,
+Stackable Currency,Divine Orb,35,,1,1,,,,defa,,2,,,,,,,,,,,,,,,,,
+Stackable Currency,Chaos Orb,12,,1,1,,,,defa,,3,,,,,,,,,,,,,,,,,
+Stackable Currency,Orb of Alchemy,2,,1,1,,,,defa,,4,,,,,,,,,,,,,,,,,
+Stackable Currency,Orb of Fusing,8,,1,1,,,,defa,,4,,,,,,,,,,,,,,,,,
+Stackable Currency,Orb of Alteration,2,,1,1,,,,defa,,5,,,,,,,,,,,,,,,,,
+Stackable Currency,Orb of Chance,2,,1,1,,,,defa,,5,,,,,,,,,,,,,,,,,
+Stackable Currency,Jeweller's Orb,8,,1,1,,,,defa,,5,,,,,,,,,,,,,,,,,
+Stackable Currency,Chromatic Orb,2,,1,1,,,,defa,,5,,,,,,,,,,,,,,,,,
+Stackable Currency,Scroll of Wisdom,1,,1,1,,,,defa,,7,,,,,,,,,,,,,,,,,
+Stackable Currency,Portal Scroll,2,,1,1,,,,defa,,7,,,,,,,,,,,,,,,,,

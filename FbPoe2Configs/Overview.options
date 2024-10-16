@@ -1,0 +1,6 @@
+StyleSection("Items", "Items look like this. Except when they don't.") {
+    Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
+    SS_Item("S0");
+
+	SS_InfoBox(["Read below", "This is a tooltip box thingy."]);
+}

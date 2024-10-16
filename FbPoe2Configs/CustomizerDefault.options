@@ -1,0 +1,23 @@
+        Info_OptionVersion("1.1.4n");
+
+Chapter("chapter") {
+Section("EVERYTHING")
+{
+        Section("General Currency", "Chaos", "E") {
+            Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["currency", "O"]); }
+
+            TierListToolBar("Currency");
+
+            CurrencyList([3.0, "Currency God Tier 1", "currency;t1exalted"], "S", "God Tier 1:");
+
+
+            Conditional("?CurrencyNewTiers") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+            ElementAdder_Tier("?CurrencyNewTiers", "CurrencyList");
+
+            Conditional("?CurrencyNewTiersHidden") { }
+            ElementAdder_Tier("?CurrencyNewTiersHidden", null, true, "currency", "OH");
+        }
+
+        QuickUI([0.0, "Hide", "currency;hidden"], "SHD");
+}
+}
