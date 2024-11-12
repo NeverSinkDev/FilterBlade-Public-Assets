@@ -18,6 +18,6 @@ Section("EVERYTHING")
             ElementAdder_Tier("?CurrencyNewTiersHidden", null, true, "currency", "OH");
         }
 
-        QuickUI([0.0, "Hide", "currency;hidden"], "SHD");
+//        QuickUI([0.0, "Hide", "currency;hidden"], "SHD");
 }
 }
