@@ -8,7 +8,7 @@ Section("EVERYTHING")
 
             TierListToolBar("Currency");
 
-            CurrencyList([3.0, "Currency God Tier 1", "currency;t1exalted"], "S", "God Tier 1:");
+            CurrencyList([3.0, "Currency God Tier 1", "currency;t1"], "S", "God Tier 1:");
 
 
             Conditional("?CurrencyNewTiers") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
