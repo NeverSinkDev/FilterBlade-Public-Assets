@@ -4,19 +4,311 @@ Chapter("chapter") {
 Section("EVERYTHING")
 {
         Section("General Currency", "Chaos", "E") {
-            Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["currency", "O"]); }
+            Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["normalCurrencyPoe2", "O"]); }
 
             TierListToolBar("Currency");
 
-            CurrencyList([3.0, "Currency God Tier 1", "currency;t1"], "S", "God Tier 1:");
-
+            CurrencyList([3.0, "Currency Tier 1", "currency;t1"], "S", "God Tier 1:");
+            CurrencyList([3.0, "Currency Tier 2", "currency;t2"], "S", "God Tier 1:");
+            CurrencyList([3.0, "Currency Tier 3", "currency;t3"], "S", "God Tier 1:");
+            CurrencyList([3.0, "Currency Tier 4", "currency;t4"], "S", "God Tier 1:");
+            CurrencyList([3.0, "Currency Tier 5", "currency;t5"], "S", "God Tier 1:");
+            CurrencyList([3.0, "Currency Tier 6", "currency;t6"], "S", "God Tier 1:");
+            CurrencyList([3.0, "Currency Supplies 1", "currency;supply1"], "S", "God Tier 1:");
+            CurrencyList([3.0, "Currency Supplies 2", "currency;supply2"], "S", "God Tier 1:");
+            CurrencyList([3.0, "Currency Supplies 3", "currency;supply3"], "S", "God Tier 1:");
+            CurrencyList([3.0, "Currency Supplies 4", "currency;supply4"], "S", "God Tier 1:");
 
             Conditional("?CurrencyNewTiers") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
             ElementAdder_Tier("?CurrencyNewTiers", "CurrencyList");
 
             Conditional("?CurrencyNewTiersHidden") { }
-            ElementAdder_Tier("?CurrencyNewTiersHidden", null, true, "currency", "OH");
+            ElementAdder_Tier("?CurrencyNewTiersHidden", null, true, "normalCurrencyPoe2", "OH");
         }
+
+    Section("remaining") {
+        QuickUI([0.0, "todo new entry needs name", "gold;stack3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gold;stack2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gold;stack1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gold;stack1lvl"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gold;any"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "exoticbases;superexoticbases"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "exoticbases;commonexoticbaseshigh"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "exoticbases;commonexoticbases"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "questlikeexception;questlike"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "questlikeexception;questitems"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "artifact;fishingrod"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "artifact;pieces"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "exotic->others;doublecorruptedany"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "exotic->others;overqualityany"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->normalcraft->decorator;normaldecorator"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->normalcraft->any;t1ideallevel"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->normalcraft->any;minionsceptresoptional"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->normalcraft->any;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->normalcraft->any;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->normalcraft->any;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "chancing;any"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->jewellery;selectamulets"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->jewellery;amulets"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->jewellery;selectrings"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->jewellery;rings"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->jewellery;selectbelts"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->jewellery;belts"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->salvagable;qualitymartialany"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->salvagable;qualitycasterany"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->salvagable;qualityarmorany"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->salvagable;socketslarge"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->salvagable;socketssmall"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->flasks;any20qualflask"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->flasks;anyqualflask"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->flasks;earlymappinglifemana"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->charms;optimallevelqualitycharms"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->charms;earlymappingcharms"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "endgame->charms;anycharm"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->rareeg;largerares"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->rareeg;mediumrares1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->rareeg;mediumrares2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->rareeg;tinyrares"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->rareeg;ilvl82"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->rareeg;corruptedrares"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->rareeg;corruptedraresimplicit"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rareoptional;idhider"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr->amuring;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr->amuring;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr->amuring;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr->belts;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr->belts;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr->belts;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t1_s"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t1_a"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t1_r"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t2_s"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t2_a"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t2_b"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t2_r"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t3_s"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t3_a"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t3_b"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t3_r"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t4_a"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t4_r"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t5_a"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "rr;t5_r"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->salvagable;qualitymartialany"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->salvagable;qualitycasterany"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->salvagable;qualityarmorany"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->salvagable;sockets"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "sockets->runes;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "sockets->runes;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "sockets->runes;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "sockets->runes;t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "sockets->cores;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "sockets->cores;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "sockets->cores;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "sockets->cores;t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "sockets->cores;t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "sockets->cores;t6"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "jewels->generic;anytimeless"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "jewels->generic;anyrare"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "jewels->generic;anymagic"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "relics->generic;any"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems->uncut;spirit20"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems->uncut;skill20"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems->uncut;spirit19"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems->uncut;skill19"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems->uncut;spiritcampaign"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems->uncut;skillcampaign"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems->uncut;supportcampaign"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems->uncut;otherspiriteg"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems->uncut;otherskilleg"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems->uncut;othersupporteg"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "gems;any"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystone->hiders;corruptedmaphider"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystone->hiders;mirroredmaphider"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;decomap1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;decomap2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;decomap3overleveled"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;decomap4overleveled"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;decomap3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;decomap4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t16"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t15"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t14"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t13"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t12"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t11"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t10"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t9"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t8"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t7"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t6"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_wsup_t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;decor_implicit"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;deco_corruptedmod"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_a_t16"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_a_t15"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_a_t14"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_b_t13"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_b_t12"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_b_t11"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_c_t10"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_c_t9"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_c_t8"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_c_t7"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_c_t6"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_d_t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_d_t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_d_t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_d_t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;waystone_d_t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "waystones;restex"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->leveling;rare"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->leveling;magic"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->leveling;wisdom"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->emotions;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->emotions;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->emotions;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->emotions;t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->emotions;t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->emotions;t6"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->emotions;exhide"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->emotions;restex"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->catalysts;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->catalysts;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->catalysts;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->catalysts;t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->catalysts;t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->catalysts;t6"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->catalysts;exhide"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->catalysts;restex"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->essence;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->essence;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->essence;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->essence;t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->essence;t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->essence;t6"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->essence;restex"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->omen;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->omen;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->omen;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->omen;t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->omen;t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->omen;t6"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->omen;restex"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->others;misc"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "maplike->special;superkeys"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "maplike->special;logbooks"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->splinter;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->splinter;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->splinter;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->splinter;t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency->splinter;t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "fragments->generic;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "fragments->generic;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "fragments->generic;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "fragments->generic;t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "fragments->generic;t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "fragments->generic;t6"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "fragments->generic;restex"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "miscmapitemsextra;trialkeysanctum"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "miscmapitemsextra;trialkeyultimatumreward"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "miscmapitemsextra;trialkeyultimatum"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "miscmapitemsextra;relickeys"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "miscmapitemsextra;relickeyssafe"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "miscmapitems;restex"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency;restex"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;sekhemaring"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;2xcorrupteduniques"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;multispecialhigh"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;multispecial"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;earlyleague"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;corrupteduniques"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;t3boss"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;hideable"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "uniques;restex"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->salvagable;qualitymartial"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->salvagable;qualitycaster"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->salvagable;qualityarmor"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->salvagable;socketslarge"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->salvagable;socketssmall"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->quality;max"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->quality;high"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->quality;any"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->life;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->life;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->life;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->life;t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->life;t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->life;t6"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->life;t7"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->life;t8"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->mana;t1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->mana;t2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->mana;t3"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->mana;t4"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->mana;t5"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->mana;t6"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->mana;t7"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->flasks->mana;t8"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->charms;selected"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->charms;any"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->decorators->rare;largerares"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->decorators->rare;mediumrares1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->decorators->rare;mediumrares2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->decorators->rare;tinyrares"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->universal;jewellery"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->armours;ar"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->armours;ev"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->armours;es"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->armours;arev"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->armours;ares"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->armours;eves"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->armours;anythingearly"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->weapons;wands"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->weapons;sceptres"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->weapons;staves"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->weapons;bowsquivers"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->weapons;crossbows"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->weapons;onehandmaces"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->weapons;twohandmaces"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->weapons;quarterstaves"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->rare->remaining;any"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->leveling->magic;medium1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->leveling->magic;medium2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->leveling->magic;noticeearly"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "decorators->leveling->magic;tiny"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagicremarkable;jewellery"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->armours;ar"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->armours;ev"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->armours;es"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->armours;arev"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->armours;ares"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->armours;eves"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->weapons;wands"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->weapons;sceptres"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->weapons;staves"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->weapons;bowsquivers"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->weapons;crossbows"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->weapons;onehandmaces"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->weapons;twohandmaces"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->normalmagic->weapons;quarterstaves"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->firstlevels;firstareas"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->firstlevels;earlyboots"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->magic->remaining;largemagicblocker"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->magic->remaining;mediummagicblocker"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->magic->remaining;rest"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->magic->remaining;act2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "leveling->magic->remaining;act1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "anyremaining;restex"], "SH", []); // todo
+    }
 
 //        QuickUI([0.0, "Hide", "currency;hidden"], "SHD");
 }
