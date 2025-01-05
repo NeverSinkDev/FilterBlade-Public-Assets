@@ -23,7 +23,7 @@ StyleSection("MID-TIER CURRENCY", "Rather common, but unless sold in bulk, not t
     Search S0("skip", "Chance Orbs") { BaseType "Orb of Chance"; }
     SS_Item("S0");
 
-    SS_InfoBox(["Detailed explanation", "The site is updated every 4 hours and the tiering of the items may differ. Items might change their tier based on high or low demand. Note that you have to redownload/sync the filter to get the latest economy data! <hr> Don't underrate chance orbs! You can buy maps from Kirac at the start of the league to quickly progress through the atlas! <hr> Alterations, jeweller's and chromatics can also be reliably obtained by doing vendor recipes."]);
+    SS_InfoBox(["Detailed explanation", "The site is updated every 4 hours and the tiering of the items may differ. Items might change their tier based on high or low demand. Note that you have to redownload/sync the filter to get the latest economy data! <hr> Don't underrate chance orbs! You can buy Waystones from vendors at the start of the league to quickly progress through the atlas! <hr> Alterations, jeweller's and chromatics can also be reliably obtained by doing vendor recipes."]);
 }
 
 StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act as trade goods for players. Chaos Orbs and Divine Orbs are pretty much the standard way to pay for most trades. These are desired drops and it's almost always recommended to pick them up.") {
@@ -84,9 +84,9 @@ StyleSection("Skill Gems", "This is how you get and improve your abilities. Ther
     SS_Item("S0");
 }
 
-SS_SectionTitle("Maps");
+SS_SectionTitle("Waystones");
 
-StyleSection("Endgame Waystones", "Waystones gain more highlight as they gain tiers. High tier (11+) and top tier (16) maps have different sounds. The filter highlights waystone tier upgrades with an extra color.") {
+StyleSection("Endgame Waystones", "Waystones gain more highlight as they gain tiers. High tier (11+) and top tier (16) Waystones have different sounds. The filter highlights waystone tier upgrades with an extra color.") {
     Search S0("skip", "T14+ Red Waystones") { Class Waystones; ItemLevel 84; WaystoneTier 16; Rarity Normal; }
     Search S0("skip", "T10 Waystones") { Class Waystones; ItemLevel 82; WaystoneTier 12; Rarity Normal; }
     Search S0("skip", "T5 Waystones") { Class Waystones; ItemLevel 78; WaystoneTier 7; Rarity Normal; }
