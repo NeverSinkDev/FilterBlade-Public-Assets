@@ -132,14 +132,6 @@ Chapter() {
         QuickUI([0.0, "endgame rares todo", "rr;t5_a"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t5_r"], "SH", []); // todo
 
-        QuickUI([0.0, "endgame rares todo", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "endgame->normalcraft->decorator;normaldecorator"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "endgame->normalcraft->any;t1ideallevel"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "endgame->normalcraft->any;minionsceptresoptional"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "endgame->normalcraft->any;t1"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "endgame->normalcraft->any;t2"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "endgame->normalcraft->any;t3"], "SH", []); // todo
-
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;largerares"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;mediumrares1"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;mediumrares2"], "SH", []); // todo
@@ -148,6 +140,16 @@ Chapter() {
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;corruptedrares"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;corruptedraresimplicit"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rareoptional;idhider"], "SH", []); // todo
+
+        Title("Crafting");
+
+        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SH", []); // todo
+        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->decorator;normaldecorator"], "SH", []); // todo
+        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t1ideallevel"], "SH", []); // todo
+        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;minionsceptresoptional"], "SH", []); // todo
+        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t1"], "SH", []); // todo
+        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t2"], "SH", []); // todo
+        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t3"], "SH", []); // todo
     }
 
     Section("Flasks & Charms") {
