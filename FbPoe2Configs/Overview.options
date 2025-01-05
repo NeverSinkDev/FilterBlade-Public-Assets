@@ -1,6 +1,206 @@
-StyleSection("Items", "Items look like this. Except when they don't.") {
-    Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
+// =============================================================================================================
+// This file determines the structure and content of the "Overview" tab item list. (previously called "StyleSummary" (SS))
+// It is the same file type and syntax as the Customizer optionFile, but with different commands.
+//
+// While using "Searches" is also possible in the Customizer, it's almost deprecated there but very much preferred in some cases here.
+// TierTagSearches (Search S0("skip", null, "uniques;t1") { }) always match the given rule, while normal Searches simulate the given
+// item and match whatever rule currently handles this item.
+// Meaning, TierTagSearches always show a certain rule and its current state, while Item Searches realistically show how the item is handled and can change rules if the original one changes.
+// =============================================================================================================
+
+StyleSection("COMMON CURRENCIES", "Basic supplies used to perform common operations. They're not worth much, but are important nonetheless. People frequently hide them or buy them in bulk.<hr> Hover over the scroll above for more information! ( recommended for new players )") {
+    Search S0("skip", "High Tier Supplies") { BaseType "Orb of Transmutation"; StackSize 4; AreaLevel 70; }
+    Search S0("skip", "Low Tier Supplies") { BaseType "Orb of Augmentation"; StackSize 4; AreaLevel 70; }
+    Search S0("skip", "Wisdom Scrolls") { BaseType "Scroll of Wisdom"; StackSize 4; AreaLevel 70; }
     SS_Item("S0");
 
-	SS_InfoBox(["Read below", "This is a tooltip box thingy."]);
+    SS_InfoBox(["Detailed explanation", "Vendor transmutation or blacksmith currencies to receive 1:4 wisdom scrolls or use a portal gem instead of portal scrolls to save clicking-time. <hr> The filter has individual rules for stacked and single currency drops and additional rules for the campaign section of the game. <hr> Every time you pick up an item, you have to stop. Optimized characters are better off focusing on the good drops and ignoring the plethora of cheap drops. As your character becomes more optimized, increasing the strictness level of the filter is advised. <hr>"]);
 }
+
+StyleSection("MID-TIER CURRENCY", "Rather common, but unless sold in bulk, not too expensive. Often used in basic crafting.") {
+    Search S0("skip", "Alterations") { BaseType "Orb of Alteration"; }
+    Search S0("skip", "Lesser Jeweller's Orb") { BaseType "Lesser Jeweller's Orb"; }
+    Search S0("skip", "Chance Orbs") { BaseType "Orb of Chance"; }
+    SS_Item("S0");
+
+    SS_InfoBox(["Detailed explanation", "The site is updated every 4 hours and the tiering of the items may differ. Items might change their tier based on high or low demand. Note that you have to redownload/sync the filter to get the latest economy data! <hr> Don't underrate chance orbs! You can buy maps from Kirac at the start of the league to quickly progress through the atlas! <hr> Alterations, jeweller's and chromatics can also be reliably obtained by doing vendor recipes."]);
+}
+
+StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act as trade goods for players. Chaos Orbs and Divine Orbs are pretty much the standard way to pay for most trades. These are desired drops and it's almost always recommended to pick them up.") {
+    Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
+    Search S0("skip", "Exalted Orbs") { BaseType "Exalted Orb"; }
+    Search S0("skip", "Annulment Orbs") { BaseType "Orb of Annulment"; }
+    Search S0("skip", "Ye Trusty Chaos Orbs") { BaseType "Chaos Orb"; }
+    Search S0("skip", "Alchemy Orbs") { BaseType "Orb of Alchemy"; }
+    SS_Item("S0");
+
+	SS_InfoBox(["Detailed explanation", "Items have a sound that is linked to their value-tier. All high tier currencies make the same sound. When you hear it - you know 'something dropped'. You can click on the currency preview to hear the sound <hr> They also come with a minimap-icon. The icons can be seen next to the item preview labels on FilterBlade. <hr> You can change all of these settings in the customizer screen here. To quickly jump to the settings for a certain item, right click the item label or CTRL+click the item."]);
+}
+
+StyleSection("TOP-VALUE ITEMS", "All top tier items have the same white background and drop-sound. They also come with a red beam and a huge red star on the minimap. These items include top tier currencies, valuable uniques, great divination cards, reliquary keys and everything else that is worth a LOT.") {
+    Search S0("skip", "MIRROR OF KALANDRA!!!") { BaseType "Mirror of Kalandra"; }
+    Search S0("skip", null, "uniques;t1") { BaseType "Glorious Plate"; ItemLevel 83; Rarity "Unique"; }
+
+    SS_Item("S0");
+    SS_InfoBox(["Detailed explanation", "It should be noted that other items without the white background can be just as, if not more valuable. However, with other items it often comes down to mods, luck and crafting, while the white background items are pretty much always great!"]);
+}
+
+StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. These rules have priority over normal currency rules, but only apply in areas under level 68. Great for new leagues!") {
+    Search S0("skip", "LEVELING: Transmutations") { BaseType "Orb of Transmutation"; AreaLevel 20; }
+    Search S0("skip", "LEVELING: Wisdoms") { BaseType "Scroll of Wisdom"; AreaLevel 20; }
+    SS_Item("S0");
+}
+
+StyleSection("Gold", "You can find gold all throughout the game. Use it to shop at vendors or respec your skill tree.") {
+    Search S0("skip") { BaseType "Gold"; StackSize 1; }
+    Search S0("skip") { BaseType "Gold"; StackSize 1000; }
+    SS_Item("S0");
+}
+
+SS_Ad();
+
+SS_SectionTitle("Notable Drops");
+
+StyleSection("Unique items", "There are hundreds of uniques! Some are in high demand, others are worthless or very niche. The filter can't distinguish between uniques with the same baseType. Bases with a blue or purple beam/map icon could potentially be very expensive.") {
+    Search S0("skip", null, "uniques;t2") {  }
+    Search S0("skip", null, "uniques;t3") {  }
+    Search S0("skip", null, "uniques;hideable") {  }
+
+    SS_Item("S0");
+    SS_InfoBox(["Detailed explanation", "Filterblade tiering is based on the ingame economy. It's a good practice to update the filter weekly. <hr> The economy  sometimes has large meta-shifts! A cheap unique can become very expensive very fast (or vice versa)!"]);
+}
+
+StyleSection("SOMETIMES LUCKY", "The blue or purple map icons and beams signalize that are drop CAN be quite valuable... if you're lucky. A unique  Leather Belt can very very rarely be an expensive headhunter and the filter can't tell them apart.") {
+    Search S0("skip", null, "uniques;multispecial") {  }
+
+    SS_Item("S0");
+    SS_InfoBox(["Detailed explanation", "Generally speaking the purple icon is used for the items with a higher chance to be good. On top of that the small blue stars are usually indicative of a basetypes with good boss-drops."]);
+}
+
+StyleSection("Skill Gems", "This is how you get and improve your abilities. There are also permanent passive buffs that cost 'Spirit'.") {
+    Search S0("skip", "Skill Gems") { BaseType "Uncut Skill Gem"; AreaLevel 10; }
+    Search S0("skip", "Support Gems") { BaseType "Uncut Support Gem"; AreaLevel 10; }
+    Search S0("skip", "Spirit Gems") { BaseType "Uncut Spirit Gem"; AreaLevel 10; }
+    SS_Item("S0");
+}
+
+SS_SectionTitle("Maps");
+
+StyleSection("Endgame Waystones", "Waystones gain more highlight as they gain tiers. High tier (11+) and top tier (16) maps have different sounds. The filter highlights waystone tier upgrades with an extra color.") {
+    Search S0("skip", "T14+ Red Waystones") { Class Waystones; ItemLevel 84; WaystoneTier 16; Rarity Normal; }
+    Search S0("skip", "T10 Waystones") { Class Waystones; ItemLevel 82; WaystoneTier 12; Rarity Normal; }
+    Search S0("skip", "T5 Waystones") { Class Waystones; ItemLevel 78; WaystoneTier 7; Rarity Normal; }
+    Search S0("skip", "T1 Waystones") { Class Waystones; ItemLevel 72; WaystoneTier 2; Rarity Normal; }
+    SS_Item("S0");
+}
+
+StyleSection("Waystone Upgrades!", "The filter highlights Waystones drops of a higher tier than the one you're in with extra highlight (disabled on some styles)") {
+    // can't use tagSearch here, we require normal search to also hit the map-gain decorator
+    Search S0("skip", "Waystones Drops of a higher Map Tier") { AreaLevel 70; WaystoneTier 9; Class Waystones; }
+    SS_Item("S0");
+}
+
+SS_Ad();
+//
+//SS_SectionTitle("Rare Items");
+//
+//StyleSection("Rare Colors", "The <b>Background</b> of a rare item describes its <b>Tier</b> - the relative usefulness of the item in the current meta. Opaque or colorful backgrounds are better.<div style='text-align: center;'><img src="assets/img/ItemHoverBox/ItemHoverBoxDivider_Unique.png"><br></div>The <b>Border</b> describes the <b>properties</b>: Tiny items have a green, small items a white and big items a black border. Corrupted items come with a red border.<div style='text-align: center;'><img src="assets/img/ItemHoverBox/ItemHoverBoxDivider_Unique.png"><br></div>The <b>Text color</b> is orange, instead of yellow, if the <b>itemLevel</b> is 75 or above, meaning that you can use the item for the Regal recipe instead of the chaos one.") {
+//    Search S0("skip", "T1 rare - meta bases") { BaseType "Gemini Claw"; ItemLevel 80; Rarity Rare; }
+//    Search S0("skip", "T2 rare - suboptimal bases") { BaseType "Slink Boots"; ItemLevel 70; SocketGroup "RRB"; Rarity Rare;}
+//    Search S0("skip", "T3 rare - poor bases") { BaseType "Meatgrinder"; ItemLevel 70; SocketGroup "RRRG"; Rarity Rare; }
+//    Search S0("skip", "T4 rare - worst bases") { BaseType "Wyrmscale Doublet"; ItemLevel 80; SocketGroup "GG"; Rarity Rare;}
+//    SS_Item("S0");
+//
+//	SS_InfoBox(["Detailed explanation", "Rare items can be crazy strong. That being said it's very tedious to pick, identify and treat (sell/price/keep) rare items. It takes a lot of practice and knowledge to quickly price rare items and there's a lot of factors, such as league type, age, meta, itemlevel, that affects it. <hr> Many Players also choose to use rares for the 'Chaos Recipe'. This is a safe and consistent way to make currency, especially early on in the league. For that you need to sell a full equipment of rares (boots, gloves, helm, 2 rings, 1 amulet, belt, armor, weapon+shield or a 2h weapon) of itemlevel 60+ (found in act 9 or later). The vendor will reward you with a Chaos Orb. If all items are unidentified, he'll give you 2 Chaos Orbs."]);
+//}
+//
+//StyleSection("Rings, Amulets, Belts", "'Rare accessories' are a fairly common drop, but they are tiny and most builds cover their stats and resists through rare accessories. This makes these rares a much more lucrative pick-ups than non-accessoires rares. On top of that they are usually the bottleneck for chaos recipes.") {
+//    Search S0("skip", "T1 rare jewellery - best implicits") { BaseType "Onyx Amulet"; ItemLevel 70; Rarity Rare; }
+//    Search S0("skip", "T2 rare jewellery - OK implicits") { BaseType "Ruby Ring"; ItemLevel 70; Rarity Rare; }
+//    Search S0("skip", "T3 rare jewellery - poor implicits") { BaseType "Chain Belt"; ItemLevel 70; Rarity Rare; }
+//    SS_Item("S0");
+//
+//    SS_InfoBox(["Detailed explanation", "Speedfarming players sometimes choose to ignore these items - especially later on in the league. This is especially true for belts. The big reason here is that the existence of shaper/elder and abyss belts has made normal rare belts fairly uncommon. On top of that there's a plethora of good unique belts."]);
+//}
+//
+//StyleSection("Weapon&Armour Tier 1", "These rares are popular in the current meta and are often small pickups. Getting the right stats on these makes them quite valuable.") {
+//    Search S0("skip", "T1 rare - ilvl 75+") { BaseType "Arcanist Slippers"; ItemLevel 77; SocketGroup "BB B"; Rarity Rare; }
+//    Search S0("skip", "T1 rare") { BaseType "Slink Boots"; ItemLevel 70; Rarity Rare; SocketGroup "G"; }
+//    SS_Item("S0");
+//    SS_InfoBox(["Backgrounds:", "The green background indicates that the rare has a good base. All rares of the itemlevel and class can roll the same mods, but many items require a good base to be useful to begin with (especially weapons)."]);
+//}
+//
+//StyleSection("Weapon&Armour Tier 2", "Quite good rares, that are just a few steps away from being top bases. These include several handpicked T2-T3 bases.") {
+//    Search S0("skip", "T2 rare - ilvl 75+") { BaseType "Conjurer Gloves"; ItemLevel 77; SocketGroup "RRB"; Rarity Rare;}
+//    Search S0("skip", "T2 rare") { BaseType "Archon Kite Shield"; ItemLevel 70; SocketGroup "BB B"; Rarity Rare; }
+//    SS_Item("S0");
+//}
+//
+//StyleSection("Weapon&Armour Tier 3", "Often very high basetypes, yet very niche in the meta or lower tier meta bases. Not worth picking up later in the league, once you have some decent gear.") {
+//    Search S0("skip", "T3 rare - ilvl 75+") { BaseType "Demon Dagger"; ItemLevel 77; SocketGroup "RRR"; Rarity Rare; }
+//    Search S0("skip", "T3 rare") { BaseType "Eelskin Boots"; ItemLevel 70; SocketGroup "GGR"; Rarity Rare;}
+//    SS_Item("S0");
+//
+//    SS_InfoBox(["Detailed explanation", "Technically one can spend the time to identify every single rare, however this is fairly time consuming and also increasingly annoying for most players. Even T3/T4 rares can be quite amazing. Yet it's a safer investment of time to focus on higher rares, at least if your build is sufficiently fast and you're not playing SSF/HC."]);
+//}
+//
+//StyleSection("Weapon&Armour Tier 4", "These items are usually rendered fairly unattractive due to their size, weak basetypes or unpopular type. They're good candidates for the chaos recipe though.") {
+//    Search S0("skip", "T4 rare - ilvl 75+") { BaseType "Wyrmscale Doublet"; ItemLevel 70; SocketGroup "GG"; Rarity Rare;}
+//    Search S0("skip", "T4 rare") { BaseType "Woodful Staff"; ItemLevel 77; SocketGroup "GG"; Rarity Rare;}
+//    SS_Item("S0");
+//
+//    SS_InfoBox(["Detailed explanation", "A chaos recipe is selling a full “set” of rare items to a vendor - One amulet, two rings, one chest armor, etc… at the same time. The vendor will reward you with one Chaos Orb if all items are itemlevel 60+.<hr>If all items are unidentified, you’ll receive two Chaos Orbs instead. If all items are unidentified and have 20% quality, you’ll get three Chaos Orbs. If all items have an itemlevel of 75+, you’ll get Regal Orbs instead."]);
+//}
+
+SS_SectionTitle("Crafting and Chancing");
+
+StyleSection("Chancing Bases", "By applying an 'Orb of Chance' on these bases, you have a tiny chance to turn it into valuable unique item.") {
+    Search S0("skip", null, "chancing;any") { BaseType "Glorious Plate"; ItemLevel 83; SocketGroup "RRG"; Rarity Normal; Corrupted False; }
+    SS_Item("S0");
+
+    SS_InfoBox(["Detailed explanation", "There’s a lot to add here. First of all, chancing is a very controversial thing in Path of Exile. Many players don’t believe it’s worth the time or effort.<hr>Further, the itemlevel or quality does not matter while chancing (example: you can chance a low itemlevel Gold Ring into an Andvarius, even if Andvarius regulary only starts dropping later on).<hr>Another interesting detail is that you can only chance non-drop-restricted uniques. Things that can only be obtained by boss drops, such as Shaper and Atziri drops, can not be chanced. The success chance depends on the unique. Chancing something common might work out with just a dozen of orbs, while getting a headhunter can easily require ten thousands of orbs."]);
+}
+
+
+SS_Ad();
+
+//SS_SectionTitle("Leveling items");
+//
+//StyleSection("Leveling: Flasks", "While leveling: the current (for that zone) top tier life/mana/hybrid flasks will receive a red/blue/purple border. Upgrade these regularly.") {
+//     Search S0("skip", "Leveling: Life Flask") { BaseType "Large Life Flask"; ItemLevel 6; Rarity Normal; }
+//     Search S0("skip", "Leveling: Mana Flask") { BaseType "Large Mana Flask"; ItemLevel 6; Rarity Normal; }
+//     Search S0("skip", "Leveling: Hybrid Flask") { BaseType "Small Hybrid Flask"; Rarity Normal; ItemLevel 10; }
+//
+//     SS_Item("S0");
+//}
+//
+//StyleSection("Leveling: Utility Flasks", "Utility flasks can be highly useful, by providing speed, resistances and defenses and other stats. These flasks are marked by a easily distinguishable green-gray background.") {
+//    Search S0("skip", "Leveling: Sonic Flask - gotta go fast") { BaseType "Quicksilver Flask"; Rarity Magic; ItemLevel 6; }
+//    SS_Item("S0");
+//}
+//
+//StyleSection("Leveling: Rare Weapons", "Good Melee, Archer and Caster rares (especially weapons) are signalized using the red, green and blue backgrounds and borders while leveling. Note that this is not available on certain styles.") {
+//    Search S0("skip", "Leveling Rare: Melee Specific") { BaseType "Mallet"; ItemLevel 20; Rarity Rare; }
+//    Search S0("skip", "Leveling Rare: Archer Specific") { BaseType "Royal Bow"; ItemLevel 30; Rarity Rare; }
+//    Search S0("skip", "Leveling Rare: Caster Specific") { BaseType "Ritual Sceptre"; ItemLevel 30; Rarity Rare; }
+//    Search S0("skip", "Leveling Rare: Summoner Specific") { BaseType "Convening Wand"; ItemLevel 30; Rarity Rare; }
+//    SS_Item("S0");
+//}
+//
+//StyleSection("Leveling: 4-linked Items", "4-linked items are very useful at the start. They're highlighted by a blue-ish border.") {
+//    Search S0("skip", "Leveling: 4link (magic)") { SocketGroup "BBBR"; Rarity Magic; BaseType "Silk Gloves"; ItemLevel 60; }
+//    Search S0("skip", "Leveling: 4link (normal)") { SocketGroup "RRGG"; Rarity Normal; BaseType "Iron Greaves"; ItemLevel 35; }
+//    SS_Item("S0");
+//}
+//
+//StyleSection("Leveling: 3-linked Items", "3-linked items are highlighted during the first 2-3 acts of the campaign with a teal-ish border.") {
+//    Search S0("skip", "Leveling: 3link (Act1-2)") { SocketGroup "RRG"; Rarity Normal; BaseType "Iron Greaves"; ItemLevel 12; }
+//    SS_Item("S0");
+//}
+//
+//StyleSection("Leveling items", "The filter has several dozens of rules, such as early jewellery, boots, top basetypes (for a quick essence/transmute-slam) to assist you while leveling. Not every item is going to be useful for everyone and we recommend to customize your filter for the best experience.") {
+//    Search S0("skip", "Leveling: Coral Ring (Act1)") { BaseType "Coral Ring"; Rarity Normal; ItemLevel 12; }
+//    Search S0("skip", "Leveling: Magic Boots (Act1-2)") { BaseType "Sharkskin Boots"; Rarity Magic; ItemLevel 12; SocketGroup "R B"; }
+//
+//    SS_Item("S0");
+//}
