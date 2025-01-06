@@ -18,7 +18,6 @@ Chapter("chapter") {
         CurrencyList([3.0, "Currency Supplies 1", "currency;supply1"], "S");
         CurrencyList([3.0, "Currency Supplies 2", "currency;supply2"], "S");
         CurrencyList([3.0, "Currency Supplies 3", "currency;supply3"], "S");
-        CurrencyList([3.0, "Currency Supplies 4", "currency;supply4"], "S");
 
         Conditional("?CurrencyNewTiers") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
         ElementAdder_Tier("?CurrencyNewTiers", "CurrencyList");
@@ -117,10 +116,8 @@ Chapter() {
         QuickUI([0.0, "endgame rares todo", "rr->belts;t2"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr->belts;t3"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t1_s"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t1_a"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t1_r"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t2_s"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t2_a"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t2_b"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t2_r"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t3_s"], "SH", []); // todo
@@ -129,6 +126,8 @@ Chapter() {
         QuickUI([0.0, "endgame rares todo", "rr;t3_r"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t4_a"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t4_r"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t4_b"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t5_b"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t5_a"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t5_r"], "SH", []); // todo
 
@@ -139,10 +138,12 @@ Chapter() {
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;ilvl82"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;corruptedrares"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;corruptedraresimplicit"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rareoptional;idhider"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;basicraredecorator"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;ilvl81caster"], "SH", []); // todo
 
         Title("Crafting");
 
+        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->decorator;normal82"], "SH", []); // todo
         QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SH", []); // todo
         QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->decorator;normaldecorator"], "SH", []); // todo
         QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t1ideallevel"], "SH", []); // todo
@@ -224,22 +225,22 @@ Chapter() {
         QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t1"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;decor_implicit"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;deco_corruptedmod"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_a_t16"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_a_t15"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_a_t14"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_b_t13"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_b_t12"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_b_t11"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_c_t10"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_c_t9"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_c_t8"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_c_t7"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_c_t6"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_d_t5"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_d_t4"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_d_t3"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_d_t2"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_d_t1"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t16"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t15"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t14"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t13"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t12"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t11"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t10"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t9"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t8"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t7"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t6"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t5"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t4"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t3"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t2"], "SH", []); // todo
+        QuickUI([0.0, "waystones todo", "waystones;waystone_t1"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;restex"], "SH", []); // todo
     }
 
@@ -256,7 +257,6 @@ Chapter() {
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeyultimatum"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeys"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeyssafe"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "miscmapitems;restex"], "SH", []); // todo
     }
 
     Section("Vendor Trash") {
