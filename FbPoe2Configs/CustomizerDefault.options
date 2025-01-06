@@ -1,4 +1,6 @@
-        Info_OptionVersion("1.1.4n");
+Info_OptionVersion("1.1.4n");
+
+// todo: defensive searches?
 
 Chapter("chapter") {
 
@@ -27,62 +29,128 @@ Chapter("chapter") {
     }
 
     Section("Other Currency") {
-        Title("Campaign");
-        QuickUI([0.0, "other currency todo", "currency->leveling;rare"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->leveling;magic"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->leveling;wisdom"], "SH", []); // todo
-        Title("Emotions");
-        QuickUI([0.0, "other currency todo", "currency->emotions;t1"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->emotions;t2"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->emotions;t3"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->emotions;t4"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->emotions;t5"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->emotions;t6"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->emotions;exhide"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->emotions;restex"], "SH", []); // todo
-        Title("Catalysts");
-        QuickUI([0.0, "other currency todo", "currency->catalysts;t1"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->catalysts;t2"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->catalysts;t3"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->catalysts;t4"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->catalysts;t5"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->catalysts;t6"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->catalysts;exhide"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->catalysts;restex"], "SH", []); // todo
-        Title("Essences");
-        QuickUI([0.0, "other currency todo", "currency->essence;t1"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->essence;t2"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->essence;t3"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->essence;t4"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->essence;t5"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->essence;t6"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->essence;restex"], "SH", []); // todo
-        Title("Omen");
-        QuickUI([0.0, "other currency todo", "currency->omen;t1"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->omen;t2"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->omen;t3"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->omen;t4"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->omen;t5"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->omen;t6"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->omen;restex"], "SH", []); // todo
-        Title("Splinters");
-        QuickUI([0.0, "other currency todo", "currency->splinter;t1"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->splinter;t2"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->splinter;t3"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->splinter;t4"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "currency->splinter;t5"], "SH", []); // todo
-        Title("Misc");
-        QuickUI([0.0, "other currency todo", "currency->others;misc"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "maplike->special;superkeys"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "maplike->special;logbooks"], "SH", []); // todo
+
+        Section("Campaign") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function CampaignCurrencyFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["normalCurrencyPoe2", "DO"]); }
+            TierListToolBar();
+
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 1", "currency->leveling;rare"], "SH", "Rare");
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 2", "currency->leveling;magic"], "SH", "Magic");
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 3", "currency->leveling;wisdom"], "SH", "Wisdom");
+
+            // new tiers
+            Conditional("?CampaignCurrencyNewTier") { }
+            ElementAdder_Tier("?CampaignCurrencyNewTier", "CampaignCurrencyFunc");
+        }
+
+        Section("Emotions") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function EmotionsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Distilled ;C:Stackable Currency", "O"]); }
+            TierListToolBar();
+
+            EmotionsFunc([0.0, "Emotions Tier 1", "currency->emotions;t1"], "SH", "S Tier");
+            EmotionsFunc([0.0, "Emotions Tier 2", "currency->emotions;t2"], "SH", "A Tier");
+            EmotionsFunc([0.0, "Emotions Tier 3", "currency->emotions;t3"], "SH", "B Tier");
+            EmotionsFunc([0.0, "Emotions Tier 4", "currency->emotions;t4"], "SH", "C Tier");
+            EmotionsFunc([0.0, "Emotions Tier 5", "currency->emotions;t5"], "SH", "D Tier");
+            EmotionsFunc([0.0, "Emotions Tier 6", "currency->emotions;t6"], "SH", "E Tier");
+
+            // new tiers
+            Conditional("?EmotionsNewTier") { }
+            ElementAdder_Tier("?EmotionsNewTier", "EmotionsFunc");
+
+            // hide tier
+            Conditional("?EmotionsNewTiersHidden") { }
+            ElementAdder_Tier("?EmotionsNewTiersHidden", null, true, "B:Distilled ;C:Stackable Currency", "OH");
+
+            QuickUI([0.0, "Remaining Emotions", "currency->emotions;exhide"], "SH", [], "", [], "Remaining Emotions, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
+        }
+
+        Section("Catalysts") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function CatalystsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B: Catalyst;C:Stackable Currency", "O"]); }
+            TierListToolBar();
+
+            CatalystsFunc([0.0, "Catalysts Tier 1", "currency->catalysts;t1"], "SH", "S Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 2", "currency->catalysts;t2"], "SH", "A Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 3", "currency->catalysts;t3"], "SH", "B Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 4", "currency->catalysts;t4"], "SH", "C Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 5", "currency->catalysts;t5"], "SH", "D Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 6", "currency->catalysts;t6"], "SH", "E Tier");
+
+            // new tiers
+            Conditional("?CatalystsNewTier") { }
+            ElementAdder_Tier("?CatalystsNewTier", "CatalystsFunc");
+
+            // hide tier
+            Conditional("?CatalystsNewTiersHidden") { }
+            ElementAdder_Tier("?CatalystsNewTiersHidden", null, true, "B: Catalysts;C:Stackable Currency", "OH");
+
+            QuickUI([0.0, "Remaining Catalysts", "currency->catalysts;exhide"], "SH", [], "", [], "Remaining Catalysts, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
+        }
+
+        Section("Essences") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function EssencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Essence of ;C:Stackable Currency", "O"]); }
+            TierListToolBar();
+
+            EssencesFunc([0.0, "Essences Tier 1", "currency->essence;t1"], "SH", "S Tier");
+            EssencesFunc([0.0, "Essences Tier 2", "currency->essence;t2"], "SH", "A Tier");
+            EssencesFunc([0.0, "Essences Tier 3", "currency->essence;t3"], "SH", "B Tier");
+            EssencesFunc([0.0, "Essences Tier 4", "currency->essence;t4"], "SH", "C Tier");
+            EssencesFunc([0.0, "Essences Tier 5", "currency->essence;t5"], "SH", "D Tier");
+            EssencesFunc([0.0, "Essences Tier 6", "currency->essence;t6"], "SH", "E Tier");
+
+            // new tiers
+            Conditional("?EssencesNewTier") { }
+            ElementAdder_Tier("?EssencesNewTier", "EssencesFunc");
+
+            // hide tier
+            Conditional("?EssencesNewTiersHidden") { }
+            ElementAdder_Tier("?EssencesNewTiersHidden", null, true, "B:Essence of ;C:Stackable Currency", "OH");
+        }
+
+        Section("Omen") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function OmenFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Omen", "O"]); }
+            TierListToolBar();
+
+            OmenFunc([0.0, "Omen Tier 1", "currency->omen;t1"], "SH", "S Tier");
+            OmenFunc([0.0, "Omen Tier 2", "currency->omen;t2"], "SH", "A Tier");
+            OmenFunc([0.0, "Omen Tier 3", "currency->omen;t3"], "SH", "B Tier");
+            OmenFunc([0.0, "Omen Tier 4", "currency->omen;t4"], "SH", "C Tier");
+            OmenFunc([0.0, "Omen Tier 5", "currency->omen;t5"], "SH", "D Tier");
+            OmenFunc([0.0, "Omen Tier 6", "currency->omen;t6"], "SH", "E Tier");
+
+            // new tiers
+            Conditional("?OmenNewTier") { }
+            ElementAdder_Tier("?OmenNewTier", "OmenFunc");
+
+            // hide tier
+            Conditional("?OmenNewTiersHidden") { }
+            ElementAdder_Tier("?OmenNewTiersHidden", null, true, "C:Omen", "OH");
+        }
+
+        Section("Splinters") {
+            QuickUI([0.0, "Splinters Tier 1", "currency->splinter;t1"], "SH", ["StackSize"], "S Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+            QuickUI([0.0, "Splinters Tier 2", "currency->splinter;t2"], "SH", ["StackSize"], "A Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+            QuickUI([0.0, "Splinters Tier 3", "currency->splinter;t3"], "SH", ["StackSize"], "B Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+            QuickUI([0.0, "Splinters Tier 4", "currency->splinter;t4"], "SH", ["StackSize"], "C Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+            QuickUI([0.0, "Splinters Tier 5", "currency->splinter;t5"], "SH", ["StackSize"], "D Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+        }
+
+        Section("Misc") {
+            QuickUI([0.0, "Misc Currency", "currency->others;misc"], "SH", []);
+        }
     }
 
     Section("Gold") {
-        QuickUI([0.0, "gold todo", "gold;stack3"], "SH", []); // todo
-        QuickUI([0.0, "gold todo", "gold;stack2"], "SH", []); // todo
-        QuickUI([0.0, "gold todo", "gold;stack1"], "SH", []); // todo
-        QuickUI([0.0, "gold todo", "gold;stack1lvl"], "SH", []); // todo
-        QuickUI([0.0, "gold todo", "gold;any"], "SH", []); // todo
+        QuickUI([0.0, "Gold Tier 1", "gold;stack3"], "SH", ["StackSize", "AreaLevel"]);
+        QuickUI([0.0, "Gold Tier 2", "gold;stack2"], "SH", ["StackSize", "AreaLevel"]);
+        QuickUI([0.0, "Gold Tier 3", "gold;stack1"], "SH", ["StackSize", "AreaLevel"]);
+        QuickUI([0.0, "Gold Tier 4", "gold;stack1lvl"], "SH", ["StackSize", "AreaLevel"]);
+        QuickUI([0.0, "Gold Tier 5", "gold;any"], "SH", ["StackSize", "AreaLevel"]);
     }
 
     Section("Uniques") {
@@ -97,7 +165,6 @@ Chapter("chapter") {
         QuickUI([0.0, "uniques todo", "uniques;t3boss"], "SH", []); // todo
         QuickUI([0.0, "uniques todo", "uniques;t3"], "SH", []); // todo
         QuickUI([0.0, "uniques todo", "uniques;hideable"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;restex"], "SH", []); // todo
     }
 
     Section("Chancing") {
@@ -241,7 +308,6 @@ Chapter() {
         QuickUI([0.0, "waystones todo", "waystones;waystone_t3"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;waystone_t2"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;waystone_t1"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;restex"], "SH", []); // todo
     }
 
     Section("Wannabe-Maps") {
@@ -251,13 +317,16 @@ Chapter() {
         QuickUI([0.0, "wannabe maps todo", "fragments->generic;t4"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "fragments->generic;t5"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "fragments->generic;t6"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;restex"], "SH", []); // todo
+
         Title("Misc.");
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeysanctum"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeyultimatumreward"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeyultimatum"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeys"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeyssafe"], "SH", []); // todo
+
+        QuickUI([0.0, "other currency todo", "maplike->special;superkeys"], "SH", []); // todo
+        QuickUI([0.0, "other currency todo", "maplike->special;logbooks"], "SH", []); // todo
     }
 
     Section("Endgame Salvagable Items") {
@@ -372,8 +441,17 @@ Chapter() {
         QuickUI([0.0, "special special todo", "questlikeexception;questlike"], "SH", []); // todo
         QuickUI([0.0, "special special todo", "questlikeexception;questitems"], "SH", []); // todo
         QuickUI([0.0, "special special todo", "artifact;fishingrod"], "SH", []); // todo
-        QuickUI([0.0, "special special todo", "currency;restex"], "SH", []); // todo
-        QuickUI([0.0, "special special todo", "anyremaining;restex"], "SH", []); // todo
+
+        Title("Error Rules");
+        QuickUI([0.0, "Error Currency", "currency;restex"], "SH", []);
+        QuickUI([0.0, "Error Misc", "anyremaining;restex"], "SH", []);
+        QuickUI([0.0, "Error Emotions", "currency->emotions;restex"], "SH", []);
+        QuickUI([0.0, "Error Essences", "currency->essence;restex"], "SH", []);
+        QuickUI([0.0, "Error Omen", "currency->omen;restex"], "SH", []);
+        QuickUI([0.0, "Error Catalysts", "currency->catalysts;restex"], "SH", []);
+        QuickUI([0.0, "Error Fragments", "fragments->generic;restex"], "SH", []);
+        QuickUI([0.0, "Error Waystones", "waystones;restex"], "SH", []);
+        QuickUI([0.0, "Error Uniques", "uniques;restex"], "SH", []);
     }
 
     Section("Exotic Bases") {
