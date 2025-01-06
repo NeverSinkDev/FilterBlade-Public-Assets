@@ -103,10 +103,37 @@ Chapter("chapter") {
     Section("Chancing") {
         QuickUI([0.0, "Chancing bases", "chancing;any"], "SH", []); // todo
     }
+
+    Section("Gems") {
+        QuickUI([0.0, "gems todo", "gems->uncut;spirit20"], "SH", []); // todo
+        QuickUI([0.0, "gems todo", "gems->uncut;skill20"], "SH", []); // todo
+        QuickUI([0.0, "gems todo", "gems->uncut;spirit19"], "SH", []); // todo
+        QuickUI([0.0, "gems todo", "gems->uncut;skill19"], "SH", []); // todo
+        QuickUI([0.0, "gems todo", "gems->uncut;spiritcampaign"], "SH", []); // todo
+        QuickUI([0.0, "gems todo", "gems->uncut;skillcampaign"], "SH", []); // todo
+        QuickUI([0.0, "gems todo", "gems->uncut;supportcampaign"], "SH", []); // todo
+        QuickUI([0.0, "gems todo", "gems->uncut;otherspiriteg"], "SH", []); // todo
+        QuickUI([0.0, "gems todo", "gems->uncut;otherskilleg"], "SH", []); // todo
+        QuickUI([0.0, "gems todo", "gems->uncut;othersupporteg"], "SH", []); // todo
+        QuickUI([0.0, "gems todo", "gems;any"], "SH", []); // todo
+    }
+
+    Section("Sockets") {
+        QuickUI([0.0, "sockets todo", "sockets->runes;t1"], "SH", []); // todo
+        QuickUI([0.0, "sockets todo", "sockets->runes;t2"], "SH", []); // todo
+        QuickUI([0.0, "sockets todo", "sockets->runes;t3"], "SH", []); // todo
+        QuickUI([0.0, "sockets todo", "sockets->runes;t4"], "SH", []); // todo
+        QuickUI([0.0, "sockets todo", "sockets->cores;t1"], "SH", []); // todo
+        QuickUI([0.0, "sockets todo", "sockets->cores;t2"], "SH", []); // todo
+        QuickUI([0.0, "sockets todo", "sockets->cores;t3"], "SH", []); // todo
+        QuickUI([0.0, "sockets todo", "sockets->cores;t4"], "SH", []); // todo
+        QuickUI([0.0, "sockets todo", "sockets->cores;t5"], "SH", []); // todo
+        QuickUI([0.0, "sockets todo", "sockets->cores;t6"], "SH", []); // todo
+    }
 }
 
 Chapter() {
-    SectionTitle("Endgame Gear");
+    SectionTitle("Endgame");
 
     Section("Rares & Crafting") {
         QuickUI([0.0, "endgame rares todo", "rr->amuring;t1"], "SH", []); // todo
@@ -171,33 +198,6 @@ Chapter() {
         QuickUI([0.0, "endgame jewellery todo", "endgame->jewellery;belts"], "SH", []); // todo
     }
 
-    Section("Sockets") {
-        QuickUI([0.0, "sockets todo", "sockets->runes;t1"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->runes;t2"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->runes;t3"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->runes;t4"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t1"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t2"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t3"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t4"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t5"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t6"], "SH", []); // todo
-    }
-
-    Section("Gems") {
-        QuickUI([0.0, "gems todo", "gems->uncut;spirit20"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;skill20"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;spirit19"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;skill19"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;spiritcampaign"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;skillcampaign"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;supportcampaign"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;otherspiriteg"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;otherskilleg"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;othersupporteg"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems;any"], "SH", []); // todo
-    }
-
     Section("Waystones") {
         QuickUI([0.0, "waystones todo", "waystone->hiders;corruptedmaphider"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystone->hiders;mirroredmaphider"], "SH", []); // todo
@@ -252,6 +252,7 @@ Chapter() {
         QuickUI([0.0, "wannabe maps todo", "fragments->generic;t5"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "fragments->generic;t6"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "fragments->generic;restex"], "SH", []); // todo
+        Title("Misc.");
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeysanctum"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeyultimatumreward"], "SH", []); // todo
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeyultimatum"], "SH", []); // todo
@@ -259,22 +260,13 @@ Chapter() {
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeyssafe"], "SH", []); // todo
     }
 
-    Section("Vendor Trash") {
+    Section("Endgame Salvagable Items") {
         QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;qualitymartialany"], "SH", []); // todo
         QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;qualitycasterany"], "SH", []); // todo
         QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;qualityarmorany"], "SH", []); // todo
         QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;socketslarge"], "SH", []); // todo
         QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;socketssmall"], "SH", []); // todo
     }
-
-    Section("Exotic Bases") {
-        QuickUI([0.0, "exotic todo", "exoticbases;superexoticbases"], "SH", []); // todo
-        QuickUI([0.0, "exotic todo", "exoticbases;commonexoticbaseshigh"], "SH", []); // todo
-        QuickUI([0.0, "exotic todo", "exoticbases;commonexoticbases"], "SH", []); // todo
-        QuickUI([0.0, "exotic todo", "exotic->others;doublecorruptedany"], "SH", []); // todo
-        QuickUI([0.0, "exotic todo", "exotic->others;overqualityany"], "SH", []); // todo
-    }
-
 }
 
 Chapter() {
@@ -358,7 +350,7 @@ Chapter() {
         QuickUI([0.0, "campaign gear todo", "relics->generic;any"], "SH", []); // todo
     }
 
-    Section("Campaign Vendor Trash") {
+    Section("Campaign Salvagable Items") {
         QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualitymartialany"], "SH", []); // todo
         QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualitycasterany"], "SH", []); // todo
         QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualityarmorany"], "SH", []); // todo
@@ -382,5 +374,13 @@ Chapter() {
         QuickUI([0.0, "special special todo", "artifact;fishingrod"], "SH", []); // todo
         QuickUI([0.0, "special special todo", "currency;restex"], "SH", []); // todo
         QuickUI([0.0, "special special todo", "anyremaining;restex"], "SH", []); // todo
+    }
+
+    Section("Exotic Bases") {
+        QuickUI([0.0, "exotic todo", "exoticbases;superexoticbases"], "SH", []); // todo
+        QuickUI([0.0, "exotic todo", "exoticbases;commonexoticbaseshigh"], "SH", []); // todo
+        QuickUI([0.0, "exotic todo", "exoticbases;commonexoticbases"], "SH", []); // todo
+        QuickUI([0.0, "exotic todo", "exotic->others;doublecorruptedany"], "SH", []); // todo
+        QuickUI([0.0, "exotic todo", "exotic->others;overqualityany"], "SH", []); // todo
     }
 }
