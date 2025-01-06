@@ -11,12 +11,12 @@ Chapter("chapter") {
 
         TierListToolBar("Currency");
 
-        CurrencyList([3.0, "Currency Tier 1", "currency;t1"], "S");
-        CurrencyList([3.0, "Currency Tier 2", "currency;t2"], "S");
-        CurrencyList([3.0, "Currency Tier 3", "currency;t3"], "S");
-        CurrencyList([3.0, "Currency Tier 4", "currency;t4"], "S");
-        CurrencyList([3.0, "Currency Tier 5", "currency;t5"], "S");
-        CurrencyList([3.0, "Currency Tier 6", "currency;t6"], "S");
+        CurrencyList([3.0, "Currency Tier 1", "currency;s"], "S");
+        CurrencyList([3.0, "Currency Tier 2", "currency;a"], "S");
+        CurrencyList([3.0, "Currency Tier 3", "currency;b"], "S");
+        CurrencyList([3.0, "Currency Tier 4", "currency;c"], "S");
+        CurrencyList([3.0, "Currency Tier 5", "currency;d"], "S");
+        CurrencyList([3.0, "Currency Tier 6", "currency;e"], "S");
         CurrencyList([3.0, "Currency Supplies 1", "currency;supply1"], "S");
         CurrencyList([3.0, "Currency Supplies 2", "currency;supply2"], "S");
         CurrencyList([3.0, "Currency Supplies 3", "currency;supply3"], "S");
@@ -26,6 +26,8 @@ Chapter("chapter") {
 
         Conditional("?CurrencyNewTiersHidden") { }
         ElementAdder_Tier("?CurrencyNewTiersHidden", null, true, "normalCurrencyPoe2", "OH");
+
+        QuickUI([0.0, "Remaining Currency", "currency;exhide"], "SH", [], "", [], "Remaining Currency, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
     }
 
     Section("Other Currency") {
@@ -49,12 +51,12 @@ Chapter("chapter") {
             Function EmotionsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Distilled ;C:Stackable Currency", "O"]); }
             TierListToolBar();
 
-            EmotionsFunc([0.0, "Emotions Tier 1", "currency->emotions;t1"], "SH", "S Tier");
-            EmotionsFunc([0.0, "Emotions Tier 2", "currency->emotions;t2"], "SH", "A Tier");
-            EmotionsFunc([0.0, "Emotions Tier 3", "currency->emotions;t3"], "SH", "B Tier");
-            EmotionsFunc([0.0, "Emotions Tier 4", "currency->emotions;t4"], "SH", "C Tier");
-            EmotionsFunc([0.0, "Emotions Tier 5", "currency->emotions;t5"], "SH", "D Tier");
-            EmotionsFunc([0.0, "Emotions Tier 6", "currency->emotions;t6"], "SH", "E Tier");
+            EmotionsFunc([0.0, "Emotions Tier 1", "currency->emotions;s"], "SH", "S Tier");
+            EmotionsFunc([0.0, "Emotions Tier 2", "currency->emotions;a"], "SH", "A Tier");
+            EmotionsFunc([0.0, "Emotions Tier 3", "currency->emotions;b"], "SH", "B Tier");
+            EmotionsFunc([0.0, "Emotions Tier 4", "currency->emotions;c"], "SH", "C Tier");
+            EmotionsFunc([0.0, "Emotions Tier 5", "currency->emotions;d"], "SH", "D Tier");
+            EmotionsFunc([0.0, "Emotions Tier 6", "currency->emotions;e"], "SH", "E Tier");
 
             // new tiers
             Conditional("?EmotionsNewTier") { }
@@ -72,12 +74,12 @@ Chapter("chapter") {
             Function CatalystsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B: Catalyst;C:Stackable Currency", "O"]); }
             TierListToolBar();
 
-            CatalystsFunc([0.0, "Catalysts Tier 1", "currency->catalysts;t1"], "SH", "S Tier");
-            CatalystsFunc([0.0, "Catalysts Tier 2", "currency->catalysts;t2"], "SH", "A Tier");
-            CatalystsFunc([0.0, "Catalysts Tier 3", "currency->catalysts;t3"], "SH", "B Tier");
-            CatalystsFunc([0.0, "Catalysts Tier 4", "currency->catalysts;t4"], "SH", "C Tier");
-            CatalystsFunc([0.0, "Catalysts Tier 5", "currency->catalysts;t5"], "SH", "D Tier");
-            CatalystsFunc([0.0, "Catalysts Tier 6", "currency->catalysts;t6"], "SH", "E Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 1", "currency->catalysts;s"], "SH", "S Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 2", "currency->catalysts;a"], "SH", "A Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 3", "currency->catalysts;b"], "SH", "B Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 4", "currency->catalysts;c"], "SH", "C Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 5", "currency->catalysts;d"], "SH", "D Tier");
+            CatalystsFunc([0.0, "Catalysts Tier 6", "currency->catalysts;e"], "SH", "E Tier");
 
             // new tiers
             Conditional("?CatalystsNewTier") { }
@@ -95,12 +97,12 @@ Chapter("chapter") {
             Function EssencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Essence of ;C:Stackable Currency", "O"]); }
             TierListToolBar();
 
-            EssencesFunc([0.0, "Essences Tier 1", "currency->essence;t1"], "SH", "S Tier");
-            EssencesFunc([0.0, "Essences Tier 2", "currency->essence;t2"], "SH", "A Tier");
-            EssencesFunc([0.0, "Essences Tier 3", "currency->essence;t3"], "SH", "B Tier");
-            EssencesFunc([0.0, "Essences Tier 4", "currency->essence;t4"], "SH", "C Tier");
-            EssencesFunc([0.0, "Essences Tier 5", "currency->essence;t5"], "SH", "D Tier");
-            EssencesFunc([0.0, "Essences Tier 6", "currency->essence;t6"], "SH", "E Tier");
+            EssencesFunc([0.0, "Essences Tier 1", "currency->essence;s"], "SH", "S Tier");
+            EssencesFunc([0.0, "Essences Tier 2", "currency->essence;a"], "SH", "A Tier");
+            EssencesFunc([0.0, "Essences Tier 3", "currency->essence;b"], "SH", "B Tier");
+            EssencesFunc([0.0, "Essences Tier 4", "currency->essence;c"], "SH", "C Tier");
+            EssencesFunc([0.0, "Essences Tier 5", "currency->essence;d"], "SH", "D Tier");
+            EssencesFunc([0.0, "Essences Tier 6", "currency->essence;e"], "SH", "E Tier");
 
             // new tiers
             Conditional("?EssencesNewTier") { }
@@ -109,6 +111,8 @@ Chapter("chapter") {
             // hide tier
             Conditional("?EssencesNewTiersHidden") { }
             ElementAdder_Tier("?EssencesNewTiersHidden", null, true, "B:Essence of ;C:Stackable Currency", "OH");
+
+            QuickUI([0.0, "Remaining Essences", "currency->essence;exhide"], "SH", [], "", [], "Remaining Essences, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
         }
 
         Section("Omen") {
@@ -116,12 +120,12 @@ Chapter("chapter") {
             Function OmenFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Omen", "O"]); }
             TierListToolBar();
 
-            OmenFunc([0.0, "Omen Tier 1", "currency->omen;t1"], "SH", "S Tier");
-            OmenFunc([0.0, "Omen Tier 2", "currency->omen;t2"], "SH", "A Tier");
-            OmenFunc([0.0, "Omen Tier 3", "currency->omen;t3"], "SH", "B Tier");
-            OmenFunc([0.0, "Omen Tier 4", "currency->omen;t4"], "SH", "C Tier");
-            OmenFunc([0.0, "Omen Tier 5", "currency->omen;t5"], "SH", "D Tier");
-            OmenFunc([0.0, "Omen Tier 6", "currency->omen;t6"], "SH", "E Tier");
+            OmenFunc([0.0, "Omen Tier 1", "currency->omen;s"], "SH", "S Tier");
+            OmenFunc([0.0, "Omen Tier 2", "currency->omen;a"], "SH", "A Tier");
+            OmenFunc([0.0, "Omen Tier 3", "currency->omen;b"], "SH", "B Tier");
+            OmenFunc([0.0, "Omen Tier 4", "currency->omen;c"], "SH", "C Tier");
+            OmenFunc([0.0, "Omen Tier 5", "currency->omen;d"], "SH", "D Tier");
+            OmenFunc([0.0, "Omen Tier 6", "currency->omen;e"], "SH", "E Tier");
 
             // new tiers
             Conditional("?OmenNewTier") { }
@@ -130,6 +134,8 @@ Chapter("chapter") {
             // hide tier
             Conditional("?OmenNewTiersHidden") { }
             ElementAdder_Tier("?OmenNewTiersHidden", null, true, "C:Omen", "OH");
+
+            QuickUI([0.0, "Remaining Omen", "currency->omen;exhide"], "SH", [], "", [], "Remaining Omen, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
         }
 
         Section("Splinters") {
@@ -154,48 +160,98 @@ Chapter("chapter") {
     }
 
     Section("Uniques") {
-        QuickUI([0.0, "uniques todo", "uniques;sekhemaring"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;t1"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;t2"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;2xcorrupteduniques"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;multispecialhigh"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;multispecial"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;earlyleague"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;corrupteduniques"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;t3boss"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;t3"], "SH", []); // todo
-        QuickUI([0.0, "uniques todo", "uniques;hideable"], "SH", []); // todo
+        // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+        Function UniquesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["GearPlusFlasks", "O"]); }
+        TierListToolBar();
+
+        UniquesFunc([0.0, "Uniques Tier 1", "uniques;t1"], "SH", "Tier 1");
+        UniquesFunc([0.0, "Uniques Tier 2", "uniques;t2"], "SH", "Tier 2");
+        UniquesFunc([0.0, "Uniques MultiSpecial High", "uniques;multispecialhigh"], "SH", "Multi Special High");
+        UniquesFunc([0.0, "Uniques MultiSpecial", "uniques;multispecial"], "SH", "Multi Special");
+        UniquesFunc([0.0, "Uniques EarlyLeague", "uniques;earlyleague"], "SH", "Early League");
+        UniquesFunc([0.0, "Uniques Tier 3 Boss", "uniques;t3boss"], "SH", "Tier 3 Boss");
+        UniquesFunc([0.0, "Uniques Tier 3", "uniques;t3"], "SH", "Tier 3");
+        UniquesFunc([0.0, "Uniques Hideable", "uniques;hideable"], "SH", "Hideable");
+
+        // new tiers
+        Conditional("?UniquesNewTier") { }
+        ElementAdder_Tier("?UniquesNewTier", "UniquesFunc");
+
+        // hide tier
+        Conditional("?UniquesNewTiersHidden") { }
     }
 
     Section("Chancing") {
-        QuickUI([0.0, "Chancing bases", "chancing;any"], "SH", []); // todo
+        // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+        Function ChancingFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["gearPlusFlasks", "OS"]); }
+        TierListToolBar();
+
+        ChancingFunc([0.0, "Chancing bases", "chancing;any"], "SH", []); // todo
+
+        // new tiers
+        Conditional("?ChancingNewTier") { }
+        ElementAdder_Tier("?ChancingNewTier", "ChancingFunc");
+
+        // hide tier
+        Conditional("?ChancingNewTiersHidden") { }
+        ElementAdder_Tier("?ChancingNewTiersHidden", null, true, "gearPlusFlasks", "OH");
     }
 
     Section("Gems") {
-        QuickUI([0.0, "gems todo", "gems->uncut;spirit20"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;skill20"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;spirit19"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;skill19"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;spiritcampaign"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;skillcampaign"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;supportcampaign"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;otherspiriteg"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;otherskilleg"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems->uncut;othersupporteg"], "SH", []); // todo
-        QuickUI([0.0, "gems todo", "gems;any"], "SH", []); // todo
+        QuickUI([0.0, "Gems, Spirit, Level 20 ", "gems->uncut;spirit20"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Gems, Skill, Level 20 ", "gems->uncut;skill20"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Gems, Spirit, Level 19 ", "gems->uncut;spirit19"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Gems, Skill, Level 19 ", "gems->uncut;skill19"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Gems, Spirit, Campaign ", "gems->uncut;spiritcampaign"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Gems, Skill, Campaign ", "gems->uncut;skillcampaign"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Gems, Support, Campaign ", "gems->uncut;supportcampaign"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Gems, Spirit, Endgame ", "gems->uncut;otherspiriteg"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Gems, Skill, Endgame ", "gems->uncut;otherskilleg"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Gems, Support, Endgame ", "gems->uncut;othersupporteg"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Cut Gems ", "gems;any"], "SH", ["AreaLevel", "ItemLevel"]);
     }
 
     Section("Sockets") {
-        QuickUI([0.0, "sockets todo", "sockets->runes;t1"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->runes;t2"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->runes;t3"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->runes;t4"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t1"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t2"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t3"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t4"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t5"], "SH", []); // todo
-        QuickUI([0.0, "sockets todo", "sockets->cores;t6"], "SH", []); // todo
+
+        Section("Runes") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function RunesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Socketable;B: Rune", "O"]); }
+            TierListToolBar();
+
+            RunesFunc([0.0, "Runes Tier 1", "sockets->runes;t1"], "SH", "Tier 1");
+            RunesFunc([0.0, "Runes Tier 2", "sockets->runes;t2"], "SH", "Tier 2");
+            RunesFunc([0.0, "Runes Tier 3", "sockets->runes;t3"], "SH", "Tier 3");
+            RunesFunc([0.0, "Runes Tier 4", "sockets->runes;t4"], "SH", "Tier 4");
+
+            // new tiers
+            Conditional("?RunesNewTier") { }
+            ElementAdder_Tier("?RunesNewTier", "RunesFunc");
+
+            // hide tier
+            Conditional("?RunesNewTiersHidden") { }
+            ElementAdder_Tier("?RunesNewTiersHidden", null, true, "C:Socketable;B: Rune", "OH");
+        }
+
+        Section("Soul Cores") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function SoulCoresFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Socketable;B:Soul Core of ", "O"]); }
+            TierListToolBar();
+
+            SoulCoresFunc([0.0, "Soul Cores Tier 1", "sockets->cores;s"], "SH", "S Tier");
+            SoulCoresFunc([0.0, "Soul Cores Tier 2", "sockets->cores;a"], "SH", "A Tier");
+            SoulCoresFunc([0.0, "Soul Cores Tier 3", "sockets->cores;b"], "SH", "B Tier");
+            SoulCoresFunc([0.0, "Soul Cores Tier 4", "sockets->cores;c"], "SH", "C Tier");
+            SoulCoresFunc([0.0, "Soul Cores Tier 5", "sockets->cores;d"], "SH", "D Tier");
+            SoulCoresFunc([0.0, "Soul Cores Tier 6", "sockets->cores;e"], "SH", "E Tier");
+
+            // new tiers
+            Conditional("?SoulCoresNewTier") { }
+            ElementAdder_Tier("?SoulCoresNewTier", "SoulCoresFunc");
+
+            // hide tier
+            Conditional("?SoulCoresNewTiersHidden") { }
+            ElementAdder_Tier("?SoulCoresNewTiersHidden", null, true, "C:Socketable;B:Soul Core of ", "OH");
+        }
     }
 }
 
@@ -209,21 +265,22 @@ Chapter() {
         QuickUI([0.0, "endgame rares todo", "rr->belts;t1"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr->belts;t2"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr->belts;t3"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t1_s"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t1_r"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t2_s"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t2_b"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t2_r"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t3_s"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t3_a"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t3_b"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t3_r"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t4_a"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t4_r"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t4_b"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t5_b"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t5_a"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t5_r"], "SH", []); // todo
+
+        QuickUI([0.0, "endgame rares todo", "rr;t1_top"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t1_other"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t2_top"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t2_a1"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t2_other"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t3_top"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t3_a1"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t3_a2"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t3_other"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t4_a1"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t4_a2"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t4_other"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t5_a1"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t5_a2"], "SH", []); // todo
+        QuickUI([0.0, "endgame rares todo", "rr;t5_other"], "SH", []); // todo
 
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;largerares"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;mediumrares1"], "SH", []); // todo
@@ -311,12 +368,13 @@ Chapter() {
     }
 
     Section("Wannabe-Maps") {
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;t1"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;t2"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;t3"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;t4"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;t5"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;t6"], "SH", []); // todo
+        QuickUI([0.0, "wannabe maps todo", "fragments->generic;s"], "SH", []); // todo
+        QuickUI([0.0, "wannabe maps todo", "fragments->generic;a"], "SH", []); // todo
+        QuickUI([0.0, "wannabe maps todo", "fragments->generic;b"], "SH", []); // todo
+        QuickUI([0.0, "wannabe maps todo", "fragments->generic;c"], "SH", []); // todo
+        QuickUI([0.0, "wannabe maps todo", "fragments->generic;d"], "SH", []); // todo
+        QuickUI([0.0, "wannabe maps todo", "fragments->generic;e"], "SH", []); // todo
+        QuickUI([0.0, "Remaining Fragments", "fragments->generic;exhide"], "SH", [], "", [], "Remaining Fragments, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
 
         Title("Misc.");
         QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeysanctum"], "SH", []); // todo
@@ -441,6 +499,10 @@ Chapter() {
         QuickUI([0.0, "special special todo", "questlikeexception;questlike"], "SH", []); // todo
         QuickUI([0.0, "special special todo", "questlikeexception;questitems"], "SH", []); // todo
         QuickUI([0.0, "special special todo", "artifact;fishingrod"], "SH", []); // todo
+
+        QuickUI([0.0, "Unique Exception: Double Corrupted", "uniques;2xcorrupteduniques"], "SH");
+        QuickUI([0.0, "Unique Exception: Sekhema Ring", "uniques;sekhemaring"], "SH");
+        QuickUI([0.0, "Corrupted Uniques", "uniques;corrupteduniques"], "SH");
 
         Title("Error Rules");
         QuickUI([0.0, "Error Currency", "currency;restex"], "SH", []);
