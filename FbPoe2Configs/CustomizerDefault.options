@@ -378,28 +378,48 @@ Chapter() {
         QuickUI([0.0, "waystones todo", "waystones;waystone_t1"], "SH", []); // todo
     }
 
-    Section("Wannabe-Maps") {
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;s"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;a"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;b"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;c"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;d"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "fragments->generic;e"], "SH", []); // todo
-        QuickUI([0.0, "Remaining Fragments", "fragments->generic;exhide"], "SH", [], "", [], "Remaining Fragments, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
+    Section("Map-Like Items") {
+        Section("Map Fragments") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function MapFragmentsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["MapFragAndTablets", "O"]); }
+            TierListToolBar();
 
-        Title("Misc.");
-        QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeysanctumtop"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeysanctumhigh"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeysanctumlow"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeyultimatumtop"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeyultimatumhigh"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeyultimatumlow"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;trialkeyultimatumreward"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeys"], "SH", []); // todo
-        QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeyssafe"], "SH", []); // todo
+            MapFragmentsFunc([0.0, "Map Fragments Tier 1", "fragments->generic;s"], "SH", "S Tier");
+            MapFragmentsFunc([0.0, "Map Fragments Tier 2", "fragments->generic;a"], "SH", "A Tier");
+            MapFragmentsFunc([0.0, "Map Fragments Tier 3", "fragments->generic;b"], "SH", "B Tier");
+            MapFragmentsFunc([0.0, "Map Fragments Tier 4", "fragments->generic;c"], "SH", "C Tier");
+            MapFragmentsFunc([0.0, "Map Fragments Tier 5", "fragments->generic;d"], "SH", "D Tier");
+            MapFragmentsFunc([0.0, "Map Fragments Tier 6", "fragments->generic;e"], "SH", "E Tier");
 
-        QuickUI([0.0, "other currency todo", "maplike->special;superkeys"], "SH", []); // todo
-        QuickUI([0.0, "other currency todo", "maplike->special;logbooks"], "SH", []); // todo
+            // new tiers
+            Conditional("?MapFragmentsNewTier") { }
+            ElementAdder_Tier("?MapFragmentsNewTier", "MapFragmentsFunc");
+
+            // hide tier
+            Conditional("?MapFragmentsNewTiersHidden") { }
+            ElementAdder_Tier("?MapFragmentsNewTiersHidden", null, true, "MapFragAndTablets", "OH");
+
+            QuickUI([0.0, "Remaining Map Fragments", "fragments->generic;exhide"], "SH", [], "", [], "Remaining Map Fragments, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
+        }
+
+        Section("Ascendancy Keys") {
+            QuickUI([0.0, "Djinn Barya, Top Level", "miscmapitemsextra;trialkeysanctumtop"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Djinn Barya, High Level", "miscmapitemsextra;trialkeysanctumhigh"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Djinn Barya", "miscmapitemsextra;trialkeysanctumlow"], "SH", ["ItemLevel"]);
+            Divider();
+            QuickUI([0.0, "Ultimatum, Top Level", "miscmapitemsextra;trialkeyultimatumtop"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Ultimatum, High Level", "miscmapitemsextra;trialkeyultimatumhigh"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Ultimatum", "miscmapitemsextra;trialkeyultimatumlow"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Ultimatum Reward", "miscmapitemsextra;trialkeyultimatumreward"], "SH", ["ItemLevel"]); // todo
+        }
+
+        Section("Misc.") {
+            QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeys"], "SH", []); // todo
+            QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeyssafe"], "SH", []); // todo
+
+            QuickUI([0.0, "other currency todo", "maplike->special;superkeys"], "SH", []); // todo
+            QuickUI([0.0, "other currency todo", "maplike->special;logbooks"], "SH", []); // todo
+        }
     }
 
     Section("Endgame Salvagable Items") {
@@ -408,18 +428,18 @@ Chapter() {
         QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;qualityarmorany"], "SH", []); // todo
         QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;socketslarge"], "SH", []); // todo
         QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;socketssmall"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "endgame->salvagable;quality2martialany"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "endgame->salvagable;quality2casterany"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "endgame->salvagable;quality2armorany"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;quality2martialany"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;quality2casterany"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;quality2armorany"], "SH", []); // todo
 
-        QuickUI([0.0, "todo new entry needs name", "rare->salvagable;quality2martialany"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "rare->salvagable;quality2casterany"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "rare->salvagable;quality2armorany"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "rare->salvagable;qualitymartialany"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "rare->salvagable;qualitycasterany"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "rare->salvagable;qualityarmorany"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "rare->salvagable;socketslarge"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "rare->salvagable;socketssmall"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;quality2martialany"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;quality2casterany"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;quality2armorany"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;qualitymartialany"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;qualitycasterany"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;qualityarmorany"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;socketslarge"], "SH", []); // todo
+        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;socketssmall"], "SH", []); // todo
     }
 }
 
