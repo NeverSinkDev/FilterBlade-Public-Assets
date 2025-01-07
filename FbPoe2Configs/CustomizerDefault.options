@@ -293,6 +293,7 @@ Chapter() {
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;basicraredecorator"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;ilvl81caster"], "SH", []); // todo
 
+        Divider();
         Title("Crafting");
 
         QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->decorator;normal82"], "SH", []); // todo
@@ -423,23 +424,24 @@ Chapter() {
     }
 
     Section("Endgame Salvagable Items") {
-        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;qualitymartialany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;qualitycasterany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;qualityarmorany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;socketslarge"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;socketssmall"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;quality2martialany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;quality2casterany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "endgame->salvagable;quality2armorany"], "SH", []); // todo
-
-        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;quality2martialany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;quality2casterany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;quality2armorany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;qualitymartialany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;qualitycasterany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;qualityarmorany"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;socketslarge"], "SH", []); // todo
-        QuickUI([0.0, "endgame vendor todo", "rare->salvagable;socketssmall"], "SH", []); // todo
+        QuickUI([0.0, "Salvagable (High Quality, weapons)", "endgame->salvagable;quality2martialany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (High Quality, caster)", "endgame->salvagable;quality2casterany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (High Quality, armour)", "endgame->salvagable;quality2armorany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Quality, weapons)", "endgame->salvagable;qualitymartialany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Quality, caster)", "endgame->salvagable;qualitycasterany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Quality, armour)", "endgame->salvagable;qualityarmorany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Sockets, large)", "endgame->salvagable;socketslarge"], "SH", ["Sockets"]);
+        QuickUI([0.0, "Salvagable (Sockets, small)", "endgame->salvagable;socketssmall"], "SH", ["Sockets"]);
+        Divider();
+        Title("Rares");
+        QuickUI([0.0, "Salvagable (High Quality, weapons)", "rare->salvagable;quality2martialany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (High Quality, caster)", "rare->salvagable;quality2casterany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (High Quality, armour)", "rare->salvagable;quality2armorany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Quality, weapons)", "rare->salvagable;qualitymartialany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Quality, caster)", "rare->salvagable;qualitycasterany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Quality, armour)", "rare->salvagable;qualityarmorany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Sockets, large)", "rare->salvagable;socketslarge"], "SH", ["Sockets"]);
+        QuickUI([0.0, "Salvagable (Sockets, small)", "rare->salvagable;socketssmall"], "SH", ["Sockets"]);
     }
 }
 
@@ -447,27 +449,32 @@ Chapter() {
     SectionTitle("Campaign");
 
     Section("Campaign Flasks & Charms") {
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->quality;max"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->quality;high"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->quality;any"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->life;t1"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->life;t2"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->life;t3"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->life;t4"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->life;t5"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->life;t6"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->life;t7"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->life;t8"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->mana;t1"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->mana;t2"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->mana;t3"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->mana;t4"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->mana;t5"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->mana;t6"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->mana;t7"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->flasks->mana;t8"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->charms;selected"], "SH", []); // todo
-        QuickUI([0.0, "campaign flask charm todo", "leveling->charms;any"], "SH", []); // todo
+        QuickUI([0.0, "Campaign Flasks (Quality, max)", "leveling->flasks->quality;max"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
+        QuickUI([0.0, "Campaign Flasks (Quality, high)", "leveling->flasks->quality;high"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
+        QuickUI([0.0, "Campaign Flasks (Quality, low)", "leveling->flasks->quality;any"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
+
+        Search S_life(0.0, "Campaign Life Flask Progression 1", "leveling->flasks->life;t1") { }
+        Search S_life(0.0, "Campaign Life Flask Progression 2", "leveling->flasks->life;t2") { }
+        Search S_life(0.0, "Campaign Life Flask Progression 3", "leveling->flasks->life;t3") { }
+        Search S_life(0.0, "Campaign Life Flask Progression 4", "leveling->flasks->life;t4") { }
+        Search S_life(0.0, "Campaign Life Flask Progression 5", "leveling->flasks->life;t5") { }
+        Search S_life(0.0, "Campaign Life Flask Progression 6", "leveling->flasks->life;t6") { }
+        Search S_life(0.0, "Campaign Life Flask Progression 7", "leveling->flasks->life;t7") { }
+        Search S_life(0.0, "Campaign Life Flask Progression 8", "leveling->flasks->life;t8") { }
+
+        Search S_mana(0.0, "Campaign Mana Flask Progression 1", "leveling->flasks->mana;t1") { }
+        Search S_mana(0.0, "Campaign Mana Flask Progression 2", "leveling->flasks->mana;t2") { }
+        Search S_mana(0.0, "Campaign Mana Flask Progression 3", "leveling->flasks->mana;t3") { }
+        Search S_mana(0.0, "Campaign Mana Flask Progression 4", "leveling->flasks->mana;t4") { }
+        Search S_mana(0.0, "Campaign Mana Flask Progression 5", "leveling->flasks->mana;t5") { }
+        Search S_mana(0.0, "Campaign Mana Flask Progression 6", "leveling->flasks->mana;t6") { }
+        Search S_mana(0.0, "Campaign Mana Flask Progression 7", "leveling->flasks->mana;t7") { }
+        Search S_mana(0.0, "Campaign Mana Flask Progression 8", "leveling->flasks->mana;t8") { }
+        QuickUI(S_life, "SH", [], "Life Flask Progression");
+        QuickUI(S_mana, "SH", [], "Mana Flask Progression");
+
+        QuickUI([0.0, "Campaign Charms, Best", "leveling->charms;selected"], "SH", ["charms", "RarityNM", "ItemLevel"]);
+        QuickUI([0.0, "Campaign Charms", "leveling->charms;any"], "SH", ["charms", "RarityNM", "ItemLevel"]);
     }
 
     Section("Campaign Gear") {
@@ -526,14 +533,15 @@ Chapter() {
     }
 
     Section("Campaign Salvagable Items") {
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;quality2martialany"], "SH", []); // todo
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;quality2casterany"], "SH", []); // todo
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;quality2armorany"], "SH", []); // todo
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualitymartialany"], "SH", []); // todo
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualitycasterany"], "SH", []); // todo
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualityarmorany"], "SH", []); // todo
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;socketslarge"], "SH", []); // todo
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;socketssmall"], "SH", []); // todo
+        QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel"]);
+        QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel"]);
+        QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel"]);
+        QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel"]);
+        QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel"]);
+        QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel"]);
+
+        QuickUI([0.0, "Campaign Salvable (Sockets, large)", "leveling->salvagable;socketslarge"], "SH", ["Sockets", "ItemLevel"]);
+        QuickUI([0.0, "Campaign Salvable (Sockets, small)", "leveling->salvagable;socketssmall"], "SH", ["Sockets", "ItemLevel"]);
     }
 }
 
@@ -541,18 +549,18 @@ Chapter() {
     SectionTitle("Misc.");
 
     Section("Special Rules") {
-        QuickUI([0.0, "special special todo", "questlikeexception;questlike"], "SH", []); // todo
-        QuickUI([0.0, "special special todo", "questlikeexception;questitems"], "SH", []); // todo
-        QuickUI([0.0, "special special todo", "artifact;fishingrod"], "SH", []); // todo
+        QuickUI([0.0, "Quest-Like Items", "questlikeexception;questlike"], "SH", []);
+        QuickUI([0.0, "Quest Items", "questlikeexception;questitems"], "SH", []);
+        QuickUI([0.0, "Fishing Rod", "artifact;fishingrod"], "SH", []);
 
         QuickUI([0.0, "Unique Exception: Double Corrupted", "uniques;2xcorrupteduniques"], "SH");
         QuickUI([0.0, "Unique Exception: Sekhema Ring", "uniques;sekhemaring"], "SH");
         QuickUI([0.0, "Corrupted Uniques", "uniques;corrupteduniques"], "SH");
 
-        QuickUI([0.0, "todo new entry needs name", "lowstrictnessshowlayer;anyfinal"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "lowstrictnessshowlayer;normalmagicendgameany"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "lowstrictnessshowlayer;raresendgameany"], "SH", []); // todo
-
+        QuickUI([0.0, "Strictness Show-Layers, All", "lowstrictnessshowlayer;anyfinal"], "SH", []); // todo
+        QuickUI([0.0, "Strictness Show-Layers, Normal/Magic", "lowstrictnessshowlayer;normalmagicendgameany"], "SH", []); // todo
+        QuickUI([0.0, "Strictness Show-Layers, Rares", "lowstrictnessshowlayer;raresendgameany"], "SH", []); // todo
+        Divider();
         Title("Error Rules");
         QuickUI([0.0, "Error Currency", "currency;restex"], "SH", []);
         QuickUI([0.0, "Error Misc", "anyremaining;restex"], "SH", []);
@@ -565,10 +573,10 @@ Chapter() {
         QuickUI([0.0, "Error Uniques", "uniques;restex"], "SH", []);
     }
 
-    Section("Exotic Bases") {
-        QuickUI([0.0, "exotic todo", "exoticbases;superexoticbases"], "SH", []); // todo
-        QuickUI([0.0, "exotic todo", "exoticbases;commonexoticbaseshigh"], "SH", []); // todo
-        QuickUI([0.0, "exotic todo", "exoticbases;commonexoticbases"], "SH", []); // todo
-        QuickUI([0.0, "exotic todo", "exotic->others;overqualityany"], "SH", []); // todo
+    Section("Exotic Bases") { // todo
+        QuickUI([0.0, "Exotic Bases, very exotic", "exoticbases;superexoticbases"], "SH", []);
+        QuickUI([0.0, "Exotic Bases, high level", "exoticbases;commonexoticbaseshigh"], "SH", []);
+        QuickUI([0.0, "Exotic Bases", "exoticbases;commonexoticbases"], "SH", []);
+        QuickUI([0.0, "Over-Quality Items", "exotic->others;overqualityany"], "SH", ["Quality"]);
     }
 }
