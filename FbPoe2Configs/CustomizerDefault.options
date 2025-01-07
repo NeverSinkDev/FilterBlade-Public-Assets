@@ -478,10 +478,11 @@ Chapter() {
     }
 
     Section("Campaign Salvagable Items") {
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualitymartialany"], "SH", []); // todo
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualitycasterany"], "SH", []); // todo
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualityarmorany"], "SH", []); // todo
-        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;sockets"], "SH", []); // todo
+        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;rarequalitymartialany"], "SH", []); // todo
+        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;rarequalitycasterany"], "SH", []); // todo
+        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;rarequalityarmorany"], "SH", []); // todo
+        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;raresocketslarge"], "SH", []); // todo
+        QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;raresocketssmall"], "SH", []); // todo
 
         QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualitymartial"], "SH", []); // todo
         QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;qualitycaster"], "SH", []); // todo
@@ -489,7 +490,6 @@ Chapter() {
         QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;socketslarge"], "SH", []); // todo
         QuickUI([0.0, "campaign vendor todo", "leveling->salvagable;socketssmall"], "SH", []); // todo
     }
-
 }
 
 Chapter() {
@@ -503,6 +503,10 @@ Chapter() {
         QuickUI([0.0, "Unique Exception: Double Corrupted", "uniques;2xcorrupteduniques"], "SH");
         QuickUI([0.0, "Unique Exception: Sekhema Ring", "uniques;sekhemaring"], "SH");
         QuickUI([0.0, "Corrupted Uniques", "uniques;corrupteduniques"], "SH");
+
+        QuickUI([0.0, "todo new entry needs name", "lowstrictnessshowlayer;anyfinal"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "lowstrictnessshowlayer;normalmagicendgameany"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "lowstrictnessshowlayer;raresendgameany"], "SH", []); // todo
 
         Title("Error Rules");
         QuickUI([0.0, "Error Currency", "currency;restex"], "SH", []);
