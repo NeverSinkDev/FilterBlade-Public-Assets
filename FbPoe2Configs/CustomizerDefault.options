@@ -434,14 +434,14 @@ Chapter() {
         QuickUI([0.0, "Salvagable (Sockets, small)", "endgame->salvagable;socketssmall"], "SH", ["Sockets"]);
         Divider();
         Title("Rares");
-        QuickUI([0.0, "Salvagable (High Quality, weapons)", "rare->salvagable;quality2martialany"], "SH", ["Quality"]);
-        QuickUI([0.0, "Salvagable (High Quality, caster)", "rare->salvagable;quality2casterany"], "SH", ["Quality"]);
-        QuickUI([0.0, "Salvagable (High Quality, armour)", "rare->salvagable;quality2armorany"], "SH", ["Quality"]);
-        QuickUI([0.0, "Salvagable (Quality, weapons)", "rare->salvagable;qualitymartialany"], "SH", ["Quality"]);
-        QuickUI([0.0, "Salvagable (Quality, caster)", "rare->salvagable;qualitycasterany"], "SH", ["Quality"]);
-        QuickUI([0.0, "Salvagable (Quality, armour)", "rare->salvagable;qualityarmorany"], "SH", ["Quality"]);
-        QuickUI([0.0, "Salvagable (Sockets, large)", "rare->salvagable;socketslarge"], "SH", ["Sockets"]);
-        QuickUI([0.0, "Salvagable (Sockets, small)", "rare->salvagable;socketssmall"], "SH", ["Sockets"]);
+        QuickUI([0.0, "Salvagable (Rare, High Quality, weapons)", "rare->salvagable;quality2martialany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Rare, High Quality, caster)", "rare->salvagable;quality2casterany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Rare, High Quality, armour)", "rare->salvagable;quality2armorany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Rare, Quality, weapons)", "rare->salvagable;qualitymartialany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Rare, Quality, caster)", "rare->salvagable;qualitycasterany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Rare, Quality, armour)", "rare->salvagable;qualityarmorany"], "SH", ["Quality"]);
+        QuickUI([0.0, "Salvagable (Rare, Sockets, large)", "rare->salvagable;socketslarge"], "SH", ["Sockets"]);
+        QuickUI([0.0, "Salvagable (Rare, Sockets, small)", "rare->salvagable;socketssmall"], "SH", ["Sockets"]);
     }
 }
 
