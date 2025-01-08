@@ -88,7 +88,7 @@ Chapter("chapter") {
 
             // hide tier
             Conditional("?CatalystsNewTiersHidden") { }
-            ElementAdder_Tier("?CatalystsNewTiersHidden", null, true, "B: Catalysts;C:Stackable Currency", "OH");
+            ElementAdder_Tier("?CatalystsNewTiersHidden", null, true, "B: Catalyst;C:Stackable Currency", "OH");
 
             QuickUI([0.0, "Remaining Catalysts", "currency->catalysts;exhide"], "SH", [], "", [], "Remaining Catalysts, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
         }
@@ -497,8 +497,8 @@ Chapter() {
             QuickUI([0.0, "Campaign Decorator: Tiny Rares", "leveling->decorators->rare;tinyrares"], "SH", []);
             Divider();
             Title("Magic Items");
-            QuickUI([0.0, "Campaign Decorator: Magic, medium", "decorators->leveling->magic;medium1"], "SH", []);
-            QuickUI([0.0, "Campaign Decorator: Magic, medium", "decorators->leveling->magic;medium2"], "SH", []);
+            QuickUI([0.0, "Campaign Decorator: Magic, medium 1", "decorators->leveling->magic;medium1"], "SH", []);
+            QuickUI([0.0, "Campaign Decorator: Magic, medium 2", "decorators->leveling->magic;medium2"], "SH", []);
             QuickUI([0.0, "Campaign Decorator: Magic, tiny", "decorators->leveling->magic;tiny"], "SH", []);
             QuickUI([0.0, "Campaign Decorator: Magic, early", "decorators->leveling->magic;noticeearly"], "SH", []);
         }
@@ -580,8 +580,8 @@ Chapter() {
         QuickUI([0.0, "Strictness Show-Layers, All", "lowstrictnessshowlayer;anyfinal"], "SH", []); // todo
         QuickUI([0.0, "Strictness Show-Layers, Normal/Magic", "lowstrictnessshowlayer;normalmagicendgameany"], "SH", []); // todo
         QuickUI([0.0, "Strictness Show-Layers, Rares", "lowstrictnessshowlayer;raresendgameany"], "SH", []); // todo
-        QuickUI([0.0, "Campaign Magic, ", "leveling->magic->remaining;largemagicblocker"], "SH", []); // todo
-        QuickUI([0.0, "Campaign Magic, ", "leveling->magic->remaining;mediummagicblocker"], "SH", []); // todo
+        QuickUI([0.0, "Campaign Magic, hide large", "leveling->magic->remaining;largemagicblocker"], "SH", []); // todo
+        QuickUI([0.0, "Campaign Magic, hide medium", "leveling->magic->remaining;mediummagicblocker"], "SH", []); // todo
         Divider();
         Title("Error Rules");
         QuickUI([0.0, "Error Currency", "currency;restex"], "SH", []);
