@@ -2,6 +2,8 @@ Info_OptionVersion("1.1.4n");
 
 // todo: defensive searches?
 
+// todo: custom rules, can be copy-pasted, but need the right waypoints @NS, esp. custom progression
+
 Chapter("chapter") {
 
     SectionTitle("Basics");
@@ -10,6 +12,8 @@ Chapter("chapter") {
         Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["normalCurrencyPoe2", "O"]); }
 
         TierListToolBar("Currency");
+
+        Description("Drag & Drop items to change their tier.");
 
         CurrencyList([3.0, "Currency Tier 1", "currency;s"], "S", "S Tier");
         CurrencyList([3.0, "Currency Tier 2", "currency;a"], "S", "A Tier");
@@ -28,6 +32,8 @@ Chapter("chapter") {
         ElementAdder_Tier("?CurrencyNewTiersHidden", null, true, "normalCurrencyPoe2", "OH");
 
         QuickUI([0.0, "Remaining Currency", "currency;exhide"], "SH", [], "", [], "Remaining Currency, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
+
+        Description("Note that there are also additional rules for currency during the campaign.");
     }
 
     Section("Other Currency") {
@@ -139,16 +145,8 @@ Chapter("chapter") {
             QuickUI([0.0, "Remaining Omen", "currency->omen;exhide"], "SH", [], "", [], "Remaining Omen, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
         }
 
-        Section("Splinters") {
-            QuickUI([0.0, "Splinters Tier 1", "currency->splinter;t1"], "SH", ["StackSize"], "S Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 2", "currency->splinter;t2"], "SH", ["StackSize"], "A Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 3", "currency->splinter;t3"], "SH", ["StackSize"], "B Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 4", "currency->splinter;t4"], "SH", ["StackSize"], "C Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 5", "currency->splinter;t5"], "SH", ["StackSize"], "D Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-        }
-
         Section("Misc") {
-            QuickUI([0.0, "Misc Currency", "currency->others;misc"], "SH", []);
+            QuickUI([0.0, "Misc Currency", "currency->others;misc"], "SH", []); // todo???
         }
     }
 
@@ -165,14 +163,17 @@ Chapter("chapter") {
         Function UniquesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["GearPlusFlasks", "O"]); }
         TierListToolBar();
 
+        Title("Predictable Tiers");
         UniquesFunc([0.0, "Uniques Tier 1", "uniques;t1"], "SH", "Tier 1");
         UniquesFunc([0.0, "Uniques Tier 2", "uniques;t2"], "SH", "Tier 2");
+        UniquesFunc([0.0, "Uniques Tier 3", "uniques;t3"], "SH", "Tier 3");
+        UniquesFunc([0.0, "Uniques EarlyLeague", "uniques;earlyleague"], "SH", "Early League");
+        UniquesFunc([0.0, "Uniques Hideable", "uniques;hideable"], "SH", "Hideable");
+
+        Title("High Variety Tiers");
         UniquesFunc([0.0, "Uniques MultiSpecial High", "uniques;multispecialhigh"], "SH", "Multi Special High");
         UniquesFunc([0.0, "Uniques MultiSpecial", "uniques;multispecial"], "SH", "Multi Special");
-        UniquesFunc([0.0, "Uniques EarlyLeague", "uniques;earlyleague"], "SH", "Early League");
         UniquesFunc([0.0, "Uniques Tier 3 Boss", "uniques;t3boss"], "SH", "Tier 3 Boss");
-        UniquesFunc([0.0, "Uniques Tier 3", "uniques;t3"], "SH", "Tier 3");
-        UniquesFunc([0.0, "Uniques Hideable", "uniques;hideable"], "SH", "Hideable");
 
         // new tiers
         Conditional("?UniquesNewTier") { }
@@ -187,6 +188,8 @@ Chapter("chapter") {
         Function ChancingFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["gearPlusFlasks", "OS"]); }
         TierListToolBar();
 
+        // todo: descr.?
+
         ChancingFunc([0.0, "Chancing bases", "chancing;any"], "SH");
 
         // new tiers
@@ -199,20 +202,26 @@ Chapter("chapter") {
     }
 
     Section("Gems") {
-        QuickUI([0.0, "Gems, Spirit, Level 20 ", "gems->uncut;spirit20"], "SH", ["AreaLevel", "ItemLevel"]);
-        QuickUI([0.0, "Gems, Skill, Level 20 ", "gems->uncut;skill20"], "SH", ["AreaLevel", "ItemLevel"]);
-        QuickUI([0.0, "Gems, Spirit, Level 19 ", "gems->uncut;spirit19"], "SH", ["AreaLevel", "ItemLevel"]);
-        QuickUI([0.0, "Gems, Skill, Level 19 ", "gems->uncut;skill19"], "SH", ["AreaLevel", "ItemLevel"]);
-        QuickUI([0.0, "Gems, Spirit, Campaign ", "gems->uncut;spiritcampaign"], "SH", ["AreaLevel", "ItemLevel"]);
-        QuickUI([0.0, "Gems, Skill, Campaign ", "gems->uncut;skillcampaign"], "SH", ["AreaLevel", "ItemLevel"]);
-        QuickUI([0.0, "Gems, Support, Campaign ", "gems->uncut;supportcampaign"], "SH", ["AreaLevel", "ItemLevel"]);
-        QuickUI([0.0, "Gems, Spirit, Endgame ", "gems->uncut;otherspiriteg"], "SH", ["AreaLevel", "ItemLevel"]);
-        QuickUI([0.0, "Gems, Skill, Endgame ", "gems->uncut;otherskilleg"], "SH", ["AreaLevel", "ItemLevel"]);
-        QuickUI([0.0, "Gems, Support, Endgame ", "gems->uncut;othersupporteg"], "SH", ["AreaLevel", "ItemLevel"]);
+        Title("Max Level");
+        QuickUI([0.0, "Gems, Spirit, Level 20 ", "gems->uncut;spirit20"], "SH", ["AreaLevel", "ItemLevel"], "Spirit, Level 20");
+        QuickUI([0.0, "Gems, Skill, Level 20 ", "gems->uncut;skill20"], "SH", ["AreaLevel", "ItemLevel"], "Skill, Level 20");
+        QuickUI([0.0, "Gems, Spirit, Level 19 ", "gems->uncut;spirit19"], "SH", ["AreaLevel", "ItemLevel"], "Spirit, Level 19");
+        QuickUI([0.0, "Gems, Skill, Level 19 ", "gems->uncut;skill19"], "SH", ["AreaLevel", "ItemLevel"], "Skill, Level 19");
+        Title("Endgame");
+        QuickUI([0.0, "Gems, Spirit, Endgame ", "gems->uncut;otherspiriteg"], "SH", ["AreaLevel", "ItemLevel"], "Spirit");
+        QuickUI([0.0, "Gems, Skill, Endgame ", "gems->uncut;otherskilleg"], "SH", ["AreaLevel", "ItemLevel"], "Skill");
+        QuickUI([0.0, "Gems, Support, Endgame ", "gems->uncut;othersupporteg"], "SH", ["AreaLevel", "ItemLevel"], "Support");
+        Title("Campaign");
+        QuickUI([0.0, "Gems, Spirit, Campaign ", "gems->uncut;spiritcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Spirit");
+        QuickUI([0.0, "Gems, Skill, Campaign ", "gems->uncut;skillcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Skill");
+        QuickUI([0.0, "Gems, Support, Campaign ", "gems->uncut;supportcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Support");
+        Title("Misc.");
         QuickUI([0.0, "Cut Gems ", "gems;any"], "SH", ["AreaLevel", "ItemLevel"]);
     }
 
-    Section("Sockets") {
+    Section("Socketable") {
+
+        Description("These items can be socketed into your gear or passive skill tree.");
 
         Section("Runes") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
@@ -259,12 +268,13 @@ Chapter("chapter") {
             QuickUI([0.0, "Remaining Soul Cores", "sockets->cores;exhide"], "SH", [], "", [], "Remaining Soul Cores, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
         }
 
-        Section("Jewels") { // todo
-            QuickUI([0.0, "Timeless Jewels", "jewels->generic;anytimeless"], "SH", ["Rarity"]);
-            QuickUI([0.0, "Rare Jewels", "jewels->generic;anyrare"], "SH", []);
-            QuickUI([0.0, "Magic Jewels", "jewels->generic;anymagic"], "SH", []);
-            QuickUI([0.0, "Corrupted Jewels", "jewels->generic;anycorruptedmod"], "SH", ["Rarity"]);
-            QuickUI([0.0, "5-Mod Jewels", "jewels->generic;any5modded"], "SH", []);
+        Section("Jewels") {
+            QuickUI([0.0, "Rare Jewels", "jewels->generic;anyrare"], "SH", ["JewelsPoe2", "ItemLevel"]);
+            QuickUI([0.0, "Magic Jewels", "jewels->generic;anymagic"], "SH", ["JewelsPoe2", "ItemLevel"]);
+            QuickUI([0.0, "Timeless Jewels", "jewels->generic;anytimeless"], "SH", ["Rarity", "JewelsPoe2", "ItemLevel"]);
+            QuickUI([0.0, "Corrupted Jewels", "jewels->generic;anycorruptedmod"], "SH", ["Rarity", "JewelsPoe2", "ItemLevel"]);
+            QuickUI([0.0, "5-Mod Jewels", "jewels->generic;any5modded"], "SH", ["JewelsPoe2", "ItemLevel"]);
+            QuickUI([0.0, "Exotic Bases, very exotic", "exoticbases;superexoticbases"], "SH", ["JewelsPoe2", "ItemLevel"]);
         }
     }
 }
@@ -275,157 +285,156 @@ Chapter() {
     Section("Rares & Crafting") {
 
         Section("Decorators") {
-            QuickUI([0.0, "Endgame Rare Decorator, ilvl 80", "decorators->rareeg;ilvl80"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Endgame Rare Decorator, large", "decorators->rareeg;largerares"], "SH", []);
-            QuickUI([0.0, "Endgame Rare Decorator, medium 1", "decorators->rareeg;mediumrares1"], "SH", []);
-            QuickUI([0.0, "Endgame Rare Decorator, medium 2", "decorators->rareeg;mediumrares2"], "SH", []);
-            QuickUI([0.0, "Endgame Rare Decorator, tiny", "decorators->rareeg;tinyrares"], "SH", []);
-            QuickUI([0.0, "Endgame Rare Decorator, ilvl 82", "decorators->rareeg;ilvl82"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Endgame Rare Decorator, corrupted", "decorators->rareeg;corruptedrares"], "SH", []);
-            QuickUI([0.0, "Endgame Rare Decorator, corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SH", []);
-            QuickUI([0.0, "Endgame Rare Decorator, basic", "decorators->rareeg;basicraredecorator"], "SH", []);
-            QuickUI([0.0, "Endgame Rare Decorator, ilvl 81 caster", "decorators->rareeg;ilvl81caster"], "SH", ["ItemLevel"]);
-
-            QuickUI([0.0, "Endgame Crafting Decorator, normal 82", "endgame->normalcraft->decorator;normal82"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Endgame Crafting Decorator, normal jewelery", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SH", []);
-            QuickUI([0.0, "Endgame Crafting Decorator, normal", "endgame->normalcraft->decorator;normaldecorator"], "SH", []);
-            QuickUI([0.0, "Endgame Crafting Decorator, normal 80", "endgame->normalcraft->decorator;normal80"], "SH", ["ItemLevel"]);
+            Title("Rares");
+            QuickUI([0.0, "Endgame Rare Decorator, ilvl 80", "decorators->rareeg;ilvl80"], "SH", ["ItemLevel"], "ilvl 80");
+            QuickUI([0.0, "Endgame Rare Decorator, large", "decorators->rareeg;largerares"], "SH", [], "large");
+            QuickUI([0.0, "Endgame Rare Decorator, medium 1", "decorators->rareeg;mediumrares1"], "SH", [], "medium-sized");
+            QuickUI([0.0, "Endgame Rare Decorator, medium 2", "decorators->rareeg;mediumrares2"], "SH", [], "medium-sized");
+            QuickUI([0.0, "Endgame Rare Decorator, tiny", "decorators->rareeg;tinyrares"], "SH", [], "tiny");
+            QuickUI([0.0, "Endgame Rare Decorator, ilvl 82", "decorators->rareeg;ilvl82"], "SH", ["ItemLevel"], "ilvl 82");
+            QuickUI([0.0, "Endgame Rare Decorator, corrupted", "decorators->rareeg;corruptedrares"], "SH", [], "corrupted");
+            QuickUI([0.0, "Endgame Rare Decorator, corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SH", [], "corrupted implicit");
+            QuickUI([0.0, "Endgame Rare Decorator, basic", "decorators->rareeg;basicraredecorator"], "SH", [], "default/global");
+            QuickUI([0.0, "Endgame Rare Decorator, ilvl 81 caster", "decorators->rareeg;ilvl81caster"], "SH", ["ItemLevel"], "ilvl 81 caster");
+            Title("Normal/Crafting");
+            QuickUI([0.0, "Endgame Crafting Decorator, normal 82", "endgame->normalcraft->decorator;normal82"], "SH", ["ItemLevel", "Rarity"], "Ilvl 82");
+            QuickUI([0.0, "Endgame Crafting Decorator, normal jewelery", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SH", ["Rarity"], "Jewellery");
+            QuickUI([0.0, "Endgame Crafting Decorator, normal", "endgame->normalcraft->decorator;normaldecorator"], "SH", ["Rarity"], "Default/global");
+            QuickUI([0.0, "Endgame Crafting Decorator, normal 80", "endgame->normalcraft->decorator;normal80"], "SH", ["ItemLevel", "Rarity"], "Ilvl 80");
         }
 
-        Search R1(0.0, "Endgame Rares Tier 1 Top", "rr;t1_top") { }
-        Search R1(0.0, "Endgame Rares Tier 1 Other", "rr;t1_other") { }
-        Search R2(0.0, "Endgame Rares Tier 2 Top", "rr;t2_top") { }
-        Search R2(0.0, "Endgame Rares Tier 2 A1", "rr;t2_a1") { }
-        Search R2(0.0, "Endgame Rares Tier 2 Other", "rr;t2_other") { }
-        Search R3(0.0, "Endgame Rares Tier 3 Top", "rr;t3_top") { }
-        Search R3(0.0, "Endgame Rares Tier 3 A1", "rr;t3_a1") { }
-        Search R3(0.0, "Endgame Rares Tier 3 A2", "rr;t3_a2") { }
-        Search R3(0.0, "Endgame Rares Tier 3 Other", "rr;t3_other") { }
-        Search R4(0.0, "Endgame Rares Tier 4 A1", "rr;t4_a1") { }
-        Search R4(0.0, "Endgame Rares Tier 4 A2", "rr;t4_a2") { }
-        Search R4(0.0, "Endgame Rares Tier 4 Other", "rr;t4_other") { }
-        Search R5(0.0, "Endgame Rares Tier 5 A1", "rr;t5_a1") { }
-        Search R5(0.0, "Endgame Rares Tier 5 A2", "rr;t5_a2") { }
-        Search R5(0.0, "Endgame Rares Tier 5 Other", "rr;t5_other") { }
+        Section("Rare Jewellery") {
+            Search Amu1(0.0, "Endgame Rare Amulets/Rings Tier 1", "rr->amuring;t1") { }
+            Search Amu2(0.0, "Endgame Rare Amulets/Rings Tier 2", "rr->amuring;t2") { }
+            Search Amu3(0.0, "Endgame Rare Amulets/Rings Tier 3", "rr->amuring;t3") { }
+            Search Belt1(0.0, "Endgame Rare Belts Tier 1", "rr->belts;t1") { }
+            Search Belt2(0.0, "Endgame Rare Belts Tier 2", "rr->belts;t2") { }
+            Search Belt3(0.0, "Endgame Rare Belts Tier 3", "rr->belts;t3") { }
+            Title("Amulets & Rings");
+            QuickUI(Amu1, "SH", ["ItemLevel"], "Tier 1");
+            QuickUI(Amu2, "SH", ["ItemLevel"], "Tier 2");
+            QuickUI(Amu3, "SH", ["ItemLevel"], "Tier 3");
+            Title("Belts");
+            QuickUI(Belt1, "SH", ["ItemLevel"], "Tier 1");
+            QuickUI(Belt2, "SH", ["ItemLevel"], "Tier 2");
+            QuickUI(Belt3, "SH", ["ItemLevel"], "Tier 3");
+//            Title("Tiering");
+    //        BaseTypeMatrix(false, "Tier 1", Amu1, Belt1, "Tier 2", Amu2, Belt2, "Tier 3", Amu3, Belt3); // todo
+        }
 
-        Search R1(0.0, "Endgame Crafting Tier 1, ideal", "endgame->normalcraft->any;t1ideallevel") { }
-        Search RM(0.0, "Endgame Crafting, Minions", "endgame->normalcraft->any;minionsceptresoptional") { } // todo
-        Search R1(0.0, "Endgame Crafting Tier 1", "endgame->normalcraft->any;t1") { }
-        Search R2(0.0, "Endgame Crafting Tier 2, ideal", "endgame->normalcraft->any;t2ideallevel") { }
-        Search R3(0.0, "Endgame Crafting Tier 3, ideal", "endgame->normalcraft->any;t3ideallevel") { }
-        Search R2(0.0, "Endgame Crafting Tier 2, onLevel", "endgame->normalcraft->any;t2onlevel") { }
-        Search R3(0.0, "Endgame Crafting Tier 3, onLevel", "endgame->normalcraft->any;t3onlevel") { }
+        Section("Normal/Crafting Jewellery") {
+            Search S0(0.0, "Endgame Amulets, Top", "endgame->jewellery;selectamulets") { }
+            Search S1(0.0, "Endgame Rings, Top", "endgame->jewellery;selectrings") { }
+            Search S2(0.0, "Endgame Belts, Top", "endgame->jewellery;selectbelts") { }
 
-//        BaseTypeMatrix(true, "Tier 1", R1, "Tier 2", R2, "Tier 3", R3, "Tier 4", R4, "Tier 5", R5); // todo
+    //        BaseTypeMatrix(false, "Tier 1", S0, S1, S2); // todo
 
-        Divider();
-        Title("Rares");
-        QuickUI(0, "SH", []);
-        QuickUI(1, "SH", []);
-        QuickUI(2, "SH", []);
-        QuickUI(3, "SH", []);
-        QuickUI(4, "SH", []);
-        QuickUI(5, "SH", []);
-        QuickUI(6, "SH", []);
-        QuickUI(7, "SH", []);
-        QuickUI(8, "SH", []);
-        QuickUI(9, "SH", []);
-        QuickUI(10, "SH", []);
-        QuickUI(11, "SH", []);
-        QuickUI(12, "SH", []);
-        QuickUI(13, "SH", []);
-        QuickUI(14, "SH", []);
+            Title("Tier 1");
+            QuickUI(S1, "SH", ["Rarity", "ItemLevel"], "Rings");
+            QuickUI(S0, "SH", ["Rarity", "ItemLevel"], "Amulets");
+            QuickUI(S2, "SH", ["Rarity", "ItemLevel"], "Belts");
 
-        Divider();
-        Title("Jewellery");
-        Search Amu1(0.0, "Endgame Rare Amulets/Rings Tier 1", "rr->amuring;t1") { }
-        Search Amu2(0.0, "Endgame Rare Amulets/Rings Tier 2", "rr->amuring;t2") { }
-        Search Amu3(0.0, "Endgame Rare Amulets/Rings Tier 3", "rr->amuring;t3") { }
-        Search Belt1(0.0, "Endgame Rare Belts Tier 1", "rr->belts;t1") { }
-        Search Belt2(0.0, "Endgame Rare Belts Tier 2", "rr->belts;t2") { }
-        Search Belt3(0.0, "Endgame Rare Belts Tier 3", "rr->belts;t3") { }
-        QuickUI(Amu1, "SH");
-        QuickUI(Amu2, "SH");
-        QuickUI(Amu3, "SH");
-        QuickUI(Belt1, "SH");
-        QuickUI(Belt2, "SH");
-        QuickUI(Belt3, "SH");
-//        BaseTypeMatrix(false, "Tier 1", Amu1, Belt1, "Tier 2", Amu2, Belt2, "Tier 3", Amu3, Belt3); // todo
+            Title("Remaining/Untiered");
+            QuickUI([0.0, "Endgame Rings", "endgame->jewellery;rings"], "SH", ["Rarity", "ItemLevel"], "Rings");
+            QuickUI([0.0, "Endgame Amulets", "endgame->jewellery;amulets"], "SH", ["Rarity", "ItemLevel"], "Amulets");
+            QuickUI([0.0, "Endgame Belts", "endgame->jewellery;belts"], "SH", ["Rarity", "ItemLevel"], "Belts");
 
-        Divider();
-        Title("Crafting");
-        QuickUI(15, "SH", []);
-        QuickUI(16, "SH", []);
-        QuickUI(17, "SH", []);
-        QuickUI(18, "SH", []);
-        QuickUI(19, "SH", []);
-        QuickUI(20, "SH", []);
-        QuickUI(21, "SH", []);
+        }
+
+        Section("Weapons & Armours") {
+            Search R1(0.0, "Endgame Rares Tier 1 Top", "rr;t1_top") { }
+            Search R1(0.0, "Endgame Rares Tier 1 Other", "rr;t1_other") { }
+            Search R2(0.0, "Endgame Rares Tier 2 Top", "rr;t2_top") { }
+            Search R2(0.0, "Endgame Rares Tier 2 A1", "rr;t2_a1") { }
+            Search R2(0.0, "Endgame Rares Tier 2 Other", "rr;t2_other") { }
+            Search R3(0.0, "Endgame Rares Tier 3 Top", "rr;t3_top") { }
+            Search R3(0.0, "Endgame Rares Tier 3 A1", "rr;t3_a1") { }
+            Search R3(0.0, "Endgame Rares Tier 3 A2", "rr;t3_a2") { }
+            Search R3(0.0, "Endgame Rares Tier 3 Other", "rr;t3_other") { }
+            Search R4(0.0, "Endgame Rares Tier 4 A1", "rr;t4_a1") { }
+            Search R4(0.0, "Endgame Rares Tier 4 A2", "rr;t4_a2") { }
+            Search R4(0.0, "Endgame Rares Tier 4 Other", "rr;t4_other") { }
+            Search R5(0.0, "Endgame Rares Tier 5 A1", "rr;t5_a1") { }
+            Search R5(0.0, "Endgame Rares Tier 5 A2", "rr;t5_a2") { }
+            Search R5(0.0, "Endgame Rares Tier 5 Other", "rr;t5_other") { }
+
+            Search R1(0.0, "Endgame Crafting Tier 1, ideal", "endgame->normalcraft->any;t1ideallevel") { }
+            Search RM(0.0, "Endgame Crafting, Minions", "endgame->normalcraft->any;minionsceptresoptional") { } // todo
+            Search R1(0.0, "Endgame Crafting Tier 1", "endgame->normalcraft->any;t1") { }
+            Search R2(0.0, "Endgame Crafting Tier 2, ideal", "endgame->normalcraft->any;t2ideallevel") { }
+            Search R3(0.0, "Endgame Crafting Tier 3, ideal", "endgame->normalcraft->any;t3ideallevel") { }
+            Search R2(0.0, "Endgame Crafting Tier 2, onLevel", "endgame->normalcraft->any;t2onlevel") { }
+            Search R3(0.0, "Endgame Crafting Tier 3, onLevel", "endgame->normalcraft->any;t3onlevel") { }
+
+    //        BaseTypeMatrix(true, "Tier 1", R1, "Tier 2", R2, "Tier 3", R3, "Tier 4", R4, "Tier 5", R5); // todo
+
+            Title("Rares");
+            QuickUI(0, "SH", ["ItemLevel"]);
+            QuickUI(1, "SH", ["ItemLevel"]);
+            QuickUI(2, "SH", ["ItemLevel"]);
+            QuickUI(3, "SH", ["ItemLevel"]);
+            QuickUI(4, "SH", ["ItemLevel"]);
+            QuickUI(5, "SH", ["ItemLevel"]);
+            QuickUI(6, "SH", ["ItemLevel"]);
+            QuickUI(7, "SH", ["ItemLevel"]);
+            QuickUI(8, "SH", ["ItemLevel"]);
+            QuickUI(9, "SH", ["ItemLevel"]);
+            QuickUI(10, "SH", ["ItemLevel"]);
+            QuickUI(11, "SH", ["ItemLevel"]);
+            QuickUI(12, "SH", ["ItemLevel"]);
+            QuickUI(13, "SH", ["ItemLevel"]);
+            QuickUI(14, "SH", ["ItemLevel"]);
+
+            Divider();
+            Title("Crafting");
+            QuickUI(15, "SH", ["ItemLevel", "Rarity"]);
+            QuickUI(16, "SH", ["ItemLevel", "Rarity"]);
+            QuickUI(17, "SH", ["ItemLevel", "Rarity"]);
+            QuickUI(18, "SH", ["ItemLevel", "Rarity"]);
+            QuickUI(19, "SH", ["ItemLevel", "Rarity"]);
+            QuickUI(20, "SH", ["ItemLevel", "Rarity"]);
+            QuickUI(21, "SH", ["ItemLevel", "Rarity"]);
+        }
     }
 
     Section("Flasks & Charms") {
-        QuickUI([0.0, "Endgame Flasks, Max Quality", "endgame->flasks;any20qualflask"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
-        QuickUI([0.0, "Endgame Flasks, Some Quality", "endgame->flasks;anyqualflask"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
-        QuickUI([0.0, "Endgame Flasks, Early Life", "endgame->flasks;earlymappinglifemana"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
-        QuickUI([0.0, "Endgame Flasks, Quality, Top", "endgame->flasks;toplevelqualityflasks"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
-        QuickUI([0.0, "Endgame Flasks, Top", "endgame->flasks;toplevelflasks"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
-        Divider();
-        Title("Charms");
-        QuickUI([0.0, "Endgame Charms, Early", "endgame->charms;earlymappingcharms"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
-        QuickUI([0.0, "Endgame Charms", "endgame->charms;anycharm"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
-        QuickUI([0.0, "Endgame Charms, Quality, Top", "endgame->charms;topqualitycharms"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
-        QuickUI([0.0, "Endgame Charms, Quality, High, T1", "endgame->charms;hight1qualitycharms"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
-        QuickUI([0.0, "Endgame Charms, Quality, High", "endgame->charms;highotherqualitycharms"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
-        QuickUI([0.0, "Endgame Charms, Quality", "endgame->charms;qualitycharms"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
-    }
+        Section("Flasks") {
+            QuickUI([0.0, "Endgame Flasks, Max Quality", "endgame->flasks;any20qualflask"], "SH", ["Quality", "RarityNM", "ItemLevel"], "Max Quality", ["Flasks", "SOA"]);
+            QuickUI([0.0, "Endgame Flasks, Some Quality", "endgame->flasks;anyqualflask"], "SH", ["Quality", "RarityNM", "ItemLevel"], "Some Quality", ["Flasks", "SOA"]);
+            QuickUI([0.0, "Endgame Flasks, Quality, Top", "endgame->flasks;toplevelqualityflasks"], "SH", ["Quality", "RarityNM", "ItemLevel"], "Quality, Top", ["Flasks", "SOA"]);
+            QuickUI([0.0, "Endgame Flasks, Top", "endgame->flasks;toplevelflasks"], "SH", ["Quality", "RarityNM", "ItemLevel"], "Top", ["Flasks", "SOA"]);
+            QuickUI([0.0, "Endgame Flasks, Early, Life", "endgame->flasks;earlymappinglifemana"], "SH", ["Quality", "RarityNM", "AreaLevel"], "Early, Life", ["Flasks", "SOA"]);
+        }
 
-    Section("Jewellery") {
-        Search S0(0.0, "Endgame Amulets, Top", "endgame->jewellery;selectamulets") { }
-        Search S1(0.0, "Endgame Rings, Top", "endgame->jewellery;selectrings") { }
-        Search S2(0.0, "Endgame Belts, Top", "endgame->jewellery;selectbelts") { }
-
-//        BaseTypeMatrix(false, "Tier 1", S0, S1, S2); // todo
-
-        QuickUI(S0, "SH", []);
-        QuickUI(S1, "SH", []);
-        QuickUI(S2, "SH", []);
-
-        QuickUI([0.0, "Endgame Rings", "endgame->jewellery;rings"], "SH", []);
-        QuickUI([0.0, "Endgame Belts", "endgame->jewellery;belts"], "SH", []);
-        QuickUI([0.0, "Endgame Amulets", "endgame->jewellery;amulets"], "SH", []);
-
+        Section("Charms") {
+            QuickUI([0.0, "Endgame Charms, Quality, High, T1", "endgame->charms;hight1qualitycharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Quality, High, Tier 1");
+            QuickUI([0.0, "Endgame Charms, Quality, Top", "endgame->charms;topqualitycharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Quality, Top");
+            QuickUI([0.0, "Endgame Charms, Quality, High", "endgame->charms;highotherqualitycharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Quality, High");
+            QuickUI([0.0, "Endgame Charms, Quality", "endgame->charms;qualitycharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Quality");
+            QuickUI([0.0, "Endgame Charms, Early", "endgame->charms;earlymappingcharms"], "SH", ["ItemLevel", "Quality", "RarityNM", "AreaLevel", "charms"], "Early");
+            QuickUI([0.0, "Endgame Charms", "endgame->charms;anycharm"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Remaining");
+        }
     }
 
     Section("Waystones") {
-        Section("Upgrade-Decorators") {
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 16", "waystones;deco_wsup_t16"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 15", "waystones;deco_wsup_t15"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 14", "waystones;deco_wsup_t14"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 13", "waystones;deco_wsup_t13"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 12", "waystones;deco_wsup_t12"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 11", "waystones;deco_wsup_t11"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 10", "waystones;deco_wsup_t10"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 9", "waystones;deco_wsup_t9"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 8", "waystones;deco_wsup_t8"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 7", "waystones;deco_wsup_t7"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 6", "waystones;deco_wsup_t6"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 5", "waystones;deco_wsup_t5"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 4", "waystones;deco_wsup_t4"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 3", "waystones;deco_wsup_t3"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 2", "waystones;deco_wsup_t2"], "SH", []);
-            QuickUI([0.0, "Waystone Upgrade Decorator Tier 1", "waystones;deco_wsup_t1"], "SH", []);
-        }
-
-        Section("Special") {
-            QuickUI([0.0, "Waystones, Enchanted", "waystones;enchanted"], "SH", ["WaystoneTier"]);
-            QuickUI([0.0, "Waystones, Corrupted 8 Mods", "waystones;corrupted8"], "SH", ["WaystoneTier"]);
-            QuickUI([0.0, "Waystones, Corrupted", "waystone->hiders;corruptedmaphider"], "SH", ["WaystoneTier"]);
-            QuickUI([0.0, "Waystones, Mirrored", "waystone->hiders;mirroredmaphider"], "SH", ["WaystoneTier"]);
-            QuickUI([0.0, "Waystones, Decorator, Corrupted Mod", "waystones;deco_corruptedmod"], "SH", ["WaystoneTier"]);
-            QuickUI([0.0, "Waystones, Decorator, Top Tier", "waystones;decomap1"], "SH", ["WaystoneTier"]);
-            QuickUI([0.0, "Waystones, Decorator, High Tier", "waystones;decomap2"], "SH", ["WaystoneTier"]);
-            QuickUI([0.0, "Waystones, Decorator, Mid Tier", "waystones;decomap3"], "SH", ["WaystoneTier"]);
-            QuickUI([0.0, "Waystones, Decorator, Low Tier", "waystones;decomap4"], "SH", ["WaystoneTier"]);
+        Section("Upgrade-Decorators") { // todo: merge into one?
+            Description("These rules add highlighting to waystones that one one tier higher than the one you're currently in - without affecting if the item gets hidden or not.");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 16", "waystones;deco_wsup_t16"], "SH", [], "Tier 16");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 15", "waystones;deco_wsup_t15"], "SH", [], "Tier 15");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 14", "waystones;deco_wsup_t14"], "SH", [], "Tier 14");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 13", "waystones;deco_wsup_t13"], "SH", [], "Tier 13");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 12", "waystones;deco_wsup_t12"], "SH", [], "Tier 12");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 11", "waystones;deco_wsup_t11"], "SH", [], "Tier 11");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 10", "waystones;deco_wsup_t10"], "SH", [], "Tier 10");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 9", "waystones;deco_wsup_t9"], "SH", [], "Tier 9");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 8", "waystones;deco_wsup_t8"], "SH", [], "Tier 8");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 7", "waystones;deco_wsup_t7"], "SH", [], "Tier 7");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 6", "waystones;deco_wsup_t6"], "SH", [], "Tier 6");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 5", "waystones;deco_wsup_t5"], "SH", [], "Tier 5");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 4", "waystones;deco_wsup_t4"], "SH", [], "Tier 4");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 3", "waystones;deco_wsup_t3"], "SH", [], "Tier 3");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 2", "waystones;deco_wsup_t2"], "SH", [], "Tier 2");
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 1", "waystones;deco_wsup_t1"], "SH", [], "Tier 1");
         }
 
         Section("Normal") {
@@ -445,6 +454,19 @@ Chapter() {
             QuickUI([0.0, "Waystones Tier 3", "waystones;waystone_t3"], "SH", []);
             QuickUI([0.0, "Waystones Tier 2", "waystones;waystone_t2"], "SH", []);
             QuickUI([0.0, "Waystones Tier 1", "waystones;waystone_t1"], "SH", []);
+        }
+
+        Section("Misc.") {
+            QuickUI([0.0, "Waystones, Enchanted", "waystones;enchanted"], "SH", ["WaystoneTier"], "Enchanted");
+            QuickUI([0.0, "Waystones, Corrupted 8 Mods", "waystones;corrupted8"], "SDH", ["WaystoneTier"], "Corrupted 8 Mods");
+            QuickUI([0.0, "Waystones, Corrupted", "waystone->hiders;corruptedmaphider"], "SH", ["WaystoneTier"], "Corrupted");
+            QuickUI([0.0, "Waystones, Mirrored", "waystone->hiders;mirroredmaphider"], "SDH", ["WaystoneTier"], "Mirrored");
+            Title("Decorators");
+            QuickUI([0.0, "Waystones, Decorator, Corrupted Mod", "waystones;deco_corruptedmod"], "SH", ["WaystoneTier"], "Corrupted Mod");
+            QuickUI([0.0, "Waystones, Decorator, Top Tier", "waystones;decomap1"], "SH", ["WaystoneTier"], "Top Tier");
+            QuickUI([0.0, "Waystones, Decorator, High Tier", "waystones;decomap2"], "SH", ["WaystoneTier"], "High Tier");
+            QuickUI([0.0, "Waystones, Decorator, Mid Tier", "waystones;decomap3"], "SH", ["WaystoneTier"], "Mid Tier");
+            QuickUI([0.0, "Waystones, Decorator, Low Tier", "waystones;decomap4"], "SH", ["WaystoneTier"], "Low Tier");
         }
     }
 
@@ -483,16 +505,25 @@ Chapter() {
             QuickUI([0.0, "Ultimatum Reward", "miscmapitemsextra;trialkeyultimatumreward"], "SH", ["ItemLevel"]); // todo
         }
 
-        Section("Misc.") {
-            QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeys"], "SH", []); // todo
-            QuickUI([0.0, "wannabe maps todo", "miscmapitemsextra;relickeyssafe"], "SH", []); // todo
+        Section("Splinters") {
+            QuickUI([0.0, "Splinters Tier 1", "currency->splinter;t1"], "SH", ["StackSize"], "S Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+            QuickUI([0.0, "Splinters Tier 2", "currency->splinter;t2"], "SH", ["StackSize"], "A Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+            QuickUI([0.0, "Splinters Tier 3", "currency->splinter;t3"], "SH", ["StackSize"], "B Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+            QuickUI([0.0, "Splinters Tier 4", "currency->splinter;t4"], "SH", ["StackSize"], "C Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+            QuickUI([0.0, "Splinters Tier 5", "currency->splinter;t5"], "SH", ["StackSize"], "D Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+        }
 
-            QuickUI([0.0, "other currency todo", "maplike->special;superkeys"], "SH", []); // todo
-            QuickUI([0.0, "other currency todo", "maplike->special;logbooks"], "SH", []); // todo
+        Section("Misc.") {
+            QuickUI([0.0, "TODO IDK", "miscmapitemsextra;relickeys"], "SH", []); // todo
+            QuickUI([0.0, "Vault Keys", "miscmapitemsextra;relickeyssafe"], "SH", []);
+
+            QuickUI([0.0, "Pinnacle Boss Keys", "maplike->special;superkeys"], "SH", []);
+            QuickUI([0.0, "Logbooks", "maplike->special;logbooks"], "SH", []);
         }
     }
 
     Section("Endgame Salvagable Items") {
+        Description("Certain items can be salvaged at an NPC in town in return for crafting currencies.");
         QuickUI([0.0, "Salvagable (High Quality, weapons)", "endgame->salvagable;quality2martialany"], "SH", ["Quality"]);
         QuickUI([0.0, "Salvagable (High Quality, caster)", "endgame->salvagable;quality2casterany"], "SH", ["Quality"]);
         QuickUI([0.0, "Salvagable (High Quality, armour)", "endgame->salvagable;quality2armorany"], "SH", ["Quality"]);
@@ -518,108 +549,120 @@ Chapter() {
     SectionTitle("Campaign");
 
     Section("Campaign Flasks & Charms") {
-        QuickUI([0.0, "Campaign Flasks (Quality, max)", "leveling->flasks->quality;max"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
-        QuickUI([0.0, "Campaign Flasks (Quality, high)", "leveling->flasks->quality;high"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
-        QuickUI([0.0, "Campaign Flasks (Quality, low)", "leveling->flasks->quality;any"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
+        Section("Flasks") {
+            QuickUI([0.0, "Campaign Flasks (Quality, max)", "leveling->flasks->quality;max"], "SH", ["Quality", "RarityNM", "AreaLevel"], "Quality, max");
+            QuickUI([0.0, "Campaign Flasks (Quality, high)", "leveling->flasks->quality;high"], "SH", ["Quality", "RarityNM", "AreaLevel"], "Quality, high");
+            QuickUI([0.0, "Campaign Flasks (Quality, low)", "leveling->flasks->quality;any"], "SH", ["Quality", "RarityNM", "AreaLevel"], "Quality, low");
 
-        Search S_life(0.0, "Campaign Life Flask Progression 1", "leveling->flasks->life;t1") { }
-        Search S_life(0.0, "Campaign Life Flask Progression 2", "leveling->flasks->life;t2") { }
-        Search S_life(0.0, "Campaign Life Flask Progression 3", "leveling->flasks->life;t3") { }
-        Search S_life(0.0, "Campaign Life Flask Progression 4", "leveling->flasks->life;t4") { }
-        Search S_life(0.0, "Campaign Life Flask Progression 5", "leveling->flasks->life;t5") { }
-        Search S_life(0.0, "Campaign Life Flask Progression 6", "leveling->flasks->life;t6") { }
-        Search S_life(0.0, "Campaign Life Flask Progression 7", "leveling->flasks->life;t7") { }
-        Search S_life(0.0, "Campaign Life Flask Progression 8", "leveling->flasks->life;t8") { }
+            Description("The following two rules combine 30 different rules that will highlight the best available flasks during your Campaign progress.");
 
-        Search S_mana(0.0, "Campaign Mana Flask Progression 1", "leveling->flasks->mana;t1") { }
-        Search S_mana(0.0, "Campaign Mana Flask Progression 2", "leveling->flasks->mana;t2") { }
-        Search S_mana(0.0, "Campaign Mana Flask Progression 3", "leveling->flasks->mana;t3") { }
-        Search S_mana(0.0, "Campaign Mana Flask Progression 4", "leveling->flasks->mana;t4") { }
-        Search S_mana(0.0, "Campaign Mana Flask Progression 5", "leveling->flasks->mana;t5") { }
-        Search S_mana(0.0, "Campaign Mana Flask Progression 6", "leveling->flasks->mana;t6") { }
-        Search S_mana(0.0, "Campaign Mana Flask Progression 7", "leveling->flasks->mana;t7") { }
-        Search S_mana(0.0, "Campaign Mana Flask Progression 8", "leveling->flasks->mana;t8") { }
-        QuickUI(S_life, "SH", [], "Life Flask Progression");
-        QuickUI(S_mana, "SH", [], "Mana Flask Progression");
+            Search S_life(0.0, "Campaign Life Flask Progression 1", "leveling->flasks->life;t1") { }
+            Search S_life(0.0, "Campaign Life Flask Progression 2", "leveling->flasks->life;t2") { }
+            Search S_life(0.0, "Campaign Life Flask Progression 3", "leveling->flasks->life;t3") { }
+            Search S_life(0.0, "Campaign Life Flask Progression 4", "leveling->flasks->life;t4") { }
+            Search S_life(0.0, "Campaign Life Flask Progression 5", "leveling->flasks->life;t5") { }
+            Search S_life(0.0, "Campaign Life Flask Progression 6", "leveling->flasks->life;t6") { }
+            Search S_life(0.0, "Campaign Life Flask Progression 7", "leveling->flasks->life;t7") { }
+            Search S_life(0.0, "Campaign Life Flask Progression 8", "leveling->flasks->life;t8") { }
 
-        QuickUI([0.0, "Campaign Charms, Best", "leveling->charms;selected"], "SH", ["charms", "RarityNM", "ItemLevel"]);
-        QuickUI([0.0, "Campaign Charms", "leveling->charms;any"], "SH", ["charms", "RarityNM", "ItemLevel"]);
+            Search S_mana(0.0, "Campaign Mana Flask Progression 1", "leveling->flasks->mana;t1") { }
+            Search S_mana(0.0, "Campaign Mana Flask Progression 2", "leveling->flasks->mana;t2") { }
+            Search S_mana(0.0, "Campaign Mana Flask Progression 3", "leveling->flasks->mana;t3") { }
+            Search S_mana(0.0, "Campaign Mana Flask Progression 4", "leveling->flasks->mana;t4") { }
+            Search S_mana(0.0, "Campaign Mana Flask Progression 5", "leveling->flasks->mana;t5") { }
+            Search S_mana(0.0, "Campaign Mana Flask Progression 6", "leveling->flasks->mana;t6") { }
+            Search S_mana(0.0, "Campaign Mana Flask Progression 7", "leveling->flasks->mana;t7") { }
+            Search S_mana(0.0, "Campaign Mana Flask Progression 8", "leveling->flasks->mana;t8") { }
+            QuickUI(S_life, "SH", ["Quality", "Rarity"], "Life Flask Progression");
+            QuickUI(S_mana, "SH", ["Quality", "Rarity"], "Mana Flask Progression");
+        }
+
+        Section("Charms") {
+            QuickUI([0.0, "Campaign Charms, Best", "leveling->charms;selected"], "SH", ["charms", "RarityNM", "ItemLevel"]);
+            QuickUI([0.0, "Campaign Charms", "leveling->charms;any"], "SH", ["charms", "RarityNM", "ItemLevel"]);
+        }
     }
 
     Section("Campaign Gear") {
         Section("Decorators") {
             Title("Rare Items");
-            QuickUI([0.0, "Campaign Decorator: Large Rares", "leveling->decorators->rare;largerares"], "SH", []);
-            QuickUI([0.0, "Campaign Decorator: Medium Rares 1", "leveling->decorators->rare;mediumrares1"], "SH", []);
-            QuickUI([0.0, "Campaign Decorator: Medium Rares 2", "leveling->decorators->rare;mediumrares2"], "SH", []);
-            QuickUI([0.0, "Campaign Decorator: Tiny Rares", "leveling->decorators->rare;tinyrares"], "SH", []);
-            Divider();
+            QuickUI([0.0, "Campaign Decorator: Large Rares", "leveling->decorators->rare;largerares"], "SH", [], "Large");
+            QuickUI([0.0, "Campaign Decorator: Medium Rares 1", "leveling->decorators->rare;mediumrares1"], "SH", [], "Medium");
+            QuickUI([0.0, "Campaign Decorator: Medium Rares 2", "leveling->decorators->rare;mediumrares2"], "SH", [], "Medium");
+            QuickUI([0.0, "Campaign Decorator: Tiny Rares", "leveling->decorators->rare;tinyrares"], "SH", [], "Tiny");
             Title("Magic Items");
-            QuickUI([0.0, "Campaign Decorator: Magic, medium 1", "decorators->leveling->magic;medium1"], "SH", []);
-            QuickUI([0.0, "Campaign Decorator: Magic, medium 2", "decorators->leveling->magic;medium2"], "SH", []);
-            QuickUI([0.0, "Campaign Decorator: Magic, tiny", "decorators->leveling->magic;tiny"], "SH", []);
-            QuickUI([0.0, "Campaign Decorator: Magic, early", "decorators->leveling->magic;noticeearly"], "SH", []);
+            QuickUI([0.0, "Campaign Decorator: Magic, medium 1", "decorators->leveling->magic;medium1"], "SH", [], "medium");
+            QuickUI([0.0, "Campaign Decorator: Magic, medium 2", "decorators->leveling->magic;medium2"], "SH", [], "medium");
+            QuickUI([0.0, "Campaign Decorator: Magic, tiny", "decorators->leveling->magic;tiny"], "SH", [], "Magic, tiny");
+            QuickUI([0.0, "Campaign Decorator: Magic, early", "decorators->leveling->magic;noticeearly"], "SH", [], "early");
         }
 
-        Section("Rare Items") {
+        Section("Rare Jewellery & Armour") {
             QuickUI([0.0, "Campaign Rares, Jewellery", "leveling->rare->universal;jewellery"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Armour", "leveling->rare->armours;ar"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Evasion", "leveling->rare->armours;ev"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Energy Shield", "leveling->rare->armours;es"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Arm-Ev", "leveling->rare->armours;arev"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Arm-ES", "leveling->rare->armours;ares"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Eva-ES", "leveling->rare->armours;eves"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Early", "leveling->rare->armours;anythingearly"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Wands", "leveling->rare->weapons;wands"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Scaptres", "leveling->rare->weapons;sceptres"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Staves", "leveling->rare->weapons;staves"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Archer", "leveling->rare->weapons;bowsquivers"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Crossbow", "leveling->rare->weapons;crossbows"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, 1H Maces", "leveling->rare->weapons;onehandmaces"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, 2H Maces", "leveling->rare->weapons;twohandmaces"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Quarterstaves", "leveling->rare->weapons;quarterstaves"], "SH", []);
-            QuickUI([0.0, "Campaign Rares, Remaining", "leveling->rare->remaining;any"], "SH", []);
+
+            QuickUI([0.0, "Campaign Rares, Armour", "leveling->rare->armours;ar"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Evasion", "leveling->rare->armours;ev"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Energy Shield", "leveling->rare->armours;es"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Arm-Ev", "leveling->rare->armours;arev"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Arm-ES", "leveling->rare->armours;ares"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Eva-ES", "leveling->rare->armours;eves"], "SH", ["AreaLevel"]);
         }
 
-        Section("Magic & Normal Items") {
+        Section("Rare Weapons") {
+            QuickUI([0.0, "Campaign Rares, Wands", "leveling->rare->weapons;wands"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Scaptres", "leveling->rare->weapons;sceptres"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Staves", "leveling->rare->weapons;staves"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Archer", "leveling->rare->weapons;bowsquivers"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Crossbow", "leveling->rare->weapons;crossbows"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, 1H Maces", "leveling->rare->weapons;onehandmaces"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, 2H Maces", "leveling->rare->weapons;twohandmaces"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Quarterstaves", "leveling->rare->weapons;quarterstaves"], "SH", ["AreaLevel"]);
+        }
+
+        Section("Magic & Normal Jewellery & Armour") {
             QuickUI([0.0, "Campaign Magic & Normal, Jewellery", "leveling->normalmagicremarkable;jewellery"], "SH", [], "Jewellery");
-            QuickUI([0.0, "Campaign Magic & Normal, Armour", "leveling->normalmagic->armours;ar"], "SH", [], "Armour");
-            QuickUI([0.0, "Campaign Magic & Normal, Evasion", "leveling->normalmagic->armours;ev"], "SH", [], "Evasion");
-            QuickUI([0.0, "Campaign Magic & Normal, Energy Shield", "leveling->normalmagic->armours;es"], "SH", [], "Energy Shield");
-            QuickUI([0.0, "Campaign Magic & Normal, Arm-Eva", "leveling->normalmagic->armours;arev"], "SH", [], "Armour-Evasion");
-            QuickUI([0.0, "Campaign Magic & Normal, Arm-ES", "leveling->normalmagic->armours;ares"], "SH", [], "Armour-ES");
-            QuickUI([0.0, "Campaign Magic & Normal, Eva-ES", "leveling->normalmagic->armours;eves"], "SH", [], "Evasion-ES");
-            QuickUI([0.0, "Campaign Magic & Normal, Wands", "leveling->normalmagic->weapons;wands"], "SH", [], "Wands");
-            QuickUI([0.0, "Campaign Magic & Normal, Sceptres", "leveling->normalmagic->weapons;sceptres"], "SH", [], "Sceptres");
-            QuickUI([0.0, "Campaign Magic & Normal, Staves", "leveling->normalmagic->weapons;staves"], "SH", [], "Staves");
-            QuickUI([0.0, "Campaign Magic & Normal, Archer", "leveling->normalmagic->weapons;bowsquivers"], "SH", [], "Archer");
-            QuickUI([0.0, "Campaign Magic & Normal, Crossbow", "leveling->normalmagic->weapons;crossbows"], "SH", [], "Crossbow");
-            QuickUI([0.0, "Campaign Magic & Normal, 1H Maces", "leveling->normalmagic->weapons;onehandmaces"], "SH", [], "1H Maces");
-            QuickUI([0.0, "Campaign Magic & Normal, 2H Maces", "leveling->normalmagic->weapons;twohandmaces"], "SH", [], "2H Maces");
-            QuickUI([0.0, "Campaign Magic & Normal, Quarterstaves", "leveling->normalmagic->weapons;quarterstaves"], "SH", [], "Quarterstaves");
 
+            QuickUI([0.0, "Campaign Magic & Normal, Armour", "leveling->normalmagic->armours;ar"], "SH", ["AreaLevel"], "Armour");
+            QuickUI([0.0, "Campaign Magic & Normal, Evasion", "leveling->normalmagic->armours;ev"], "SH", ["AreaLevel"], "Evasion");
+            QuickUI([0.0, "Campaign Magic & Normal, Energy Shield", "leveling->normalmagic->armours;es"], "SH", ["AreaLevel"], "Energy Shield");
+            QuickUI([0.0, "Campaign Magic & Normal, Arm-Eva", "leveling->normalmagic->armours;arev"], "SH", ["AreaLevel"], "Armour-Evasion");
+            QuickUI([0.0, "Campaign Magic & Normal, Arm-ES", "leveling->normalmagic->armours;ares"], "SH", ["AreaLevel"], "Armour-ES");
+            QuickUI([0.0, "Campaign Magic & Normal, Eva-ES", "leveling->normalmagic->armours;eves"], "SH", ["AreaLevel"], "Evasion-ES");
+        }
 
-            QuickUI([0.0, "Campaign Magic, Remaining", "leveling->magic->remaining;rest"], "SH", []);
-            QuickUI([0.0, "Campaign Magic, Act 2", "leveling->magic->remaining;act2"], "SH", []);
-            QuickUI([0.0, "Campaign Magic, Act 1", "leveling->magic->remaining;act1"], "SH", []);
+        Section("Magic & Normal Weapons") {
+            QuickUI([0.0, "Campaign Magic & Normal, Wands", "leveling->normalmagic->weapons;wands"], "SH", ["AreaLevel"], "Wands");
+            QuickUI([0.0, "Campaign Magic & Normal, Sceptres", "leveling->normalmagic->weapons;sceptres"], "SH", ["AreaLevel"], "Sceptres");
+            QuickUI([0.0, "Campaign Magic & Normal, Staves", "leveling->normalmagic->weapons;staves"], "SH", ["AreaLevel"], "Staves");
+            QuickUI([0.0, "Campaign Magic & Normal, Archer", "leveling->normalmagic->weapons;bowsquivers"], "SH", ["AreaLevel"], "Archer");
+            QuickUI([0.0, "Campaign Magic & Normal, Crossbow", "leveling->normalmagic->weapons;crossbows"], "SH", ["AreaLevel"], "Crossbow");
+            QuickUI([0.0, "Campaign Magic & Normal, 1H Maces", "leveling->normalmagic->weapons;onehandmaces"], "SH", ["AreaLevel"], "1H Maces");
+            QuickUI([0.0, "Campaign Magic & Normal, 2H Maces", "leveling->normalmagic->weapons;twohandmaces"], "SH", ["AreaLevel"], "2H Maces");
+            QuickUI([0.0, "Campaign Magic & Normal, Quarterstaves", "leveling->normalmagic->weapons;quarterstaves"], "SH", ["AreaLevel"], "Quarterstaves");
         }
 
         Section("Misc.") {
             QuickUI([0.0, "Campaign First Areas", "leveling->firstlevels;firstareas"], "SH", ["AreaLevel", "Rarity"]);
             QuickUI([0.0, "Campaign Early Boots", "leveling->firstlevels;earlyboots"], "SH", ["AreaLevel", "Rarity"]);
+
+            QuickUI([0.0, "Campaign Magic, Remaining", "leveling->magic->remaining;rest"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Magic, Act 2", "leveling->magic->remaining;act2"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Magic, Act 1", "leveling->magic->remaining;act1"], "SH", ["AreaLevel"]);
+
+            QuickUI([0.0, "Campaign Rares, Early", "leveling->rare->armours;anythingearly"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Remaining", "leveling->rare->remaining;any"], "SH", ["AreaLevel"]);
         }
     }
 
     Section("Campaign Salvagable Items") {
-        QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel"]);
-        QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel"]);
-        QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel"]);
-        QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel"]);
-        QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel"]);
-        QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel"]);
-
-        QuickUI([0.0, "Campaign Salvable (Sockets, large)", "leveling->salvagable;socketslarge"], "SH", ["Sockets", "ItemLevel"]);
-        QuickUI([0.0, "Campaign Salvable (Sockets, small)", "leveling->salvagable;socketssmall"], "SH", ["Sockets", "ItemLevel"]);
+        QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel"], "High Quality, weapons");
+        QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel"], "High Quality, caster");
+        QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel"], "High Quality, armour");
+        QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel"], "Quality, weapons");
+        QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel"], "Quality, caster");
+        QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel"], "Quality, armour");
+        QuickUI([0.0, "Campaign Salvable (Sockets, large)", "leveling->salvagable;socketslarge"], "SH", ["Sockets", "ItemLevel"], "Sockets, large");
+        QuickUI([0.0, "Campaign Salvable (Sockets, small)", "leveling->salvagable;socketssmall"], "SH", ["Sockets", "ItemLevel"], "Sockets, small");
     }
 }
 
@@ -656,7 +699,6 @@ Chapter() {
     }
 
     Section("Exotic Bases") { // todo
-        QuickUI([0.0, "Exotic Bases, very exotic", "exoticbases;superexoticbases"], "SH", []);
         QuickUI([0.0, "Exotic Bases, high level", "exoticbases;commonexoticbaseshigh"], "SH", []);
         QuickUI([0.0, "Exotic Bases", "exoticbases;commonexoticbases"], "SH", []);
         QuickUI([0.0, "Over-Quality Items", "exotic->others;overqualityany"], "SH", ["Quality"]);
