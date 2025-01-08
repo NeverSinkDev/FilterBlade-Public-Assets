@@ -11,15 +11,15 @@ Chapter("chapter") {
 
         TierListToolBar("Currency");
 
-        CurrencyList([3.0, "Currency Tier 1", "currency;s"], "S");
-        CurrencyList([3.0, "Currency Tier 2", "currency;a"], "S");
-        CurrencyList([3.0, "Currency Tier 3", "currency;b"], "S");
-        CurrencyList([3.0, "Currency Tier 4", "currency;c"], "S");
-        CurrencyList([3.0, "Currency Tier 5", "currency;d"], "S");
-        CurrencyList([3.0, "Currency Tier 6", "currency;e"], "S");
-        CurrencyList([3.0, "Currency Supplies 1", "currency;supply1"], "S");
-        CurrencyList([3.0, "Currency Supplies 2", "currency;supply2"], "S");
-        CurrencyList([3.0, "Currency Supplies 3", "currency;supply3"], "S");
+        CurrencyList([3.0, "Currency Tier 1", "currency;s"], "S", "S Tier");
+        CurrencyList([3.0, "Currency Tier 2", "currency;a"], "S", "A Tier");
+        CurrencyList([3.0, "Currency Tier 3", "currency;b"], "SH", "B Tier");
+        CurrencyList([3.0, "Currency Tier 4", "currency;c"], "SH", "C Tier");
+        CurrencyList([3.0, "Currency Tier 5", "currency;d"], "SH", "D Tier");
+        CurrencyList([3.0, "Currency Tier 6", "currency;e"], "SH", "E Tier");
+        CurrencyList([3.0, "Currency Supplies 1", "currency;artifactlike"], "SH", "Supplies 1");
+        CurrencyList([3.0, "Currency Supplies 2", "currency;supplymagic"], "SH", "Supplies 2");
+        CurrencyList([3.0, "Currency Supplies 3", "currency;supplieslow"], "SH", "Supplies 3");
 
         Conditional("?CurrencyNewTiers") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
         ElementAdder_Tier("?CurrencyNewTiers", "CurrencyList");
@@ -231,6 +231,9 @@ Chapter("chapter") {
             // hide tier
             Conditional("?RunesNewTiersHidden") { }
             ElementAdder_Tier("?RunesNewTiersHidden", null, true, "C:Socketable;B: Rune", "OH");
+
+            QuickUI([0.0, "Remaining Runes", "sockets->runes;exhide"], "SH", [], "", [], "Remaining Runes, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
+            QuickUI([0.0, "Runes during Campaign", "sockets->runes;levelingrunes"], "SH", []);
         }
 
         Section("Soul Cores") {
@@ -252,6 +255,8 @@ Chapter("chapter") {
             // hide tier
             Conditional("?SoulCoresNewTiersHidden") { }
             ElementAdder_Tier("?SoulCoresNewTiersHidden", null, true, "C:Socketable;B:Soul Core of ", "OH");
+
+            QuickUI([0.0, "Remaining Soul Cores", "sockets->cores;exhide"], "SH", [], "", [], "Remaining Soul Cores, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
         }
     }
 }
@@ -333,15 +338,12 @@ Chapter() {
     }
 
     Section("Waystones") {
-        QuickUI([0.0, "waystones todo", "waystones;decomap3overleveled2"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;enchanted"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;corrupted8"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystone->hiders;corruptedmaphider"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystone->hiders;mirroredmaphider"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;decomap1"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;decomap2"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;decomap3overleveled1"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;decomap4overleveled"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;decomap3"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;decomap4"], "SH", []); // todo
         QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t16"], "SH", []); // todo
@@ -529,6 +531,8 @@ Chapter() {
         QuickUI([0.0, "campaign gear todo", "jewels->generic;anytimeless"], "SH", []); // todo
         QuickUI([0.0, "campaign gear todo", "jewels->generic;anyrare"], "SH", []); // todo
         QuickUI([0.0, "campaign gear todo", "jewels->generic;anymagic"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "jewels->generic;anycorruptedmod"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "jewels->generic;any5modded"], "SH", []); // todo
         QuickUI([0.0, "campaign gear todo", "relics->generic;any"], "SH", []); // todo
     }
 
@@ -553,7 +557,6 @@ Chapter() {
         QuickUI([0.0, "Quest Items", "questlikeexception;questitems"], "SH", []);
         QuickUI([0.0, "Fishing Rod", "artifact;fishingrod"], "SH", []);
 
-        QuickUI([0.0, "Unique Exception: Double Corrupted", "uniques;2xcorrupteduniques"], "SH");
         QuickUI([0.0, "Unique Exception: Sekhema Ring", "uniques;sekhemaring"], "SH");
         QuickUI([0.0, "Corrupted Uniques", "uniques;corrupteduniques"], "SH");
 
@@ -571,6 +574,8 @@ Chapter() {
         QuickUI([0.0, "Error Fragments", "fragments->generic;restex"], "SH", []);
         QuickUI([0.0, "Error Waystones", "waystones;restex"], "SH", []);
         QuickUI([0.0, "Error Uniques", "uniques;restex"], "SH", []);
+        QuickUI([0.0, "Error Runes", "sockets->runes;restex"], "SH", []);
+        QuickUI([0.0, "Error Soul Cores", "sockets->cores;restex"], "SH", []);
     }
 
     Section("Exotic Bases") { // todo
