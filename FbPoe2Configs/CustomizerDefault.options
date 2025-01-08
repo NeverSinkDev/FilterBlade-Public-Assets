@@ -397,47 +397,55 @@ Chapter() {
     }
 
     Section("Waystones") {
-        QuickUI([0.0, "waystones todo", "waystones;enchanted"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;corrupted8"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystone->hiders;corruptedmaphider"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystone->hiders;mirroredmaphider"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;decomap1"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;decomap2"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;decomap3"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;decomap4"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t16"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t15"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t14"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t13"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t12"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t11"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t10"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t9"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t8"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t7"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t6"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t5"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t4"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t3"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t2"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_wsup_t1"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;deco_corruptedmod"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t16"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t15"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t14"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t13"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t12"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t11"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t10"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t9"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t8"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t7"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t6"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t5"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t4"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t3"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t2"], "SH", []); // todo
-        QuickUI([0.0, "waystones todo", "waystones;waystone_t1"], "SH", []); // todo
+        Section("Upgrade-Decorators") {
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 16", "waystones;deco_wsup_t16"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 15", "waystones;deco_wsup_t15"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 14", "waystones;deco_wsup_t14"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 13", "waystones;deco_wsup_t13"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 12", "waystones;deco_wsup_t12"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 11", "waystones;deco_wsup_t11"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 10", "waystones;deco_wsup_t10"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 9", "waystones;deco_wsup_t9"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 8", "waystones;deco_wsup_t8"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 7", "waystones;deco_wsup_t7"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 6", "waystones;deco_wsup_t6"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 5", "waystones;deco_wsup_t5"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 4", "waystones;deco_wsup_t4"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 3", "waystones;deco_wsup_t3"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 2", "waystones;deco_wsup_t2"], "SH", []);
+            QuickUI([0.0, "Waystone Upgrade Decorator Tier 1", "waystones;deco_wsup_t1"], "SH", []);
+        }
+
+        Section("Special") {
+            QuickUI([0.0, "Waystones, Enchanted", "waystones;enchanted"], "SH", ["WaystoneTier"]);
+            QuickUI([0.0, "Waystones, Corrupted 8 Mods", "waystones;corrupted8"], "SH", ["WaystoneTier"]);
+            QuickUI([0.0, "Waystones, Corrupted", "waystone->hiders;corruptedmaphider"], "SH", ["WaystoneTier"]);
+            QuickUI([0.0, "Waystones, Mirrored", "waystone->hiders;mirroredmaphider"], "SH", ["WaystoneTier"]);
+            QuickUI([0.0, "Waystones, Decorator, Corrupted Mod", "waystones;deco_corruptedmod"], "SH", ["WaystoneTier"]);
+            QuickUI([0.0, "Waystones, Decorator, Top Tier", "waystones;decomap1"], "SH", ["WaystoneTier"]);
+            QuickUI([0.0, "Waystones, Decorator, High Tier", "waystones;decomap2"], "SH", ["WaystoneTier"]);
+            QuickUI([0.0, "Waystones, Decorator, Mid Tier", "waystones;decomap3"], "SH", ["WaystoneTier"]);
+            QuickUI([0.0, "Waystones, Decorator, Low Tier", "waystones;decomap4"], "SH", ["WaystoneTier"]);
+        }
+
+        Section("Normal") {
+            QuickUI([0.0, "Waystones Tier 16", "waystones;waystone_t16"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 15", "waystones;waystone_t15"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 14", "waystones;waystone_t14"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 13", "waystones;waystone_t13"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 12", "waystones;waystone_t12"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 11", "waystones;waystone_t11"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 10", "waystones;waystone_t10"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 9", "waystones;waystone_t9"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 8", "waystones;waystone_t8"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 7", "waystones;waystone_t7"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 6", "waystones;waystone_t6"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 5", "waystones;waystone_t5"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 4", "waystones;waystone_t4"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 3", "waystones;waystone_t3"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 2", "waystones;waystone_t2"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 1", "waystones;waystone_t1"], "SH", []);
+        }
     }
 
     Section("Map-Like Items") {
