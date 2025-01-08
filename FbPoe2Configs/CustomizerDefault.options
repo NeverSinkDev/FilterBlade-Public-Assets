@@ -319,15 +319,6 @@ Chapter() {
 //        BaseTypeMatrix(true, "Tier 1", R1, "Tier 2", R2, "Tier 3", R3, "Tier 4", R4, "Tier 5", R5); // todo
 
         Divider();
-        Title("Jewellery");
-        QuickUI([0.0, "endgame rares todo", "rr->amuring;t1"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr->amuring;t2"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr->amuring;t3"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr->belts;t1"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr->belts;t2"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr->belts;t3"], "SH", []); // todo
-
-        Divider();
         Title("Rares");
         QuickUI(0, "SH", []);
         QuickUI(1, "SH", []);
@@ -346,6 +337,22 @@ Chapter() {
         QuickUI(14, "SH", []);
 
         Divider();
+        Title("Jewellery");
+        Search Amu1(0.0, "Endgame Rare Amulets/Rings Tier 1", "rr->amuring;t1") { }
+        Search Amu2(0.0, "Endgame Rare Amulets/Rings Tier 2", "rr->amuring;t2") { }
+        Search Amu3(0.0, "Endgame Rare Amulets/Rings Tier 3", "rr->amuring;t3") { }
+        Search Belt1(0.0, "Endgame Rare Belts Tier 1", "rr->belts;t1") { }
+        Search Belt2(0.0, "Endgame Rare Belts Tier 2", "rr->belts;t2") { }
+        Search Belt3(0.0, "Endgame Rare Belts Tier 3", "rr->belts;t3") { }
+        QuickUI(Amu1, "SH");
+        QuickUI(Amu2, "SH");
+        QuickUI(Amu3, "SH");
+        QuickUI(Belt1, "SH");
+        QuickUI(Belt2, "SH");
+        QuickUI(Belt3, "SH");
+//        BaseTypeMatrix(false, "Tier 1", Amu1, Belt1, "Tier 2", Amu2, Belt2, "Tier 3", Amu3, Belt3); // todo
+
+        Divider();
         Title("Crafting");
         QuickUI(15, "SH", []);
         QuickUI(16, "SH", []);
@@ -357,26 +364,36 @@ Chapter() {
     }
 
     Section("Flasks & Charms") {
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->flasks;any20qualflask"], "SH", []); // todo
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->flasks;anyqualflask"], "SH", []); // todo
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->flasks;earlymappinglifemana"], "SH", []); // todo
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->charms;earlymappingcharms"], "SH", []); // todo
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->charms;anycharm"], "SH", []); // todo
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->flasks;toplevelqualityflasks"], "SH", []); // todo
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->flasks;toplevelflasks"], "SH", []); // todo
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->charms;topqualitycharms"], "SH", []); // todo
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->charms;hight1qualitycharms"], "SH", []); // todo
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->charms;highotherqualitycharms"], "SH", []); // todo
-        QuickUI([0.0, "endgame flasks charms todo", "endgame->charms;qualitycharms"], "SH", []); // todo
+        QuickUI([0.0, "Endgame Flasks, Max Quality", "endgame->flasks;any20qualflask"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
+        QuickUI([0.0, "Endgame Flasks, Some Quality", "endgame->flasks;anyqualflask"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
+        QuickUI([0.0, "Endgame Flasks, Early Life", "endgame->flasks;earlymappinglifemana"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
+        QuickUI([0.0, "Endgame Flasks, Quality, Top", "endgame->flasks;toplevelqualityflasks"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
+        QuickUI([0.0, "Endgame Flasks, Top", "endgame->flasks;toplevelflasks"], "SH", ["Quality", "RarityNM", "AreaLevel"]);
+        Divider();
+        Title("Charms");
+        QuickUI([0.0, "Endgame Charms, Early", "endgame->charms;earlymappingcharms"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
+        QuickUI([0.0, "Endgame Charms", "endgame->charms;anycharm"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
+        QuickUI([0.0, "Endgame Charms, Quality, Top", "endgame->charms;topqualitycharms"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
+        QuickUI([0.0, "Endgame Charms, Quality, High, T1", "endgame->charms;hight1qualitycharms"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
+        QuickUI([0.0, "Endgame Charms, Quality, High", "endgame->charms;highotherqualitycharms"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
+        QuickUI([0.0, "Endgame Charms, Quality", "endgame->charms;qualitycharms"], "SH", ["AreaLevel", "RarityNM", "ItemLevel", "charms"]);
     }
 
     Section("Jewellery") {
-        QuickUI([0.0, "endgame jewellery todo", "endgame->jewellery;selectamulets"], "SH", []); // todo
-        QuickUI([0.0, "endgame jewellery todo", "endgame->jewellery;amulets"], "SH", []); // todo
-        QuickUI([0.0, "endgame jewellery todo", "endgame->jewellery;selectrings"], "SH", []); // todo
-        QuickUI([0.0, "endgame jewellery todo", "endgame->jewellery;rings"], "SH", []); // todo
-        QuickUI([0.0, "endgame jewellery todo", "endgame->jewellery;selectbelts"], "SH", []); // todo
-        QuickUI([0.0, "endgame jewellery todo", "endgame->jewellery;belts"], "SH", []); // todo
+        Search S0(0.0, "Endgame Amulets, Top", "endgame->jewellery;selectamulets") { }
+        Search S1(0.0, "Endgame Rings, Top", "endgame->jewellery;selectrings") { }
+        Search S2(0.0, "Endgame Belts, Top", "endgame->jewellery;selectbelts") { }
+
+//        BaseTypeMatrix(false, "Tier 1", S0, S1, S2); // todo
+
+        QuickUI(S0, "SH", []);
+        QuickUI(S1, "SH", []);
+        QuickUI(S2, "SH", []);
+
+        QuickUI([0.0, "Endgame Rings", "endgame->jewellery;rings"], "SH", []);
+        QuickUI([0.0, "Endgame Belts", "endgame->jewellery;belts"], "SH", []);
+        QuickUI([0.0, "Endgame Amulets", "endgame->jewellery;amulets"], "SH", []);
+
     }
 
     Section("Waystones") {
