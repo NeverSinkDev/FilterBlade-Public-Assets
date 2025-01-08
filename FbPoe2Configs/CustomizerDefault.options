@@ -258,6 +258,14 @@ Chapter("chapter") {
 
             QuickUI([0.0, "Remaining Soul Cores", "sockets->cores;exhide"], "SH", [], "", [], "Remaining Soul Cores, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
         }
+
+        Section("Jewels") { // todo
+            QuickUI([0.0, "Timeless Jewels", "jewels->generic;anytimeless"], "SH", ["Rarity"]);
+            QuickUI([0.0, "Rare Jewels", "jewels->generic;anyrare"], "SH", []);
+            QuickUI([0.0, "Magic Jewels", "jewels->generic;anymagic"], "SH", []);
+            QuickUI([0.0, "Corrupted Jewels", "jewels->generic;anycorruptedmod"], "SH", ["Rarity"]);
+            QuickUI([0.0, "5-Mod Jewels", "jewels->generic;any5modded"], "SH", []);
+        }
     }
 }
 
@@ -288,6 +296,7 @@ Chapter() {
         QuickUI([0.0, "endgame rares todo", "rr;t5_a2"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr;t5_other"], "SH", []); // todo
 
+        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;ilvl80"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;largerares"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;mediumrares1"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "decorators->rareeg;mediumrares2"], "SH", []); // todo
@@ -480,60 +489,67 @@ Chapter() {
     }
 
     Section("Campaign Gear") {
-        QuickUI([0.0, "campaign gear todo", "leveling->decorators->rare;largerares"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->decorators->rare;mediumrares1"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->decorators->rare;mediumrares2"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->decorators->rare;tinyrares"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "decorators->rareeg;ilvl80"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->universal;jewellery"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->armours;ar"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->armours;ev"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->armours;es"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->armours;arev"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->armours;ares"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->armours;eves"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->armours;anythingearly"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->weapons;wands"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->weapons;sceptres"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->weapons;staves"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->weapons;bowsquivers"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->weapons;crossbows"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->weapons;onehandmaces"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->weapons;twohandmaces"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->weapons;quarterstaves"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->rare->remaining;any"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "decorators->leveling->magic;medium1"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "decorators->leveling->magic;medium2"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "decorators->leveling->magic;noticeearly"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "decorators->leveling->magic;tiny"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagicremarkable;jewellery"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->armours;ar"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->armours;ev"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->armours;es"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->armours;arev"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->armours;ares"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->armours;eves"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->weapons;wands"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->weapons;sceptres"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->weapons;staves"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->weapons;bowsquivers"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->weapons;crossbows"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->weapons;onehandmaces"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->weapons;twohandmaces"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->normalmagic->weapons;quarterstaves"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->firstlevels;firstareas"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->firstlevels;earlyboots"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->magic->remaining;largemagicblocker"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->magic->remaining;mediummagicblocker"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->magic->remaining;rest"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->magic->remaining;act2"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "leveling->magic->remaining;act1"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "jewels->generic;anytimeless"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "jewels->generic;anyrare"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "jewels->generic;anymagic"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "jewels->generic;anycorruptedmod"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "jewels->generic;any5modded"], "SH", []); // todo
-        QuickUI([0.0, "campaign gear todo", "relics->generic;any"], "SH", []); // todo
+        Section("Decorators") {
+            Title("Rare Items");
+            QuickUI([0.0, "Campaign Decorator: Large Rares", "leveling->decorators->rare;largerares"], "SH", []);
+            QuickUI([0.0, "Campaign Decorator: Medium Rares 1", "leveling->decorators->rare;mediumrares1"], "SH", []);
+            QuickUI([0.0, "Campaign Decorator: Medium Rares 2", "leveling->decorators->rare;mediumrares2"], "SH", []);
+            QuickUI([0.0, "Campaign Decorator: Tiny Rares", "leveling->decorators->rare;tinyrares"], "SH", []);
+            Divider();
+            Title("Magic Items");
+            QuickUI([0.0, "Campaign Decorator: Magic, medium", "decorators->leveling->magic;medium1"], "SH", []);
+            QuickUI([0.0, "Campaign Decorator: Magic, medium", "decorators->leveling->magic;medium2"], "SH", []);
+            QuickUI([0.0, "Campaign Decorator: Magic, tiny", "decorators->leveling->magic;tiny"], "SH", []);
+            QuickUI([0.0, "Campaign Decorator: Magic, early", "decorators->leveling->magic;noticeearly"], "SH", []);
+        }
+
+        Section("Rare Items") {
+            QuickUI([0.0, "Campaign Rares, Jewellery", "leveling->rare->universal;jewellery"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Armour", "leveling->rare->armours;ar"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Evasion", "leveling->rare->armours;ev"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Energy Shield", "leveling->rare->armours;es"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Arm-Ev", "leveling->rare->armours;arev"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Arm-ES", "leveling->rare->armours;ares"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Eva-ES", "leveling->rare->armours;eves"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Early", "leveling->rare->armours;anythingearly"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Wands", "leveling->rare->weapons;wands"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Scaptres", "leveling->rare->weapons;sceptres"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Staves", "leveling->rare->weapons;staves"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Archer", "leveling->rare->weapons;bowsquivers"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Crossbow", "leveling->rare->weapons;crossbows"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, 1H Maces", "leveling->rare->weapons;onehandmaces"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, 2H Maces", "leveling->rare->weapons;twohandmaces"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Quarterstaves", "leveling->rare->weapons;quarterstaves"], "SH", []);
+            QuickUI([0.0, "Campaign Rares, Remaining", "leveling->rare->remaining;any"], "SH", []);
+        }
+
+        Section("Magic & Normal Items") {
+            QuickUI([0.0, "Campaign Magic & Normal, Jewellery", "leveling->normalmagicremarkable;jewellery"], "SH", [], "Jewellery");
+            QuickUI([0.0, "Campaign Magic & Normal, Armour", "leveling->normalmagic->armours;ar"], "SH", [], "Armour");
+            QuickUI([0.0, "Campaign Magic & Normal, Evasion", "leveling->normalmagic->armours;ev"], "SH", [], "Evasion");
+            QuickUI([0.0, "Campaign Magic & Normal, Energy Shield", "leveling->normalmagic->armours;es"], "SH", [], "Energy Shield");
+            QuickUI([0.0, "Campaign Magic & Normal, Arm-Eva", "leveling->normalmagic->armours;arev"], "SH", [], "Armour-Evasion");
+            QuickUI([0.0, "Campaign Magic & Normal, Arm-ES", "leveling->normalmagic->armours;ares"], "SH", [], "Armour-ES");
+            QuickUI([0.0, "Campaign Magic & Normal, Eva-ES", "leveling->normalmagic->armours;eves"], "SH", [], "Evasion-ES");
+            QuickUI([0.0, "Campaign Magic & Normal, Wands", "leveling->normalmagic->weapons;wands"], "SH", [], "Wands");
+            QuickUI([0.0, "Campaign Magic & Normal, Sceptres", "leveling->normalmagic->weapons;sceptres"], "SH", [], "Sceptres");
+            QuickUI([0.0, "Campaign Magic & Normal, Staves", "leveling->normalmagic->weapons;staves"], "SH", [], "Staves");
+            QuickUI([0.0, "Campaign Magic & Normal, Archer", "leveling->normalmagic->weapons;bowsquivers"], "SH", [], "Archer");
+            QuickUI([0.0, "Campaign Magic & Normal, Crossbow", "leveling->normalmagic->weapons;crossbows"], "SH", [], "Crossbow");
+            QuickUI([0.0, "Campaign Magic & Normal, 1H Maces", "leveling->normalmagic->weapons;onehandmaces"], "SH", [], "1H Maces");
+            QuickUI([0.0, "Campaign Magic & Normal, 2H Maces", "leveling->normalmagic->weapons;twohandmaces"], "SH", [], "2H Maces");
+            QuickUI([0.0, "Campaign Magic & Normal, Quarterstaves", "leveling->normalmagic->weapons;quarterstaves"], "SH", [], "Quarterstaves");
+
+
+            QuickUI([0.0, "Campaign Magic, Remaining", "leveling->magic->remaining;rest"], "SH", []);
+            QuickUI([0.0, "Campaign Magic, Act 2", "leveling->magic->remaining;act2"], "SH", []);
+            QuickUI([0.0, "Campaign Magic, Act 1", "leveling->magic->remaining;act1"], "SH", []);
+        }
+
+        Section("Misc.") {
+            QuickUI([0.0, "Campaign First Areas", "leveling->firstlevels;firstareas"], "SH", ["AreaLevel", "Rarity"]);
+            QuickUI([0.0, "Campaign Early Boots", "leveling->firstlevels;earlyboots"], "SH", ["AreaLevel", "Rarity"]);
+        }
     }
 
     Section("Campaign Salvagable Items") {
@@ -556,6 +572,7 @@ Chapter() {
         QuickUI([0.0, "Quest-Like Items", "questlikeexception;questlike"], "SH", []);
         QuickUI([0.0, "Quest Items", "questlikeexception;questitems"], "SH", []);
         QuickUI([0.0, "Fishing Rod", "artifact;fishingrod"], "SH", []);
+        QuickUI([0.0, "Relics", "relics->generic;any"], "SH", []);
 
         QuickUI([0.0, "Unique Exception: Sekhema Ring", "uniques;sekhemaring"], "SH");
         QuickUI([0.0, "Corrupted Uniques", "uniques;corrupteduniques"], "SH");
@@ -563,6 +580,8 @@ Chapter() {
         QuickUI([0.0, "Strictness Show-Layers, All", "lowstrictnessshowlayer;anyfinal"], "SH", []); // todo
         QuickUI([0.0, "Strictness Show-Layers, Normal/Magic", "lowstrictnessshowlayer;normalmagicendgameany"], "SH", []); // todo
         QuickUI([0.0, "Strictness Show-Layers, Rares", "lowstrictnessshowlayer;raresendgameany"], "SH", []); // todo
+        QuickUI([0.0, "Campaign Magic, ", "leveling->magic->remaining;largemagicblocker"], "SH", []); // todo
+        QuickUI([0.0, "Campaign Magic, ", "leveling->magic->remaining;mediummagicblocker"], "SH", []); // todo
         Divider();
         Title("Error Rules");
         QuickUI([0.0, "Error Currency", "currency;restex"], "SH", []);
