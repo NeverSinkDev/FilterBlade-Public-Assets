@@ -273,6 +273,53 @@ Chapter() {
     SectionTitle("Endgame");
 
     Section("Rares & Crafting") {
+
+        Section("Decorators") {
+            QuickUI([0.0, "Endgame Rare Decorator, ilvl 80", "decorators->rareeg;ilvl80"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Endgame Rare Decorator, large", "decorators->rareeg;largerares"], "SH", []);
+            QuickUI([0.0, "Endgame Rare Decorator, medium 1", "decorators->rareeg;mediumrares1"], "SH", []);
+            QuickUI([0.0, "Endgame Rare Decorator, medium 2", "decorators->rareeg;mediumrares2"], "SH", []);
+            QuickUI([0.0, "Endgame Rare Decorator, tiny", "decorators->rareeg;tinyrares"], "SH", []);
+            QuickUI([0.0, "Endgame Rare Decorator, ilvl 82", "decorators->rareeg;ilvl82"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Endgame Rare Decorator, corrupted", "decorators->rareeg;corruptedrares"], "SH", []);
+            QuickUI([0.0, "Endgame Rare Decorator, corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SH", []);
+            QuickUI([0.0, "Endgame Rare Decorator, basic", "decorators->rareeg;basicraredecorator"], "SH", []);
+            QuickUI([0.0, "Endgame Rare Decorator, ilvl 81 caster", "decorators->rareeg;ilvl81caster"], "SH", ["ItemLevel"]);
+
+            QuickUI([0.0, "Endgame Crafting Decorator, normal 82", "endgame->normalcraft->decorator;normal82"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Endgame Crafting Decorator, normal jewelery", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SH", []);
+            QuickUI([0.0, "Endgame Crafting Decorator, normal", "endgame->normalcraft->decorator;normaldecorator"], "SH", []);
+            QuickUI([0.0, "Endgame Crafting Decorator, normal 80", "endgame->normalcraft->decorator;normal80"], "SH", ["ItemLevel"]);
+        }
+
+        Search R1(0.0, "Endgame Rares Tier 1 Top", "rr;t1_top") { }
+        Search R1(0.0, "Endgame Rares Tier 1 Other", "rr;t1_other") { }
+        Search R2(0.0, "Endgame Rares Tier 2 Top", "rr;t2_top") { }
+        Search R2(0.0, "Endgame Rares Tier 2 A1", "rr;t2_a1") { }
+        Search R2(0.0, "Endgame Rares Tier 2 Other", "rr;t2_other") { }
+        Search R3(0.0, "Endgame Rares Tier 3 Top", "rr;t3_top") { }
+        Search R3(0.0, "Endgame Rares Tier 3 A1", "rr;t3_a1") { }
+        Search R3(0.0, "Endgame Rares Tier 3 A2", "rr;t3_a2") { }
+        Search R3(0.0, "Endgame Rares Tier 3 Other", "rr;t3_other") { }
+        Search R4(0.0, "Endgame Rares Tier 4 A1", "rr;t4_a1") { }
+        Search R4(0.0, "Endgame Rares Tier 4 A2", "rr;t4_a2") { }
+        Search R4(0.0, "Endgame Rares Tier 4 Other", "rr;t4_other") { }
+        Search R5(0.0, "Endgame Rares Tier 5 A1", "rr;t5_a1") { }
+        Search R5(0.0, "Endgame Rares Tier 5 A2", "rr;t5_a2") { }
+        Search R5(0.0, "Endgame Rares Tier 5 Other", "rr;t5_other") { }
+
+        Search R1(0.0, "Endgame Crafting Tier 1, ideal", "endgame->normalcraft->any;t1ideallevel") { }
+        Search RM(0.0, "Endgame Crafting, Minions", "endgame->normalcraft->any;minionsceptresoptional") { } // todo
+        Search R1(0.0, "Endgame Crafting Tier 1", "endgame->normalcraft->any;t1") { }
+        Search R2(0.0, "Endgame Crafting Tier 2, ideal", "endgame->normalcraft->any;t2ideallevel") { }
+        Search R3(0.0, "Endgame Crafting Tier 3, ideal", "endgame->normalcraft->any;t3ideallevel") { }
+        Search R2(0.0, "Endgame Crafting Tier 2, onLevel", "endgame->normalcraft->any;t2onlevel") { }
+        Search R3(0.0, "Endgame Crafting Tier 3, onLevel", "endgame->normalcraft->any;t3onlevel") { }
+
+//        BaseTypeMatrix(true, "Tier 1", R1, "Tier 2", R2, "Tier 3", R3, "Tier 4", R4, "Tier 5", R5); // todo
+
+        Divider();
+        Title("Jewellery");
         QuickUI([0.0, "endgame rares todo", "rr->amuring;t1"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr->amuring;t2"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr->amuring;t3"], "SH", []); // todo
@@ -280,47 +327,33 @@ Chapter() {
         QuickUI([0.0, "endgame rares todo", "rr->belts;t2"], "SH", []); // todo
         QuickUI([0.0, "endgame rares todo", "rr->belts;t3"], "SH", []); // todo
 
-        QuickUI([0.0, "endgame rares todo", "rr;t1_top"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t1_other"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t2_top"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t2_a1"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t2_other"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t3_top"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t3_a1"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t3_a2"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t3_other"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t4_a1"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t4_a2"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t4_other"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t5_a1"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t5_a2"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "rr;t5_other"], "SH", []); // todo
-
-        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;ilvl80"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;largerares"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;mediumrares1"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;mediumrares2"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;tinyrares"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;ilvl82"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;corruptedrares"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;corruptedraresimplicit"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;basicraredecorator"], "SH", []); // todo
-        QuickUI([0.0, "endgame rares todo", "decorators->rareeg;ilvl81caster"], "SH", []); // todo
+        Divider();
+        Title("Rares");
+        QuickUI(0, "SH", []);
+        QuickUI(1, "SH", []);
+        QuickUI(2, "SH", []);
+        QuickUI(3, "SH", []);
+        QuickUI(4, "SH", []);
+        QuickUI(5, "SH", []);
+        QuickUI(6, "SH", []);
+        QuickUI(7, "SH", []);
+        QuickUI(8, "SH", []);
+        QuickUI(9, "SH", []);
+        QuickUI(10, "SH", []);
+        QuickUI(11, "SH", []);
+        QuickUI(12, "SH", []);
+        QuickUI(13, "SH", []);
+        QuickUI(14, "SH", []);
 
         Divider();
         Title("Crafting");
-
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->decorator;normal82"], "SH", []); // todo
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SH", []); // todo
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->decorator;normaldecorator"], "SH", []); // todo
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t1ideallevel"], "SH", []); // todo
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;minionsceptresoptional"], "SH", []); // todo
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t1"], "SH", []); // todo
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->decorator;normal80"], "SH", []); // todo
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t2ideallevel"], "SH", []); // todo
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t3ideallevel"], "SH", []); // todo
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t2onlevel"], "SH", []); // todo
-        QuickUI([0.0, "endgame crafting todo", "endgame->normalcraft->any;t3onlevel"], "SH", []); // todo
+        QuickUI(15, "SH", []);
+        QuickUI(16, "SH", []);
+        QuickUI(17, "SH", []);
+        QuickUI(18, "SH", []);
+        QuickUI(19, "SH", []);
+        QuickUI(20, "SH", []);
+        QuickUI(21, "SH", []);
     }
 
     Section("Flasks & Charms") {
