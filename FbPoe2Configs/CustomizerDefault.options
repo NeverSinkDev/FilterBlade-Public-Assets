@@ -481,6 +481,11 @@ Chapter() {
             QuickUI([0.0, "Waystones, Decorator, High Tier", "waystones;decomap2"], "SH", ["WaystoneTier"], "High Tier");
             QuickUI([0.0, "Waystones, Decorator, Mid Tier", "waystones;decomap3"], "SH", ["WaystoneTier"], "Mid Tier");
             QuickUI([0.0, "Waystones, Decorator, Low Tier", "waystones;decomap4"], "SH", ["WaystoneTier"], "Low Tier");
+
+            QuickUI([0.0, "Waystones, Decorator, Overleveled 1", "waystones;decomap1overleveled"], "SH", ["WaystoneTier", "AreaLevel"], "Overleveled 1");
+            QuickUI([0.0, "Waystones, Decorator, Overleveled 2", "waystones;decomap2overleveled"], "SH", ["WaystoneTier", "AreaLevel"], "Overleveled 2");
+            QuickUI([0.0, "Waystones, Decorator, Overleveled 3", "waystones;decomap3overleveled"], "SH", ["WaystoneTier", "AreaLevel"], "Overleveled 3");
+            QuickUI([0.0, "Waystones, Decorator, Overleveled 4", "waystones;decomap4overleveled"], "SH", ["WaystoneTier", "AreaLevel"], "Overleveled 4");
         }
     }
 
