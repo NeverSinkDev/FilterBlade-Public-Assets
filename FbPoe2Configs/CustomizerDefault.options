@@ -11,7 +11,7 @@ Chapter("chapter") {
     Section("General Currency", "Chaos", "E") {
         Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["normalCurrencyPoe2", "O"]); }
 
-        TierListToolBar("Currency");
+        TierListToolBar();
 
         Description("Drag & Drop items to change their tier.");
 
