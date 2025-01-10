@@ -296,7 +296,7 @@ Chapter("chapter") {
 }
 
 Chapter() {
-    SectionTitle("Endgame");
+    SectionTitle("Endgame Rares & Crafting");
 
     Section("Add custom Show/Hide rule", "Firefly") {
 
@@ -374,158 +374,164 @@ Chapter() {
         }
     }
 
-    Section("Rares & Crafting") {
-
-        Section("Decorators") {
-            Title("Rares");
-            QuickUI([0.0, "Endgame Rare Decorator, ilvl 80", "decorators->rareeg;ilvl80"], "SH", ["ItemLevel"], "ilvl 80");
-            QuickUI([0.0, "Endgame Rare Decorator, large", "decorators->rareeg;largerares"], "SH", [], "large");
-            QuickUI([0.0, "Endgame Rare Decorator, medium 1", "decorators->rareeg;mediumrares1"], "SH", [], "medium-sized");
-            QuickUI([0.0, "Endgame Rare Decorator, medium 2", "decorators->rareeg;mediumrares2"], "SH", [], "medium-sized");
-            QuickUI([0.0, "Endgame Rare Decorator, tiny", "decorators->rareeg;tinyrares"], "SH", [], "tiny");
-            QuickUI([0.0, "Endgame Rare Decorator, ilvl 82", "decorators->rareeg;ilvl82"], "SH", ["ItemLevel"], "ilvl 82");
-            QuickUI([0.0, "Endgame Rare Decorator, corrupted", "decorators->rareeg;corruptedrares"], "SH", [], "corrupted");
-            QuickUI([0.0, "Endgame Rare Decorator, corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SH", [], "corrupted implicit");
-            QuickUI([0.0, "Endgame Rare Decorator, basic", "decorators->rareeg;basicraredecorator"], "SH", [], "default/global");
-            QuickUI([0.0, "Endgame Rare Decorator, ilvl 81 caster", "decorators->rareeg;ilvl81caster"], "SH", ["ItemLevel"], "ilvl 81 caster");
-            Title("Normal/Crafting");
-            QuickUI([0.0, "Endgame Crafting Decorator, normal 82", "endgame->normalcraft->decorator;normal82"], "SH", ["ItemLevel", "Rarity"], "Ilvl 82");
-            QuickUI([0.0, "Endgame Crafting Decorator, normal jewelery", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SH", ["Rarity"], "Jewellery");
-            QuickUI([0.0, "Endgame Crafting Decorator, normal", "endgame->normalcraft->decorator;regulargeardecorator"], "SH", ["Rarity"], "Default/global");
-            QuickUI([0.0, "Endgame Crafting Decorator, normal 80", "endgame->normalcraft->decorator;normal80"], "SH", ["ItemLevel", "Rarity"], "Ilvl 80");
-            QuickUI([0.0, "Endgame Crafting Decorator, Quality 1", "endgame->normalcraft->decorator;qualitydecorator1"], "SH", ["Rarity", "Quality"], "Quality");
-            QuickUI([0.0, "Endgame Crafting Decorator, Quality 2", "endgame->normalcraft->decorator;qualitydecorator2"], "SH", ["Rarity", "Quality"], "Quality");
-        }
-
-        Section("Jewellery") {
-            Search Amu1(0.0, "Endgame Rare Amulets/Rings Tier 1", "rr->amuring;t1") { }
-            Search Amu2(0.0, "Endgame Rare Amulets/Rings Tier 2", "rr->amuring;t2") { }
-            Search Amu3(0.0, "Endgame Rare Amulets/Rings Tier 3", "rr->amuring;t3") { }
-            Search Belt1(0.0, "Endgame Rare Belts Tier 1", "rr->belts;t1") { }
-            Search Belt2(0.0, "Endgame Rare Belts Tier 2", "rr->belts;t2") { }
-            Search Belt3(0.0, "Endgame Rare Belts Tier 3", "rr->belts;t3") { }
-
-            Search Amu1(0.0, "Endgame Rings & Amulets T1 Ideal", "endgame->jewellery;ringamut1ideallevel") { }
-            Search Amu2(0.0, "Endgame Rings & Amulets T2 Ideal", "endgame->jewellery;ringamut2ideallevel") { }
-            Search Amu3(0.0, "Endgame Rings & Amulets T3 Ideal ", "endgame->jewellery;ringamut3ideallevel") { }
-            Search Amu1(0.0, "Endgame Rings & Amulets T1 ", "endgame->jewellery;ringamut1") { }
-            Search Amu2(0.0, "Endgame Rings & Amulets T2 ", "endgame->jewellery;ringamut2") { }
-            Search Amu3(0.0, "Endgame Rings & Amulets T3 ", "endgame->jewellery;ringamut3") { }
-            Search Belt1(0.0, "Endgame Belts T1", "endgame->jewellery;beltst1") { }
-            Search Belt2(0.0, "Endgame Belts T2", "endgame->jewellery;beltst2") { }
-            Search Belt3(0.0, "Endgame Belts T3", "endgame->jewellery;beltst3") { }
-            Search Belt1(0.0, "Endgame Belts T1 Ideal", "endgame->jewellery;beltst1ideallevel") { }
-            Search Belt2(0.0, "Endgame Belts T2 Ideal", "endgame->jewellery;beltst2ideallevel") { }
-            Search Belt3(0.0, "Endgame Belts T3 Ideal", "endgame->jewellery;beltst3ideallevel") { }
-
-            Search Amu1(0.0, "Endgame Rare Amulets/Rings Tier 1 EG", "rr->amuringeg;t1") { }
-            Search Amu2(0.0, "Endgame Rare Amulets/Rings Tier 2 EG", "rr->amuringeg;t2") { }
-            Search Amu3(0.0, "Endgame Rare Amulets/Rings Tier 3 EG", "rr->amuringeg;t3") { }
-            Search Belt1(0.0, "Endgame Rare Belts Tier 1 EG", "rr->beltseg;t1") { }
-            Search Belt2(0.0, "Endgame Rare Belts Tier 2 EG", "rr->beltseg;t2") { }
-            Search Belt3(0.0, "Endgame Rare Belts Tier 3 EG", "rr->beltseg;t3") { }
-
-            Title("Amulets & Rings");
-            QuickUI(0, "SH", ["ItemLevel"], "Tier 1 rare");
-            QuickUI(1, "SH", ["ItemLevel"], "Tier 2 rare");
-            QuickUI(2, "SH", ["ItemLevel"], "Tier 3 rare");
-
-            QuickUI(6, "SH", ["ItemLevel", "Rarity"], "Tier 1 ideal");
-            QuickUI(7, "SH", ["ItemLevel", "Rarity"], "Tier 2 ideal");
-            QuickUI(8, "SH", ["ItemLevel", "Rarity"], "Tier 3 ideal");
-
-            QuickUI(9, "SH", ["ItemLevel", "Rarity"], "Tier 1 crafting");
-            QuickUI(10, "SH", ["ItemLevel", "Rarity"], "Tier 2 crafting");
-            QuickUI(11, "SH", ["ItemLevel", "Rarity"], "Tier 3 crafting");
-
-            QuickUI(18, "SH", ["ItemLevel"], "Tier 1 endgame");
-            QuickUI(19, "SH", ["ItemLevel"], "Tier 2 endgame");
-            QuickUI(20, "SH", ["ItemLevel"], "Tier 3 endgame");
-            Divider();
-            Title("Belts");
-            QuickUI(3, "SH", ["ItemLevel"], "Tier 1 rare");
-            QuickUI(4, "SH", ["ItemLevel"], "Tier 2 rare");
-            QuickUI(5, "SH", ["ItemLevel"], "Tier 3 rare");
-
-            QuickUI(12, "SH", ["ItemLevel", "Rarity"], "Tier 1 crafting");
-            QuickUI(13, "SH", ["ItemLevel", "Rarity"], "Tier 2 crafting");
-            QuickUI(14, "SH", ["ItemLevel", "Rarity"], "Tier 3 crafting");
-
-            QuickUI(15, "SH", ["ItemLevel", "Rarity"], "Tier 1 ideal");
-            QuickUI(16, "SH", ["ItemLevel", "Rarity"], "Tier 2 ideal");
-            QuickUI(17, "SH", ["ItemLevel", "Rarity"], "Tier 3 ideal");
-
-            QuickUI(21, "SH", ["ItemLevel"], "Tier 1 endgame");
-            QuickUI(22, "SH", ["ItemLevel"], "Tier 2 endgame");
-            QuickUI(23, "SH", ["ItemLevel"], "Tier 3 endgame");
-
-            Divider();
-            Title("Tiering");
-            BaseTypeMatrix(false, "Tier 1", Amu1, Belt1, "Tier 2", Amu2, Belt2, "Tier 3", Amu3, Belt3);
-        }
-
-        Section("Weapons & Armours") {
-            Search R1(0.0, "Endgame Rares Tier 1 Top", "rr;t1_top") { }
-            Search R1(0.0, "Endgame Rares Tier 1 Other", "rr;t1_other") { }
-            Search R2(0.0, "Endgame Rares Tier 2 Top", "rr;t2_top") { }
-            Search R2(0.0, "Endgame Rares Tier 2 A1", "rr;t2_a1") { }
-            Search R2(0.0, "Endgame Rares Tier 2 Other", "rr;t2_other") { }
-            Search R3(0.0, "Endgame Rares Tier 3 Top", "rr;t3_top") { }
-            Search R3(0.0, "Endgame Rares Tier 3 A1", "rr;t3_a1") { }
-            Search R3(0.0, "Endgame Rares Tier 3 A2", "rr;t3_a2") { }
-            Search R3(0.0, "Endgame Rares Tier 3 Other", "rr;t3_other") { }
-            Search R4(0.0, "Endgame Rares Tier 4 A1", "rr;t4_a1") { }
-            Search R4(0.0, "Endgame Rares Tier 4 A2", "rr;t4_a2") { }
-            Search R4(0.0, "Endgame Rares Tier 4 Other", "rr;t4_other") { }
-            Search R5(0.0, "Endgame Rares Tier 5 A1", "rr;t5_a1") { }
-            Search R5(0.0, "Endgame Rares Tier 5 A2", "rr;t5_a2") { }
-            Search R5(0.0, "Endgame Rares Tier 5 Other", "rr;t5_other") { }
-
-            Search R1(0.0, "Endgame Crafting Tier 1, ideal", "endgame->normalcraft->any;t1ideallevel") { }
-            Search R1(0.0, "Endgame Crafting Tier 1", "endgame->normalcraft->any;t1") { }
-            Search R2(0.0, "Endgame Crafting Tier 2, ideal", "endgame->normalcraft->any;t2ideallevel") { }
-            Search R3(0.0, "Endgame Crafting Tier 3, ideal", "endgame->normalcraft->any;t3ideallevel") { }
-            Search R2(0.0, "Endgame Crafting Tier 2, onLevel", "endgame->normalcraft->any;t2onlevel") { }
-            Search R3(0.0, "Endgame Crafting Tier 3, onLevel", "endgame->normalcraft->any;t3onlevel") { }
-
-            BaseTypeMatrix(true, "Tier 1", R1, "Tier 2", R2, "Tier 3", R3, "Tier 4", R4);
-
-            Title("Rares");
-            QuickUI(0, "SH", ["ItemLevel"]);
-            QuickUI(1, "SH", ["ItemLevel"]);
-            QuickUI(2, "SH", ["ItemLevel"]);
-            QuickUI(3, "SH", ["ItemLevel"]);
-            QuickUI(4, "SH", ["ItemLevel"]);
-            QuickUI(5, "SH", ["ItemLevel"]);
-            QuickUI(6, "SH", ["ItemLevel"]);
-            QuickUI(7, "SH", ["ItemLevel"]);
-            QuickUI(8, "SH", ["ItemLevel"]);
-            QuickUI(9, "SH", ["ItemLevel"]);
-            QuickUI(10, "SH", ["ItemLevel"]);
-            QuickUI(11, "SH", ["ItemLevel"]);
-            QuickUI(12, "SH", ["ItemLevel"]);
-            QuickUI(13, "SH", ["ItemLevel"]);
-            QuickUI(14, "SH", ["ItemLevel"]);
-
-            Divider();
-            Title("Crafting");
-            QuickUI(15, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(16, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(17, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(18, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(19, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(20, "SH", ["ItemLevel", "Rarity"]);
-        }
-
-        Section("Special Bases") {
-            QuickUI([0.0, "Exotic Bases, high level", "exoticbases;commonexoticbaseshigh"], "SH", ["Rarity", "ItemLevel", "Identified"]);
-            QuickUI([0.0, "Exotic Bases", "exoticbases;commonexoticbases"], "SH", ["Rarity", "ItemLevel", "Identified"]);
-        }
-
-        Section("Optional rules") {
-            QuickUI([0.0, "Endgame Crafting, Caster", "endgame->normalcraft->any;minionsceptresoptional"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity"], "", ["gear", "SAO"]);
-        }
+    Section("Decorators") {
+        Title("Rares");
+        QuickUI([0.0, "Endgame Rare Decorator, ilvl 80", "decorators->rareeg;ilvl80"], "SH", ["ItemLevel"], "ilvl 80");
+        QuickUI([0.0, "Endgame Rare Decorator, large", "decorators->rareeg;largerares"], "SH", [], "large");
+        QuickUI([0.0, "Endgame Rare Decorator, medium 1", "decorators->rareeg;mediumrares1"], "SH", [], "medium-sized");
+        QuickUI([0.0, "Endgame Rare Decorator, medium 2", "decorators->rareeg;mediumrares2"], "SH", [], "medium-sized");
+        QuickUI([0.0, "Endgame Rare Decorator, tiny", "decorators->rareeg;tinyrares"], "SH", [], "tiny");
+        QuickUI([0.0, "Endgame Rare Decorator, ilvl 82", "decorators->rareeg;ilvl82"], "SH", ["ItemLevel"], "ilvl 82");
+        QuickUI([0.0, "Endgame Rare Decorator, corrupted", "decorators->rareeg;corruptedrares"], "SH", [], "corrupted");
+        QuickUI([0.0, "Endgame Rare Decorator, corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SH", [], "corrupted implicit");
+        QuickUI([0.0, "Endgame Rare Decorator, basic", "decorators->rareeg;basicraredecorator"], "SH", [], "default/global");
+        QuickUI([0.0, "Endgame Rare Decorator, ilvl 81 caster", "decorators->rareeg;ilvl81caster"], "SH", ["ItemLevel"], "ilvl 81 caster");
+        Title("Normal/Crafting");
+        QuickUI([0.0, "Endgame Crafting Decorator, normal 82", "endgame->normalcraft->decorator;normal82"], "SH", ["ItemLevel", "Rarity"], "Ilvl 82");
+        QuickUI([0.0, "Endgame Crafting Decorator, normal jewelery", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SH", ["Rarity"], "Jewellery");
+        QuickUI([0.0, "Endgame Crafting Decorator, normal", "endgame->normalcraft->decorator;regulargeardecorator"], "SH", ["Rarity"], "Default/global");
+        QuickUI([0.0, "Endgame Crafting Decorator, normal 80", "endgame->normalcraft->decorator;normal80"], "SH", ["ItemLevel", "Rarity"], "Ilvl 80");
+        QuickUI([0.0, "Endgame Crafting Decorator, Quality 1", "endgame->normalcraft->decorator;qualitydecorator1"], "SH", ["Rarity", "Quality"], "Quality");
+        QuickUI([0.0, "Endgame Crafting Decorator, Quality 2", "endgame->normalcraft->decorator;qualitydecorator2"], "SH", ["Rarity", "Quality"], "Quality");
     }
+
+    Section("Jewellery") {
+
+        Section("ghfhfg") {
+            QuickUI(Amu1Rare, "SH", ["ItemLevel"], "Tier 1 rare");
+            QuickUI(Amu2Rare, "SH", ["ItemLevel"], "Tier 2 rare");
+            QuickUI(Amu3Rare, "SH", ["ItemLevel"], "Tier 3 rare");
+        }
+        Search Amu1Rare(0.0, "Endgame Rare Amulets/Rings Tier 1", "rr->amuring;t1") { }
+        Search Amu2Rare(0.0, "Endgame Rare Amulets/Rings Tier 2", "rr->amuring;t2") { }
+        Search Amu3Rare(0.0, "Endgame Rare Amulets/Rings Tier 3", "rr->amuring;t3") { }
+        Search Belt1Rare(0.0, "Endgame Rare Belts Tier 1", "rr->belts;t1") { }
+        Search Belt2Rare(0.0, "Endgame Rare Belts Tier 2", "rr->belts;t2") { }
+        Search Belt3Rare(0.0, "Endgame Rare Belts Tier 3", "rr->belts;t3") { }
+
+        Search Amu1Ideal(0.0, "Endgame Rings & Amulets T1 Ideal", "endgame->jewellery;ringamut1ideallevel") { }
+        Search Amu2Ideal(0.0, "Endgame Rings & Amulets T2 Ideal", "endgame->jewellery;ringamut2ideallevel") { }
+        Search Amu3Ideal(0.0, "Endgame Rings & Amulets T3 Ideal ", "endgame->jewellery;ringamut3ideallevel") { }
+        Search Amu1Craft(0.0, "Endgame Rings & Amulets T1 ", "endgame->jewellery;ringamut1") { }
+        Search Amu2Craft(0.0, "Endgame Rings & Amulets T2 ", "endgame->jewellery;ringamut2") { }
+        Search Amu3Craft(0.0, "Endgame Rings & Amulets T3 ", "endgame->jewellery;ringamut3") { }
+        Search Belt1Craft(0.0, "Endgame Belts T1", "endgame->jewellery;beltst1") { }
+        Search Belt2Craft(0.0, "Endgame Belts T2", "endgame->jewellery;beltst2") { }
+        Search Belt3Craft(0.0, "Endgame Belts T3", "endgame->jewellery;beltst3") { }
+        Search Belt1Ideal(0.0, "Endgame Belts T1 Ideal", "endgame->jewellery;beltst1ideallevel") { }
+        Search Belt2Ideal(0.0, "Endgame Belts T2 Ideal", "endgame->jewellery;beltst2ideallevel") { }
+        Search Belt3Ideal(0.0, "Endgame Belts T3 Ideal", "endgame->jewellery;beltst3ideallevel") { }
+
+        Search Amu1Eg(0.0, "Endgame Rare Amulets/Rings Tier 1 EG", "rr->amuringeg;t1") { }
+        Search Amu2Eg(0.0, "Endgame Rare Amulets/Rings Tier 2 EG", "rr->amuringeg;t2") { }
+        Search Amu3Eg(0.0, "Endgame Rare Amulets/Rings Tier 3 EG", "rr->amuringeg;t3") { }
+        Search Belt1Eg(0.0, "Endgame Rare Belts Tier 1 EG", "rr->beltseg;t1") { }
+        Search Belt2Eg(0.0, "Endgame Rare Belts Tier 2 EG", "rr->beltseg;t2") { }
+        Search Belt3Eg(0.0, "Endgame Rare Belts Tier 3 EG", "rr->beltseg;t3") { }
+
+        Title("Amulets & Rings");
+
+
+        QuickUI(Amu1Ideal, "SH", ["ItemLevel", "Rarity"], "Tier 1 ideal");
+        QuickUI(Amu2Ideal, "SH", ["ItemLevel", "Rarity"], "Tier 2 ideal");
+        QuickUI(Amu3Ideal, "SH", ["ItemLevel", "Rarity"], "Tier 3 ideal");
+
+        QuickUI(Amu1Craft, "SH", ["ItemLevel", "Rarity"], "Tier 1 crafting");
+        QuickUI(Amu2Craft, "SH", ["ItemLevel", "Rarity"], "Tier 2 crafting");
+        QuickUI(Amu3Craft, "SH", ["ItemLevel", "Rarity"], "Tier 3 crafting");
+
+        QuickUI(Amu1Eg, "SH", ["ItemLevel"], "Tier 1 endgame");
+        QuickUI(Amu2Eg, "SH", ["ItemLevel"], "Tier 2 endgame");
+        QuickUI(Amu3Eg, "SH", ["ItemLevel"], "Tier 3 endgame");
+        Divider();
+        Title("Belts");
+        QuickUI(Belt1Rare, "SH", ["ItemLevel"], "Tier 1 rare");
+        QuickUI(Belt2Rare, "SH", ["ItemLevel"], "Tier 2 rare");
+        QuickUI(Belt3Rare, "SH", ["ItemLevel"], "Tier 3 rare");
+
+        QuickUI(Belt1Craft, "SH", ["ItemLevel", "Rarity"], "Tier 1 crafting");
+        QuickUI(Belt2Craft, "SH", ["ItemLevel", "Rarity"], "Tier 2 crafting");
+        QuickUI(Belt3Craft, "SH", ["ItemLevel", "Rarity"], "Tier 3 crafting");
+
+        QuickUI(Belt1Ideal, "SH", ["ItemLevel", "Rarity"], "Tier 1 ideal");
+        QuickUI(Belt2Ideal, "SH", ["ItemLevel", "Rarity"], "Tier 2 ideal");
+        QuickUI(Belt3Ideal, "SH", ["ItemLevel", "Rarity"], "Tier 3 ideal");
+
+        QuickUI(Belt1Eg, "SH", ["ItemLevel"], "Tier 1 endgame");
+        QuickUI(Belt2Eg, "SH", ["ItemLevel"], "Tier 2 endgame");
+        QuickUI(Belt3Eg, "SH", ["ItemLevel"], "Tier 3 endgame");
+
+        Divider();
+        Title("Tiering");
+        BaseTypeMatrix(false, "Tier 1", Amu1Rare, Amu1Ideal, Amu1Craft, Amu1Eg, Belt1Rare, Belt1Ideal, Belt1Eg, Belt1Craft, "Tier 2", Amu2Rare, Amu2Ideal, Amu2Craft, Amu2Eg, Belt2Rare,Belt2Craft,Belt2Eg,Belt2Ideal, "Tier 3", Amu3Rare,Amu3Craft,Amu3Ideal,Amu3Eg, Belt3Rare,Belt3Craft, Belt3Ideal, Belt3Eg);
+    }
+
+    Section("Weapons & Armours") {
+        Search R1(0.0, "Endgame Rares Tier 1 Top", "rr;t1_top") { }
+        Search R1(0.0, "Endgame Rares Tier 1 Other", "rr;t1_other") { }
+        Search R2(0.0, "Endgame Rares Tier 2 Top", "rr;t2_top") { }
+        Search R2(0.0, "Endgame Rares Tier 2 A1", "rr;t2_a1") { }
+        Search R2(0.0, "Endgame Rares Tier 2 Other", "rr;t2_other") { }
+        Search R3(0.0, "Endgame Rares Tier 3 Top", "rr;t3_top") { }
+        Search R3(0.0, "Endgame Rares Tier 3 A1", "rr;t3_a1") { }
+        Search R3(0.0, "Endgame Rares Tier 3 A2", "rr;t3_a2") { }
+        Search R3(0.0, "Endgame Rares Tier 3 Other", "rr;t3_other") { }
+        Search R4(0.0, "Endgame Rares Tier 4 A1", "rr;t4_a1") { }
+        Search R4(0.0, "Endgame Rares Tier 4 A2", "rr;t4_a2") { }
+        Search R4(0.0, "Endgame Rares Tier 4 Other", "rr;t4_other") { }
+        Search R5(0.0, "Endgame Rares Tier 5 A1", "rr;t5_a1") { }
+        Search R5(0.0, "Endgame Rares Tier 5 A2", "rr;t5_a2") { }
+        Search R5(0.0, "Endgame Rares Tier 5 Other", "rr;t5_other") { }
+
+        Search R1(0.0, "Endgame Crafting Tier 1, ideal", "endgame->normalcraft->any;t1ideallevel") { }
+        Search R1(0.0, "Endgame Crafting Tier 1", "endgame->normalcraft->any;t1") { }
+        Search R2(0.0, "Endgame Crafting Tier 2, ideal", "endgame->normalcraft->any;t2ideallevel") { }
+        Search R3(0.0, "Endgame Crafting Tier 3, ideal", "endgame->normalcraft->any;t3ideallevel") { }
+        Search R2(0.0, "Endgame Crafting Tier 2, onLevel", "endgame->normalcraft->any;t2onlevel") { }
+        Search R3(0.0, "Endgame Crafting Tier 3, onLevel", "endgame->normalcraft->any;t3onlevel") { }
+
+        BaseTypeMatrix(true, "Tier 1", R1, "Tier 2", R2, "Tier 3", R3, "Tier 4", R4);
+
+        Title("Rares");
+        QuickUI(0, "SH", ["ItemLevel"]);
+        QuickUI(1, "SH", ["ItemLevel"]);
+        QuickUI(2, "SH", ["ItemLevel"]);
+        QuickUI(3, "SH", ["ItemLevel"]);
+        QuickUI(4, "SH", ["ItemLevel"]);
+        QuickUI(5, "SH", ["ItemLevel"]);
+        QuickUI(6, "SH", ["ItemLevel"]);
+        QuickUI(7, "SH", ["ItemLevel"]);
+        QuickUI(8, "SH", ["ItemLevel"]);
+        QuickUI(9, "SH", ["ItemLevel"]);
+        QuickUI(10, "SH", ["ItemLevel"]);
+        QuickUI(11, "SH", ["ItemLevel"]);
+        QuickUI(12, "SH", ["ItemLevel"]);
+        QuickUI(13, "SH", ["ItemLevel"]);
+        QuickUI(14, "SH", ["ItemLevel"]);
+
+        Divider();
+        Title("Crafting");
+        QuickUI(15, "SH", ["ItemLevel", "Rarity"]);
+        QuickUI(16, "SH", ["ItemLevel", "Rarity"]);
+        QuickUI(17, "SH", ["ItemLevel", "Rarity"]);
+        QuickUI(18, "SH", ["ItemLevel", "Rarity"]);
+        QuickUI(19, "SH", ["ItemLevel", "Rarity"]);
+        QuickUI(20, "SH", ["ItemLevel", "Rarity"]);
+    }
+
+    Section("Special Bases") {
+        QuickUI([0.0, "Exotic Bases, high level", "exoticbases;commonexoticbaseshigh"], "SH", ["Rarity", "ItemLevel", "Identified"]);
+        QuickUI([0.0, "Exotic Bases", "exoticbases;commonexoticbases"], "SH", ["Rarity", "ItemLevel", "Identified"]);
+    }
+
+    Section("Optional rules") {
+        QuickUI([0.0, "Endgame Crafting, Caster", "endgame->normalcraft->any;minionsceptresoptional"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity"], "", ["gear", "SAO"]);
+    }
+
+}
+
+Chapter() {
+    SectionTitle("Other Endgame Items");
 
     Section("Flasks & Charms") {
         Section("Flasks") {
