@@ -9,35 +9,35 @@
 // =============================================================================================================
 
 StyleSection("COMMON CURRENCIES", "Basic supplies used to perform common operations. They're not worth much, but are important nonetheless. People frequently hide them or buy them in bulk.<hr> Hover over the scroll above for more information! ( recommended for new players )") {
-    Search S0("skip", "High Tier Supplies") { BaseType "Orb of Transmutation"; StackSize 4; AreaLevel 70; }
-    Search S0("skip", "Low Tier Supplies") { BaseType "Orb of Augmentation"; StackSize 4; AreaLevel 70; }
-    Search S0("skip", "Wisdom Scrolls") { BaseType "Scroll of Wisdom"; StackSize 4; AreaLevel 70; }
+    Search S0("skip", "High Tier Supplies") { BaseType "Orb of Transmutation"; StackSize 1; AreaLevel 70; }
+    Search S0("skip", "Low Tier Supplies") { BaseType "Orb of Augmentation"; StackSize 1; AreaLevel 70; }
+    Search S0("skip", "Wisdom Scrolls") { BaseType "Scroll of Wisdom"; StackSize 1; AreaLevel 70; }
     SS_Item("S0");
 
-    SS_InfoBox(["Detailed explanation", "Vendor transmutation or blacksmith currencies to receive 1:4 wisdom scrolls or use a portal gem instead of portal scrolls to save clicking-time. <hr> The filter has individual rules for stacked and single currency drops and additional rules for the campaign section of the game. <hr> Every time you pick up an item, you have to stop. Optimized characters are better off focusing on the good drops and ignoring the plethora of cheap drops. As your character becomes more optimized, increasing the strictness level of the filter is advised. <hr>"]);
+    SS_InfoBox(["Detailed explanation", "Basic supplies for early game crafting operations. Wisdoms can be purchased from vendors for 25 gold each, so they're hidden in the endgame<hr> The filter has individual rules for the campaign section of the game. <hr> Every time you pick up an item, you have to stop. Optimized characters are better off focusing on the good drops and ignoring the plethora of cheap drops. As your character becomes more optimized, increasing the strictness level of the filter is advised. <hr>"]);
 }
 
 StyleSection("MID-TIER CURRENCY", "Rather common, but unless sold in bulk, not too expensive. Often used in basic crafting.") {
-    Search S0("skip", "Alterations") { BaseType "Orb of Alteration"; }
+    Search S0("skip", "Orb of Alchemy") { BaseType "Orb of Alchemy"; }
+    Search S0("skip", "Vaal Orb") { BaseType "Vaal Orb"; }
     Search S0("skip", "Lesser Jeweller's Orb") { BaseType "Lesser Jeweller's Orb"; }
-    Search S0("skip", "Chance Orbs") { BaseType "Orb of Chance"; }
     SS_Item("S0");
 
     SS_InfoBox(["Detailed explanation", "The site is updated every 4 hours and the tiering of the items may differ. Items might change their tier based on high or low demand. Note that you have to redownload/sync the filter to get the latest economy data! <hr> Don't underrate chance orbs! You can buy Waystones from vendors at the start of the league to quickly progress through the atlas! <hr> Alterations, jeweller's and chromatics can also be reliably obtained by doing vendor recipes."]);
 }
 
 StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act as trade goods for players. Chaos Orbs and Divine Orbs are pretty much the standard way to pay for most trades. These are desired drops and it's almost always recommended to pick them up.") {
-    Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
-    Search S0("skip", "Exalted Orbs") { BaseType "Exalted Orb"; }
+    Search S0("skip", "Greater Jeweller's Orb") { BaseType "Greater Jeweller's Orb"; }
     Search S0("skip", "Annulment Orbs") { BaseType "Orb of Annulment"; }
     Search S0("skip", "Ye Trusty Chaos Orbs") { BaseType "Chaos Orb"; }
-    Search S0("skip", "Alchemy Orbs") { BaseType "Orb of Alchemy"; }
+    Search S0("skip", "Exalted Orbs") { BaseType "Exalted Orb"; }
     SS_Item("S0");
 
 	SS_InfoBox(["Detailed explanation", "Items have a sound that is linked to their value-tier. All high tier currencies make the same sound. When you hear it - you know 'something dropped'. You can click on the currency preview to hear the sound <hr> They also come with a minimap-icon. The icons can be seen next to the item preview labels on FilterBlade. <hr> You can change all of these settings in the customizer screen here. To quickly jump to the settings for a certain item, right click the item label or CTRL+click the item."]);
 }
 
 StyleSection("TOP-VALUE ITEMS", "All top tier items have the same white background and drop-sound. They also come with a red beam and a huge red star on the minimap. These items include top tier currencies, valuable uniques, great divination cards, reliquary keys and everything else that is worth a LOT.") {
+    Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
     Search S0("skip", "MIRROR OF KALANDRA!!!") { BaseType "Mirror of Kalandra"; }
     Search S0("skip", null, "uniques;t1") { BaseType "Glorious Plate"; ItemLevel 83; Rarity "Unique"; }
 
@@ -52,8 +52,10 @@ StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. Th
 }
 
 StyleSection("Gold", "You can find gold all throughout the game. Use it to shop at vendors or respec your skill tree.") {
-    Search S0("skip") { BaseType "Gold"; StackSize 1; }
-    Search S0("skip") { BaseType "Gold"; StackSize 1000; }
+    Search S0("skip") { BaseType "Gold"; StackSize 30; }
+    Search S0("skip") { BaseType "Gold"; StackSize 100; }
+    Search S0("skip") { BaseType "Gold"; StackSize 3100; }
+    Search S0("skip") { BaseType "Gold"; StackSize 5000; }
     SS_Item("S0");
 }
 
@@ -77,7 +79,7 @@ StyleSection("SOMETIMES LUCKY", "The blue or purple map icons and beams signaliz
     SS_InfoBox(["Detailed explanation", "Generally speaking the purple icon is used for the items with a higher chance to be good. On top of that the small blue stars are usually indicative of a basetypes with good boss-drops."]);
 }
 
-StyleSection("Skill Gems", "This is how you get and improve your abilities. There are also permanent passive buffs that cost 'Spirit'.") {
+StyleSection("Skill Gems", "Uncut skill gems are highlighted based on the arealevel and their gemlevel. You'll see them clearly during the campaign. In the endgame high level ones receive extra highlight!") {
     Search S0("skip", "Skill Gems") { BaseType "Uncut Skill Gem"; AreaLevel 10; }
     Search S0("skip", "Support Gems") { BaseType "Uncut Support Gem"; AreaLevel 10; }
     Search S0("skip", "Spirit Gems") { BaseType "Uncut Spirit Gem"; AreaLevel 10; }
@@ -87,10 +89,10 @@ StyleSection("Skill Gems", "This is how you get and improve your abilities. Ther
 SS_SectionTitle("Waystones");
 
 StyleSection("Endgame Waystones", "Waystones gain more highlight as they gain tiers. High tier (11+) and top tier (16) Waystones have different sounds. The filter highlights waystone tier upgrades with an extra color.") {
-    Search S0("skip", "T14+ Red Waystones") { Class Waystones; ItemLevel 84; WaystoneTier 16; Rarity Normal; }
-    Search S0("skip", "T10 Waystones") { Class Waystones; ItemLevel 82; WaystoneTier 12; Rarity Normal; }
-    Search S0("skip", "T5 Waystones") { Class Waystones; ItemLevel 78; WaystoneTier 7; Rarity Normal; }
-    Search S0("skip", "T1 Waystones") { Class Waystones; ItemLevel 72; WaystoneTier 2; Rarity Normal; }
+    Search S0("skip", "T15+ Red Waystones") { Class Waystones; ItemLevel 79; WaystoneTier 15; Rarity Normal; }
+    Search S0("skip", "T14 Waystones") { Class Waystones; ItemLevel 79; WaystoneTier 14; Rarity Normal; }
+    Search S0("skip", "T5 Waystones") { Class Waystones; ItemLevel 70; WaystoneTier 5; Rarity Normal; }
+    Search S0("skip", "T1 Waystones") { Class Waystones; ItemLevel 65; WaystoneTier 1; Rarity Normal; }
     SS_Item("S0");
 }
 
