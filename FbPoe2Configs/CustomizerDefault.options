@@ -307,26 +307,74 @@ Chapter() {
             QuickUI([0.0, "Endgame Crafting Decorator, Quality 2", "endgame->normalcraft->decorator;qualitydecorator2"], "SH", ["Rarity", "Quality"], "Quality");
         }
 
-        Section("Rare Jewellery") {
+        Section("Jewellery") {
             Search Amu1(0.0, "Endgame Rare Amulets/Rings Tier 1", "rr->amuring;t1") { }
             Search Amu2(0.0, "Endgame Rare Amulets/Rings Tier 2", "rr->amuring;t2") { }
             Search Amu3(0.0, "Endgame Rare Amulets/Rings Tier 3", "rr->amuring;t3") { }
             Search Belt1(0.0, "Endgame Rare Belts Tier 1", "rr->belts;t1") { }
             Search Belt2(0.0, "Endgame Rare Belts Tier 2", "rr->belts;t2") { }
             Search Belt3(0.0, "Endgame Rare Belts Tier 3", "rr->belts;t3") { }
+
+            Search Amu1(0.0, "Endgame Rings & Amulets T1 Ideal", "endgame->jewellery;ringamut1ideallevel") { }
+            Search Amu2(0.0, "Endgame Rings & Amulets T2 Ideal", "endgame->jewellery;ringamut2ideallevel") { }
+            Search Amu3(0.0, "Endgame Rings & Amulets T3 Ideal ", "endgame->jewellery;ringamut3ideallevel") { }
+            Search Amu1(0.0, "Endgame Rings & Amulets T1 ", "endgame->jewellery;ringamut1") { }
+            Search Amu2(0.0, "Endgame Rings & Amulets T2 ", "endgame->jewellery;ringamut2") { }
+            Search Amu3(0.0, "Endgame Rings & Amulets T3 ", "endgame->jewellery;ringamut3") { }
+            Search Belt1(0.0, "Endgame Belts T1", "endgame->jewellery;beltst1") { }
+            Search Belt2(0.0, "Endgame Belts T2", "endgame->jewellery;beltst2") { }
+            Search Belt3(0.0, "Endgame Belts T3", "endgame->jewellery;beltst3") { }
+            Search Belt1(0.0, "Endgame Belts T1 Ideal", "endgame->jewellery;beltst1ideallevel") { }
+            Search Belt2(0.0, "Endgame Belts T2 Ideal", "endgame->jewellery;beltst2ideallevel") { }
+            Search Belt3(0.0, "Endgame Belts T3 Ideal", "endgame->jewellery;beltst3ideallevel") { }
+
+            Search Amu1(0.0, "Endgame Rare Amulets/Rings Tier 1 EG", "rr->amuringeg;t1") { }
+            Search Amu2(0.0, "Endgame Rare Amulets/Rings Tier 2 EG", "rr->amuringeg;t2") { }
+            Search Amu3(0.0, "Endgame Rare Amulets/Rings Tier 3 EG", "rr->amuringeg;t3") { }
+            Search Belt1(0.0, "Endgame Rare Belts Tier 1 EG", "rr->beltseg;t1") { }
+            Search Belt2(0.0, "Endgame Rare Belts Tier 2 EG", "rr->beltseg;t2") { }
+            Search Belt3(0.0, "Endgame Rare Belts Tier 3 EG", "rr->beltseg;t3") { }
+
             Title("Amulets & Rings");
-            QuickUI(Amu1, "SH", ["ItemLevel"], "Tier 1");
-            QuickUI(Amu2, "SH", ["ItemLevel"], "Tier 2");
-            QuickUI(Amu3, "SH", ["ItemLevel"], "Tier 3");
+            QuickUI(0, "SH", ["ItemLevel"], "Tier 1 rare");
+            QuickUI(1, "SH", ["ItemLevel"], "Tier 2 rare");
+            QuickUI(2, "SH", ["ItemLevel"], "Tier 3 rare");
+
+            QuickUI(6, "SH", ["ItemLevel", "Rarity"], "Tier 1 ideal");
+            QuickUI(7, "SH", ["ItemLevel", "Rarity"], "Tier 2 ideal");
+            QuickUI(8, "SH", ["ItemLevel", "Rarity"], "Tier 3 ideal");
+
+            QuickUI(9, "SH", ["ItemLevel", "Rarity"], "Tier 1 crafting");
+            QuickUI(10, "SH", ["ItemLevel", "Rarity"], "Tier 2 crafting");
+            QuickUI(11, "SH", ["ItemLevel", "Rarity"], "Tier 3 crafting");
+
+            QuickUI(18, "SH", ["ItemLevel"], "Tier 1 endgame");
+            QuickUI(19, "SH", ["ItemLevel"], "Tier 2 endgame");
+            QuickUI(20, "SH", ["ItemLevel"], "Tier 3 endgame");
+            Divider();
             Title("Belts");
-            QuickUI(Belt1, "SH", ["ItemLevel"], "Tier 1");
-            QuickUI(Belt2, "SH", ["ItemLevel"], "Tier 2");
-            QuickUI(Belt3, "SH", ["ItemLevel"], "Tier 3");
+            QuickUI(3, "SH", ["ItemLevel"], "Tier 1 rare");
+            QuickUI(4, "SH", ["ItemLevel"], "Tier 2 rare");
+            QuickUI(5, "SH", ["ItemLevel"], "Tier 3 rare");
+
+            QuickUI(12, "SH", ["ItemLevel", "Rarity"], "Tier 1 crafting");
+            QuickUI(13, "SH", ["ItemLevel", "Rarity"], "Tier 2 crafting");
+            QuickUI(14, "SH", ["ItemLevel", "Rarity"], "Tier 3 crafting");
+
+            QuickUI(15, "SH", ["ItemLevel", "Rarity"], "Tier 1 ideal");
+            QuickUI(16, "SH", ["ItemLevel", "Rarity"], "Tier 2 ideal");
+            QuickUI(17, "SH", ["ItemLevel", "Rarity"], "Tier 3 ideal");
+
+            QuickUI(21, "SH", ["ItemLevel"], "Tier 1 endgame");
+            QuickUI(22, "SH", ["ItemLevel"], "Tier 2 endgame");
+            QuickUI(23, "SH", ["ItemLevel"], "Tier 3 endgame");
+
+            Divider();
             Title("Tiering");
             BaseTypeMatrix(false, "Tier 1", Amu1, Belt1, "Tier 2", Amu2, Belt2, "Tier 3", Amu3, Belt3);
         }
 
-        Section("Weapons, Armours & Jewellery") {
+        Section("Weapons & Armours") {
             Search R1(0.0, "Endgame Rares Tier 1 Top", "rr;t1_top") { }
             Search R1(0.0, "Endgame Rares Tier 1 Other", "rr;t1_other") { }
             Search R2(0.0, "Endgame Rares Tier 2 Top", "rr;t2_top") { }
@@ -350,19 +398,6 @@ Chapter() {
             Search R3(0.0, "Endgame Crafting Tier 3, ideal", "endgame->normalcraft->any;t3ideallevel") { }
             Search R2(0.0, "Endgame Crafting Tier 2, onLevel", "endgame->normalcraft->any;t2onlevel") { }
             Search R3(0.0, "Endgame Crafting Tier 3, onLevel", "endgame->normalcraft->any;t3onlevel") { }
-
-            Search R1(0.0, "Endgame Rings & Amulets T1 Ideal", "endgame->jewellery;ringamut1ideallevel") { }
-            Search R2(0.0, "Endgame Rings & Amulets T2 Ideal", "endgame->jewellery;ringamut2ideallevel") { }
-            Search R3(0.0, "Endgame Rings & Amulets T3 Ideal ", "endgame->jewellery;ringamut3ideallevel") { }
-            Search R1(0.0, "Endgame Rings & Amulets T1 ", "endgame->jewellery;ringamut1") { }
-            Search R2(0.0, "Endgame Rings & Amulets T2 ", "endgame->jewellery;ringamut2") { }
-            Search R3(0.0, "Endgame Rings & Amulets T3 ", "endgame->jewellery;ringamut3") { }
-            Search R1(0.0, "Endgame Belts T1", "endgame->jewellery;beltst1") { }
-            Search R2(0.0, "Endgame Belts T2", "endgame->jewellery;beltst2") { }
-            Search R3(0.0, "Endgame Belts T3", "endgame->jewellery;beltst3") { }
-            Search R1(0.0, "Endgame Belts T1 Ideal", "endgame->jewellery;beltst1ideallevel") { }
-            Search R2(0.0, "Endgame Belts T2 Ideal", "endgame->jewellery;beltst2ideallevel") { }
-            Search R3(0.0, "Endgame Belts T3 Ideal", "endgame->jewellery;beltst3ideallevel") { }
 
             BaseTypeMatrix(true, "Tier 1", R1, "Tier 2", R2, "Tier 3", R3, "Tier 4", R4);
 
@@ -392,21 +427,6 @@ Chapter() {
             QuickUI(19, "SH", ["ItemLevel", "Rarity"]);
             QuickUI(20, "SH", ["ItemLevel", "Rarity"]);
             QuickUI(21, "SH", ["ItemLevel", "Rarity"]);
-
-//            Divider();
-//            Title("Jewellery");
-            QuickUI(22, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(23, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(24, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(25, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(26, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(27, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(28, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(29, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(30, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(31, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(32, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(33, "SH", ["ItemLevel", "Rarity"]);
 
         }
     }
@@ -662,7 +682,8 @@ Chapter() {
 
         Section("Misc.") {
             QuickUI([0.0, "Campaign First Areas", "leveling->firstlevels;firstareas"], "SH", ["AreaLevel", "Rarity"]);
-            QuickUI([0.0, "Campaign Early Boots", "leveling->firstlevels;earlyboots"], "SH", ["AreaLevel", "Rarity"]);
+            QuickUI([0.0, "Campaign First Area", "leveling->firstlevels;firstarea"], "SH", ["AreaLevel", "Rarity"]);
+            QuickUI([0.0, "Campaign Early Boots", "leveling->normalmagicremarkable;earlyboots"], "SH", ["AreaLevel", "Rarity"]);
 
             QuickUI([0.0, "Campaign Magic, Remaining", "leveling->magic->remaining;rest"], "SH", ["AreaLevel"]);
             QuickUI([0.0, "Campaign Magic, Act 2", "leveling->magic->remaining;act2"], "SH", ["AreaLevel"]);
