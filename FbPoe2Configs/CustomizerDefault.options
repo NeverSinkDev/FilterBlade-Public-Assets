@@ -151,10 +151,6 @@ Chapter("chapter") {
 
             QuickUI([0.0, "Remaining Omen", "currency->omen;exhide"], "SH", [], "", [], "Remaining Omen, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
         }
-
-        Section("Misc") {
-            QuickUI([0.0, "Misc Currency", "currency->others;misc"], "SH", []); // todo???
-        }
     }
 
     Section("Gold") {
@@ -368,7 +364,6 @@ Chapter() {
         Section("Hide rares by item slot", "Annulment") {
             Function CondHideClass ($s, $shd = "HD", $title)
             {
-                // todo: a LOT of these are VERY damn similar -> remove e.g. height & width, so that they will appear in AddAttribute?
                 QuickUI($s, $shd, ["CondTargetSelection", "AllGearClasses", "ItemLevel", "Height", "Width", "Stats_RareGear"], $title);
             }
 
@@ -487,7 +482,6 @@ Chapter() {
             Search R5(0.0, "Endgame Rares Tier 5 Other", "rr;t5_other") { }
 
             Search R1(0.0, "Endgame Crafting Tier 1, ideal", "endgame->normalcraft->any;t1ideallevel") { }
-            Search RM(0.0, "Endgame Crafting, Minions", "endgame->normalcraft->any;minionsceptresoptional") { } // todo
             Search R1(0.0, "Endgame Crafting Tier 1", "endgame->normalcraft->any;t1") { }
             Search R2(0.0, "Endgame Crafting Tier 2, ideal", "endgame->normalcraft->any;t2ideallevel") { }
             Search R3(0.0, "Endgame Crafting Tier 3, ideal", "endgame->normalcraft->any;t3ideallevel") { }
@@ -521,8 +515,15 @@ Chapter() {
             QuickUI(18, "SH", ["ItemLevel", "Rarity"]);
             QuickUI(19, "SH", ["ItemLevel", "Rarity"]);
             QuickUI(20, "SH", ["ItemLevel", "Rarity"]);
-            QuickUI(21, "SH", ["ItemLevel", "Rarity"]);
+        }
 
+        Section("Special Bases") {
+            QuickUI([0.0, "Exotic Bases, high level", "exoticbases;commonexoticbaseshigh"], "SH", ["Rarity", "ItemLevel", "Identified"]);
+            QuickUI([0.0, "Exotic Bases", "exoticbases;commonexoticbases"], "SH", ["Rarity", "ItemLevel", "Identified"]);
+        }
+
+        Section("Optional rules") {
+            QuickUI([0.0, "Endgame Crafting, Caster", "endgame->normalcraft->any;minionsceptresoptional"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity"], "", ["gear", "SAO"]);
         }
     }
 
@@ -633,10 +634,10 @@ Chapter() {
             QuickUI([0.0, "Djinn Barya, High Level", "miscmapitemsextra;trialkeysanctumhigh"], "SH", ["ItemLevel"]);
             QuickUI([0.0, "Djinn Barya", "miscmapitemsextra;trialkeysanctumlow"], "SH", ["ItemLevel"]);
             Divider();
+            QuickUI([0.0, "Ultimatum Reward", "miscmapitemsextra;trialkeyultimatumreward"], "SH", ["RarityU"]);
             QuickUI([0.0, "Ultimatum, Top Level", "miscmapitemsextra;trialkeyultimatumtop"], "SH", ["ItemLevel"]);
             QuickUI([0.0, "Ultimatum, High Level", "miscmapitemsextra;trialkeyultimatumhigh"], "SH", ["ItemLevel"]);
             QuickUI([0.0, "Ultimatum", "miscmapitemsextra;trialkeyultimatumlow"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Ultimatum Reward", "miscmapitemsextra;trialkeyultimatumreward"], "SH", ["ItemLevel"]); // todo
         }
 
         Section("Splinters") {
@@ -648,9 +649,7 @@ Chapter() {
         }
 
         Section("Misc.") {
-            QuickUI([0.0, "TODO IDK", "miscmapitemsextra;relickeys"], "SH", []); // todo
             QuickUI([0.0, "Vault Keys", "miscmapitemsextra;relickeyssafe"], "SH", []);
-
             QuickUI([0.0, "Pinnacle Boss Keys", "maplike->special;superkeys"], "SH", []);
             QuickUI([0.0, "Logbooks", "maplike->special;logbooks"], "SH", []);
         }
@@ -918,9 +917,11 @@ Chapter() {
         QuickUI([0.0, "Quest Items", "questlikeexception;questitems"], "SH", []);
         QuickUI([0.0, "Fishing Rod", "artifact;fishingrod"], "SH", []);
         QuickUI([0.0, "Relics", "relics->generic;any"], "SH", []);
-
         QuickUI([0.0, "Unique Exception: Sekhema Ring", "uniques;sekhemaring"], "SH");
         QuickUI([0.0, "Corrupted Uniques", "uniques;corrupteduniques"], "SH");
+        QuickUI([0.0, "Over-Quality Items", "exotic->others;overqualityany"], "SH", ["Quality"]);
+
+        Divider();
 
         QuickUI([0.0, "Strictness Show-Layers, All", "lowstrictnessshowlayer;anyfinal"], "SH", []); // todo
         QuickUI([0.0, "Strictness Show-Layers, Normal/Magic", "lowstrictnessshowlayer;normalmagicendgameany"], "SH", []); // todo
@@ -940,11 +941,5 @@ Chapter() {
         QuickUI([0.0, "Error Uniques", "uniques;restex"], "SH", []);
         QuickUI([0.0, "Error Runes", "sockets->runes;restex"], "SH", []);
         QuickUI([0.0, "Error Soul Cores", "sockets->cores;restex"], "SH", []);
-    }
-
-    Section("Exotic Bases") { // todo
-        QuickUI([0.0, "Exotic Bases, high level", "exoticbases;commonexoticbaseshigh"], "SH", []);
-        QuickUI([0.0, "Exotic Bases", "exoticbases;commonexoticbases"], "SH", []);
-        QuickUI([0.0, "Over-Quality Items", "exotic->others;overqualityany"], "SH", ["Quality"]);
     }
 }
