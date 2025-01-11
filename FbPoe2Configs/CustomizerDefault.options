@@ -43,13 +43,13 @@ Chapter("chapter") {
 
         Section("Campaign Overrides", "currencyaddmodtomagic.webp") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function CampaignCurrencyFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["normalCurrencyPoe2", "DO"]); }
+            Function CampaignCurrencyFunc($s, $shd = "SD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["normalCurrencyPoe2", "DO"]); }
             TierListToolBar();
 
-            CampaignCurrencyFunc([0.0, "Campaign Currencies 1", "currency->leveling;rare"], "SH", "Regal, Artificers, jewellers");
-            CampaignCurrencyFunc([0.0, "Campaign Currencies 2", "currency->leveling;magic"], "SH", "Transmutes+Augments");
-            CampaignCurrencyFunc([0.0, "Campaign Currencies 4", "currency->leveling;wisdomstart"], "SH", "Wisdom Scrolls (act 1)");
-            CampaignCurrencyFunc([0.0, "Campaign Currencies 3", "currency->leveling;wisdom"], "SH", "Wisdom Scrolls (later acts)");
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 1", "currency->leveling;rare"], "SD", "Regal, Artificers, jewellers");
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 2", "currency->leveling;magic"], "SD", "Transmutes+Augments");
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 4", "currency->leveling;wisdomstart"], "SD", "Wisdom Scrolls (act 1)");
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 3", "currency->leveling;wisdom"], "SD", "Wisdom Scrolls (later acts)");
 
             // new tiers
             Conditional("?CampaignCurrencyNewTier") { }
@@ -174,7 +174,7 @@ Chapter("chapter") {
 
         Description("You can potentially turn a normal item into a unique using a 'Orb of Chance'. The chances for that to happen are slim, but it can be pretty thrilling and profitable if you hit the lottery. The following section suggests potential chancing bases.<br> Only non-boss drops can be chanced:");
 
-        ChancingFunc([0.0, "Chancing bases", "chancing;any"], "SH");
+        ChancingFunc([0.0, "Chancing bases", "chancing;any"], "SD");
 
         // new tiers
         Conditional("?ChancingNewTier") { }
