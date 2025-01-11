@@ -517,14 +517,14 @@ Chapter() {
         Description("In PoE2 new items start dropping once you push into higher waystones. The tierlist is designed to highlight the most relevant bases in the current waystone. Tip: you can enable/disable all rules in a section, by rightclicking it.");
 
         Title("Control Visibility:");
-        Section("RARE: T1 (mostly available at ilvl75+)", "Buckler09.webp")
+        Section("RARE: T1 (mostly available at ilvl75+)", "buckler09.webp")
         {
             Description("T1 rares are the best rares in their category. Most of them require level 75-79 to drop. These bases require the higehst zone level to drop");
             QuickUI(R1Top, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares: LVL82+ (TOP OF THE LINE)");
             QuickUI(R1Other, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares: LVL65-81 (TOP OF THE LINE)");
         }
 
-        Section("RARE: T2 (cutting edge at ilvl70-75)", "Buckler04.webp")
+        Section("RARE: T2 (cutting edge at ilvl70-75)", "buckler04.webp")
         {
             Description("T2 rares are the second best rares. Most of them require level 70-75 to drop. These bases are the best available during T6-T12 waystones.");
             QuickUI(R2Top, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL82+ (VIABLE)");
@@ -532,7 +532,7 @@ Chapter() {
             QuickUI(R2Other, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL65-74 (TOP OF THE LINE)");
         }
 
-        Section("RARE: T3 (cutting edge at ilvl65-70)", "Buckler03.webp")
+        Section("RARE: T3 (cutting edge at ilvl65-70)", "buckler03.webp")
         {
             Description("T3 rares are usually the first endgame exclusive rares. They usually require level 65-70 to drop. These bases are the best available during T1-T5 waystones.");
             QuickUI(R3Top, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL82+ (POOR)");
@@ -541,7 +541,7 @@ Chapter() {
             QuickUI(R3Other, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL65-69 (TOP OF THE LINE)");
         }
 
-        Section("RARE: T4 and Untiered", "Buckler01.webp")
+        Section("RARE: T4 and Untiered", "buckler01.webp")
         {
             Description("T4 rares are usually advanced bases that drop late in the campaign. In waystones T1-T3, these can sometimes still be the best available item.");
             QuickUI(R4A1, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL75+ (POOR)");
