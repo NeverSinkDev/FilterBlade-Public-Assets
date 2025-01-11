@@ -36,21 +36,6 @@ StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act 
 	SS_InfoBox(["Detailed explanation", "Items have a sound that is linked to their value-tier. All high tier currencies make the same sound. When you hear it - you know 'something dropped'. You can click on the currency preview to hear the sound <hr> They also come with a minimap-icon. The icons can be seen next to the item preview labels on FilterBlade. <hr> You can change all of these settings in the customizer screen here. To quickly jump to the settings for a certain item, right click the item label or CTRL+click the item."]);
 }
 
-StyleSection("TOP-VALUE ITEMS", "All top tier items have the same white background and drop-sound. They also come with a red beam and a huge red star on the minimap. These items include top tier currencies, valuable uniques, great divination cards, reliquary keys and everything else that is worth a LOT.") {
-    Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
-    Search S0("skip", "MIRROR OF KALANDRA!!!") { BaseType "Mirror of Kalandra"; }
-    Search S0("skip", null, "uniques;t1") { BaseType "Glorious Plate"; ItemLevel 83; Rarity "Unique"; }
-
-    SS_Item("S0");
-    SS_InfoBox(["Detailed explanation", "It should be noted that other items without the white background can be just as, if not more valuable. However, with other items it often comes down to mods, luck and crafting, while the white background items are pretty much always great!"]);
-}
-
-StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. These rules have priority over normal currency rules, but only apply in areas under level 68. Great for new leagues!") {
-    Search S0("skip", "LEVELING: Transmutations") { BaseType "Orb of Transmutation"; AreaLevel 20; }
-    Search S0("skip", "LEVELING: Wisdoms") { BaseType "Scroll of Wisdom"; AreaLevel 20; }
-    SS_Item("S0");
-}
-
 StyleSection("Gold", "You can find gold all throughout the game. Use it to shop at vendors or respec your skill tree.") {
     Search S0("skip") { BaseType "Gold"; StackSize 30; }
     Search S0("skip") { BaseType "Gold"; StackSize 100; }
@@ -62,6 +47,15 @@ StyleSection("Gold", "You can find gold all throughout the game. Use it to shop 
 SS_Ad();
 
 SS_SectionTitle("Notable Drops");
+
+StyleSection("TOP-VALUE ITEMS", "All top tier items have the same white background and drop-sound. They also come with a red beam and a huge red star on the minimap. These items include top tier currencies, valuable uniques, great divination cards, reliquary keys and everything else that is worth a LOT.") {
+    Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
+    Search S0("skip", "MIRROR OF KALANDRA!!!") { BaseType "Mirror of Kalandra"; }
+    Search S0("skip", null, "uniques;t1") { BaseType "Glorious Plate"; ItemLevel 83; Rarity "Unique"; }
+
+    SS_Item("S0");
+    SS_InfoBox(["Detailed explanation", "It should be noted that other items without the white background can be just as, if not more valuable. However, with other items it often comes down to mods, luck and crafting, while the white background items are pretty much always great!"]);
+}
 
 StyleSection("Unique items", "There are hundreds of uniques! Some are in high demand, others are worthless or very niche. The filter can't distinguish between uniques with the same baseType. Bases with a blue or purple beam/map icon could potentially be very expensive.") {
     Search S0("skip", null, "uniques;t2") {  }
@@ -77,6 +71,22 @@ StyleSection("SOMETIMES LUCKY", "The blue or purple map icons and beams signaliz
 
     SS_Item("S0");
     SS_InfoBox(["Detailed explanation", "Generally speaking the purple icon is used for the items with a higher chance to be good. On top of that the small blue stars are usually indicative of a basetypes with good boss-drops."]);
+}
+
+StyleSection("Tablets", "Tablets and fragments have their own tierlist!") {
+    Search S0("skip", "Breach Splinter 2") { BaseType "Cowardly Fate"; }
+    Search S0("skip", "Breach Splinter 5") { BaseType "Breach Precursor Tablet"; }
+    Search S0("skip", "Breach Splinter 1") { BaseType "Precursor Tablet"; }
+
+    SS_Item("S0");
+}
+
+StyleSection("Splinters", "Breach and delirium splinters increase their highlight with stack size") {
+    Search S0("skip", "Breach Splinter 5") { BaseType "Breach Splinter"; StackSize 5; }
+    Search S0("skip", "Breach Splinter 2") { BaseType "Breach Splinter"; StackSize 2; }
+    Search S0("skip", "Breach Splinter 1") { BaseType "Breach Splinter"; StackSize 1; }
+
+    SS_Item("S0");
 }
 
 StyleSection("Skill Gems", "Uncut skill gems are highlighted based on the arealevel and their gemlevel. You'll see them clearly during the campaign. In the endgame high level ones receive extra highlight!") {
@@ -154,15 +164,98 @@ SS_Ad();
 //    SS_InfoBox(["Detailed explanation", "A chaos recipe is selling a full “set” of rare items to a vendor - One amulet, two rings, one chest armor, etc… at the same time. The vendor will reward you with one Chaos Orb if all items are itemlevel 60+.<hr>If all items are unidentified, you’ll receive two Chaos Orbs instead. If all items are unidentified and have 20% quality, you’ll get three Chaos Orbs. If all items have an itemlevel of 75+, you’ll get Regal Orbs instead."]);
 //}
 
-SS_SectionTitle("Crafting and Chancing");
+SS_SectionTitle("Rare Items (endgame)");
+
+StyleSection("Rare Items Progression", "As you enter higher waystones new basetypes can drop. The filter will automatically highlight lower level basetypes less. The 3 basetypes on the left side have the levels 65-70-80. The higher level bow is less useful by comparison to other available basetypes") {
+    Search S0("skip", "Advanced Dualstring Bow") { BaseType "Advanced Dualstring Bow"; ItemLevel 65; Rarity Rare; Corrupted False; }
+    Search S0("skip", "Advanced Dualstring Bow") { BaseType "Advanced Dualstring Bow"; ItemLevel 70; Rarity Rare; Corrupted False; }
+    Search S0("skip", "Advanced Dualstring Bow") { BaseType "Advanced Dualstring Bow"; ItemLevel 80; Rarity Rare; Corrupted False; }
+    SS_Item("S0");
+}
+
+StyleSection("Rare Item Tiering", "The filter has a tierlist for all basetypes and highlights rares of higher potential better. (NOTE: transparency rendering is a bit weird on filterblade, works better ingame)") {
+    Search S0("skip", "Expert Dualstring Bow") { BaseType "Expert Dualstring Bow"; ItemLevel 80; Rarity Rare; Corrupted False; }
+    Search S0("skip", "Advanced Dualstring Bow") { BaseType "Advanced Dualstring Bow"; ItemLevel 80; Rarity Rare; Corrupted False; }
+    Search S0("skip", "Dualstring Bow") { BaseType "Dualstring Bow"; ItemLevel 80; Rarity Rare; Corrupted False; }
+    SS_Item("S0");
+}
+
+StyleSection("Rings, Amulets, Belts", "Jewellery has a tierlist of it's own, due to it's higher rarity ingame.") {
+    Search S0("skip", "Amethyst Ring") { BaseType "Amethyst Ring"; ItemLevel 80; Rarity Rare; Corrupted False; }
+    Search S0("skip", "Heavy Belt") { BaseType "Heavy Belt"; ItemLevel 80; Rarity Rare; Corrupted False; }
+    Search S0("skip", "Iron Ring") { BaseType "Iron Ring"; ItemLevel 80; Rarity Rare; Corrupted False; }
+    SS_Item("S0");
+}
+
+StyleSection("ItemLevel 82", "Itemlevel 82 rares are capable of rolling the best available mods. These are highlighted by a slightly orange hue.") {
+    Search S0("skip", "Ruby Ring") { BaseType "Ruby Ring"; ItemLevel 82; Rarity Rare; Corrupted False; }
+    Search S0("skip", "Expert Feathered Sandals") { BaseType "Expert Feathered Sandals"; ItemLevel 82; Rarity Rare; Corrupted False; }
+    SS_Item("S0");
+}
+
+SS_Ad();
+
+SS_SectionTitle("Others Bases");
+
+StyleSection("Crafting Bases", "Useful normal and magic bases get highlighted in the endgame in order to attempt craft them up. ItemLevel 82 (highest relevant itemlevel) bases also have an orange border.") {
+    Search S0("skip", "Solar Amulet") { BaseType "Solar Amulet"; ItemLevel 82; Rarity Magic; Corrupted False; }
+    Search S0("skip", "Ruby Ring") { BaseType "Ruby Ring"; ItemLevel 75; Rarity Normal; Corrupted False; }
+    Search S0("skip", "Rattling Sceptre") { BaseType "Rattling Sceptre"; ItemLevel 82; Rarity Magic; Corrupted False; }
+    SS_Item("S0");
+}
 
 StyleSection("Chancing Bases", "By applying an 'Orb of Chance' on these bases, you have a tiny chance to turn it into valuable unique item.") {
-    Search S0("skip", null, "chancing;any") { BaseType "Glorious Plate"; ItemLevel 83; SocketGroup "RRG"; Rarity Normal; Corrupted False; }
+    Search S0("skip", null, "chancing;any") { BaseType "Heavy Belt"; ItemLevel 79; Rarity Normal; Corrupted False; }
     SS_Item("S0");
 
     SS_InfoBox(["Detailed explanation", "There’s a lot to add here. First of all, chancing is a very controversial thing in Path of Exile. Many players don’t believe it’s worth the time or effort.<hr>Further, the itemlevel or quality does not matter while chancing (example: you can chance a low itemlevel Gold Ring into an Andvarius, even if Andvarius regulary only starts dropping later on).<hr>Another interesting detail is that you can only chance non-drop-restricted uniques. Things that can only be obtained by boss drops, such as Shaper and Atziri drops, can not be chanced. The success chance depends on the unique. Chancing something common might work out with just a dozen of orbs, while getting a headhunter can easily require ten thousands of orbs."]);
 }
 
+StyleSection("Jewels", "Jewels in PoE2 can be quite valuable and come with lucrative corruption options. The filter highlights this appropriately.") {
+    Search S0("skip", "Emerald") { BaseType "Emerald"; ItemLevel 83; Rarity Magic; Corrupted False; }
+    Search S0("skip", "Ruby") { BaseType "Ruby"; ItemLevel 83; Rarity Rare; Corrupted False; }
+    Search S0("skip", "Time-Lost Sapphire") { BaseType "Time-Lost Sapphire"; ItemLevel 83; Rarity Rare; Corrupted False; }
+    SS_Item("S0");
+}
+
+StyleSection("Charms (Endgame)", "ItemLevel 83 charms can roll some exclusive mods, other falsks can't these are highlighted with an orange border, similar to most ILVL 82-83 items.") {
+    Search S0("skip", "Amethyst Charm") { BaseType "Amethyst Charm"; ItemLevel 83; Rarity Magic; Corrupted False; }
+    Search S0("skip", "Amethyst Charm") { BaseType "Silver Charm"; ItemLevel 81; Rarity Magic; Corrupted False; }
+    SS_Item("S0");
+}
+
+StyleSection("Flasks (Endgame)", "ItemLevel 83 flasks can roll some exclusive mods, other falsks can't these are highlighted with an orange border, similar to most ILVL 82-83 items.") {
+    Search S0("skip", "Ultimate Life Flask") { BaseType "Ultimate Life Flask"; ItemLevel 83; Rarity Magic; Corrupted False; }
+    Search S0("skip", "Ultimate Mana Flask") { BaseType "Ultimate Mana Flask"; ItemLevel 75; Rarity Normal; Corrupted False; }
+    SS_Item("S0");
+}
+
+SS_Ad();
+
+SS_SectionTitle("Campaign and Leveling");
+
+StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. These rules have priority over normal currency rules, but only apply during campaign zones. Great for new leagues!") {
+    Search S0("skip", "LEVELING: Transmutations") { BaseType "Orb of Transmutation"; AreaLevel 20; }
+    Search S0("skip", "LEVELING: Wisdoms") { BaseType "Scroll of Wisdom"; AreaLevel 10; }
+    SS_Item("S0");
+}
+
+StyleSection("Campaign Specific Rules", "Certain items like jewellery, magic boots (chance for movementspeed) are highlighted more during the campaign") {
+    Search S0("skip", "Ruby Ring") { BaseType "Ruby Ring"; ItemLevel 10; Rarity Magic; Corrupted False; }
+    Search S0("skip", "Feathered Sandals") { BaseType "Feathered Sandals"; ItemLevel 10; Rarity Magic; Corrupted False; }
+    SS_Item("S0");
+}
+
+StyleSection("Leveling Flasks", "Flask upgrades and useful charms are highlighted while leveling") {
+    Search S0("skip", "Greater Life Flask") { BaseType "Greater Life Flask"; ItemLevel 5; Rarity Normal; Corrupted False; }
+    SS_Item("S0");
+}
+
+StyleSection("Overleveling Items", "During the campaign the itemfilter will remove normal (and on higher strictnesses magic) bases that are completely overleveled and no longer have a good use case.") {
+    Search S0("skip", "Long Quarterstaff") { BaseType "Long Quarterstaff"; ItemLevel 5; Rarity Normal; Corrupted False; }
+    Search S0("skip", "Long Quarterstaff") { BaseType "Long Quarterstaff"; ItemLevel 40; Rarity Normal; Corrupted False; }
+    SS_Item("S0");
+}
 
 SS_Ad();
 
