@@ -951,7 +951,7 @@ Chapter() {
 
         Function CondShowClass ($s, $shd = "SHD", $title)
         {
-            QuickUI($s, $shd, ["CondTargetSelection", "AllGearClassesPlusFlaskJewel", "ItemLevel", "Stats_All"], $title, ["all", "SOA"]);
+            QuickUI($s, $shd, ["CondTargetSelection", "AllGearClassesPlusFlaskJewel", "Rarity", "ItemLevel", "Stats_All"], $title, ["all", "SOA"]);
         }
 
         Function CondShowArmourType ($s, $shd = "SHD", $title)
