@@ -244,6 +244,7 @@ Chapter("chapter") {
         QuickUI([0.0, "Gems, Support, Campaign ", "gems->uncut;supportcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Support");
         Title("Misc.");
         QuickUI([0.0, "Cut Gems ", "gems;any"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Remaining Uncut Gems", "gems->uncut;exhide"], "SH", []);
     }
 
     Section("Gold", "Gold_inventory_icon") {
@@ -576,6 +577,7 @@ Warning("There's currently no way to distinguish/filter the 'Rare Tiers' that dr
         QuickUI([0.0, "Breach Rings, high level", "exoticbases;commonexoticbaseshigh"], "SH", ["Rarity", "ItemLevel", "Identified"]);
         QuickUI([0.0, "Breach Rings", "exoticbases;commonexoticbases"], "SH", ["Rarity", "ItemLevel", "Identified"]);
         QuickUI([0.0, "ILVL81 Caster Items", "endgame->normalcraft->any;minionsceptresoptional"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity"], "", ["gear", "SAO"]);
+        QuickUI([0.0, "ILVL81 Crafting Wands", "endgame->normalcraft->any;craftingwands"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity"], "", ["gear", "SAO"]);
     }
 }
 
