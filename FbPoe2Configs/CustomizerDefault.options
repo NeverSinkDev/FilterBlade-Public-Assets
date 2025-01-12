@@ -441,13 +441,13 @@ Chapter() {
 
         Section("Belts [NORMAL+MAGIC]", "belt09.webp") {
             Title("Belts: LVL 82");
-            QuickUI(Belt1Craft, "SH", ["ItemLevel", "Rarity"], "T1 ILVL82+");
-            QuickUI(Belt2Craft, "SH", ["ItemLevel", "Rarity"], "T2 ILVL82+");
-            QuickUI(Belt3Craft, "SH", ["ItemLevel", "Rarity"], "T3 ILVL82+");
+            QuickUI(Belt1Ideal, "SH", ["ItemLevel", "Rarity"], "T1 ILVL82+");
+            QuickUI(Belt2Ideal, "SH", ["ItemLevel", "Rarity"], "T2 ILVL82+");
+            QuickUI(Belt3Ideal, "SH", ["ItemLevel", "Rarity"], "T3 ILVL82+");
             Title("Belts: Other Endgame");
-            QuickUI(Belt1Ideal, "SH", ["ItemLevel", "Rarity"], "T1");
-            QuickUI(Belt2Ideal, "SH", ["ItemLevel", "Rarity"], "T2");
-            QuickUI(Belt3Ideal, "SH", ["ItemLevel", "Rarity"], "T3");
+            QuickUI(Belt1Craft, "SH", ["ItemLevel", "Rarity"], "T1");
+            QuickUI(Belt2Craft, "SH", ["ItemLevel", "Rarity"], "T2");
+            QuickUI(Belt3Craft, "SH", ["ItemLevel", "Rarity"], "T3");
         }
 
         //rare endgame amulets
