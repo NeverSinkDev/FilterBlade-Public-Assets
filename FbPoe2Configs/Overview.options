@@ -218,13 +218,13 @@ StyleSection("Jewels", "Jewels in PoE2 can be quite valuable and come with lucra
     SS_Item("S0");
 }
 
-StyleSection("Charms (Endgame)", "ItemLevel 83 charms can roll some exclusive mods, other falsks can't these are highlighted with an orange border, similar to most ILVL 82-83 items.") {
+StyleSection("Charms (Endgame)", "ItemLevel 83 charms can roll some exclusive mods. These are highlighted with an orange border, similar to most ILVL 82-83 items.") {
     Search S0("skip", "Amethyst Charm") { BaseType "Amethyst Charm"; ItemLevel 83; Rarity Magic; Corrupted False; }
     Search S0("skip", "Amethyst Charm") { BaseType "Silver Charm"; ItemLevel 81; Rarity Magic; Corrupted False; }
     SS_Item("S0");
 }
 
-StyleSection("Flasks (Endgame)", "ItemLevel 83 flasks can roll some exclusive mods, other falsks can't these are highlighted with an orange border, similar to most ILVL 82-83 items.") {
+StyleSection("Flasks (Endgame)", "ItemLevel 83 flasks can roll some exclusive mods. These are highlighted with an orange border, similar to most ILVL 82-83 items.") {
     Search S0("skip", "Ultimate Life Flask") { BaseType "Ultimate Life Flask"; ItemLevel 83; Rarity Magic; Corrupted False; }
     Search S0("skip", "Ultimate Mana Flask") { BaseType "Ultimate Mana Flask"; ItemLevel 75; Rarity Normal; Corrupted False; }
     SS_Item("S0");
