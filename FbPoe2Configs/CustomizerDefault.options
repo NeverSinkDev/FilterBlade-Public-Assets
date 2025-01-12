@@ -932,14 +932,14 @@ Chapter() {
     }
 
     Section("Campaign Salvagable Items", "Artificers_Orb_inventory_icon") {
-        QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Whetstones");
-        QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Etchers" );
-        QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Armourers");
-        QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Whetstone");
-        QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Etcher" );
-        QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Armourer");
-        QuickUI([0.0, "Campaign Salvable (Sockets, large)", "leveling->salvagable;socketslarge"], "SH", ["Sockets", "ItemLevel"], "Small Item: Artificer Shards");
-        QuickUI([0.0, "Campaign Salvable (Sockets, small)", "leveling->salvagable;socketssmall"], "SH", ["Sockets", "ItemLevel"], "Large Item: Artificer Shards");
+        QuickUI([0.0, "Campaign Salvageable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Whetstones");
+        QuickUI([0.0, "Campaign Salvageable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Etchers" );
+        QuickUI([0.0, "Campaign Salvageable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Armourers");
+        QuickUI([0.0, "Campaign Salvageable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Whetstone");
+        QuickUI([0.0, "Campaign Salvageable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Etcher" );
+        QuickUI([0.0, "Campaign Salvageable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Armourer");
+        QuickUI([0.0, "Campaign Salvageable (Sockets, large)", "leveling->salvagable;socketslarge"], "SH", ["Sockets", "ItemLevel"], "Small Item: Artificer Shards");
+        QuickUI([0.0, "Campaign Salvageable (Sockets, small)", "leveling->salvagable;socketssmall"], "SH", ["Sockets", "ItemLevel"], "Large Item: Artificer Shards");
     }
 }
 
