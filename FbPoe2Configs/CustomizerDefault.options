@@ -712,27 +712,27 @@ Chapter() {
         }
     }
 
-    Section("Endgame Salvagable Items", "Artificers_Orb_inventory_icon") {
+    Section("Endgame Salvageable Items", "Artificers_Orb_inventory_icon") {
         Description("Certain items can be salvaged at an NPC in town in return for crafting currencies.");
 
 
-        Search S0(0.0, "Salvagable (High Quality, weapons)", "endgame->salvagable;quality2martialany") { }
-        Search S1(0.0, "Salvagable (High Quality, caster)", "endgame->salvagable;quality2casterany") { }
-        Search S2(0.0, "Salvagable (High Quality, armour)", "endgame->salvagable;quality2armorany") { }
-        Search S3(0.0, "Salvagable (Quality, weapons)", "endgame->salvagable;qualitymartialany") { }
-        Search S4(0.0, "Salvagable (Quality, caster)", "endgame->salvagable;qualitycasterany") { }
-        Search S5(0.0, "Salvagable (Quality, armour)", "endgame->salvagable;qualityarmorany") { }
-        Search S6(0.0, "Salvagable (Sockets, large)", "endgame->salvagable;socketslarge") { }
-        Search S7(0.0, "Salvagable (Sockets, small)", "endgame->salvagable;socketssmall") { }
+        Search S0(0.0, "Salvageable (High Quality, weapons)", "endgame->salvagable;quality2martialany") { }
+        Search S1(0.0, "Salvageable (High Quality, caster)", "endgame->salvagable;quality2casterany") { }
+        Search S2(0.0, "Salvageable (High Quality, armour)", "endgame->salvagable;quality2armorany") { }
+        Search S3(0.0, "Salvageable (Quality, weapons)", "endgame->salvagable;qualitymartialany") { }
+        Search S4(0.0, "Salvageable (Quality, caster)", "endgame->salvagable;qualitycasterany") { }
+        Search S5(0.0, "Salvageable (Quality, armour)", "endgame->salvagable;qualityarmorany") { }
+        Search S6(0.0, "Salvageable (Sockets, large)", "endgame->salvagable;socketslarge") { }
+        Search S7(0.0, "Salvageable (Sockets, small)", "endgame->salvagable;socketssmall") { }
 
-        Search S0(0.0, "Salvagable (High Quality, weapons, rare)", "rare->salvagable;quality2martialany") { }
-        Search S1(0.0, "Salvagable (High Quality, caster, rare)", "rare->salvagable;quality2casterany") { }
-        Search S2(0.0, "Salvagable (High Quality, armour, rare)", "rare->salvagable;quality2armorany") { }
-        Search S3(0.0, "Salvagable (Quality, weapons, rare)", "rare->salvagable;qualitymartialany") { }
-        Search S4(0.0, "Salvagable (Quality, caster, rare)", "rare->salvagable;qualitycasterany") { }
-        Search S5(0.0, "Salvagable (Quality, armour, rare)", "rare->salvagable;qualityarmorany") { }
-        Search S6(0.0, "Salvagable (Sockets, large, rare)", "rare->salvagable;socketslarge") { }
-        Search S7(0.0, "Salvagable (Sockets, small, rare)", "rare->salvagable;socketssmall") { }
+        Search S0(0.0, "Salvageable (High Quality, weapons, rare)", "rare->salvagable;quality2martialany") { }
+        Search S1(0.0, "Salvageable (High Quality, caster, rare)", "rare->salvagable;quality2casterany") { }
+        Search S2(0.0, "Salvageable (High Quality, armour, rare)", "rare->salvagable;quality2armorany") { }
+        Search S3(0.0, "Salvageable (Quality, weapons, rare)", "rare->salvagable;qualitymartialany") { }
+        Search S4(0.0, "Salvageable (Quality, caster, rare)", "rare->salvagable;qualitycasterany") { }
+        Search S5(0.0, "Salvageable (Quality, armour, rare)", "rare->salvagable;qualityarmorany") { }
+        Search S6(0.0, "Salvageable (Sockets, large, rare)", "rare->salvagable;socketslarge") { }
+        Search S7(0.0, "Salvageable (Sockets, small, rare)", "rare->salvagable;socketssmall") { }
 
 
         QuickUI(S0, "SH", ["Quality"], "Salvages into: 2+ Whetstones");
@@ -931,7 +931,7 @@ Chapter() {
         }
     }
 
-    Section("Campaign Salvagable Items", "Artificers_Orb_inventory_icon") {
+    Section("Campaign Salvageable Items", "Artificers_Orb_inventory_icon") {
         QuickUI([0.0, "Campaign Salvageable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Whetstones");
         QuickUI([0.0, "Campaign Salvageable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Etchers" );
         QuickUI([0.0, "Campaign Salvageable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Armourers");
