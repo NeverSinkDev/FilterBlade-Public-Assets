@@ -147,16 +147,16 @@ Chapter("chapter") {
         TierListToolBar();
 
         Title("Predictable Tiers");
-        UniquesFunc([0.0, "Uniques Tier 1", "uniques;t1"], "SH", "Tier 1", "Tier 1 uniques are always an expensive and lucky find!");
-        UniquesFunc([0.0, "Uniques Tier 2", "uniques;t2"], "SH", "Tier 2", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
-        UniquesFunc([0.0, "Uniques Tier 3", "uniques;t3"], "SH", "Tier 3", "These are highly roll dependent. Keep your filter updated, especially if you want to hide this section!");
-        UniquesFunc([0.0, "Uniques EarlyLeague", "uniques;earlyleague"], "SH", "Early League", "Expensive or interesting at the start of the new league, but lose value VERY fast! This tier stays empty, after the first days of the new league");
-        UniquesFunc([0.0, "Uniques Hideable", "uniques;hideable"], "SH", "Hideable", "These uniques are worth very little. Keep your filter updated, if you want to hide this section! Hiding this section at the start of new leagues and in SSF is a bad idea.");
+        UniquesFunc([0.0, "Uniques Tier 1", "uniques;t1"], "SH", "S Tier", "Tier 1 uniques are always an expensive and lucky find!");
+        UniquesFunc([0.0, "Uniques Tier 2", "uniques;t2"], "SH", "A Tier", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
+        UniquesFunc([0.0, "Uniques Tier 3", "uniques;t3"], "SH", "B+C Tier", "These are highly roll dependent. Keep your filter updated, especially if you want to hide this section!");
+        UniquesFunc([0.0, "Uniques EarlyLeague", "uniques;earlyleague"], "SH", "D TIER - Early League Uniques", "Expensive or interesting at the start of the new league, but lose value VERY fast! This tier stays empty, after the first days of the new league");
+        UniquesFunc([0.0, "Uniques Hideable", "uniques;hideable"], "SH", "D TIER - LOW VALUE", "These uniques are worth very little. Keep your filter updated, if you want to hide this section! Hiding this section at the start of new leagues and in SSF is a bad idea.");
 
         Title("High Variety Tiers");
-        UniquesFunc([0.0, "Uniques MultiSpecial High", "uniques;multispecialhigh"], "SH", "Multi Special High", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a VERY small chance for these to be VERY expensive");
-        UniquesFunc([0.0, "Uniques MultiSpecial", "uniques;multispecial"], "SH", "Multi Special", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a small chance for these to be expensive");
-        UniquesFunc([0.0, "Uniques Tier 3 Boss", "uniques;t3boss"], "SH", "Tier 3 Boss", "A potentially expensive unique version of this item drops ONLY from bosses! The world drop unique is fairly cheap! You can hide this tier, BUT remember to check the hidden items dropped by bosses!");
+        UniquesFunc([0.0, "Uniques MultiSpecial High", "uniques;multispecialhigh"], "SH", "High Variety - top multi-bases", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a VERY small chance for these to be VERY expensive");
+        UniquesFunc([0.0, "Uniques MultiSpecial", "uniques;multispecial"], "SH", "High Variety - multi-bases", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a small chance for these to be expensive");
+        UniquesFunc([0.0, "Uniques Tier 3 Boss", "uniques;t3boss"], "SH", "High Variety - boss-drops", "A potentially expensive unique version of this item drops ONLY from bosses! The world drop unique is fairly cheap! You can hide this tier, BUT remember to check the hidden items dropped by bosses!");
 
         // new tiers
         Conditional("?UniquesNewTier") { }
