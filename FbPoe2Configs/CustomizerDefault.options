@@ -276,21 +276,21 @@ Chapter() {
 
     Section("Hide Armour Classes & Weapon Types", "annullorb.webp") {
         Title("Normal/Magic");
-        QuickUI([0.0, "Endgame Hide, Crafting, Armour", "endgame->conditionalhiders->crafting;arhider"], "DH", ["ItemLevel", "Rarity"], "Hide: Armour");
-        QuickUI([0.0, "Endgame Hide, Crafting, Evasion", "endgame->conditionalhiders->crafting;evhider"], "DH", ["ItemLevel", "Rarity"], "Hide: Evasion");
-        QuickUI([0.0, "Endgame Hide, Crafting, ES", "endgame->conditionalhiders->crafting;eshider"], "DH", ["ItemLevel", "Rarity"], "Hide: Energy Shield");
-        QuickUI([0.0, "Endgame Hide, Crafting, Ar-Ev", "endgame->conditionalhiders->crafting;arevhider"], "DH", ["ItemLevel", "Rarity"], "Hide: Hybrid Armour+Evasion");
-        QuickUI([0.0, "Endgame Hide, Crafting, Ar-ES", "endgame->conditionalhiders->crafting;areshider"], "DH", ["ItemLevel", "Rarity"], "Hide: Hybrid Armour+ES");
-        QuickUI([0.0, "Endgame Hide, Crafting, ES-EV", "endgame->conditionalhiders->crafting;eveshider"], "DH", ["ItemLevel", "Rarity"], "Hide: Hybrid Evasion+ES");
+        QuickUI([0.0, "Endgame Hide, Crafting, Armour", "endgame->conditionalhiders->crafting;arhider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Armour");
+        QuickUI([0.0, "Endgame Hide, Crafting, Evasion", "endgame->conditionalhiders->crafting;evhider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Evasion");
+        QuickUI([0.0, "Endgame Hide, Crafting, ES", "endgame->conditionalhiders->crafting;eshider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Energy Shield");
+        QuickUI([0.0, "Endgame Hide, Crafting, Ar-Ev", "endgame->conditionalhiders->crafting;arevhider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Hybrid Armour+Evasion");
+        QuickUI([0.0, "Endgame Hide, Crafting, Ar-ES", "endgame->conditionalhiders->crafting;areshider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Hybrid Armour+ES");
+        QuickUI([0.0, "Endgame Hide, Crafting, ES-EV", "endgame->conditionalhiders->crafting;eveshider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Hybrid Evasion+ES");
         Warning("Open the rule and select the weapons you DON'T want. Otherwise it'll hide ALL weapons.");
         QuickUI([0.0, "Endgame Hide, Crafting, WeaponTypes", "endgame->conditionalhiders->crafting;hideweaponsbytype"], "DH", ["ItemLevel", "Rarity", "WeaponAndOffhandClasses"], "Hide Weapon/Offhand Classes");
         Title("Rares");
-        QuickUI([0.0, "Endgame Hide, Rare, Armour", "endgame->conditionalhiders->rare;arhider"], "DH", ["ItemLevel"], "Hide: Armour");
-        QuickUI([0.0, "Endgame Hide, Rare, Evasion", "endgame->conditionalhiders->rare;evhider"], "DH", ["ItemLevel"], "Hide: Evasion");
-        QuickUI([0.0, "Endgame Hide, Rare, ES", "endgame->conditionalhiders->rare;eshider"], "DH", ["ItemLevel"], "Hide: Energy Shield");
-        QuickUI([0.0, "Endgame Hide, Rare, Ar-Ev", "endgame->conditionalhiders->rare;arevhider"], "DH", ["ItemLevel"], "Hide: Hybrid Armour+Evasion");
-        QuickUI([0.0, "Endgame Hide, Rare, Ar-ES", "endgame->conditionalhiders->rare;areshider"], "DH", ["ItemLevel"], "Hide: Hybrid Armour+ES");
-        QuickUI([0.0, "Endgame Hide, Rare, ES-EV", "endgame->conditionalhiders->rare;eveshider"], "DH", ["ItemLevel"], "Hide: Hybrid Evasion+ES");
+        QuickUI([0.0, "Endgame Hide, Rare, Armour", "endgame->conditionalhiders->rare;arhider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Armour");
+        QuickUI([0.0, "Endgame Hide, Rare, Evasion", "endgame->conditionalhiders->rare;evhider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Evasion");
+        QuickUI([0.0, "Endgame Hide, Rare, ES", "endgame->conditionalhiders->rare;eshider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Energy Shield");
+        QuickUI([0.0, "Endgame Hide, Rare, Ar-Ev", "endgame->conditionalhiders->rare;arevhider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Hybrid Armour+Evasion");
+        QuickUI([0.0, "Endgame Hide, Rare, Ar-ES", "endgame->conditionalhiders->rare;areshider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Hybrid Armour+ES");
+        QuickUI([0.0, "Endgame Hide, Rare, ES-EV", "endgame->conditionalhiders->rare;eveshider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Hybrid Evasion+ES");
         QuickUI([0.0, "Endgame Hide, Rare, Identified", "conditionalhide;idhider"], "DH", ["ItemLevel"], "Hide: Identified");
         QuickUI([0.0, "Endgame Hide, Rare, Corrupted", "conditionalhide;corruptedrares"], "DH", ["ItemLevel"], "Hide corrupted rares (no implicit)");
         Warning("Open the rule and select the weapons you DON'T want. Otherwise it'll hide ALL weapons.");
