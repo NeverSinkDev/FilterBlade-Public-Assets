@@ -390,7 +390,7 @@ Chapter() {
             QuickUI([0.0, "Endgame Rare Decorator, basic", "decorators->rareeg;basicraredecorator"], "SD", [], "Also Every item...");
         }
 
-        Section("Decorators: Rare Normal/Magic Items")
+        Section("Decorators: Normal/Magic Items")
         {
             QuickUI([0.0, "Endgame Crafting Decorator, normal 82", "endgame->normalcraft->decorator;normal82"], "SD", ["ItemLevel", "Rarity"], "If the ILVL is 82 or higher...");
             QuickUI([0.0, "Endgame Crafting Decorator, normal jewelery", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SD", ["Rarity"], "If item is ring, belt or amulet...");
@@ -522,7 +522,7 @@ Warning("There's currently no way to distinguish/filter the 'Rare Tiers' that dr
         Description("In PoE2 new items start dropping once you push into higher waystones. The tierlist is designed to highlight the most relevant bases in the current waystone. Tip: you can enable/disable all rules in a section, by rightclicking it.");
 
         Title("Control Visibility:");
-        Section("RARE: 1 (mostly available at ilvl75+)", "buckler09.webp")
+        Section("RARE: T1 (mostly available at ilvl75+)", "buckler09.webp")
         {
             Description("T1 rares are the best rares in their category. Most of them require level 75-79 to drop. These bases require the higehst zone level to drop");
             QuickUI(R1Top, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares: LVL82+ (TOP OF THE LINE)");
@@ -957,7 +957,7 @@ Chapter() {
 
         Function CondShowClass ($s, $shd = "SHD", $title)
         {
-            QuickUI($s, $shd, ["CondTargetSelection", "AllGearClassesPlusFlaskJewel", "Rarity", "ItemLevel", "Stats_All"], $title, ["all", "SOA"]);
+            QuickUI($s, $shd, ["CondTargetSelection", "AllGearClassesPlusFlaskJewelWaystone", "Rarity", "ItemLevel", "Stats_All"], $title, ["all", "SOA"]);
         }
 
         Function CondShowArmourType ($s, $shd = "SHD", $title)
@@ -1010,11 +1010,9 @@ Chapter() {
         Divider();
         Description("Remaining unhighlighted items: These are rules that were not picked up by any other rule. Usually pretty bad drops!");
 
-        QuickUI([0.0, "Remaining: campaign and others", "lowstrictnessshowlayer;anyfinal"], "SH", []); // todo
-        QuickUI([0.0, "Remaining: endgame normal/magic", "lowstrictnessshowlayer;normalmagicendgameany"], "SH", []); // todo
-        QuickUI([0.0, "Remaining: rares", "lowstrictnessshowlayer;raresendgameany"], "SH", []); // todo
-//        QuickUI([0.0, "Remaining: campaign magic", "leveling->magic->remaining;largemagicblocker"], "SDH", []); // todo
-//        QuickUI([0.0, "Remaining: campaign medium", "leveling->magic->remaining;mediummagicblocker"], "SDH", []); // todo
+        QuickUI([0.0, "Remaining: campaign and others", "lowstrictnessshowlayer;anyfinal"], "SH", []);
+        QuickUI([0.0, "Remaining: endgame normal/magic", "lowstrictnessshowlayer;normalmagicendgameany"], "SH", []);
+        QuickUI([0.0, "Remaining: rares", "lowstrictnessshowlayer;raresendgameany"], "SH", []);
 
         QuickUI([0.0, "Leveling Hide Rules, Normal 1", "leveling->progressivehide;normal1"], "DH", []);
         QuickUI([0.0, "Leveling Hide Rules, Normal 2", "leveling->progressivehide;normal2"], "DH", []);
