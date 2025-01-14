@@ -737,15 +737,15 @@ Chapter() {
         Search S7(0.0, "Salvagable (Sockets, small, rare)", "rare->salvagable;socketssmall") { }
 
 
-        QuickUI(S0, "SH", ["Quality"], "Salvages into: 2+ Whetstones");
-        QuickUI(S1, "SH", ["Quality"], "Salvages into: 2+ Etchers" );
-        QuickUI(S2, "SH", ["Quality"], "Salvages into: 2+ Armourers");
-        QuickUI(S3, "SH", ["Quality"], "Salvages into: 1 Whetstone");
-        QuickUI(S4, "SH", ["Quality"], "Salvages into: 1 Etcher" );
-        QuickUI(S5, "SH", ["Quality"], "Salvages into: 1 Armourer");
+        QuickUI(S0, "SH", ["Quality", "Width", "Height"], "Salvages into: 2+ Whetstones");
+        QuickUI(S1, "SH", ["Quality", "Width", "Height"], "Salvages into: 2+ Etchers" );
+        QuickUI(S2, "SH", ["Quality", "Width", "Height"], "Salvages into: 2+ Armourers");
+        QuickUI(S3, "SH", ["Quality", "Width", "Height"], "Salvages into: 1 Whetstone");
+        QuickUI(S4, "SH", ["Quality", "Width", "Height"], "Salvages into: 1 Etcher" );
+        QuickUI(S5, "SH", ["Quality", "Width", "Height"], "Salvages into: 1 Armourer");
         Title("Salvaging small items is more efficient:");
-        QuickUI(S7, "SH", ["Sockets"], "Small Item: Artificer Shards");
-        QuickUI(S6, "SH", ["Sockets"], "Large Item: Artificer Shards");
+        QuickUI(S7, "SH", ["Sockets", "Width", "Height"], "Small Item: Artificer Shards");
+        QuickUI(S6, "SH", ["Sockets", "Width", "Height"], "Large Item: Artificer Shards");
     }
 }
 
@@ -845,7 +845,7 @@ Chapter() {
             QuickUI([0.0, "Campaign Rares, Eva-ES", "leveling->rare->armours;eves"], "SH", ["AreaLevel"]);
             Title("Rares by Weapon Types");
             QuickUI([0.0, "Campaign Rares, Wands", "leveling->rare->weapons;wands"], "SH", ["AreaLevel"]);
-            QuickUI([0.0, "Campaign Rares, Scaptres", "leveling->rare->weapons;sceptres"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Sceptres", "leveling->rare->weapons;sceptres"], "SH", ["AreaLevel"]);
             QuickUI([0.0, "Campaign Rares, Staves", "leveling->rare->weapons;staves"], "SH", ["AreaLevel"]);
             QuickUI([0.0, "Campaign Rares, Archer", "leveling->rare->weapons;bowsquivers"], "SH", ["AreaLevel"]);
             QuickUI([0.0, "Campaign Rares, Crossbow", "leveling->rare->weapons;crossbows"], "SH", ["AreaLevel"]);
@@ -934,14 +934,14 @@ Chapter() {
     }
 
     Section("Campaign Salvagable Items", "Artificers_Orb_inventory_icon") {
-        QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Whetstones");
-        QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Etchers" );
-        QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Armourers");
-        QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Whetstone");
-        QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Etcher" );
-        QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Armourer");
-        QuickUI([0.0, "Campaign Salvable (Sockets, large)", "leveling->salvagable;socketslarge"], "SH", ["Sockets", "ItemLevel"], "Small Item: Artificer Shards");
-        QuickUI([0.0, "Campaign Salvable (Sockets, small)", "leveling->salvagable;socketssmall"], "SH", ["Sockets", "ItemLevel"], "Large Item: Artificer Shards");
+        QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 2+ Whetstones");
+        QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 2+ Etchers" );
+        QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 2+ Armourers");
+        QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 1 Whetstone");
+        QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 1 Etcher" );
+        QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 1 Armourer");
+        QuickUI([0.0, "Campaign Salvable (Sockets, large)", "leveling->salvagable;socketslarge"], "SH", ["Sockets", "ItemLevel", "Width", "Height"], "Small Item: Artificer Shards");
+        QuickUI([0.0, "Campaign Salvable (Sockets, small)", "leveling->salvagable;socketssmall"], "SH", ["Sockets", "ItemLevel", "Width", "Height"], "Large Item: Artificer Shards");
     }
 }
 
