@@ -582,8 +582,6 @@ Chapter() {
         Section("Flasks", "flasklife09.webp") {
             QuickUI([0.0, "Endgame Flasks, Quality, Top", "endgame->flasks;toplevelqualityflasks"], "SH", ["Quality", "RarityNM", "ItemLevel"], "ILVL83 Flasks+Quality", ["Flasks", "SOA"]);
             QuickUI([0.0, "Endgame Flasks, Top", "endgame->flasks;toplevelflasks"], "SH", ["Quality", "RarityNM", "ItemLevel"], "ILVL83 Flasks", ["Flasks", "SOA"]);
-            QuickUI([0.0, "Endgame Flasks, High Quality", "endgame->flasks;anyhighqualflask"], "SH", ["Quality", "RarityNM", "ItemLevel"], "Flasks: High Quality", ["Flasks", "SOA"]);
-            QuickUI([0.0, "Endgame Flasks, Quality Flasks", "endgame->flasks;anyqualflask"], "SH", ["Quality", "RarityNM", "ItemLevel"], "Flasks: Any Quality", ["Flasks", "SOA"]);
             QuickUI([0.0, "Endgame Flasks, Early, Life", "endgame->flasks;earlymappinglifemana"], "SDH", ["Quality", "RarityNM", "AreaLevel"], "Flasks: Early Endgame ", ["Flasks", "SOA"]);
         }
 
@@ -740,9 +738,11 @@ Chapter() {
         QuickUI(S0, "SH", ["Quality", "Width", "Height"], "Salvages into: 2+ Whetstones");
         QuickUI(S1, "SH", ["Quality", "Width", "Height"], "Salvages into: 2+ Etchers" );
         QuickUI(S2, "SH", ["Quality", "Width", "Height"], "Salvages into: 2+ Armourers");
+        QuickUI([0.0, "Salvagable (High Quality, flasks)", "endgame->salvagable;quality2flask"], "SH", ["Quality"], "Salvages into: 2+ Glassblowers");
         QuickUI(S3, "SH", ["Quality", "Width", "Height"], "Salvages into: 1 Whetstone");
         QuickUI(S4, "SH", ["Quality", "Width", "Height"], "Salvages into: 1 Etcher" );
         QuickUI(S5, "SH", ["Quality", "Width", "Height"], "Salvages into: 1 Armourer");
+        QuickUI([0.0, "Salvagable (Quality, flasks)", "endgame->salvagable;qualityflask"], "SH", ["Quality"], "Salvages into: 1 Glassblowers");
         Title("Salvaging small items is more efficient:");
         QuickUI(S7, "SH", ["Sockets", "Width", "Height"], "Small Item: Artificer Shards");
         QuickUI(S6, "SH", ["Sockets", "Width", "Height"], "Large Item: Artificer Shards");
@@ -937,9 +937,11 @@ Chapter() {
         QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 2+ Whetstones");
         QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 2+ Etchers" );
         QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 2+ Armourers");
+        QuickUI([0.0, "Campaign Salvable (High Quality, flasks)", "leveling->salvagable;quality2flask"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Glassblower");
         QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 1 Whetstone");
         QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 1 Etcher" );
         QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 1 Armourer");
+        QuickUI([0.0, "Campaign Salvable (Quality, flasks)", "leveling->salvagable;qualityflask"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Glassblower");
         QuickUI([0.0, "Campaign Salvable (Sockets, large)", "leveling->salvagable;socketslarge"], "SH", ["Sockets", "ItemLevel", "Width", "Height"], "Small Item: Artificer Shards");
         QuickUI([0.0, "Campaign Salvable (Sockets, small)", "leveling->salvagable;socketssmall"], "SH", ["Sockets", "ItemLevel", "Width", "Height"], "Large Item: Artificer Shards");
     }
