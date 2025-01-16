@@ -519,43 +519,37 @@ Chapter() {
 
 Warning("There's currently no way to distinguish/filter the 'Rare Tiers' that drop on basetypes in the endgame (until GGG patches it)! We recommend not hiding all too many rares to spot them easily.");
 
-        Description("In PoE2 new items start dropping once you push into higher waystones. The tierlist is designed to highlight the most relevant bases in the current waystone. Tip: you can enable/disable all rules in a section, by rightclicking it.");
-
         Title("Control Visibility:");
-        Section("RARE: T1 (mostly available at ilvl75+)", "buckler09.webp")
+
+        Section("RARE: Endgame Visibility", "buckler09.webp")
         {
-            Description("T1 rares are the best rares in their category. Most of them require level 75-79 to drop. These bases require the higehst zone level to drop");
-            QuickUI(R1Top, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares: LVL82+ (TOP OF THE LINE)");
-            QuickUI(R1Other, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares: LVL65-81 (TOP OF THE LINE)");
+            Description("Rare bases with ideal itemlevel (82). The itemlevel allows these bases to roll the highest tiers of mods, that can't be found on lower levels");
+            QuickUI(R1Top, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares: LVL82+");
+            QuickUI(R2Top, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL82+");
+            QuickUI(R3Top, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL82+");
+
+            Description("General visibility (in waystones T11+)");
+            QuickUI(R1Other, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares");
+            QuickUI(R2A1, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL75+");
+            QuickUI(R3A1, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL75+");
+            QuickUI(R4A1, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL75+");
+            QuickUI(R5A1, "SH", ["ItemLevel", "AreaLevel"], "Untiered Rares: LVL75+");
         }
 
-        Section("RARE: T2 (cutting edge at ilvl70-75)", "buckler04.webp")
+        Section("RARE: Visibility in Lower Waystones", "buckler01.webp")
         {
-            Description("T2 rares are the second best rares. Most of them require level 70-75 to drop. These bases are the best available during T6-T12 waystones.");
-            QuickUI(R2Top, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL82+ (VIABLE)");
-            QuickUI(R2A1, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL75-81 (VIABLE)");
+            Description("In PoE2 new items start dropping once you push into higher waystones. The tierlist is designed to highlight the most relevant bases in the current waystone. This section only matter for lower waystones.");
+
             QuickUI(R2Other, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL65-74 (TOP OF THE LINE)");
-        }
 
-        Section("RARE: T3 (cutting edge at ilvl65-70)", "buckler03.webp")
-        {
-            Description("T3 rares are usually the first endgame exclusive rares. They usually require level 65-70 to drop. These bases are the best available during T1-T5 waystones.");
-            QuickUI(R3Top, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL82+ (POOR)");
-            QuickUI(R3A1, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL75-81 (POOR)");
-            QuickUI(R3A2, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL70-74 (VIABLE)");
             QuickUI(R3Other, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL65-69 (TOP OF THE LINE)");
-        }
+            QuickUI(R3A2, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL70-74 (VIABLE)");
 
-        Section("RARE: T4 and Untiered", "buckler01.webp")
-        {
-            Description("T4 rares are usually advanced bases that drop late in the campaign. In waystones T1-T3, these can sometimes still be the best available item.");
-            QuickUI(R4A1, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL75+ (POOR)");
-            QuickUI(R4A2, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL70-74 (POOR)");
             QuickUI(R4Other, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL65-69 (VIABLE)");
-            Description("T5 (untiered) rares are low level bases");
-            QuickUI(R5A1, "SH", ["ItemLevel", "AreaLevel"], "T5 Rares: LVL75+ (BAD)");
-            QuickUI(R5A2, "SH", ["ItemLevel", "AreaLevel"], "T5 Rares: LVL70-74+ (POOR)");
-            QuickUI(R5Other, "SH", ["ItemLevel", "AreaLevel"], "T5 Rares: LVL65-69+ (POOR)");
+            QuickUI(R4A2, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL70-74 (POOR)");
+
+            QuickUI(R5A2, "SH", ["ItemLevel", "AreaLevel"], "Untiered Rares: LVL70-74+ (POOR)");
+            QuickUI(R5Other, "SH", ["ItemLevel", "AreaLevel"], "Untiered Rares: LVL65-69+ (POOR)");
         }
 
         Section("Normal+Magic: T1,T2,T3", "bootsint05.webp")
@@ -564,7 +558,7 @@ Warning("There's currently no way to distinguish/filter the 'Rare Tiers' that dr
             QuickUI(C1Ideal, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T1 crafting bases with LVL82+");
             QuickUI(C2Ideal, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T2 crafting bases with LVL82+");
             QuickUI(C3Ideal, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T3 bases with LVL82+");
-            Description("The bases below are designed to be shown when in appropriate zone levels. You'll see T3 rares when in low waystones (because these are the best available at that level)");
+            Description("The bases below are designed to be shown when in appropriate zone levels. You'll see T3 bases when in low waystones (because these are the best available at that level)");
             QuickUI(C1, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T1 crafting bases"););
             QuickUI(C2OnLvl, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T2 bases in zones level 70-75");
             QuickUI(C3OnLvl, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T3 bases in zones level 65-70");
