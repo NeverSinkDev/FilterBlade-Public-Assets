@@ -14,7 +14,7 @@ Chapter("chapter") {
     SectionTitle("Basics");
 
     Section("General Currency", "Exalted_Orb_inventory_icon", "E") {
-        Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["normalCurrencyPoe2", "O"]); }
+        Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["normalCurrencyPoe2", "O"]); }
 
         TierListToolBar();
 
@@ -43,7 +43,7 @@ Chapter("chapter") {
 
         Section("Campaign Overrides", "currencyaddmodtomagic.webp") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function CampaignCurrencyFunc($s, $shd = "SD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["normalCurrencyPoe2", "DO"]); }
+            Function CampaignCurrencyFunc($s, $shd = "SD", $text) { QuickUI($s, $shd, ["AreaLevel", "StackSize"], $text, ["normalCurrencyPoe2", "DO"]); }
             TierListToolBar();
 
             CampaignCurrencyFunc([0.0, "Campaign Currencies 1", "currency->leveling;rare"], "SD", "Regal, Artificers, jewellers");
@@ -79,7 +79,7 @@ Chapter("chapter") {
 
         Section("Catalysts (Breach)", "breachcatalystchaos.webp", "E") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function CatalystsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B: Catalyst;C:Stackable Currency", "O"]); }
+            Function CatalystsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["B: Catalyst;C:Stackable Currency", "O"]); }
             TierListToolBar();
 
             CatalystsFunc([0.0, "Catalysts Tier 1", "currency->catalysts;s"], "SH", "S Tier");
@@ -121,7 +121,7 @@ Chapter("chapter") {
 
         Section("Essences", "greaterattributeessence.webp", "E") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function EssencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Essence of ;C:Stackable Currency", "O"]); }
+            Function EssencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["B:Essence of ;C:Stackable Currency", "O"]); }
             TierListToolBar();
 
             EssencesFunc([0.0, "Essences Tier 1", "currency->essence;s"], "SH", "S Tier");
@@ -689,11 +689,17 @@ Chapter() {
         }
 
         Section("Splinters", "deliriumsplinter.webp") {
-            QuickUI([0.0, "Splinters Tier 1", "currency->splinter;t1"], "SH", ["StackSize"], "S Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 2", "currency->splinter;t2"], "SH", ["StackSize"], "A Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 3", "currency->splinter;t3"], "SH", ["StackSize"], "B Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 4", "currency->splinter;t4"], "SH", ["StackSize"], "C Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 5", "currency->splinter;t5"], "SH", ["StackSize"], "D Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+            Function SplinterFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["B: Splinter;C:Stackable Currency", "OS"]); }
+
+            SplinterFunc([0.0, "Splinters Tier 1", "currency->splinter;t1"], "SH", "S Tier");
+            SplinterFunc([0.0, "Splinters Tier 2", "currency->splinter;t2"], "SH", "A Tier");
+            SplinterFunc([0.0, "Splinters Tier 3", "currency->splinter;t3"], "SH", "B Tier");
+            SplinterFunc([0.0, "Splinters Tier 4", "currency->splinter;t4"], "SH", "C Tier");
+            SplinterFunc([0.0, "Splinters Tier 5", "currency->splinter;t5"], "SH", "D Tier");
+
+            // new tiers
+            Conditional("?SplintersNewTier") { }
+            ElementAdder_Tier("?SplintersNewTier", "SplinterFunc");
         }
 
         Section("Ascendancy Keys", "ultimatumtrialitem.webp") {
