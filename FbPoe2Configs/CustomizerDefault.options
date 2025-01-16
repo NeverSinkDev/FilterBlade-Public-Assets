@@ -900,10 +900,6 @@ Chapter() {
 
     Section("Campaign Flasks & Charms", "Thawing_Charm_inventory_icon") {
         Section("Flasks", "flasklife09.webp") {
-            QuickUI([0.0, "Campaign Flasks (Quality, max)", "leveling->flasks->quality;max"], "SH", ["Quality", "RarityNM", "AreaLevel"], "Quality, max");
-            QuickUI([0.0, "Campaign Flasks (Quality, high)", "leveling->flasks->quality;high"], "SH", ["Quality", "RarityNM", "AreaLevel"], "Quality, high");
-            QuickUI([0.0, "Campaign Flasks (Quality, low)", "leveling->flasks->quality;any"], "SH", ["Quality", "RarityNM", "AreaLevel"], "Quality, low");
-
             Description("The following two rules combine 30 different rules that will highlight the best available flasks during your Campaign progress.");
 
             Search S_life(0.0, "Campaign Life Flask Progression 1", "leveling->flasks->life;t1") { }
