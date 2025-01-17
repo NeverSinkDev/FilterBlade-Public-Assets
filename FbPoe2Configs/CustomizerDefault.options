@@ -948,23 +948,14 @@ Chapter() {
 
     Section("Add additional Show/Hide rules", "Firefly") {
         Description("Use this section to add exotic rules and exception. This section is NOT foolproof, you can accidentally hide valuable items by misusing it. With great power comes great responsibility.");
-        Function CondShowBase ($s, $shd = "SHD", $title)
-        {
-            QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "Stats_All"], $title, ["all", "OS"]);
-        }
-
-        Function CondShowClass ($s, $shd = "SHD", $title)
-        {
-            QuickUI($s, $shd, ["CondTargetSelection", "AllGearClassesPlusFlaskJewelWaystone", "Rarity", "ItemLevel", "Stats_All"], $title, ["all", "SOA"]);
-        }
-
-        Function CondShowArmourType ($s, $shd = "SHD", $title)
-        {
-            QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "RarityU", "ArmourClasses", "ItemLevel", "Stats_All"], $title);
-        }
 
         Section("Add Basetype-Based Rules", "Firefly")
         {
+            Function CondShowBase ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "Stats_All"], $title, ["all", "OS"]);
+            }
+
             Description("Give specific BaseTypes more highlighting here.");
             Conditional("?CUniversalCustomRuleB", ["c3.gear.chancing", "c0.start", "c4.gear.salvagable", "c7.jewels.generic.all", "c11.uniques.all", "c20.leveling.salvagable.all"]) { Show; SetBackgroundColor 60 0 0; SetBorderColor 200 0 0; SetFontSize 40; ItemLevel >= 65; }
             ElementAdder_Tier("?CUniversalCustomRuleB", "CondShowBase");
@@ -972,6 +963,11 @@ Chapter() {
 
         Section("Add Class-Based Rules", "Firefly")
         {
+            Function CondShowClass ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "AllGearClassesPlusFlaskJewelWaystone", "Rarity", "ItemLevel", "Stats_All"], $title, ["all", "SOA"]);
+            }
+
             Description("Give specific classes more highlighting here.");
             Conditional("?CUniversalCustomRuleC", ["c3.gear.chancing", "c0.start", "c4.gear.salvagable", "c7.jewels.generic.all", "c11.uniques.all", "c20.leveling.salvagable.all"]) { Show; SetBackgroundColor 60 0 0; SetBorderColor 200 0 0; SetFontSize 40; ItemLevel >= 65; Rarity Normal Magic; }
             ElementAdder_Tier("?CUniversalCustomRuleC", "CondShowClass");
@@ -979,6 +975,11 @@ Chapter() {
 
         Section("Add Armour-Type-Based Rules", "Firefly")
         {
+            Function CondShowArmourType ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "RarityU", "ArmourClasses", "ItemLevel", "Stats_All"], $title);
+            }
+
             Conditional("?CUniversalCustomRuleArmourType", ["c3.gear.chancing", "c0.start", "c4.gear.salvagable", "c7.jewels.generic.all", "c11.uniques.all", "c20.leveling.salvagable.all"]) { Show; SetBackgroundColor 60 0 0; SetBorderColor 200 0 0; SetFontSize 40; ItemLevel >= 65; Rarity Normal Magic; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
             ElementAdder_Tier("?CUniversalCustomRuleArmourType", "CondShowArmourType");
         }
