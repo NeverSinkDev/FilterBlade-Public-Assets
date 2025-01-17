@@ -263,7 +263,7 @@ Chapter("chapter") {
 
         Function CondShowBaseQuick ($s, $shd = "SD", $title)
         {
-            QuickUI($s, $shd, ["RarityU", "ItemLevel", "Corrupted", "Stats_All"], $title, ["rarityItems", "OS"]);
+            QuickUI($s, $shd, ["RarityU", "ItemLevel", "Corrupted", "Stats_Rarity"], $title, ["rarityItems", "OS"]);
         }
 
         Conditional("?CQuickEndgameCustomRule1", ["c3.gear.chancing"]) { Show; BaseType == "Expert Dualstring Bow" "Primed Quiver"; SetBorderColor 200 0 0; SetBackgroundColor 60 0 0; SetFontSize 40; ItemLevel >= 68; Rarity Normal Magic; Corrupted False; Mirrored False; }
@@ -953,7 +953,7 @@ Chapter() {
         {
             Function CondShowBase ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "Stats_All"], $title, ["all", "OS"]);
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "Stats_ALL"], $title, ["all", "OS"]);
             }
 
             Description("Give specific BaseTypes more highlighting here.");
@@ -965,7 +965,7 @@ Chapter() {
         {
             Function CondShowClass ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "AllGearClassesPlusFlaskJewelWaystone", "Rarity", "ItemLevel", "Stats_All"], $title, ["all", "SOA"]);
+                QuickUI($s, $shd, ["CondTargetSelection", "AllGearClassesPlusFlaskJewelWaystone", "Rarity", "ItemLevel", "Stats_ALL"], $title, ["all", "SOA"]);
             }
 
             Description("Give specific classes more highlighting here.");
@@ -977,7 +977,7 @@ Chapter() {
         {
             Function CondShowArmourType ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "RarityU", "ArmourClasses", "ItemLevel", "Stats_All"], $title);
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "RarityU", "ArmourClasses", "ItemLevel", "Stats_RareGear"], $title);
             }
 
             Conditional("?CUniversalCustomRuleArmourType", ["c3.gear.chancing", "c0.start", "c4.gear.salvagable", "c7.jewels.generic.all", "c11.uniques.all", "c20.leveling.salvagable.all"]) { Show; SetBackgroundColor 60 0 0; SetBorderColor 200 0 0; SetFontSize 40; ItemLevel >= 65; Rarity Normal Magic; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
