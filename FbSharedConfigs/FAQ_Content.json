@@ -1,4 +1,8 @@
 {
+  "meta_description": "This file is used on https://www.filterblade.xyz/FAQ to generate all questions and answers.",
+  "meta_documentation": "While the 'questionList', 'question' and 'answer' fields are probably self-explanatory, the 'tags' field is used for the search method on the site. Use it to add additional keywords that are NOT already in the question or answer text.",
+  "meta_format": "The 'question' and 'answer' fields can be filled with HTML code to add e.g. line-breaks with '<br>', links with '<a target=\"_blank\" href=\"https://www.filterblade.xyz\">Click here</a>' and images with '<img alt=\"Image description\" src=\"https://www.filterblade.xyz/assets/img/PoE1-logo.png\">'.",
+  "meta_testing": "You can go to https://www.filterblade.xyz/FAQ, press F12 to open the browser dev tools, open the console, write 'testNewFaqContent(', then paste the entire content of your new FAQ_Content.json file (don't add any additional quotes), followed by a ')' and press enter. This will reload the entire content with the one you specified.",
   "questionList": [
     {
       "question": "I don't know where to start. How do I use FilterBlade? What even is it?",
