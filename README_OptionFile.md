@@ -51,12 +51,13 @@ The most important command for the Customizer.
 Dynamically generates 95% of the entire editing GUI, including rule-titles, color editing, itemLevel slider, tierLists and other UI elements.
 
 An example line would be: `QuickUI([0.0, "Loreweave Rings", "uniques;recipeuniquerings"], "SD", ["ItemLevel"]);`
+We will reference this line and its components when going over the parameters below.
 
 ![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/0116ead3-1ab3-4222-bf2a-428abe9a6f23)
 
 It receives the following parameters:
 
-### ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) Filter rule
+### ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) 1) Filter rule (e.g. `[0.0, "Loreweave Rings", "uniques;recipeuniquerings"]`)
 
 This is either just the name of a local filter-query (see the "Searches" chapter below), or an array with 3 values that inlines a filter-query:
 
@@ -64,9 +65,9 @@ This is either just the name of a local filter-query (see the "Searches" chapter
 
 2. NAME-ID: Unique name that identifies this query. Will be sometimes referred as 'filter-rule-name' Having the same name for different rules is not allowed. Changing the ID of a rule is also not allowed as this value is used for the save&load system to identify this rule. Meaning any edit will cause existing changes to not find their old rule any more and cause invalidations. This value is therefore very critical. If you want to change the name, use the "Title" parameter of the QuickUI instead.
 
-3. FILTER-RULE: If you look into NeverSinks `.filter` files, you'll see that every rule the filter is anoted with a "type" and a "tier" tag, for example: `Show # $type->currency $tier->t1exalted` means the "type" of the rule is "currency" and "t1exalted" is its "tier". We use these tags here to uniquely identify a single rule in the filter by writing the type, then a semicolon, and then the tier of the rule, for example: `"currency;t1exalted"`. This "links" that rule to this GUI. Meaning the GUI will display the values of that rule, and editing the GUI will edit this rule.
+3. FILTER-RULE: If you look into NeverSinks `.filter` files, you'll see that every rule the filter is anoted with a "type" and a "tier" tag, for example: `Show # $type->uniques $tier->recipeuniquerings` means the "type" of the rule is "uniques" and "recipeuniquerings" is its "tier". We use these tags here to uniquely identify a single rule in the filter by writing the type, then a semicolon, and then the tier of the rule, for example: `"uniques;recipeuniquerings"`. This "links" that rule to this GUI. Meaning the GUI will display the values of that rule, and editing the GUI will edit this rule.
 
-### ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) SHD buttons
+### ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) 2) SHD buttons (e.g. `"SH"`)
 
 SHD stands for "Show", "Hide" and "Disable" - the 3 buttons you can see on the left of the editor to toggle rules on and off.
 Example: "SD" would generate a show and disable button. "S" only a show button. "SHD" all 3 buttons. "" would not generate any options.
@@ -75,7 +76,7 @@ This parameter is ignored if the right button combination can be deferred from t
 
 Warning: Never use 'Disable' in full tierlists. Unmatched items (through disabled rules) in a tierlist will 'fall-through' and fall down into the pink "error" rule. Full tierlists (such as currency, uniques, divination cards) need to have every available basetype matched by a Show or Hide rule.
 
-### ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) List of identifiers
+### ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) 3) List of identifiers (e.g. `["ItemLevel", "Rarity"]`)
 
 This is the fun part:
 
@@ -104,11 +105,11 @@ These UIs don't edit the filter directly, but rather "expose" properties of the 
 If you add an ItemLevel slider to a rule and that rule does filter by ItemLevel, the slider will display this value and allow the user to edit it.
 On the other hand, if that rule does not filter by ItemLevel yet, the slider will be on "any" and the user can add this filering if they desire.
 
-### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Title
+### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) 4) Title (e.g. `"S Tier"`)
 
 Title for the GUI. Can be anything. If ommited (null or empty string), the filter rule name / query-id will be used.
 
-### ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) TierList-config
+### ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) 5) TierList-config (e.g. `["Currency", "O"]`)
 
 For tierlist-UIs, this array is required to generate the UI for the baseType list.
 The array has 3 elements:
@@ -119,7 +120,7 @@ The array has 3 elements:
 
 Can be empty if you don't want to generate a tierlist UI.
 
-### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) Description
+### ![#f03c15](https://placehold.co/15x15/7CFC00/7CFC00.png) 6) Description
 
 Optional. Generates a small description text for this rule.
 
