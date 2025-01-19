@@ -146,8 +146,8 @@
     },
     {
       "question": "I can't see any items. // My items disappear after a short time",
-      "answer": "Try pressing 'Z' on your keyboard. This hotkey will toggle between showing NO items and only showing those your loot filter lets you see. Holding 'Alt' will show all items",
-      "tags": "no items drop item see visible hidden all every item hides all invisible cant short time period no longer too short gone"
+      "answer": "This is not controlled by filterblade and is instead a setting in game called 'Toggle Highlighting' <br> <br> On PC this can be toggled with 'Z' by default <img src='https://cdn.discordapp.com/attachments/1087471717523398717/1330524804893376573/9GEGMWe.png?ex=678e4b49&is=678cf9c9&hm=21bdaa92c319121bc8749067d42155ec36575487316c71067bce0d9e75137d04&' alt='Toggle Highlight Keybind'> <br> <br> On console we do not believe there is a keybind for this yet but you should still be able to go into the settings and use the following checkbox to enable/disable this feature <br> <img src='https://cdn.discordapp.com/attachments/1087471717523398717/1330524707857891358/zIduo6Y.png?ex=678e4b32&is=678cf9b2&hm=84bfb44d7ca5d478e89e26b4f86e555b8715333d4ccd54dc24f84fc892e19354&' alt='Always highlight setting in interface'>",
+      "tags": "no items drop item see visible hidden all every item hides all invisible cant short time period no longer too short gone seconds"
     },
     {
       "question": "Will you create a filter for PoE: Royale?",
@@ -333,11 +333,6 @@
       "question": "Can you make the filter do ...?",
       "answer": "The things a PoE loot filter can do are very limited. A good rule of thumb is: If you can't do it on FilterBlade, it's likely not possible in PoE. You can:<ul><li>Add colors (text, border, background) with opacity, but no gradients, and no changing the border width</li><li>Add beams and minimap icons</li><li>Play one from the 26 sounds with a given volume + NEW: play those sounds in a way that tells where in the game world that item dropped. + NEW: Play custom sound files on your PC.</li><li>Set a size from 18 to 45. Nothing bigger or smaller than that.</li></ul>Things we can NOT do include but are not limited to:<ul><li>Filter by unique name. Only filtering by BaseType is possible. And many BaseTypes have multiple uniques. A filter cannot tell which one of those it is, even if it's identified.</li><li>Change the font itself</li><li>Edit the font of chests, breach hands, masters, etc to be bigger or better visible.</li><li>Detect the 'Tier' of an item (PoE2 only).</li><li>Detect the mods of unidentified items, or the specific (corruption-) implicits of any item, not which mod is fractured.</li><li>Only show items that are allocated to me when playing in groups.</li><li>Only show items for a given time and hide them after x seconds.</li></ul>",
       "tags": "GGG limits limit api can do i possible to feature can i is it possible to do possible to have add make"
-    },
-    {
-      "question": "My item hides after a couple of seconds being on the floor?",
-      "answer": "This is not controlled by filterblade and is instead a setting in game called 'Toggle Highlighting' <br> <br> On PC this can be toggled with 'Z' by default <img src='https://cdn.discordapp.com/attachments/1087471717523398717/1330524804893376573/9GEGMWe.png?ex=678e4b49&is=678cf9c9&hm=21bdaa92c319121bc8749067d42155ec36575487316c71067bce0d9e75137d04&' alt='Toggle Highlight Keybind'> <br> <br> On console we do not believe there is a keybind for this yet but you should still be able to go into the settings and use the following checkbox to enable/disable this feature <br> <img src='https://cdn.discordapp.com/attachments/1087471717523398717/1330524707857891358/zIduo6Y.png?ex=678e4b32&is=678cf9b2&hm=84bfb44d7ca5d478e89e26b4f86e555b8715333d4ccd54dc24f84fc892e19354&' alt='Always highlight setting in interface'>",
-      "tags": "hide currency items randomly after couple seconds"
     }
   ]
 }
