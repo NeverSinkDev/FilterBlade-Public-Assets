@@ -953,7 +953,7 @@ Chapter() {
         {
             Function CondShowBase ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "Stats_ALL"], $title, ["all", "OS"]);
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "Stats_ALL"], $title, ["all", "OS" "StackSize"]);
             }
 
             Description("Give specific BaseTypes more highlighting here.");
