@@ -60,11 +60,11 @@ It receives the following parameters:
 
 This is either just the name of a local filter-query (see the "Searches" chapter below), or an array with 3 values that inlines a filter-query:
 
-1. FILTER-QUERY-VERSION: New rules always have version "0.0". Usually, you do NOT need to change this. Increasing the first number will remove ALL user customizations done to this rule for ALL users. Required to handle major changes to the game and filter structure. The second number will only remove non-visual changes (e.g. not size and color).
+1. VERSION: New rules always have version "0.0". Usually, you do NOT need to change this. Increasing the first number will remove ALL user customizations done to this rule for ALL users. Required to handle major changes to the game and filter structure. The second number will only remove non-visual changes (e.g. not size and color).
 
-2. FILTER-QUERY-ID: Unique name that identifies this query. Will be sometimes referred as 'filter-rule-name' Having the same name for different rules is not allowed. Changing the ID of a rule is also not allowed as this value is used for the save&load system to identify this rule. Meaning any edit will cause existing changes to not find their old rule any more and cause invalidations. This value is therefore very critical. If you want to change the name, use the "Title" parameter of the QuickUI instead.
+2. NAME-ID: Unique name that identifies this query. Will be sometimes referred as 'filter-rule-name' Having the same name for different rules is not allowed. Changing the ID of a rule is also not allowed as this value is used for the save&load system to identify this rule. Meaning any edit will cause existing changes to not find their old rule any more and cause invalidations. This value is therefore very critical. If you want to change the name, use the "Title" parameter of the QuickUI instead.
 
-3. TIER-TAG-QUERY: Rules in the filter are anoted with type/tier lines: `Show # $type->currency $tier->t1exalted`. This data is used here to determine which rule the QuickUI is 'linked' to. Syntax: `"TYPE;TIER"` - first the type (excluding "$type->"), then a semicolon, then the tier (including "$tier->"). In this example it would be `"currency;t1exalted"`.
+3. FILTER-RULE: Every rule the filter is anoted with a "type" and a "tier" tag, for example: `Show # $type->currency $tier->t1exalted` means the "type" of the rule is "currency" and "t1exalted" is its "tier". We use these tags here to uniquely identify a single rule in the filter by writing the type, then a semicolon, and then the tier of the rule, for example: `"currency;t1exalted"`. This "links" that rule to this GUI. Meaning the GUI will display the values of that rule, and editing the GUI will edit this rule.
 
 ### ![#f03c15](https://placehold.co/15x15/ffae42/ffae42.png) SHD buttons
 
