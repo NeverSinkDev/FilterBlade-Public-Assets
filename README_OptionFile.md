@@ -51,11 +51,17 @@ The most important command for the Customizer.
 Dynamically generates 95% of the entire editing GUI, including rule-titles, color editing, itemLevel slider, tierLists and other UI elements.
 
 An example line would be: `QuickUI([0.0, "Loreweave Rings", "uniques;recipeuniquerings"], "SD", ["ItemLevel"]);`
+
 We will reference this line and its components when going over the parameters below.
+
+The example above has 3 parameters:
+1. `[0.0, "Loreweave Rings", "uniques;recipeuniquerings"]` -> Filter rule
+2. `"SH"` -> SHD buttons
+3. `["ItemLevel"]` -> List of identifiers
 
 ![image](https://github.com/NeverSinkDev/FilterBlade-Public-Assets/assets/20803858/0116ead3-1ab3-4222-bf2a-428abe9a6f23)
 
-It receives the following parameters:
+All available parameters and their usage are:
 
 ### ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) 1) Filter rule (e.g. `[0.0, "Loreweave Rings", "uniques;recipeuniquerings"]`)
 
