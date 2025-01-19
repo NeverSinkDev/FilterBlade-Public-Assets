@@ -14,7 +14,7 @@ Chapter("chapter") {
     SectionTitle("Basics");
 
     Section("General Currency", "Exalted_Orb_inventory_icon", "E") {
-        Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["normalCurrencyPoe2", "O"]); }
+        Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["normalCurrencyPoe2", "O"]); }
 
         TierListToolBar();
 
@@ -43,13 +43,13 @@ Chapter("chapter") {
 
         Section("Campaign Overrides", "currencyaddmodtomagic.webp") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function CampaignCurrencyFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["normalCurrencyPoe2", "DO"]); }
+            Function CampaignCurrencyFunc($s, $shd = "SD", $text) { QuickUI($s, $shd, ["AreaLevel", "StackSize"], $text, ["normalCurrencyPoe2", "DO"]); }
             TierListToolBar();
 
-            CampaignCurrencyFunc([0.0, "Campaign Currencies 1", "currency->leveling;rare"], "SH", "Regal, Artificers, jewellers");
-            CampaignCurrencyFunc([0.0, "Campaign Currencies 2", "currency->leveling;magic"], "SH", "Transmutes+Augments");
-            CampaignCurrencyFunc([0.0, "Campaign Currencies 4", "currency->leveling;wisdomstart"], "SH", "Wisdom Scrolls (act 1)");
-            CampaignCurrencyFunc([0.0, "Campaign Currencies 3", "currency->leveling;wisdom"], "SH", "Wisdom Scrolls (later acts)");
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 1", "currency->leveling;rare"], "SD", "Regal, Artificers, jewellers");
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 2", "currency->leveling;magic"], "SD", "Transmutes+Augments");
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 4", "currency->leveling;wisdomstart"], "SD", "Wisdom Scrolls (act 1)");
+            CampaignCurrencyFunc([0.0, "Campaign Currencies 3", "currency->leveling;wisdom"], "SD", "Wisdom Scrolls (later acts)");
 
             // new tiers
             Conditional("?CampaignCurrencyNewTier") { }
@@ -79,7 +79,7 @@ Chapter("chapter") {
 
         Section("Catalysts (Breach)", "breachcatalystchaos.webp", "E") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function CatalystsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B: Catalyst;C:Stackable Currency", "O"]); }
+            Function CatalystsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["B: Catalyst;C:Stackable Currency", "O"]); }
             TierListToolBar();
 
             CatalystsFunc([0.0, "Catalysts Tier 1", "currency->catalysts;s"], "SH", "S Tier");
@@ -121,7 +121,7 @@ Chapter("chapter") {
 
         Section("Essences", "greaterattributeessence.webp", "E") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function EssencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Essence of ;C:Stackable Currency", "O"]); }
+            Function EssencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["B:Essence of ;C:Stackable Currency", "O"]); }
             TierListToolBar();
 
             EssencesFunc([0.0, "Essences Tier 1", "currency->essence;s"], "SH", "S Tier");
@@ -147,16 +147,16 @@ Chapter("chapter") {
         TierListToolBar();
 
         Title("Predictable Tiers");
-        UniquesFunc([0.0, "Uniques Tier 1", "uniques;t1"], "SH", "Tier 1", "Tier 1 uniques are always an expensive and lucky find!");
-        UniquesFunc([0.0, "Uniques Tier 2", "uniques;t2"], "SH", "Tier 2", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
-        UniquesFunc([0.0, "Uniques Tier 3", "uniques;t3"], "SH", "Tier 3", "These are highly roll dependent. Keep your filter updated, especially if you want to hide this section!");
-        UniquesFunc([0.0, "Uniques EarlyLeague", "uniques;earlyleague"], "SH", "Early League", "Expensive or interesting at the start of the new league, but lose value VERY fast! This tier stays empty, after the first days of the new league");
-        UniquesFunc([0.0, "Uniques Hideable", "uniques;hideable"], "SH", "Hideable", "These uniques are worth very little. Keep your filter updated, if you want to hide this section! Hiding this section at the start of new leagues and in SSF is a bad idea.");
+        UniquesFunc([0.0, "Uniques Tier 1", "uniques;t1"], "SH", "S Tier", "Tier 1 uniques are always an expensive and lucky find!");
+        UniquesFunc([0.0, "Uniques Tier 2", "uniques;t2"], "SH", "A Tier", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
+        UniquesFunc([0.0, "Uniques Tier 3", "uniques;t3"], "SH", "B+C Tier", "These are highly roll dependent. Keep your filter updated, especially if you want to hide this section!");
+        UniquesFunc([0.0, "Uniques EarlyLeague", "uniques;earlyleague"], "SH", "D TIER - Early League Uniques", "Expensive or interesting at the start of the new league, but lose value VERY fast! This tier stays empty, after the first days of the new league");
+        UniquesFunc([0.0, "Uniques Hideable", "uniques;hideable"], "SH", "D TIER - LOW VALUE", "These uniques are worth very little. Keep your filter updated, if you want to hide this section! Hiding this section at the start of new leagues and in SSF is a bad idea.");
 
         Title("High Variety Tiers");
-        UniquesFunc([0.0, "Uniques MultiSpecial High", "uniques;multispecialhigh"], "SH", "Multi Special High", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a VERY small chance for these to be VERY expensive");
-        UniquesFunc([0.0, "Uniques MultiSpecial", "uniques;multispecial"], "SH", "Multi Special", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a small chance for these to be expensive");
-        UniquesFunc([0.0, "Uniques Tier 3 Boss", "uniques;t3boss"], "SH", "Tier 3 Boss", "A potentially expensive unique version of this item drops ONLY from bosses! The world drop unique is fairly cheap! You can hide this tier, BUT remember to check the hidden items dropped by bosses!");
+        UniquesFunc([0.0, "Uniques MultiSpecial High", "uniques;multispecialhigh"], "SH", "High Variety - top multi-bases", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a VERY small chance for these to be VERY expensive");
+        UniquesFunc([0.0, "Uniques MultiSpecial", "uniques;multispecial"], "SH", "High Variety - multi-bases", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a small chance for these to be expensive");
+        UniquesFunc([0.0, "Uniques Tier 3 Boss", "uniques;t3boss"], "SH", "High Variety - boss-drops", "A potentially expensive unique version of this item drops ONLY from bosses! The world drop unique is fairly cheap! You can hide this tier, BUT remember to check the hidden items dropped by bosses!");
 
         // new tiers
         Conditional("?UniquesNewTier") { }
@@ -174,7 +174,7 @@ Chapter("chapter") {
 
         Description("You can potentially turn a normal item into a unique using a 'Orb of Chance'. The chances for that to happen are slim, but it can be pretty thrilling and profitable if you hit the lottery. The following section suggests potential chancing bases.<br> Only non-boss drops can be chanced:");
 
-        ChancingFunc([0.0, "Chancing bases", "chancing;any"], "SH");
+        ChancingFunc([0.0, "Chancing bases", "chancing;any"], "SD");
 
         // new tiers
         Conditional("?ChancingNewTier") { }
@@ -244,6 +244,7 @@ Chapter("chapter") {
         QuickUI([0.0, "Gems, Support, Campaign ", "gems->uncut;supportcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Support");
         Title("Misc.");
         QuickUI([0.0, "Cut Gems ", "gems;any"], "SH", ["AreaLevel", "ItemLevel"]);
+        QuickUI([0.0, "Remaining Uncut Gems", "gems->uncut;exhide"], "SH", []);
     }
 
     Section("Gold", "Gold_inventory_icon") {
@@ -262,7 +263,7 @@ Chapter("chapter") {
 
         Function CondShowBaseQuick ($s, $shd = "SD", $title)
         {
-            QuickUI($s, $shd, ["RarityU", "ItemLevel", "Corrupted", "Stats_All"], $title, ["rarityItems", "OS"]);
+            QuickUI($s, $shd, ["RarityU", "ItemLevel", "Corrupted", "Stats_Rarity"], $title, ["rarityItems", "OS"]);
         }
 
         Conditional("?CQuickEndgameCustomRule1", ["c3.gear.chancing"]) { Show; BaseType == "Expert Dualstring Bow" "Primed Quiver"; SetBorderColor 200 0 0; SetBackgroundColor 60 0 0; SetFontSize 40; ItemLevel >= 68; Rarity Normal Magic; Corrupted False; Mirrored False; }
@@ -275,25 +276,25 @@ Chapter() {
 
     Section("Hide Armour Classes & Weapon Types", "annullorb.webp") {
         Title("Normal/Magic");
-        QuickUI([0.0, "Endgame Hide, Crafting, Armour", "endgame->conditionalhiders->crafting;arhider"], "DH", ["ItemLevel", "Rarity"], "Hide: Armour");
-        QuickUI([0.0, "Endgame Hide, Crafting, Evasion", "endgame->conditionalhiders->crafting;evhider"], "DH", ["ItemLevel", "Rarity"], "Hide: Evasion");
-        QuickUI([0.0, "Endgame Hide, Crafting, ES", "endgame->conditionalhiders->crafting;eshider"], "DH", ["ItemLevel", "Rarity"], "Hide: Energy Shield");
-        QuickUI([0.0, "Endgame Hide, Crafting, Ar-Ev", "endgame->conditionalhiders->crafting;arevhider"], "DH", ["ItemLevel", "Rarity"], "Hide: Hybrid Armour+Evasion");
-        QuickUI([0.0, "Endgame Hide, Crafting, Ar-ES", "endgame->conditionalhiders->crafting;areshider"], "DH", ["ItemLevel", "Rarity"], "Hide: Hybrid Armour+ES");
-        QuickUI([0.0, "Endgame Hide, Crafting, ES-EV", "endgame->conditionalhiders->crafting;eveshider"], "DH", ["ItemLevel", "Rarity"], "Hide: Hybrid Evasion+ES");
+        QuickUI([0.0, "Endgame Hide, Crafting, Armour", "endgame->conditionalhiders->crafting;arhider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Armour");
+        QuickUI([0.0, "Endgame Hide, Crafting, Evasion", "endgame->conditionalhiders->crafting;evhider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Evasion");
+        QuickUI([0.0, "Endgame Hide, Crafting, ES", "endgame->conditionalhiders->crafting;eshider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Energy Shield");
+        QuickUI([0.0, "Endgame Hide, Crafting, Ar-Ev", "endgame->conditionalhiders->crafting;arevhider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Hybrid Armour+Evasion");
+        QuickUI([0.0, "Endgame Hide, Crafting, Ar-ES", "endgame->conditionalhiders->crafting;areshider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Hybrid Armour+ES");
+        QuickUI([0.0, "Endgame Hide, Crafting, ES-EV", "endgame->conditionalhiders->crafting;eveshider"], "DH", ["ItemLevel", "Rarity", "ArmourClasses"], "Hide: Hybrid Evasion+ES");
         Warning("Open the rule and select the weapons you DON'T want. Otherwise it'll hide ALL weapons.");
-        QuickUI([0.0, "Endgame Hide, Crafting, WeaponTypes", "endgame->conditionalhiders->crafting;hideweaponsbytype"], "DH", ["ItemLevel", "Rarity", "WeaponClasses"], "Hide Weapon Classes");
+        QuickUI([0.0, "Endgame Hide, Crafting, WeaponTypes", "endgame->conditionalhiders->crafting;hideweaponsbytype"], "DH", ["ItemLevel", "Rarity", "WeaponAndOffhandClasses"], "Hide Weapon/Offhand Classes");
         Title("Rares");
-        QuickUI([0.0, "Endgame Hide, Rare, Armour", "endgame->conditionalhiders->rare;arhider"], "DH", ["ItemLevel"], "Hide: Armour");
-        QuickUI([0.0, "Endgame Hide, Rare, Evasion", "endgame->conditionalhiders->rare;evhider"], "DH", ["ItemLevel"], "Hide: Evasion");
-        QuickUI([0.0, "Endgame Hide, Rare, ES", "endgame->conditionalhiders->rare;eshider"], "DH", ["ItemLevel"], "Hide: Energy Shield");
-        QuickUI([0.0, "Endgame Hide, Rare, Ar-Ev", "endgame->conditionalhiders->rare;arevhider"], "DH", ["ItemLevel"], "Hide: Hybrid Armour+Evasion");
-        QuickUI([0.0, "Endgame Hide, Rare, Ar-ES", "endgame->conditionalhiders->rare;areshider"], "DH", ["ItemLevel"], "Hide: Hybrid Armour+ES");
-        QuickUI([0.0, "Endgame Hide, Rare, ES-EV", "endgame->conditionalhiders->rare;eveshider"], "DH", ["ItemLevel"], "Hide: Hybrid Evasion+ES");
+        QuickUI([0.0, "Endgame Hide, Rare, Armour", "endgame->conditionalhiders->rare;arhider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Armour");
+        QuickUI([0.0, "Endgame Hide, Rare, Evasion", "endgame->conditionalhiders->rare;evhider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Evasion");
+        QuickUI([0.0, "Endgame Hide, Rare, ES", "endgame->conditionalhiders->rare;eshider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Energy Shield");
+        QuickUI([0.0, "Endgame Hide, Rare, Ar-Ev", "endgame->conditionalhiders->rare;arevhider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Hybrid Armour+Evasion");
+        QuickUI([0.0, "Endgame Hide, Rare, Ar-ES", "endgame->conditionalhiders->rare;areshider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Hybrid Armour+ES");
+        QuickUI([0.0, "Endgame Hide, Rare, ES-EV", "endgame->conditionalhiders->rare;eveshider"], "DH", ["ItemLevel", "ArmourClasses"], "Hide: Hybrid Evasion+ES");
         QuickUI([0.0, "Endgame Hide, Rare, Identified", "conditionalhide;idhider"], "DH", ["ItemLevel"], "Hide: Identified");
         QuickUI([0.0, "Endgame Hide, Rare, Corrupted", "conditionalhide;corruptedrares"], "DH", ["ItemLevel"], "Hide corrupted rares (no implicit)");
         Warning("Open the rule and select the weapons you DON'T want. Otherwise it'll hide ALL weapons.");
-        QuickUI([0.0, "Endgame Hide, Rare, WeaponTypes", "endgame->conditionalhiders->rare;hideweaponsbytype"], "DH", ["ItemLevel", "Rarity", "WeaponClasses"], "Hide Weapon Classes");
+        QuickUI([0.0, "Endgame Hide, Rare, WeaponTypes", "endgame->conditionalhiders->rare;hideweaponsbytype"], "DH", ["ItemLevel", "Rarity", "WeaponAndOffhandClasses"], "Hide Weapon/Offhand Classes");
     }
 
     Section("Add custom Show/Hide rule", "Firefly") {
@@ -389,7 +390,7 @@ Chapter() {
             QuickUI([0.0, "Endgame Rare Decorator, basic", "decorators->rareeg;basicraredecorator"], "SD", [], "Also Every item...");
         }
 
-        Section("Decorators: Rare Normal/Magic Items")
+        Section("Decorators: Normal/Magic Items")
         {
             QuickUI([0.0, "Endgame Crafting Decorator, normal 82", "endgame->normalcraft->decorator;normal82"], "SD", ["ItemLevel", "Rarity"], "If the ILVL is 82 or higher...");
             QuickUI([0.0, "Endgame Crafting Decorator, normal jewelery", "endgame->normalcraft->decorator;normaldecoratorjwlry"], "SD", ["Rarity"], "If item is ring, belt or amulet...");
@@ -401,6 +402,9 @@ Chapter() {
     }
 
     Section("Rings, Amulets, Belts", "Amethyst_Ring_inventory_icon") {
+
+    Warning("There's currently no way to distinguish/filter the 'Rare Tiers' that drop on basetypes in the endgame (until GGG patches it)! We recommend not hiding all too many rares to spot them easily.");
+
         Title("Control Visibility:");
         Section("Amulets+Rings [RARE]", "crimsonamulet.webp") {
             Title("Rings/Amulets: LVL 82");
@@ -438,13 +442,13 @@ Chapter() {
 
         Section("Belts [NORMAL+MAGIC]", "belt09.webp") {
             Title("Belts: LVL 82");
-            QuickUI(Belt1Craft, "SH", ["ItemLevel", "Rarity"], "T1 ILVL82+");
-            QuickUI(Belt2Craft, "SH", ["ItemLevel", "Rarity"], "T2 ILVL82+");
-            QuickUI(Belt3Craft, "SH", ["ItemLevel", "Rarity"], "T3 ILVL82+");
+            QuickUI(Belt1Ideal, "SH", ["ItemLevel", "Rarity"], "T1 ILVL82+");
+            QuickUI(Belt2Ideal, "SH", ["ItemLevel", "Rarity"], "T2 ILVL82+");
+            QuickUI(Belt3Ideal, "SH", ["ItemLevel", "Rarity"], "T3 ILVL82+");
             Title("Belts: Other Endgame");
-            QuickUI(Belt1Ideal, "SH", ["ItemLevel", "Rarity"], "T1");
-            QuickUI(Belt2Ideal, "SH", ["ItemLevel", "Rarity"], "T2");
-            QuickUI(Belt3Ideal, "SH", ["ItemLevel", "Rarity"], "T3");
+            QuickUI(Belt1Craft, "SH", ["ItemLevel", "Rarity"], "T1");
+            QuickUI(Belt2Craft, "SH", ["ItemLevel", "Rarity"], "T2");
+            QuickUI(Belt3Craft, "SH", ["ItemLevel", "Rarity"], "T3");
         }
 
         //rare endgame amulets
@@ -484,7 +488,6 @@ Chapter() {
     }
 
     Section("Weapons & Armours", "Soldier_Greathelm_inventory_icon") {
-
         Search R1Top(0.0, "T1 Rares: BestLevel+", "rr;t1_top") { }
         Search R1Other(0.0, "T1 Rares: Others", "rr;t1_other") { }
 
@@ -514,43 +517,39 @@ Chapter() {
 
         Title("Rares");
 
-        Description("In PoE2 new items start dropping once you push into higher waystones. The tierlist is designed to highlight the most relevant bases in the current waystone. Tip: you can enable/disable all rules in a section, by rightclicking it.");
+Warning("There's currently no way to distinguish/filter the 'Rare Tiers' that drop on basetypes in the endgame (until GGG patches it)! We recommend not hiding all too many rares to spot them easily.");
 
         Title("Control Visibility:");
-        Section("RARE: T1 (mostly available at ilvl75+)", "Buckler09.webp")
+
+        Section("RARE: Endgame Visibility", "buckler09.webp")
         {
-            Description("T1 rares are the best rares in their category. Most of them require level 75-79 to drop. These bases require the higehst zone level to drop");
-            QuickUI(R1Top, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares: LVL82+ (TOP OF THE LINE)");
-            QuickUI(R1Other, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares: LVL65-81 (TOP OF THE LINE)");
+            Description("Rare bases with ideal itemlevel (82). The itemlevel allows these bases to roll the highest tiers of mods, that can't be found on lower levels");
+            QuickUI(R1Top, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares: LVL82+");
+            QuickUI(R2Top, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL82+");
+            QuickUI(R3Top, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL82+");
+
+            Description("General visibility (in waystones T11+)");
+            QuickUI(R1Other, "SH", ["ItemLevel", "AreaLevel"], "T1 Rares");
+            QuickUI(R2A1, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL75+");
+            QuickUI(R3A1, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL75+");
+            QuickUI(R4A1, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL75+");
+            QuickUI(R5A1, "SH", ["ItemLevel", "AreaLevel"], "Untiered Rares: LVL75+");
         }
 
-        Section("RARE: T2 (cutting edge at ilvl70-75)", "Buckler04.webp")
+        Section("RARE: Visibility in Lower Waystones", "buckler01.webp")
         {
-            Description("T2 rares are the second best rares. Most of them require level 70-75 to drop. These bases are the best available during T6-T12 waystones.");
-            QuickUI(R2Top, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL82+ (VIABLE)");
-            QuickUI(R2A1, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL75-81 (VIABLE)");
+            Description("In PoE2 new items start dropping once you push into higher waystones. The tierlist is designed to highlight the most relevant bases in the current waystone. This section only matter for lower waystones.");
+
             QuickUI(R2Other, "SH", ["ItemLevel", "AreaLevel"], "T2 Rares: LVL65-74 (TOP OF THE LINE)");
-        }
 
-        Section("RARE: T3 (cutting edge at ilvl65-70)", "Buckler03.webp")
-        {
-            Description("T3 rares are usually the first endgame exclusive rares. They usually require level 65-70 to drop. These bases are the best available during T1-T5 waystones.");
-            QuickUI(R3Top, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL82+ (POOR)");
-            QuickUI(R3A1, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL75-81 (POOR)");
-            QuickUI(R3A2, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL70-74 (VIABLE)");
             QuickUI(R3Other, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL65-69 (TOP OF THE LINE)");
-        }
+            QuickUI(R3A2, "SH", ["ItemLevel", "AreaLevel"], "T3 Rares: LVL70-74 (VIABLE)");
 
-        Section("RARE: T4 and Untiered", "Buckler01.webp")
-        {
-            Description("T4 rares are usually advanced bases that drop late in the campaign. In waystones T1-T3, these can sometimes still be the best available item.");
-            QuickUI(R4A1, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL75+ (POOR)");
-            QuickUI(R4A2, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL70-74 (POOR)");
             QuickUI(R4Other, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL65-69 (VIABLE)");
-            Description("T5 (untiered) rares are low level bases");
-            QuickUI(R5A1, "SH", ["ItemLevel", "AreaLevel"], "T5 Rares: LVL75+ (BAD)");
-            QuickUI(R5A2, "SH", ["ItemLevel", "AreaLevel"], "T5 Rares: LVL70-74+ (POOR)");
-            QuickUI(R5Other, "SH", ["ItemLevel", "AreaLevel"], "T5 Rares: LVL65-69+ (POOR)");
+            QuickUI(R4A2, "SH", ["ItemLevel", "AreaLevel"], "T4 Rares: LVL70-74 (POOR)");
+
+            QuickUI(R5A2, "SH", ["ItemLevel", "AreaLevel"], "Untiered Rares: LVL70-74+ (POOR)");
+            QuickUI(R5Other, "SH", ["ItemLevel", "AreaLevel"], "Untiered Rares: LVL65-69+ (POOR)");
         }
 
         Section("Normal+Magic: T1,T2,T3", "bootsint05.webp")
@@ -559,7 +558,7 @@ Chapter() {
             QuickUI(C1Ideal, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T1 crafting bases with LVL82+");
             QuickUI(C2Ideal, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T2 crafting bases with LVL82+");
             QuickUI(C3Ideal, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T3 bases with LVL82+");
-            Description("The bases below are designed to be shown when in appropriate zone levels. You'll see T3 rares when in low waystones (because these are the best available at that level)");
+            Description("The bases below are designed to be shown when in appropriate zone levels. You'll see T3 bases when in low waystones (because these are the best available at that level)");
             QuickUI(C1, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T1 crafting bases"););
             QuickUI(C2OnLvl, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T2 bases in zones level 70-75");
             QuickUI(C3OnLvl, "SH", ["AreaLevel","ItemLevel", "Rarity"], "T3 bases in zones level 65-70");
@@ -572,6 +571,7 @@ Chapter() {
         QuickUI([0.0, "Breach Rings, high level", "exoticbases;commonexoticbaseshigh"], "SH", ["Rarity", "ItemLevel", "Identified"]);
         QuickUI([0.0, "Breach Rings", "exoticbases;commonexoticbases"], "SH", ["Rarity", "ItemLevel", "Identified"]);
         QuickUI([0.0, "ILVL81 Caster Items", "endgame->normalcraft->any;minionsceptresoptional"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity"], "", ["gear", "SAO"]);
+        QuickUI([0.0, "ILVL81 Crafting Wands", "endgame->normalcraft->any;craftingwands"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity"], "", ["gear", "SAO"]);
     }
 }
 
@@ -582,8 +582,6 @@ Chapter() {
         Section("Flasks", "flasklife09.webp") {
             QuickUI([0.0, "Endgame Flasks, Quality, Top", "endgame->flasks;toplevelqualityflasks"], "SH", ["Quality", "RarityNM", "ItemLevel"], "ILVL83 Flasks+Quality", ["Flasks", "SOA"]);
             QuickUI([0.0, "Endgame Flasks, Top", "endgame->flasks;toplevelflasks"], "SH", ["Quality", "RarityNM", "ItemLevel"], "ILVL83 Flasks", ["Flasks", "SOA"]);
-            QuickUI([0.0, "Endgame Flasks, High Quality", "endgame->flasks;anyhighqualflask"], "SH", ["Quality", "RarityNM", "ItemLevel"], "Flasks: High Quality", ["Flasks", "SOA"]);
-            QuickUI([0.0, "Endgame Flasks, Quality Flasks", "endgame->flasks;anyqualflask"], "SH", ["Quality", "RarityNM", "ItemLevel"], "Flasks: Any Quality", ["Flasks", "SOA"]);
             QuickUI([0.0, "Endgame Flasks, Early, Life", "endgame->flasks;earlymappinglifemana"], "SDH", ["Quality", "RarityNM", "AreaLevel"], "Flasks: Early Endgame ", ["Flasks", "SOA"]);
         }
 
@@ -683,11 +681,17 @@ Chapter() {
         }
 
         Section("Splinters", "deliriumsplinter.webp") {
-            QuickUI([0.0, "Splinters Tier 1", "currency->splinter;t1"], "SH", ["StackSize"], "S Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 2", "currency->splinter;t2"], "SH", ["StackSize"], "A Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 3", "currency->splinter;t3"], "SH", ["StackSize"], "B Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 4", "currency->splinter;t4"], "SH", ["StackSize"], "C Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
-            QuickUI([0.0, "Splinters Tier 5", "currency->splinter;t5"], "SH", ["StackSize"], "D Tier", ["B: Splinter;C:Stackable Currency", "OS"]);
+            Function SplinterFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["B: Splinter;C:Stackable Currency", "OS"]); }
+
+            SplinterFunc([0.0, "Splinters Tier 1", "currency->splinter;t1"], "SH", "S Tier");
+            SplinterFunc([0.0, "Splinters Tier 2", "currency->splinter;t2"], "SH", "A Tier");
+            SplinterFunc([0.0, "Splinters Tier 3", "currency->splinter;t3"], "SH", "B Tier");
+            SplinterFunc([0.0, "Splinters Tier 4", "currency->splinter;t4"], "SH", "C Tier");
+            SplinterFunc([0.0, "Splinters Tier 5", "currency->splinter;t5"], "SH", "D Tier");
+
+            // new tiers
+            Conditional("?SplintersNewTier") { }
+            ElementAdder_Tier("?SplintersNewTier", "SplinterFunc");
         }
 
         Section("Ascendancy Keys", "ultimatumtrialitem.webp") {
@@ -731,15 +735,17 @@ Chapter() {
         Search S7(0.0, "Salvagable (Sockets, small, rare)", "rare->salvagable;socketssmall") { }
 
 
-        QuickUI(S0, "SH", ["Quality"], "Salvages into: 2+ Whetstones");
-        QuickUI(S1, "SH", ["Quality"], "Salvages into: 2+ Etchers" );
-        QuickUI(S2, "SH", ["Quality"], "Salvages into: 2+ Armourers");
-        QuickUI(S3, "SH", ["Quality"], "Salvages into: 1 Whetstone");
-        QuickUI(S4, "SH", ["Quality"], "Salvages into: 1 Etcher" );
-        QuickUI(S5, "SH", ["Quality"], "Salvages into: 1 Armourer");
+        QuickUI(S0, "SH", ["Quality", "Width", "Height"], "Salvages into: 2+ Whetstones");
+        QuickUI(S1, "SH", ["Quality", "Width", "Height"], "Salvages into: 2+ Etchers" );
+        QuickUI(S2, "SH", ["Quality", "Width", "Height"], "Salvages into: 2+ Armourers");
+        QuickUI([0.0, "Salvagable (High Quality, flasks)", "endgame->salvagable;quality2flask"], "SH", ["Quality"], "Salvages into: 2+ Glassblowers");
+        QuickUI(S3, "SH", ["Quality", "Width", "Height"], "Salvages into: 1 Whetstone");
+        QuickUI(S4, "SH", ["Quality", "Width", "Height"], "Salvages into: 1 Etcher" );
+        QuickUI(S5, "SH", ["Quality", "Width", "Height"], "Salvages into: 1 Armourer");
+        QuickUI([0.0, "Salvagable (Quality, flasks)", "endgame->salvagable;qualityflask"], "SH", ["Quality"], "Salvages into: 1 Glassblowers");
         Title("Salvaging small items is more efficient:");
-        QuickUI(S7, "SH", ["Sockets"], "Small Item: Artificer Shards");
-        QuickUI(S6, "SH", ["Sockets"], "Large Item: Artificer Shards");
+        QuickUI(S7, "SH", ["Sockets", "Width", "Height"], "Small Item: Artificer Shards");
+        QuickUI(S6, "SH", ["Sockets", "Width", "Height"], "Large Item: Artificer Shards");
     }
 }
 
@@ -839,7 +845,7 @@ Chapter() {
             QuickUI([0.0, "Campaign Rares, Eva-ES", "leveling->rare->armours;eves"], "SH", ["AreaLevel"]);
             Title("Rares by Weapon Types");
             QuickUI([0.0, "Campaign Rares, Wands", "leveling->rare->weapons;wands"], "SH", ["AreaLevel"]);
-            QuickUI([0.0, "Campaign Rares, Scaptres", "leveling->rare->weapons;sceptres"], "SH", ["AreaLevel"]);
+            QuickUI([0.0, "Campaign Rares, Sceptres", "leveling->rare->weapons;sceptres"], "SH", ["AreaLevel"]);
             QuickUI([0.0, "Campaign Rares, Staves", "leveling->rare->weapons;staves"], "SH", ["AreaLevel"]);
             QuickUI([0.0, "Campaign Rares, Archer", "leveling->rare->weapons;bowsquivers"], "SH", ["AreaLevel"]);
             QuickUI([0.0, "Campaign Rares, Crossbow", "leveling->rare->weapons;crossbows"], "SH", ["AreaLevel"]);
@@ -894,10 +900,6 @@ Chapter() {
 
     Section("Campaign Flasks & Charms", "Thawing_Charm_inventory_icon") {
         Section("Flasks", "flasklife09.webp") {
-            QuickUI([0.0, "Campaign Flasks (Quality, max)", "leveling->flasks->quality;max"], "SH", ["Quality", "RarityNM", "AreaLevel"], "Quality, max");
-            QuickUI([0.0, "Campaign Flasks (Quality, high)", "leveling->flasks->quality;high"], "SH", ["Quality", "RarityNM", "AreaLevel"], "Quality, high");
-            QuickUI([0.0, "Campaign Flasks (Quality, low)", "leveling->flasks->quality;any"], "SH", ["Quality", "RarityNM", "AreaLevel"], "Quality, low");
-
             Description("The following two rules combine 30 different rules that will highlight the best available flasks during your Campaign progress.");
 
             Search S_life(0.0, "Campaign Life Flask Progression 1", "leveling->flasks->life;t1") { }
@@ -928,14 +930,16 @@ Chapter() {
     }
 
     Section("Campaign Salvagable Items", "Artificers_Orb_inventory_icon") {
-        QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Whetstones");
-        QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Etchers" );
-        QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Armourers");
-        QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Whetstone");
-        QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Etcher" );
-        QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Armourer");
-        QuickUI([0.0, "Campaign Salvable (Sockets, large)", "leveling->salvagable;socketslarge"], "SH", ["Sockets", "ItemLevel"], "Small Item: Artificer Shards");
-        QuickUI([0.0, "Campaign Salvable (Sockets, small)", "leveling->salvagable;socketssmall"], "SH", ["Sockets", "ItemLevel"], "Large Item: Artificer Shards");
+        QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 2+ Whetstones");
+        QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 2+ Etchers" );
+        QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 2+ Armourers");
+        QuickUI([0.0, "Campaign Salvable (High Quality, flasks)", "leveling->salvagable;quality2flask"], "SH", ["Quality", "ItemLevel"], "Salvages into: 2+ Glassblower");
+        QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 1 Whetstone");
+        QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 1 Etcher" );
+        QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel", "Width", "Height"], "Salvages into: 1 Armourer");
+        QuickUI([0.0, "Campaign Salvable (Quality, flasks)", "leveling->salvagable;qualityflask"], "SH", ["Quality", "ItemLevel"], "Salvages into: 1 Glassblower");
+        QuickUI([0.0, "Campaign Salvable (Sockets, large)", "leveling->salvagable;socketslarge"], "SH", ["Sockets", "ItemLevel", "Width", "Height"], "Small Item: Artificer Shards");
+        QuickUI([0.0, "Campaign Salvable (Sockets, small)", "leveling->salvagable;socketssmall"], "SH", ["Sockets", "ItemLevel", "Width", "Height"], "Large Item: Artificer Shards");
     }
 }
 
@@ -944,23 +948,14 @@ Chapter() {
 
     Section("Add additional Show/Hide rules", "Firefly") {
         Description("Use this section to add exotic rules and exception. This section is NOT foolproof, you can accidentally hide valuable items by misusing it. With great power comes great responsibility.");
-        Function CondShowBase ($s, $shd = "SHD", $title)
-        {
-            QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "Stats_All"], $title, ["all", "OS"]);
-        }
-
-        Function CondShowClass ($s, $shd = "SHD", $title)
-        {
-            QuickUI($s, $shd, ["CondTargetSelection", "AllGearClassesPlusFlaskJewel", "ItemLevel", "Stats_All"], $title, ["all", "SOA"]);
-        }
-
-        Function CondShowArmourType ($s, $shd = "SHD", $title)
-        {
-            QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "RarityU", "ArmourClasses", "ItemLevel", "Stats_All"], $title);
-        }
 
         Section("Add Basetype-Based Rules", "Firefly")
         {
+            Function CondShowBase ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel", "Stats_ALL"], $title, ["all", "OS"]);
+            }
+
             Description("Give specific BaseTypes more highlighting here.");
             Conditional("?CUniversalCustomRuleB", ["c3.gear.chancing", "c0.start", "c4.gear.salvagable", "c7.jewels.generic.all", "c11.uniques.all", "c20.leveling.salvagable.all"]) { Show; SetBackgroundColor 60 0 0; SetBorderColor 200 0 0; SetFontSize 40; ItemLevel >= 65; }
             ElementAdder_Tier("?CUniversalCustomRuleB", "CondShowBase");
@@ -968,6 +963,11 @@ Chapter() {
 
         Section("Add Class-Based Rules", "Firefly")
         {
+            Function CondShowClass ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "AllGearClassesPlusFlaskJewelWaystone", "Rarity", "ItemLevel", "Stats_ALL"], $title, ["all", "SOA"]);
+            }
+
             Description("Give specific classes more highlighting here.");
             Conditional("?CUniversalCustomRuleC", ["c3.gear.chancing", "c0.start", "c4.gear.salvagable", "c7.jewels.generic.all", "c11.uniques.all", "c20.leveling.salvagable.all"]) { Show; SetBackgroundColor 60 0 0; SetBorderColor 200 0 0; SetFontSize 40; ItemLevel >= 65; Rarity Normal Magic; }
             ElementAdder_Tier("?CUniversalCustomRuleC", "CondShowClass");
@@ -975,6 +975,11 @@ Chapter() {
 
         Section("Add Armour-Type-Based Rules", "Firefly")
         {
+            Function CondShowArmourType ($s, $shd = "SHD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "RarityU", "ArmourClasses", "ItemLevel", "Stats_RareGear"], $title);
+            }
+
             Conditional("?CUniversalCustomRuleArmourType", ["c3.gear.chancing", "c0.start", "c4.gear.salvagable", "c7.jewels.generic.all", "c11.uniques.all", "c20.leveling.salvagable.all"]) { Show; SetBackgroundColor 60 0 0; SetBorderColor 200 0 0; SetFontSize 40; ItemLevel >= 65; Rarity Normal Magic; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
             ElementAdder_Tier("?CUniversalCustomRuleArmourType", "CondShowArmourType");
         }
@@ -1004,11 +1009,9 @@ Chapter() {
         Divider();
         Description("Remaining unhighlighted items: These are rules that were not picked up by any other rule. Usually pretty bad drops!");
 
-        QuickUI([0.0, "Remaining: campaign and others", "lowstrictnessshowlayer;anyfinal"], "SH", []); // todo
-        QuickUI([0.0, "Remaining: endgame normal/magic", "lowstrictnessshowlayer;normalmagicendgameany"], "SH", []); // todo
-        QuickUI([0.0, "Remaining: rares", "lowstrictnessshowlayer;raresendgameany"], "SH", []); // todo
-//        QuickUI([0.0, "Remaining: campaign magic", "leveling->magic->remaining;largemagicblocker"], "SDH", []); // todo
-//        QuickUI([0.0, "Remaining: campaign medium", "leveling->magic->remaining;mediummagicblocker"], "SDH", []); // todo
+        QuickUI([0.0, "Remaining: campaign and others", "lowstrictnessshowlayer;anyfinal"], "SH", []);
+        QuickUI([0.0, "Remaining: endgame normal/magic", "lowstrictnessshowlayer;normalmagicendgameany"], "SH", []);
+        QuickUI([0.0, "Remaining: rares", "lowstrictnessshowlayer;raresendgameany"], "SH", []);
 
         QuickUI([0.0, "Leveling Hide Rules, Normal 1", "leveling->progressivehide;normal1"], "DH", []);
         QuickUI([0.0, "Leveling Hide Rules, Normal 2", "leveling->progressivehide;normal2"], "DH", []);
