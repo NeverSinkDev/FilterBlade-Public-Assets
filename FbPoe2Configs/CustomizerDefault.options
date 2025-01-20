@@ -695,14 +695,14 @@ Chapter() {
         }
 
         Section("Ascendancy Keys", "ultimatumtrialitem.webp") {
-            QuickUI([0.0, "Djinn Barya, Top Level", "miscmapitemsextra;trialkeysanctumtop"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Djinn Barya, High Level", "miscmapitemsextra;trialkeysanctumhigh"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Djinn Barya", "miscmapitemsextra;trialkeysanctumlow"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Djinn Barya, Top Level", "miscmapitemsextra;trialkeysanctumtop"], "SH", ["ItemLevel", "AreaLevel"]);
+            QuickUI([0.0, "Djinn Barya, High Level", "miscmapitemsextra;trialkeysanctumhigh"], "SH", ["ItemLevel", "AreaLevel"]);
+            QuickUI([0.0, "Djinn Barya", "miscmapitemsextra;trialkeysanctumlow"], "SH", ["ItemLevel", "AreaLevel"]);
             Divider();
             QuickUI([0.0, "Ultimatum Reward", "miscmapitemsextra;trialkeyultimatumreward"], "SH", ["RarityU"]);
-            QuickUI([0.0, "Ultimatum, Top Level", "miscmapitemsextra;trialkeyultimatumtop"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Ultimatum, High Level", "miscmapitemsextra;trialkeyultimatumhigh"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Ultimatum", "miscmapitemsextra;trialkeyultimatumlow"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Ultimatum, Top Level", "miscmapitemsextra;trialkeyultimatumtop"], "SH", ["ItemLevel", "AreaLevel"]);
+            QuickUI([0.0, "Ultimatum, High Level", "miscmapitemsextra;trialkeyultimatumhigh"], "SH", ["ItemLevel", "AreaLevel"]);
+            QuickUI([0.0, "Ultimatum", "miscmapitemsextra;trialkeyultimatumlow"], "SH", ["ItemLevel", "AreaLevel"]);
         }
 
         Section("Vault Keys, Pinnacle Keys, Logbooks", "expeditionchronicle3.webp") {
