@@ -605,22 +605,22 @@ Chapter() {
         }
 
         Section("Normal") {
-            QuickUI([0.0, "Waystones Tier 16", "waystones;waystone_t16"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 15", "waystones;waystone_t15"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 14", "waystones;waystone_t14"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 13", "waystones;waystone_t13"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 12", "waystones;waystone_t12"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 11", "waystones;waystone_t11"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 10", "waystones;waystone_t10"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 9", "waystones;waystone_t9"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 8", "waystones;waystone_t8"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 7", "waystones;waystone_t7"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 6", "waystones;waystone_t6"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 5", "waystones;waystone_t5"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 4", "waystones;waystone_t4"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 3", "waystones;waystone_t3"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 2", "waystones;waystone_t2"], "SH", []);
-            QuickUI([0.0, "Waystones Tier 1", "waystones;waystone_t1"], "SH", []);
+            QuickUI([0.0, "Waystones Tier 16", "waystones;waystone_t16"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 15", "waystones;waystone_t15"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 14", "waystones;waystone_t14"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 13", "waystones;waystone_t13"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 12", "waystones;waystone_t12"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 11", "waystones;waystone_t11"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 10", "waystones;waystone_t10"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 9", "waystones;waystone_t9"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 8", "waystones;waystone_t8"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 7", "waystones;waystone_t7"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 6", "waystones;waystone_t6"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 5", "waystones;waystone_t5"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 4", "waystones;waystone_t4"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 3", "waystones;waystone_t3"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 2", "waystones;waystone_t2"], "SH", ["Rarity", "AreaLevel"]);
+            QuickUI([0.0, "Waystones Tier 1", "waystones;waystone_t1"], "SH", ["Rarity", "AreaLevel"]);
         }
 
         Section("Decorators (advanced)") {
