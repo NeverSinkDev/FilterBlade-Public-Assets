@@ -423,17 +423,442 @@
 		"Fragment": {
 			"items": {
 				"Simulacrum": {
-					"text": "Placed into a map device it opens up 6 portals to a 30 wave fight. Increasing in difficulty with each wave. Aquired by combining 300 Simulacrum Splinters"
+					"text": "Use one in a Realmgate to open a 15 wave fight increasing in difficulty with each wave. Aquired by combining 300 Simulacrum Splinters"
 					},
 				"An Audience With The King": {
-					"text": "Grants access to the King in the Mists boss fight"
+					"text": "Grants access to the King in the Mists boss fight. Obtained through Ritual shopping window."
 					}
 			}
 		},
 
 		"Uniques": {
 			"items": {
+				"Armoured Cap": {
+					"text": null,
+					"items": {
+						"Alpha's Howl": {
+							"text": null,
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
 					}
+				},
+				"Furtive Wraps": {
+					"text": null,
+					"items": {
+						"Hand of Wisdom and Action": {
+							"text": "Drop from Xesht, We Who Are One.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Ornate Belt": {
+					"text": null,
+					"items": {
+						"Ryslatha's Coil": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Ring": {
+					"text": null,
+					"items": {
+						"Kalandra's Touch": {
+							"text": "World Drop",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -8
+						},
+						"Sekhema's Resolve": {
+							"text": "Drops from Zarokh, the Temporal when completing a run using The Burden of Leadership.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Smuggler Coat": {
+					"text": null,
+					"items": {
+						"Queen of the Forest": {
+							"text": "World Drop",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Stone Tower Shield": {
+					"text": null,
+					"items": {
+						"The Surrender": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Ultimate Life Flask": {
+					"text": null,
+					"items": {
+						"Olroth's Resolve": {
+							"text": "Drops from Olroth, Origin of the Fall.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Ultimate Mana Flask": {
+					"text": null,
+					"items": {
+						"Melting Maelstrom": {
+							"text": "Drops in the Simulacrum.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Utility Belt": {
+					"text": null,
+					"items": {
+						"Ingenuity": {
+							"text": "Drops from The King in the Mists at the Crux of Nothingness.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Incense Relic": {
+					"text": null,
+					"items": {
+						"The Last Flame": {
+							"text": "Drops from Zarokh, the Temporal.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Vase Relic": {
+					"text": null,
+					"items": {
+						"The Desperate Alliance": {
+							"text": "Drops from Zarokh, the Temporal.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Emerald": {
+					"text": null,
+					"items": {
+						"Grand Spectrum": {
+							"text": "Obtained from a Gold Spectrum Cache chest in the Trial of the Sekhemas.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Ruby": {
+					"text": null,
+					"items": {
+						"Grand Spectrum": {
+							"text": "Obtained from a Gold Spectrum Cache chest in the Trial of the Sekhemas.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Sapphire": {
+					"text": null,
+					"items": {
+						"Grand Spectrum": {
+							"text": "Obtained from a Gold Spectrum Cache chest in the Trial of the Sekhemas.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Timeless Jewel": {
+					"text": null,
+					"items": {
+						"Heroic Tragedy": {
+							"text": "Drops from Olroth, Origin of the Fall.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Time-Lost Diamond": {
+					"text": null,
+					"items": {
+						"Against the Darkness": {
+							"text": "Drops from Zarokh, the Temporal when completing a run using The Desperate Alliance.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Altar Robe": {
+					"text": null,
+					"items": {
+						"The Covenant": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Burnished Gauntlets": {
+					"text": null,
+					"items": {
+						"Aerisvane's Wings": {
+							"text": "World Drop",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Conqueror Plate": {
+					"text": null,
+					"items": {
+						"Kaom's Heart": {
+							"text": "World Drop",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Crucible Tower Shield": {
+					"text": null,
+					"items": {
+						"Svalinn": {
+							"text": "Drops from Olroth, Origin of the Fall.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Diamond": {
+					"text": null,
+					"items": {
+						"From Nothing": {
+							"text": "Drops from The King in the Mists at the Crux of Nothingness at Difficulty 4.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Controlled Metamorphosis": {
+							"text": "Drops from Xesht, We Who Are One at Difficulty 4.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Prism of Belief": {
+							"text": "Drops from The Arbiter of Ash at Difficulty 4.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"The Adorned": {
+							"text": "Drops from The Trialmaster.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Megalomaniac": {
+							"text": "Drops in the Simulacrum at Difficulty 4.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Feathered Tiara": {
+					"text": null,
+					"items": {
+						"Mask of the Stitched Demon": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Fine Bracers": {
+					"text": null,
+					"items": {
+						"Maligaro's Virtuosity": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Gold Amulet": {
+					"text": null,
+					"items": {
+						"Serpent's Egg": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Eye of Chayula": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Grand Regalia": {
+					"text": null,
+					"items": {
+						"Morior Invictus": {
+							"text": "Drops from The Arbiter of Ash.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Grand Visage": {
+					"text": null,
+					"items": {
+						"Solus Ipse": {
+							"text": "Drops from The Arbiter of Ash.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Heavy Crown": {
+					"text": null,
+					"items": {
+						"Cornathaum": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Trimmed Greaves": {
+					"text": null,
+					"items": {
+						"Trampletoe": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Wyrm Quarterstaff": {
+					"text": null,
+					"items": {
+						"Collapsing Horizon": {
+							"text": "Drops in the Simulacrum at Difficulty 2+.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				}
+			}
 		}
 	}
 }
