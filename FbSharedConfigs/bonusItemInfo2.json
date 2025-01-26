@@ -857,6 +857,495 @@
 							"priority": -9
 						}
 					}
+				},
+				"Heavy Belt": {
+					"text": null,
+					"items": {
+						"Headhunter": {
+							"text": "World Drop",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -8
+						},
+						"Zerphi's Genesis": {
+							"text": "Drops from The Trialmaster.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Amethyst Ring": {
+					"text": null,
+					"items": {
+						"Ming's Heart": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Original Sin": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Blackflame": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Sapphire Ring": {
+					"text": null,
+					"items": {
+						"Dream Fragments": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Polcirkeln": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Whisper of the Brotherhood": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Stellar Amulet": {
+					"text": null,
+					"items": {
+						"Astramentis": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Fixation of Yix": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Strugglescream": {
+							"text": "Drops in the Simulacrum at Difficulty 4.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Amber Amulet": {
+					"text": null,
+					"items": {
+						"Carnage Heart": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Xoph's Blood": {
+							"text": "Drops from Xesht, We Who Are One.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Revered Resin": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Azure Amulet": {
+					"text": null,
+					"items": {
+						"The Everlasting Gaze": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Ungil's Harmony": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Crimson Amulet": {
+					"text": null,
+					"items": {
+						"Idol of Uldurn": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Igniferis": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Emerald Ring": {
+					"text": null,
+					"items": {
+						"Thief's Torment": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Death Rush": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Gold Ring": {
+					"text": null,
+					"items": {
+						"Andvarius": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Perandus Seal": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Ventor's Gamble": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Jade Amulet": {
+					"text": null,
+					"items": {
+						"Defiance of Destiny": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Choir of the Storm": {
+							"text": "Drops from Xesht, We Who Are One.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Surefooted Sigil": {
+							"text": null,
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Lazuli Ring": {
+					"text": null,
+					"items": {
+						"Doedre's Damning": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Glowswarm": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Seed of Cataclysm": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Moulded Mitts": {
+					"text": null,
+					"items": {
+						"Atziri's Acuity": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Hateforge": {
+							"text": "Drops from The Trialmaster.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Pearl Ring": {
+					"text": null,
+					"items": {
+						"Heartbound Loop": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Snakepit": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Solar Amulet": {
+					"text": null,
+					"items": {
+						"Beacon of Azis": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Fireflower": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Spiked Club": {
+					"text": null,
+					"items": {
+						"Trenchtimbre": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Tribal Mask": {
+					"text": null,
+					"items": {
+						"The Vertex": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Glimpse of Chaos": {
+							"text": "Drops from The Trialmaster.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Chain Tiara": {
+					"text": null,
+					"items": {
+						"Forbidden Gaze": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Sandstorm Visage": {
+							"text": "Drops from Zarokh, the Temporal when completing a run using The Changing Seasons.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Explorer Armour": {
+					"text": null,
+					"items": {
+						"Belly of the Beast": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Pragmatism": {
+							"text": "Drops from The King in the Mists at the Crux of Nothingness at Difficulty 2+.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Omen Crest Shield": {
+					"text": null,
+					"items": {
+						"Mahuxotl's Machination": {
+							"text": "Drops from The Trialmaster.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Rise of the Phoenix": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Shrine Sceptre": {
+					"text": null,
+					"items": {
+						"Guiding Palm": {
+							"text": "World Drop/Chanceable. Has 3 varients, Fire/Ice/Lightning Aura's.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Sacred Flame": {
+							"text": "Drops from The Arbiter of Ash at Difficulty 4.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Silk Robe": {
+					"text": null,
+					"items": {
+						"Cloak of Flame": {
+							"text": "World Drop/Chanceable",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						},
+						"Temporalis": {
+							"text": "Drops from Zarokh, the Temporal when completing a run using The Last Flame.",
+							"ruleLink": {
+								"entryName": null,
+								"text": null
+							},
+							"priority": -9
+						}
+					}
 				}
 			}
 		}
