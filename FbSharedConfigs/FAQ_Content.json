@@ -16,7 +16,7 @@
     },
     {
       "question": "The customizer is huge! How do I find anything?",
-      "answer": "Use the search bar on the right side! You can enter the item name or relevant tags. This will usually resolve 95% of your searches.<br><img src='https://cdn.discordapp.com/attachments/1087471717523398717/1330493891757211718/image.png?ex=678e2e7f&is=678cdcff&hm=a3e2e297f1bdaaed03d0c7b0f0f0ca9788ca819e699bb3bbc6f53a501ffffeda&' alt='Searchbar Screenshot'><br><br>If you have the item inGame, you can import it on the Simulator tab to pinpoint the exact ruling! <img src='https://cdn.discordapp.com/attachments/1087471717523398717/1330495293145354240/image.png?ex=678e2fcd&is=678cde4d&hm=38eeadd14999d6325d1a9429e0345cfc110de05d49ad1bc963a5a6d045a4ad90&' alt='Import Item Screenshot'>",
+      "answer": "Use the search bar on the right side! You can enter the item name or relevant tags. This will usually resolve 95% of your searches.<br><img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Save_red_box.png' alt='Searchbar Screenshot'><br><br>If you have the item inGame, you can import it on the Simulator tab to pinpoint the exact ruling!<br> (Please just make sure that you match the area level in the simulator to the area level you are in when the item dropped) <img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Simulator%20Import.png' alt='Import Item Screenshot'>",
       "tags": "search problem huge find where locate which part section how location line section area entry rule can't cant right"
     },
     {
@@ -146,8 +146,8 @@
     },
     {
       "question": "I can't see any items. // My items disappear after a short time",
-      "answer": "Try pressing 'Z' on your keyboard. This hotkey will toggle between showing NO items and only showing those your loot filter lets you see. Holding 'Alt' will show all items",
-      "tags": "no items drop item see visible hidden all every item hides all invisible cant short time period no longer too short gone"
+      "answer": "This is not controlled by filterblade and is instead a setting in game called 'Toggle Highlighting' <br> <br> On PC this can be toggled with 'Z' by default <img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Always%20Highlight%20Keybind.png' alt='Toggle Highlight Keybind'> <br> <br> On console there is no default keybind for this feature, however you can set a custom bind or go into settings and use the following checkbox to enable/disable this feature <br> <img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Always%20highlight%20Checkbox.png' alt='Always highlight setting in interface'>",
+      "tags": "no items drop item see visible hidden all every item hides all invisible cant short time period no longer too short gone seconds"
     },
     {
       "question": "Will you create a filter for PoE: Royale?",
