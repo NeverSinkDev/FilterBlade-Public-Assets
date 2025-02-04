@@ -16,7 +16,7 @@
     },
     {
       "question": "The customizer is huge! How do I find anything?",
-      "answer": "Use the search bar on the right side! You can enter the item name or relevant tags. This will usually resolve 95% of your searches.<br><img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Save_red_box.png' alt='Searchbar Screenshot'><br><br>If you have the item inGame, you can import it on the Simulator tab to pinpoint the exact ruling!<br> (Please just make sure that you match the area level in the simulator to the area level you are in when the item dropped) <img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Simulator%20Import.png' alt='Import Item Screenshot'>",
+      "answer": "Use the search bar on the right side! You can enter the item name or relevant tags. This will usually resolve 95% of your searches.<br><img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Save_red_box.png' alt='Searchbar Screenshot'><br><br>Ctrl+C the item from inventory (POE1: If you want the mods included use Ctrl+ALT+C) > Ctrl+V into Sim > Import tab, match the Area Level to your in game area level (if you don't have item or are on console, use Item Builder tab) > 'Find in Customizer' to see rule in context and safely edit. <img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Simulator%20Import.png' alt='Import Item Screenshot'><br>",
       "tags": "search problem huge find where locate which part section how location line section area entry rule can't cant right"
     },
     {
