@@ -326,13 +326,18 @@
     },
     {
       "question": "Can I upload a filter? Even if it is just a customized NeverSink filter?",
-      "answer": "Yes, but there are a lot of limitations. The save/load system will be disabled, the customizer might malfunction and you can't merge changes into an existing filter/saveFilterBlade requires a specific 'option File' for the current filter to create the structure and define it's connections. You can make a cake out of flour and sugar and eggs, but you can't reverse the process.This feature is only for debugging and testing things/appearances in the UI, not recommended for normal usage.",
+      "answer": "You can... However, don't... The .filter file does not contain the crucial information about what was changed to enable updating/editing. Imagine it like trying to get raw eggs from a finished cake. This includes filters created on filterblade too. It will just break; you are much better off starting from scratch and resaving to Filterblade. <br><br> You can only upload into filterblade via a 'SaveFile' as this contains all the information on the changes made to the stock filter that got you to the current state. Think of the save file as a list of instructions on what to do for it to go from A - B. If you have the savefile you can go to Advanced > Test Local Filter > Load filter from saveFile.",
       "tags": "custom filter upload edited use my own old upload filter"
     },
     {
       "question": "Can you make the filter do ...?",
       "answer": "The things a PoE loot filter can do are very limited. A good rule of thumb is: If you can't do it on FilterBlade, it's likely not possible in PoE. You can:<ul><li>Add colors (text, border, background) with opacity, but no gradients, and no changing the border width</li><li>Add beams and minimap icons</li><li>Play one from the 26 sounds with a given volume + NEW: play those sounds in a way that tells where in the game world that item dropped. + NEW: Play custom sound files on your PC.</li><li>Set a size from 18 to 45. Nothing bigger or smaller than that.</li></ul>Things we can NOT do include but are not limited to:<ul><li>Filter by unique name. Only filtering by BaseType is possible. And many BaseTypes have multiple uniques. A filter cannot tell which one of those it is, even if it's identified.</li><li>Change the font itself</li><li>Edit the font of chests, breach hands, masters, etc to be bigger or better visible.</li><li>Detect the 'Tier' of an item (PoE2 only).</li><li>Detect the mods of unidentified items, or the specific (corruption-) implicits of any item, not which mod is fractured.</li><li>Only show items that are allocated to me when playing in groups.</li><li>Only show items for a given time and hide them after x seconds.</li></ul>",
       "tags": "GGG limits limit api can do i possible to feature can i is it possible to do possible to have add make"
+    },
+    {
+      "question": "Show/Hide/Disable. Why are there 3 states and what do they mean?",
+      "answer": "To put a short story long <br><br> Show: Shows the item that matches ALL the variables in the rule. <br><br> Hide: Hides the item which matches ALL the variables in the rule. <br><br> Disable: This removes the rule from the filter, this means that rule will not and cannot catch any item and it leaves the other rules in the filter to handle the item. You should only be disabling rules if it is the default option in the rule or you know what you are doing. As this can lead to items being unfiltered and caught in the 'Catch All' error rule showing PINK.",
+      "tags": "Show hide disable why mean 3 options what does difference between" 
     }
   ]
 }
