@@ -39,13 +39,6 @@
 			"isHiddenByDefault": false,
 			"group": "currency2"
 		},
-		"Harbinger": {
-			"displayName": "Harbinger",
-			"iconPath": "assets/img/Icons/AccordionIcons/FracturingOrb.png",
-			"description": "Drops from Harbinger encounters and Rewards",
-			"isHiddenByDefault": false,
-			"group": "currency2"
-		},
 		"Heist": {
 			"displayName": "Heist",
 			"iconPath": "assets/img/Icons/AccordionIcons/HeistGrandBlueprint.png",
@@ -60,38 +53,10 @@
 			"isHiddenByDefault": false,
 			"group": "currency2"
 		},
-		"Harvest": {
-			"displayName": "Harvest",
-			"iconPath": "assets/img/Icons/AccordionIcons/HarvestSeed.png",
-			"description": "Drops from Harvest",
-			"isHiddenByDefault": false,
-			"group": "currency2"
-		},
-		"Lab": {
-			"displayName": "Lab",
-			"iconPath": "assets/img/Icons/AccordionIcons/UberLabOffering.png",
-			"description": "Drops from the Eternal Labyrinth",
-			"isHiddenByDefault": false,
-			"group": "currency2"
-		},
-		"Eldritch": {
-			"displayName": "Eldritch",
-			"iconPath": "assets/img/Icons/AccordionIcons/ExceptionalEldritchIchor.png",
-			"description": "Drops from Exarch and Eater influenced monsters or bosses",
-			"isHiddenByDefault": false,
-			"group": "currency2"
-		},
-		"Report": {
-			"displayName": "Scouting Report",
-			"iconPath": "assets/img/Icons/AccordionIcons/ScoutingReport.png",
-			"description": "Scouting Report",
-			"isHiddenByDefault": false,
-			"group": "currency2"
-		},
-		"Catalyst": {
-			"displayName": "Catalyst",
-			"iconPath": "assets/img/Icons/AccordionIcons/ImbuedCatalyst.png",
-			"description": "Drops from ultimatum encounters",
+		"Trial of the Sekhemas": {
+			"displayName": "Trial of the Sekhemas",
+			"iconPath": "",
+			"description": "Drops from the Trial of the Sekhemas",
 			"isHiddenByDefault": false,
 			"group": "currency2"
 		},
@@ -99,13 +64,6 @@
 			"displayName": "Expedition",
 			"iconPath": "assets/img/Icons/AccordionIcons/ExpeditionLogbookMap.png",
 			"description": "Drops from Expedition encounters",
-			"isHiddenByDefault": false,
-			"group": "currency2"
-		},
-		"Blight": {
-			"displayName": "Blight",
-			"iconPath": "assets/img/Icons/AccordionIcons/BlightOil.png",
-			"description": "Drops from Blight encounters",
 			"isHiddenByDefault": false,
 			"group": "currency2"
 		},
@@ -123,13 +81,6 @@
 			"iconPath": "assets/img/Icons/AccordionIcons/FishingRod.png",
 			"description": "Redacted",
 			"isHiddenByDefault": true,
-			"group": "currency3"
-		},
-		"RuthlessOnly": {
-			"displayName": "Ruthless exclusive",
-			"iconPath": "assets/img/Icons/AccordionIcons/EternalOrb.png",
-			"description": "Can only drop in ruthless",
-			"isHiddenByDefault": false,
 			"group": "currency3"
 		},
 
@@ -185,51 +136,55 @@
 			"items": {
 				"Flesh Catalyst": {
 					"text": "Adds quality that enhances Life modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Neural Catalyst": {
 					"text": "Adds quality that enhances Mana modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Carapace Catalyst": {
 					"text": "Adds quality that enhances Defence modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Uul-Netol's Catalyst": {
 					"text": "Adds quality that enhances Physical modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Xoph's Catalyst": {
 					"text": "Adds quality that enhances Fire modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Tul's Catalyst": {
 					"text": "Adds quality that enhances Cold modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Esh's Catalyst": {
 					"text": "Adds quality that enhances Lightning modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Chayula's Catalyst": {
 					"text": "Adds quality that enhances Chaos modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Reaver Catalyst": {
 					"text": "Adds quality that enhances Attack modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Sibilant Catalyst": {
 					"text": "Adds quality that enhances Caster modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Skittering Catalyst": {
 					"text": "Adds quality that enhances Speed modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
 				},
 				"Adaptive Catalyst": {
 					"text": "Adds quality that enhances Attribute modifiers on a ring or amulet",
-					"tags": ["Catalyst", "LeagueDrop"]
+					"tags": ["Breach", "LeagueDrop"]
+				},
+				"Breach Splinter": {
+					"text": "Breach Splinter is a currency item. A stack of 300 can be combined to form a Breachstone. Breach Splinters can only drop in areas with monster level 75 or higher.",
+					"tags": ["Breach", "LeagueDrop"]
 				},
 
 
@@ -257,7 +212,7 @@
 				},
 				"Alchemy Shard": {
 					"text": "A stack of 10 shards becomes an Orb of Alchemy",
-					"tags": ["Harbinger", "LeagueDrop"]
+					"tags": ["Generic"]
 				},
 				"Chance Shard": {
 					"text": "A stack of 10 shards becomes an Orb of Chance",
@@ -269,7 +224,7 @@
 				},
 				"Transmutation Shard": {
 					"text": "A stack of 10 shards becomes an Orb of Transmutation",
-					"tags": ["Harbinger", "LeagueDrop"]
+					"tags": ["Generic"]
 				},
 
 
@@ -387,34 +342,48 @@
 		"Delirium":{
 			"Items":{
 				"Distilled Despair":{
-					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium"
+					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium",
+					"tags": ["Delirium"]
 				},
 				"Distilled Disgust":{
-					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium"
+					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium",
+					"tags": ["Delirium"]
 				},
 				"Distilled Envy":{
-					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium"
+					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium",
+					"tags": ["Delirium"]
 				},
 				"Distilled Fear":{
-					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium"
+					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium",
+					"tags": ["Delirium"]
 				},
 				"Distilled Greed":{
-					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium"
+					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium",
+					"tags": ["Delirium"]
 				},
 				"Distilled Guilt":{
-					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium"
+					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium",
+					"tags": ["Delirium"]
 				},
 				"Distilled Ire":{
-					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium"
+					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium",
+					"tags": ["Delirium"]
 				},
 				"Distilled Isolation":{
-					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium"
+					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium",
+					"tags": ["Delirium"]
 				},
 				"Distilled Paranoia":{
-					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium"
+					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium",
+					"tags": ["Delirium"]
 				},
 				"Distilled Suffering":{
-					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium"
+					"text":"Can be combined with other Distilled Emotions to Instil Amulets with Notable Passive Skills or Waystones with Layers of Delirium",
+					"tags": ["Delirium"]
+				},
+				"Simulacrum Splinter":{
+					"text":"Simulacrum Splinters are currency items. A stack of 300 can be combined to form a Simulacrum. Simulacrum Splinters can only drop in areas with monster level 75 or higher.",
+					"tags": ["Delirium"]
 				}
 			}
 		},
