@@ -60,6 +60,11 @@
       "tags": "upload create re-create import paste from ingame poe game re-import lost find gone ladder adjustments edit from account my profile pathofexile copy"
     },
     {
+      "question": "How can I hide a certain item?",
+      "answer": "Use the search bar in the Customizer to find the rule responsible for the item.<br>One rule may be responsible for multiple items, in which case you can remove the specific item from the rule.<br>There may also be other rules that show the item in certain conditions, such as different levels or stackSizes.<br><br>Alternatively, you can use the Simulate tab to e.g. Import the item from inGame to find the rule that shows it.<br><br>Please note that some items, such as Quest Items, may not be hidden. This is a limit enforced by GGG that we can't do anything about.",
+      "tags": "remove show gone idol quest item question where find method option not possible no none"
+    },
+    {
       "question": "I found a very expensive unique, but it's not shown in an expensive way (or vice versa). Why?",
       "answer": "First of all ensure that you're using a somewhat up-to-date filter version. We're developers, not fortune-tellers. Then filters can NOT tell uniques of the same basetype apart. For instance 'leather belt' uniques can't be distinguished. Your belt might be a super-expensive headhunter or a worthless wurm's molt. These uniques are usually marked with a blue star on the minimap",
       "tags": "expensive rare cheap unique headhunter mageblood why highlight wrong bug blue star"
