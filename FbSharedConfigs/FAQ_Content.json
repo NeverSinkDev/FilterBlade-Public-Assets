@@ -165,6 +165,11 @@
       "tags": "module version battle royale fortnite pvp extra special variant alternate adapted for weekend rare mode league"
     },
     {
+      "question": "How do I set up a 2nd filter based on my current one?",
+      "answer": "Load your filter, go to 'Export To PoE', and click on 'More' -> 'Save As New' to effectively duplicate your filter.<br><br>If you want to have two filters that have the same 'base' set of changes, try out 'Modules'! They allow you to later update this 'base' set of changes and receive the update in all filters that use this 'Module'.",
+      "tags": "copy clone duplicate second similar endgame leveling build changes own individual separate customization share preset"
+    },
+    {
       "question": "My filter doesn't show up inGame when using the Sync-With-PoE feature.",
       "answer": "First: re-starting your game.<br><br>Next: Does FilterBlade show you a 'successfully uploaded filter' message? If not, you should receive some sort of error message that might already help you.<br><br>If FilterBlade says that the uploads succeeded, check your PoE-profile page (pathofexile.com/account/view-profile/YOUR_ACCOUNT_NAME/item-filters). If the filter shows up there but no inGame, then it's an issue on GGGs side and you should contact them. Right now, they seem to be having issues with account names that contain special symbols.",
       "tags": "show up work doesn't working see can't load list empty sync upload poe not updated"
