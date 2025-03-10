@@ -1,0 +1,5397 @@
+{
+	"itemTagDefinitions": {
+
+		"//comment1": "Drop type tags",
+		"Generic": {
+			"displayName": "Generic",
+			"iconPath": "assets/img/Icons/AccordionIcons/Chaos.png",
+			"description": "General currency, drops anywhere",
+			"isHiddenByDefault": false,
+			"group": "currency1"
+		},
+		"LeagueDrop": {
+			"displayName": "League Mechanic Drop",
+			"iconPath": "assets/img/Icons/AccordionIcons/Essence.png",
+			"description": "Primary Source: Specific league mechanics",
+			"isHiddenByDefault": false,
+			"group": "currency1"
+		},
+		"BossDrop": {
+			"displayName": "Boss or Special Drop",
+			"iconPath": "assets/img/Icons/AccordionIcons/AwakenersOrb.png",
+			"description": "Primary Source: Specific encounter",
+			"isHiddenByDefault": false,
+			"group": "currency1"
+		},
+		"NonDrop": {
+			"displayName": "Non-Drop",
+			"iconPath": "assets/img/Icons/AccordionIcons/BestiaryOrb.png",
+			"description": "Primary Source: None, currently unobtainable in challenge leagues",
+			"isHiddenByDefault": true,
+			"group": "currency1"
+		},
+
+		"//comment2": "Drop source or common currency type tags",
+		"Breach": {
+			"displayName": "Breach",
+			"iconPath": "assets/img/Icons/AccordionIcons/Breachstone.png",
+			"description": "Drops from Breach Encounters and Rewards",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Harbinger": {
+			"displayName": "Harbinger",
+			"iconPath": "assets/img/Icons/AccordionIcons/FracturingOrb.png",
+			"description": "Drops from Harbinger encounters and Rewards",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Heist": {
+			"displayName": "Heist",
+			"iconPath": "assets/img/Icons/AccordionIcons/HeistGrandBlueprint.png",
+			"description": "Drops from Heist related content",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Beyond": {
+			"displayName": "Beyond",
+			"iconPath": "assets/img/Icons/AccordionIcons/TaintedOrbofFusing.png",
+			"description": "Drops from Beyond demons",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Harvest": {
+			"displayName": "Harvest",
+			"iconPath": "assets/img/Icons/AccordionIcons/HarvestSeed.png",
+			"description": "Drops from Harvest",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Lab": {
+			"displayName": "Lab",
+			"iconPath": "assets/img/Icons/AccordionIcons/UberLabOffering.png",
+			"description": "Drops from the Eternal Labyrinth",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Eldritch": {
+			"displayName": "Eldritch",
+			"iconPath": "assets/img/Icons/AccordionIcons/ExceptionalEldritchIchor.png",
+			"description": "Drops from Exarch and Eater influenced monsters or bosses",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Report": {
+			"displayName": "Scouting Report",
+			"iconPath": "assets/img/Icons/AccordionIcons/ScoutingReport.png",
+			"description": "Scouting Report",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Catalyst": {
+			"displayName": "Catalyst",
+			"iconPath": "assets/img/Icons/AccordionIcons/ImbuedCatalyst.png",
+			"description": "Drops from ultimatum encounters",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Expedition": {
+			"displayName": "Expedition",
+			"iconPath": "assets/img/Icons/AccordionIcons/ExpeditionLogbookMap.png",
+			"description": "Drops from Expedition encounters",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Blight": {
+			"displayName": "Blight",
+			"iconPath": "assets/img/Icons/AccordionIcons/BlightOil.png",
+			"description": "Drops from Blight encounters",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+		"Ancestors": {
+			"displayName": "Ancestors",
+			"iconPath": "assets/img/Icons/AccordionIcons/HinekorasSight.png",
+			"description": "",
+			"isHiddenByDefault": false,
+			"group": "currency2"
+		},
+
+		"//comment3": "tags for highly specific items to give them some tag and provide isHiddenByDefault",
+		"Meme": {
+			"displayName": "Redacted",
+			"iconPath": "assets/img/Icons/AccordionIcons/FishingRod.png",
+			"description": "Redacted",
+			"isHiddenByDefault": true,
+			"group": "currency3"
+		},
+		"RuthlessOnly": {
+			"displayName": "Ruthless exclusive",
+			"iconPath": "assets/img/Icons/AccordionIcons/EternalOrb.png",
+			"description": "Can only drop in ruthless",
+			"isHiddenByDefault": false,
+			"group": "currency3"
+		},
+
+		"//comment4": "Divination card outcome tags",
+		"GemOutcome": {
+			"displayName": "Gem Outcome",
+			"iconPath": "assets/img/Icons/AccordionIcons/SkillGemRed1.png",
+			"description": "Gives a Gem reward when turned in",
+			"isHiddenByDefault": false,
+			"group": "divination1"
+		},
+		"CurrencyOutcome": {
+			"displayName": "Currency Outcome",
+			"iconPath": "assets/img/Icons/AccordionIcons/Chaos.png",
+			"description": "Gives a Currency reward when turned in",
+			"isHiddenByDefault": false,
+			"group": "divination1"
+		},
+		"UniqueOutcome": {
+			"displayName": "Unique Outcome",
+			"iconPath": "assets/img/Icons/AccordionIcons/Unique.png",
+			"description": "Gives a Unique item reward when turned in",
+			"isHiddenByDefault": false,
+			"group": "divination1"
+		},
+		"SixLinkOutcome": {
+			"displayName": "Six Link Outcome",
+			"iconPath": "assets/img/Icons/AccordionIcons/Fusing.png",
+			"description": "Gives a Six-Link reward when turned in",
+			"isHiddenByDefault": false,
+			"group": "divination1"
+		},
+		"MapOutcome": {
+			"displayName": "Map or Fragment Outcome",
+			"iconPath": "assets/img/Icons/AccordionIcons/Map.png",
+			"description": "Gives a Map, Fragment or other similar reward when turned in",
+			"isHiddenByDefault": false,
+			"group": "divination1"
+		},
+		"InfluencedOutcome": {
+			"displayName": "Influenced Outcome",
+			"iconPath": "assets/img/Icons/AccordionIcons/Voidorb.png",
+			"description": "Gives an item that is influenced",
+			"isHiddenByDefault": false,
+			"group": "divination1"
+		}
+	},
+
+	"//comment1": "These item bonus info texts are displayed in the FilterBlade Customizer tierList hoverBoxes. The texts are separate for section, baseType and (optional) unique name. The structure is: section (e.g. Uniques, Currency, ...) -> 'items' -> baseType (e.g. Simple Robe) -> property 1: 'text' (string to be displayed for the entire baseType), property 2: 'items' -> uniqueName (e.g. Tabula Rasa) -> 'text' (string to be displayed just for this one specific unique).",
+	"bonusItemInfo": {
+		"Currency": {
+			"displayTagsNextToItem": false,
+			"items": {
+				"Tailoring Orb": {
+					"text": "Drops from Blueprints<br>Adds or replaces an enchantment on a body armour. This may reforge the body armour's sockets",
+					"tags": ["Heist", "BossDrop"]
+				},
+				"Tempering Orb": {
+					"text": "Drops from Blueprints<br>Adds or replaces an enchantment on a weapon. This may reforge the weapon's sockets",
+					"tags": ["Heist", "BossDrop"]
+				},
+
+				"Veiled Orb": {
+					"text": "Drops from Catarina<br>Removes a random modifier and adds a random veiled modifier to a rare item.",
+					"tags": ["BossDrop"]
+				},
+
+				"Sacred Crystallised Lifeforce": {
+					"text": "Drops from Oshabi<br>Used at the Horticrafting bench in your hideout for high tier crafting options",
+					"tags": ["Harvest", "BossDrop"]
+				},
+				"Vivid Crystallised Lifeforce": {
+					"text": "Yellow harvest crafting material",
+					"tags": ["Harvest", "LeagueDrop"]
+				},
+				"Wild Crystallised Lifeforce": {
+					"text": "Purple harvest crafting material",
+					"tags": ["Harvest", "LeagueDrop"]
+				},
+				"Primal Crystallised Lifeforce": {
+					"text": "Blue harvest crafting material",
+					"tags": ["Harvest", "LeagueDrop"]
+				},
+
+				"Tainted Divine Teardrop": {
+					"text": "Unpredictably raises or lowers the tier of each modifier on a corrupted rare item",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Exalted Orb": {
+					"text": "Unpredictably adds or removes a modifier on a corrupted rare item",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Chaos Orb": {
+					"text": "Unpredictably either reforges a corrupted rare item with new random modifiers or removes all of its modifiers",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Orb of Fusing": {
+					"text": "Unpredictably adds or removes a link to the largest group of linked sockets on a corrupted item",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Mythic Orb": {
+					"text": "Unpredictably either upgrades a corrupted item to unique rarity or destroys it",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Chromatic Orb": {
+					"text": "Unpredictably reforges the colour of sockets on a corrupted item",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Jeweller's Orb": {
+					"text": "Unpredictably adds or removes a socket on a corrupted item",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Armourer's Scrap": {
+					"text": "Randomises the quality of a corrupted armour",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+				"Tainted Blacksmith's Whetstone": {
+					"text": "Randomises the quality of a corrupted weapon",
+					"tags": ["Beyond", "LeagueDrop"]
+				},
+
+				"Eldritch Chaos Orb": {
+					"text": "If The Searing Exarch is dominant, reroll prefix modifiers. If The Eater of Worlds is dominant, reroll suffix modifiers",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Eldritch Orb of Annulment": {
+					"text": "If The Searing Exarch is dominant, remove a prefix modifier. If The Eater of Worlds is dominant, remove a suffix modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Eldritch Exalted Orb": {
+					"text": "If The Searing Exarch is dominant, add a prefix modifier. If The Eater of Worlds is dominant, add a suffix modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Exceptional Eldritch Ember": {
+					"text": "Adds an Exceptional Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "BossDrop"]
+				},
+				"Exceptional Eldritch Ichor": {
+					"text": "Adds an Exceptional Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "BossDrop"]
+				},
+				"Grand Eldritch Ember": {
+					"text": "Adds a Grand Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Grand Eldritch Ichor": {
+					"text": "Adds a Grand Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Greater Eldritch Ember": {
+					"text": "Adds a Greater Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Greater Eldritch Ichor": {
+					"text": "Adds a Greater Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Lesser Eldritch Ember": {
+					"text": "Adds a Lesser Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+				"Lesser Eldritch Ichor": {
+					"text": "Adds a Lesser Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"tags": ["Eldritch", "Generic"]
+				},
+
+				"Comprehensive Scouting Report": {
+					"text": "Drops if you have Planar Tactitian Atlas node<br>Reroll all of Kirac's Atlas Missions, adding additional mission options",
+					"tags": ["Report", "BossDrop"]
+				},
+				"Operative's Scouting Report": {
+					"text": "Drops if you have Solidarity Atlas node<br>Reroll all of Kirac's Atlas Missions, granting missions with rewarding implicit modifiers",
+					"tags": ["Report", "BossDrop"]
+				},
+				"Otherworldly Scouting Report": {
+					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Breachstone",
+					"tags": ["Report", "BossDrop"]
+				},
+				"Blighted Scouting Report": {
+					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Blighted Map",
+					"tags": ["Report", "BossDrop"]
+				},
+				"Delirious Scouting Report": {
+					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, adding layers of Delirium to all non-Unique Maps",
+					"tags": ["Report", "BossDrop"]
+				},
+				"Singular Scouting Report": {
+					"text": "Reroll all of Kirac's Atlas Missions, including at least one Unique map",
+					"tags": ["Report", "Generic"]
+				},
+				"Influenced Scouting Report": {
+					"text": "Reroll all of Kirac's Atlas Missions, including at least one Shaper Guardian, Elder Guardian, or Elderslayer Map",
+					"tags": ["Report", "Generic"]
+				},
+				"Explorer's Scouting Report": {
+					"text": "Reroll all of Kirac's Atlas Missions, using uncompleted Maps where possible",
+					"tags": ["Report", "Generic"]
+				},
+				"Vaal Scouting Report": {
+					"text": "Reroll all of Kirac's Atlas Missions, corrupting all non-Unique Maps",
+					"tags": ["Report", "Generic"]
+				},
+
+				"Fertile Catalyst": {
+					"text": "Adds quality that enhances Life and Mana modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Prismatic Catalyst": {
+					"text": "Adds quality that enhances Resistance modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Tempering Catalyst": {
+					"text": "Adds quality that enhances Defence modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Accelerating Catalyst": {
+					"text": "Adds quality that enhances Speed modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Unstable Catalyst": {
+					"text": "Adds quality that enhances Critical modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Intrinsic Catalyst": {
+					"text": "Adds quality that enhances Attribute modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Noxious Catalyst": {
+					"text": "Adds quality that enhances Physical and Chaos Damage modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Turbulent Catalyst": {
+					"text": "Adds quality that enhances Elemental Damage modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Abrasive Catalyst": {
+					"text": "Adds quality that enhances Attack modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Imbued Catalyst": {
+					"text": "Adds quality that enhances Caster modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Tainted Catalyst": {
+					"text": "Applies a random quality type and amount to a corrupted ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+
+				"Blessing of Chayula": {
+					"text": "Drops from Chayula<br>Upgrades a Chayula unique item or breachstone to a more powerful version",
+					"tags": ["Breach", "BossDrop"]
+				},
+				"Blessing of Uul-Netol": {
+					"text": "Drops from Uul-Netol<br>Upgrades a Uul-Netol unique item or breachstone to a more powerful version",
+					"tags": ["Breach", "BossDrop"]
+				},
+				"Blessing of Esh": {
+					"text": "Drops from Esh<br>Upgrades a Esh unique item or breachstone to a more powerful version",
+					"tags": ["Breach", "BossDrop"]
+				},
+				"Blessing of Tul": {
+					"text": "Drops from Tul<br>Upgrades a Tul unique item or breachstone to a more powerful version",
+					"tags": ["Breach", "BossDrop"]
+				},
+				"Blessing of Xoph": {
+					"text": "Drops from Xoph<br>Upgrades a Xoph unique item or breachstone to a more powerful version",
+					"tags": ["Breach", "BossDrop"]
+				},
+
+				"Burial Medallion": {
+					"text": "Brought to Dannig to refresh his vendor inventory",
+					"tags": ["Expedition", "LeagueDrop"]
+				},
+				"Exotic Coinage": {
+					"text": "Brought to Tujen to refresh his vendor inventory",
+					"tags": ["Expedition", "LeagueDrop"]
+				},
+				"Astragali": {
+					"text": "Brought to Gwennen to refresh her vendor inventory",
+					"tags": ["Expedition", "LeagueDrop"]
+				},
+				"Scrap Metal": {
+					"text": "Brought to Rog to refresh his vendor inventory",
+					"tags": ["Expedition", "LeagueDrop"]
+				},
+
+				"//comment1": "some of those can techincally very rarely drop from mob that drops vendor price of the items",
+				"Fracturing Orb": {
+					"text": "Fracture a random modifier on a rare item with at least 4 modifiers, locking it in place",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Fracturing Shard": {
+					"text": "A stack of 20 shards becomes a Fracturing Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Ancient Orb": {
+					"text": "Reforges a unique equipment as another of the same item class",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Ancient Shard": {
+					"text": "A stack of 20 shards becomes an Ancient Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Harbinger's Orb": {
+					"text": "Reforges a map item as another of a higher tier",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Harbinger's Shard": {
+					"text": "A stack of 20 shards becomes a Harbinger's Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Horizon Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Horizons",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Engineer's Orb": {
+					"text": "Improves the quality of a Strongbox",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Engineer's Shard": {
+					"text": "A stack of 20 shards becomes an Engineer's Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Mirror Shard": {
+					"text": "A stack of 20 shards becomes a Mirror of Kalandra",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Exalted Shard": {
+					"text": "A stack of 20 shards becomes an Exalted Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Annulment Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Annulment",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Regal Shard": {
+					"text": "A stack of 20 shards becomes a Regal Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Chaos Shard": {
+					"text": "A stack of 20 shards becomes a Chaos Orb",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Alchemy Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Alchemy",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Binding Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Binding",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Alteration Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Alteration",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Transmutation Shard": {
+					"text": "A stack of 20 shards becomes an Orb of Transmutation",
+					"tags": ["Harbinger", "LeagueDrop"]
+				},
+				"Deregulation Scroll": {
+					"text": "Used to upgrade The Tempest's Binding to The Tempest's Liberation. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"] 
+					},
+				"Electroshock Scroll": {
+					"text": "Used to upgrade The Rippling Thoughts to The Surging Thoughts. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"]  
+					},
+				"Fragmentation Scroll": {
+					"text": "Used to upgrade The Fracturing Spinner to The Shattered Divinity. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"]  
+					},
+				"Haemocombustion Scroll": {
+					"text": "Used to upgrade The Enmity Divine to The Yielding Mortality. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"] 
+					},
+				"Specularity Scroll": {
+					"text": "Used to upgrade The Unshattered Will to The Immortal Will. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"]  
+					},
+				"Time-light Scroll": {
+					"text": "Used to upgrade The Flow Untethered to The Torrent's Reclamation. Drops from boss portal in Infused Beachhead Maps",
+					"tags": ["Harbinger", "BossDrop"]  
+				},
+
+				"Awakener's Orb": {
+					"text": "Drops from Sirus<br>Destroys an item, applying its influence to another of the same item class. The second item is reforged as a rare item with both influence types and new modifiers",
+					"tags": ["BossDrop"]
+				},
+				"Orb of Dominance": {
+					"text": "Drops from Sirus, Shaper and Elder<br>Removes one Influenced Modifier from an item with at least two Influenced Modifiers and upgrades another Influenced Modifier",
+					"tags": ["BossDrop"]
+				},
+				"Hunter's Exalted Orb": {
+					"text": "Drops from Al-Hezmin, The Hunter<br>Adds Hunter influence and a new Hunter modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Redeemer's Exalted Orb": {
+					"text": "Drops from Veritania, The Redeemer<br>Adds Redeemer influence and a new Redeemer modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Warlord's Exalted Orb": {
+					"text": "Drops from Drox, The warlord<br>Adds Warlord influence and a new Warlord modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Crusader's Exalted Orb": {
+					"text": "Drops from Baran, The Crusader<br>Adds Crusader influence and a new Crusader modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Orb of Conflict": {
+					"text": "Drops from Maven or in Maven's Crucible<br>Unpredictably raise the strength of one Searing Exarch or Eater of Worlds modifier on an item and lower the strength of another",
+					"tags": ["BossDrop"]
+				},
+
+				"Mirror of Kalandra": {
+					"text": "Creates a mirrored copy of an item",
+					"tags": ["Generic"]
+				},
+				"Sacred Orb": {
+					"text": "Randomises the numeric values of base defences on an armour",
+					"tags": ["Generic"]
+				},
+				"Divine Orb": {
+					"text": "Randomises the numeric values of the random modifiers on an item",
+					"tags": ["Generic"]
+				},
+				"Exalted Orb": {
+					"text": "Augments a rare item with a new random modifier",
+					"tags": ["Generic"]
+				},
+				"Orb of Annulment": {
+					"text": "Removes a random modifier from an item",
+					"tags": ["Generic"]
+				},
+				"Orb of Unmaking": {
+					"text": "Grants an atlas passive skill refund point",
+					"tags": ["Generic"]
+				},
+				"Gemcutter's Prism": {
+					"text": "Improves the quality of a gem",
+					"tags": ["Generic"]
+				},
+				"Regal Orb": {
+					"text": "Upgrades a magic item to a rare item",
+					"tags": ["Generic"]
+				},
+				"Vaal Orb": {
+					"text": "Corrupts an item, modifying it unpredictably",
+					"tags": ["Generic"]
+				},
+				"Chaos Orb": {
+					"text": "Reforges a rare item with new random modifiers",
+					"tags": ["Generic"]
+				},
+				"Orb of Horizons": {
+					"text": "Reforges a map item as another of the same tier",
+					"tags": ["Generic"]
+				},
+				"Orb of Regret": {
+					"text": "Grants a passive skill refund point",
+					"tags": ["Generic"]
+				},
+				"Orb of Scouring": {
+					"text": "Removes all modifiers from an item",
+					"tags": ["Generic"]
+				},
+				"Blessed Orb": {
+					"text": "Randomises the numeric values of the implicit modifiers of an item",
+					"tags": ["Generic"]
+				},
+				"Orb of Fusing": {
+					"text": "Reforges the links between sockets on an item",
+					"tags": ["Generic"]
+				},
+				"Cartographer's Chisel": {
+					"text": "Improves the quality of a map",
+					"tags": ["Generic"]
+				},
+				"Orb of Alchemy": {
+					"text": "Upgrades a normal item to a rare item",
+					"tags": ["Generic"]
+				},
+				"Orb of Binding": {
+					"text": "Upgrades a normal item to a rare item with up to four linked sockets",
+					"tags": ["Generic"]
+				},
+				"Jeweller's Orb": {
+					"text": "Reforges the number of sockets on an item",
+					"tags": ["Generic"]
+				},
+				"Enkindling Orb": {
+					"text": "Adds an enchantment to a utility flask that will improve it but prevent it from gaining charges during its effect",
+					"tags": ["Generic"]
+				},
+				"Instilling Orb": {
+					"text": "Adds an enchantment to a utility flask that will cause it to be used when certain conditions are met",
+					"tags": ["Generic"]
+				},
+				"Glassblower's Bauble": {
+					"text": "Improves the quality of a flask",
+					"tags": ["Generic"]
+				},
+				"Chromatic Orb": {
+					"text": "Reforges the colour of sockets on an item",
+					"tags": ["Generic"]
+				},
+				"Orb of Chance": {
+					"text": "Upgrades a normal item to a random rarity",
+					"tags": ["Generic"]
+				},
+				"Orb of Alteration": {
+					"text": "Reforges a magic item with new random modifiers",
+					"tags": ["Generic"]
+				},
+				"Orb of Transmutation": {
+					"text": "Upgrades a normal item to a magic item",
+					"tags": ["Generic"]
+				},
+				"Orb of Augmentation": {
+					"text": "Augments a magic item with a new random modifier",
+					"tags": ["Generic"]
+				},
+				"Blacksmith's Whetstone": {
+					"text": "Improves the quality of a weapon",
+					"tags": ["Generic"]
+				},
+				"Armourer's Scrap": {
+					"text": "Improves the quality of an armour",
+					"tags": ["Generic"]
+				},
+				"Portal Scroll": {
+					"text": "Creates a portal to town",
+					"tags": ["Generic"]
+				},
+				"Scroll of Wisdom": {
+					"text": "Identifies an item",
+					"tags": ["Generic"]
+				},
+				"Stacked Deck": {
+					"text": "A stack of unknown divination cards",
+					"tags": ["Generic"]
+				},
+				"Veiled Scarab": {
+					"text": "A stack of unknown scarabs",
+					"tags": ["Generic"]
+				},
+
+				"Albino Rhoa Feather": {
+					"text": "Redacted",
+					"tags": ["Meme"]
+				},
+
+				"Bestiary Orb": {
+					"text": "Stores a Beast in an item",
+					"tags": ["NonDrop"]
+				},
+				"Facetor's Lens": {
+					"text": "Adds stored experience to a gem, up to its maximum level",
+					"tags": ["NonDrop"]
+				},
+				"Infused Engineer's Orb": {
+					"tags": ["NonDrop"]
+				},
+
+				"Eternal Orb": {
+					"text": "Creates an imprint of an item for later restoration. The imprint can't be applied to Fractured Items",
+					"tags": ["RuthlessOnly"]
+				},
+
+				"Maven's Chisel of Avarice": {
+					"text": "Improves the quality of a map enhancing Currency found",
+					"tags": ["BossDrop"]
+				},
+				"Maven's Chisel of Divination": {
+					"text": "Improves the quality of a map enhancing Divination Cards found",
+					"tags": ["BossDrop"]
+				},
+				"Maven's Chisel of Procurement": {
+					"text": "Improves the quality of a map enhancing Item Rarity",
+					"tags": ["BossDrop"]
+				},
+				"Maven's Chisel of Proliferation": {
+					"text": "Improves the quality of a map enhancing Pack Size",
+					"tags": ["BossDrop"]
+				},
+				"Maven's Chisel of Scarabs": {
+					"text": "Improves the quality of a map enhancing Scarabs found",
+					"tags": ["BossDrop"]
+				},
+				"Reflecting Mist": {
+					"text": "Unpredictably reflects a rare amulet or ring, breaking it into two mirrored halves with reflected modifiers",
+					"tags": ["LeagueDrop"]
+				}
+			}
+		},
+
+		"Resonator": {
+			"items": {
+				"Primitive Chaotic Resonator": {
+					"text": "Single socket Resonator reforging a rare item using Fossils"
+				},
+				"Potent Chaotic Resonator": {
+					"text": "Two socket Resonator reforging a rare item using Fossils"
+				},
+				"Powerful Chaotic Resonator": {
+					"text": "Three socket Resonator reforging a rare item using Fossils"
+				},
+				"Prime Chaotic Resonator": {
+					"text": "Four socket Resonator reforging a rare item using Fossils"
+				},
+				"Primitive Alchemical Resonator": {
+					"text": "Single socket Resonator upgrading a normal item to a rare item using Fossils"
+				},
+				"Potent Alchemical Resonator": {
+					"text": "Two socket Resonator upgrading a normal item to a rare item using Fossils"
+				},
+				"Powerful Alchemical Resonator": {
+					"text": "Three socket Resonator upgrading a normal item to a rare item using Fossils"
+				},
+				"Prime Alchemical Resonator": {
+					"text": "Four socket Resonator upgrading a normal item to a rare item using Fossils"
+				}
+			}
+		},
+
+		"Fossil": {
+			"items": {
+				"Aberrant Fossil": {
+					"text": "More Chaos modifiers, No Lightning modifiers"
+				},
+				"Aetheric Fossil": {
+					"text": "More Caster modifiers, Fewer Attack modifiers"
+				},
+				"Bloodstained Fossil": {
+					"text": "Corrupted, Has a Corrupted implicit modifier"
+				},
+				"Bound Fossil": {
+					"text": "More Minion, Aura or Curse modifiers"
+				},
+				"Corroded Fossil": {
+					"text": "More Physical Ailment or Chaos Ailment modifiers, No Elemental modifiers"
+				},
+				"Deft Fossil": {
+					"text": "More Critical modifiers, No Attribute modifiers"
+				},
+				"Dense Fossil": {
+					"text": "More Defence modifiers, No Life modifiers"
+				},
+				"Faceted Fossil": {
+					"text": "More Gem modifiers"
+				},
+				"Fractured Fossil": {
+					"text": "Creates a split copy. Cannot be used to split Influenced, Enchanted, Fractured, or Synthesised items."
+				},
+				"Frigid Fossil": {
+					"text": "More Cold modifiers, No Fire modifiers"
+				},
+				"Fundamental Fossil": {
+					"text": "More Attribute modifiers, No Critical modifiers"
+				},
+				"Gilded Fossil": {
+					"text": "Item is overvalued by vendors"
+				},
+				"Glyphic Fossil": {
+					"text": "Has a Corrupt Essence modifier"
+				},
+				"Hollow Fossil": {
+					"text": "Has an Abyssal Socket"
+				},
+				"Jagged Fossil": {
+					"text": "More Physical modifiers, No Chaos modifiers"
+				},
+				"Lucent Fossil": {
+					"text": "More Mana modifiers, No Speed modifiers"
+				},
+				"Metallic Fossil": {
+					"text": "More Lightning modifiers, No Physical modifiers"
+				},
+				"Opulent Fossil": {
+					"text": "More Drop modifiers, No Tagless modifiers"
+				},
+				"Prismatic Fossil": {
+					"text": "More Elemental modifiers, No Physical Ailment or Chaos Ailment modifiers"
+				},
+				"Pristine Fossil": {
+					"text": "More Life modifiers, No Defence modifiers"
+				},
+				"Sanctified Fossil": {
+					"text": "Numeric values are lucky, High Level modifiers are more common"
+				},
+				"Scorched Fossil": {
+					"text": "More Fire modifiers, No Cold modifiers"
+				},
+				"Serrated Fossil": {
+					"text": "More Attack modifiers, No Caster modifiers"
+				},
+				"Shuddering Fossil": {
+					"text": "More Speed modifiers, No mana modifiers"
+				},
+				"Tangled Fossil": {
+					"text": "Makes a random modifier type much more likely and prevents another random modifier type. Effects revealed once resonator is fully socketed."
+				}
+			}
+		},
+
+		"DeliriumOrb": {
+			"items": {
+				"Abyssal Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Abyss Items reward type"
+				},
+				"Armoursmith's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Armour reward type"
+				},
+				"Blacksmith's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Weapons reward type"
+				},
+				"Blighted Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Blight reward type"
+				},
+				"Cartographer's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Map Items reward type"
+				},
+				"Diviner's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Divination Cards reward type"
+				},
+				"Foreboding Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Harbinger Items reward type"
+				},
+				"Fossilised Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Fossils reward type"
+				},
+				"Fragmented Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Fragments reward type"
+				},
+				"Jeweller's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Trinkets reward type"
+				},
+				"Obscured Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Breach Items reward type"
+				},
+				"Singular Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Unique Items reward type"
+				},
+				"Skittering Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Scarabs reward type"
+				},
+				"Thaumaturge's Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Gems reward type"
+				},
+				"Timeless Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Legion reward type"
+				},
+				"Whispering Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Essences reward type"
+				},
+				"Fine Delirium Orb": {
+					"text": "Modifies a Map item adding layers of Delirium with the Currency Items reward type"
+				}
+			}
+		},
+
+		"Oil": {
+			"items": {
+				"Prismatic Oil": {
+					"text": "Can be used to anoint special Passive Skills not on the Passive Skill Tree otherwise."
+				},
+				"Tainted Oil": {
+					"text": "Can be combined with other oils to enchant corrupted rings, amulets or blighted maps."
+				},
+				"Reflective Oil": {
+					"text": "Can be combined with other oils to enchant mirrored rings, amulets or blighted maps."
+				},
+				"Clear Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 12% reduced Monster Movement Speed"
+				},
+				"Sepia Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Towers deal 25% more Damage"
+				},
+				"Amber Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 25% reduced Cost of Towers"
+				},
+				"Verdant Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 45% increased Experience gain"
+				},
+				"Teal Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Blight Monsters spawn 30% faster, Encounter duration is 50 seconds shorter"
+				},
+				"Azure Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Varieties of Items contained in 5 Blight Chests are Lucky"
+				},
+				"Indigo Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Up to 3 additional Blight Bosses"
+				},
+				"Violet Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 25% chance for an additional Reward Chest"
+				},
+				"Crimson Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Varieties of Items contained in 12 Blight Chests are Lucky"
+				},
+				"Black Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 7% chance for Blight Chests to contain an additional Reward"
+				},
+				"Opalescent Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Varieties of Items contained in 18 Blight Chests are Lucky"
+				},
+				"Silver Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps:  6% increased Pack size, 80% increased Quantity of Items"
+				},
+				"Golden Oil": {
+					"text": "Anoints ring/amulet. Modifies blighted maps:  6% increased Pack size, 30% chance for Blight Chests to contain an additional Reward"
+				}
+			}
+		},
+
+		"Incubator": {
+			"items": {
+				"Fine Incubator" : {
+					"text" : "Does not drop. Awards a Currency item."
+				},
+				"Whispering Incubator" : {
+					"text" : "Does not drop. Awards an Essence item."
+				},
+				"Geomancer's Incubator" : {
+					"text" : "Awards a 6-Linked Armour item."
+				},
+				"Abyssal Incubator" : {
+					"text" : "Awards a Rare Abyss item."
+				},
+				"Blighted Incubator" : {
+					"text" : "Awards a Blight item. Usually blighted maps, oils or scarabs."
+				},
+				"Cartographer's Incubator" : {
+					"text" : "Awards a Map item. Can grant special maps, if ItemLevel is 81 or higher."
+				},
+				"Diviner's Incubator" : {
+					"text" : "Awards Stacked Decks."
+				},
+				"Foreboding Incubator" : {
+					"text" : "Awards Currency Shards or a Harbinger item."
+				},
+				"Fossilised Incubator" : {
+					"text" : "Awards a Fossil item."
+				},
+				"Gemcutter's Incubator" : {
+					"text" : "Does not drop. Awards a Quality Gem item."
+				},
+				"Infused Incubator" : {
+					"text" : "Awards an Essence item."
+				},
+				"Kalguuran Incubator" : {
+					"text" : "Awards an Expedition item. Usually expedition reroll currencies or scarabs"
+				},
+				"Maddening Incubator" : {
+					"text" : "Awards a Delirium item. Usually simulacrum splinters or delirium orbs"
+				},
+				"Obscured Incubator" : {
+					"text" : "Awards a Breach item. Usually splinters or scarabs."
+				},
+				"Ornate Incubator" : {
+					"text" : "Awards a Currency item."
+				},
+				"Otherworldly Incubator" : {
+					"text" : "Awards a Unique Map."
+				},
+				"Singular Incubator" : {
+					"text" : "Awards Unique item. (enjoy your bramblejack)!"
+				},
+				"Skittering Incubator" : {
+					"text" : "Awards a Scarab item."
+				},
+				"Thaumaturge's Incubator" : {
+					"text" : "Awards a high level Corrupted Gem or valuable Gem item. Usually a level 21 gem, an exceptional gem, a gem with 23 quality or a leveled/quality vaal gem!"
+				},
+				"Time-Lost Incubator" : {
+					"text" : "Does not drop. Awards a League-specific Unique item."
+				},
+				"Celestial Armoursmith's Incubator" : {
+					"text" : "Awards a Shaper or Elder Armour item."
+				},
+				"Celestial Blacksmith's Incubator" : {
+					"text" : "Awards a Shaper or Elder Weapon item."
+				},
+				"Celestial Jeweller's Incubator" : {
+					"text" : "Awards a Shaper or Elder Trinket item (ring, amulet or belt)."
+				},
+				"Fragmented Incubator" : {
+					"text" : "Awards a Fragment item. Usually a Sacrifice fragment. Itemlevel 81+ incubators can rarely grant other fragments!"
+				},
+				"Mysterious Incubator" : {
+					"text" : "Awards the reward of another random incubator (likely bramblejack!)."
+				},
+				"Primal Incubator" : {
+					"text" : "Awards a Talisman item. Can rarely award unique talismans!"
+				}
+			}
+		},
+
+		"DivinationCard": {
+			"items": {
+				"A Dab of Ink": {
+					"tags": ["UniqueOutcome"]
+				},
+				"A Familiar Call": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"A Fate Worse Than Death": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"A Modest Request": {
+					"tags": ["UniqueOutcome"]
+				},
+				"A Mother's Parting Gift": {
+					"tags": ["UniqueOutcome"]
+				},
+				"A Note in the Wind": {
+					"tags": ["UniqueOutcome"]
+				},
+				"A Sea of Blue": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"A Stone Perfected": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Abandoned Wealth": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Acclimatisation": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Akil's Prophecy": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Alivia's Grace": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Alluring Bounty": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Alone in the Darkness": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Altered Perception": {
+					"tags": ["MapOutcome"]
+				},
+				"Ambitious Obsession": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Anarchy's Price": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Arrogance of the Vaal": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Assassin's Favour": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Astral Protection": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Atziri's Arsenal": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Audacity": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Auspicious Ambitions": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Azure Rage": {
+					"tags":	["MapOutcome"]
+				},
+				"Azyran's Reward": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Baited Expectations": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Beauty Through Death": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Blind Venture": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Boon of Justice": {
+					"tags": ["MapOutcome"]
+				},
+				"Boon of the First Ones": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Boundless Realms": {
+					"tags": ["MapOutcome"]
+				},
+				"Bowyer's Dream": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"Broken Truce": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Brother's Stash": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Brother's Gift": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Brotherhood in Exile": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Brush, Paint and Palette": {
+					"tags": ["GemOutcome"]
+				},
+				"Buried Treasure": {
+					"tags": ["MapOutcome"]
+				},
+				"Burning Blood": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Cameria's Cut": {
+					"tags": ["MapOutcome"]
+				},
+				"Cartographer's Delight": {
+					"tags": ["MapOutcome"]
+				},
+				"Chaotic Disposition": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Chasing Risk": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Checkmate": {
+					"tags": ["MapOutcome"]
+				},
+				"Choking Guilt": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Costly Curio": {
+					"tags": ["InfluencedOutcome", "UniqueOutcome"]
+				},
+				"Council of Cats": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Coveted Possession": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Cursed Words": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Dark Dreams": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Dark Temptation": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Darker Half": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Deadly Joy": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Death": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Deathly Designs": {
+					"tags": ["GemOutcome"]
+				},
+				"Dementophobia": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Demigod's Wager": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Desecrated Virtue": {
+					"tags": ["GemOutcome"]
+				},
+				"Desperate Crusade": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Dialla's Subjugation": {
+					"tags": ["GemOutcome"]
+				},
+				"Disdain": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Divine Beauty": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Doedre's Madness": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Draped in Dreams" : {
+					"tags": ["SixLinkOutcome", "InfluencedOutcome"]
+				},
+				"Duality": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Dying Light" : {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Earth Drinker": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Emperor of Purity": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"Emperor's Luck": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Endless Night": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Etched in Blood": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Eternal Bonds": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"Ever-Changing": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Fateful Meeting": {
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
+				},
+				"Forbidden Power": {
+					"tags": ["UniqueOutcome"]
+				},
+				"From Bone to Ashes": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Further Invention": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Gemcutter's Mercy": {
+					"tags": ["GemOutcome"]
+				},
+				"Gemcutter's Promise": {
+					"tags": ["GemOutcome"]
+				},
+				"Gift of Asenath": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Gift of the Gemling Queen": {
+					"tags": ["GemOutcome"]
+				},
+				"Glimmer of Hope": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Grave Knowledge": {
+					"tags": ["GemOutcome"]
+				},
+				"Guardian's Challenge": {
+					"tags": ["MapOutcome"]
+				},
+				"Harmony of Souls": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Haunting Shadows": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Her Mask": {
+					"tags": ["MapOutcome"]
+				},
+				"Heterochromia": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Home": {
+					"tags": ["GemOutcome"]
+				},
+				"Hope": {
+					"tags": ["UniqueOutcome"]
+				},
+				"House of Mirrors": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Hubris": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Humility": {
+					"tags": ["SixLinkOutcome", "UniqueOutcome"]
+				},
+				"Hunter's Resolve": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Hunter's Reward": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Immortal Resolve": {
+					"tags": ["SixLinkOutcome", "InfluencedOutcome"]
+				},
+				"Imperial Legacy": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"Jack in the Box": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Judging Voices": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Justified Ambition": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"Keeper's Corruption": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Last Hope": {
+					"tags": ["MapOutcome"]
+				},
+				"Left to Fate": {
+					"tags": ["MapOutcome"]
+				},
+				"Lethean Temptation": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Light and Truth": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Lingering Remnants": {
+					"tags": ["MapOutcome"]
+				},
+				"Lost Worlds": {
+					"tags": ["MapOutcome"]
+				},
+				"Love Through Ice": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Loyalty": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Lucky Connections": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Lucky Deck": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Luminous Trove": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Lysah's Respite": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Man With Bear": {
+					"tags": ["MapOutcome"]
+				},
+				"Matryoshka":{
+					"tags": ["InfluencedOutcome"]
+				},
+				"Mawr Blaidd": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Might is Right": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Misery in Darkness": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Mitts": {
+					"tags": ["UniqueOutcome"]
+				},
+				"No Traces": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Nook's Crown": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Parasitic Passengers": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Peaceful Moments": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Perfection": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Prejudice": {
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
+				},
+				"Pride Before the Fall": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Pride of the First Ones": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Prometheus' Armoury": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Rain of Chaos": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Rain Tempter": {
+					"tags": ["MapOutcome"]
+				},
+				"Rats": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Rebirth": {
+					"tags": ["UniqueOutcome", "SixLinkOutcome"]
+				},
+				"Reckless Ambition": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Remembrance": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Sambodhi's Vow": {
+					"tags": ["MapOutcome"]
+				},
+				"Scholar of the Seas": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"Seven Years Bad Luck": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Silence and Frost": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Society's Remorse": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Something Dark": {
+					"tags": ["MapOutcome"]
+				},
+				"Succor of the Sinless": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Academic": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Admirer": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Adventuring Spirit": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Aesthete": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Apothecary": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Arena Champion": {
+					"tags": ["MapOutcome"]
+				},
+				"The Army of Blood": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Artist":  {
+					"tags": ["GemOutcome"]
+				},
+				"The Aspirant": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"The Astromancer": {
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
+				},
+				"The Avenger": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Awakened": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"The Battle Born": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Bear Woman": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"The Beast": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Betrayal": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Bitter Blossom": {
+					"tags": ["GemOutcome"]
+				},
+				"The Blazing Fire": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Body": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Bones": {
+					"tags": ["GemOutcome"]
+				},
+				"The Breach": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Brittle Emperor": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Cache": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Cacophony": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Calling": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Card Sharp": {
+					"tags": ["MapOutcome"]
+				},
+				"The Cartographer": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Cataclysm": {
+					"tags": ["GemOutcome"]
+				},
+				"The Catalyst": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Celestial Justicar": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"The Celestial Stone": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"The Chains that Bind": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"The Cheater": {
+					"tags": ["GemOutcome"]
+				},
+				"The Chosen": {
+					"tags": ["UniqueOutcome", "SixLinkOutcome"]
+				},
+				"The Coming Storm": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Conduit": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Craving": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Cursed King": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Damned": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Dapper Prodigy": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"The Dark Mage": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"The Darkest Dream": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Deal": {
+					"tags": ["MapOutcome"]
+				},
+				"The Deceiver": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Deep Ones": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Demon": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Demoness": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Destination": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Doctor": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Doppelganger": {
+					"tags": ["GemOutcome"]
+				},
+				"The Dragon": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Dragon's Heart": {
+					"tags": ["GemOutcome"]
+				},
+				"The Dreamer": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Dreamland": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"The Drunken Aristocrat": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Dungeon Master": {
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
+				},
+				"The Easy Stroll": {
+					"tags": ["MapOutcome"]
+				},
+				"The Eldritch Decay": {
+					"tags": ["MapOutcome"]
+				},
+				"The Emptiness": {
+					"tags": ["GemOutcome"]
+				},
+				"The Encroaching Darkness": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"The Endless Darkness": {
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
+				},
+				"The Enforcer": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"The Enlightened": {
+					"tags": ["GemOutcome"]
+				},
+				"The Enthusiasts": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Escape": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Eternal War": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Ethereal": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"The Explorer": {
+					"tags": ["MapOutcome"]
+				},
+				"The Eye of Terror": {
+					"tags": ["MapOutcome"]
+				},
+				"The Eye of the Dragon": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Fathomless Depths": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Feast": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Fiend": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Finishing Touch": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Fletcher": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Fool": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Forgotten Treasure": {
+					"tags": ["UniqueOutcome", "InfluencedOutcome"]
+				},
+				"The Formless Sea": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Forsaken": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Forward Gaze": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Fox": {
+					"tags": ["GemOutcome"]
+				},
+				"The Fox in the Brambles": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Garish Power": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Gemcutter": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Gentleman": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Gladiator": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Greatest Intentions": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Gulf": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Hale Heart": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"The Harvester": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Hermit": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Heroic Shot": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Hive of Knowledge": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Hoarder": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Hunger": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Immortal": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Incantation": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Innocent": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Insane Cat": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Insatiable": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Inventor": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Jeweller's Boon": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"The Journey": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The King's Heart": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Landing": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"The Last One Standing": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Last Supper": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Leviathan": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Lich": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Life Thief": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Lion": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Long Con": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Lord of Celebration": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"The Lunaris Priestess": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Mad King": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Magma Crab": {
+					"tags": ["GemOutcome"]
+				},
+				"The Master Artisan": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Mercenary": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Messenger": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Mind's Eyes": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Nurse": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Oath": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Obscured": {
+					"tags": ["MapOutcome"]
+				},
+				"The Offering": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Offspring": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The One That Got Away": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The One With All": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Pack Leader": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Pact": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Patient": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Penitent": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Poet": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Polymath": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Porcupine": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"The Price of Devotion": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Price of Loyalty": {
+					"tags": ["UniqueOutcome", "SixLinkOutcome"]
+				},
+				"The Price of Prescience": {
+					"tags": ["MapOutcome"]
+				},
+				"The Price of Protection": {
+					"tags": ["MapOutcome"]
+				},
+				"The Primordial": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Prince of Darkness": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Professor": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"The Progeny of Lunaris": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Puzzle": {
+					"tags": ["MapOutcome"]
+				},
+				"The Queen": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Rabbit's Foot": {
+					"tags": ["UniqueOutcome", "CurrencyOutcome"]
+				},
+				"The Realm": {
+					"tags": ["GemOutcome"]
+				},
+				"The Return of the Rat": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Risk": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Rite of Elements": {
+					"tags": ["GemOutcome"]
+				},
+				"The Rusted Bard": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Ruthless Ceinture": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Sacrifice": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"The Saint's Treasure": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Samurai's Eye": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Scarred Meadow": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Scavenger": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Scholar": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Scout": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Seeker": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Sephirot": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Shepherd's Sandals": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Shieldbearer": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Side Quest": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Siren": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Skeleton": {
+					"tags": ["GemOutcome"]
+				},
+				"The Soul": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Spark and the Flame": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Standoff": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Stormcaller": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Strategist": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Summoner": {
+					"tags": ["GemOutcome"]
+				},
+				"The Sun": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Surveyor": {
+					"tags": ["MapOutcome"]
+				},
+				"The Survivalist": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Sword King's Salute": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Thaumaturgist": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Throne": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Tinkerer's Table": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Tireless Extractor": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Tower": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Traitor": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Transformation": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Trial": {
+					"tags": ["MapOutcome"]
+				},
+				"The Tumbleweed": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"The Twilight Moon": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"The Undaunted": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Undisputed": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"The Unexpected Prize": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Union": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Valkyrie": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Vast": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Visionary": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Warlord": {
+					"tags": ["SixLinkOutcome"]
+				},
+				"The Watcher": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Wedding Gift": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The White Knight": {
+					"tags": ["SixLinkOutcome", "InfluencedOutcome"]
+				},
+				"The Whiteout": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Wilted Rose": {
+					"tags": ["GemOutcome"]
+				},
+				"The Wind": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Witch": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Wolf": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Wolf's Legacy": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"The Wolf's Shadow": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Wolven King's Bite": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Wolverine": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The World Eater": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Wrath": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Wretched": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Thirst for Knowledge": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Three Faces in the Dark": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Three Voices": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Thunderous Skies": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Time-Lost Relic": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Tranquillity": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Treasure Hunter": {
+					"tags": ["MapOutcome", "UniqueOutcome"]
+				},
+				"Triskaidekaphobia": {
+					"tags": ["MapOutcome"]
+				},
+				"Turn the Other Cheek": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Unchained": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Unrequited Love": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Vanity": {
+					"tags": ["SixLinkOutcome", "UniqueOutcome"]
+				},
+				"Vile Power": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Vinia's Token": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Void of the Elements": {
+					"tags": ["InfluencedOutcome"]
+				},
+				"Volatile Power": {
+					"tags": ["GemOutcome"]
+				},
+				"Wealth and Power": {
+					"tags": ["GemOutcome"]
+				},
+				"Winter's Embrace": {
+					"tags": ["UniqueOutcome"]
+				},
+				"A Chilling Wind": {
+					"tags": ["GemOutcome"]
+				},
+				"Poisoned Faith": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Echoes of Love": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Fire Of Unknown Origin": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Fortunate": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Assassin's Gift": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Blessing of Moosh": {
+					"tags": ["GemOutcome"]
+				},
+				"Divine Justice": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Doryani's Epiphany": {
+					"tags": ["GemOutcome"]
+				},
+				"Dying Anguish": {
+					"tags": ["GemOutcome"]
+				},
+				"The Hook": {
+					"tags": ["GemOutcome"]
+				},
+				"Terrible Secret of Space": {
+					"tags": ["GemOutcome"]
+				},
+				"Rebirth and Renewal": {
+					"tags": ["MapOutcome"]
+				},
+				"More is Never Enough": {
+					"tags": ["MapOutcome"]
+				},
+				"The Long Watch": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Friendship": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Toxic Tidings": {
+					"tags": ["UniqueOutcome"]
+				},
+				"I See Brothers": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Temperance": {
+					"tags": ["MapOutcome"]
+				},
+				"Lonely Warrior": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Friendship": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Father's Love": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Avian Pursuit": {
+					"tags": ["MapOutcome"]
+				}
+			}
+		},
+
+		"Fragment": {
+			"items": {
+				"Gift to the Goddess": {
+					"text": null
+				},
+				"Timeless Maraketh Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Maraketh Splinters"
+				},
+				"Dedication to the Goddess": {
+					"text": null
+				},
+				"Tribute to the Goddess": {
+					"text": "The Labyrinth's rewards are enriched."
+				},
+				"Mortal Grief": {
+					"text": "Top left Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
+				},
+				"Mortal Rage": {
+					"text": "Top right Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
+				},
+				"Mortal Ignorance": {
+					"text": "Bottom left Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
+					},
+				"Mortal Hope": {
+					"text": "Bottom right Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
+					},
+				"Divine Vessel": {
+					"text": "Used in the map device to make the map boss more powerful, and if they are killed, it also captures their soul to unlock additional bonuses on The Pantheon."
+					},
+				"Sacrifice at Dusk": {
+					"text": "Top left Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
+					},
+				"Sacrifice at Midnight": {
+					"text": "Top right Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
+					},
+				"Sacrifice at Dawn": {
+					"text": "Bottom right Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
+					},
+				"Sacrifice at Noon": {
+					"text": "Bottom left Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
+					},
+				"Sacred Blossom": {
+					"text": "Used by itself in the map device it will grant access to The Sacred Grove to fight Oshabi. Chance to drop from T4 Harvest monsters (Janaar, the Omen, Namharim, Born of Night, and Ersi, Mother of Thorns)."
+					},
+				"The Maven's Writ": {
+					"text": "Used by itself in the map device it will grant access to The Mavens Crucible to fight The Maven herself."
+					},
+				"Al-Hezmin's Crest": {
+					"text": "Guaranteed to drop upon killing Al-Hezmin, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
+					},
+				"Baran's Crest": {
+					"text": "Guaranteed to drop upon killing Baran, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
+					},
+				"Drox's Crest": {
+					"text": "Guaranteed to drop upon killing Drox, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
+					},
+				"Veritania's Crest": {
+					"text": "Guaranteed to drop upon killing Veritania, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
+					},
+				"Fragment of Constriction": {
+					"text": "Guaranteed to drop upon killing The Constrictor, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
+					},
+				"Fragment of Enslavement": {
+					"text": "Guaranteed to drop upon killing The Enslaver, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
+					},
+				"Fragment of Eradication": {
+					"text": "Guaranteed to drop upon killing The Eradicator, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
+					},
+				"Fragment of Purification": {
+					"text": "Guaranteed to drop upon killing The Purifier, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
+					},
+				"Fragment of Shape": {
+					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper"
+					},
+				"Fragment of Terror": {
+					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder"
+					},
+				"Fragment of Knowledge": {
+					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper"
+					},
+				"Fragment of Emptiness": {
+					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder"
+					},
+				"Simulacrum": {
+					"text": "Placed into a map device it opens up 6 portals to a 30 wave fight. Increasing in difficulty with each wave. Aquired by combining 300 Simulacrum Splinters"
+					},
+				"Timeless Templar Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Templar Splinters"
+					},
+				"Unrelenting Timeless Eternal Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
+					},
+				"Unrelenting Timeless Karui Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
+					},
+				"Unrelenting Timeless Maraketh Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
+					},
+				"Unrelenting Timeless Templar Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
+					},
+				"Unrelenting Timeless Vaal Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
+					},
+				"Blood-filled Vessel": {
+					"text": "When used a map in the Map Device, it adds a Ritual encounter to the instance, while also adding the stored monsters to the Ritual."
+					},
+				"Fragment of the Chimera": {
+					"text": "Guaranteed drop when killing Guardian of the Chimera, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
+					},
+				"Fragment of the Phoenix": {
+					"text": "Guaranteed drop when killing Guardian of the Hydra, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
+					},
+				"Fragment of the Hydra": {
+					"text": "Guaranteed drop when killing Guardian of the Hydra, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
+					},
+				"Fragment of the Minotaur": {
+					"text": "Guaranteed drop when killing Guardian of the Minotaur, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
+					},
+				"Offering to the Goddess": {
+					"text": "Used as payment to enter The Eternal Labyrinth."
+					},
+				"Timeless Eternal Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Eternal Splinters"
+					},
+				"Timeless Karui Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Karui Splinters"
+					},
+				"Timeless Vaal Emblem": {
+					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Vaal Splinters"
+					},
+				"An Audience With The King": {
+					"text": "Grants access to the King in the Mists boss fight"
+					}
+			}
+		},
+
+		"Scarab": {
+			"items": {
+				"Breach Scarab": {
+					"text": "Area contains 2 additional Breaches"
+				},
+				"Breach Scarab of Lordship": {
+					"text": "Breaches in Area each contain a Breachlord"
+				},
+				"Breach Scarab of Splintering": {
+					"text": "Breach Monsters in Area drop 50% more Breach Splinters<br>Clasped Hands in Area drop 50% more Breach Splinters"
+				},
+				"Breach Scarab of Snares": {
+					"text": "Breaches in Area have 5 to 10 additional Clasped Hands<br>Clasped Hands in Area are guarded by a rare Breach Monster"
+				},
+				"Breach Scarab of Resonant Cascade": {
+					"text": "Breaches in Areas open and close 10% faster for each Breach already opened<br>Monsters from Breaches in Areas have increased Difficulty and Reward foreach Breach already opened"
+				},
+
+				"Cartography Scarab of Escalation": {
+					"text": "10% increased Maps found in Area for each Map Modifier affecting Area"
+				},
+				"Cartography Scarab of the Multitude": {
+					"text": "Area contains 8 to 12 additional packs of Difficult and Rewarding Monsters which drop 300% increased Maps"
+				},
+				"Cartography Scarab of Corruption": {
+					"text": "Non-Unique Maps found in Area are Corrupted with 8 Modifiers"
+				},
+				"Cartography Scarab of Risk": {
+					"text": "Area has an additional random Modifier"
+				},
+
+				"Bestiary Scarab": {
+					"text": "Area contains Einhar"
+				},
+				"Bestiary Scarab of the Herd": {
+					"text": "Area contains 5 additional Red Beasts if it contains Einhar"
+				},
+				"Bestiary Scarab of Duplicating": {
+					"text": "Create a copy of Beasts captured in Area"
+				},
+
+				"Influencing Scarab of the Shaper": {
+					"text": "Adds Shaper Influence outcome to Area"
+				},
+				"Influencing Scarab of the Elder": {
+					"text": "Adds Elder Influence outcome to Area"
+				},
+				"Influencing Scarab of Hordes": {
+					"text": "Influenced Monster Packs in Area have 40% increased Pack Size"
+				},
+				"Influencing Scarab of Conversion": {
+					"text": "Tier 14+ Maps found in Area have a chance to drop as Shaper Guardian, Elder Guardian, Conqueror or Unique Synthesised Maps instead"
+				},
+
+				"Sulphite Scarab": {
+					"text": "Area contains Niko<br>Map owner gains 150% more Sulphite"
+				},
+				"Sulphite Scarab of Fumes": {
+					"text": "Sulphite found in Map Area releases Enraging Fumes<br>Monsters affected by Enraging Fumes have 50% increased Item Quantity<br>Sulphite in your maps is guarded by Monsters from the Azurite Mine"
+				},
+
+				"Divination Scarab of Pilfering": {
+					"text": "Divination Cards which drop in Area are stolen by a Final Map Boss<br>That Final Map Boss has increased Toughness and deals increased Damage the more Divination Cards they have stolen<br>That Final Map Boss duplicates all stolen Divination Cards when defeated"
+				},
+				"Divination Scarab of Plenty": {
+					"text": "Up to 3 Packs of Magic Monsters in Area have 800% increased chance to drop Divination Cards"
+				},
+				"Divination Scarab of The Cloister": {
+					"text": "Area contains 8 to 12 additional packs of Doedre's Devoted<br>Doedre's Devoted have 1% additional chance to drop a Stacked Deck"
+				},
+				
+				"Torment Scarab": {
+					"text": "Area is haunted by 3 additional Tormented Spirits<br>Tormented Spirits in Area have a 25% chance to be set free when Possessed Monsters are slain"
+				},
+				"Torment Scarab of Peculiarity": {
+					"text": "Tormented Spirits in Area are replaced with unusual variants"
+				},
+				"Torment Scarab of Possession": {
+					"text": "Rare Monsters in Area have a quarter chance to be Possessed by up to 1 Tormented Spirit"
+				},
+
+				"Ambush Scarab": {
+					"text": "Area contains 5 additional Strongboxes"
+				},
+				"Ambush Scarab of Hidden Compartments": {
+					"text": "15% Chance for Strongboxes in Area to be openable again"
+				},
+				"Ambush Scarab of Potency": {
+					"text": "75% Increased effect of Explicit Modifiers on Strongboxes in Area"
+				},
+				"Ambush Scarab of Containment": {
+					"text": "Area contains many additional Strongboxes<br>Area's inhabitants are lying in ambush"
+				},
+				"Ambush Scarab of Discernment": {
+					"text": "Strongboxes in Area are more likely to be rarer varieties"
+				},
+
+				"Harbinger Scarab": {
+					"text": "Area contains 3 additional Harbingers"
+				},
+				"Harbinger Scarab of Obelisks": {
+					"text": "Harbingers in Area spawn Empowered Obelisks<br>Empowered Obelisks drop Currency Shards when defeated"
+				},
+				"Harbinger Scarab of Regency": {
+					"text": "Harbingers in Area have a 50% chance to be replaced by a powerful Harbinger Boss"
+				},
+				"Harbinger Scarab of Warhoards": {
+					"text": "Currency shards dropped by Harbingers in Area are duplicated"
+				},
+
+				"Expedition Scarab": {
+					"text": "Area contains an Expedition Encounter"
+				},
+				"Expedition Scarab of Runefinding": {
+					"text": "Expedition Encounters in Area have 100% increased number of Runic Monster Markers"
+				},
+				"Expedition Scarab of Verisium Powder": {
+					"text": "Expedition Encounters in Area have 20% increased number of Explosives<br>80% increased Explosive Radius"
+				},
+				"Expedition Scarab of Archaeology": {
+					"text": "Remnants in Expedition Encounters in Area have 2 additional Suffixes and Prefixes"
+				},
+
+				"Legion Scarab": {
+					"text": "Area contains an additional Legion Encounter"
+				},
+				"Legion Scarab of Officers": {
+					"text": "Legion Factions in Area have 5 additional Sergeants"
+				},
+				"Legion Scarab of Command": {
+					"text": "Legion Factions in Area are accompanied by a General"
+				},
+				"Legion Scarab of Eternal Conflict": {
+					"text": "Legion Monsters in Area can be broken out of Stasis multiple times<br>Legion Monsters in Area gain increased Difficulty and Reward for each time they are broken out"
+				},
+
+				"Abyss Scarab": {
+					"text": "Area contains an additional Abyss"
+				},
+				"Abyss Scarab of Multitudes": {
+					"text": "Abysses in Area spawn 75% increased Monsters"
+				},
+				"Abyss Scarab of Edifice": {
+					"text": "Abysses in Area that do not lead to an Abyssal Depths lead to a Stygian Spire<br>Abysses in Area spawn Hoards as they travel"
+				},
+				"Abyss Scarab of Profound Depth": {
+					"text": "Monsters from Abysses in Areas have increased Difficulty and Reward for each prior Pit in that Abyss"
+				},
+
+				"Anarchy Scarab": {
+					"text": "Area contains 4 additional Rogue Exiles"
+				},
+				"Anarchy Scarab of Gigantification": {
+					"text": "Rogue Exiles in Area have a 30% chance to be replaced with a Rogue Giant"
+				},
+				"Anarchy Scarab of Partnership": {
+					"text": "Rogue Exiles in Area have a 50% chance to appear in pairs"
+				},
+
+				"Essence Scarab": {
+					"text": "Area contains 2 additional Essences"
+				},
+				"Essence Scarab of Ascent": {
+					"text": "Essences found in Area are a tier higher"
+				},
+				"Essence Scarab of Stability": {
+					"text": "Using a Remnant of Corruption in Area can only result in upgrading or transforming Essences"
+				},
+				"Essence Scarab of Calcification": {
+					"text": "Rare monsters that are natural inhabitants of the Area are imprisoned by Essences"
+				},
+				"Essence Scarab of Adaptation": {
+					"text": "Imprisoned Monsters released in Areas grant a random Essence Modifier to another Imprisoned Monster in the Area<br>Imprisoned Monsters in Areas have increased Difficulty and Reward for each Essence Modifier"
+				},
+
+				"Domination Scarab": {
+					"text": "Area contains 2 additional Shrines"
+				},
+				"Domination Scarab of Apparitions": {
+					"text": "Area contains 2 additional Apparition Shrines"
+				},
+				"Domination Scarab of Evolution": {
+					"text": "Area contains an additional Evolving Shrine"
+				},
+				"Domination Scarab of Terrors": {
+					"text": "Shrines in Area are guarded by an Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
+				},
+
+				"Ritual Scarab of Selectiveness": {
+					"text": "Rerolling Favours at Ritual Altars in Area has no cost the first 2 times<br>Ritual Altars in Area allow rerolling Favours 1 additional time"
+				},
+				"Ritual Scarab of Wisps": {
+					"text": "Ritual Altars in Area spawn a Wildwood Wisp<br>Wildwood Wisps grant 70% increased Tribute Gained to nearby Players"
+				},
+				"Ritual Scarab of Abundance": {
+					"text": "Rituals in Area offer 100% increased Favours"
+				},
+
+				"Harvest Scarab": {
+					"text": "Area contains the Sacred Grove"
+				},
+				"Harvest Scarab of Doubling": {
+					"text": "Lifeforce dropped by Harvest Monsters in Area is duplicated<br>Harvest Monsters in Area have 100% more Life"
+				},
+				"Harvest Scarab of Cornucopia": {
+					"text": "If Area contains the Sacred Grove, it will contain up to 1 additional Tier 4 seed of each type, if possible"
+				},
+
+				"Incursion Scarab": {
+					"text": "Area contains Alva"
+				},
+				"Incursion Scarab of Invasion": {
+					"text": "Area contains 12-16 additional packs of Incursion Monsters"
+				},
+				"Incursion Scarab of Champions": {
+					"text": "Incursions in Area have a 35% chance for all Monsters to be at least Magic<br>Incursions in Area have 15% increased Pack Size"
+				},
+				"Incursion Scarab of Timelines": {
+					"text": "Final Architect slain in Area will drop an Itemised Temple<br>Itemised Temples dropped in Area are generated based on current Temple layout, but with randomised room tiers"
+				},
+
+				"Betrayal Scarab": {
+					"text": "Area contains Jun"
+				},
+				"Betrayal Scarab of Intelligence": {
+					"text": "150% Increased Intelligence gained from Immortal Syndicate targets encountered in Area"
+				},
+				"Betrayal Scarab of Reinforcements": {
+					"text": "Immortal Syndicate Members in Area have 50% increased chance to be accompanied by reinforcements"
+				},
+
+				"Beyond Scarab": {
+					"text": "Slaying enemies close together in Area can attract monsters from Beyond this realm"
+				},
+				"Beyond Scarab of Haemophilia": {
+					"text": "Beyond Portals in Area have 30% increased Merging Radius"
+				},
+				"Beyond Scarab of Resurgence": {
+					"text": "Beyond Bosses in Area are enraged on low life<br>Beyond Bosses in Area drop 100% increased Tainted Currency<br>Beyond Portals in Area have 30% increased chance to spawn a Unique Boss"
+				},
+				"Beyond Scarab of the Invasion": {
+					"text": "Rare and Unique Monsters slain in Area create 8 to 12 additional Beyond Portals"
+				},
+
+				"Ultimatum Scarab": {
+					"text": "Area contains an Ultimatum Encounter"
+				},
+				"Ultimatum Scarab of Bribing": {
+					"text": "Ultimatum Monsters grant 150% increased Experience<br>Ultimatum Encounters grant rewards as though you completed 2 additional Rounds"
+				},
+				"Ultimatum Scarab of Dueling": {
+					"text": "Ultimatum Encounters in Area will always lead to a Unique Boss if possible"
+				},
+				"Ultimatum Scarab of Catalysing": {
+					"text": "Ultimatum Encounters in Area will only offer Catalysts as Rewards to the Map Owner"
+				},
+				"Ultimatum Scarab of Inscription": {
+					"text": "Ultimatum Encounter rewards in Area offering Catalysts will offer Inscribed Ultimatums to the Map Owner instead"
+				},
+
+				"Delirium Scarab": {
+					"text": "Area contains a Mirror of Delirium"
+				},
+				"Delirium Scarab of Mania": {
+					"text": "Delirium Reward Meters fill 100% faster in Area<br>Delirium in Area increases 50% faster with distance from the mirror"
+				},
+				"Delirium Scarab of Paranoia": {
+					"text": "Delirium Encounters in Area generate 2 additional Reward types"
+				},
+				"Delirium Scarab of Neuroses": {
+					"text": "Delirium Encounters in Area contain all Unique Delirium Bosses<br>Can only be used with Tier 11+ Maps"
+				},
+				"Delirium Scarab of Delusions": {
+					"text": "Maps found in Area have layers of Delirium"
+				},
+
+				"Blight Scarab": {
+					"text": "Area contains a Blight Encounter"
+				},
+				"Blight Scarab of the Blightheart": {
+					"text": "Blight Encounters in Area have one Blighted Chest<br>Blight Encounters in Area spawn many more waves of Enemies<br>Blighted Chests in Area grow larger and more rewarding the more Blighted Enemies are slain"
+				},
+				"Blight Scarab of Blooming": {
+					"text": "Blight Encounters in Area have up to 3 additional Unique Bosses<br>Unique enemies in Blight Encounters have 100% increased life<br>Tier 14+ Blighted Maps found in Area drop as Blight-Ravaged Maps instead"
+				},
+				"Blight Scarab of Invigoration": {
+					"text": "Each Empowering Tower in Areas grants Blighted Monsters in range increased Difficulty and Reward"
+				},
+
+				"Scarab of Adversaries": {
+					"text": "Area contains 4 additional Packs with Mirrored Rare Monsters"
+				},
+				"Scarab of Bisection": {
+					"text": "Allows you to select the Nullify Prefixes or Nullify Suffixes crafting options on the Map Device"
+				},
+				"Scarab of Divinity": {
+					"text": "Up to 2 additional Rare Monsters in Area will be Pantheon-Touched<br>Apparitions spawned by Pantheon-Touched Monsters deal 100% increased damage"
+				},
+				"Scarab of Hunted Traitors": {
+					"text": "Area contains Hunted Traitors"
+				},
+				"Scarab of Monstrous Lineage": {
+					"text": "40% increased Magic Pack Size"
+				},
+				"Scarab of Radiant Storms": {
+					"text": "Area contains a Resplendent Tempest"
+				},
+				"Scarab of Stability": {
+					"text": "Portals to Area have a 50% chance to not be consumed on use"
+				},
+				"Scarab of Wisps": {
+					"text": "Monsters in Area have a chance to be Empowered by 2000 Wildwood Wisps"
+				},
+
+				"Horned Scarab of Bloodlines": {
+					"text": "Area has 150% increased Magic Monsters"
+				},
+				"Horned Scarab of Nemeses": {
+					"text": "Rare Monsters in Area have 2 additional Modifiers"
+				},
+				"Horned Scarab of Preservation": {
+					"text": "Other Scarabs are not consumed on use"
+				},
+				"Horned Scarab of Awakening": {
+					"text": "You can select one Imbued crafting option on the Map Device"
+				},
+				"Horned Scarab of Tradition": {
+					"text": "All Rare and Unique Monsters in Area have dropped items transformed by a Reward Modifier"
+				},
+				"Horned Scarab of Glittering": {
+					"text": "Players in Area gain increased Item Rarity and Item Quantity for each Monster slain recently, up to 200% and 100% respectively"
+				},
+				"Horned Scarab of Pandemonium": {
+					"text": "Monster packs in Area have a 15% chance to be replaced by a random Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
+				},
+
+				"Titanic Scarab": {
+					"text": "Unique Monsters have 2% increased Toughness, Damage, Rarity and Quantity of items dropped per 1% increased Pack Size of Area"
+				},
+				"Titanic Scarab of Legend": {
+					"text": "Unique Monsters in Area have 2 additional Monster Modifiers"
+				},
+				"Titanic Scarab of Treasures": {
+					"text": "Unique Monsters in Area have 2 additional Rewards<br>Unique Monsters in Area have 30% increased Toughness"
+				}
+
+			}
+		},
+
+		"UniqueMap": {
+			"items": {
+				"Courtyard Map": {
+					"text": null,
+					"items": {
+						"The Vinktar Square": {
+							"text": "Does not drop. Created with a vendor recipe."
+						}
+					}
+				},
+				"Maze Map": {
+					"text": null,
+					"items": {
+						"Doryani's Machinarium": {
+							"text": "Drops from Ahuatotli."
+						}
+					}
+				}
+			}
+		},
+		"Uniques": {
+			"items": {
+				"Simple Robe": {
+					"//comment": "COMMENT: the text property below provides infos about a whole basetype",
+					"text": null,
+					"items": {
+						"Tabula Rasa": {
+							"//comment": "COMMENT: the text property below provides infos about an individual unique",
+							"text": "Appearance of Tabula is not affected by this. It is overridden in exceptions. Click the link for more information.",
+							"hideInHoverBox": false,
+							"ruleLink": {
+								"entryName": "Unique Exception: Tabula Rasa",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Elegant Round Shield": {
+					"text": null,
+					"items": {
+						"The Squire": {
+							"text": "Detected via a special rule (using the 3 white sockets)! The oppressor can be safely hidden in the unique tierlist.",
+							"ruleLink": {
+								"entryName": "Unique Exception: The Squire",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Maelström Staff": {
+					"text": null,
+					"items": {
+						"Duskdawn": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						},
+						"Disintegrator": {
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Cutlass": {
+					"text": null,
+					"items": {
+						"United in Dream": {
+							"text": "Drops from Chayula's Flawless Breachstone.",
+							"priority": -5
+						},
+						"Severed in Sleep": {
+							"text": "Drops from Chayula's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Sage Wand": {
+					"text": null,
+					"items": {
+						"Relic of the Pact": {
+							"text": "Drops from The Trialmaster.",
+							"priority": -5
+						}
+					}
+				},
+				"Assassin Bow": {
+					"text": null,
+					"items": {
+						"Arborix": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Vaal Axe": {
+					"text": null,
+					"items": {
+						"Atziri's Disfavour": {
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
+						},
+						"Uul-Netol's Embrace": {
+							"text": "Drops from Uul-Netol's Flawless Breachstone.",
+							"priority": -5
+						},
+						"Uul-Netol's Kiss": {
+							"text": "Drops from Uul-Netol's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Vaal Sceptre": {
+					"text": null,
+					"items": {
+						"Doryani's Catalyst": {
+							"text": "Drops from Atziri.",
+							"priority": -5
+						},
+						"Yaomac's Accord": {
+							"text": "Drops from The Trialmaster.",
+							"priority": -5
+						}
+					}
+				},
+				"Infernal Sword": {
+					"text": null,
+					"items": {
+						"Starforge": {
+							"text": "Overridden in Exceptions. Drops from The Uber Shaper.",
+							"ruleLink": {
+								"entryName": "Unique Shaper Sword",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Voidforge": {
+							"text": "Overridden in Exceptions. Drops from The Uber Elder.",
+							"ruleLink": {
+								"entryName": "Unique Shaper Sword",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Echoforge": {
+							"text": "Drops from The Maven.",
+							"priority": -5
+						}
+					}
+				},
+				"Judgement Staff": {
+					"text": null,
+					"items": {
+						"Pledge of Hands": {
+							"text": "Drops from Atziri.",
+							"priority": -5
+						},
+						"Atziri's Rule": {
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
+						}
+					}
+				},
+				"Gemstone Sword": {
+					"text": null,
+					"items": {
+						"Fate of the Vaal": {
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
+						},
+						"Story of the Vaal": {
+							"text": "Drops from the Crucible of Flame in the Temple of Atzoatl.",
+							"priority": -3
+						}
+					}
+				},
+				"Highborn Staff": {
+					"text": null,
+					"items": {
+						"Witchhunter's Judgment": {
+							"text": "Drops from Oshabi (Harvest Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Despot Axe": {
+					"text": null,
+					"items": {
+						"Kingmaker": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Legion Sword": {
+					"text": null,
+					"items": {
+						"The Rippling Thoughts": {
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
+						},
+						"The Surging Thoughts": {
+							"text": "Does not drop. Created by upgrading Rippling Thoughts via scroll.",
+							"priority": -10
+						},
+						"The Saviour": {
+							"text": "Drops from Uber Sirus.",
+							"priority": -5
+						}
+					}
+				},
+				"Imperial Claw": {
+					"text": null,
+					"items": {
+						"Hand of Wisdom and Action": {
+							"text": "Drops from Esh's Flawless Breachstone.",
+							"priority": -5
+						},
+						"Hand of Thought and Motion": {
+							"text": "Drops from Esh's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Vaal Rapier": {
+					"text": null,
+					"items": {
+						"Paradoxica": {
+							"text": "Drops from Intervention Safehouse members",
+							"priority": -3
+						}
+					}
+				},
+				"Elegant Sword": {
+					"text": null,
+					"items": {
+						"The Goddess Scorned": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Gavel": {
+					"text": null,
+					"items": {
+						"Cameria's Avarice": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Blood Sceptre": {
+					"text": null,
+					"items": {
+						"Cerberus Limb": {
+							"text": "Drops from Ahuatotli (Delve).",
+							"priority": -5
+						}
+					}
+				},
+				"Imperial Staff": {
+					"text": null,
+					"items": {
+						"The Enmity Divine": {
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
+						},
+						"The Yielding Mortality": {
+							"text": "Does not drop. Created by upgrading Enmity Divine via scroll.",
+							"priority": -10
+						}
+					}
+				},
+				"Ezomyte Staff": {
+					"text": null,
+					"items": {
+						"The Fulcrum": {
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
+						}
+					}
+				},
+				"Tornado Wand": {
+					"text": null,
+					"items": {
+						"Shimmeron": {
+							"text": "Drops from The Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Nightmare Mace": {
+					"text": null,
+					"items": {
+						"Nebuloch": {
+							"text": "Drops from The Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Steelwood Bow": {
+					"text": null,
+					"items": {
+						"The Crimson Storm": {
+							"text": "Drops from Fortification Safehouse members",
+							"priority": -3
+						}
+					}
+				},
+				"Coiled Staff": {
+					"text": null,
+					"items": {
+						"Xirgil's Crank": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
+						}
+					}
+				},
+				"Citadel Bow": {
+					"text": null,
+					"items": {
+						"The Gluttonous Tide": {
+							"text": "Drops from The Eater of Worlds.",
+							"priority": -5
+						},
+						"Xoph's Nurture": {
+							"text": "Drops from Xoph's Flawless Breachstone.",
+							"priority": -5
+						},
+						"Xoph's Inception": {
+							"text": "Drops from Xoph's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Hellion's Paw": {
+					"text": null,
+					"items": {
+						"Law of the Wilds": {
+							"text": "Drops from Oshabi (Harvest Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Ranger Bow": {
+					"text": null,
+					"items": {
+						"Hopeshredder": {
+							"text": "Drops from The Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Void Sceptre": {
+					"text": null,
+					"items": {
+						"Nebulis": {
+							"text": "Drops from Uber Cortex.",
+							"priority": -5
+						}
+					}
+				},
+				"Opal Wand": {
+					"text": null,
+					"items": {
+						"Tulfall": {
+							"text": "Drops from Tul's Flawless Breachstone.",
+							"priority": -5
+						},
+						"Tulborn": {
+							"text": "Drops from Tul's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Gladius": {
+					"text": null,
+					"items": {
+						"The Iron Mass": {
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
+						}
+					}
+				},
+				"Ambusher": {
+					"text": null,
+					"items": {
+						"The Hidden Blade": {
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
+						}
+					}
+				},
+				"Serpentine Staff": {
+					"text": null,
+					"items": {
+						"Cane of Kulemak": {
+							"text": "Drops from Catarina (Jun Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Quartz Flask": {
+					"text": null,
+					"items": {
+						"Soul Ripper": {
+							"text": "Does not drop. Created with a Vial (Alva Temple).",
+							"priority": -10
+						},
+						"Soul Catcher": {
+							"text": "Drops from The Vaal Omnitect (Alva Temple).",
+							"priority": -5
+						}
+					}
+				},
+				"Sulphur Flask": {
+					"text": null,
+					"items": {
+						"Bottled Faith": {
+							"text": "Drops from Cortex.",
+							"priority": -5
+						}
+					}
+				},
+				"Ruby Flask": {
+					"text": null,
+					"items": {
+						"Dying Sun": {
+							"text": "Drops from The Shaper.",
+							"priority": -5
+						},
+						"Coruscating Elixir": {
+							"text": "Does not drop. Obtained from a Divination Card set.",
+							"priority": -10
+						}
+					}
+				},
+				"Silver Flask": {
+					"text": null,
+					"items": {
+						"Cinderswallow Urn": {
+							"text": "Drops from Catarina (Jun Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Bismuth Flask": {
+					"text": null,
+					"items": {
+						"Oriath's End": {
+							"text": "Drops from Uber Sirus.",
+							"priority": -5
+						}
+					}
+				},
+				"Topaz Flask": {
+					"text": null,
+					"items": {
+						"Vessel of Vinktar": {
+							"text": "Drops from The Vinktar Square.",
+							"priority": -5
+						}
+					}
+				},
+				"Amethyst Flask": {
+					"text": null,
+					"items": {
+						"Atziri's Promise": {
+							"text": "Drops from Atziri.",
+							"priority": -5
+						},
+						"Progenesis": {
+							"text": "Drops from The Uber Maven.",
+							"priority": -5
+						}
+					}
+				},
+				"Golden Buckler": {
+					"text": null,
+					"items": {
+						"Atziri's Reflection": {
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
+						}
+					}
+				},
+				"Triumphant Lamellar": {
+					"text": null,
+					"items": {
+						"Farrul's Fur": {
+							"text": "Drops from Farrul (Einhar Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Sadist Garb": {
+					"text": null,
+					"items": {
+						"Doppelgänger Guise": {
+							"text": "Drops from The Maven.",
+							"priority": -5
+						}
+					}
+				},
+				"Vaal Gauntlets": {
+					"text": null,
+					"items": {
+						"Atziri's Acuity": {
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
+						}
+					}
+				},
+				"Steelscale Gauntlets": {
+					"text": null,
+					"items": {
+						"Tombfist": {
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
+						}
+					}
+				},
+				"Vaal Spirit Shield": {
+					"text": null,
+					"items": {
+						"Apep's Supremacy": {
+							"text": "Does not drop. Created with a Vial (Alva Temple).",
+							"priority": -10
+						},
+						"Apep's Slumber": {
+							"text": "Drops from the Cultivar Chamber in the Temple of Atzoatl.",
+							"priority": -3
+						},
+						"Esh's Visage": {
+							"text": "Drops from Esh's Flawless Breachstone.",
+							"priority": -5
+						},
+						"Esh's Mirror": {
+							"text": "Drops from Esh's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Blood Raiment": {
+					"text": null,
+					"items": {
+						"The Eternity Shroud": {
+							"text": "Drops from The Uber Uber Elder.",
+							"priority": -5
+						},
+						"Saqawal's Nest": {
+							"text": "Drops from Saqawal (Einhar Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Sacrificial Garb": {
+					"text": null,
+					"items": {
+						"Atziri's Splendour": {
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
+						}
+					}
+				},
+				"Murder Boots": {
+					"text": null,
+					"items": {
+						"Bubonic Trail": {
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
+						},
+						"Voidwalker": {
+							"text": "Drops from The Shaper.",
+							"priority": -5
+						}
+					}
+				},
+				"Carnal Armour": {
+					"text": null,
+					"items": {
+						"Shroud of the Lightless": {
+							"text": "Drops from Abyssal Depths.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Two Abyss Socket Uniques",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Stasis Prison": {
+							"text": "Drops from the Unrelenting Timeless Emblem.",
+							"priority": -5
+						}
+					}
+				},
+				"Sorcerer Boots": {
+					"text": null,
+					"items": {
+						"Doryani's Delusion": {
+							"text": "Drops in Doryani's Machinarium.",
+							"priority": -8
+						},
+						"Steppan Eard": {
+							"text": "Drops from Renegades Warband.",
+							"priority": -1
+						}
+					}
+				},
+				"Riveted Gloves": {
+					"text": null,
+					"items": {
+						"Command of the Pit": {
+							"text": "Drops from Kurgal (Delve Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Crusader Boots": {
+					"text": null,
+					"items": {
+						"Death's Door": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
+						}
+					}
+				},
+				"Legion Gloves": {
+					"text": null,
+					"items": {
+						"Offering to the Serpent": {
+							"text": "Drops from Cortex.",
+							"priority": -5
+						}
+					}
+				},
+				"Great Crown": {
+					"text": null,
+					"items": {
+						"Lightpoacher": {
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
+						},
+						"Forbidden Shako": {
+							"text": "Drops from Oshabi (Harvest Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Magistrate Crown": {
+					"text": null,
+					"items": {
+						"Crown of the Tyrant": {
+							"text": "Drops from Aul (Delve Boss).",
+							"priority": -5
+						},
+						"Mask of the Stitched Demon": {
+							"text": "Does not drop. Created with a Vial (Alva Temple).",
+							"priority": -10
+						},
+						"Mask of the Spirit Drinker": {
+							"text": "Drops from the Sanctum of Immortality in the Temple of Atzoatl.",
+							"priority": -3
+						},
+						"Mask of the Tribunal": {
+							"text": "Drops from Uber Cortex.",
+							"priority": -5
+						},
+						"Craiceann's Chitin": {
+							"text": "Drops from Craiceann (Einhar Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Callous Mask": {
+					"text": null,
+					"items": {
+						"The Tempest's Binding": {
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
+						},
+						"The Tempest's Liberation": {
+							"text": "Does not drop. Created by upgrading Tempest's Binding via scroll.",
+							"priority": -10
+						}
+					}
+				},
+				"Necromancer Circlet": {
+					"text": null,
+					"items": {
+						"The Devouring Diadem": {
+							"text": "Drops from Catarina (Jun Boss).",
+							"priority": -5
+						},
+						"Fenumus' Toxins": {
+							"text": "Drops from Fenumus (Einhar Boss).",
+							"priority": -5
+						},
+						"Sandstorm Visage": {
+							"text": "Drops from Lycia with corresponding relic equipped.",
+							"priority": -8
+						}
+					}
+				},
+				"Elegant Ringmail": {
+					"text": null,
+					"items": {
+						"Loreweave": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Ezomyte Tower Shield": {
+					"text": null,
+					"items": {
+						"The Surrender": {
+							"text": "Drops from Uul-Netol's Flawless Breachstone.",
+							"priority": -5
+						},
+						"The Anticipation": {
+							"text": "Drops from Uul-Netol's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Ambush Mitts": {
+					"text": null,
+					"items": {
+						"Slavedriver's Hand": {
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
+						},
+						"Architect's Hand": {
+							"text": "Drops from the Defense Research Lab in the Temple of Atzoatl.",
+							"priority": -3
+						},
+						"Abhorrent Interrogation": {
+							"text": "Drops from Oshabi (Harvest Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Widowsilk Robe": {
+					"text": null,
+					"items": {
+						"Fenumus' Shroud": {
+							"text": "Drops from Fenumus (Einhar Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Carnal Boots": {
+					"text": null,
+					"items": {
+						"Omeyocan": {
+							"text": "Does not drop. Created with a Vial (Alva Temple).",
+							"priority": -10
+						},
+						"Dance of the Offered": {
+							"text": "Drops from the Lightning Workshop in the Temple of Atzoatl.",
+							"priority": -3
+						}
+					}
+				},
+				"Hubris Circlet": {
+					"text": null,
+					"items": {
+						"Indigon": {
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Archon Kite Shield": {
+					"text": null,
+					"items": {
+						"Invictus Solaris": {
+							"text": "Drops from the Twilight Temple.",
+							"priority": -8
+						},
+						"Unyielding Flame": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
+						},
+						"Broken Faith": {
+							"text": "Drops from Renegades Warband.",
+							"priority": -1
+						},
+						"The Unshattered Will": {
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
+						},
+						"The Immortal Will": {
+							"text": "Does not drop. Created with a Scroll.",
+							"priority": -10
+						}
+					}
+				},
+				"Golden Plate": {
+					"text": null,
+					"items": {
+						"Craiceann's Carapace": {
+							"text": "Drops from Craiceann (Einhar Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Carnal Mitts": {
+					"text": null,
+					"items": {
+						"Fenumus' Weave": {
+							"text": "Drops from Fenumus (Einhar Boss).",
+							"priority": -5
+						},
+						"Soul Ascension": {
+							"text": "Drops from The Uber Uber Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Titan Greaves": {
+					"text": null,
+					"items": {
+						"The Red Trail": {
+							"text": "Drops from Uul-Netol's Flawless Breachstone.",
+							"priority": -5
+						},
+						"The Infinite Pursuit": {
+							"text": "Drops from Uul-Netol's Breach or Breachstone.",
+							"priority": -3
+						},
+						"Doryani's Delusion": {
+							"text": "Drops in Doryani's Machinarium.",
+							"priority": -8
+						}
+					}
+				},
+				"Vaal Mask": {
+					"text": null,
+					"items": {
+						"The Vertex": {
+							"text": "Drops from Uber Atziri.",
+							"priority": -5
+						}
+					}
+				},
+				"Tarnished Spirit Shield": {
+					"text": null,
+					"items": {
+						"Brinerot Flag": {
+							"text": "Drops from Brinerot Warband.",
+							"priority": -1
+						}
+					}
+				},
+				"Zodiac Leather": {
+					"text": null,
+					"items": {
+						"The Perfect Form": {
+							"text": "Drops from Tul's Flawless Breachstone.",
+							"priority": -5
+						},
+						"The Snowblind Grace": {
+							"text": "Drops from Tul's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Blunt Arrow Quiver": {
+					"text": null,
+					"items": {
+						"The Fracturing Spinner": {
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
+						},
+						"The Shattered Divinity": {
+							"text": "Does not drop. Created by upgrading Fracturing Spinner with a Scroll.",
+							"priority": -10
+						}
+					}
+				},
+				"Pinnacle Tower Shield": {
+					"text": null,
+					"items": {
+						"Magna Eclipsis": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Harlequin Mask": {
+					"text": null,
+					"items": {
+						"Farrul's Bite": {
+							"text": "Drops from Farrul (Einhar Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Prophet Crown": {
+					"text": null,
+					"items": {
+						"Crown of the Inward Eye": {
+							"text": "Drops from Sirus.",
+							"priority": -5
+						}
+					}
+				},
+				"Vaal Regalia": {
+					"text": null,
+					"items": {
+						"The Queen's Hunger": {
+							"text": "Drops from Catarina (Jun Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Savant's Robe": {
+					"text": null,
+					"items": {
+						"Cloak of Tawm'r Isley": {
+							"text": "Drops from Elreon's chest in a Syndicate Safehouse.",
+							"priority": -3
+						},
+						"Garb of the Ephemeral": {
+							"text": "Drops from Cortex.",
+							"priority": -5
+						}
+					}
+				},
+				"Assassin's Boots": {
+					"text": null,
+					"items": {
+						"Fenumus' Spinnerets": {
+							"text": "Drops from Fenumus (Einhar Boss).",
+							"priority": -5
+						},
+						"The Stampede": {
+							"text": "Drops in Blighted Maps.",
+							"priority": -5
+						}
+					}
+				},
+				"Varnished Coat": {
+					"text": null,
+					"items": {
+						"The Admiral": {
+							"text": "Drops from Admiral Darnaw (Unique Heist Contract Boss)",
+							"priority": -8
+						}
+					}
+				},
+				"Crusader Gloves": {
+					"text": null,
+					"items": {
+						"Shaper's Touch": {
+							"text": "Drops from The Shaper.",
+							"priority": -5
+						},
+						"Hands of the High Templar": {
+							"text": "Drops from Sirus.",
+							"priority": -5
+						}
+					}
+				},
+				"Ancient Gauntlets": {
+					"text": null,
+					"items": {
+						"Winds of Change": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
+						},
+						"Hateforge": {
+							"text": "Drops from The Trialmaster.",
+							"priority": -5
+						}
+					}
+				},
+				"Slink Boots": {
+					"text": null,
+					"items": {
+						"Farrul's Chase": {
+							"text": "Drops from Farrul (Einhar Boss).",
+							"priority": -5
+						},
+						"Doryani's Delusion": {
+							"text": "Drops in Doryani's Machinarium.",
+							"priority": -8
+						},
+						"Atziri's Step": {
+							"text": "Drops from Atziri.",
+							"priority": -5
+						}
+					}
+				},
+				"Hydrascale Gauntlets": {
+					"text": null,
+					"items": {
+						"Farrul's Pounce": {
+							"text": "Drops from Farrul (Einhar Boss).",
+							"priority": -5
+						},
+						"Breathstealer": {
+							"text": "Drops in Blighted Maps.",
+							"priority": -5
+						}
+					}
+				},
+				"Royal Burgonet": {
+					"text": null,
+					"items": {
+						"The Formless Inferno": {
+							"text": "Drops from Xoph's Flawless Breachstone.",
+							"priority": -5
+						},
+						"The Formless Flame": {
+							"text": "Drops from Xoph's Breach or Breachstone.",
+							"priority": -3
+						},
+						"Echoes of Creation": {
+							"text": "Drops from Uber Shaper.",
+							"priority": -5
+						}
+					}
+				},
+				"Zealot Gloves": {
+					"text": null,
+					"items": {
+						"Hand of the Fervent": {
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
+						}
+					}
+				},
+				"Cardinal Round Shield": {
+					"text": null,
+					"items": {
+						"Vix Lunaris": {
+							"text": "Drops from the Twilight Temple.",
+							"priority": -8
+						}
+					}
+				},
+				"Mind Cage": {
+					"text": null,
+					"items": {
+						"Hale Negator": {
+							"text": "Drops from Kurgal (Delve Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Goliath Greaves": {
+					"text": null,
+					"items": {
+						"Craiceann's Tracks": {
+							"text": "Drops from Craiceann (Einhar Boss).",
+							"priority": -5
+						},
+						"The Tempest Rising": {
+							"text": "Drops from Uber Sirus.",
+							"priority": -5
+						}
+					}
+				},
+				"Ezomyte Burgonet": {
+					"text": null,
+					"items": {
+						"Cowl of the Thermophile": {
+							"text": "Drops from Blighted Maps.",
+							"priority": -5
+						}
+					}
+				},
+				"Titanium Spirit Shield": {
+					"text": null,
+					"items": {
+						"Bitterbind Point": {
+							"text": "Drops from Catarina (Jun Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Silken Hood": {
+					"text": null,
+					"items": {
+						"Saqawal's Flock": {
+							"text": "Drops from Saqawal (Einhar Boss).",
+							"priority": -5
+						},
+						"Cowl of the Cryophile": {
+							"text": "Drops from Blighted Map.",
+							"priority": -5
+						}
+					}
+				},
+				"Praetor Crown": {
+					"text": null,
+					"items": {
+						"Viridi's Veil": {
+							"text": "Drops from The Uber Maven.",
+							"priority": -5
+						}
+					}
+				},
+				"Hydrascale Boots": {
+					"text": null,
+					"items": {
+						"Saqawal's Talons": {
+							"text": "Drops from Saqawal (Einhar Boss).",
+							"priority": -5
+						},
+						"Gamblesprint": {
+							"text": "Drops from the Ultimatum.",
+							"priority": -5
+						}
+					}
+				},
+				"Soldier Gloves": {
+					"text": null,
+					"items": {
+						"Saqawal's Winds": {
+							"text": "Drops from Saqawal (Einhar Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Titan Gauntlets": {
+					"text": null,
+					"items": {
+						"Craiceann's Pincers": {
+							"text": "Drops from Craiceann (Einhar Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Trapper Boots": {
+					"text": null,
+					"items": {
+						"Brinerot Whalers": {
+							"text": "Drops from Brinerot Warband.",
+							"priority": -1
+							
+						}
+					}
+				},
+				"Solaris Circlet": {
+					"text": null,
+					"items": {
+						"Cowl of the Ceraunophile": {
+							"text": "Drops from Blighted Map.",
+							"priority": -5
+						}
+					}
+				},
+				"Mirrored Spiked Shield": {
+					"text": null,
+					"items": {
+						"Font of Thunder": {
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
+						}
+					}
+				},
+				"Regicide Mask": {
+					"text": null,
+					"items": {
+						"Gorgon's Gaze": {
+							"text": "Drops from Pillars of Arun boss.",
+							"priority": -5
+						}
+					}
+				},
+				"Dragonscale Boots": {
+					"text": null,
+					"items": {
+						"Annihilation's Approach": {
+							"text": "Drops from The Uber Searing Exarch.",
+							"priority": -5
+						}
+					}
+				},
+				"Enameled Buckler": {
+					"text": null,
+					"items": {
+						"Mutewind Pennant": {
+							"text": "Drops from Mutewind Warband.",
+							"priority": -1
+						}
+					}
+				},
+				"Serpentscale Boots": {
+					"text": null,
+					"items": {
+						"Mutewind Whispersteps": {
+							"text": "Drops from Mutewind Warband.",
+							"priority": -1
+						}
+					}
+				},
+				"Broadhead Arrow Quiver": {
+					"text": null,
+					"items": {
+						"Steelworm": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
+						}
+					}
+				},
+				"Painted Tower Shield": {
+					"text": null,
+					"items": {
+						"Redblade Banner": {
+							"text": "Drops from Redblade Warband.",
+							"priority": -1
+						}
+					}
+				},
+				"Ancient Greaves": {
+					"text": null,
+					"items": {
+						"Redblade Tramplers": {
+							"text": "Drops from Redblade Warband.",
+							"priority": -1
+						}
+					}
+				},
+				"Assassin's Mitts": {
+					"text": null,
+					"items": {
+						"Blasphemer's Grasp": {
+							"text": "Drops from The Elder.",
+							"priority": -5
+						},
+						"Entropic Devastation": {
+							"text": "Drops from The Uber Shaper.",
+							"priority": -5
+						}
+					}
+				},
+				"Colossal Tower Shield": {
+					"text": null,
+					"items": {
+						"Dawnbreaker": {
+							"text": "Drops from The Searing Exarch.",
+							"priority": -5
+						}
+					}
+				},
+				"Sentinel Jacket": {
+					"text": null,
+					"items": {
+						"Expedition's End": {
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -5
+						}
+					}
+				},
+				"Bone Circlet": {
+					"text": null,
+					"items": {
+						"Plume of Pursuit": {
+							"text": "Drops from Janaar (Harvest Boss).",
+							"priority": -5
+						},
+						"Wraithlord": {
+							"text": "Overridden in exceptions. Drops from T17 Ziggurat Map boss.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Four Abyss Socket Uniques",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Chiming Spirit Shield": {
+					"text": null,
+					"items": {
+						"The Scales of Justice": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -3
+						}
+					}
+				},
+				"Shagreen Boots": {
+					"text": null,
+					"items": {
+						"Temptation Step": {
+							"text": "Drops from The Trialmaster.",
+							"priority": -5
+						}
+					}
+				},
+				"Lacquered Helmet": {
+					"text": null,
+					"items": {
+						"The Fledgling": {
+							"text": "Drops from Nashta (Unique Heist Contract Boss).",
+							"priority": -8
+						}
+					}
+				},
+				"Leather Belt": {
+					"text": null,
+					"items": {
+						"Hyperboreus": {
+							"text": "Drops from Transportation Safehouse members",
+							"priority": -3
+						},
+						"Cyclopean Coil": {
+							"text": "Drops from The Elder.",
+							"priority": -5
+						},
+						"Bear's Girdle": {
+							"text": "Drops from Ersi (Harvest Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Paua Amulet": {
+					"text": null,
+					"items": {
+						"Zerphi's Heart": {
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
+						},
+						"Sacrificial Heart": {
+							"text": "Drops from The Vaal Omnitect.",
+							"priority": -5
+						}
+					}
+				},
+				"Jade Amulet": {
+					"text": null,
+					"items": {
+						"The Pandemonius": {
+							"text": "Drops from Tul's Flawless Breachstone.",
+							"priority": -5
+						},
+						"The Halcyon": {
+							"text": "Drops from Tul's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Amber Amulet": {
+					"text": null,
+					"items": {
+						"Xoph's Blood": {
+							"text": "Drops from Xoph's Flawless Breachstone.",
+							"priority": -5
+						},
+						"Xoph's Heart": {
+							"text": "Drops from Xoph's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Onyx Amulet": {
+					"text": null,
+					"items": {
+						"Solstice Vigil": {
+							"text": "Drops from The Shaper.",
+							"priority": -5
+						},
+						"Presence of Chayula": {
+							"text": "Does not drop. Created with a Blessing of Chayula.",
+							"priority": -10
+						},
+						"Aul's Uprising": {
+							"text": "Drops from Aul (Delve Boss).",
+							"priority": -5
+						},
+						"Impresence": {
+							"text": "Drops from The Elder.",
+							"priority": -5
+						},
+						"Stranglegasp": {
+							"text": "Drops from Blight-ravaged map.",
+							"priority": -5
+						},
+						"Ashes of the Stars": {
+							"text": "Drops from The Uber Eater of Worlds.",
+							"priority": -5
+						},
+						"Crystallised Omniscience": {
+							"text": "Drops from The Uber Searing Exarch.",
+							"priority": -5
+						},
+						"The Eternal Struggle": {
+							"text": "Drops from The Black Star and from The Infinite Hunger.",
+							"priority": -5
+						},
+						"Leadership's Price": {
+							"text": "Drops from Contract: The Twins (Unique Heist Contact Boss).",
+							"priority": -8
+						},
+						"Yoke of Suffering": {
+							"text": "Drops from T17 Fortress Map boss.",
+							"priority": -3
+						}
+					}
+				},
+				"Topaz Ring": {
+					"text": null,
+					"items": {
+						"Putembo's Mountain": {
+							"text": "Drops from Aul (Delve Boss).",
+							"priority": -5
+						},
+						"Putembo's Meadow": {
+							"text": "Drops from Kurgal (Delve Boss).",
+							"priority": -5
+						},
+						"Putembo's Valley": {
+							"text": "Drops from Ahuatotli (Delve Boss).",
+							"priority": -5
+						},
+						"Precursor's Emblem": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						},
+						"Circle of Regret": {
+							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Synthesis Rings",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Nimis": {
+							"text": "Drops from The Uber Eater of Worlds.",
+							"priority": -5
+						}
+					}
+				},
+				"Prismatic Ring": {
+					"text": null,
+					"items": {
+						"Circle of Ambition": {
+							"text": "Overridden in exceptions. Drops from Uber Cortex.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Synthesis Rings",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"The Taming": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						},
+						"Precursor's Emblem": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Two-Stone Ring": {
+					"text": null,
+					"items": {
+						"Precursor's Emblem": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Ruby Ring": {
+					"text": null,
+					"items": {
+						"Precursor's Emblem": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						},
+						"Ahkeli's Meadow": {
+							"text": "Drops from Aul (Delve Boss).",
+							"priority": -5
+						},
+						"Ahkeli's Valley": {
+							"text": "Drops from Kurgal (Delve Boss).",
+							"priority": -5
+						},
+						"Ahkeli's Mountain": {
+							"text": "Drops from Ahuatotli (Delve Boss).",
+							"priority": -5
+						},
+						"Circle of Anguish": {
+							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Synthesis Rings",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Sapphire Ring": {
+					"text": null,
+					"items": {
+						"Precursor's Emblem": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						},
+						"Uzaza's Valley": {
+							"text": "Drops from Aul (Delve Boss).",
+							"priority": -5
+						},
+						"Uzaza's Mountain": {
+							"text": "Drops from Kurgal (Delve Boss).",
+							"priority": -5
+						},
+						"Uzaza's Meadow": {
+							"text": "Drops from Ahuatotli (Delve Boss).",
+							"priority": -5
+						},
+						"Circle of Fear": {
+							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Synthesis Rings",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Call of the Void": {
+							"text": "Drops from The Uber Uber Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Lapis Amulet": {
+					"text": null,
+					"items": {
+						"Choir of the Storm": {
+							"text": "Drops from Esh's Flawless Breachstone.",
+							"priority": -5
+						},
+						"Voice of the Storm": {
+							"text": "Drops from Esh's Breach or Breachstone.",
+							"priority": -3
+						}
+					}
+				},
+				"Unset Ring": {
+					"text": null,
+					"items": {
+						"The Pariah": {
+							"text": "Drops from Renegades Warband.",
+							"priority": -1
+						},
+						"Vivinsect": {
+							"text": "Drops from Research Safehouse members",
+							"priority": -3
+						},
+						"Brinerot Mark": {
+							"text": "Drops from Brinerot Warband.",
+							"priority": -1
+						},
+						"Redblade Band": {
+							"text": "Drops from Redblade Warband.",
+							"priority": -1
+						},
+						"Mutewind Seal": {
+							"text": "Drops from Mutewind Warband.",
+							"priority": -1
+						},
+						"Rotblood Promise": {
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
+						},
+						"Triumvirate Authority": {
+							"text": "Drops from Atziri and Uber Atziri.",
+							"priority": -5
+						}
+					}
+				},
+				"Chain Belt": {
+					"text": null,
+					"items": {
+						"Coward's Legacy": {
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
+						},
+						"Coward's Chains": {
+							"text": "Drops from the Hybridization Chamber in the Temple of Atzoatl.",
+							"priority": -3
+						},
+						"Chains of Emancipation": {
+							"text": "Drops from Friedrich Tarollo (Unique Heist Contact Boss).",
+							"priority": -8
+						}
+					}
+				},
+				"Heavy Belt": {
+					"text": null,
+					"items": {
+						"Doryani's Invitation": {
+							"text": "Drops from Atziri.",
+							"priority": -5
+						},
+						"Survivor's Guilt": {
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
+						}
+					}
+				},
+				"Opal Ring": {
+					"text": null,
+					"items": {
+						"Mark of the Shaper": {
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
+						},
+						"Polaric Devastation": {
+							"text": "Drops from The Black Star.",
+							"priority": -5
+						}
+					}
+				},
+				"Cloth Belt": {
+					"text": null,
+					"items": {
+						"The Flow Untethered": {
+							"text": "Does not drop. Created from Harbinger Pieces.",
+							"priority": -10
+						},
+						"The Torrent's Reclamation": {
+							"text": "Does not drop. Created by upgrading Flow Untethered with a Scroll.",
+							"priority": -10
+						},
+						"Arn's Anguish": {
+							"text": "Drops from The Maven.",
+							"priority": -5
+						},
+						"Olesya's Delight": {
+							"text": "Drops from The Maven.",
+							"priority": -5
+						},
+						"Graven's Secret": {
+							"text": "Drops from The Maven.",
+							"priority": -5
+						}
+					}
+				},
+				"Rustic Sash": {
+					"text": null,
+					"items": {
+						"The Retch": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Citrine Amulet": {
+					"text": null,
+					"items": {
+						"The Felbog Fang": {
+							"text": "Drops from Namharim (Harvest Boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Iron Ring": {
+					"text": null,
+					"items": {
+						"Circle of Guilt": {
+							"text": "Drops from a Distant Memory boss.",
+							"priority": -5
+						}
+					}
+				},
+				"Paua Ring": {
+					"text": null,
+					"items": {
+						"Fated End": {
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
+						}
+					}
+				},
+				"Steel Ring": {
+					"text": null,
+					"items": {
+						"Mark of the Elder": {
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Amethyst Ring": {
+					"text": null,
+					"items": {
+						"Circle of Nostalgia": {
+							"text": "Overridden in exceptions. Drops from a Distant Memory boss.",
+							"ruleLink": {
+								"entryName": "Unique Exception: Synthesis Rings",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Blackflame": {
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
+						},
+						"Original Sin": {
+							"text": "Drops from Lycia with corresponding relic equipped.",
+							"priority": -8
+						}
+					}
+				},
+				"Crystal Belt": {
+					"text": null,
+					"items": {
+						"The Burden of Truth": {
+							"text": "Drops from Sirus.",
+							"priority": -5
+						}
+					}
+				},
+				"Stygian Vise": {
+					"text": null,
+					"items": {
+						"Darkness Enthroned": {
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
+						}
+					}
+				},
+				"Steel Circlet": {
+					"text": null,
+					"items": {
+						"Sudden Dawn": {
+							"text": "Drops from The Black Star.",
+							"priority": -5
+						}
+					}
+				},
+				"Saint's Hauberk": {
+					"text": null,
+					"items": {
+						"Sporeguard": {
+							"text": "Drops from Blighted Map.",
+							"priority": -5
+						}
+					}
+				},
+				"Ezomyte Spiked Shield": {
+					"text": null,
+					"items": {
+						"Perepiteia": {
+							"text": "Drops from Cortex.",
+							"priority": -5
+						}
+					}
+				},
+				"Steel Kite Shield": {
+					"text": null,
+					"items": {
+						"Mahuxotl's Machination": {
+							"text": "Drops from The Trialmaster.",
+							"priority": -5
+						}
+					}
+				},
+				"Butcher Axe": {
+					"text": null,
+					"items": {
+						"Actum": {
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
+						}
+					}
+				},
+				"Fluted Bascinet": {
+					"text": null,
+					"items": {
+						"Crest of Desire": {
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
+						}
+					}
+				},
+				"Crimson Round Shield": {
+					"text": null,
+					"items": {
+						"Shattershard": {
+							"text": "Found in a Curio Display in Heist.",
+							"priority": -8
+						}
+					}
+				},
+				"Bone Helmet": {
+					"text": null,
+					"items": {
+						"Maw of Mischief": {
+							"text": "Does not drop. Obtained from a Divination Card set.",
+							"priority": -10
+						}
+					}
+				},
+				"Wyrmscale Boots": {
+					"text": null,
+					"items": {
+						"Legacy of Fury": {
+							"text": "Drops from The Maven.",
+							"priority": -5
+						}
+					}
+				},
+				"Sovereign Spiked Shield": {
+					"text": null,
+					"items": {
+						"Qotra's Regulator": {
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
+						}
+					}
+				},
+				"Iron Flask": {
+					"text": null,
+					"items": {
+						"Olroth's Resolve": {
+							"text": "Drops from Olroth (expedition boss).",
+							"priority": -5
+						},
+						"Starlight Chalice": {
+							"text": "Drops from Uthred (expedition boss).",
+							"priority": -5
+						},
+						"Vorana's Preparation": {
+							"text": "Drops from Vorana (expedition boss).",
+							"priority": -5
+						},
+						"Elixir of the Unbroken Circle": {
+							"text": "Drops from Medved (expedition boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Runic Crown": {
+					"text": null,
+					"items": {
+						"Cadigan's Crown": {
+							"text": "Drops from Olroth (expedition boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Runic Sabatons": {
+					"text": null,
+					"items": {
+						"Vorana's March": {
+							"text": "Drops from Olroth (expedition boss).",
+							"priority": -5
+						}
+					}
+				},
+				"Runic Sollerets": {
+					"text": null,
+					"items": {
+						"Olroth's Charge": {
+							"text": "Drops from Expedition.",
+							"priority": -3
+						}
+					}
+				},
+				"Runic Helm": {
+					"text": null,
+					"items": {
+						"Faithguard": {
+							"text": "Drops from Expedition.",
+							"priority": -3
+						}
+					}
+				},
+				"Runic Gages": {
+					"text": null,
+					"items": {
+						"Nightgrip": {
+							"text": "Drops from Expedition.",
+							"priority": -3
+						}
+					}
+				},
+				"Runic Gauntlets": {
+					"text": null,
+					"items": {
+						"Medved's Challenge": {
+							"text": "Drops from Expedition.",
+							"priority": -3
+						}
+					}
+				},
+				"Unset Amulet": {
+					"text": null,
+					"items": {
+						"Uul-Netol's Vow": {
+							"text": "Drops from Flawless Breachstone.",
+							"priority": -5
+						}
+					}
+				},
+				"Quarterstaff": {
+					"text": null,
+					"items": {
+						"The Annihilating Light": {
+							"text": "Drops from The Uber Searing Exarch.",
+							"priority": -5
+						}
+					}
+				},
+				"Primal Arrow Quiver": {
+					"text": null,
+					"items": {
+						"Voidfletcher": {
+							"text": "Drops from The Uber Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Two-Point Arrow Quiver": {
+					"text": null,
+					"items": {
+						"Asphyxia's Wrath": {
+							"text": "this is an alternate art version of the item and it cannot drop. if you see this something went wrong.",
+							"hideInHoverBox": true,
+							"priority": -100
+						}
+					}
+				},
+				"Fingerless Silk Gloves": {
+					"text": null,
+					"items": {
+						"Black Zenith": {
+							"text": "Drops from The Infinite Hunger.",
+							"priority": -5
+						}
+					}
+				},
+				"Spiked Gloves": {
+					"text": null,
+					"items": {
+						"Ceaseless Feast": {
+							"text": "Drops from The Infinite Hunger.",
+							"priority": -5
+						}
+					}
+				},
+				"Fugitive Boots": {
+					"text": null,
+					"items": {
+						"Inextricable Fate": {
+							"text": "Drops from The Eater of Worlds.",
+							"priority": -5
+						}
+					}
+				},
+				"Vaal Greaves": {
+					"text": null,
+					"items": {
+						"Dawnstrider": {
+							"text": "Drops from The Searing Exarch.",
+							"priority": -5
+						}
+					}
+				},
+				"Foul Staff": {
+					"text": null,
+					"items": {
+						"The Winds of Fate": {
+							"text": "Drops from Lycia with corresponding relic equipped.",
+							"priority": -8
+						}
+					}
+				},
+				"Agate Amulet": {
+					"text": null,
+					"items": {
+						"Eternal Damnation": {
+							"text": "Drops from Lycia with corresponding relic equipped.",
+							"priority": -8
+						}
+					}
+				},
+				"Coral Amulet": {
+					"text": null,
+					"items": {
+						"Ngamahu Tiki": {
+							"text": "this is an alternate art version of the item and it cannot drop. if you see this something went wrong.",
+							"hideInHoverBox": true,
+							"priority": -100
+						}
+					}
+				},
+				"Gold Ring": {
+					"text": null,
+					"items": {
+						"Ixchel's Temptation": {
+							"text": "Drops from the Ultimatum.",
+							"priority": -5
+						}
+					}
+				},
+				"Shadow Sceptre": {
+					"text": null,
+					"items": {
+						"The Dark Seer": {
+							"text": "Drops from T17 Sanctuary Map boss.",
+							"priority": -3
+						}
+					}
+				},
+				"Murder Mitts": {
+					"text": null,
+					"items": {
+						"Malachai's Mark": {
+							"text": "Drops from T17 Abomination Map boss.",
+							"priority": -3
+						}
+					}
+				},
+				"Lacewood Spirit Shield": {
+					"text": null,
+					"items": {
+						"Manastorm": {
+							"text": "Drops from T17 Citadel Map boss.",
+							"priority": -3
+						}
+					}
+				},
+				"Vanguard Belt": {
+					"text": null,
+					"items": {
+						"The Tides of Time": {
+							"text": "Drops from The Uber Shaper.",
+							"priority": -5
+						}
+					}
+				},
+				"Prophecy Wand": {
+					"text": null,
+					"items": {
+						"Grace of the Goddess": {
+							"text": "Drops from The Uber Maven.",
+							"priority": -5
+						}
+					}
+				},
+				"Pig-Faced Bascinet": {
+					"text": null,
+					"items": {
+						"The Devourer of Minds": {
+							"text": "Drops from The Uber Uber Elder.",
+							"priority": -5
+						}
+					}
+				},
+				"Cabalist Regalia": {
+					"text": null,
+					"items": {
+						"The Apostate": {
+							"text": "Drops from Uber Cortex.",
+							"priority": -5
+						}
+					}
+				},
+				"Zealot Helmet": {
+					"text": null,
+					"items": {
+						"Ravenous Passion": {
+							"text": "Drops from The Uber Eater of Worlds.",
+							"priority": -5
+						}
+					}
+				},
+				"Goliath Gauntlets": {
+					"text": null,
+					"items": {
+						"The Celestial Brace": {
+							"text": "Drops from The Uber Searing Exarch.",
+							"priority": -5
+						}
+					}
+				},
+				"Glorious Plate": {
+					"text": null,
+					"items": {
+						"Kaom's Heart": {
+							"text": "Overridden in exceptions",
+							"ruleLink": {
+								"entryName": "Unique Exception: Kaom's Heart",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						}
+					}
+				},
+				"Graceful Sword": {
+					"text": null,
+					"items": {
+						"Nametaker": {
+							"text": "Drops from monsters in the Azmeri Wildwood",
+							"priority": -3
+						}
+					}
+				},
+				"Maple Round Shield": {
+					"text": null,
+					"items": {
+						"The Flawed Refuge": {
+							"text": "Drops from monsters in the Azmeri Wildwood",
+							"priority": -3
+						}
+					}
+				},
+				"Visored Sallet": {
+					"text": null,
+					"items": {
+						"The Trickster's Smile": {
+							"text": "Drops from monsters in the Azmeri Wildwood",
+							"priority": -3
+						}
+					}
+				},
+				"Gold Amulet": {
+					"text": null,
+					"items": {
+						"The Untouched Soul": {
+							"text": "Drops from the King in the Mists",
+							"priority": -5
+						}
+					}
+				},
+				"Primordial Staff": {
+					"text": null,
+					"items": {
+						"The Burden of Shadows": {
+							"text": "Drops from the King in the Mists",
+							"priority": -5
+						}
+					}
+				},
+				"Colosseum Plate": {
+					"text": null,
+					"items": {
+						"Pragmatism": {
+							"text": "Drops from the King in the Mists",
+							"priority": -5
+						}
+					}
+				},
+				"Siege Helmet": {
+					"text": null,
+					"items": {
+						"Kaom's Command": {
+							"text": "Does not drop. Obtained from shipping resources to Ngakanu or Te Onui.",
+							"priority": -10
+						}
+					}
+				},
+				"Phantom Mace": {
+					"text": null,
+					"items": {
+						"Serle's Masterwork": {
+							"text": "Does not drop. Obtained from shipping resources to Riben Fell, Pondium, or Kalguur.",
+							"priority": -10
+						}
+					}
+				},
+				"Piledriver": {
+					"text": null,
+					"items": {
+						"Tawhoa's Felling": {
+							"text": "Does not drop. Obtained from shipping resources to Ngakanu or Te Onui.",
+							"priority": -10
+						}
+					}
+				},
+				"Studded Belt": {
+					"text": null,
+					"items": {
+						"Ynda's Stand": {
+							"text": "Does not drop. Obtained from shipping resources to Riben Fell, Pondium, or Kalguur.",
+							"priority": -10
+						}
+					}
+				},
+				"Nameless Ring": {
+					"text": "Sold in Ritual."
+				},
+				"Antique Gauntlets": {
+					"text": null,
+					"items": {
+						"Admiral's Arrogance": {
+							"text": "Drops from the Admiral Valerius",
+							"priority": -5
+						}
+					}
+				},
+				"Ezomyte Blade": {
+					"text": null,
+					"items": {
+						"The Living Blade": {
+							"text": "Drops from the Sasan",
+							"priority": -5
+						}
+					}
+				},
+				"Girded Tower Shield": {
+					"text": null,
+					"items": {
+						"Svalinn": {
+							"text": "Drops from the The Black Knight",
+							"priority": -5
+						}
+					}
+				},
+				"Prismatic Jewel": {
+					"text": null,
+					"items": {
+						"Emperor's Mastery": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
+						},
+						"Watcher's Eye": {
+							"text": "Drops from The Elder.",
+							"priority": -5
+						},
+						"Sublime Vision": {
+							"text": "Drops from The Uber Shaper or Uber Uber Elder.",
+							"priority": -5
+						},
+						"The Anima Stone": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Large Cluster Jewel": {
+					"text": "Drops from Simulacrum."
+				},
+				"Timeless Jewel": {
+					"text": "Drops from Domain of Timeless Conflict"
+				},
+				"Medium Cluster Jewel": {
+					"text": "Drops from Simulacrum."
+				},
+				"Small Cluster Jewel": {
+					"text": "Drops from Delirious Maps."
+				},
+				"Ghastly Eye Jewel": {
+					"text": null,
+					"items": {
+						"Amanamu's Gaze": {
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
+						}
+					}
+				},
+				"Hypnotic Eye Jewel": {
+					"text": null,
+					"items": {
+						"Kurgal's Gaze": {
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
+						}
+					}
+				},
+				"Searching Eye Jewel": {
+					"text": null,
+					"items": {
+						"Ulaman's Gaze": {
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
+						}
+					}
+				},
+				"Murderous Eye Jewel": {
+					"text": null,
+					"items": {
+						"Tecrod's Gaze": {
+							"text": "Drops from Abyssal Depths.",
+							"priority": -5
+						}
+					}
+				},
+				"Cobalt Jewel": {
+					"text": null,
+					"items": {
+						"Grand Spectrum": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
+						},
+						"Emperor's Wit": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
+						},
+						"Apex Mode": {
+							"text": "Drops from Contract: Breaking the Unbreakable.",
+							"priority": -8
+						},
+						"Nadir Mode": {
+							"text": "Drops from Contract: Breaking the Unbreakable.",
+							"priority": -8
+						},
+						"Melding of the Flesh": {
+							"text": "Drops from The Eater of Worlds.",
+							"priority": -5
+						},
+						"Primordial Harmony": {
+							"text": "Drops from Primeval Chamber in Delve.",
+							"priority": -5
+						},
+						"Rational Doctrine": {
+							"text": "Overridden in exceptions. Drops from Uber Cortex.",
+							"ruleLink": {
+								"entryName": "Synthesis Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Tempered Mind": {
+							"text": "Drops from The Vaal Omnitect.",
+							"priority": -5
+						},
+						"The Blue Dream": {
+							"text": "Drops from Chayula's Breach or Breachstone.",
+							"priority": -3
+						},
+						"The Blue Nightmare": {
+							"text": "Drops from Chayula's Flawless Breachstone.",
+							"priority": -5
+						},
+						"Transcendent Mind": {
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
+						},
+						"Brute Force Solution": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Energy From Within": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Fertile Mind": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Fevered Mind": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Fortress Covenant": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Healthy Mind": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Powerlessness": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Reckless Defence": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"To Dust": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Combat Focus": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						},
+						"Forbidden Flesh": {
+							"text": "Drops from The Eater of Worlds.",
+							"priority": -5
+						},
+						"The Balance of Terror": {
+							"text": "Drops from Lycia with corresponding relic equipped.",
+							"priority": -8
+						}
+					}
+				},
+				"Viridian Jewel": {
+					"text": null,
+					"items": {
+						"Grand Spectrum": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
+						},
+						"Emperor's Cunning": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
+						},
+						"Primordial Eminence": {
+							"text": "Drops from Primeval Chamber in Delve.",
+							"priority": -5
+						},
+						"Tempered Spirit": {
+							"text": "Drops from The Vaal Omnitect.",
+							"priority": -5
+						},
+						"Transcendent Spirit": {
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
+						},
+						"The Green Dream": {
+							"text": "Drops from Chayula's Breach or Breachstone.",
+							"priority": -3
+						},
+						"The Green Nightmare": {
+							"text": "Drops from Chayula's Flawless Breachstone.",
+							"priority": -5
+						},
+						"Careful Planning": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Chill of Corruption": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Fluid Motion": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Hidden Potential": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Pacifism": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Quickening Covenant": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Seething Fury": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Self-Flagellation": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"The Golden Rule": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Combat Focus": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						},
+						"Impossible Escape": {
+							"text": "Drops from The Uber Maven.",
+							"priority": -5
+						}
+					}
+				},
+				"Crimson Jewel": {
+					"text": null,
+					"items": {
+						"Grand Spectrum": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
+						},
+						"Emperor's Might": {
+							"text": "Drops from The Lord's Labyrinth.",
+							"priority": -5
+						},
+						"Dissolution of the Flesh": {
+							"text": "Drops from The Searing Exarch.",
+							"priority": -5
+						},
+						"Primordial Might": {
+							"text": "Drops from Primeval Chamber in Delve.",
+							"priority": -5
+						},
+						"Split Personality": {
+							"text": "Drops from Simulacrum.",
+							"priority": -5
+						},
+						"Thread of Hope": {
+							"text": "Drops from Sirus.",
+							"priority": -5
+						},
+						"Tempered Flesh": {
+							"text": "Drops from The Vaal Omnitect.",
+							"priority": -5
+						},
+						"The Red Nightmare": {
+							"text": "Drops from Chayula's Flawless Breachstone.",
+							"priority": -5
+						},
+						"The Red Dream": {
+							"text": "Drops from Chayula's Breach or Breachstone.",
+							"priority": -3
+						},
+						"Transcendent Flesh": {
+							"text": "Does not drop. Created with a Vial.",
+							"priority": -10
+						},
+						"Combat Focus": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						},
+						"Atziri's Reign": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Efficient Training": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Energised Armour": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Fragility": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Inertia": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Rain of Splinters": {
+							"text": "Overridden in Exceptions. Only Drops Corrupted.",
+							"ruleLink": {
+								"entryName": "Corrupted Unique Jewels",
+								"text": "Link to exception rule"
+							},
+							"priority": -9
+						},
+						"Forbidden Flame": {
+							"text": "Drops from The Searing Exarch.",
+							"priority": -5
+						},
+						"The Adorned": {
+							"text": "Created with a recipe or drops from unique vaal side area.",
+							"priority": -8
+						}
+					}
+				},
+				"Candlestick Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Second Sacrament": {
+							"text": "Lycia drops the Winds of Fate."
+						}
+					}
+				},
+				"Censer Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Blood of Innocence": {
+							"text": "Lycia drops the Balance of Terror."
+						},
+						"The Hour of Divinity": {
+							"text": "Duplicates up to 2 random Offer Rewards"
+						}
+					}
+				},
+				"Coffer Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The First Crest": {
+							"text": "Aureus Coins are converted to Experience/Relics/Tainted Currency"
+						}
+					}
+				},
+				"Papyrus Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Original Scripture": {
+							"text": "Lycia drops the Original Sin"
+						}
+					}
+				},
+				"Processional Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Chains of Castigation": {
+							"text": "Lycia drops Sandstorm Visage"
+						},
+						"The Gilded Chalice": {
+							"text": "Duplicates up to 4 random Offer Rewards"
+						}
+					}
+				},
+				"Tome Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Broken Censer": {
+							"text": "Lycia drops 2 additional Forbidden Tomes"
+						},
+						"The Power and the Promise": {
+							"text": "Lycia drops Eternal Damnation"
+						}
+					}
+				},
+				"Urn Relic": {
+					"text": "Drops from Lycia",
+					"items": {
+						"The Night Lamp": {
+							"text": "Lycia drops an additional Forbidden Tome"
+						}
+					}
+				}
+			}
+		}
+	}
+}
