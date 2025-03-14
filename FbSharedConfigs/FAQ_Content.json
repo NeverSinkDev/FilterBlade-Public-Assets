@@ -51,7 +51,7 @@
     },
     {
       "question": "How can I import a filter from the PoE ladder to FilterBlade if I only have/follow it in PoE?",
-      "answer": "Importing someone else's filter: if follow a filter on PoE, you can go to their <a target='_blank' href='/Profile'>Profile</a> page and check if they have their filter saved publicly on FilterBlade (the profile name is cAsE SeNSiTiVe!). If it's private you may try asking them. Otherwise, you're out of luck.<br><br>Importing your own filter or a .filter file: It's <b>NOT</b> possible to import a .filter file into FilterBlade (or import a filter from your PoE account), as it's missing crucial information about what was changed to enable updating/editing. Imagine it like trying to get raw eggs from a finished cake.",
+      "answer": "Importing someone else's filter: if follow a filter on PoE, you can go to their <a target='_blank' href='/Profile'>Profile</a> page and check if they have their filter saved publicly on FilterBlade (include the '#1234' discriminator at the end of the username!). If it's private you may try asking them. Otherwise, you're out of luck.<br><br>Importing your own filter or a .filter file: It's <b>NOT</b> possible to import a .filter file into FilterBlade (or import a filter from your PoE account), as it's missing crucial information about what was changed to enable updating/editing. Imagine it like trying to get raw eggs from a finished cake.",
       "tags": "upload create re-create import paste from ingame poe game re-import lost find gone use into from someone else streamer ladder other people streamer adjustments edit from other people someone else else's their his her"
     },
     {
