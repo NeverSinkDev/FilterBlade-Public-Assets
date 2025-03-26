@@ -202,7 +202,7 @@ Chapter("chapter") {
             ElementAdder_Tier("?RunesNewTiersHidden", null, true, "C:Socketable;B: Rune", "OH");
 
             Description("Prevents cheaper runes from being hidden during campaign:");
-            QuickUI([0.0, "Tier3+Tier4 during campaign", "sockets->runes;levelingrunes"], "SH", []);
+            QuickUI([0.0, "Tier3+Tier4 during campaign", "sockets->runes;levelingrunes"], "SHD", []);
         }
 
         Section("Soul Cores") {
