@@ -240,6 +240,11 @@
       "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file"
     },
     {
+      "question": "Why isn't my Patreon subscription not recognized?",
+      "answer": "If you buy a membership and then 'cancel' it (i.e. stop the auto-renewal) before linking your Patreon account on FilterBlade, it will not recognize you as a paying member. Re-Enable the auto-renewal for a moment and try linking your Patreon account on FilterBlade again.",
+      "tags": "autoUpdate auto update paying money payment issue cancellation stop login authorize enable feature claim slot activate"
+    },
+    {
       "question": "Does the Sync feature auto-update?",
       "answer": "Not by default. Poe-synced filters stay the same, until you upload a new version from filterblade. As with normal filters, it's recommended to do it once a week if you play actively. We offer a premium auto-updater, which does this for you, but it'll cost you a few bucks a month. More infos here: https://www.youtube.com/watch?v=i8RJx0s0zsA ",
       "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file"
