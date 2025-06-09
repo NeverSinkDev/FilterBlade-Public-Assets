@@ -192,8 +192,12 @@
 					"tags": ["Heist", "BossDrop"]
 				},
 
-				"Veiled Orb": {
-					"text": "Drops from Catarina<br>Removes a random modifier and adds a random veiled modifier to a rare item.",
+				"Veiled Exalted Orb": {
+					"text": "Drops from Catarina<br>Removes a random modifier and adds a random Veiled modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Veiled Chaos Orb": {
+					"text": "Drops from Safehouse Leaders<br>Reforges a rare item with new random modifiers including a random Veiled modifier",
 					"tags": ["BossDrop"]
 				},
 
@@ -489,30 +493,6 @@
 					"text": "A stack of 20 shards becomes an Orb of Transmutation",
 					"tags": ["Harbinger", "LeagueDrop"]
 				},
-				"Deregulation Scroll": {
-					"text": "Used to upgrade The Tempest's Binding to The Tempest's Liberation. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"] 
-					},
-				"Electroshock Scroll": {
-					"text": "Used to upgrade The Rippling Thoughts to The Surging Thoughts. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"]  
-					},
-				"Fragmentation Scroll": {
-					"text": "Used to upgrade The Fracturing Spinner to The Shattered Divinity. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"]  
-					},
-				"Haemocombustion Scroll": {
-					"text": "Used to upgrade The Enmity Divine to The Yielding Mortality. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"] 
-					},
-				"Specularity Scroll": {
-					"text": "Used to upgrade The Unshattered Will to The Immortal Will. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"]  
-					},
-				"Time-light Scroll": {
-					"text": "Used to upgrade The Flow Untethered to The Torrent's Reclamation. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"]  
-				},
 
 				"Awakener's Orb": {
 					"text": "Drops from Sirus<br>Destroys an item, applying its influence to another of the same item class. The second item is reforged as a rare item with both influence types and new modifiers",
@@ -520,6 +500,18 @@
 				},
 				"Orb of Dominance": {
 					"text": "Drops from Sirus, Shaper and Elder<br>Removes one Influenced Modifier from an item with at least two Influenced Modifiers and upgrades another Influenced Modifier",
+					"tags": ["BossDrop"]
+				},
+				"Orb of Remembrance": {
+					"text": "Randomises the number of Memory Strands on a normal equiment itemr",
+					"tags": ["BossDrop"]
+				},
+				"Orb of Unravelling": {
+					"text": "Consumes all Memory Strands on an item to attempt to upgrade the tier of explicit modifiers based on the number of Memoty Strands consumed",
+					"tags": ["BossDrop"]
+				},
+				"Orb of Intention": {
+					"text": "Modifies a Memory Influenced Map, causing items found to have more Memory Strands, but fewer items drop",
 					"tags": ["BossDrop"]
 				},
 				"Hunter's Exalted Orb": {
@@ -538,6 +530,14 @@
 					"text": "Drops from Baran, The Crusader<br>Adds Crusader influence and a new Crusader modifier to a rare item",
 					"tags": ["BossDrop"]
 				},
+				"Shaper's Exalted Orb": {
+					"text": "Adds Shaper influence and a new Shaper modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Elder's Exalted Orb": {
+					"text": "Adds Elder influence and a new Elder modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
 				"Orb of Conflict": {
 					"text": "Drops from Maven or in Maven's Crucible<br>Unpredictably raise the strength of one Searing Exarch or Eater of Worlds modifier on an item and lower the strength of another",
 					"tags": ["BossDrop"]
@@ -545,6 +545,10 @@
 
 				"Mirror of Kalandra": {
 					"text": "Creates a mirrored copy of an item",
+					"tags": ["Generic"]
+				},
+				"Hinekora's Lock": {
+					"text": "Allows an item to foresee the result of the next Currency item used on it. Modifying the item in any way removes the ability to foresee",
 					"tags": ["Generic"]
 				},
 				"Sacred Orb": {
@@ -689,9 +693,6 @@
 					"text": "Adds stored experience to a gem, up to its maximum level",
 					"tags": ["NonDrop"]
 				},
-				"Infused Engineer's Orb": {
-					"tags": ["NonDrop"]
-				},
 
 				"Eternal Orb": {
 					"text": "Creates an imprint of an item for later restoration. The imprint can't be applied to Fractured Items",
@@ -721,7 +722,25 @@
 				"Reflecting Mist": {
 					"text": "Unpredictably reflects a rare amulet or ring, breaking it into two mirrored halves with reflected modifiers",
 					"tags": ["LeagueDrop"]
+				},
+
+				"Valdo's Puzzle Box": {
+					"text": "Contains a Mysterious Map with a Foil Unique Reward",
+					"tags": ["Generic"]
+				},
+				"Ritual Splinter": {
+					"text": "Combine 100 Splinters to create a Ritual Vessel",
+					"tags": ["LeagueDrop"]
+				},
+				"Ritual Vessel": {
+					"text": "Stores the monsters slain for the first time from a completed Ritual Altar for future use",
+					"tags": ["LeagueDrop"]
+				},
+				"Crescent Splinter": {
+					"text": "Combine 10 Crescent Splinters to create The Maven's Writ",
+					"tags": ["BossDrop"]
 				}
+				
 			}
 		},
 
@@ -2196,7 +2215,25 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"Avian Pursuit": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Bargain": {
 					"tags": ["MapOutcome"]
+				},
+				"The Mayor": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Monochrome": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Sambodhi's Wisdom": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Squandered Prosperity": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Underground Forest": {
+					"tags": ["CurrencyOutcome"]
 				}
 			}
 		},
@@ -2223,118 +2260,130 @@
 				},
 				"Mortal Ignorance": {
 					"text": "Bottom left Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
-					},
+				},
 				"Mortal Hope": {
 					"text": "Bottom right Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
-					},
+				},
 				"Divine Vessel": {
 					"text": "Used in the map device to make the map boss more powerful, and if they are killed, it also captures their soul to unlock additional bonuses on The Pantheon."
-					},
+				},
 				"Sacrifice at Dusk": {
 					"text": "Top left Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
-					},
+				},
 				"Sacrifice at Midnight": {
 					"text": "Top right Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
-					},
+				},
 				"Sacrifice at Dawn": {
 					"text": "Bottom right Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
-					},
+				},
 				"Sacrifice at Noon": {
 					"text": "Bottom left Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
-					},
+				},
 				"Sacred Blossom": {
 					"text": "Used by itself in the map device it will grant access to The Sacred Grove to fight Oshabi. Chance to drop from T4 Harvest monsters (Janaar, the Omen, Namharim, Born of Night, and Ersi, Mother of Thorns)."
-					},
+				},
 				"The Maven's Writ": {
 					"text": "Used by itself in the map device it will grant access to The Mavens Crucible to fight The Maven herself."
-					},
+				},
 				"Al-Hezmin's Crest": {
 					"text": "Guaranteed to drop upon killing Al-Hezmin, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-					},
+				},
 				"Baran's Crest": {
 					"text": "Guaranteed to drop upon killing Baran, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-					},
+				},
 				"Drox's Crest": {
 					"text": "Guaranteed to drop upon killing Drox, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-					},
+				},
 				"Veritania's Crest": {
 					"text": "Guaranteed to drop upon killing Veritania, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-					},
+				},
 				"Fragment of Constriction": {
 					"text": "Guaranteed to drop upon killing The Constrictor, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-					},
+				},
 				"Fragment of Enslavement": {
 					"text": "Guaranteed to drop upon killing The Enslaver, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-					},
+				},
 				"Fragment of Eradication": {
 					"text": "Guaranteed to drop upon killing The Eradicator, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-					},
+				},
 				"Fragment of Purification": {
 					"text": "Guaranteed to drop upon killing The Purifier, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-					},
+				},
 				"Fragment of Shape": {
 					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper"
-					},
+				},
 				"Fragment of Terror": {
 					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder"
-					},
+				},
 				"Fragment of Knowledge": {
 					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper"
-					},
+				},
 				"Fragment of Emptiness": {
 					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder"
-					},
+				},
 				"Simulacrum": {
 					"text": "Placed into a map device it opens up 6 portals to a 30 wave fight. Increasing in difficulty with each wave. Aquired by combining 300 Simulacrum Splinters"
-					},
+				},
 				"Timeless Templar Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Templar Splinters"
-					},
+				},
 				"Unrelenting Timeless Eternal Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-					},
+				},
 				"Unrelenting Timeless Karui Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-					},
+				},
 				"Unrelenting Timeless Maraketh Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-					},
+				},
 				"Unrelenting Timeless Templar Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-					},
+				},
 				"Unrelenting Timeless Vaal Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-					},
+				},
 				"Blood-filled Vessel": {
 					"text": "When used a map in the Map Device, it adds a Ritual encounter to the instance, while also adding the stored monsters to the Ritual."
-					},
+				},
 				"Fragment of the Chimera": {
 					"text": "Guaranteed drop when killing Guardian of the Chimera, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
-					},
+				},
 				"Fragment of the Phoenix": {
 					"text": "Guaranteed drop when killing Guardian of the Hydra, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
-					},
+				},
 				"Fragment of the Hydra": {
 					"text": "Guaranteed drop when killing Guardian of the Hydra, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
-					},
+				},
 				"Fragment of the Minotaur": {
 					"text": "Guaranteed drop when killing Guardian of the Minotaur, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
-					},
+				},
 				"Offering to the Goddess": {
 					"text": "Used as payment to enter The Eternal Labyrinth."
-					},
+				},
 				"Timeless Eternal Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Eternal Splinters"
-					},
+				},
 				"Timeless Karui Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Karui Splinters"
-					},
+				},
 				"Timeless Vaal Emblem": {
 					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Vaal Splinters"
-					},
+				},
 				"An Audience With The King": {
 					"text": "Grants access to the King in the Mists boss fight"
-					}
+				},
+				"Syndicate Medallion": {
+					"text": "Open a portal to the Mastermind's Lair by using this item in a personal Map Device."
+				},
+				"Echo of Loneliness": {
+					"text": "Open portals to the Moment of Loneliness by using this item in a personal Map Device"
+				},
+				"Echo of Trauma": {
+					"text": "Open portals to the Moment of Trauma by using this item in a personal Map Device"
+				},
+				"Echo of Reverence": {
+					"text": "Open portals to the Moment of Reverence by using this item in a personal Map Device"
+				}
 			}
 		},
 
@@ -2350,7 +2399,7 @@
 					"text": "Breach Monsters in Area drop 50% more Breach Splinters<br>Clasped Hands in Area drop 50% more Breach Splinters"
 				},
 				"Breach Scarab of Snares": {
-					"text": "Breaches in Area have 5 to 10 additional Clasped Hands<br>Clasped Hands in Area are guarded by a rare Breach Monster"
+					"text": "Breaches in Area have 3 to 5 additional Clasped Hands<br>Clasped Hands in Area are guarded by a rare Breach Monster"
 				},
 				"Breach Scarab of Resonant Cascade": {
 					"text": "Breaches in Areas open and close 10% faster for each Breach already opened<br>Monsters from Breaches in Areas have increased Difficulty and Reward foreach Breach already opened"
@@ -2366,7 +2415,7 @@
 					"text": "Non-Unique Maps found in Area are Corrupted with 8 Modifiers"
 				},
 				"Cartography Scarab of Risk": {
-					"text": "Area has an additional random Modifier"
+					"text": "Area has 2 additional random Modifiers"
 				},
 
 				"Bestiary Scarab": {
@@ -2403,7 +2452,7 @@
 					"text": "Divination Cards which drop in Area are stolen by a Final Map Boss<br>That Final Map Boss has increased Toughness and deals increased Damage the more Divination Cards they have stolen<br>That Final Map Boss duplicates all stolen Divination Cards when defeated"
 				},
 				"Divination Scarab of Plenty": {
-					"text": "Up to 3 Packs of Magic Monsters in Area have 800% increased chance to drop Divination Cards"
+					"text": "Up to 6 to 10 Packs of Magic Monsters in Area have 1000% increased chance to drop Divination Cards"
 				},
 				"Divination Scarab of The Cloister": {
 					"text": "Area contains 8 to 12 additional packs of Doedre's Devoted<br>Doedre's Devoted have 1% additional chance to drop a Stacked Deck"
@@ -2420,7 +2469,7 @@
 				},
 
 				"Ambush Scarab": {
-					"text": "Area contains 5 additional Strongboxes"
+					"text": "Area contains 3 additional Strongboxes"
 				},
 				"Ambush Scarab of Hidden Compartments": {
 					"text": "15% Chance for Strongboxes in Area to be openable again"
@@ -2455,7 +2504,7 @@
 					"text": "Expedition Encounters in Area have 100% increased number of Runic Monster Markers"
 				},
 				"Expedition Scarab of Verisium Powder": {
-					"text": "Expedition Encounters in Area have 20% increased number of Explosives<br>80% increased Explosive Radius"
+					"text": "Expedition Encounters in Area have 50% increased number of Explosives<br>80% increased Explosive Radius"
 				},
 				"Expedition Scarab of Archaeology": {
 					"text": "Remnants in Expedition Encounters in Area have 2 additional Suffixes and Prefixes"
@@ -2530,7 +2579,7 @@
 					"text": "Rerolling Favours at Ritual Altars in Area has no cost the first 2 times<br>Ritual Altars in Area allow rerolling Favours 1 additional time"
 				},
 				"Ritual Scarab of Wisps": {
-					"text": "Ritual Altars in Area spawn a Wildwood Wisp<br>Wildwood Wisps grant 70% increased Tribute Gained to nearby Players"
+					"text": "Ritual Altars in Area spawn a Wildwood Wisp<br>Wildwood Wisps grant 100% increased Tribute Gained to nearby Players"
 				},
 				"Ritual Scarab of Abundance": {
 					"text": "Rituals in Area offer 100% increased Favours"
@@ -2562,8 +2611,8 @@
 				"Betrayal Scarab": {
 					"text": "Area contains Jun"
 				},
-				"Betrayal Scarab of Intelligence": {
-					"text": "150% Increased Intelligence gained from Immortal Syndicate targets encountered in Area"
+				"Betrayal Scarab of the Allflame": {
+					"text": "75% Increased number of Monster Packs Substituted by Allflame Embers in Area"
 				},
 				"Betrayal Scarab of Reinforcements": {
 					"text": "Immortal Syndicate Members in Area have 50% increased chance to be accompanied by reinforcements"
@@ -2573,7 +2622,7 @@
 					"text": "Slaying enemies close together in Area can attract monsters from Beyond this realm"
 				},
 				"Beyond Scarab of Haemophilia": {
-					"text": "Beyond Portals in Area have 30% increased Merging Radius"
+					"text": "Beyond Portals in Area have 50% increased Merging Radius"
 				},
 				"Beyond Scarab of Resurgence": {
 					"text": "Beyond Bosses in Area are enraged on low life<br>Beyond Bosses in Area drop 100% increased Tainted Currency<br>Beyond Portals in Area have 30% increased chance to spawn a Unique Boss"
@@ -2668,21 +2717,32 @@
 					"text": "All Rare and Unique Monsters in Area have dropped items transformed by a Reward Modifier"
 				},
 				"Horned Scarab of Glittering": {
-					"text": "Players in Area gain increased Item Rarity and Item Quantity for each Monster slain recently, up to 200% and 100% respectively"
+					"text": "Players in Area gain increased Item Rarity and Item Quantity for each Monster slain recently, up to 200% and 50% respectively"
 				},
 				"Horned Scarab of Pandemonium": {
 					"text": "Monster packs in Area have a 15% chance to be replaced by a random Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
 				},
 
 				"Titanic Scarab": {
-					"text": "Unique Monsters have 2% increased Toughness, Damage, Rarity and Quantity of items dropped per 1% increased Pack Size of Area"
+					"text": "Unique Monsters have 1% increased Toughness, Damage, Rarity and Quantity of items dropped per 1% increased Pack Size of Area"
 				},
 				"Titanic Scarab of Legend": {
 					"text": "Unique Monsters in Area have 2 additional Monster Modifiers"
 				},
 				"Titanic Scarab of Treasures": {
-					"text": "Unique Monsters in Area have 2 additional Rewards<br>Unique Monsters in Area have 30% increased Toughness"
+					"text": "Unique Monsters in Area have an additional Reward<br>Unique Monsters in Area have 30% increased Toughness"
+				},
+
+				"Kalguuran Scarab of Abundance": {
+					"text": "Area contains an additional Ore Deposit"
+				},
+				"Kalguuran Scarab of Guarded Riches": {
+					"text": "Monsters guarded Ore Deposits in Area are at least Magic"
+				},
+				"Kalguuran Scarab of Refinement": {
+					"text": "Ore Deposits in Area grant Smelted Bars instead of Marking Ore"
 				}
+
 
 			}
 		},
@@ -4899,6 +4959,15 @@
 						"Svalinn": {
 							"text": "Drops from the The Black Knight",
 							"priority": -5
+						}
+					}
+				},
+				"Slink Gloves": {
+					"text": null,
+					"items": {
+						"Mercenary's Lot": {
+							"text": "Found equipped to certain Mercenaries",
+							"priority": -8
 						}
 					}
 				},
