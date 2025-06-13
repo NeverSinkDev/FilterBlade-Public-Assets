@@ -2527,7 +2527,7 @@
 					"text": "Area contains an additional Abyss"
 				},
 				"Abyss Scarab of Multitudes": {
-					"text": "Abysses in Area spawn 75% increased Monsters"
+					"text": "Abysses in Area spawn 50% increased Monsters"
 				},
 				"Abyss Scarab of Edifice": {
 					"text": "Abysses in Area that do not lead to an Abyssal Depths lead to a Stygian Spire<br>Abysses in Area spawn Hoards as they travel"
@@ -2717,7 +2717,7 @@
 					"text": "All Rare and Unique Monsters in Area have dropped items transformed by a Reward Modifier"
 				},
 				"Horned Scarab of Glittering": {
-					"text": "Players in Area gain increased Item Rarity and Item Quantity for each Monster slain recently, up to 200% and 50% respectively"
+					"text": "Players in Area gain increased Item Rarity for each Monster slain recently, up to 400%"
 				},
 				"Horned Scarab of Pandemonium": {
 					"text": "Monster packs in Area have a 15% chance to be replaced by a random Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
