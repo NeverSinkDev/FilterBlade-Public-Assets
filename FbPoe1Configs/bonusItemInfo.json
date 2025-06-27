@@ -503,15 +503,15 @@
 					"tags": ["BossDrop"]
 				},
 				"Orb of Remembrance": {
-					"text": "Randomises the number of Memory Strands on a normal equiment itemr",
+					"text": "Drops from the Incarnation of Neglect<br>Randomises the number of Memory Strands on a normal equiment itemr",
 					"tags": ["BossDrop"]
 				},
 				"Orb of Unravelling": {
-					"text": "Consumes all Memory Strands on an item to attempt to upgrade the tier of explicit modifiers based on the number of Memoty Strands consumed",
+					"text": "Drops from the Incarnation of Dread<br>Consumes all Memory Strands on an item to attempt to upgrade the tier of explicit modifiers based on the number of Memoty Strands consumed",
 					"tags": ["BossDrop"]
 				},
 				"Orb of Intention": {
-					"text": "Modifies a Memory Influenced Map, causing items found to have more Memory Strands, but fewer items drop",
+					"text": "Drops from the Incarnation of Fear<br>Modifies a Memory Influenced Map, causing items found to have more Memory Strands, but fewer items drop",
 					"tags": ["BossDrop"]
 				},
 				"Hunter's Exalted Orb": {
@@ -531,11 +531,11 @@
 					"tags": ["BossDrop"]
 				},
 				"Shaper's Exalted Orb": {
-					"text": "Adds Shaper influence and a new Shaper modifier to a rare item",
+					"text": "Drops from The Shaper or Uber Elder<br>Adds Shaper influence and a new Shaper modifier to a rare item",
 					"tags": ["BossDrop"]
 				},
 				"Elder's Exalted Orb": {
-					"text": "Adds Elder influence and a new Elder modifier to a rare item",
+					"text": "Drops from The Elder or Uber Elder<br>Adds Elder influence and a new Elder modifier to a rare item",
 					"tags": ["BossDrop"]
 				},
 				"Orb of Conflict": {
@@ -2741,9 +2741,33 @@
 				},
 				"Kalguuran Scarab of Refinement": {
 					"text": "Ore Deposits in Area grant Smelted Bars instead of Marking Ore"
+				},
+
+				"Allflame Ember of Flesh": {
+					"text": "Drops from Safehouse leaders in Safehouses<br>Pack has single Monster<br>Monster has greatly increased Life"
+				},
+				"Allflame Ember of Ethereal": {
+					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Monsters cannot drop Equipment, Flasks or Tinctures"
+				},
+				"Allflame Ember of Gilded": {
+					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Monster Equipment Drops are converted to Gold"
+				},
+				"Allflame Ember of Wildwood": {
+					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Leader Empowers Map Bosses with Wildwood Wisps when slain"
+				},
+				"Allflame Ember of Toads": {
+					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Monsters are Harmless Toads"
+				},
+
+				"Allflame Ember of Kulemak": {
+					"text": "Drops from Catarina<br>Pack monsters revive after Map Boss has been slain"
+				},
+				"Allflame Ember of Propagation": {
+					"text": "Drops from Catarina<br>Pack Monsters that die when Rare spread Modifiers to other Rare Monsters in Area"
+				},
+				"Allflame Ember of Resplendence": {
+					"text": "Drops from Catarina<br>Pack Monsters do not drop items<br>Pack Monsters grant increased Item Rarity when slain, up to 400%, decaying over time"
 				}
-
-
 			}
 		},
 
@@ -2906,6 +2930,10 @@
 						},
 						"Atziri's Rule": {
 							"text": "Drops from Uber Atziri.",
+							"priority": -5
+						},
+						"Legacy of the Rose": {
+							"text": "Drops from the Incarnation of Neglect",
 							"priority": -5
 						}
 					}
@@ -3144,7 +3172,7 @@
 					"text": null,
 					"items": {
 						"Cane of Kulemak": {
-							"text": "Drops from Catarina (Jun Boss).",
+							"text": "Drops from Catarina",
 							"priority": -5
 						}
 					}
@@ -3818,6 +3846,10 @@
 						"Cowl of the Thermophile": {
 							"text": "Drops from Blighted Maps.",
 							"priority": -5
+						},
+						"Howlcrack": {
+							"text": "Drops from Mercenaries of Trarthus",
+							"priority": -8
 						}
 					}
 				},
@@ -4386,6 +4418,10 @@
 						"Graven's Secret": {
 							"text": "Drops from The Maven.",
 							"priority": -5
+						},
+						"The Arkhon's Tools": {
+							"text": "Drops from the Incarnation of Neglect",
+							"priority": -5
 						}
 					}
 				},
@@ -4431,6 +4467,10 @@
 						"Mark of the Elder": {
 							"text": "Drops from The Uber Elder.",
 							"priority": -5
+						},
+						"Betrayal's Sting": {
+							"text": "Drops from the Incarnation of Neglect",
+							"priority": -5
 						}
 					}
 				},
@@ -4452,6 +4492,10 @@
 						"Original Sin": {
 							"text": "Drops from Lycia with corresponding relic equipped.",
 							"priority": -8
+						},
+						"Coiling Whisper": {
+							"text": "Drops from the Incarnation of Fear",
+							"priority": -5
 						}
 					}
 				},
@@ -4781,6 +4825,10 @@
 						"The Tides of Time": {
 							"text": "Drops from The Uber Shaper.",
 							"priority": -5
+						},
+						"Binds of Bloody Vengeance": {
+							"text": "Drops from Mercenaries of Trarthus",
+							"priority": -8
 						}
 					}
 				},
@@ -4905,15 +4953,6 @@
 						}
 					}
 				},
-				"Phantom Mace": {
-					"text": null,
-					"items": {
-						"Serle's Masterwork": {
-							"text": "Does not drop. Obtained from shipping resources to Riben Fell, Pondium, or Kalguur.",
-							"priority": -10
-						}
-					}
-				},
 				"Piledriver": {
 					"text": null,
 					"items": {
@@ -4962,12 +5001,120 @@
 						}
 					}
 				},
-				"Slink Gloves": {
+				"Seaglass Amulet": {
 					"text": null,
 					"items": {
-						"Mercenary's Lot": {
-							"text": "Found equipped to certain Mercenaries",
+						"Whispers of Infinity": {
+							"text": "Drops from the Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Gold Flask": {
+					"text": null,
+					"items": {
+						"Wine of the Prophet": {
+							"text": "Drops from the Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Waxed Garb": {
+					"text": null,
+					"items": {
+						"Seven Teachings": {
+							"text": "Drops from the Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Lich's Circlet": {
+					"text": null,
+					"items": {
+						"The Dark Monarch": {
+							"text": "Drops from the Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Astrolabe Amulet": {
+					"text": null,
+					"items": {
+						"Venarius' Astrolabe": {
+							"text": "Drops from the Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Torturer Garb": {
+					"text": null,
+					"items": {
+						"Servant of Decay": {
+							"text": "Drops from the Incarnation of Fear",
+							"priority": -5
+						}
+					}
+				},
+				"Vermillion Ring": {
+					"text": null,
+					"items": {
+						"Enmity's Embrace": {
+							"text": "Drops from the Incarnation of Fear",
+							"priority": -5
+						}
+					}
+				},
+				"Abyssal Axe": {
+					"text": null,
+					"items": {
+						"Starcaller": {
+							"text": "Drops from the Incarnation of Fear",
+							"priority": -5
+						}
+					}
+				},
+				"Satin Slippers": {
+					"text": null,
+					"items": {
+						"Scornflux": {
+							"text": "Drops from Mercenaries of Trarthus",
 							"priority": -8
+						}
+					}
+				},
+				"Lacquered Buckler": {
+					"text": null,
+					"items": {
+						"Azadi Crest": {
+							"text": "Drops from Mercenaries of Trarthus",
+							"priority": -8
+						}
+					}
+				},
+				"Martyr Gloves": {
+					"text": null,
+					"items": {
+						"Hand of Heresy": {
+							"text": "Drops from Mercenaries of Trarthus",
+							"priority": -8
+						}
+					}
+				},
+				"Vile Arrow Quiver": {
+					"text": null,
+					"items": {
+						"Spinehail": {
+							"text": "Drops from Catarina",
+							"priority": -5
+						}
+					}
+				},
+				"Platinum Sceptre": {
+					"text": null,
+					"items": {
+						"Cadigan's Authority": {
+							"text": "Does not drop. Obtained from shipping resources to Riben Fell, Pondium, or Kalguur.",
+							"priority": -10
 						}
 					}
 				},
@@ -4989,6 +5136,14 @@
 						"The Anima Stone": {
 							"text": "Does not drop. Created with a vendor recipe.",
 							"priority": -10
+						},
+						"The Light of Meaning": {
+							"text": "Drops from the King in the Mists",
+							"priority": -5
+						},
+						"Bound by Destiny": {
+							"text": "Drops from the Incarnation of Dread, Fear or Neglect",
+							"priority": -5
 						}
 					}
 				},
