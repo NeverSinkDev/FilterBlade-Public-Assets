@@ -383,24 +383,24 @@
 				},
 
 				"Blessing of Chayula": {
-					"text": "Drops from Chayula<br>Upgrades a Chayula unique item or breachstone to a more powerful version",
-					"tags": ["Breach", "BossDrop"]
+					"text": "Drops from Chayula<br>Upgrades a Chayula breachstone to a more powerful version",
+					"tags": ["NonDrop"]
 				},
 				"Blessing of Uul-Netol": {
-					"text": "Drops from Uul-Netol<br>Upgrades a Uul-Netol unique item or breachstone to a more powerful version",
-					"tags": ["Breach", "BossDrop"]
+					"text": "Drops from Uul-Netol<br>Upgrades a Uul-Netol breachstone to a more powerful version",
+					"tags": ["NonDrop"]
 				},
 				"Blessing of Esh": {
-					"text": "Drops from Esh<br>Upgrades a Esh unique item or breachstone to a more powerful version",
-					"tags": ["Breach", "BossDrop"]
+					"text": "Drops from Esh<br>Upgrades a Esh breachstone to a more powerful version",
+					"tags": ["NonDrop"]
 				},
 				"Blessing of Tul": {
-					"text": "Drops from Tul<br>Upgrades a Tul unique item or breachstone to a more powerful version",
-					"tags": ["Breach", "BossDrop"]
+					"text": "Drops from Tul<br>Upgrades a Tul breachstone to a more powerful version",
+					"tags": ["NonDrop"]
 				},
 				"Blessing of Xoph": {
-					"text": "Drops from Xoph<br>Upgrades a Xoph unique item or breachstone to a more powerful version",
-					"tags": ["Breach", "BossDrop"]
+					"text": "Drops from Xoph<br>Upgrades a Xoph breachstone to a more powerful version",
+					"tags": ["NonDrop"]
 				},
 
 				"Burial Medallion": {
@@ -685,10 +685,6 @@
 					"tags": ["Meme"]
 				},
 
-				"Bestiary Orb": {
-					"text": "Stores a Beast in an item",
-					"tags": ["NonDrop"]
-				},
 				"Facetor's Lens": {
 					"text": "Adds stored experience to a gem, up to its maximum level",
 					"tags": ["NonDrop"]
@@ -724,6 +720,51 @@
 					"tags": ["LeagueDrop"]
 				},
 
+				"Foulborn Orb of Augmentation": {
+					"text": "Augments a Magic item with a new random modifier with higher level modifiers being more likely",
+					"tags": ["LeagueDrop"]
+				},
+				"Foulborn Regal Orb": {
+					"text": "Upgrades a Magic item to a Rare item with higher level modifiers being more likely",
+					"tags": ["LeagueDrop"]
+				},
+				"Foulborn Exalted Orb": {
+					"text": "Augments a Rare item with a new random modifier with higher level modifiers being more likely",
+					"tags": ["LeagueDrop"]
+				},
+				"Augmentation Implant": {
+					"text": "Augments a Magic Graft with a new random modifier",
+					"tags": ["LeagueDrop"]
+				},
+				"Regal Implant": {
+					"text": "Upgrades a Magic Graft to a Rare Graft",
+					"tags": ["LeagueDrop"]
+				},
+				"Exalted Implant": {
+					"text": "Augments a Rare Graft with a new random modifier",
+					"tags": ["LeagueDrop"]
+				},
+				"Unstable Implant": {
+					"text": "Corrupts a Graft, either destroying it entirely or replacing the implicit with a powerful modifier. This does not replace the Skill the Graft will use",
+					"tags": ["LeagueDrop"]
+				},
+				"Growing Wombgift": {
+					"text": "Can grow into a Graft item on the Genesis Tree",
+					"tags": ["LeagueDrop"]
+				},
+				"Lavish Wombgift": {
+					"text": "Can grow into a Currency item on the Genesis Tree",
+					"tags": ["LeagueDrop"]
+				},
+				"Ancient Wombgift": {
+					"text": "Can grow into a Unique item on the Genesis Tree",
+					"tags": ["LeagueDrop"]
+				},
+				"Provisioning Wombgift": {
+					"text": "Can grow into a Equipment item on the Genesis Tree",
+					"tags": ["LeagueDrop"]
+				},
+
 				"Valdo's Puzzle Box": {
 					"text": "Contains a Mysterious Map with a Foil Unique Reward",
 					"tags": ["Generic"]
@@ -740,6 +781,7 @@
 					"text": "Combine 10 Crescent Splinters to create The Maven's Writ",
 					"tags": ["BossDrop"]
 				}
+
 				
 			}
 		},
@@ -2240,149 +2282,235 @@
 
 		"Fragment": {
 			"items": {
-				"Gift to the Goddess": {
-					"text": null
-				},
-				"Timeless Maraketh Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Maraketh Splinters"
-				},
-				"Dedication to the Goddess": {
-					"text": null
-				},
-				"Tribute to the Goddess": {
-					"text": "The Labyrinth's rewards are enriched."
-				},
-				"Mortal Grief": {
-					"text": "Top left Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
-				},
-				"Mortal Rage": {
-					"text": "Top right Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
-				},
-				"Mortal Ignorance": {
-					"text": "Bottom left Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
-				},
-				"Mortal Hope": {
-					"text": "Bottom right Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
-				},
-				"Divine Vessel": {
-					"text": "Used in the map device to make the map boss more powerful, and if they are killed, it also captures their soul to unlock additional bonuses on The Pantheon."
-				},
 				"Sacrifice at Dusk": {
-					"text": "Top left Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
 				},
 				"Sacrifice at Midnight": {
-					"text": "Top right Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
 				},
 				"Sacrifice at Dawn": {
-					"text": "Bottom right Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
 				},
 				"Sacrifice at Noon": {
-					"text": "Bottom left Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
+				},	
+
+				"Mortal Grief": {
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
 				},
-				"Sacred Blossom": {
-					"text": "Used by itself in the map device it will grant access to The Sacred Grove to fight Oshabi. Chance to drop from T4 Harvest monsters (Janaar, the Omen, Namharim, Born of Night, and Ersi, Mother of Thorns)."
+				"Mortal Rage": {
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
 				},
-				"The Maven's Writ": {
-					"text": "Used by itself in the map device it will grant access to The Mavens Crucible to fight The Maven herself."
+				"Mortal Ignorance": {
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
 				},
-				"Al-Hezmin's Crest": {
-					"text": "Guaranteed to drop upon killing Al-Hezmin, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
+				"Mortal Hope": {
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
 				},
-				"Baran's Crest": {
-					"text": "Guaranteed to drop upon killing Baran, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-				},
-				"Drox's Crest": {
-					"text": "Guaranteed to drop upon killing Drox, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-				},
-				"Veritania's Crest": {
-					"text": "Guaranteed to drop upon killing Veritania, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-				},
-				"Fragment of Constriction": {
-					"text": "Guaranteed to drop upon killing The Constrictor, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-				},
-				"Fragment of Enslavement": {
-					"text": "Guaranteed to drop upon killing The Enslaver, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-				},
-				"Fragment of Eradication": {
-					"text": "Guaranteed to drop upon killing The Eradicator, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-				},
-				"Fragment of Purification": {
-					"text": "Guaranteed to drop upon killing The Purifier, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-				},
-				"Fragment of Shape": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper"
-				},
-				"Fragment of Terror": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder"
-				},
-				"Fragment of Knowledge": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper"
-				},
-				"Fragment of Emptiness": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder"
-				},
-				"Simulacrum": {
-					"text": "Placed into a map device it opens up 6 portals to a 30 wave fight. Increasing in difficulty with each wave. Aquired by combining 300 Simulacrum Splinters"
-				},
-				"Timeless Templar Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Templar Splinters"
-				},
-				"Unrelenting Timeless Eternal Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-				},
-				"Unrelenting Timeless Karui Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-				},
-				"Unrelenting Timeless Maraketh Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-				},
-				"Unrelenting Timeless Templar Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-				},
-				"Unrelenting Timeless Vaal Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-				},
-				"Blood-filled Vessel": {
-					"text": "When used a map in the Map Device, it adds a Ritual encounter to the instance, while also adding the stored monsters to the Ritual."
-				},
+
 				"Fragment of the Chimera": {
-					"text": "Guaranteed drop when killing Guardian of the Chimera, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
+					"text": "Fragment for The Shaper fight<br>Drops from Guardian of the Chimera"
 				},
 				"Fragment of the Phoenix": {
-					"text": "Guaranteed drop when killing Guardian of the Hydra, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
+					"text": "Fragment for The Shaper fight<br>Drops from Guardian of the Phoenix"
 				},
 				"Fragment of the Hydra": {
-					"text": "Guaranteed drop when killing Guardian of the Hydra, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
+					"text": "Fragment for The Shaper fight<br>Drops from Guardian of the Hydra"
 				},
 				"Fragment of the Minotaur": {
-					"text": "Guaranteed drop when killing Guardian of the Minotaur, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
+					"text": "Fragment for The Shaper fight<br>Drops from Guardian of the Minotaur"
 				},
-				"Offering to the Goddess": {
-					"text": "Used as payment to enter The Eternal Labyrinth."
+
+				"Fragment of Constriction": {
+					"text": "Fragment for The Elder fight<br>Drops from The Constrictor"
 				},
-				"Timeless Eternal Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Eternal Splinters"
+				"Fragment of Enslavement": {
+					"text": "Fragment for The Elder fight<br>Drops from The Enslaver"
 				},
-				"Timeless Karui Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Karui Splinters"
+				"Fragment of Eradication": {
+					"text": "Fragment for The Elder fight<br>Drops from The Eradicator"
 				},
-				"Timeless Vaal Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Vaal Splinters"
+				"Fragment of Purification": {
+					"text": "Fragment for The Elder fight<br>Drops from The Purifier"
 				},
-				"An Audience With The King": {
-					"text": "Grants access to the King in the Mists boss fight"
+
+				"Fragment of Shape": {
+					"text": "Fragment for the Uber Elder fight<br>Drops from The Shaper(Normal Shaper)"
 				},
-				"Syndicate Medallion": {
-					"text": "Open a portal to the Mastermind's Lair by using this item in a personal Map Device."
+				"Fragment of Knowledge": {
+					"text": "Fragment for the Uber Elder fight<br>Drops from The Shaper(Normal Shaper)"
 				},
+				"Fragment of Terror": {
+					"text": "Fragment for the Uber Elder fight<br>Drops from The Elder(Normal Elder)"
+				},
+				"Fragment of Emptiness": {
+					"text": "Fragment for the Uber Elder fight<br>Drops from The Elder(Normal Elder)"
+				},
+
+				"Al-Hezmin's Crest": {
+					"text": "Fragment for the Sirus, Awakener of Worlds fight<br>Drops from Al-Hezmin, the Hunter"
+				},
+				"Baran's Crest": {
+					"text": "Fragment for the Sirus, Awakener of Worlds fight<br>Drops from Baran, the Crusader"
+				},
+				"Drox's Crest": {
+					"text": "Fragment for the Sirus, Awakener of Worlds fight<br>Drops from Drox, the Warlord"
+				},
+				"Veritania's Crest": {
+					"text": "Fragment for the Sirus, Awakener of Worlds fight<br>Drops from Veritania, the Redeemer"
+				},
+
+				"The Maven's Writ": {
+					"text": "Opens The Maven fight<br>Drops from Maven's Invitations(as Crescent Splinters)"
+				},
+
 				"Echo of Loneliness": {
-					"text": "Open portals to the Moment of Loneliness by using this item in a personal Map Device"
-				},
-				"Echo of Trauma": {
-					"text": "Open portals to the Moment of Trauma by using this item in a personal Map Device"
+					"text": "Opens the Incarnation of Neglect fight<br>Drops from The Neglected Flame"
 				},
 				"Echo of Reverence": {
-					"text": "Open portals to the Moment of Reverence by using this item in a personal Map Device"
+					"text": "Opens the Incarnation of Dread fight<br>Drops from The Deceitful God"
+				},
+				"Echo of Trauma": {
+					"text": "Opens the Incarnation of Fear fight<br>Drops from The Cardinal of Fear"
+				},
+
+				"Reality Fragment": {
+					"text": "Fragment for the Uber Maven fight<br>Drops from T17 map bosses"
+				},
+				"Awakening Fragment": {
+					"text": "Fragment for the Uber Sirus fight<br>Drops from T17 map bosses"
+				},
+				"Blazing Fragment": {
+					"text": "Fragment for the Uber Exarch fight<br>Drops from T17 map bosses"
+				},
+				"Devouring Fragment": {
+					"text": "Fragment for the Uber Eater fight<br>Drops from T17 map bosses"
+				},
+				"Cosmic Fragment": {
+					"text": "Fragment for the Uber Shaper fight<br>Drops from T17 map bosses"
+				},
+				"Decaying Fragment": {
+					"text": "Fragment for the Uber Uber Elder fight<br>Drops from T17 map bosses"
+				},
+				"Synthesising Fragment": {
+					"text": "Fragment for the Uber Cortex fight<br>Drops from T17 map bosses"
+				},
+				"Lonely Fragment": {
+					"text": "Fragment for the Uber Incarnation of Neglect fight<br>Drops from T17 map bosses"
+				},
+				"Reverent Fragment": {
+					"text": "Fragment for the Uber Incarnation of Dread fight<br>Drops from T17 map bosses"
+				},
+				"Traumatic Fragment": {
+					"text": "Fragment for the Uber Incarnation of Fear fight<br>Drops from T17 map bosses"
+				},
+
+				"Sacred Blossom": {
+					"text": "Opens the Oshabi, Avatar of the Grove fight<br>Drops from T4 Harvest monsters<br>Unlocks a bloodline"
+				},
+				"An Audience With The King": {
+					"text": "Opens The King in the Mists fight<br>Offered as a reward in rituals<br>Unlocks a bloodline"
+				},
+				"Syndicate Medallion": {
+					"text": "Opens the Catarina, Master of Undeath fight(The Mastermind)<br>Drops from the Safehouse leaders in Safehouses<br>Unlocks a bloodline"
+				},
+				"Simulacrum": {
+					"text": "Opens the Simularum encounter<br>Drops in form of splinters from delirium encounters<br>Unlocks a bloodline"
+				},
+
+				"Offering to the Goddess": {
+					"text": "Opens The Eternal Labyrinth"
+				},
+				"Gift to the Goddess": {
+					"text": "Opens The Eternal Labyrinth of Opportunity<br>Divine Font grants 6 additional uses<br>Drops at the end of upgraded Trial of Ascendancy"
+				},
+				"Dedication to the Goddess": {
+					"text": "Opens The Eternal Labyrinth of Opportunity<br>Divine Font offers Corrupted Gem crafting options<br>Drops at the end of upgraded Trial of Ascendancy"
+				},
+				"Tribute to the Goddess": {
+					"text": "Opens The Eternal Labyrinth of Fortune<br>Reward Chests are improved<br>Drops at the end of upgraded Trial of Ascendancy"
+				},
+
+				"Divine Vessel": {
+					"text": "Used to unlock additional Pantheon bonuses"
+				},
+
+				"Blood-filled Vessel": {
+					"text": "Adds the monsters stored from a previous Ritual Altar to a Ritual Altar in the map"
+				},
+
+				"Timeless Eternal Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Legion encounters(as splinters)"
+				},
+				"Timeless Karui Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Legion encounters(as splinters)"
+				},
+				"Timeless Vaal Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Legion encounters(as splinters)"
+				},
+				"Timeless Templar Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Legion encounters(as splinters)"
+				},
+				"Timeless Maraketh Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Legion encounters(as splinters)"
+				},
+
+				"Unrelenting Timeless Eternal Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
+				},
+				"Unrelenting Timeless Karui Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
+				},
+				"Unrelenting Timeless Maraketh Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
+				},
+				"Unrelenting Timeless Templar Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
+				},
+				"Unrelenting Timeless Vaal Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
+				},
+
+				"Xoph's Breachstone": {
+					"text": "Grants access to Xoph's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["NonDrop"]
+				},
+				"Tul's Breachstone": {
+					"text": "Grants access to Tul's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["NonDrop"]
+				},
+				"Esh's Breachstone": {
+					"text": "Grants access to Esh's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["NonDrop"]
+				},
+				"Uul-Netol's Breachstone": {
+					"text": "Grants access to Uul-Netol's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["NonDrop"]
+				},
+				"Chayula's Breachstone": {
+					"text": "Grants access to Chayula's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["NonDrop"]
+				},
+
+				"Xoph's Flawless Breachstone": {
+					"text": "Grants access to upgraded Xoph's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["NonDrop"]
+				},
+				"Tul's Flawless Breachstone": {
+					"text": "Grants access to upgraded Tul's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["NonDrop"]
+				},
+				"Esh's Flawless Breachstone": {
+					"text": "Grants access to upgraded Esh's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["NonDrop"]
+				},
+				"Uul-Netol's Flawless Breachstone": {
+					"text": "Grants access to upgraded Uul-Netol's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["NonDrop"]
+				},
+				"Chayula's Flawless Breachstone": {
+					"text": "Grants access to upgraded Chayula's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["NonDrop"]
 				}
 			}
 		},
@@ -2530,7 +2658,7 @@
 					"text": "Abysses in Area spawn 50% increased Monsters"
 				},
 				"Abyss Scarab of Edifice": {
-					"text": "Abysses in Area that do not lead to an Abyssal Depths lead to a Stygian Spire<br>Abysses in Area spawn Hoards as they travel"
+					"text": "Abyss pits in Area that do not lead to an Abyssal Depths or spawn an Abyssal Trove will spawn Minor Stygian Spires"
 				},
 				"Abyss Scarab of Profound Depth": {
 					"text": "Monsters from Abysses in Areas have increased Difficulty and Reward for each prior Pit in that Abyss"
@@ -2746,13 +2874,13 @@
 				"Allflame Ember of Flesh": {
 					"text": "Drops from Safehouse leaders in Safehouses<br>Pack has single Monster<br>Monster has greatly increased Life"
 				},
-				"Allflame Ember of Ethereal": {
+				"Allflame Ember of the Ethereal": {
 					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Monsters cannot drop Equipment, Flasks or Tinctures"
 				},
-				"Allflame Ember of Gilded": {
+				"Allflame Ember of the Gilded": {
 					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Monster Equipment Drops are converted to Gold"
 				},
-				"Allflame Ember of Wildwood": {
+				"Allflame Ember of the Wildwood": {
 					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Leader Empowers Map Bosses with Wildwood Wisps when slain"
 				},
 				"Allflame Ember of Toads": {
