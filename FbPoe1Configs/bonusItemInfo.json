@@ -128,8 +128,15 @@
 		"RuthlessOnly": {
 			"displayName": "Ruthless exclusive",
 			"iconPath": "assets/img/Icons/AccordionIcons/EternalOrb.png",
-			"description": "Can only drop in ruthless",
-			"isHiddenByDefault": false,
+			"description": "Only obtainable in Ruthless leagues",
+			"isHiddenByDefault": true,
+			"group": "currency3"
+		},
+		"StandardOnly": {
+			"displayName": "Standard Exclusive",
+			"iconPath": "assets/img/Icons/AccordionIcons/Breachstone.png",
+			"description": "Only obtainable in Standard leagues",
+			"isHiddenByDefault": true,
 			"group": "currency3"
 		},
 
@@ -310,7 +317,7 @@
 				},
 				"Otherworldly Scouting Report": {
 					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Breachstone",
-					"tags": ["Report", "BossDrop"]
+					"tags": ["Report", "BossDrop", "StandardOnly"]
 				},
 				"Blighted Scouting Report": {
 					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Blighted Map",
@@ -384,23 +391,23 @@
 
 				"Blessing of Chayula": {
 					"text": "Drops from Chayula<br>Upgrades a Chayula breachstone to a more powerful version",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Blessing of Uul-Netol": {
 					"text": "Drops from Uul-Netol<br>Upgrades a Uul-Netol breachstone to a more powerful version",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Blessing of Esh": {
 					"text": "Drops from Esh<br>Upgrades a Esh breachstone to a more powerful version",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Blessing of Tul": {
 					"text": "Drops from Tul<br>Upgrades a Tul breachstone to a more powerful version",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Blessing of Xoph": {
 					"text": "Drops from Xoph<br>Upgrades a Xoph breachstone to a more powerful version",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 
 				"Burial Medallion": {
@@ -748,22 +755,6 @@
 					"text": "Corrupts a Graft, either destroying it entirely or replacing the implicit with a powerful modifier. This does not replace the Skill the Graft will use",
 					"tags": ["LeagueDrop"]
 				},
-				"Growing Wombgift": {
-					"text": "Can grow into a Graft item on the Genesis Tree",
-					"tags": ["LeagueDrop"]
-				},
-				"Lavish Wombgift": {
-					"text": "Can grow into a Currency item on the Genesis Tree",
-					"tags": ["LeagueDrop"]
-				},
-				"Ancient Wombgift": {
-					"text": "Can grow into a Unique item on the Genesis Tree",
-					"tags": ["LeagueDrop"]
-				},
-				"Provisioning Wombgift": {
-					"text": "Can grow into a Equipment item on the Genesis Tree",
-					"tags": ["LeagueDrop"]
-				},
 
 				"Valdo's Puzzle Box": {
 					"text": "Contains a Mysterious Map with a Foil Unique Reward",
@@ -928,7 +919,8 @@
 					"text": "Modifies a Map item adding layers of Delirium with the Trinkets reward type"
 				},
 				"Obscured Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Breach Items reward type"
+					"text": "Modifies a Map item adding layers of Delirium with the Breach Items reward type",
+					"tags": ["StandardOnly"]
 				},
 				"Singular Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Unique Items reward type"
@@ -1046,7 +1038,8 @@
 					"text" : "Awards a Delirium item. Usually simulacrum splinters or delirium orbs"
 				},
 				"Obscured Incubator" : {
-					"text" : "Awards a Breach item. Usually splinters or scarabs."
+					"text" : "Awards a Breach item. Usually splinters or scarabs.",
+					"tags": ["StandardOnly"]
 				},
 				"Ornate Incubator" : {
 					"text" : "Awards a Currency item."
@@ -1687,7 +1680,7 @@
 					"tags": ["MapOutcome"]
 				},
 				"The Emptiness": {
-					"tags": ["GemOutcome"]
+					"tags": ["GemOutcome", "StandardOnly"]
 				},
 				"The Encroaching Darkness": {
 					"tags": ["MapOutcome", "UniqueOutcome"]
@@ -1717,7 +1710,7 @@
 					"tags": ["MapOutcome"]
 				},
 				"The Eye of Terror": {
-					"tags": ["MapOutcome"]
+					"tags": ["MapOutcome", "StandardOnly"]
 				},
 				"The Eye of the Dragon": {
 					"tags": ["UniqueOutcome"]
@@ -1879,7 +1872,7 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"The Obscured": {
-					"tags": ["MapOutcome"]
+					"tags": ["MapOutcome", "StandardOnly"]
 				},
 				"The Offering": {
 					"tags": ["UniqueOutcome"]
@@ -1939,7 +1932,7 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"The Puzzle": {
-					"tags": ["MapOutcome"]
+					"tags": ["MapOutcome", "StandardOnly"]
 				},
 				"The Queen": {
 					"tags": ["UniqueOutcome"]
@@ -2260,7 +2253,7 @@
 					"tags": ["CurrencyOutcome"]
 				},
 				"The Bargain": {
-					"tags": ["MapOutcome"]
+					"tags": ["MapOutcome", "StandardOnly"]
 				},
 				"The Mayor": {
 					"tags": ["UniqueOutcome"]
@@ -2275,6 +2268,18 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"Underground Forest": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Last Laugh": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Lake": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Bound by Flame": {
+					"tags": ["GemOutcome"]
+				},
+				"Outfoxed": {
 					"tags": ["CurrencyOutcome"]
 				}
 			}
@@ -2473,44 +2478,48 @@
 
 				"Xoph's Breachstone": {
 					"text": "Grants access to Xoph's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Tul's Breachstone": {
 					"text": "Grants access to Tul's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Esh's Breachstone": {
 					"text": "Grants access to Esh's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Uul-Netol's Breachstone": {
 					"text": "Grants access to Uul-Netol's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Chayula's Breachstone": {
 					"text": "Grants access to Chayula's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 
 				"Xoph's Flawless Breachstone": {
 					"text": "Grants access to upgraded Xoph's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Tul's Flawless Breachstone": {
 					"text": "Grants access to upgraded Tul's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Esh's Flawless Breachstone": {
 					"text": "Grants access to upgraded Esh's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Uul-Netol's Flawless Breachstone": {
 					"text": "Grants access to upgraded Uul-Netol's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
 				},
 				"Chayula's Flawless Breachstone": {
 					"text": "Grants access to upgraded Chayula's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["NonDrop"]
+					"tags": ["StandardOnly"]
+				},
+
+				"Hivebrain Gland": {
+					"text": "Breach encounter in Area will be a Breachlord's Hive"
 				}
 			}
 		},
@@ -2518,19 +2527,24 @@
 		"Scarab": {
 			"items": {
 				"Breach Scarab": {
-					"text": "Area contains 2 additional Breaches"
+					"text": "Area contains 2 additional Breaches",
+					"tags": ["StandardOnly"]
 				},
 				"Breach Scarab of Lordship": {
-					"text": "Breaches in Area each contain a Breachlord"
+					"text": "Breaches in Area each contain a Breachlord",
+					"tags": ["StandardOnly"]
 				},
 				"Breach Scarab of Splintering": {
-					"text": "Breach Monsters in Area drop 50% more Breach Splinters<br>Clasped Hands in Area drop 50% more Breach Splinters"
+					"text": "Breach Monsters in Area drop 50% more Breach Splinters<br>Clasped Hands in Area drop 50% more Breach Splinters",
+					"tags": ["StandardOnly"]
 				},
 				"Breach Scarab of Snares": {
-					"text": "Breaches in Area have 3 to 5 additional Clasped Hands<br>Clasped Hands in Area are guarded by a rare Breach Monster"
+					"text": "Breaches in Area have 3 to 5 additional Clasped Hands<br>Clasped Hands in Area are guarded by a rare Breach Monster",
+					"tags": ["StandardOnly"]
 				},
 				"Breach Scarab of Resonant Cascade": {
-					"text": "Breaches in Areas open and close 10% faster for each Breach already opened<br>Monsters from Breaches in Areas have increased Difficulty and Reward foreach Breach already opened"
+					"text": "Breaches in Areas open and close 10% faster for each Breach already opened<br>Monsters from Breaches in Areas have increased Difficulty and Reward foreach Breach already opened",
+					"tags": ["StandardOnly"]
 				},
 
 				"Cartography Scarab of Escalation": {
@@ -2967,12 +2981,12 @@
 					"text": null,
 					"items": {
 						"United in Dream": {
-							"text": "Drops from Chayula's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Severed in Sleep": {
-							"text": "Drops from Chayula's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3002,12 +3016,12 @@
 							"priority": -5
 						},
 						"Uul-Netol's Embrace": {
-							"text": "Drops from Uul-Netol's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Uul-Netol's Kiss": {
-							"text": "Drops from Uul-Netol's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3118,12 +3132,12 @@
 					"text": null,
 					"items": {
 						"Hand of Wisdom and Action": {
-							"text": "Drops from Esh's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Hand of Thought and Motion": {
-							"text": "Drops from Esh's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3229,12 +3243,12 @@
 							"priority": -5
 						},
 						"Xoph's Nurture": {
-							"text": "Drops from Xoph's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Xoph's Inception": {
-							"text": "Drops from Xoph's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3269,12 +3283,12 @@
 					"text": null,
 					"items": {
 						"Tulfall": {
-							"text": "Drops from Tul's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Tulborn": {
-							"text": "Drops from Tul's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3437,12 +3451,12 @@
 							"priority": -3
 						},
 						"Esh's Visage": {
-							"text": "Drops from Esh's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Esh's Mirror": {
-							"text": "Drops from Esh's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3619,12 +3633,12 @@
 					"text": null,
 					"items": {
 						"The Surrender": {
-							"text": "Drops from Uul-Netol's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Anticipation": {
-							"text": "Drops from Uul-Netol's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3727,12 +3741,12 @@
 					"text": null,
 					"items": {
 						"The Red Trail": {
-							"text": "Drops from Uul-Netol's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Infinite Pursuit": {
-							"text": "Drops from Uul-Netol's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Doryani's Delusion": {
 							"text": "Drops in Doryani's Machinarium.",
@@ -3762,12 +3776,12 @@
 					"text": null,
 					"items": {
 						"The Perfect Form": {
-							"text": "Drops from Tul's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Snowblind Grace": {
-							"text": "Drops from Tul's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3915,12 +3929,12 @@
 					"text": null,
 					"items": {
 						"The Formless Inferno": {
-							"text": "Drops from Xoph's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Formless Flame": {
-							"text": "Drops from Xoph's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Echoes of Creation": {
 							"text": "Drops from Uber Shaper.",
@@ -4243,12 +4257,12 @@
 					"text": null,
 					"items": {
 						"The Pandemonius": {
-							"text": "Drops from Tul's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Halcyon": {
-							"text": "Drops from Tul's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -4256,12 +4270,12 @@
 					"text": null,
 					"items": {
 						"Xoph's Blood": {
-							"text": "Drops from Xoph's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Xoph's Heart": {
-							"text": "Drops from Xoph's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -4273,8 +4287,8 @@
 							"priority": -5
 						},
 						"Presence of Chayula": {
-							"text": "Does not drop. Created with a Blessing of Chayula.",
-							"priority": -10
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Aul's Uprising": {
 							"text": "Drops from Aul (Delve Boss).",
@@ -4439,12 +4453,12 @@
 					"text": null,
 					"items": {
 						"Choir of the Storm": {
-							"text": "Drops from Esh's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Voice of the Storm": {
-							"text": "Drops from Esh's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -4520,6 +4534,10 @@
 						},
 						"Polaric Devastation": {
 							"text": "Drops from The Black Star.",
+							"priority": -5
+						},
+						"The Unseen Hue": {
+							"text": "Drops from the Uber Incarnation of Fear",
 							"priority": -5
 						}
 					}
@@ -4599,6 +4617,10 @@
 						"Betrayal's Sting": {
 							"text": "Drops from the Incarnation of Neglect",
 							"priority": -5
+						},
+						"Woespike": {
+							"text": "Drops from the Incarnation of Fear",
+							"priority": -5
 						}
 					}
 				},
@@ -4622,7 +4644,7 @@
 							"priority": -8
 						},
 						"Coiling Whisper": {
-							"text": "Drops from the Incarnation of Fear",
+							"text": "Drops from the Uber Incarnation of Fear",
 							"priority": -5
 						}
 					}
@@ -4807,15 +4829,6 @@
 						"Medved's Challenge": {
 							"text": "Drops from Expedition.",
 							"priority": -3
-						}
-					}
-				},
-				"Unset Amulet": {
-					"text": null,
-					"items": {
-						"Uul-Netol's Vow": {
-							"text": "Drops from Flawless Breachstone.",
-							"priority": -5
 						}
 					}
 				},
@@ -5108,6 +5121,10 @@
 						"Admiral's Arrogance": {
 							"text": "Drops from the Admiral Valerius",
 							"priority": -5
+						},
+						"The Caged Mammoth": {
+							"text": "Drops from the Uber Incarnation of Fear",
+							"priority": -5
 						}
 					}
 				},
@@ -5133,7 +5150,7 @@
 					"text": null,
 					"items": {
 						"Whispers of Infinity": {
-							"text": "Drops from the Incarnation of Dread",
+							"text": "Drops from the Uber Incarnation of Dread",
 							"priority": -5
 						}
 					}
@@ -5243,6 +5260,150 @@
 						"Cadigan's Authority": {
 							"text": "Does not drop. Obtained from shipping resources to Riben Fell, Pondium, or Kalguur.",
 							"priority": -10
+						}
+					}
+				},
+				"Marble Amulet": {
+					"text": null,
+					"items": {
+						"Bonemeld": {
+							"text": "Drops from the Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Paladin Crown": {
+					"text": null,
+					"items": {
+						"Refuge in Isolation": {
+							"text": "Drops from the Uber Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Faithful Helmet": {
+					"text": null,
+					"items": {
+						"The Hallowed Monarch": {
+							"text": "Drops from the Uber Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Colossal Mana Flask": {
+					"text": null,
+					"items": {
+						"Wellwater Phylactery": {
+							"text": "Drops from the Uber Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Turquoise Amulet": {
+					"text": null,
+					"items": {
+						"Haunting Memories": {
+							"text": "Drops from the Uber Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Spiny Round Shield": {
+					"text": null,
+					"items": {
+						"Bitter Instinct": {
+							"text": "Drops from the Uber Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Demon Dagger": {
+					"text": null,
+					"items": {
+						"Festering Resentment": {
+							"text": "Drops from the Uber Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Imperial Bow": {
+					"text": null,
+					"items": {
+						"Wing of the Wyvern": {
+							"text": "Drops from the Uber Incarnation of Fear",
+							"priority": -5
+						}
+					}
+				},
+				"Lion Sword": {
+					"text": null,
+					"items": {
+						"The Golden Charlatan": {
+							"text": "Drops from the Uber Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Fugitive Ring": {
+					"text": null,
+					"items": {
+						"The Sundered Will": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Synaptic Ring": {
+					"text": null,
+					"items": {
+						"The Will of Esh": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Cryonic Ring": {
+					"text": null,
+					"items": {
+						"The Will of Tul": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Organic Ring": {
+					"text": null,
+					"items": {
+						"The Will of Uul-Netol": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Enthalpic Ring": {
+					"text": null,
+					"items": {
+						"The Will of Xoph": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Hand of the Lords": {
+					"text": null,
+					"items": {
+						"Carnal Mitts": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Spectral Axe": {
+					"text": null,
+					"items": {
+						"The Grey Wind": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
 						}
 					}
 				},
@@ -5363,12 +5524,12 @@
 							"priority": -5
 						},
 						"The Blue Dream": {
-							"text": "Drops from Chayula's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Blue Nightmare": {
-							"text": "Drops from Chayula's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Transcendent Mind": {
 							"text": "Does not drop. Created with a Vial.",
@@ -5484,12 +5645,12 @@
 							"priority": -10
 						},
 						"The Green Dream": {
-							"text": "Drops from Chayula's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Green Nightmare": {
-							"text": "Drops from Chayula's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Careful Planning": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
@@ -5605,12 +5766,12 @@
 							"priority": -5
 						},
 						"The Red Nightmare": {
-							"text": "Drops from Chayula's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Red Dream": {
-							"text": "Drops from Chayula's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Transcendent Flesh": {
 							"text": "Does not drop. Created with a Vial.",
