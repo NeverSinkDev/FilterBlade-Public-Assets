@@ -128,8 +128,15 @@
 		"RuthlessOnly": {
 			"displayName": "Ruthless exclusive",
 			"iconPath": "assets/img/Icons/AccordionIcons/EternalOrb.png",
-			"description": "Can only drop in ruthless",
-			"isHiddenByDefault": false,
+			"description": "Only obtainable in Ruthless leagues",
+			"isHiddenByDefault": true,
+			"group": "currency3"
+		},
+		"StandardOnly": {
+			"displayName": "Standard Exclusive",
+			"iconPath": "assets/img/Icons/AccordionIcons/Breachstone.png",
+			"description": "Only obtainable in Standard leagues",
+			"isHiddenByDefault": true,
 			"group": "currency3"
 		},
 
@@ -192,8 +199,12 @@
 					"tags": ["Heist", "BossDrop"]
 				},
 
-				"Veiled Orb": {
-					"text": "Drops from Catarina<br>Removes a random modifier and adds a random veiled modifier to a rare item.",
+				"Veiled Exalted Orb": {
+					"text": "Drops from Catarina<br>Removes a random modifier and adds a random Veiled modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Veiled Chaos Orb": {
+					"text": "Drops from Safehouse Leaders<br>Reforges a rare item with new random modifiers including a random Veiled modifier",
 					"tags": ["BossDrop"]
 				},
 
@@ -306,7 +317,7 @@
 				},
 				"Otherworldly Scouting Report": {
 					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Breachstone",
-					"tags": ["Report", "BossDrop"]
+					"tags": ["Report", "BossDrop", "StandardOnly"]
 				},
 				"Blighted Scouting Report": {
 					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Blighted Map",
@@ -379,24 +390,24 @@
 				},
 
 				"Blessing of Chayula": {
-					"text": "Drops from Chayula<br>Upgrades a Chayula unique item or breachstone to a more powerful version",
-					"tags": ["Breach", "BossDrop"]
+					"text": "Drops from Chayula<br>Upgrades a Chayula breachstone to a more powerful version",
+					"tags": ["StandardOnly"]
 				},
 				"Blessing of Uul-Netol": {
-					"text": "Drops from Uul-Netol<br>Upgrades a Uul-Netol unique item or breachstone to a more powerful version",
-					"tags": ["Breach", "BossDrop"]
+					"text": "Drops from Uul-Netol<br>Upgrades a Uul-Netol breachstone to a more powerful version",
+					"tags": ["StandardOnly"]
 				},
 				"Blessing of Esh": {
-					"text": "Drops from Esh<br>Upgrades a Esh unique item or breachstone to a more powerful version",
-					"tags": ["Breach", "BossDrop"]
+					"text": "Drops from Esh<br>Upgrades a Esh breachstone to a more powerful version",
+					"tags": ["StandardOnly"]
 				},
 				"Blessing of Tul": {
-					"text": "Drops from Tul<br>Upgrades a Tul unique item or breachstone to a more powerful version",
-					"tags": ["Breach", "BossDrop"]
+					"text": "Drops from Tul<br>Upgrades a Tul breachstone to a more powerful version",
+					"tags": ["StandardOnly"]
 				},
 				"Blessing of Xoph": {
-					"text": "Drops from Xoph<br>Upgrades a Xoph unique item or breachstone to a more powerful version",
-					"tags": ["Breach", "BossDrop"]
+					"text": "Drops from Xoph<br>Upgrades a Xoph breachstone to a more powerful version",
+					"tags": ["StandardOnly"]
 				},
 
 				"Burial Medallion": {
@@ -489,30 +500,6 @@
 					"text": "A stack of 20 shards becomes an Orb of Transmutation",
 					"tags": ["Harbinger", "LeagueDrop"]
 				},
-				"Deregulation Scroll": {
-					"text": "Used to upgrade The Tempest's Binding to The Tempest's Liberation. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"] 
-					},
-				"Electroshock Scroll": {
-					"text": "Used to upgrade The Rippling Thoughts to The Surging Thoughts. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"]  
-					},
-				"Fragmentation Scroll": {
-					"text": "Used to upgrade The Fracturing Spinner to The Shattered Divinity. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"]  
-					},
-				"Haemocombustion Scroll": {
-					"text": "Used to upgrade The Enmity Divine to The Yielding Mortality. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"] 
-					},
-				"Specularity Scroll": {
-					"text": "Used to upgrade The Unshattered Will to The Immortal Will. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"]  
-					},
-				"Time-light Scroll": {
-					"text": "Used to upgrade The Flow Untethered to The Torrent's Reclamation. Drops from boss portal in Infused Beachhead Maps",
-					"tags": ["Harbinger", "BossDrop"]  
-				},
 
 				"Awakener's Orb": {
 					"text": "Drops from Sirus<br>Destroys an item, applying its influence to another of the same item class. The second item is reforged as a rare item with both influence types and new modifiers",
@@ -520,6 +507,18 @@
 				},
 				"Orb of Dominance": {
 					"text": "Drops from Sirus, Shaper and Elder<br>Removes one Influenced Modifier from an item with at least two Influenced Modifiers and upgrades another Influenced Modifier",
+					"tags": ["BossDrop"]
+				},
+				"Orb of Remembrance": {
+					"text": "Drops from the Incarnation of Neglect<br>Randomises the number of Memory Strands on a normal equiment itemr",
+					"tags": ["BossDrop"]
+				},
+				"Orb of Unravelling": {
+					"text": "Drops from the Incarnation of Dread<br>Consumes all Memory Strands on an item to attempt to upgrade the tier of explicit modifiers based on the number of Memoty Strands consumed",
+					"tags": ["BossDrop"]
+				},
+				"Orb of Intention": {
+					"text": "Drops from the Incarnation of Fear<br>Modifies a Memory Influenced Map, causing items found to have more Memory Strands, but fewer items drop",
 					"tags": ["BossDrop"]
 				},
 				"Hunter's Exalted Orb": {
@@ -538,6 +537,14 @@
 					"text": "Drops from Baran, The Crusader<br>Adds Crusader influence and a new Crusader modifier to a rare item",
 					"tags": ["BossDrop"]
 				},
+				"Shaper's Exalted Orb": {
+					"text": "Drops from The Shaper or Uber Elder<br>Adds Shaper influence and a new Shaper modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
+				"Elder's Exalted Orb": {
+					"text": "Drops from The Elder or Uber Elder<br>Adds Elder influence and a new Elder modifier to a rare item",
+					"tags": ["BossDrop"]
+				},
 				"Orb of Conflict": {
 					"text": "Drops from Maven or in Maven's Crucible<br>Unpredictably raise the strength of one Searing Exarch or Eater of Worlds modifier on an item and lower the strength of another",
 					"tags": ["BossDrop"]
@@ -545,6 +552,10 @@
 
 				"Mirror of Kalandra": {
 					"text": "Creates a mirrored copy of an item",
+					"tags": ["Generic"]
+				},
+				"Hinekora's Lock": {
+					"text": "Allows an item to foresee the result of the next Currency item used on it. Modifying the item in any way removes the ability to foresee",
 					"tags": ["Generic"]
 				},
 				"Sacred Orb": {
@@ -681,15 +692,8 @@
 					"tags": ["Meme"]
 				},
 
-				"Bestiary Orb": {
-					"text": "Stores a Beast in an item",
-					"tags": ["NonDrop"]
-				},
 				"Facetor's Lens": {
 					"text": "Adds stored experience to a gem, up to its maximum level",
-					"tags": ["NonDrop"]
-				},
-				"Infused Engineer's Orb": {
 					"tags": ["NonDrop"]
 				},
 
@@ -721,7 +725,55 @@
 				"Reflecting Mist": {
 					"text": "Unpredictably reflects a rare amulet or ring, breaking it into two mirrored halves with reflected modifiers",
 					"tags": ["LeagueDrop"]
+				},
+
+				"Foulborn Orb of Augmentation": {
+					"text": "Augments a Magic item with a new random modifier with higher level modifiers being more likely",
+					"tags": ["LeagueDrop"]
+				},
+				"Foulborn Regal Orb": {
+					"text": "Upgrades a Magic item to a Rare item with higher level modifiers being more likely",
+					"tags": ["LeagueDrop"]
+				},
+				"Foulborn Exalted Orb": {
+					"text": "Augments a Rare item with a new random modifier with higher level modifiers being more likely",
+					"tags": ["LeagueDrop"]
+				},
+				"Augmentation Implant": {
+					"text": "Augments a Magic Graft with a new random modifier",
+					"tags": ["LeagueDrop"]
+				},
+				"Regal Implant": {
+					"text": "Upgrades a Magic Graft to a Rare Graft",
+					"tags": ["LeagueDrop"]
+				},
+				"Exalted Implant": {
+					"text": "Augments a Rare Graft with a new random modifier",
+					"tags": ["LeagueDrop"]
+				},
+				"Unstable Implant": {
+					"text": "Corrupts a Graft, either destroying it entirely or replacing the implicit with a powerful modifier. This does not replace the Skill the Graft will use",
+					"tags": ["LeagueDrop"]
+				},
+
+				"Valdo's Puzzle Box": {
+					"text": "Contains a Mysterious Map with a Foil Unique Reward",
+					"tags": ["Generic"]
+				},
+				"Ritual Splinter": {
+					"text": "Combine 100 Splinters to create a Ritual Vessel",
+					"tags": ["LeagueDrop"]
+				},
+				"Ritual Vessel": {
+					"text": "Stores the monsters slain for the first time from a completed Ritual Altar for future use",
+					"tags": ["LeagueDrop"]
+				},
+				"Crescent Splinter": {
+					"text": "Combine 10 Crescent Splinters to create The Maven's Writ",
+					"tags": ["BossDrop"]
 				}
+
+				
 			}
 		},
 
@@ -867,7 +919,8 @@
 					"text": "Modifies a Map item adding layers of Delirium with the Trinkets reward type"
 				},
 				"Obscured Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Breach Items reward type"
+					"text": "Modifies a Map item adding layers of Delirium with the Breach Items reward type",
+					"tags": ["StandardOnly"]
 				},
 				"Singular Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Unique Items reward type"
@@ -985,7 +1038,8 @@
 					"text" : "Awards a Delirium item. Usually simulacrum splinters or delirium orbs"
 				},
 				"Obscured Incubator" : {
-					"text" : "Awards a Breach item. Usually splinters or scarabs."
+					"text" : "Awards a Breach item. Usually splinters or scarabs.",
+					"tags": ["StandardOnly"]
 				},
 				"Ornate Incubator" : {
 					"text" : "Awards a Currency item."
@@ -1626,7 +1680,7 @@
 					"tags": ["MapOutcome"]
 				},
 				"The Emptiness": {
-					"tags": ["GemOutcome"]
+					"tags": ["GemOutcome", "StandardOnly"]
 				},
 				"The Encroaching Darkness": {
 					"tags": ["MapOutcome", "UniqueOutcome"]
@@ -1656,7 +1710,7 @@
 					"tags": ["MapOutcome"]
 				},
 				"The Eye of Terror": {
-					"tags": ["MapOutcome"]
+					"tags": ["MapOutcome", "StandardOnly"]
 				},
 				"The Eye of the Dragon": {
 					"tags": ["UniqueOutcome"]
@@ -1818,7 +1872,7 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"The Obscured": {
-					"tags": ["MapOutcome"]
+					"tags": ["MapOutcome", "StandardOnly"]
 				},
 				"The Offering": {
 					"tags": ["UniqueOutcome"]
@@ -1878,7 +1932,7 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"The Puzzle": {
-					"tags": ["MapOutcome"]
+					"tags": ["MapOutcome", "StandardOnly"]
 				},
 				"The Queen": {
 					"tags": ["UniqueOutcome"]
@@ -2196,164 +2250,301 @@
 					"tags": ["UniqueOutcome"]
 				},
 				"Avian Pursuit": {
-					"tags": ["MapOutcome"]
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Bargain": {
+					"tags": ["MapOutcome", "StandardOnly"]
+				},
+				"The Mayor": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Monochrome": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Sambodhi's Wisdom": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Squandered Prosperity": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Underground Forest": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"The Last Laugh": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Lake": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Bound by Flame": {
+					"tags": ["GemOutcome"]
+				},
+				"Outfoxed": {
+					"tags": ["CurrencyOutcome"]
 				}
 			}
 		},
 
 		"Fragment": {
 			"items": {
-				"Gift to the Goddess": {
-					"text": null
+				"Sacrifice at Dusk": {
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
 				},
-				"Timeless Maraketh Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Maraketh Splinters"
+				"Sacrifice at Midnight": {
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
 				},
-				"Dedication to the Goddess": {
-					"text": null
+				"Sacrifice at Dawn": {
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
 				},
-				"Tribute to the Goddess": {
-					"text": "The Labyrinth's rewards are enriched."
-				},
+				"Sacrifice at Noon": {
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
+				},	
+
 				"Mortal Grief": {
-					"text": "Top left Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
 				},
 				"Mortal Rage": {
-					"text": "Top right Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
 				},
 				"Mortal Ignorance": {
-					"text": "Bottom left Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
-					},
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
+				},
 				"Mortal Hope": {
-					"text": "Bottom right Mortal Fragment, once combined with the other Mortal Fragments in the map device it will grant access to the The Alluring Abyss. When put in the map device with a regular map, it adds 10% item quantity to that map."
-					},
-				"Divine Vessel": {
-					"text": "Used in the map device to make the map boss more powerful, and if they are killed, it also captures their soul to unlock additional bonuses on The Pantheon."
-					},
-				"Sacrifice at Dusk": {
-					"text": "Top left Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
-					},
-				"Sacrifice at Midnight": {
-					"text": "Top right Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
-					},
-				"Sacrifice at Dawn": {
-					"text": "Bottom right Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
-					},
-				"Sacrifice at Noon": {
-					"text": "Bottom left Sacrifice fragment, once combined with the other Sacrifice Fragments it will grant access to the The Apex of Sacrifice. If combined with a map it will add +5% item quantity per unque sacrifice fragment. Used by itself will open a vaal side area like map."
-					},
-				"Sacred Blossom": {
-					"text": "Used by itself in the map device it will grant access to The Sacred Grove to fight Oshabi. Chance to drop from T4 Harvest monsters (Janaar, the Omen, Namharim, Born of Night, and Ersi, Mother of Thorns)."
-					},
-				"The Maven's Writ": {
-					"text": "Used by itself in the map device it will grant access to The Mavens Crucible to fight The Maven herself."
-					},
-				"Al-Hezmin's Crest": {
-					"text": "Guaranteed to drop upon killing Al-Hezmin, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-					},
-				"Baran's Crest": {
-					"text": "Guaranteed to drop upon killing Baran, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-					},
-				"Drox's Crest": {
-					"text": "Guaranteed to drop upon killing Drox, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-					},
-				"Veritania's Crest": {
-					"text": "Guaranteed to drop upon killing Veritania, Combined with the other Elderslayer Crests in the map device it will open portals to fight Sirus, Awakener of Worlds. If combined with a map it will add +10% Item Quantity to the area"
-					},
-				"Fragment of Constriction": {
-					"text": "Guaranteed to drop upon killing The Constrictor, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-					},
-				"Fragment of Enslavement": {
-					"text": "Guaranteed to drop upon killing The Enslaver, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-					},
-				"Fragment of Eradication": {
-					"text": "Guaranteed to drop upon killing The Eradicator, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-					},
-				"Fragment of Purification": {
-					"text": "Guaranteed to drop upon killing The Purifier, Combined in the map device with the other Elder Guardian fragments it will grant access to the Absence of Value and Meaning to fight The Elder. If combined with a map it will add +5% Item Quantity to the area"
-					},
-				"Fragment of Shape": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper"
-					},
-				"Fragment of Terror": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder"
-					},
-				"Fragment of Knowledge": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Shaper"
-					},
-				"Fragment of Emptiness": {
-					"text": "it will grant access to fight Uber Elder. Chance to drop from The Elder"
-					},
-				"Simulacrum": {
-					"text": "Placed into a map device it opens up 6 portals to a 30 wave fight. Increasing in difficulty with each wave. Aquired by combining 300 Simulacrum Splinters"
-					},
-				"Timeless Templar Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Templar Splinters"
-					},
-				"Unrelenting Timeless Eternal Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-					},
-				"Unrelenting Timeless Karui Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-					},
-				"Unrelenting Timeless Maraketh Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-					},
-				"Unrelenting Timeless Templar Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-					},
-				"Unrelenting Timeless Vaal Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained within the Domain of Timeless Conflict"
-					},
-				"Blood-filled Vessel": {
-					"text": "When used a map in the Map Device, it adds a Ritual encounter to the instance, while also adding the stored monsters to the Ritual."
-					},
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
+				},
+
 				"Fragment of the Chimera": {
-					"text": "Guaranteed drop when killing Guardian of the Chimera, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
-					},
+					"text": "Fragment for The Shaper fight<br>Drops from Guardian of the Chimera"
+				},
 				"Fragment of the Phoenix": {
-					"text": "Guaranteed drop when killing Guardian of the Hydra, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
-					},
+					"text": "Fragment for The Shaper fight<br>Drops from Guardian of the Phoenix"
+				},
 				"Fragment of the Hydra": {
-					"text": "Guaranteed drop when killing Guardian of the Hydra, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
-					},
+					"text": "Fragment for The Shaper fight<br>Drops from Guardian of the Hydra"
+				},
 				"Fragment of the Minotaur": {
-					"text": "Guaranteed drop when killing Guardian of the Minotaur, Combined with the other Shaper Guardian fragments it will grant access to The Shapers Realm. If combined with a map it will add +5% item quantity to the area"
-					},
-				"Offering to the Goddess": {
-					"text": "Used as payment to enter The Eternal Labyrinth."
-					},
-				"Timeless Eternal Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Eternal Splinters"
-					},
-				"Timeless Karui Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Karui Splinters"
-					},
-				"Timeless Vaal Emblem": {
-					"text": "Used in the map device along with either one or all other Emblem types to travel to the Domain of Timeless Conflict. Obtained by combining 100 Timeless Vaal Splinters"
-					},
+					"text": "Fragment for The Shaper fight<br>Drops from Guardian of the Minotaur"
+				},
+
+				"Fragment of Constriction": {
+					"text": "Fragment for The Elder fight<br>Drops from The Constrictor"
+				},
+				"Fragment of Enslavement": {
+					"text": "Fragment for The Elder fight<br>Drops from The Enslaver"
+				},
+				"Fragment of Eradication": {
+					"text": "Fragment for The Elder fight<br>Drops from The Eradicator"
+				},
+				"Fragment of Purification": {
+					"text": "Fragment for The Elder fight<br>Drops from The Purifier"
+				},
+
+				"Fragment of Shape": {
+					"text": "Fragment for the Uber Elder fight<br>Drops from The Shaper(Normal Shaper)"
+				},
+				"Fragment of Knowledge": {
+					"text": "Fragment for the Uber Elder fight<br>Drops from The Shaper(Normal Shaper)"
+				},
+				"Fragment of Terror": {
+					"text": "Fragment for the Uber Elder fight<br>Drops from The Elder(Normal Elder)"
+				},
+				"Fragment of Emptiness": {
+					"text": "Fragment for the Uber Elder fight<br>Drops from The Elder(Normal Elder)"
+				},
+
+				"Al-Hezmin's Crest": {
+					"text": "Fragment for the Sirus, Awakener of Worlds fight<br>Drops from Al-Hezmin, the Hunter"
+				},
+				"Baran's Crest": {
+					"text": "Fragment for the Sirus, Awakener of Worlds fight<br>Drops from Baran, the Crusader"
+				},
+				"Drox's Crest": {
+					"text": "Fragment for the Sirus, Awakener of Worlds fight<br>Drops from Drox, the Warlord"
+				},
+				"Veritania's Crest": {
+					"text": "Fragment for the Sirus, Awakener of Worlds fight<br>Drops from Veritania, the Redeemer"
+				},
+
+				"The Maven's Writ": {
+					"text": "Opens The Maven fight<br>Drops from Maven's Invitations(as Crescent Splinters)"
+				},
+
+				"Echo of Loneliness": {
+					"text": "Opens the Incarnation of Neglect fight<br>Drops from The Neglected Flame"
+				},
+				"Echo of Reverence": {
+					"text": "Opens the Incarnation of Dread fight<br>Drops from The Deceitful God"
+				},
+				"Echo of Trauma": {
+					"text": "Opens the Incarnation of Fear fight<br>Drops from The Cardinal of Fear"
+				},
+
+				"Reality Fragment": {
+					"text": "Fragment for the Uber Maven fight<br>Drops from T17 map bosses"
+				},
+				"Awakening Fragment": {
+					"text": "Fragment for the Uber Sirus fight<br>Drops from T17 map bosses"
+				},
+				"Blazing Fragment": {
+					"text": "Fragment for the Uber Exarch fight<br>Drops from T17 map bosses"
+				},
+				"Devouring Fragment": {
+					"text": "Fragment for the Uber Eater fight<br>Drops from T17 map bosses"
+				},
+				"Cosmic Fragment": {
+					"text": "Fragment for the Uber Shaper fight<br>Drops from T17 map bosses"
+				},
+				"Decaying Fragment": {
+					"text": "Fragment for the Uber Uber Elder fight<br>Drops from T17 map bosses"
+				},
+				"Synthesising Fragment": {
+					"text": "Fragment for the Uber Cortex fight<br>Drops from T17 map bosses"
+				},
+				"Lonely Fragment": {
+					"text": "Fragment for the Uber Incarnation of Neglect fight<br>Drops from T17 map bosses"
+				},
+				"Reverent Fragment": {
+					"text": "Fragment for the Uber Incarnation of Dread fight<br>Drops from T17 map bosses"
+				},
+				"Traumatic Fragment": {
+					"text": "Fragment for the Uber Incarnation of Fear fight<br>Drops from T17 map bosses"
+				},
+
+				"Sacred Blossom": {
+					"text": "Opens the Oshabi, Avatar of the Grove fight<br>Drops from T4 Harvest monsters<br>Unlocks a bloodline"
+				},
 				"An Audience With The King": {
-					"text": "Grants access to the King in the Mists boss fight"
-					}
+					"text": "Opens The King in the Mists fight<br>Offered as a reward in rituals<br>Unlocks a bloodline"
+				},
+				"Syndicate Medallion": {
+					"text": "Opens the Catarina, Master of Undeath fight(The Mastermind)<br>Drops from the Safehouse leaders in Safehouses<br>Unlocks a bloodline"
+				},
+				"Simulacrum": {
+					"text": "Opens the Simularum encounter<br>Drops in form of splinters from delirium encounters<br>Unlocks a bloodline"
+				},
+
+				"Offering to the Goddess": {
+					"text": "Opens The Eternal Labyrinth"
+				},
+				"Gift to the Goddess": {
+					"text": "Opens The Eternal Labyrinth of Opportunity<br>Divine Font grants 6 additional uses<br>Drops at the end of upgraded Trial of Ascendancy"
+				},
+				"Dedication to the Goddess": {
+					"text": "Opens The Eternal Labyrinth of Opportunity<br>Divine Font offers Corrupted Gem crafting options<br>Drops at the end of upgraded Trial of Ascendancy"
+				},
+				"Tribute to the Goddess": {
+					"text": "Opens The Eternal Labyrinth of Fortune<br>Reward Chests are improved<br>Drops at the end of upgraded Trial of Ascendancy"
+				},
+
+				"Divine Vessel": {
+					"text": "Used to unlock additional Pantheon bonuses"
+				},
+
+				"Blood-filled Vessel": {
+					"text": "Adds the monsters stored from a previous Ritual Altar to a Ritual Altar in the map"
+				},
+
+				"Timeless Eternal Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Legion encounters(as splinters)"
+				},
+				"Timeless Karui Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Legion encounters(as splinters)"
+				},
+				"Timeless Vaal Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Legion encounters(as splinters)"
+				},
+				"Timeless Templar Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Legion encounters(as splinters)"
+				},
+				"Timeless Maraketh Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Legion encounters(as splinters)"
+				},
+
+				"Unrelenting Timeless Eternal Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
+				},
+				"Unrelenting Timeless Karui Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
+				},
+				"Unrelenting Timeless Maraketh Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
+				},
+				"Unrelenting Timeless Templar Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
+				},
+				"Unrelenting Timeless Vaal Emblem": {
+					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
+				},
+
+				"Xoph's Breachstone": {
+					"text": "Grants access to Xoph's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["StandardOnly"]
+				},
+				"Tul's Breachstone": {
+					"text": "Grants access to Tul's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["StandardOnly"]
+				},
+				"Esh's Breachstone": {
+					"text": "Grants access to Esh's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["StandardOnly"]
+				},
+				"Uul-Netol's Breachstone": {
+					"text": "Grants access to Uul-Netol's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["StandardOnly"]
+				},
+				"Chayula's Breachstone": {
+					"text": "Grants access to Chayula's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["StandardOnly"]
+				},
+
+				"Xoph's Flawless Breachstone": {
+					"text": "Grants access to upgraded Xoph's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["StandardOnly"]
+				},
+				"Tul's Flawless Breachstone": {
+					"text": "Grants access to upgraded Tul's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["StandardOnly"]
+				},
+				"Esh's Flawless Breachstone": {
+					"text": "Grants access to upgraded Esh's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["StandardOnly"]
+				},
+				"Uul-Netol's Flawless Breachstone": {
+					"text": "Grants access to upgraded Uul-Netol's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["StandardOnly"]
+				},
+				"Chayula's Flawless Breachstone": {
+					"text": "Grants access to upgraded Chayula's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
+					"tags": ["StandardOnly"]
+				},
+
+				"Hivebrain Gland": {
+					"text": "Breach encounter in Area will be a Breachlord's Hive"
+				}
 			}
 		},
 
 		"Scarab": {
 			"items": {
 				"Breach Scarab": {
-					"text": "Area contains 2 additional Breaches"
+					"text": "Area contains 2 additional Breaches",
+					"tags": ["StandardOnly"]
 				},
 				"Breach Scarab of Lordship": {
-					"text": "Breaches in Area each contain a Breachlord"
+					"text": "Breaches in Area each contain a Breachlord",
+					"tags": ["StandardOnly"]
 				},
 				"Breach Scarab of Splintering": {
-					"text": "Breach Monsters in Area drop 50% more Breach Splinters<br>Clasped Hands in Area drop 50% more Breach Splinters"
+					"text": "Breach Monsters in Area drop 50% more Breach Splinters<br>Clasped Hands in Area drop 50% more Breach Splinters",
+					"tags": ["StandardOnly"]
 				},
 				"Breach Scarab of Snares": {
-					"text": "Breaches in Area have 5 to 10 additional Clasped Hands<br>Clasped Hands in Area are guarded by a rare Breach Monster"
+					"text": "Breaches in Area have 3 to 5 additional Clasped Hands<br>Clasped Hands in Area are guarded by a rare Breach Monster",
+					"tags": ["StandardOnly"]
 				},
 				"Breach Scarab of Resonant Cascade": {
-					"text": "Breaches in Areas open and close 10% faster for each Breach already opened<br>Monsters from Breaches in Areas have increased Difficulty and Reward foreach Breach already opened"
+					"text": "Breaches in Areas open and close 10% faster for each Breach already opened<br>Monsters from Breaches in Areas have increased Difficulty and Reward foreach Breach already opened",
+					"tags": ["StandardOnly"]
 				},
 
 				"Cartography Scarab of Escalation": {
@@ -2366,7 +2557,7 @@
 					"text": "Non-Unique Maps found in Area are Corrupted with 8 Modifiers"
 				},
 				"Cartography Scarab of Risk": {
-					"text": "Area has an additional random Modifier"
+					"text": "Area has 2 additional random Modifiers"
 				},
 
 				"Bestiary Scarab": {
@@ -2403,7 +2594,7 @@
 					"text": "Divination Cards which drop in Area are stolen by a Final Map Boss<br>That Final Map Boss has increased Toughness and deals increased Damage the more Divination Cards they have stolen<br>That Final Map Boss duplicates all stolen Divination Cards when defeated"
 				},
 				"Divination Scarab of Plenty": {
-					"text": "Up to 3 Packs of Magic Monsters in Area have 800% increased chance to drop Divination Cards"
+					"text": "Up to 6 to 10 Packs of Magic Monsters in Area have 1000% increased chance to drop Divination Cards"
 				},
 				"Divination Scarab of The Cloister": {
 					"text": "Area contains 8 to 12 additional packs of Doedre's Devoted<br>Doedre's Devoted have 1% additional chance to drop a Stacked Deck"
@@ -2420,7 +2611,7 @@
 				},
 
 				"Ambush Scarab": {
-					"text": "Area contains 5 additional Strongboxes"
+					"text": "Area contains 3 additional Strongboxes"
 				},
 				"Ambush Scarab of Hidden Compartments": {
 					"text": "15% Chance for Strongboxes in Area to be openable again"
@@ -2455,7 +2646,7 @@
 					"text": "Expedition Encounters in Area have 100% increased number of Runic Monster Markers"
 				},
 				"Expedition Scarab of Verisium Powder": {
-					"text": "Expedition Encounters in Area have 20% increased number of Explosives<br>80% increased Explosive Radius"
+					"text": "Expedition Encounters in Area have 50% increased number of Explosives<br>80% increased Explosive Radius"
 				},
 				"Expedition Scarab of Archaeology": {
 					"text": "Remnants in Expedition Encounters in Area have 2 additional Suffixes and Prefixes"
@@ -2478,10 +2669,10 @@
 					"text": "Area contains an additional Abyss"
 				},
 				"Abyss Scarab of Multitudes": {
-					"text": "Abysses in Area spawn 75% increased Monsters"
+					"text": "Abysses in Area spawn 50% increased Monsters"
 				},
 				"Abyss Scarab of Edifice": {
-					"text": "Abysses in Area that do not lead to an Abyssal Depths lead to a Stygian Spire<br>Abysses in Area spawn Hoards as they travel"
+					"text": "Abyss pits in Area that do not lead to an Abyssal Depths or spawn an Abyssal Trove will spawn Minor Stygian Spires"
 				},
 				"Abyss Scarab of Profound Depth": {
 					"text": "Monsters from Abysses in Areas have increased Difficulty and Reward for each prior Pit in that Abyss"
@@ -2530,7 +2721,7 @@
 					"text": "Rerolling Favours at Ritual Altars in Area has no cost the first 2 times<br>Ritual Altars in Area allow rerolling Favours 1 additional time"
 				},
 				"Ritual Scarab of Wisps": {
-					"text": "Ritual Altars in Area spawn a Wildwood Wisp<br>Wildwood Wisps grant 70% increased Tribute Gained to nearby Players"
+					"text": "Ritual Altars in Area spawn a Wildwood Wisp<br>Wildwood Wisps grant 100% increased Tribute Gained to nearby Players"
 				},
 				"Ritual Scarab of Abundance": {
 					"text": "Rituals in Area offer 100% increased Favours"
@@ -2562,8 +2753,8 @@
 				"Betrayal Scarab": {
 					"text": "Area contains Jun"
 				},
-				"Betrayal Scarab of Intelligence": {
-					"text": "150% Increased Intelligence gained from Immortal Syndicate targets encountered in Area"
+				"Betrayal Scarab of the Allflame": {
+					"text": "75% Increased number of Monster Packs Substituted by Allflame Embers in Area"
 				},
 				"Betrayal Scarab of Reinforcements": {
 					"text": "Immortal Syndicate Members in Area have 50% increased chance to be accompanied by reinforcements"
@@ -2573,7 +2764,7 @@
 					"text": "Slaying enemies close together in Area can attract monsters from Beyond this realm"
 				},
 				"Beyond Scarab of Haemophilia": {
-					"text": "Beyond Portals in Area have 30% increased Merging Radius"
+					"text": "Beyond Portals in Area have 50% increased Merging Radius"
 				},
 				"Beyond Scarab of Resurgence": {
 					"text": "Beyond Bosses in Area are enraged on low life<br>Beyond Bosses in Area drop 100% increased Tainted Currency<br>Beyond Portals in Area have 30% increased chance to spawn a Unique Boss"
@@ -2668,22 +2859,57 @@
 					"text": "All Rare and Unique Monsters in Area have dropped items transformed by a Reward Modifier"
 				},
 				"Horned Scarab of Glittering": {
-					"text": "Players in Area gain increased Item Rarity and Item Quantity for each Monster slain recently, up to 200% and 100% respectively"
+					"text": "Players in Area gain increased Item Rarity for each Monster slain recently, up to 400%"
 				},
 				"Horned Scarab of Pandemonium": {
 					"text": "Monster packs in Area have a 15% chance to be replaced by a random Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
 				},
 
 				"Titanic Scarab": {
-					"text": "Unique Monsters have 2% increased Toughness, Damage, Rarity and Quantity of items dropped per 1% increased Pack Size of Area"
+					"text": "Unique Monsters have 1% increased Toughness, Damage, Rarity and Quantity of items dropped per 1% increased Pack Size of Area"
 				},
 				"Titanic Scarab of Legend": {
 					"text": "Unique Monsters in Area have 2 additional Monster Modifiers"
 				},
 				"Titanic Scarab of Treasures": {
-					"text": "Unique Monsters in Area have 2 additional Rewards<br>Unique Monsters in Area have 30% increased Toughness"
-				}
+					"text": "Unique Monsters in Area have an additional Reward<br>Unique Monsters in Area have 30% increased Toughness"
+				},
 
+				"Kalguuran Scarab of Abundance": {
+					"text": "Area contains an additional Ore Deposit"
+				},
+				"Kalguuran Scarab of Guarded Riches": {
+					"text": "Monsters guarded Ore Deposits in Area are at least Magic"
+				},
+				"Kalguuran Scarab of Refinement": {
+					"text": "Ore Deposits in Area grant Smelted Bars instead of Marking Ore"
+				},
+
+				"Allflame Ember of Flesh": {
+					"text": "Drops from Safehouse leaders in Safehouses<br>Pack has single Monster<br>Monster has greatly increased Life"
+				},
+				"Allflame Ember of the Ethereal": {
+					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Monsters cannot drop Equipment, Flasks or Tinctures"
+				},
+				"Allflame Ember of the Gilded": {
+					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Monster Equipment Drops are converted to Gold"
+				},
+				"Allflame Ember of the Wildwood": {
+					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Leader Empowers Map Bosses with Wildwood Wisps when slain"
+				},
+				"Allflame Ember of Toads": {
+					"text": "Drops from Safehouse leaders in Safehouses<br>Pack Monsters are Harmless Toads"
+				},
+
+				"Allflame Ember of Kulemak": {
+					"text": "Drops from Catarina<br>Pack monsters revive after Map Boss has been slain"
+				},
+				"Allflame Ember of Propagation": {
+					"text": "Drops from Catarina<br>Pack Monsters that die when Rare spread Modifiers to other Rare Monsters in Area"
+				},
+				"Allflame Ember of Resplendence": {
+					"text": "Drops from Catarina<br>Pack Monsters do not drop items<br>Pack Monsters grant increased Item Rarity when slain, up to 400%, decaying over time"
+				}
 			}
 		},
 
@@ -2755,12 +2981,12 @@
 					"text": null,
 					"items": {
 						"United in Dream": {
-							"text": "Drops from Chayula's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Severed in Sleep": {
-							"text": "Drops from Chayula's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -2790,12 +3016,12 @@
 							"priority": -5
 						},
 						"Uul-Netol's Embrace": {
-							"text": "Drops from Uul-Netol's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Uul-Netol's Kiss": {
-							"text": "Drops from Uul-Netol's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -2846,6 +3072,10 @@
 						},
 						"Atziri's Rule": {
 							"text": "Drops from Uber Atziri.",
+							"priority": -5
+						},
+						"Legacy of the Rose": {
+							"text": "Drops from the Incarnation of Neglect",
 							"priority": -5
 						}
 					}
@@ -2902,12 +3132,12 @@
 					"text": null,
 					"items": {
 						"Hand of Wisdom and Action": {
-							"text": "Drops from Esh's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Hand of Thought and Motion": {
-							"text": "Drops from Esh's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3013,12 +3243,12 @@
 							"priority": -5
 						},
 						"Xoph's Nurture": {
-							"text": "Drops from Xoph's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Xoph's Inception": {
-							"text": "Drops from Xoph's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3053,12 +3283,12 @@
 					"text": null,
 					"items": {
 						"Tulfall": {
-							"text": "Drops from Tul's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Tulborn": {
-							"text": "Drops from Tul's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3084,7 +3314,7 @@
 					"text": null,
 					"items": {
 						"Cane of Kulemak": {
-							"text": "Drops from Catarina (Jun Boss).",
+							"text": "Drops from Catarina",
 							"priority": -5
 						}
 					}
@@ -3221,12 +3451,12 @@
 							"priority": -3
 						},
 						"Esh's Visage": {
-							"text": "Drops from Esh's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Esh's Mirror": {
-							"text": "Drops from Esh's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3403,12 +3633,12 @@
 					"text": null,
 					"items": {
 						"The Surrender": {
-							"text": "Drops from Uul-Netol's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Anticipation": {
-							"text": "Drops from Uul-Netol's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3511,12 +3741,12 @@
 					"text": null,
 					"items": {
 						"The Red Trail": {
-							"text": "Drops from Uul-Netol's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Infinite Pursuit": {
-							"text": "Drops from Uul-Netol's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Doryani's Delusion": {
 							"text": "Drops in Doryani's Machinarium.",
@@ -3546,12 +3776,12 @@
 					"text": null,
 					"items": {
 						"The Perfect Form": {
-							"text": "Drops from Tul's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Snowblind Grace": {
-							"text": "Drops from Tul's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -3699,12 +3929,12 @@
 					"text": null,
 					"items": {
 						"The Formless Inferno": {
-							"text": "Drops from Xoph's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Formless Flame": {
-							"text": "Drops from Xoph's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Echoes of Creation": {
 							"text": "Drops from Uber Shaper.",
@@ -3758,6 +3988,10 @@
 						"Cowl of the Thermophile": {
 							"text": "Drops from Blighted Maps.",
 							"priority": -5
+						},
+						"Howlcrack": {
+							"text": "Drops from Mercenaries of Trarthus",
+							"priority": -8
 						}
 					}
 				},
@@ -4023,12 +4257,12 @@
 					"text": null,
 					"items": {
 						"The Pandemonius": {
-							"text": "Drops from Tul's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Halcyon": {
-							"text": "Drops from Tul's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -4036,12 +4270,12 @@
 					"text": null,
 					"items": {
 						"Xoph's Blood": {
-							"text": "Drops from Xoph's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Xoph's Heart": {
-							"text": "Drops from Xoph's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -4053,8 +4287,8 @@
 							"priority": -5
 						},
 						"Presence of Chayula": {
-							"text": "Does not drop. Created with a Blessing of Chayula.",
-							"priority": -10
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Aul's Uprising": {
 							"text": "Drops from Aul (Delve Boss).",
@@ -4219,12 +4453,12 @@
 					"text": null,
 					"items": {
 						"Choir of the Storm": {
-							"text": "Drops from Esh's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Voice of the Storm": {
-							"text": "Drops from Esh's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						}
 					}
 				},
@@ -4301,6 +4535,10 @@
 						"Polaric Devastation": {
 							"text": "Drops from The Black Star.",
 							"priority": -5
+						},
+						"The Unseen Hue": {
+							"text": "Drops from the Uber Incarnation of Fear",
+							"priority": -5
 						}
 					}
 				},
@@ -4325,6 +4563,10 @@
 						},
 						"Graven's Secret": {
 							"text": "Drops from The Maven.",
+							"priority": -5
+						},
+						"The Arkhon's Tools": {
+							"text": "Drops from the Incarnation of Neglect",
 							"priority": -5
 						}
 					}
@@ -4371,6 +4613,14 @@
 						"Mark of the Elder": {
 							"text": "Drops from The Uber Elder.",
 							"priority": -5
+						},
+						"Betrayal's Sting": {
+							"text": "Drops from the Incarnation of Neglect",
+							"priority": -5
+						},
+						"Woespike": {
+							"text": "Drops from the Incarnation of Fear",
+							"priority": -5
 						}
 					}
 				},
@@ -4392,6 +4642,10 @@
 						"Original Sin": {
 							"text": "Drops from Lycia with corresponding relic equipped.",
 							"priority": -8
+						},
+						"Coiling Whisper": {
+							"text": "Drops from the Uber Incarnation of Fear",
+							"priority": -5
 						}
 					}
 				},
@@ -4578,15 +4832,6 @@
 						}
 					}
 				},
-				"Unset Amulet": {
-					"text": null,
-					"items": {
-						"Uul-Netol's Vow": {
-							"text": "Drops from Flawless Breachstone.",
-							"priority": -5
-						}
-					}
-				},
 				"Quarterstaff": {
 					"text": null,
 					"items": {
@@ -4721,6 +4966,10 @@
 						"The Tides of Time": {
 							"text": "Drops from The Uber Shaper.",
 							"priority": -5
+						},
+						"Binds of Bloody Vengeance": {
+							"text": "Drops from Mercenaries of Trarthus",
+							"priority": -8
 						}
 					}
 				},
@@ -4845,15 +5094,6 @@
 						}
 					}
 				},
-				"Phantom Mace": {
-					"text": null,
-					"items": {
-						"Serle's Masterwork": {
-							"text": "Does not drop. Obtained from shipping resources to Riben Fell, Pondium, or Kalguur.",
-							"priority": -10
-						}
-					}
-				},
 				"Piledriver": {
 					"text": null,
 					"items": {
@@ -4881,6 +5121,10 @@
 						"Admiral's Arrogance": {
 							"text": "Drops from the Admiral Valerius",
 							"priority": -5
+						},
+						"The Caged Mammoth": {
+							"text": "Drops from the Uber Incarnation of Fear",
+							"priority": -5
 						}
 					}
 				},
@@ -4898,6 +5142,267 @@
 					"items": {
 						"Svalinn": {
 							"text": "Drops from the The Black Knight",
+							"priority": -5
+						}
+					}
+				},
+				"Seaglass Amulet": {
+					"text": null,
+					"items": {
+						"Whispers of Infinity": {
+							"text": "Drops from the Uber Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Gold Flask": {
+					"text": null,
+					"items": {
+						"Wine of the Prophet": {
+							"text": "Drops from the Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Waxed Garb": {
+					"text": null,
+					"items": {
+						"Seven Teachings": {
+							"text": "Drops from the Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Lich's Circlet": {
+					"text": null,
+					"items": {
+						"The Dark Monarch": {
+							"text": "Drops from the Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Astrolabe Amulet": {
+					"text": null,
+					"items": {
+						"Venarius' Astrolabe": {
+							"text": "Drops from the Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Torturer Garb": {
+					"text": null,
+					"items": {
+						"Servant of Decay": {
+							"text": "Drops from the Incarnation of Fear",
+							"priority": -5
+						}
+					}
+				},
+				"Vermillion Ring": {
+					"text": null,
+					"items": {
+						"Enmity's Embrace": {
+							"text": "Drops from the Incarnation of Fear",
+							"priority": -5
+						}
+					}
+				},
+				"Abyssal Axe": {
+					"text": null,
+					"items": {
+						"Starcaller": {
+							"text": "Drops from the Incarnation of Fear",
+							"priority": -5
+						}
+					}
+				},
+				"Satin Slippers": {
+					"text": null,
+					"items": {
+						"Scornflux": {
+							"text": "Drops from Mercenaries of Trarthus",
+							"priority": -8
+						}
+					}
+				},
+				"Lacquered Buckler": {
+					"text": null,
+					"items": {
+						"Azadi Crest": {
+							"text": "Drops from Mercenaries of Trarthus",
+							"priority": -8
+						}
+					}
+				},
+				"Martyr Gloves": {
+					"text": null,
+					"items": {
+						"Hand of Heresy": {
+							"text": "Drops from Mercenaries of Trarthus",
+							"priority": -8
+						}
+					}
+				},
+				"Vile Arrow Quiver": {
+					"text": null,
+					"items": {
+						"Spinehail": {
+							"text": "Drops from Catarina",
+							"priority": -5
+						}
+					}
+				},
+				"Platinum Sceptre": {
+					"text": null,
+					"items": {
+						"Cadigan's Authority": {
+							"text": "Does not drop. Obtained from shipping resources to Riben Fell, Pondium, or Kalguur.",
+							"priority": -10
+						}
+					}
+				},
+				"Marble Amulet": {
+					"text": null,
+					"items": {
+						"Bonemeld": {
+							"text": "Drops from the Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Paladin Crown": {
+					"text": null,
+					"items": {
+						"Refuge in Isolation": {
+							"text": "Drops from the Uber Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Faithful Helmet": {
+					"text": null,
+					"items": {
+						"The Hallowed Monarch": {
+							"text": "Drops from the Uber Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Colossal Mana Flask": {
+					"text": null,
+					"items": {
+						"Wellwater Phylactery": {
+							"text": "Drops from the Uber Incarnation of Dread",
+							"priority": -5
+						}
+					}
+				},
+				"Turquoise Amulet": {
+					"text": null,
+					"items": {
+						"Haunting Memories": {
+							"text": "Drops from the Uber Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Spiny Round Shield": {
+					"text": null,
+					"items": {
+						"Bitter Instinct": {
+							"text": "Drops from the Uber Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Demon Dagger": {
+					"text": null,
+					"items": {
+						"Festering Resentment": {
+							"text": "Drops from the Uber Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Imperial Bow": {
+					"text": null,
+					"items": {
+						"Wing of the Wyvern": {
+							"text": "Drops from the Uber Incarnation of Fear",
+							"priority": -5
+						}
+					}
+				},
+				"Lion Sword": {
+					"text": null,
+					"items": {
+						"The Golden Charlatan": {
+							"text": "Drops from the Uber Incarnation of Neglect",
+							"priority": -5
+						}
+					}
+				},
+				"Fugitive Ring": {
+					"text": null,
+					"items": {
+						"The Sundered Will": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Synaptic Ring": {
+					"text": null,
+					"items": {
+						"The Will of Esh": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Cryonic Ring": {
+					"text": null,
+					"items": {
+						"The Will of Tul": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Organic Ring": {
+					"text": null,
+					"items": {
+						"The Will of Uul-Netol": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Enthalpic Ring": {
+					"text": null,
+					"items": {
+						"The Will of Xoph": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Hand of the Lords": {
+					"text": null,
+					"items": {
+						"Carnal Mitts": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Spectral Axe": {
+					"text": null,
+					"items": {
+						"The Grey Wind": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
 							"priority": -5
 						}
 					}
@@ -4920,6 +5425,14 @@
 						"The Anima Stone": {
 							"text": "Does not drop. Created with a vendor recipe.",
 							"priority": -10
+						},
+						"The Light of Meaning": {
+							"text": "Drops from the King in the Mists",
+							"priority": -5
+						},
+						"Bound by Destiny": {
+							"text": "Drops from the Incarnation of Dread, Fear or Neglect",
+							"priority": -5
 						}
 					}
 				},
@@ -5011,12 +5524,12 @@
 							"priority": -5
 						},
 						"The Blue Dream": {
-							"text": "Drops from Chayula's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Blue Nightmare": {
-							"text": "Drops from Chayula's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Transcendent Mind": {
 							"text": "Does not drop. Created with a Vial.",
@@ -5132,12 +5645,12 @@
 							"priority": -10
 						},
 						"The Green Dream": {
-							"text": "Drops from Chayula's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Green Nightmare": {
-							"text": "Drops from Chayula's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Careful Planning": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
@@ -5253,12 +5766,12 @@
 							"priority": -5
 						},
 						"The Red Nightmare": {
-							"text": "Drops from Chayula's Flawless Breachstone.",
-							"priority": -5
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"The Red Dream": {
-							"text": "Drops from Chayula's Breach or Breachstone.",
-							"priority": -3
+							"text": "Grown on the Genesis Tree",
+							"priority": -8
 						},
 						"Transcendent Flesh": {
 							"text": "Does not drop. Created with a Vial.",

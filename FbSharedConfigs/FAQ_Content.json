@@ -7,17 +7,20 @@
     {
       "question": "I don't know where to start. How do I use FilterBlade? What even is it?",
       "answer": "We made a short <a target='_blank' href='https://www.youtube.com/watch?v=AMZrWdzrA_U'>video</a> outlining the very basics of FilterBlade, what it is, how to use it, and everything else you need to know to get some basic editing going.",
-      "tags": "tutorial guide help assist noob new beginner starter"
+      "tags": "tutorial guide help assist noob new beginner starter",
+      "group": "Basics"
     },
     {
       "question": "The filter doesn't work: Line 235: No base types found exactly matching \"Arcane Vestment\" or Line 307: No base types found exactly matching \"Debilitation Gauntlets\"",
       "answer": "If you get the first error, it means you're using the new 3.25 filter in the old 3.24 game. Wait for the game update and try again.<br><br>If you get the second error, you're using an outdated filter. Re-Download or Re-Sync the filter again to fix it.",
-      "tags": "league update leagueUpdate error outdated old new version 3.25 3.24 necropolis settlers"
+      "tags": "league update leagueUpdate error outdated old new version 3.25 3.24 necropolis settlers",
+      "group": "Troubleshooting"
     },
     {
       "question": "The customizer is huge! How do I find anything?",
       "answer": "Use the search bar on the right side! You can enter the item name or relevant tags. This will usually resolve 95% of your searches.<br><img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Save_red_box.png' alt='Searchbar Screenshot'><br><br>Ctrl+C the item from inventory (POE1: If you want the mods included use Ctrl+ALT+C) > Ctrl+V into Sim > Import tab, match the Area Level to your in game area level (if you don't have item or are on console, use Item Builder tab) > 'Find in Customizer' to see rule in context and safely edit. <img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Simulator%20Import.png' alt='Import Item Screenshot'><br>",
-      "tags": "search problem huge find where locate which part section how location line section area entry rule can't cant right"
+      "tags": "search problem huge find where locate which part section how location line section area entry rule can't cant right",
+      "group": "Basics"
     },
         {
       "question": "I deleted my filter... How do i get it back?",
@@ -27,322 +30,398 @@
     {
       "question": "My filter doesn't behave inGame as I expected it to or unlike simulated on FilterBlade.",
       "answer": "First, make sure you're actually using your new filter!<br>When using the online Sync feature, check the 'Last modified' date and time inGame when loading the filter (the hour might differ due to timezones).<br>Create your new filter with a new name and make sure you see and select this new name in the filter-list inGame.<br>Try selecting no filter at all, then switch back to the desired filter.<br><br>A good next step is to import the In-Game item on the 'Simulate' tab on FilterBlade. It can show you why an item is highlighted and can give insight into where the error lies. Make sure to copy the mod-information by holding down the Alt key.<br>Make sure that the ItemLevel, AreaLevel or StackSize of the item isn't a factor. Currency for example has many variations depending on some of these.<br>If you don't have an example item for the Importer, try using the Item Builder below it to specify exactly what item you want to test.<br>Check what you are filtering for, comparing the item, the desired rule and the actual rule. Filtering by 'Links < 6' is a good idea, but will not affect Quivers because they have no links/sockets.",
-      "tags": "work behaviour behaving in game in-game unexpected error doesn't behave not like i want still shows hides hidden item but like different than from simulator simulated overview not matching simulated on filterblade simulator simulate matches match doesn't doesnt"
+      "tags": "work behaviour behaving in game in-game unexpected error doesn't behave not like i want still shows hides hidden item but like different than from simulator simulated overview not matching simulated on filterblade simulator simulate matches match doesn't doesnt",
+      "group": "Troubleshooting"
     },
     {
       "question": "How can I support the project/development?",
       "answer": "Consider turning ad-block off. We're only showing minimal ads and have disabled all the risky categories.<br>You can also subscribe on <a href='https://www.patreon.com/Neversink' target='_blank'>Patreon</a> and also receive the FilterBlade <a href='https://www.youtube.com/watch?v=i8RJx0s0zsA' target='_blank'>auto-updater</a> access!<br>If you prefer, we also have a PayPal: <form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_blank\" style=\"display: inline-block; vertical-align: middle; height: 35px\">\n                        <input type=\"hidden\" name=\"cmd\" value=\"_donations\" />\n                        <input type=\"hidden\" name=\"business\" value=\"FilterBladeContact@gmail.com\" />\n                        <input type=\"hidden\" name=\"item_name\" value=\"Support the FilterBlade Dev Team\" />\n                        <input type=\"hidden\" name=\"currency_code\" value=\"EUR\" />\n                        <input type=\"image\" src=\"https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif\" border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\" style=\"border: none; width: 90px; background: #0e0e0e\" />\n                        <img alt=\"\" border=\"0\" src=\"https://www.paypal.com/en_DE/i/scr/pixel.gif\" width=\"1\" height=\"1\" />\n                    </form>",
-      "tags": "autoupdate auto automatically automated economy update support donate patreon paypal help"
+      "tags": "autoupdate auto automatically automated economy update support donate patreon paypal help",
+      "group": "Misc."
     },
     {
       "question": "Do I have to re-customize my filter every league/time I visit the website?",
       "answer": "No! After customizing your filter, save it using the FilterBlade save & load feature. Simply load your save and if there's a new version, you will get the updated filter, with all your changes merged into it. You can read more in the My Filters screen.",
-      "tags": "update apply changes keep customization don't redo dont have to redo everything lose all lose everything lose changes lose customization new version league"
+      "tags": "update apply changes keep customization don't redo dont have to redo everything lose all lose everything lose changes lose customization new version league",
+      "group": "Updates"
     },
     {
       "question": "An item moved in a tierlist! How do I prevent/control that?",
       "answer": "The SC and HC Economy filters adjust their tiering every 4 hours. Every section that is economy based is marked with 'chaos orbs'. This is done in order to keep the filter up-to-date with the live economy and meta state. If suddenly something becomes more expensive/cheaper (due to a build becoming popular, game changes or a new tech being discovered), you will know. However, you CAN control this behaviour: <br>a) Any item you have moved within the tierlist will stick to that tier. Your changes have priority over economy updates<br>b) Any item you have NOT moved may be adjusted by the economy, unless you 'LOCK' them. You can lock individual items or the whole tierlist by using the 'advanced toolbar' in economy-based sections.<br>c) You can use the stable filter. The stable filter tiering only changes twice per league - at league start and 3-5 days in. These updates also respect points a) and b)<br>",
-      "tags": "reset changes economy lock move random tier move eco stable "
+      "tags": "reset changes economy lock move random tier move eco stable ",
+      "group": "Tierlists"
     },
     {
       "question": "Why is FilterBlade only updated/available a few hours before league-launch?",
       "answer": "To ensure the highest quality of filters, FilterBlade always operates on the 'latest-version' basis. The version for the new league will not work in the previous league, so we're updating FilterBlade before a new league launches! However, you can prepare your filter before the league and load it on FilterBlade before the launch to update it into the latest version!",
-      "tags": "update apply changes keep customization don't redo dont have to redo everything lose all lose everything lose changes lose customization new version league"
+      "tags": "update apply changes keep customization don't redo dont have to redo everything lose all lose everything lose changes lose customization new version league",
+      "group": "Misc."
     },
     {
       "question": "I want to understand what all the colors mean!",
       "answer": "Go the the frontpage and scroll down, you will find most explanations there.<br><br>If you have the item inGame, you can import it on the Simulate tab to pinpoint the exact ruling!",
-      "tags": "item how color understand filter find where locate which part section how location line section area entry rule can't cant right"
+      "tags": "item how color understand filter find where locate which part section how location line section area entry rule can't cant right",
+      "group": "Basics"
     },
     {
       "question": "How can I import a filter from the PoE ladder to FilterBlade if I only have/follow it in PoE?",
-      "answer": "Importing someone else's filter: if follow a filter on PoE, you can go to their <a target='_blank' href='/Profile'>Profile</a> page and check if they have their filter saved publicly on FilterBlade (the profile name is cAsE SeNSiTiVe!). If it's private you may try asking them. Otherwise, you're out of luck.<br><br>Importing your own filter or a .filter file: It's <b>NOT</b> possible to import a .filter file into FilterBlade (or import a filter from your PoE account), as it's missing crucial information about what was changed to enable updating/editing. Imagine it like trying to get raw eggs from a finished cake.",
-      "tags": "upload create re-create import paste from ingame poe game re-import lost find gone use into from someone else streamer ladder other people streamer adjustments edit from other people someone else else's their his her"
+      "answer": "Importing someone else's filter: if follow a filter on PoE, you can go to their <a target='_blank' href='/Profile'>Profile</a> page and check if they have their filter saved publicly on FilterBlade (include the '#1234' discriminator at the end of the username!). If it's private you may try asking them. Otherwise, you're out of luck.<br><br>Importing your own filter or a .filter file: It's <b>NOT</b> possible to import a .filter file into FilterBlade (or import a filter from your PoE account), as it's missing crucial information about what was changed to enable updating/editing. Imagine it like trying to get raw eggs from a finished cake.",
+      "tags": "upload create re-create import paste from ingame poe game re-import lost find gone use into from someone else streamer ladder other people streamer adjustments edit from other people someone else else's their his her",
+      "group": "Import, Export, Save, Load, Download"
     },
     {
       "question": "What's the difference between the 'My Filters' page on FilterBlade and the 'Item Filters' page on my POE account? Why are they not the same?",
       "answer": "These are 2 different databases and NOT the same things. When you Sync your filter on FilterBlade we save the CHANGES done in our database and then 'bake' the filter, which we export to your poe profile or download as a file. However, this process is not reversable (you can't unbake the cake into eggs). You can't import a .filter file or a pathofexile synced filter to filterblade, even if it was originally created on FilterBlade. To ensure that you can keep updating your FilterBlade-filters, please login on FilterBlade with your PoE account before exporting.",
-      "tags": "upload create re-create import paste from ingame poe game re-import lost find gone ladder adjustments edit from account my profile pathofexile copy"
+      "tags": "upload create re-create import paste from ingame poe game re-import lost find gone ladder adjustments edit from account my profile pathofexile copy",
+      "group": "Import, Export, Save, Load, Download"
+    },
+    {
+      "question": "How can I hide a certain item?",
+      "answer": "Use the search bar in the Customizer to find the rule responsible for the item.<br>One rule may be responsible for multiple items, in which case you can remove the specific item from the rule.<br>There may also be other rules that show the item in certain conditions, such as different levels or stackSizes.<br><br>Alternatively, you can use the Simulate tab to e.g. Import the item from inGame to find the rule that shows it.<br><br>Please note that some items, such as Quest Items, may not be hidden. This is a limit enforced by GGG that we can't do anything about.",
+      "tags": "remove show gone idol quest item question where find method option not possible no none",
+      "group": "Basics"
+    },
+    {
+      "question": "Why does the filter show certain items?",
+      "answer": "Pick up the item InGame and use the ItemReCreator on FilterBlade's Simulate tab to find out why it is highlighted. Jumping into the Customizer from there may provide more details and explanations.<br><br>Note that, if you see any errors when selecting the filter inGame, the filter will not work and all items will be shown!",
+      "tags": "white broken working not doesnt doesn't hide hidden show shown is isn't lame generic random white normal items special",
+      "group": "Basics"
     },
     {
       "question": "I found a very expensive unique, but it's not shown in an expensive way (or vice versa). Why?",
       "answer": "First of all ensure that you're using a somewhat up-to-date filter version. We're developers, not fortune-tellers. Then filters can NOT tell uniques of the same basetype apart. For instance 'leather belt' uniques can't be distinguished. Your belt might be a super-expensive headhunter or a worthless wurm's molt. These uniques are usually marked with a blue star on the minimap",
-      "tags": "expensive rare cheap unique headhunter mageblood why highlight wrong bug blue star"
+      "tags": "expensive rare cheap unique headhunter mageblood why highlight wrong bug blue star",
+      "group": "Tierlists"
     },
     {
       "question": "Can I use FilterBlade to create a completely new filter? Why is there no download button on the start page?",
       "answer": "First and foremost, FilterBlade is a customization website.<br><br>It is not designed to create filters completely anew from scratch and therefore does not have the functionality to do so.<br><br>We don't have a download button on the start page for the same reason. If you're not going to customize your filter, you're better off just following NeverSinks filters on the <a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower'>PoE filter ladder</a>.",
-      "tags": "new empty filter without rules why not quicker to long annoying to sync export faster confusing complex"
+      "tags": "new empty filter without rules why not quicker to long annoying to sync export faster confusing complex",
+      "group": "Bonus features/modes"
     },
     {
       "question": "Why do I need a new filter for Ruthless?",
       "answer": "The Ruthless gamemode requires a completely different type of filter - both technically as well as regarding the logic of filtering. You can't use a normal filter in Ruthless or the other way around. Ruthless filters also don't allow you to fully hide items or make them transparent. You can select the Ruthless filter on the Overview page. It currently has NO styles or strictnesses. When exporting a Ruthless filter, we will automatically fix Hide-rules and also the file extension in order for it to work ingame.",
-      "tags": "new ruth less game mode gamemode ruthlessfilter load error file"
+      "tags": "new ruth less game mode gamemode ruthlessfilter load error file",
+      "group": "Bonus features/modes"
     },
     {
       "question": "Is there a filter for SSF?",
       "answer": "Since SSF is all about your specific build and character and playstyle and economy, there is no 'One SSF filter' for everybody. There can't be. You can start with the 'Stable' NeverSink filter to opt-out of the regular economy tiering updates and then just start customizing it for your playthrough.",
-      "tags": "solo self found self-found solo-self-found soloselffound selffound specific extra adapted special"
+      "tags": "solo self found self-found solo-self-found soloselffound selffound specific extra adapted special",
+      "group": "Bonus features/modes"
     },
     {
       "question": "Is there an easier way to do ...?",
       "answer": "We added a lot of useful features into the right-click menu. Just rightclick e.g. a BaseType within a tierlist to have the option to move it into a different (or new) tier. Or right-click the class-selection GUI to see options to (de-)select all options with one click. There are a lot of options. The 'Show Priority' one can be very useful to check which rule has priority when you're not sure.",
-      "tags": "qol quality of life utility useful gadgets tools help faster quicker right-click rightClick right click move tierlist editing tier change select all turn off all every single individual one by one toggle jump reset copy paste"
+      "tags": "qol quality of life utility useful gadgets tools help faster quicker right-click rightClick right click move tierlist editing tier change select all turn off all every single individual one by one toggle jump reset copy paste",
+      "group": "Bonus features/modes"
     },
     {
       "question": "How can I change EVERY occurrence of a color/style/sound?",
       "answer": "The 'Style' tab allows you to do just that. With a few clicks, you can change all reoccurring styles (i.e. colors and sounds) over the entire filter without having to go through every single rule individually.<br><br>There are also 'Global Style Edits' that allow you to edit e.g. ALL minimap icons or beams, or scale or maximize all font sizes throughout the filter. If you're looking to do some large scale changes of the entire filter, this is the section to visit!",
-      "tags": "utility quickly easy fast redesign design all"
+      "tags": "utility quickly easy fast redesign design all",
+      "group": "Power-Users"
     },
     {
       "question": "What are modules? What's the difference between modules and filters?",
       "answer": "We made a <a target='_blank' href='https://www.youtube.com/watch?v=XEKhoJ-hULk'>video</a> about modules.<br><br>To give you a POE analogy. If filters would be a POE skilltree, modules would be jewels. A filter can include 0 to 15 modules and a single module can affect multiple filters. Modules are great if you want to have the same set of changes across multiple filters. For instance if you want to reuse the same style or tiering you can save these in a module and then apply them onto one or multiple filters. Every time you load a save, it fetches the latest version of the module. You can also browse for public and 'official' modules on the overview screen!",
-      "tags": "module mod save socket tree workflow extract part piece add remove apply"
+      "tags": "module mod save socket tree workflow extract part piece add remove apply",
+      "group": "Power-Users"
     },
     {
       "question": "How do I add a module to a filter?",
       "answer": "First load the filter. Then either click on 'my modules', find your module and click apply or browse the modules from the overview screen. You can also find public/official modules there.",
-      "tags": "module add remove apply"
+      "tags": "module add remove apply",
+      "group": "Power-Users"
     },
     {
       "question": "How do I save a module? Can I turn a filter into a module?",
       "answer": "To save a module go to my modules and click 'save' there. To turn a filter into a module load the filter and save it under 'my modules'. However, you can't save a filter that uses a module into another module.",
-      "tags": "module turn convert save"
+      "tags": "module turn convert save",
+      "group": "Power-Users"
     },
     {
       "question": "My module is behaving weirdly, why is that?",
       "answer": "Like normal filter-saveStates, modules work not by saving the current, final state of the filter, but by saving the changes you made. Meaning if something is back on its initial value, it doesn't count as change and is therefore not applied in the filter. This can happen a lot in ever-changing parts like tierlists, where items move often and rules get disabled all the time.<br>Another tricky part are strictnesses. The strictness you used when creating a module doesn't directly matter, but it allows you to do changes that aren't possible otherwise. For example you can't have a module that disables Chancing Bases when you work on a low stirctness, because that section is already disabled, meaning it wouldn't be a change and therefore not saved. Changing to a high strictness allows you to do and save this change.<br><br><br>Another reason for odd behaviors is the fact that your filter might already have changes in the section that the module edits and overwrites it. You can try Shift-Rightclicking a section to hard-reset it, which doesn't set the section back to its initial values, but instead deletes all of your local changes, causing the module to take effect again. This can sometimes make a difference.",
-      "tags": "module odd broken bug not apply revert reset not saving saved"
+      "tags": "module odd broken bug not apply revert reset not saving saved",
+      "group": "Power-Users"
     },
     {
       "question": "What's the benefit of the auto-update feature? Does it help if I'm using SSF? Is it pay to win? Is it legal?",
       "answer": "The auto-update is a pure quality of life feature. You get my latest filter ingame, based on the latest economy data and merged with all your style, custom sound, customization and module choices. Our servers export that filter directly onto your POE account. You can also get the same result, by visiting the filterblade website every few days. Essentially it saves you a couple of minutes. It's also useful in SSF. Expensive items are often the very same that are desirable on SSF and you still want the filter patches. The feature has been allowed by GGG (we talked to Bex about it). The feature causes too high server costs to be free and is one of the two ways how we sponsor our server and development costs. You can get the auto-updater by subscribing to the 3$+ tier on https://www.patreon.com/Neversink . Higher tiers grant more auto-update slots.",
-      "tags": "autoupdate auto automatically automated economy update updated eco free expensive patreon ssf legal hack benefit ggg"
+      "tags": "autoupdate auto automatically automated economy update updated eco free expensive patreon ssf legal hack benefit ggg",
+      "group": "Auto-Updater"
     },
     {
       "question": "Does the filter auto-update? If there's a new version, do I get it automatically?",
       "answer": "Not by default. Filters can't execute advanced scripts and update themselves this way. We offer a premium auto-updater, where our servers will do the heavy lifting and actively push an updated filter to your POE account, but it'll cost you a few bucks a month. More infos here: https://www.youtube.com/watch?v=i8RJx0s0zsA ",
-      "tags": "autoupdate auto automatically automated economy update updated eco hours get use apply myself manually new newer version when time change"
+      "tags": "autoupdate auto automatically automated economy update updated eco hours get use apply myself manually new newer version when time change",
+      "group": "Auto-Updater"
     },
     {
       "question": "What exactly does the auto-update do?",
       "answer": "The auto-update loads all changes you've done on FilterBlade every 4-to-6 hours and merges them into the latest version of my filter you've selected. My economy-based versions are updated every 6 hours and the tiering is adjusted based on the current SC/HC economy data (mostly poe.ninja data). This ensures that you get the up-to-date tiering (with currency, uniques, scarabs divination cards and ~20 others tierlists all getting updated) combined with all your customizer, style, module/module and all other changes. It basically does the same as loading a 'my filters' filter on FilterBlade and exporting it again and saves you a couple of minutes. You will get these updates every time you change your character (or restart your client) in PoE.",
-      "tags": "autoupdate auto automatically automated economy update updated eco patreon benefit update unique scarab divination advantage tiering"
+      "tags": "autoupdate auto automatically automated economy update updated eco patreon benefit update unique scarab divination advantage tiering",
+      "group": "Auto-Updater"
     },
     {
       "question": "Why does the auto-update feature cost money?",
       "answer": "When you visit filterblade your gamer PC does all the heavy lifting and our server costs get compensated by the AD income. To auto-update passively our servers have to do it AND we have less visitors. With over 1 million users on filterblade this generates outragously high costs. Even with a high number of optimizations this can easily cost thousands of euros per month. The patreon users not only pay for themself, but also help us work towards new features, invest into tech, services and quality.",
-      "tags": "autoupdate auto automatically automated economy update updated eco free expensive patreon"
+      "tags": "autoupdate auto automatically automated economy update updated eco free expensive patreon",
+      "group": "Auto-Updater"
     },
     {
       "question": "Is there a local version of FilterBlade? Can I get it as an offline app?",
       "answer": "No and there won't be. This adds several security issues, a lot of support and development overhead and we have made the architectural decision to focus on a website. You can install filterblade as a PWA (progressive web app) though. You can do that in chrome from the 'Add to Home Screen' button on the top-right of the filterblade website.",
-      "tags": "local app download offline pwa cloud storage autoupdate"
+      "tags": "local app download offline pwa cloud storage autoupdate",
+      "group": "Misc."
     },
     {
       "question": "Is FilterBlade Open-Source? Can I contribute?",
       "answer": "No, and it likely won't ever be. It's an uncommon practice to open source websites. You reduce security and increase the risk copycat and phishing websites. However, filter itself is open source and can be found on NeverSinks <a target='_blank' href='https://github.com/NeverSinkDev/'>GitHub</a>.<br><br>We also share some <a target='_blank' href='https://github.com/NeverSinkDev/FilterBlade-Public-Assets'>Public FilterBlade Assets</a> that we'd appreciate any help with. Feel free to create pull requests there!",
-      "tags": "code open source github openSource help out wanna add need assistance closed source closed-source closedSource"
+      "tags": "code open source github openSource help out wanna add need assistance closed source closed-source closedSource",
+      "group": "Misc."
     },
     {
       "question": "Where do I get custom sound files?",
       "answer": "Depends on which you are using:<ul><li><i>Normal / Positional</i> sounds are built in to the game, you don't need to download anything. This includes the Shaper voice lines.</li><li>Our Community sounds from PoE streamers are hosted on FilterBlade. You are offered to download them when downloading or syncing the filter.</li><li>If you use a module, its creator should have provided a download link for the sound files in the module description, as we are unable to host these files ourselves due to copyright reasons.</li></ul>",
-      "tags": "customsound custom sound customalertsound alert drop file download copy receive find my own mp3 missing path invalid error ingame wont load won't"
+      "tags": "customsound custom sound customalertsound alert drop file download copy receive find my own mp3 missing path invalid error ingame wont load won't",
+      "group": "Sounds"
     },
     {
       "question": "I can't see any items. // My items disappear after a short time",
       "answer": "This is not controlled by filterblade and is instead a setting in game called 'Toggle Highlighting' <br> <br> On PC this can be toggled with 'Z' by default <img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Always%20Highlight%20Keybind.png' alt='Toggle Highlight Keybind'> <br> <br> On console there is no default keybind for this feature, however you can set a custom bind or go into settings and use the following checkbox to enable/disable this feature <br> <img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/Always%20highlight%20Checkbox.png' alt='Always highlight setting in interface'>",
-      "tags": "no items drop item see visible hidden all every item hides all invisible cant short time period no longer too short gone seconds"
+      "tags": "no items drop item see visible hidden all every item hides all invisible cant short time period no longer too short gone seconds",
+      "group": "Troubleshooting"
     },
     {
-      "question": "Will you create a filter for PoE: Royale?",
-      "answer": "GGG will not allow filters in PoE: Royale for competitive fairness reasons. You can read about it <a href='https://www.pathofexile.com/forum/view-thread/3146283' target='_blank'>here</a>.",
-      "tags": "module version battle royale fortnite pvp extra special variant alternate adapted for weekend rare mode league"
+      "question": "How do I set up a 2nd filter based on my current one?",
+      "answer": "Load your filter, go to 'Export To PoE', and click on 'More' -> 'Save As New' to effectively duplicate your filter.<br><br>If you want to have two filters that have the same 'base' set of changes, try out 'Modules'! They allow you to later update this 'base' set of changes and receive the update in all filters that use this 'Module'.",
+      "tags": "copy clone duplicate second similar endgame leveling build changes own individual separate customization share preset",
+      "group": "Basics"
     },
     {
       "question": "My filter doesn't show up inGame when using the Sync-With-PoE feature.",
       "answer": "First: re-starting your game.<br><br>Next: Does FilterBlade show you a 'successfully uploaded filter' message? If not, you should receive some sort of error message that might already help you.<br><br>If FilterBlade says that the uploads succeeded, check your PoE-profile page (pathofexile.com/account/view-profile/YOUR_ACCOUNT_NAME/item-filters). If the filter shows up there but no inGame, then it's an issue on GGGs side and you should contact them. Right now, they seem to be having issues with account names that contain special symbols.",
-      "tags": "show up work doesn't working see can't load list empty sync upload poe not updated"
+      "tags": "show up work doesn't working see can't load list empty sync upload poe not updated",
+      "group": "Troubleshooting"
     },
     {
       "question": "How does a filter generally work? Is this a hack or mod? What is a Loot Filter?",
       "answer": "Filters are NOT hacks or mods or cheats. They're a official feature/utility in POE. You will never get banned or get in trouble for using a filter. A filter in PoE is just a list of ordered rules.<br>Each rule has requirements (like: ItemLevel > 83) and actions (like: Background color Red).<br>When an item drops, it goes through all rules from top to bottom. When it finds a rule that accepts this item (i.e. it meets all of the rule's requirements) it uses that rule's actions and the search for this item stops.<br>This means that every item can always be affected by only one single rule.<br>It also means that the rules at the top of the filter have higher 'priority' than ones further below.",
-      "tags": "filter item loot filterentry entry rules works algorithm behavior program strictness level strictnesses hack mod legal allowed"
+      "tags": "filter item loot filterentry entry rules works algorithm behavior program strictness level strictnesses hack mod legal allowed",
+      "group": "Basics"
     },
     {
       "question": "I'm having trouble installing custom drop sounds! 'Error: Failed to load item filter. Reason: Line 1234: Invalid sound filepath \"someName.mp3\".",
       "answer": "This error means that you have a filter that uses custom sounds, but you didn't install all the sound files correctly into the PoE folder with their correct file names. If ANY of the files are missing or misnamed, the entire filter won't load.<br><br>NeverSink made a <a target='_blank' href='https://www.youtube.com/watch?v=8O2VTCIMRww'>video</a> about the basics on how to use FilterBlade to install custom drop sounds.<br><br>You can either fix this by placing a sound file with the EXACT name from the error message into the PoE filter folder, or edit the filter to no longer use this custom sound (you can search for the sound name in the Customizer search).<br><br>If you're on console or another platform without access to its file system, you can't use custom sounds.",
-      "tags": "sounds geforce now geforcenow alert dropsound drop community mathil mp3 sound file folder install create add use voice music effects"
+      "tags": "sounds geforce now geforcenow alert dropsound drop community mathil mp3 sound file folder install create add use voice music effects",
+      "group": "Sounds"
     },
     {
       "question": "What are those icons next to the item name on FilterBlade? Why don't I see them in the game?",
       "answer": "Those are 'MiniMap Icons'. You can edit them in the usual appearance editor by clicking the Icon button. InGame, they are only shown on the map/miniMap. Since FilterBlade doesn't have one of those, we display those icons next to the item name instead.",
-      "tags": "icon image next to left right item name base basetype loot dont cant see not there"
+      "tags": "icon image next to left right item name base basetype loot dont cant see not there",
+      "group": "Bonus features/modes"
     },
     {
       "question": "When do I need to update my loot filter?",
       "answer": "If you downloaded the filter file or used FilterBlade to sync it to your PoE profile, you have to update manually. Always update your filter before a new challenge league starts (every 3 month). FilterBlade is always updated with the latest NeverSink's filter on launch-day before the new league starts. Missing out on the league-start update can cause you to miss items or the filter to not work. Afterwards, we recommend weekly filter updates, as long as you play actively, to receive the latest meta- and economy-updates.<br><br>The filters you get by following NeverSink on the PoE filter ladder are updated automatically. You never have to do anything.",
-      "tags": "auto refresh adapt manually myself time when why frequency renew download again back many times week day hour league once twice new"
+      "tags": "auto refresh adapt manually myself time when why frequency renew download again back many times week day hour league once twice new",
+      "group": "Updates"
     },
     {
       "question": "How often is the filter updated? What is a SC/HC/stable filter?",
       "answer": "The softcore/hardcore filters are updated every 4 hours. These updates adjust the tiering of all tierlists, such as uniques, currency, cards, cluster jewels etc. There's a total of 20+ different tierlists. This way the filer can provide you the best possible ingame experience. The stable filter is only updated, when the filter is updated manually. These always happen the day before the league starts and quite often during the first month of a new league. Note that you need to load your save and download/sync again to receive these changes in-game, no matter what version you use.",
-      "tags": "how often update version league new"
+      "tags": "how often update version league new",
+      "group": "Updates"
     },
     {
       "question": "What kind of technology does FilterBlade use?",
       "answer": "In 2021, we moved from our initial small WebServer with PHP and SQL to the Amazon Web Services (AWS) Cloud:<br><br>- Our frontend is a S3 storage bucket with all of our HTML, JS, CSS, filter, etc. files as static website. Distributed using AWS CloudFront CDN together with CloudFlare (where we also have our domain).<br>- The backend is an array of serverless AWS Lambda Functions with API-Gateway, written in C#/.NET, which have proven to scale excellently with the varying demand over the course of a league.<br>- As database, we are using a NoSQL DynamoDB to store all the 'meta'-data about saveStates, while the actual content of them is stored as files in a separate S3 Storage to reduce database size.<br>- We use DevOps pipelines to build and deploy front & backend while Trello is used for workItem-tracking.<br>- The programming languages are vanilla JavaScript/CSS/HTML for frontend (yes, we're maniacs) and C#/.NET for the backend.<br>- The frontend heavily employs our own domain languages to generate the customizer, overview and loot simulator screens<br>- The filter generation has a similar setup (AWS Lambda, C#/.NET) and generates the filters and all of it's styles from a domain language (.exo).",
-      "tags": "tech technology stack development programming azure cloud aws stack online hosting server database infrastructure cost operate maintain"
+      "tags": "tech technology stack development programming azure cloud aws stack online hosting server database infrastructure cost operate maintain",
+      "group": "Misc."
     },
     {
       "question": "The filter hides unique elegant round shields! Does it hide the SQUIRE?!",
       "answer": "No. The squire has an additional rule that identifies it by it's iconic 3 white sockets.",
-      "tags": "elegant round shield unique squire"
+      "tags": "elegant round shield unique squire",
+      "group": "Tierlists"
     },
     {
       "question": "I want to show/hide ALL items of a certain type or a specific item. How do I do that without editing entire sections of the filter?",
       "answer": "Adding custom rules to the filter is the perfect solution for tasks like this.<br><br>Simply go to one of the custom rule section in the Customizer (there is one for endgame rares, one for leveling and one in the Misc. section for everything else).<br><br>There, you can add Show and Hide rules for specific BaseTypes, Item Slots (like Rings or Two-Hand-Axes), etc.<br>You can add additional filtering for ItemLevel, Rarity & Co.<br>The strictness of the rule determines how many of the existing rules it will overwrite.",
-      "tags": "show all hide all highlight this that class classes only"
+      "tags": "show all hide all highlight this that class classes only",
+      "group": "Bonus features/modes"
     },
     {
       "question": "How can I update someone else's filter?",
       "answer": "Search for them on the FilterBlade profile page or ask them for a 'Sharing link'. They can get it on the My Filters screen by clicking the Share button. Once you visit the link, you can further edit their filter and save and use this new version for yourself.<br><br>Just following the filter on their PoE profile or having the filter file is not enough.",
-      "tags": "have their his her my friend filter file follow followed edit customize afterwards them"
+      "tags": "have their his her my friend filter file follow followed edit customize afterwards them",
+      "group": "Import, Export, Save, Load, Download"
     },
     {
       "question": "Some changes in my filter could not be loaded due to conflicts and have been 'invalidated'?",
       "answer": "This is not an error and expected behaviour in many situations, such as:<br><br>- The game changed so much that this section of the filter had to be redone<br>- You edited a certain rule in the filter and that rules no longer exists in the new version.<br>- There were errors or certain changes in the filter or FilterBlade and we explicitly deleted your changes so your filter won't have these errors.<br>- A new version of the filter changed some rules or sections so much that we can't apply your changes onto it anymore because it varies too much from the previous version.<br><br>In any case, you will see a list of all invalidated sections and need to re-edit them to your liking.",
-      "tags": "saveState save load filter error help invalid redo re-do edits edit gone message change"
+      "tags": "saveState save load filter error help invalid redo re-do edits edit gone message change",
+      "group": "Troubleshooting"
     },
     {
       "question": "Can I use the CustomSounds filter style and a color-changing filter style at the same time?",
       "answer": "You can use the filter color-style (like Velvet for example) and then add the CustomSounds module.",
-      "tags": "custom sounds module filter subversion style base combination both at the same time together combine merge"
+      "tags": "custom sounds module filter subversion style base combination both at the same time together combine merge",
+      "group": "Sounds"
     },
     {
       "question": "How can I move a filter from Beta.FilterBlade.xyz to www.FilterBlade.xyz or vice versa?",
       "answer": "Load your filter and go to Advanced -> Upload filter. There, you can up- and download the 'save-file', which is your FilterBlade-filter in file-format. You can then upload the save-file on the other website-version of FilterBlade in the same UI. You can then also save it again as regular online-saved filter.",
-      "tags": "domain versions environment beta prod live release deploy variation test internal alpha site save move migrate transfer"
+      "tags": "domain versions environment beta prod live release deploy variation test internal alpha site save move migrate transfer",
+      "group": "Misc."
     },
     {
       "question": "What's the difference between filter Download and Sync? What's recommended?",
       "answer": "The sync-to-poe feature saves the filter directly in your POE-account. You can find your filter in the ingame settings (click 'refresh' first). You need to login for the first (this is a safe login, search for OAUTH here for details, we don't get any of your credentials). Download gives you the filter file directly. You will then need to place the file into the \"%userprofile%/Documents/My Games/Path of Exile\" (or Path of Exile 2) repository for it to work. Both have their up and downsides. Sync is generally speaking more comfortable, but it 'caches' the filter if multiple syncs are done in quick succession and it might take up to 10 min to arrive ingame. New syncs seem to always arrive instantly. It also doesn't work when the POE servers are down/updating. Download on the other hand takes a few extra clicks and spams your download folder, but is very reliable.",
-      "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file"
+      "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file",
+      "group": "Import, Export, Save, Load, Download"
+    },
+    {
+      "question": "Why isn't my Patreon subscription not recognized?",
+      "answer": "If you buy a membership and then 'cancel' it (i.e. stop the auto-renewal) before linking your Patreon account on FilterBlade, it will not recognize you as a paying member. Re-Enable the auto-renewal for a moment and try linking your Patreon account on FilterBlade again.",
+      "tags": "autoUpdate auto update paying money payment issue cancellation stop login authorize enable feature claim slot activate",
+      "group": "Auto-Updater"
     },
     {
       "question": "Does the Sync feature auto-update?",
       "answer": "Not by default. Poe-synced filters stay the same, until you upload a new version from filterblade. As with normal filters, it's recommended to do it once a week if you play actively. We offer a premium auto-updater, which does this for you, but it'll cost you a few bucks a month. More infos here: https://www.youtube.com/watch?v=i8RJx0s0zsA ",
-      "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file"
+      "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file",
+      "group": "Import, Export, Save, Load, Download"
     },
     {
       "question": "Does the sync-to-poe feature support custom sounds?",
       "answer": "Yes, but you will need to place the custom sounds into the filter folder (%userprofile%/Documents/My Games/Path of Exile) (or '/Path of Exile 2'). Note that users who subscribe to your filter via the POE ladder won't get the sounds automatically.",
-      "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file"
+      "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file",
+      "group": "Sounds"
     },
     {
       "question": "Is the sync-to-poe feature safe? Am I sharing any account details this way?",
       "answer": "Yes it's safe. We never receive your password, email or any other sensitive information. The connection is done using a protocol called OAUTH 2.0, which is the same way all the \"login with google\" and \"login with facebook\" buttons are working.",
-      "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file"
+      "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file",
+      "group": "Import, Export, Save, Load, Download"
     },
     {
       "question": "Does FilterBlade support console versions of PoE?",
       "answer": "It does, but you'll have to use Sync and not Download, you can't use CustomSounds as they have to be downloaded onto the device, and since GGG releases updates to consoles a week later, there are often time frames where the PC version and FilterBlade are updated to a new version, while console players have to wait for a few days. Getting a filter during this time might cause issues due to incompatible versions.",
-      "tags": "error geforce now geforcenow console konsole xbox x-box 360 one playstation sony ps ps5 ps4 ps6 x box nvidia shield handheld not pc laptop computer behind old outdated too new old wait"
+      "tags": "error geforce now geforcenow console konsole xbox x-box 360 one playstation sony ps ps5 ps4 ps6 x box nvidia shield handheld not pc laptop computer behind old outdated too new old wait",
+      "group": "Import, Export, Save, Load, Download"
     },
     {
       "question": "Why are there RMT-Ads on FilterBlade? Do you support/are okay with RTM in PoE??",
       "answer": "No, we're not, and we keep blocking them, but Google keeps adding new ones into our pool of ads. We have already blocked 500+ different PoE-RMT ads from appearing on FilterBlade, but sadly Google has little interest (or ability) in correctly identifying/categorizing them so we can remove them altogether from the ads that appear on our site.",
-      "tags": "real money cheat hack unethical € $ buy cheap currency orb trade purchase illegal ggg forbidden"
-    },
-    {
-      "question": "Why can't I store saves locally / in local storage anymore?",
-      "answer": "We deprecated the use of local saves. These were causing constant problems for users, added double overhead in every update and are incompatible with the upcoming changes. We intend to use the local storage to add automatic backups in the future.",
-      "tags": "save load local storage how gone"
+      "tags": "real money cheat hack unethical € $ buy cheap currency orb trade purchase illegal ggg forbidden",
+      "group": "Misc."
     },
     {
       "question": "Why can't I save in the 'my filters' tab anymore?",
       "answer": "Every time you go to the export screen and download/sync it'll automatically save as well. This is faster for you, avoids the danger of accidently overwriting the old save and is easier to explain to beginners. You can also use the 'more' button on the export screen to access some advanced and exotic workflow options.",
-      "tags": "save load my filters export more gone help"
+      "tags": "save load my filters export more gone help",
+      "group": "Import, Export, Save, Load, Download"
     },
     {
       "question": "How does the Filter Subscription service work?",
       "answer": "You can visit e.g. NeverSinks PoE Profile page and follow his filter on there. After doing that, you will be able to select the filter inGame, without having the file downloaded onto your PC.",
-      "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file"
+      "tags": "online cloud save saving follow subscribe auto update autoupdate profile GGG poe official first part oauth login account no local download folder file",
+      "group": "Import, Export, Save, Load, Download"
     },
     {
       "question": "How does the login with my PoE account work?",
       "answer": "It's a very secure OAuth Login, similar to the usual 'Sign in with Facebook' methods. You enter your password only on the official PoE website and it never leaves that site. After you authorize FilterBlade, we receive a token that can be used to identify you. This does NOT grant us access to your personal data or the ability to edit your account. It allows us to upload new filters to your account and helps us to identify you as you. You can read more about OAuth Logins here: <a href='https://oauth.net/2/' target='_blank'>https://oauth.net/2/</a>.",
-      "tags": "login log in sign in signin signup signin with facebook with poe path of exile ggg grinding gear games oauth o auth 2 2.0 secure safety hack hacked leak leaked scared delete remove edit characters bank contact information personal private password keyword steal"
+      "tags": "login log in sign in signin signup signin with facebook with poe path of exile ggg grinding gear games oauth o auth 2 2.0 secure safety hack hacked leak leaked scared delete remove edit characters bank contact information personal private password keyword steal",
+      "group": "Basics"
     },
     {
       "question": "I have a problem with the different types of sounds in PoE.",
       "answer": "Basically there are two types of sounds:<br><br>The filter alert sounds (Those loud \"bong\" and \"peng\" sounds, or the Shaper voicelines like \"Chaos Orb!\", or even Custom sounds, which are .mp3 files that you can provide.) <br>and the games Drop-Sound-Effects (the inGame atmospheric sound effect of the axe or orb hitting the ground). <br><br>The first one can be edited in the 'Sound' section of the rule editing UI or the 'Style' tab.<br>The latter can be removed by adding the 'DisableDropSound' command to the rule that handles the item. It can be added by removing the 'Drop' checkbox in the sound UI. You can also add or remove it from all rules with the Global Style Edits.<br><br>Additionally, there are special sound effects for e.g. Unique items. Those have their own sound effect when they drop for the first time. This sound is none of the other two sound types and cannot be controlled with a filter.",
-      "tags": "sound sounds drop sound effect"
+      "tags": "sound sounds drop sound effect",
+      "group": "Sounds"
     },
     {
       "question": "I changed my PoE account name and now all of my filters are gone!",
       "answer": "We store filters by your account-name. If your name changed, you basically count as a different person. Your best option is to make all of your filters public on FilterBlade before changing your name and then loading them from the Profile page on FilterBlade into your new account. We value user privacy and will never migrate any private saves.",
-      "tags": "poe migrate transfer move path of exile ggg account profile name username login support gone missing empty see any new renamed old"
+      "tags": "poe migrate transfer move path of exile ggg account profile name username login support gone missing empty see any new renamed old",
+      "group": "Troubleshooting"
     },
     {
       "question": "There is a special sound when unique items drop for the first time. Can I edit or remove this sound?",
       "answer": "This is another one of GGGs special sound effects. Sadly, item filter have no control over these at all. This is neither a filter alert sound nor a drop-sound that can be disabled with the DisableDropSound filter command.",
-      "tags": "sound sounds alert alertsound unique uniques legendary legendaries first time only drop inventory not anymore back on ground single"
+      "tags": "sound sounds alert alertsound unique uniques legendary legendaries first time only drop inventory not anymore back on ground single",
+      "group": "Sounds"
     },
     {
       "question": "I deleted a filter but it still shows up in my filter-list.",
       "answer": "A filter is saved inside the FilterBlade database. If you sync it, it is also saved in PoE's database. If you delete a filter on FilterBlade, it is only deleted from our database, since GGG doesn't allow us to delete it from PoE. You will have to do that manually by going to your PoE profile page on pathofexile.com. If you only delete it on the PoE website, it will still be on FilterBlade because PoE doesn't 'talk' to FilterBlade. You can sync on FilterBlade again to get the filter back into PoE.",
-      "tags": "remove still appears gone stays removed go away"
+      "tags": "remove still appears gone stays removed go away",
+      "group": "Troubleshooting"
     },
     {
       "question": "I searched the filter and can't find a certain divination card/unique/gem/item.",
       "answer": "It's not missing. It's caught by a general entry or by a class-based rule. There are several ways of highlighting items. That's why the filter will also always show new uniques/divination cards etc., even if you forget to update (you should still do that)",
-      "tags": "divination unique tier gem card key missing"
+      "tags": "divination unique tier gem card key missing",
+      "group": "Troubleshooting"
     },
     {
       "question": "Why does the filter show so many items when I go back to a low level zone, even though I have a high level?",
       "answer": "The filter can use the area level for filtering, but not your character level. If you're in a low level zone, it will highlight the items that are good <i>for this specific zone (level)</i>.",
-      "tags": "low level high level endgame early game go back to act 1 act one player level zone level"
+      "tags": "low level high level endgame early game go back to act 1 act one player level zone level",
+      "group": "Troubleshooting"
     },
     {
       "question": "What is a 'Vendor Recipe' and how do I do it?",
       "answer": "Selling specific items to a vendor will give you a special item in return. For example: Selling a random white body armour will give you a Scroll Fragment in return. But if that body armour happens to have 6 Sockets, you will instead get 7 Jeweller's Orb in return. All by simply selling items to the vendor. <br> <br> <a href='https://www.poewiki.net/wiki/Vendor_recipe_system' target='_blank'>POE1's Wiki.</a> <br> <br> <a href='https://www.poe2wiki.net/index.php?search=Vendor%20recipe&title=Special%3ASearch' target='_blank'>POE2's Wiki.</a>",
-      "tags": "vendor recipe trade npc rgb 6sock 6 sockets socket quality chisel glassblower gemcutter trick tips useful"
+      "tags": "vendor recipe trade npc rgb 6sock 6 sockets socket quality chisel glassblower gemcutter trick tips useful",
+      "group": "Basics"
     },
     {
       "question": "How can I hide or disable rules that don't have a button for it?",
       "answer": "You can go to Advanced -> Settings -> Always display all Show/Hide/Disable button.<br><br>Please use this setting with care as we have explicitly added/hidden these buttons on certain rules for a reason, such as conflicts with other rules or the relative values of items caught by it.",
-      "tags": "hide display enable no option can't hide only show the other mode shd toggle"
+      "tags": "hide display enable no option can't hide only show the other mode shd toggle",
+      "group": "Power-Users"
     },
     {
       "question": "Why can't I hide items in Ruthless filters?",
       "answer": "GGG does not allow hiding items in Ruthless filters. The 'Hide' command is replaced by a 'Minimize' command and we can't do anything about it.",
-      "tags": "how can i hide disable toggle remove"
+      "tags": "how can i hide disable toggle remove",
+      "group": "Bonus features/modes"
     },
     {
       "question": "Is there a Chaos-Recipe filter?",
       "answer": "There are some module for chaos recipes.",
-      "tags": "chaos recipe regal alchemy vendor full set of gear equipment every all slot rare one each"
+      "tags": "chaos recipe regal alchemy vendor full set of gear equipment every all slot rare one each",
+      "group": "Bonus features/modes"
     },
     {
       "question": "Can I set the size of an item to something smaller than 18 or bigger than 45?",
       "answer": "Nope. Those limits are set by GGG and there is nothing we can do about that. If you were to enter a bigger or smaller number into the code, it would be ignored and instead use the biggest/smallest valid number.",
-      "tags": "size font fontsize big bigger small smaller huge"
+      "tags": "size font fontsize big bigger small smaller huge",
+      "group": "Basics"
     },
     {
       "question": "Can I upload a filter? Even if it is just a customized NeverSink filter?",
       "answer": "You can... However, don't... The .filter file does not contain the crucial information about what was changed to enable updating/editing. Imagine it like trying to get raw eggs from a finished cake. This includes filters created on filterblade too. It will just break; you are much better off starting from scratch and resaving to Filterblade. <br><br> You can only upload into filterblade via a 'SaveFile' as this contains all the information on the changes made to the stock filter that got you to the current state. Think of the save file as a list of instructions on what to do for it to go from A - B. If you have the savefile you can go to Advanced > Test Local Filter > Load filter from saveFile.",
-      "tags": "custom filter upload edited use my own old upload filter"
+      "tags": "custom filter upload edited use my own old upload filter",
+      "group": "Import, Export, Save, Load, Download"
     },
     {
       "question": "Can you make the filter do ...?",
       "answer": "The things a PoE loot filter can do are very limited. A good rule of thumb is: If you can't do it on FilterBlade, it's likely not possible in PoE. You can:<ul><li>Add colors (text, border, background) with opacity, but no gradients, and no changing the border width</li><li>Add beams and minimap icons</li><li>Play one from the 26 sounds with a given volume + NEW: play those sounds in a way that tells where in the game world that item dropped. + NEW: Play custom sound files on your PC.</li><li>Set a size from 18 to 45. Nothing bigger or smaller than that.</li></ul>Things we can NOT do include but are not limited to:<ul><li>Filter by unique name. Only filtering by BaseType is possible. And many BaseTypes have multiple uniques. A filter cannot tell which one of those it is, even if it's identified.</li><li>Change the font itself</li><li>Edit the font of chests, breach hands, masters, etc to be bigger or better visible.</li><li>Detect the 'Tier' of an item (PoE2 only).</li><li>Detect the mods of unidentified items, or the specific (corruption-) implicits of any item, not which mod is fractured.</li><li>Only show items that are allocated to me when playing in groups.</li><li>Only show items for a given time and hide them after x seconds.</li></ul>",
-      "tags": "GGG limits limit api can do i possible to feature can i is it possible to do possible to have add make"
+      "tags": "GGG limits limit api can do i possible to feature can i is it possible to do possible to have add make",
+      "group": "Basics"
     },
     {
       "question": "Show/Hide/Disable. Why are there 3 states and what do they mean?",
       "answer": "To put a short story long <br><br> Show: Shows the item that matches ALL the variables in the rule. <br><br> Hide: Hides the item which matches ALL the variables in the rule. <br><br> Disable: This removes the rule from the filter, this means that rule will not and cannot catch any item and it leaves the other rules in the filter to handle the item. You should only be disabling rules if it is the default option in the rule or you know what you are doing. As this can lead to items being unfiltered and caught in the 'Catch All' error rule showing PINK.",
-      "tags": "Show hide disable why mean 3 options what does difference between" 
+      "tags": "Show hide disable why mean 3 options what does difference between" ,
+      "group": "Basics"
     }
   ]
 }
