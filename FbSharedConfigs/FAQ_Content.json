@@ -25,7 +25,8 @@
         {
       "question": "I deleted my filter... How do i get it back?",
       "answer": "Jump into the filterblade discord > Alternate click on your username above and copy the UUID as seen below.<br><img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/FBUUID.PNG' alt='FBUUID'><br><br>Put a message into the discord with the name of the filter thats been deleted along with the UUID (or wait for a reponse to send the UUID and delete after theyve got it). One of the mods will attempt to get the filter back and provide a filter .save file. Upload that file back into filterblade and then save as normal. <img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/LoadFromSave.png' alt='LoadFromSave'><br>",
-      "tags": "delete deleted recover restore backup get it back my filter"
+      "tags": "delete deleted recover restore backup get it back my filter",
+      "group": "Troubleshooting"
     },
     {
       "question": "My filter doesn't behave inGame as I expected it to or unlike simulated on FilterBlade.",
