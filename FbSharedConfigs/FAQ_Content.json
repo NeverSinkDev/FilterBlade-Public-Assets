@@ -354,7 +354,7 @@
     },
     {
       "question": "I deleted a synced filter from PoE site but it still shows up on FilterBlade in 'My Filters' and/or 'Sync Target' on 'Export to PoE'",
-      "answer": "Filter saves are stored in FilterBlade's database. If you sync it, it saves the output .filter in PoE's database. If you delete a filter on FilterBlade, it is only deleted from our database. GGG doesn't allow us to delete it from PoE site; you will have to do that manually by going to your PoE profile page on pathofexile.com. If you only delete it on the PoE website, it will still be on FilterBlade because PoE doesn't 'talk' to FilterBlade. You can sync on FilterBlade again to get the filter back into PoE.",
+      "answer": "Filter saves are stored in FilterBlade's database. If you sync it, it saves the output .filter in PoE's database. If you delete a filter save on FilterBlade, it is only deleted from our database. GGG doesn't allow us to delete output .filter from PoE site; you will have to do that manually by going to your profile page on pathofexile.com. If you only delete output on the PoE website, the save will still be on FilterBlade because PoE doesn't 'talk' to FilterBlade. You can sync from FilterBlade again to get the filter back into PoE.",
       "tags": "remove still appears gone stays removed go away",
       "group": "Troubleshooting"
     },
