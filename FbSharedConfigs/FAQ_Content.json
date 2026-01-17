@@ -22,12 +22,6 @@
       "tags": "search problem huge find where locate which part section how location line section area entry rule can't cant right",
       "group": "Basics"
     },
-        {
-      "question": "I deleted my filter... How do i get it back?",
-      "answer": "Jump into the filterblade discord > Alternate click on your username above and copy the UUID as seen below.<br><img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/FBUUID.PNG' alt='FBUUID'><br><br>Put a message into the discord with the name of the filter thats been deleted along with the UUID (or wait for a reponse to send the UUID and delete after theyve got it). One of the mods will attempt to get the filter back and provide a filter .save file. Upload that file back into filterblade and then save as normal. <img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/LoadFromSave.png' alt='LoadFromSave'><br>",
-      "tags": "delete deleted recover restore backup get it back my filter",
-      "group": "Troubleshooting"
-    },
     {
       "question": "My filter doesn't behave inGame as I expected it to or unlike simulated on FilterBlade.",
       "answer": "First, make sure you're actually using your new filter!<br>When using the online Sync feature, check the 'Last modified' date and time inGame when loading the filter (the hour might differ due to timezones).<br>Create your new filter with a new name and make sure you see and select this new name in the filter-list inGame.<br>Try selecting no filter at all, then switch back to the desired filter.<br><br>A good next step is to import the In-Game item on the 'Simulate' tab on FilterBlade. It can show you why an item is highlighted and can give insight into where the error lies. Make sure to copy the mod-information by holding down the Alt key.<br>Make sure that the ItemLevel, AreaLevel or StackSize of the item isn't a factor. Currency for example has many variations depending on some of these.<br>If you don't have an example item for the Importer, try using the Item Builder below it to specify exactly what item you want to test.<br>Check what you are filtering for, comparing the item, the desired rule and the actual rule. Filtering by 'Links < 6' is a good idea, but will not affect Quivers because they have no links/sockets.",
@@ -359,8 +353,8 @@
       "group": "Sounds"
     },
     {
-      "question": "I deleted a filter but it still shows up in my filter-list.",
-      "answer": "A filter is saved inside the FilterBlade database. If you sync it, it is also saved in PoE's database. If you delete a filter on FilterBlade, it is only deleted from our database, since GGG doesn't allow us to delete it from PoE. You will have to do that manually by going to your PoE profile page on pathofexile.com. If you only delete it on the PoE website, it will still be on FilterBlade because PoE doesn't 'talk' to FilterBlade. You can sync on FilterBlade again to get the filter back into PoE.",
+      "question": "I deleted a filter from FilterBlade/PoE site but it still shows up on the other",
+      "answer": "Filter saves are stored in FilterBlade's database. If you sync it, it saves the output .filter in PoE's database. If you delete a filter save on FilterBlade, it is only deleted from our database. GGG doesn't allow us to delete output .filter from PoE site; you will have to do that manually by going to your profile page on pathofexile.com. If you only delete output on the PoE website, the save will still be on FilterBlade because PoE doesn't 'talk' to FilterBlade. You can sync from FilterBlade again to get the filter back into PoE.",
       "tags": "remove still appears gone stays removed go away",
       "group": "Troubleshooting"
     },
@@ -374,6 +368,12 @@
       "question": "Why does the filter show so many items when I go back to a low level zone, even though I have a high level?",
       "answer": "The filter can use the area level for filtering, but not your character level. If you're in a low level zone, it will highlight the items that are good <i>for this specific zone (level)</i>.",
       "tags": "low level high level endgame early game go back to act 1 act one player level zone level",
+      "group": "Troubleshooting"
+    },
+    {
+      "question": "I deleted my filter... How do i get it back?",
+      "answer": "Alternate click on your username at the top of the site and 'Copy UUID' as seen below.<br><img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/FBUUID.PNG' alt='FBUUID'><br>Head to the FilterBlade Discord and post a message in the applicable PoE1/PoE2 filter questions channel with name of the filter, approximate last known good state that needs recovery, and your copied UUID. (Can wait for a reponse to send the UUID and delete after they've got it). One of the mods will attempt to recover the filter and provide a .save file.<br>Advanced > Local Filter > 'Load filter from saveFile' as shown below > save as usual.<br><img src='https://raw.githubusercontent.com/VenomsAssassin/Filterblade-FAQ-Screenshots/refs/heads/main/LoadFromSave.png' alt='LoadFromSave'><br>",
+      "tags": "delete deleted recover restore backup get my old filter back version roll rollback previous undo change messed up dumb stupid bad wrong",
       "group": "Troubleshooting"
     },
     {
