@@ -66,7 +66,7 @@ StyleSection("Unique items", "There are hundreds of uniques! Some are in high de
     SS_InfoBox(["Detailed explanation", "Filterblade tiering is based on the ingame economy. It's a good practice to update the filter weekly. <hr> The economy  sometimes has large meta-shifts! A cheap unique can become very expensive very fast (or vice versa)!"]);
 }
 
-StyleSection("SOMETIMES LUCKY", "The blue or purple map icons and beams signalize that are drop CAN be quite valuable... if you're lucky. A unique  Leather Belt can very very rarely be an expensive headhunter and the filter can't tell them apart.") {
+StyleSection("SOMETIMES LUCKY", "The blue or purple map icons and beams signalize that are drop CAN be quite valuable... if you're lucky. A unique Heavy Belt can very very rarely be an expensive headhunter and the filter can't tell them apart.") {
     Search S0("skip", null, "uniques;multispecial") {  }
 
     SS_Item("S0");
