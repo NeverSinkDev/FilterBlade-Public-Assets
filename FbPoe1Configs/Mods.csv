@@ -233,8 +233,6 @@ of Blinding,2/2,3-4% chance to Blind Enemies on Hit with Attacks,suffix,32,"Abys
 of Blinding,1/2,5-6% chance to Blind Enemies on Hit with Attacks,suffix,65,"Abyss-Jewel-Ranged, Abyss-Jewel-Melee"
 of Taunting,2/2,3-5% chance to Taunt Enemies on Hit with Attacks,suffix,32,Abyss-Jewel-Melee
 of Taunting,1/2,6-8% chance to Taunt Enemies on Hit with Attacks,suffix,65,Abyss-Jewel-Melee
-of Mending,2/2,21-24% chance to Avoid Bleeding,suffix,20,All Gear Items
-of Mending,1/2,25-30% chance to Avoid Bleeding,suffix,50,All Gear Items
 of Escape,1/1,8-10% chance to Avoid Elemental Ailments while you have Elusive,suffix,84,"Abyss-Jewel-Melee, Abyss-Jewel-Ranged, Abyss-Jewel-Caster, Abyss-Jewel-Summoner"
 of Warming,2/2,21-24% chance to Avoid being Chilled\n21-24% chance to Avoid being Frozen,suffix,1,All Gear Items
 of Warming,1/2,25-30% chance to Avoid being Chilled\n25-30% chance to Avoid being Frozen,suffix,30,All Gear Items
@@ -2415,6 +2413,11 @@ of Acclimatisation,4/5,Minions have +16-20% to all Elemental Resistances,suffix,
 of Adaptation,3/5,Minions have +21-25% to all Elemental Resistances,suffix,30,Weapon-Can-Roll-Minion-Modifiers
 of Evolution,2/5,Minions have +26-30% to all Elemental Resistances,suffix,40,Weapon-Can-Roll-Minion-Modifiers
 of Metamorphosis,1/5,Minions have +(27-30)% to all Elemental Resistances,suffix,61,Ring-Can-Roll-Minion-Modifiers
+of Coordination,5/5,Minions have (6-10)% increased Movement Speed,suffix,1,Ring-Can-Roll-Minion-Modifiers
+of Collaboration,4/5,Minions have (11-15)% increased Movement Speed,suffix,15,Ring-Can-Roll-Minion-Modifiers
+of Integration,3/5,Minions have (16-20)% increased Movement Speed,suffix,30,Ring-Can-Roll-Minion-Modifiers
+of Orchestration,2/5,Minions have (21-25)% increased Movement Speed,suffix,40,Ring-Can-Roll-Minion-Modifiers
+of Harmony,1/5,Minions have (26-30)% increased Movement Speed,suffix,55,Ring-Can-Roll-Minion-Modifiers
 Runner's,6/6,10% increased Movement Speed,prefix,1,Boots
 Sprinter's,5/6,15% increased Movement Speed,prefix,15,Boots
 Sprinter's,,15-25% increased Movement Speed,prefix,5,Boots
@@ -2931,9 +2934,6 @@ of Phaaryl,,Areas contain additional Harbinger Portals - Harbinger Portals drop 
 of the Sacred Grove,,Areas contain The Sacred Grove - Crops are larger in size - Crops contain higher tier seeds,suffix,81,Memory
 of Reverse Incursion,,Areas contain additional Temporal Incursions - Temporal Incursion Portals have their direction reversed,suffix,81,Memory
 of Tormented Souls,,Rare and Unique Monsters found in Areas are Possessed and their Minions are Touched,suffix,81,Memory
-Otherworldly,,Slaying Enemies close together can attract monsters from Beyond this realm,prefix,68,Map
-Antagonist's,,20-30% increased number of Rare Monsters,prefix,68,Map
-Splitting,,Monsters fire 2 additional Projectiles,prefix,68,Map
 Steadfast,7/7,x% increased Chance to Block,prefix,1,"Str-Shield, Str-Dex-Shield, Str-Int-Shield"
 Unrelenting,6/7,x% increased Chance to Block,prefix,1,"Str-Shield, Str-Dex-Shield, Str-Int-Shield"
 Adamant,5/7,x% increased Chance to Block,prefix,1,"Str-Shield, Str-Dex-Shield, Str-Int-Shield"
@@ -3016,7 +3016,7 @@ Sundering,,(14-18)% increased Critical Strike Chance with Two Handed Melee Weapo
 Warrior's,,(4-6)% increased Attack Speed with Two Handed Melee Weapons,prefix,,Jewel
 Champion's,,(12-14)% increased Damage with Two Handed Weapons,prefix,,Jewel
 of the Convocation,,Grants Level 1 Convocation Skill,suffix,45,Shield-Can-Roll-Minion-Modifiers
-Martinet's,,=+1 to Level of all Minion Skill Gems,Prefix,60,Weapon-Can-Roll-Minion-Modifiers
+Martinet's,,+1 to Level of all Minion Skill Gems,Prefix,60,Weapon-Can-Roll-Minion-Modifiers
 Baroness's,,Minions deal (10-19)% increased Damage,Prefix,2,Weapon-Can-Roll-Minion-Modifiers
 Viscountess's,,Minions deal (20-29)% increased Damage,Prefix,11,Weapon-Can-Roll-Minion-Modifiers
 Marchioness's,,Minions deal (30-39)% increased Damage,Prefix,23,Weapon-Can-Roll-Minion-Modifiers
@@ -3026,29 +3026,110 @@ Princess's,,Minions deal (70-84)% increased Damage,Prefix,58,Weapon-Can-Roll-Min
 Queen's,,Minions deal (85-99)% increased Damage,Prefix,64,Weapon-Can-Roll-Minion-Modifiers
 Empress's,,Minions deal (100-109)% increased Damage,Prefix,84,Weapon-Can-Roll-Minion-Modifiers
 of the Convocation,,Grants Level 1 ConvocationSkill,Suffix,45,Weapon-Can-Roll-Minion-Modifiers
-of Luck,,Minions have (10-19)% increased Critical Strike Chance,Suffix,11,Weapon-Can-Roll-Minion-Modifiers
-of Fortune,,Minions have (20-39)% increased Critical Strike Chance,Suffix,21,Weapon-Can-Roll-Minion-Modifiers
-of Providence,,Minions have (40-59)% increased Critical Strike Chance,Suffix,28,Weapon-Can-Roll-Minion-Modifiers
-of Serendipity,,Minions have (60-79)% increased Critical Strike Chance,Suffix,41,Weapon-Can-Roll-Minion-Modifiers
-of Determinism,,Minions have (80-99)% increased Critical Strike Chance,Suffix,59,Weapon-Can-Roll-Minion-Modifiers
-of Destiny,,Minions have (100-109)% increased Critical Strike Chance,Suffix,76,Weapon-Can-Roll-Minion-Modifiers
+of Luck,6/6,Minions have (10-19)% increased Critical Strike Chance,Suffix,11,"Weapon-Can-Roll-Minion-Modifiers, Shield-Can-Roll-Minion-Modifiers"
+of Fortune,5/6,Minions have (20-39)% increased Critical Strike Chance,Suffix,21,"Weapon-Can-Roll-Minion-Modifiers, Shield-Can-Roll-Minion-Modifiers"
+of Providence,4/6,Minions have (40-59)% increased Critical Strike Chance,Suffix,28,"Weapon-Can-Roll-Minion-Modifiers, Shield-Can-Roll-Minion-Modifiers"
+of Serendipity,3/6,Minions have (60-79)% increased Critical Strike Chance,Suffix,41,"Weapon-Can-Roll-Minion-Modifiers, Shield-Can-Roll-Minion-Modifiers"
+of Determinism,2/6,Minions have (80-99)% increased Critical Strike Chance,Suffix,59,"Weapon-Can-Roll-Minion-Modifiers, Shield-Can-Roll-Minion-Modifiers"
+of Destiny,1/6,Minions have (100-109)% increased Critical Strike Chance,Suffix,76,"Weapon-Can-Roll-Minion-Modifiers, Shield-Can-Roll-Minion-Modifiers"
 of Adjustment,,Minions have +(11-15)% to all Elemental Resistances,Suffix,8,Weapon-Can-Roll-Minion-Modifiers
 of Acclimatisation,,Minions have +(16-20)% to all Elemental Resistances,Suffix,24,Weapon-Can-Roll-Minion-Modifiers
 of Adaptation,,Minions have +(21-23)% to all Elemental Resistances,Suffix,37,Weapon-Can-Roll-Minion-Modifiers
 of Evolution,,Minions have +(24-26)% to all Elemental Resistances,Suffix,50,Weapon-Can-Roll-Minion-Modifiers
 of Metamorphosis,,Minions have +(27-30)% to all Elemental Resistances,Suffix,61,Weapon-Can-Roll-Minion-Modifiers
-of the Administrator,,Minions have (13-17)% increased maximum Life,Suffix,10,Weapon-Can-Roll-Minion-Modifiers
-of the Rector,,Minions have (18-22)% increased maximum Life,Suffix,26,Weapon-Can-Roll-Minion-Modifiers
-of the Overseer,,Minions have (23-27)% increased maximum Life,Suffix,42,Weapon-Can-Roll-Minion-Modifiers
-of the Taskmaster,,Minions have (28-32)% increased maximum Life,Suffix,58,Weapon-Can-Roll-Minion-Modifiers
-of the Slavedriver,,Minions have (33-36)% increased maximum Life,Suffix,74,Weapon-Can-Roll-Minion-Modifiers
-of the Despot,,Minions have (37-40)% increased maximum Life,Suffix,82,Weapon-Can-Roll-Minion-Modifiers
-of Impermeability,,Minions have +(3-4)% to all maximum Elemental Resistances,Suffix,68,Weapon-Can-Roll-Minion-Modifiers
-of Countervailing,,Minions have +(5-6)% to all maximum Elemental Resistances,Suffix,75,Weapon-Can-Roll-Minion-Modifiers
-of Imperviousness,,Minions have +(7-8)% to all maximum Elemental Resistances,Suffix,81,Weapon-Can-Roll-Minion-Modifiers
+of the Administrator,6/6,Minions have (13-17)% increased maximum Life,Suffix,10,Weapon-Can-Roll-Minion-Modifiers
+of the Rector,5/6,Minions have (18-22)% increased maximum Life,Suffix,26,Weapon-Can-Roll-Minion-Modifiers
+of the Overseer,4/6,Minions have (23-27)% increased maximum Life,Suffix,42,Weapon-Can-Roll-Minion-Modifiers
+of the Taskmaster,3/6,Minions have (28-32)% increased maximum Life,Suffix,58,Weapon-Can-Roll-Minion-Modifiers
+of the Slavedriver,2/6,Minions have (33-36)% increased maximum Life,Suffix,74,Weapon-Can-Roll-Minion-Modifiers
+of the Despot,1/6,Minions have (37-40)% increased maximum Life,Suffix,82,Weapon-Can-Roll-Minion-Modifiers
+of Impermeability,,Minions have +(3-4)% to all maximum Elemental Resistances,Suffix,68,"Weapon-Can-Roll-Minion-Modifiers, Shield-Can-Roll-Minion-Modifiers"
+of Countervailing,,Minions have +(5-6)% to all maximum Elemental Resistances,Suffix,75,"Weapon-Can-Roll-Minion-Modifiers, Shield-Can-Roll-Minion-Modifiers"
+of Imperviousness,,Minions have +(7-8)% to all maximum Elemental Resistances,Suffix,81,"Weapon-Can-Roll-Minion-Modifiers, Shield-Can-Roll-Minion-Modifiers"
 of the Guard,,Minions have (7-9)% additional Physical Damage Reduction,Suffix,68,Weapon-Can-Roll-Minion-Modifiers
 of the Brigade,,Minions have (10-12)% additional Physical Damage Reduction,Suffix,75,Weapon-Can-Roll-Minion-Modifiers
 of the Phalanx,,Minions have (13-15)% additional Physical Damage Reduction,Suffix,81,Weapon-Can-Roll-Minion-Modifiers
+of the Foray,6/6,Minions have +(10-14)% to Critical Strike Multiplier,Suffix,8,Weapon-Can-Roll-Minion-Modifiers
+of the Horde,5/6,Minions have +(15-19)% to Critical Strike Multiplier,Suffix,21,Weapon-Can-Roll-Minion-Modifiers
+of the Throng,4/6,Minions have +(20-24)% to Critical Strike Multiplier,Suffix,30,Weapon-Can-Roll-Minion-Modifiers
+of the Swarm,3/6,Minions have +(25-29)% to Critical Strike Multiplier,Suffix,44,Weapon-Can-Roll-Minion-Modifiers
+of the Invasion,2/6,Minions have +(30-34)% to Critical Strike Multiplier,Suffix,59,Weapon-Can-Roll-Minion-Modifiers
+of the Legion,1/6,Minions have +(35-38)% to Critical Strike Multiplier,Suffix,73,Weapon-Can-Roll-Minion-Modifiers
 of the Phoenix,,+1% to maximum Fire Resistance,Suffix,,Jewel
 of the Kraken,,+1% to maximum Ice Resistance,Suffix,,Jewel
 of the Leviathan,,+1% to maximum Lightning Resistance,Suffix,,Jewel
+Otherworldly,,Slaying Enemies close together can attract monsters from Beyond this realm,prefix,68,Map
+of Infusion,,(4-6)% of Damage taken Recouped as Life,Suffix,,
+of the Flameruler,,(30-35)% reduced Ignite Duration on you,Suffix,,
+of the Snowbreather,,(35-30)% reduced Effect of Chill on you,Suffix,,
+of the Stormdweller,,(35-30)% reduced Effect of Shock on you,Suffix,,
+of Neutralisation,,(35-30)% reduced Poison Duration on you,Suffix,,
+of Stemming,,(35-30)% reduced Bleed Duration on you,Suffix,,
+Mirrored,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Enthralled,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Punishing,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Fecund,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Demonic,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Capricious,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Feral,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Skeletal,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Haunting,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Bipedal,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Emanant,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Multifarious,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Abhorrent,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Lunar,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Feasting,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Slithering,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Solar,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Undead,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Resistant,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Savage,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Antagonist's,,20-30% increased number of Rare Monsters,Prefix,68,"Map, LowTier"
+Fleet,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Ceremonial,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Twinned,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Hexwarded,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Buffered,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Impervious,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Impaling,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Chaining,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Conflagrating,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Splitting,,Monsters fire 2 additional Projectiles,Prefix,68,"Map, LowTier"
+Armoured,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Unstoppable,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Titan's,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Overlord's,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Burning,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Freezing,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Shocking,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Oppressive,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+Unwavering,,"Quantity, Rarity, Pack size, Special Mod",Prefix,68,"Map, LowTier"
+of Power,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Insulation,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Enervation,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Bloodlines,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Endurance,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Toughness,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Deadliness,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Imprecision,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Smothering,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Doubt,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Fatigue,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Giants,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Miring,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Carnage,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Transience,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Venom,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Impedance,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Drought,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Rust,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Impotence,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Frenzy,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Balance,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Blinding,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Desecration,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Ice,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Consecration,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Lightning,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
+of Flames,,"Quantity, Rarity, Pack size, Special Mod",Suffix,68,"Map, LowTier"
