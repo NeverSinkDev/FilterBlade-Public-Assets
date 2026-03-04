@@ -32,20 +32,6 @@
 		},
 
 		"//comment2": "Drop source or common currency type tags",
-		"Breach": {
-			"displayName": "Breach",
-			"iconPath": "assets/img/Icons/AccordionIcons/Breachstone.png",
-			"description": "Drops from Breach Encounters and Rewards",
-			"isHiddenByDefault": false,
-			"group": "currency2"
-		},
-		"Harbinger": {
-			"displayName": "Harbinger",
-			"iconPath": "assets/img/Icons/AccordionIcons/FracturingOrb.png",
-			"description": "Drops from Harbinger encounters and Rewards",
-			"isHiddenByDefault": false,
-			"group": "currency2"
-		},
 		"Heist": {
 			"displayName": "Heist",
 			"iconPath": "assets/img/Icons/AccordionIcons/HeistGrandBlueprint.png",
@@ -129,13 +115,6 @@
 			"displayName": "Ruthless exclusive",
 			"iconPath": "assets/img/Icons/AccordionIcons/EternalOrb.png",
 			"description": "Only obtainable in Ruthless leagues",
-			"isHiddenByDefault": true,
-			"group": "currency3"
-		},
-		"StandardOnly": {
-			"displayName": "Standard Exclusive",
-			"iconPath": "assets/img/Icons/AccordionIcons/Breachstone.png",
-			"description": "Only obtainable in Standard leagues",
 			"isHiddenByDefault": true,
 			"group": "currency3"
 		},
@@ -307,43 +286,6 @@
 					"tags": ["Eldritch", "Generic"]
 				},
 
-				"Comprehensive Scouting Report": {
-					"text": "Drops if you have Planar Tactitian Atlas node<br>Reroll all of Kirac's Atlas Missions, adding additional mission options",
-					"tags": ["Report", "BossDrop"]
-				},
-				"Operative's Scouting Report": {
-					"text": "Drops if you have Solidarity Atlas node<br>Reroll all of Kirac's Atlas Missions, granting missions with rewarding implicit modifiers",
-					"tags": ["Report", "BossDrop"]
-				},
-				"Otherworldly Scouting Report": {
-					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Breachstone",
-					"tags": ["Report", "BossDrop", "StandardOnly"]
-				},
-				"Blighted Scouting Report": {
-					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, including at least one Blighted Map",
-					"tags": ["Report", "BossDrop"]
-				},
-				"Delirious Scouting Report": {
-					"text": "Drops if you have Expect the Unexpected Atlas node<br>Reroll all of Kirac's Atlas Missions, adding layers of Delirium to all non-Unique Maps",
-					"tags": ["Report", "BossDrop"]
-				},
-				"Singular Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, including at least one Unique map",
-					"tags": ["Report", "Generic"]
-				},
-				"Influenced Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, including at least one Shaper Guardian, Elder Guardian, or Elderslayer Map",
-					"tags": ["Report", "Generic"]
-				},
-				"Explorer's Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, using uncompleted Maps where possible",
-					"tags": ["Report", "Generic"]
-				},
-				"Vaal Scouting Report": {
-					"text": "Reroll all of Kirac's Atlas Missions, corrupting all non-Unique Maps",
-					"tags": ["Report", "Generic"]
-				},
-
 				"Fertile Catalyst": {
 					"text": "Adds quality that enhances Life and Mana modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
@@ -389,27 +331,6 @@
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 
-				"Blessing of Chayula": {
-					"text": "Drops from Chayula<br>Upgrades a Chayula breachstone to a more powerful version",
-					"tags": ["StandardOnly"]
-				},
-				"Blessing of Uul-Netol": {
-					"text": "Drops from Uul-Netol<br>Upgrades a Uul-Netol breachstone to a more powerful version",
-					"tags": ["StandardOnly"]
-				},
-				"Blessing of Esh": {
-					"text": "Drops from Esh<br>Upgrades a Esh breachstone to a more powerful version",
-					"tags": ["StandardOnly"]
-				},
-				"Blessing of Tul": {
-					"text": "Drops from Tul<br>Upgrades a Tul breachstone to a more powerful version",
-					"tags": ["StandardOnly"]
-				},
-				"Blessing of Xoph": {
-					"text": "Drops from Xoph<br>Upgrades a Xoph breachstone to a more powerful version",
-					"tags": ["StandardOnly"]
-				},
-
 				"Burial Medallion": {
 					"text": "Brought to Dannig to refresh his vendor inventory",
 					"tags": ["Expedition", "LeagueDrop"]
@@ -427,78 +348,41 @@
 					"tags": ["Expedition", "LeagueDrop"]
 				},
 
-				"//comment1": "some of those can techincally very rarely drop from mob that drops vendor price of the items",
-				"Fracturing Orb": {
-					"text": "Fracture a random modifier on a rare item with at least 4 modifiers, locking it in place",
-					"tags": ["Harbinger", "LeagueDrop"]
-				},
-				"Fracturing Shard": {
-					"text": "A stack of 20 shards becomes a Fracturing Orb",
-					"tags": ["Harbinger", "LeagueDrop"]
-				},
-				"Ancient Orb": {
-					"text": "Reforges a unique equipment as another of the same item class",
-					"tags": ["Harbinger", "LeagueDrop"]
-				},
-				"Ancient Shard": {
-					"text": "A stack of 20 shards becomes an Ancient Orb",
-					"tags": ["Harbinger", "LeagueDrop"]
-				},
-				"Harbinger's Orb": {
-					"text": "Reforges a map item as another of a higher tier",
-					"tags": ["Harbinger", "LeagueDrop"]
-				},
-				"Harbinger's Shard": {
-					"text": "A stack of 20 shards becomes a Harbinger's Orb",
-					"tags": ["Harbinger", "LeagueDrop"]
-				},
-				"Horizon Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Horizons",
-					"tags": ["Harbinger", "LeagueDrop"]
-				},
-				"Engineer's Orb": {
-					"text": "Improves the quality of a Strongbox",
-					"tags": ["Harbinger", "LeagueDrop"]
-				},
-				"Engineer's Shard": {
-					"text": "A stack of 20 shards becomes an Engineer's Orb",
-					"tags": ["Harbinger", "LeagueDrop"]
-				},
 				"Mirror Shard": {
 					"text": "A stack of 20 shards becomes a Mirror of Kalandra",
-					"tags": ["Harbinger", "LeagueDrop"]
+					"tags": ["Generic"]
 				},
 				"Exalted Shard": {
 					"text": "A stack of 20 shards becomes an Exalted Orb",
-					"tags": ["Harbinger", "LeagueDrop"]
+					"tags": ["Generic"]
+				},
+				"Fracturing Shard": {
+					"text": "A stack of 20 shards becomes a Fracturing Orb",
+					"tags": ["Generic"]
 				},
 				"Annulment Shard": {
 					"text": "A stack of 20 shards becomes an Orb of Annulment",
-					"tags": ["Harbinger", "LeagueDrop"]
+					"tags": ["Generic"]
 				},
 				"Regal Shard": {
 					"text": "A stack of 20 shards becomes a Regal Orb",
-					"tags": ["Harbinger", "LeagueDrop"]
+					"tags": ["Generic"]
 				},
 				"Chaos Shard": {
 					"text": "A stack of 20 shards becomes a Chaos Orb",
-					"tags": ["Harbinger", "LeagueDrop"]
+					"tags": ["Generic"]
 				},
 				"Alchemy Shard": {
 					"text": "A stack of 20 shards becomes an Orb of Alchemy",
-					"tags": ["Harbinger", "LeagueDrop"]
-				},
-				"Binding Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Binding",
-					"tags": ["Harbinger", "LeagueDrop"]
+					"tags": ["Generic"]
 				},
 				"Alteration Shard": {
 					"text": "A stack of 20 shards becomes an Orb of Alteration",
-					"tags": ["Harbinger", "LeagueDrop"]
+					"tags": ["Generic"]
 				},
 				"Transmutation Shard": {
 					"text": "A stack of 20 shards becomes an Orb of Transmutation",
-					"tags": ["Harbinger", "LeagueDrop"]
+					"tags": ["Generic"]
 				},
 
 				"Awakener's Orb": {
@@ -570,6 +454,14 @@
 					"text": "Augments a rare item with a new random modifier",
 					"tags": ["Generic"]
 				},
+				"Fracturing Orb": {
+					"text": "Fracture a random modifier on a rare item with at least 4 modifiers, locking it in place",
+					"tags": ["Generic"]
+				},
+				"Ancient Orb": {
+					"text": "Reforges a unique equipment as another of the same item class",
+					"tags": ["Generic"]
+				},
 				"Orb of Annulment": {
 					"text": "Removes a random modifier from an item",
 					"tags": ["Generic"]
@@ -594,10 +486,6 @@
 					"text": "Reforges a rare item with new random modifiers",
 					"tags": ["Generic"]
 				},
-				"Orb of Horizons": {
-					"text": "Reforges a map item as another of the same tier",
-					"tags": ["Generic"]
-				},
 				"Orb of Regret": {
 					"text": "Grants a passive skill refund point",
 					"tags": ["Generic"]
@@ -612,10 +500,6 @@
 				},
 				"Orb of Fusing": {
 					"text": "Reforges the links between sockets on an item",
-					"tags": ["Generic"]
-				},
-				"Cartographer's Chisel": {
-					"text": "Improves the quality of a map",
 					"tags": ["Generic"]
 				},
 				"Orb of Alchemy": {
@@ -722,6 +606,7 @@
 					"text": "Improves the quality of a map enhancing Scarabs found",
 					"tags": ["BossDrop"]
 				},
+
 				"Reflecting Mist": {
 					"text": "Unpredictably reflects a rare amulet or ring, breaking it into two mirrored halves with reflected modifiers",
 					"tags": ["LeagueDrop"]
@@ -739,22 +624,7 @@
 					"text": "Augments a Rare item with a new random modifier with higher level modifiers being more likely",
 					"tags": ["LeagueDrop"]
 				},
-				"Augmentation Implant": {
-					"text": "Augments a Magic Graft with a new random modifier",
-					"tags": ["LeagueDrop"]
-				},
-				"Regal Implant": {
-					"text": "Upgrades a Magic Graft to a Rare Graft",
-					"tags": ["LeagueDrop"]
-				},
-				"Exalted Implant": {
-					"text": "Augments a Rare Graft with a new random modifier",
-					"tags": ["LeagueDrop"]
-				},
-				"Unstable Implant": {
-					"text": "Corrupts a Graft, either destroying it entirely or replacing the implicit with a powerful modifier. This does not replace the Skill the Graft will use",
-					"tags": ["LeagueDrop"]
-				},
+
 
 				"Valdo's Puzzle Box": {
 					"text": "Contains a Mysterious Map with a Foil Unique Reward",
@@ -906,21 +776,11 @@
 				"Diviner's Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Divination Cards reward type"
 				},
-				"Foreboding Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Harbinger Items reward type"
-				},
-				"Fossilised Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Fossils reward type"
-				},
 				"Fragmented Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Fragments reward type"
 				},
 				"Jeweller's Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Trinkets reward type"
-				},
-				"Obscured Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Breach Items reward type",
-					"tags": ["StandardOnly"]
 				},
 				"Singular Delirium Orb": {
 					"text": "Modifies a Map item adding layers of Delirium with the Unique Items reward type"
@@ -1019,12 +879,6 @@
 				"Diviner's Incubator" : {
 					"text" : "Awards Stacked Decks."
 				},
-				"Foreboding Incubator" : {
-					"text" : "Awards Currency Shards or a Harbinger item."
-				},
-				"Fossilised Incubator" : {
-					"text" : "Awards a Fossil item."
-				},
 				"Gemcutter's Incubator" : {
 					"text" : "Does not drop. Awards a Quality Gem item."
 				},
@@ -1036,10 +890,6 @@
 				},
 				"Maddening Incubator" : {
 					"text" : "Awards a Delirium item. Usually simulacrum splinters or delirium orbs"
-				},
-				"Obscured Incubator" : {
-					"text" : "Awards a Breach item. Usually splinters or scarabs.",
-					"tags": ["StandardOnly"]
 				},
 				"Ornate Incubator" : {
 					"text" : "Awards a Currency item."
@@ -1252,9 +1102,6 @@
 				},
 				"Demigod's Wager": {
 					"tags": ["CurrencyOutcome"]
-				},
-				"Desecrated Virtue": {
-					"tags": ["GemOutcome"]
 				},
 				"Desperate Crusade": {
 					"tags": ["UniqueOutcome"]
@@ -1583,9 +1430,6 @@
 				"The Card Sharp": {
 					"tags": ["MapOutcome"]
 				},
-				"The Cartographer": {
-					"tags": ["CurrencyOutcome"]
-				},
 				"The Cataclysm": {
 					"tags": ["GemOutcome"]
 				},
@@ -1600,9 +1444,6 @@
 				},
 				"The Chains that Bind": {
 					"tags": ["SixLinkOutcome"]
-				},
-				"The Cheater": {
-					"tags": ["GemOutcome"]
 				},
 				"The Chosen": {
 					"tags": ["UniqueOutcome", "SixLinkOutcome"]
@@ -1679,9 +1520,6 @@
 				"The Eldritch Decay": {
 					"tags": ["MapOutcome"]
 				},
-				"The Emptiness": {
-					"tags": ["GemOutcome", "StandardOnly"]
-				},
 				"The Encroaching Darkness": {
 					"tags": ["MapOutcome", "UniqueOutcome"]
 				},
@@ -1708,9 +1546,6 @@
 				},
 				"The Explorer": {
 					"tags": ["MapOutcome"]
-				},
-				"The Eye of Terror": {
-					"tags": ["MapOutcome", "StandardOnly"]
 				},
 				"The Eye of the Dragon": {
 					"tags": ["UniqueOutcome"]
@@ -1811,14 +1646,8 @@
 				"The Jeweller's Boon": {
 					"tags": ["InfluencedOutcome"]
 				},
-				"The Journey": {
-					"tags": ["CurrencyOutcome"]
-				},
 				"The King's Heart": {
 					"tags": ["UniqueOutcome"]
-				},
-				"The Landing": {
-					"tags": ["MapOutcome", "UniqueOutcome"]
 				},
 				"The Last One Standing": {
 					"tags": ["UniqueOutcome"]
@@ -1870,9 +1699,6 @@
 				},
 				"The Oath": {
 					"tags": ["UniqueOutcome"]
-				},
-				"The Obscured": {
-					"tags": ["MapOutcome", "StandardOnly"]
 				},
 				"The Offering": {
 					"tags": ["UniqueOutcome"]
@@ -1931,9 +1757,6 @@
 				"The Progeny of Lunaris": {
 					"tags": ["UniqueOutcome"]
 				},
-				"The Puzzle": {
-					"tags": ["MapOutcome", "StandardOnly"]
-				},
 				"The Queen": {
 					"tags": ["UniqueOutcome"]
 				},
@@ -1990,9 +1813,6 @@
 				},
 				"The Shieldbearer": {
 					"tags": ["UniqueOutcome"]
-				},
-				"The Side Quest": {
-					"tags": ["CurrencyOutcome"]
 				},
 				"The Siren": {
 					"tags": ["UniqueOutcome"]
@@ -2252,9 +2072,6 @@
 				"Avian Pursuit": {
 					"tags": ["CurrencyOutcome"]
 				},
-				"The Bargain": {
-					"tags": ["MapOutcome", "StandardOnly"]
-				},
 				"The Mayor": {
 					"tags": ["UniqueOutcome"]
 				},
@@ -2288,29 +2105,29 @@
 		"Fragment": {
 			"items": {
 				"Sacrifice at Dusk": {
-					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
 				},
 				"Sacrifice at Midnight": {
-					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
 				},
 				"Sacrifice at Dawn": {
-					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
 				},
 				"Sacrifice at Noon": {
-					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>Opens an ilvl68 Vaal side area if used on its own"
+					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
 				},	
 
 				"Mortal Grief": {
-					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
 				},
 				"Mortal Rage": {
-					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
 				},
 				"Mortal Ignorance": {
-					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
 				},
 				"Mortal Hope": {
-					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>Opens an ilvl73 Vaal side area if used on its own"
+					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
 				},
 
 				"Fragment of the Chimera": {
@@ -2380,47 +2197,47 @@
 				},
 
 				"Reality Fragment": {
-					"text": "Fragment for the Uber Maven fight<br>Drops from T17 map bosses"
+					"text": "Fragment for the Uber Maven fight<br>Drops from Nightmare Map bosses"
 				},
 				"Awakening Fragment": {
-					"text": "Fragment for the Uber Sirus fight<br>Drops from T17 map bosses"
+					"text": "Fragment for the Uber Sirus fight<br>Drops from Nightmare Map bosses"
 				},
 				"Blazing Fragment": {
-					"text": "Fragment for the Uber Exarch fight<br>Drops from T17 map bosses"
+					"text": "Fragment for the Uber Exarch fight<br>Drops from Nightmare Map bosses"
 				},
 				"Devouring Fragment": {
-					"text": "Fragment for the Uber Eater fight<br>Drops from T17 map bosses"
+					"text": "Fragment for the Uber Eater fight<br>Drops from Nightmare Map bosses"
 				},
 				"Cosmic Fragment": {
-					"text": "Fragment for the Uber Shaper fight<br>Drops from T17 map bosses"
+					"text": "Fragment for the Uber Shaper fight<br>Drops from Nightmare Map bosses"
 				},
 				"Decaying Fragment": {
-					"text": "Fragment for the Uber Uber Elder fight<br>Drops from T17 map bosses"
+					"text": "Fragment for the Uber Uber Elder fight<br>Drops from Nightmare Map bosses"
 				},
 				"Synthesising Fragment": {
-					"text": "Fragment for the Uber Cortex fight<br>Drops from T17 map bosses"
+					"text": "Fragment for the Uber Cortex fight<br>Drops from Nightmare Map bosses"
 				},
 				"Lonely Fragment": {
-					"text": "Fragment for the Uber Incarnation of Neglect fight<br>Drops from T17 map bosses"
+					"text": "Fragment for the Uber Incarnation of Neglect fight<br>Drops from Nightmare Map bosses"
 				},
 				"Reverent Fragment": {
-					"text": "Fragment for the Uber Incarnation of Dread fight<br>Drops from T17 map bosses"
+					"text": "Fragment for the Uber Incarnation of Dread fight<br>Drops from Nightmare Map bosses"
 				},
 				"Traumatic Fragment": {
-					"text": "Fragment for the Uber Incarnation of Fear fight<br>Drops from T17 map bosses"
+					"text": "Fragment for the Uber Incarnation of Fear fight<br>Drops from Nightmare Map bosses"
 				},
 
 				"Sacred Blossom": {
-					"text": "Opens the Oshabi, Avatar of the Grove fight<br>Drops from T4 Harvest monsters<br>Unlocks a bloodline"
+					"text": "Opens the Oshabi, Avatar of the Grove fight<br>Drops from T4 Harvest monsters<br>Unlocks Oshabi Bloodline"
 				},
 				"An Audience With The King": {
-					"text": "Opens The King in the Mists fight<br>Offered as a reward in rituals<br>Unlocks a bloodline"
+					"text": "Opens The King in the Mists fight<br>Offered as a reward in rituals<br>Unlocks Nameless Bloodline"
 				},
 				"Syndicate Medallion": {
-					"text": "Opens the Catarina, Master of Undeath fight(The Mastermind)<br>Drops from the Safehouse leaders in Safehouses<br>Unlocks a bloodline"
+					"text": "Opens the Catarina, Master of Undeath fight(The Mastermind)<br>Drops from the Safehouse leaders in Safehouses<br>Unlocks Catarina Bloodline"
 				},
 				"Simulacrum": {
-					"text": "Opens the Simularum encounter<br>Drops in form of splinters from delirium encounters<br>Unlocks a bloodline"
+					"text": "Opens the Simularum encounter<br>Drops in form of splinters from delirium encounters<br>Unlocks Delirious Bloodline"
 				},
 
 				"Offering to the Goddess": {
@@ -2476,75 +2293,28 @@
 					"text": "Opens the Domain of Timeless conflict when two or more Emblems used<br>Drops from Domain of Timeless Conflict"
 				},
 
-				"Xoph's Breachstone": {
-					"text": "Grants access to Xoph's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["StandardOnly"]
-				},
-				"Tul's Breachstone": {
-					"text": "Grants access to Tul's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["StandardOnly"]
-				},
-				"Esh's Breachstone": {
-					"text": "Grants access to Esh's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["StandardOnly"]
-				},
-				"Uul-Netol's Breachstone": {
-					"text": "Grants access to Uul-Netol's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["StandardOnly"]
-				},
-				"Chayula's Breachstone": {
-					"text": "Grants access to Chayula's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["StandardOnly"]
-				},
-
-				"Xoph's Flawless Breachstone": {
-					"text": "Grants access to upgraded Xoph's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["StandardOnly"]
-				},
-				"Tul's Flawless Breachstone": {
-					"text": "Grants access to upgraded Tul's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["StandardOnly"]
-				},
-				"Esh's Flawless Breachstone": {
-					"text": "Grants access to upgraded Esh's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["StandardOnly"]
-				},
-				"Uul-Netol's Flawless Breachstone": {
-					"text": "Grants access to upgraded Uul-Netol's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["StandardOnly"]
-				},
-				"Chayula's Flawless Breachstone": {
-					"text": "Grants access to upgraded Chayula's Domain<br>Drops from Breach encounters in form of splinters<br>Standard league exclusive",
-					"tags": ["StandardOnly"]
-				},
-
 				"Hivebrain Gland": {
-					"text": "Breach encounter in Area will be a Breachlord's Hive"
+					"text": "Opens portals to a Hive Colony"
 				}
 			}
 		},
 
 		"Scarab": {
 			"items": {
-				"Breach Scarab": {
-					"text": "Area contains 2 additional Breaches",
-					"tags": ["StandardOnly"]
+				"Breach Scarab of the Hive": {
+					"text": "Area contains a Breach Hive"
 				},
-				"Breach Scarab of Lordship": {
-					"text": "Breaches in Area each contain a Breachlord",
-					"tags": ["StandardOnly"]
+				"Breach Scarab of Instability": {
+					"text": "Area contains 2 additional Unstable Breaches"
 				},
-				"Breach Scarab of Splintering": {
-					"text": "Breach Monsters in Area drop 50% more Breach Splinters<br>Clasped Hands in Area drop 50% more Breach Splinters",
-					"tags": ["StandardOnly"]
+				"Breach Scarab of the Marshal": {
+					"text": "Unstable Breaches in Area contain a Boss<br>Breach Hives in Area lead to a Hive Fortress"
 				},
-				"Breach Scarab of Snares": {
-					"text": "Breaches in Area have 3 to 5 additional Clasped Hands<br>Clasped Hands in Area are guarded by a rare Breach Monster",
-					"tags": ["StandardOnly"]
+				"Breach Scarab of the Incensed Swarm": {
+					"text": "Ailith's skills in Area instead enrage the Hive, increasing the Difficulty and Reward of subsequent waves"
 				},
 				"Breach Scarab of Resonant Cascade": {
-					"text": "Breaches in Areas open and close 10% faster for each Breach already opened<br>Monsters from Breaches in Areas have increased Difficulty and Reward foreach Breach already opened",
-					"tags": ["StandardOnly"]
+					"text": "Unstable Breaches in Areas are 10% faster for each Unstable Breach already opened<br>Monsters from Unstable Breaches in Areas have increased Difficulty and Reward for each Unstable Breach already opened."
 				},
 
 				"Cartography Scarab of Escalation": {
@@ -2579,12 +2349,12 @@
 				"Influencing Scarab of Hordes": {
 					"text": "Influenced Monster Packs in Area have 40% increased Pack Size"
 				},
-				"Influencing Scarab of Conversion": {
-					"text": "Tier 14+ Maps found in Area have a chance to drop as Shaper Guardian, Elder Guardian, Conqueror or Unique Synthesised Maps instead"
+				"Influencing Scarab of Interference": {
+					"text": "Spawns a Conqueror, Elder or Shaper Guardian or Synthesis boss to accompany the Map boss<br>This additional boss is guaranteed to drop a Shaper Guardian, Elder Guardian, Conqueror or Unique Synthesised Map."
 				},
 
 				"Sulphite Scarab": {
-					"text": "Area contains Niko<br>Map owner gains 150% more Sulphite"
+					"text": "Area contains Niko"
 				},
 				"Sulphite Scarab of Fumes": {
 					"text": "Sulphite found in Map Area releases Enraging Fumes<br>Monsters affected by Enraging Fumes have 50% increased Item Quantity<br>Sulphite in your maps is guarded by Monsters from the Azurite Mine"
@@ -2601,7 +2371,7 @@
 				},
 				
 				"Torment Scarab": {
-					"text": "Area is haunted by 3 additional Tormented Spirits<br>Tormented Spirits in Area have a 25% chance to be set free when Possessed Monsters are slain"
+					"text": "Area is haunted by 4 additional Tormented Spirits<br>Tormented Spirits in Area have a 25% chance to be set free when Possessed Monsters are slain"
 				},
 				"Torment Scarab of Peculiarity": {
 					"text": "Tormented Spirits in Area are replaced with unusual variants"
@@ -2611,7 +2381,7 @@
 				},
 
 				"Ambush Scarab": {
-					"text": "Area contains 3 additional Strongboxes"
+					"text": "Area contains 4 additional Strongboxes"
 				},
 				"Ambush Scarab of Hidden Compartments": {
 					"text": "15% Chance for Strongboxes in Area to be openable again"
@@ -2626,19 +2396,6 @@
 					"text": "Strongboxes in Area are more likely to be rarer varieties"
 				},
 
-				"Harbinger Scarab": {
-					"text": "Area contains 3 additional Harbingers"
-				},
-				"Harbinger Scarab of Obelisks": {
-					"text": "Harbingers in Area spawn Empowered Obelisks<br>Empowered Obelisks drop Currency Shards when defeated"
-				},
-				"Harbinger Scarab of Regency": {
-					"text": "Harbingers in Area have a 50% chance to be replaced by a powerful Harbinger Boss"
-				},
-				"Harbinger Scarab of Warhoards": {
-					"text": "Currency shards dropped by Harbingers in Area are duplicated"
-				},
-
 				"Expedition Scarab": {
 					"text": "Area contains an Expedition Encounter"
 				},
@@ -2651,6 +2408,9 @@
 				"Expedition Scarab of Archaeology": {
 					"text": "Remnants in Expedition Encounters in Area have 2 additional Suffixes and Prefixes"
 				},
+				"Expedition Scarab of Infusion": {
+					"text": "Logbooks dropped in areas always drop with 4 implicit modifiers<br>Expedition monsters gain increased difficulty and reward for each Remnant detonated."
+				},
 
 				"Legion Scarab": {
 					"text": "Area contains an additional Legion Encounter"
@@ -2658,8 +2418,8 @@
 				"Legion Scarab of Officers": {
 					"text": "Legion Factions in Area have 5 additional Sergeants"
 				},
-				"Legion Scarab of Command": {
-					"text": "Legion Factions in Area are accompanied by a General"
+				"Legion Scarab of Treasures": {
+					"text": "Chests that are broken out have a chance for the chests rewards to be applied to the monsters it breaks out, while also making those monsters more difficult and rewarding"
 				},
 				"Legion Scarab of Eternal Conflict": {
 					"text": "Legion Monsters in Area can be broken out of Stasis multiple times<br>Legion Monsters in Area gain increased Difficulty and Reward for each time they are broken out"
@@ -2677,9 +2437,12 @@
 				"Abyss Scarab of Profound Depth": {
 					"text": "Monsters from Abysses in Areas have increased Difficulty and Reward for each prior Pit in that Abyss"
 				},
+				"Abyss Scarab of Descending": {
+					"text": "Guarantees an Abyssal Depths in an area"
+				},
 
 				"Anarchy Scarab": {
-					"text": "Area contains 4 additional Rogue Exiles"
+					"text": "Area contains 5 additional Rogue Exiles"
 				},
 				"Anarchy Scarab of Gigantification": {
 					"text": "Rogue Exiles in Area have a 30% chance to be replaced with a Rogue Giant"
@@ -2687,9 +2450,12 @@
 				"Anarchy Scarab of Partnership": {
 					"text": "Rogue Exiles in Area have a 50% chance to appear in pairs"
 				},
+				"Anarchy Scarab of the Exceptional": {
+					"text": "Adds an additional Exceptional Rogue Exile to the area"
+				},
 
 				"Essence Scarab": {
-					"text": "Area contains 2 additional Essences"
+					"text": "Area contains 3 additional Essences"
 				},
 				"Essence Scarab of Ascent": {
 					"text": "Essences found in Area are a tier higher"
@@ -2705,7 +2471,7 @@
 				},
 
 				"Domination Scarab": {
-					"text": "Area contains 2 additional Shrines"
+					"text": "Area contains 3 additional Shrines"
 				},
 				"Domination Scarab of Apparitions": {
 					"text": "Area contains 2 additional Apparition Shrines"
@@ -2718,13 +2484,16 @@
 				},
 
 				"Ritual Scarab of Selectiveness": {
-					"text": "Rerolling Favours at Ritual Altars in Area has no cost the first 2 times<br>Ritual Altars in Area allow rerolling Favours 1 additional time"
+					"text": "Rerolling Favours at Ritual Altars in Area has no cost the first 2 times<br>Ritual Altars in Area allow rerolling Favours 2 additional times"
 				},
 				"Ritual Scarab of Wisps": {
 					"text": "Ritual Altars in Area spawn a Wildwood Wisp<br>Wildwood Wisps grant 100% increased Tribute Gained to nearby Players"
 				},
 				"Ritual Scarab of Abundance": {
 					"text": "Rituals in Area offer 100% increased Favours"
+				},
+				"Ritual Scarab of the Corpses": {
+					"text": "Rituals in the area contain an additional Rare Itemised Corpse"
 				},
 
 				"Harvest Scarab": {
@@ -2759,6 +2528,9 @@
 				"Betrayal Scarab of Reinforcements": {
 					"text": "Immortal Syndicate Members in Area have 50% increased chance to be accompanied by reinforcements"
 				},
+				"Betrayal Scarab of Unbreaking": {
+					"text": "Gives a chance for Syndicate Members to not lose Ranks when they are Interrogated"
+				},
 
 				"Beyond Scarab": {
 					"text": "Slaying enemies close together in Area can attract monsters from Beyond this realm"
@@ -2767,7 +2539,7 @@
 					"text": "Beyond Portals in Area have 50% increased Merging Radius"
 				},
 				"Beyond Scarab of Resurgence": {
-					"text": "Beyond Bosses in Area are enraged on low life<br>Beyond Bosses in Area drop 100% increased Tainted Currency<br>Beyond Portals in Area have 30% increased chance to spawn a Unique Boss"
+					"text": "Summons the Beyond Bosses of other factions when a Beyond Boss is summoned<br>Beyond Bosses in Area drop 100% increased Tainted Currency<br>Beyond Portals in Area have 30% increased chance to spawn a Unique Boss"
 				},
 				"Beyond Scarab of the Invasion": {
 					"text": "Rare and Unique Monsters slain in Area create 8 to 12 additional Beyond Portals"
@@ -2799,7 +2571,7 @@
 					"text": "Delirium Encounters in Area generate 2 additional Reward types"
 				},
 				"Delirium Scarab of Neuroses": {
-					"text": "Delirium Encounters in Area contain all Unique Delirium Bosses<br>Can only be used with Tier 11+ Maps"
+					"text": "Delirium Encounters in Area contain all Unique Delirium Bosses<br>Can only be used with Tier 11+ Maps<br>Delirium Reward Types gain +1 to count on defeating Unique Delirium Bosses"
 				},
 				"Delirium Scarab of Delusions": {
 					"text": "Maps found in Area have layers of Delirium"
@@ -2821,14 +2593,14 @@
 				"Scarab of Adversaries": {
 					"text": "Area contains 4 additional Packs with Mirrored Rare Monsters"
 				},
-				"Scarab of Bisection": {
-					"text": "Allows you to select the Nullify Prefixes or Nullify Suffixes crafting options on the Map Device"
+				"Scarab of the Sinistral": {
+					"text": "100% increased effect of Area Prefix Modifiers<br>Area Suffix Modifiers have no effect"
+				},
+				"Scarab of the Dextral": {
+					"text": "100% increased effect of Area Suffix Modifiers<br>Area Prefix Modifiers have no effect"
 				},
 				"Scarab of Divinity": {
 					"text": "Up to 2 additional Rare Monsters in Area will be Pantheon-Touched<br>Apparitions spawned by Pantheon-Touched Monsters deal 100% increased damage"
-				},
-				"Scarab of Hunted Traitors": {
-					"text": "Area contains Hunted Traitors"
 				},
 				"Scarab of Monstrous Lineage": {
 					"text": "40% increased Magic Pack Size"
@@ -2853,7 +2625,7 @@
 					"text": "Other Scarabs are not consumed on use"
 				},
 				"Horned Scarab of Awakening": {
-					"text": "You can select one Imbued crafting option on the Map Device"
+					"text": "Tier 16+ Areas contain the Bosses from a random Maven Invitation"
 				},
 				"Horned Scarab of Tradition": {
 					"text": "All Rare and Unique Monsters in Area have dropped items transformed by a Reward Modifier"
@@ -2875,14 +2647,17 @@
 					"text": "Unique Monsters in Area have an additional Reward<br>Unique Monsters in Area have 30% increased Toughness"
 				},
 
-				"Kalguuran Scarab of Abundance": {
-					"text": "Area contains an additional Ore Deposit"
+				"Kalguuran Scarab": {
+					"text": "Area contains 2 additional Ore Deposits"
 				},
 				"Kalguuran Scarab of Guarded Riches": {
 					"text": "Monsters guarded Ore Deposits in Area are at least Magic"
 				},
 				"Kalguuran Scarab of Refinement": {
 					"text": "Ore Deposits in Area grant Smelted Bars instead of Marking Ore"
+				},
+				"Kalguuran Scarab of Enriching": {
+					"text": "Increases the amount of Ore gained from Ore Deposits and the Difficulty and Reward of monsters guarding Ore Deposits for every completed Ore Deposit in the area"
 				},
 
 				"Allflame Ember of Flesh": {
@@ -3114,14 +2889,6 @@
 				"Legion Sword": {
 					"text": null,
 					"items": {
-						"The Rippling Thoughts": {
-							"text": "Does not drop. Created from Harbinger Pieces.",
-							"priority": -10
-						},
-						"The Surging Thoughts": {
-							"text": "Does not drop. Created by upgrading Rippling Thoughts via scroll.",
-							"priority": -10
-						},
 						"The Saviour": {
 							"text": "Drops from Uber Sirus.",
 							"priority": -5
@@ -3174,19 +2941,6 @@
 						"Cerberus Limb": {
 							"text": "Drops from Ahuatotli (Delve).",
 							"priority": -5
-						}
-					}
-				},
-				"Imperial Staff": {
-					"text": null,
-					"items": {
-						"The Enmity Divine": {
-							"text": "Does not drop. Created from Harbinger Pieces.",
-							"priority": -10
-						},
-						"The Yielding Mortality": {
-							"text": "Does not drop. Created by upgrading Enmity Divine via scroll.",
-							"priority": -10
 						}
 					}
 				},
@@ -3590,19 +3344,6 @@
 						}
 					}
 				},
-				"Callous Mask": {
-					"text": null,
-					"items": {
-						"The Tempest's Binding": {
-							"text": "Does not drop. Created from Harbinger Pieces.",
-							"priority": -10
-						},
-						"The Tempest's Liberation": {
-							"text": "Does not drop. Created by upgrading Tempest's Binding via scroll.",
-							"priority": -10
-						}
-					}
-				},
 				"Necromancer Circlet": {
 					"text": null,
 					"items": {
@@ -3704,14 +3445,6 @@
 						"Broken Faith": {
 							"text": "Drops from Renegades Warband.",
 							"priority": -1
-						},
-						"The Unshattered Will": {
-							"text": "Does not drop. Created from Harbinger Pieces.",
-							"priority": -10
-						},
-						"The Immortal Will": {
-							"text": "Does not drop. Created with a Scroll.",
-							"priority": -10
 						}
 					}
 				},
@@ -3782,19 +3515,6 @@
 						"The Snowblind Grace": {
 							"text": "Grown on the Genesis Tree",
 							"priority": -8
-						}
-					}
-				},
-				"Blunt Arrow Quiver": {
-					"text": null,
-					"items": {
-						"The Fracturing Spinner": {
-							"text": "Does not drop. Created from Harbinger Pieces.",
-							"priority": -10
-						},
-						"The Shattered Divinity": {
-							"text": "Does not drop. Created by upgrading Fracturing Spinner with a Scroll.",
-							"priority": -10
 						}
 					}
 				},
@@ -4187,7 +3907,7 @@
 							"priority": -5
 						},
 						"Wraithlord": {
-							"text": "Overridden in exceptions. Drops from T17 Ziggurat Map boss.",
+							"text": "Overridden in exceptions. Drops from Nightmare of Catarina",
 							"ruleLink": {
 								"entryName": "Unique Exception: Four Abyss Socket Uniques",
 								"text": "Link to exception rule"
@@ -4319,7 +4039,7 @@
 							"priority": -8
 						},
 						"Yoke of Suffering": {
-							"text": "Drops from T17 Fortress Map boss.",
+							"text": "Drops from Nightmare of the Unbreakable",
 							"priority": -3
 						}
 					}
@@ -4537,7 +4257,7 @@
 							"priority": -5
 						},
 						"The Unseen Hue": {
-							"text": "Drops from the Uber Incarnation of Fear",
+							"text": "Drops from the Incarnation of Fear",
 							"priority": -5
 						}
 					}
@@ -4545,14 +4265,6 @@
 				"Cloth Belt": {
 					"text": null,
 					"items": {
-						"The Flow Untethered": {
-							"text": "Does not drop. Created from Harbinger Pieces.",
-							"priority": -10
-						},
-						"The Torrent's Reclamation": {
-							"text": "Does not drop. Created by upgrading Flow Untethered with a Scroll.",
-							"priority": -10
-						},
 						"Arn's Anguish": {
 							"text": "Drops from The Maven.",
 							"priority": -5
@@ -4619,7 +4331,7 @@
 							"priority": -5
 						},
 						"Woespike": {
-							"text": "Drops from the Incarnation of Fear",
+							"text": "Drops from the Uber Incarnation of Fear",
 							"priority": -5
 						}
 					}
@@ -4937,7 +4649,7 @@
 					"text": null,
 					"items": {
 						"The Dark Seer": {
-							"text": "Drops from T17 Sanctuary Map boss.",
+							"text": "Drops from Nightmare of Lycia",
 							"priority": -3
 						}
 					}
@@ -4946,7 +4658,7 @@
 					"text": null,
 					"items": {
 						"Malachai's Mark": {
-							"text": "Drops from T17 Abomination Map boss.",
+							"text": "Drops from Nightmare of the Depraved Trinity",
 							"priority": -3
 						}
 					}
@@ -4955,7 +4667,7 @@
 					"text": null,
 					"items": {
 						"Manastorm": {
-							"text": "Drops from T17 Citadel Map boss.",
+							"text": "Drops from Nightmare of Uhtred",
 							"priority": -3
 						}
 					}
@@ -5339,7 +5051,7 @@
 					"text": null,
 					"items": {
 						"The Golden Charlatan": {
-							"text": "Drops from the Uber Incarnation of Neglect",
+							"text": "Drops from the Uber Incarnation of Dread",
 							"priority": -5
 						}
 					}
