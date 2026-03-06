@@ -330,6 +330,14 @@
 					"text": "Applies a random quality type and amount to a corrupted ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
+				"Sinistral Catalyst": {
+					"text": "Adds quality that enhances Prefix modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Dextral Catalyst": {
+					"text": "Adds quality that enhances Suffix modifiers on a ring, amulet or belt",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
 
 				"Burial Medallion": {
 					"text": "Brought to Dannig to refresh his vendor inventory",
@@ -346,6 +354,27 @@
 				"Scrap Metal": {
 					"text": "Brought to Rog to refresh his vendor inventory",
 					"tags": ["Expedition", "LeagueDrop"]
+				},
+
+				"Coin of Power": {
+					"text": "Corrupts a level 20 Skill Gem, Imbuing it with a random Strength Support effect",
+					"tags": ["LeagueDrop"]
+				},
+				"Coin of Skill": {
+					"text": "Corrupts a level 20 Skill Gem, Imbuing it with a random Dexterity Support effect",
+					"tags": ["LeagueDrop"]
+				},
+				"Coin of Knowledge": {
+					"text": "Corrupts a level 20 Skill Gem, Imbuing it with a random Intelligence Support effect",
+					"tags": ["LeagueDrop"]
+				},
+				"Coin of Desecration": {
+					"text": "Twists a Maraketh Unique item into its Afarud form, Corrupting it and adding an Implicit Modifier",
+					"tags": ["LeagueDrop"]
+				},
+				"Coin of Restoration": {
+					"text": "Restores an Afarud Unique item to its past Maraketh form",
+					"tags": ["LeagueDrop"]
 				},
 
 				"Mirror Shard": {
@@ -586,6 +615,37 @@
 					"tags": ["RuthlessOnly"]
 				},
 
+				"Reflecting Mist": {
+					"text": "Unpredictably reflects a rare amulet or ring, breaking it into two mirrored halves with reflected modifiers",
+					"tags": ["LeagueDrop"]
+				},
+
+				"Foulborn Orb of Augmentation": {
+					"text": "Augments a Magic item with a new random modifier with higher level modifiers being more likely",
+					"tags": ["LeagueDrop"]
+				},
+				"Foulborn Regal Orb": {
+					"text": "Upgrades a Magic item to a Rare item with higher level modifiers being more likely",
+					"tags": ["LeagueDrop"]
+				},
+				"Foulborn Exalted Orb": {
+					"text": "Augments a Rare item with a new random modifier with higher level modifiers being more likely",
+					"tags": ["LeagueDrop"]
+				},
+
+				"Volatile Vaal Orb": {
+					"text": "Unpredictably either randomises the values of random modifiers on a unique equipment and corrupts it, or destroys it",
+					"tags": ["LeagueDrop"]
+				},
+				"Flesh of Xesht": {
+					"text": "Transforms a Breach Unique item to its alternate form",
+					"tags": ["LeagueDrop"]
+				},
+				"Crystallised Rancour": {
+					"text": "Used at the Horticrafting bench for crafting",
+					"tags": ["LeagueDrop"]
+				},
+
 				"Maven's Chisel of Avarice": {
 					"text": "Improves the quality of a map enhancing Currency found",
 					"tags": ["BossDrop"]
@@ -607,24 +667,59 @@
 					"tags": ["BossDrop"]
 				},
 
-				"Reflecting Mist": {
-					"text": "Unpredictably reflects a rare amulet or ring, breaking it into two mirrored halves with reflected modifiers",
-					"tags": ["LeagueDrop"]
+				"Templar Astrolabe": {
+					"text": "Adds a Shaped Region to a quadrant of the Atlas",
+					"tags": ["BossDrop"]
+				},
+				"Fruiting Astrolabe": {
+					"text": "Adds a Shaped Region containing the Sacred Grove to a quadrant of the Atlas",
+					"tags": ["BossDrop"]
+				},
+				"Lightless Astrolabe": {
+					"text": "Adds a Shaped Region containing Abysses to a quadrant of the Atlas",
+					"tags": ["BossDrop"]
+				},
+				"Grasping Astrolabe": {
+					"text": "Adds a Shaped Region containing Breaches to a quadrant of the Atlas",
+					"tags": ["BossDrop"]
+				},
+				"Nameless Astrolabe": {
+					"text": "Adds a Shaped Region containing Ritual Altars to a quadrant of the Atlas",
+					"tags": ["BossDrop"]
+				},
+				"Fungal Astrolabe": {
+					"text": "Adds a Shaped Region containing Blight encounters to a quadrant of the Atlas",
+					"tags": ["BossDrop"]
+				},
+				"Chaotic Astrolabe": {
+					"text": "Adds a Shaped Region containing Ultimatum encounters to a quadrant of the Atlas",
+					"tags": ["BossDrop"]
+				},
+				"Enshrouded Astrolabe": {
+					"text": "Adds a Shaped Region containing Delirium encounters to a quadrant of the Atlas",
+					"tags": ["BossDrop"]
+				},
+				"Timeless Astrolabe": {
+					"text": "Adds a Shaped Region containing Legion encounters to a quadrant of the Atlas",
+					"tags": ["BossDrop"]
+				},
+				"Runic Astrolabe": {
+					"text": "Adds a Shaped Region containing Expedition encounters to a quadrant of the Atlas",
+					"tags": ["BossDrop"]
 				},
 
-				"Foulborn Orb of Augmentation": {
-					"text": "Augments a Magic item with a new random modifier with higher level modifiers being more likely",
-					"tags": ["LeagueDrop"]
+				"Memory of Trauma": {
+					"text": "Adds a Memory Thread to the Atlas leading to the Incarnation of Fear",
+					"tags": ["BossDrop"]
 				},
-				"Foulborn Regal Orb": {
-					"text": "Upgrades a Magic item to a Rare item with higher level modifiers being more likely",
-					"tags": ["LeagueDrop"]
+				"Memory of Reverence": {
+					"text": "Adds a Memory Thread to the Atlas leading to the Incarnation of Dread",
+					"tags": ["BossDrop"]
 				},
-				"Foulborn Exalted Orb": {
-					"text": "Augments a Rare item with a new random modifier with higher level modifiers being more likely",
-					"tags": ["LeagueDrop"]
+				"Memory of Loneliness": {
+					"text": "Adds a Memory Thread to the Atlas leading to the Incarnation of Neglect",
+					"tags": ["BossDrop"]
 				},
-
 
 				"Valdo's Puzzle Box": {
 					"text": "Contains a Mysterious Map with a Foil Unique Reward",
@@ -644,35 +739,6 @@
 				}
 
 				
-			}
-		},
-
-		"Resonator": {
-			"items": {
-				"Primitive Chaotic Resonator": {
-					"text": "Single socket Resonator reforging a rare item using Fossils"
-				},
-				"Potent Chaotic Resonator": {
-					"text": "Two socket Resonator reforging a rare item using Fossils"
-				},
-				"Powerful Chaotic Resonator": {
-					"text": "Three socket Resonator reforging a rare item using Fossils"
-				},
-				"Prime Chaotic Resonator": {
-					"text": "Four socket Resonator reforging a rare item using Fossils"
-				},
-				"Primitive Alchemical Resonator": {
-					"text": "Single socket Resonator upgrading a normal item to a rare item using Fossils"
-				},
-				"Potent Alchemical Resonator": {
-					"text": "Two socket Resonator upgrading a normal item to a rare item using Fossils"
-				},
-				"Powerful Alchemical Resonator": {
-					"text": "Three socket Resonator upgrading a normal item to a rare item using Fossils"
-				},
-				"Prime Alchemical Resonator": {
-					"text": "Four socket Resonator upgrading a normal item to a rare item using Fossils"
-				}
 			}
 		},
 
@@ -752,6 +818,19 @@
 				},
 				"Tangled Fossil": {
 					"text": "Makes a random modifier type much more likely and prevents another random modifier type. Effects revealed once resonator is fully socketed."
+				},
+
+				"Primitive Chaotic Resonator": {
+					"text": "Single socket Resonator reforging a rare item using Fossils"
+				},
+				"Potent Chaotic Resonator": {
+					"text": "Two socket Resonator reforging a rare item using Fossils"
+				},
+				"Powerful Chaotic Resonator": {
+					"text": "Three socket Resonator reforging a rare item using Fossils"
+				},
+				"Prime Chaotic Resonator": {
+					"text": "Four socket Resonator reforging a rare item using Fossils"
 				}
 			}
 		},
@@ -858,12 +937,6 @@
 
 		"Incubator": {
 			"items": {
-				"Fine Incubator" : {
-					"text" : "Does not drop. Awards a Currency item."
-				},
-				"Whispering Incubator" : {
-					"text" : "Does not drop. Awards an Essence item."
-				},
 				"Geomancer's Incubator" : {
 					"text" : "Awards a 6-Linked Armour item."
 				},
@@ -878,9 +951,6 @@
 				},
 				"Diviner's Incubator" : {
 					"text" : "Awards Stacked Decks."
-				},
-				"Gemcutter's Incubator" : {
-					"text" : "Does not drop. Awards a Quality Gem item."
 				},
 				"Infused Incubator" : {
 					"text" : "Awards an Essence item."
@@ -926,6 +996,26 @@
 				},
 				"Primal Incubator" : {
 					"text" : "Awards a Talisman item. Can rarely award unique talismans!"
+				},
+
+				"Fine Incubator" : {
+					"text" : "Does not drop. Awards a Currency item."
+				},
+				"Whispering Incubator" : {
+					"text" : "Does not drop. Awards an Essence item."
+				},
+				"Gemcutter's Incubator" : {
+					"text" : "Does not drop. Awards a Quality Gem item."
+				},
+
+				"Sacred Incubator" : {
+					"text" : "Awards a Valuable Djinn Coin"
+				},
+				"Honoured Incubator" : {
+					"text" : "Awards a Coin"
+				},
+				"Miraged Incubator" : {
+					"text" : "Awards an Empowered Mirage Map"
 				}
 			}
 		},
@@ -2096,7 +2186,40 @@
 				"Bound by Flame": {
 					"tags": ["GemOutcome"]
 				},
+				"The Journey": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Desecrated Virtue": {
+					"tags": ["GemOutcome"]
+				},
+				"The Side Quest": {
+					"tags": ["MapOutcome"]
+				},
 				"Outfoxed": {
+					"tags": ["CurrencyOutcome"]
+				},
+				"Apocalypse": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Lucky Bastion": {
+					"tags": ["UniqueOutcome"]
+				},
+				"Reflection of the Heart": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Everlasting": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Forbidden Fruit": {
+					"tags": ["MapOutcome"]
+				},
+				"The Silly Boy": {
+					"tags": ["UniqueOutcome"]
+				},
+				"The Miracle": {
+					"tags": ["GemOutcome"]
+				},
+				"The Slumbering Beast": {
 					"tags": ["CurrencyOutcome"]
 				}
 			}
@@ -2295,6 +2418,23 @@
 
 				"Hivebrain Gland": {
 					"text": "Opens portals to a Hive Colony"
+				},
+
+				"Polaric Invitation": {
+					"text": "Opens Black Star fight"
+				},
+				"Writhing Invitation": {
+					"text": "Opens Seething Chyme fight"
+				},
+				"Screaming Invitation": {
+					"text": "Opens Eater of Worlds fight"
+				},
+				"Incandescent Invitation": {
+					"text": "Opens Searing Exarch fight"
+				},
+
+				"The Black Barya": {
+					"text": "Opens portal to The Black Barya"
 				}
 			}
 		},
@@ -2409,7 +2549,7 @@
 					"text": "Remnants in Expedition Encounters in Area have 2 additional Suffixes and Prefixes"
 				},
 				"Expedition Scarab of Infusion": {
-					"text": "Logbooks dropped in areas always drop with 4 implicit modifiers<br>Expedition monsters gain increased difficulty and reward for each Remnant detonated."
+					"text": "Logbooks found in Area always have 4 Implicits<br>Expedition Monsters gain increased Difficulty and Reward for each Remnant detonated"
 				},
 
 				"Legion Scarab": {
@@ -2438,7 +2578,7 @@
 					"text": "Monsters from Abysses in Areas have increased Difficulty and Reward for each prior Pit in that Abyss"
 				},
 				"Abyss Scarab of Descending": {
-					"text": "Guarantees an Abyssal Depths in an area"
+					"text": "Area contains an Abyssal Depths"
 				},
 
 				"Anarchy Scarab": {
@@ -2451,7 +2591,7 @@
 					"text": "Rogue Exiles in Area have a 50% chance to appear in pairs"
 				},
 				"Anarchy Scarab of the Exceptional": {
-					"text": "Adds an additional Exceptional Rogue Exile to the area"
+					"text": "Area contains an additional Exceptional Rogue Exile"
 				},
 
 				"Essence Scarab": {
@@ -2493,7 +2633,7 @@
 					"text": "Rituals in Area offer 100% increased Favours"
 				},
 				"Ritual Scarab of the Corpses": {
-					"text": "Rituals in the area contain an additional Rare Itemised Corpse"
+					"text": "Rituals in Area contain an additional Rare Itemised Corpse Monster"
 				},
 
 				"Harvest Scarab": {
@@ -2529,7 +2669,7 @@
 					"text": "Immortal Syndicate Members in Area have 50% increased chance to be accompanied by reinforcements"
 				},
 				"Betrayal Scarab of Unbreaking": {
-					"text": "Gives a chance for Syndicate Members to not lose Ranks when they are Interrogated"
+					"text": "Interrogated Immortal Syndicate targets in Area have a 50% chance to not lose Rank upon completing Interrogation"
 				},
 
 				"Beyond Scarab": {
@@ -2657,7 +2797,7 @@
 					"text": "Ore Deposits in Area grant Smelted Bars instead of Marking Ore"
 				},
 				"Kalguuran Scarab of Enriching": {
-					"text": "Increases the amount of Ore gained from Ore Deposits and the Difficulty and Reward of monsters guarding Ore Deposits for every completed Ore Deposit in the area"
+					"text": "Monsters guarding Ore Deposits have increased Difficulty and Reward<br>Ore Deposits contain 15% increased Ore for each Ore Deposit completed in Area"
 				},
 
 				"Allflame Ember of Flesh": {
@@ -3467,6 +3607,10 @@
 						"Soul Ascension": {
 							"text": "Drops from The Uber Uber Elder.",
 							"priority": -5
+						},
+						"Hand of the Lords": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
 						}
 					}
 				},
@@ -3956,6 +4100,10 @@
 						},
 						"Bear's Girdle": {
 							"text": "Drops from Ersi (Harvest Boss).",
+							"priority": -5
+						},
+						"Screams of the Desiccated": {
+							"text": "Drops from Saresh",
 							"priority": -5
 						}
 					}
@@ -5101,20 +5249,38 @@
 						}
 					}
 				},
-				"Hand of the Lords": {
-					"text": null,
-					"items": {
-						"Carnal Mitts": {
-							"text": "Drops from It That Was Esh and It That Was Tul",
-							"priority": -5
-						}
-					}
-				},
 				"Spectral Axe": {
 					"text": null,
 					"items": {
 						"The Grey Wind": {
 							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Formless Ring": {
+					"text": null,
+					"items": {
+						"Lost Unity": {
+							"text": "Does not drop. Created with a vendor recipe.",
+							"priority": -10
+						}
+					}
+				},
+				"Unset Amulet": {
+					"text": null,
+					"items": {
+						"Uul-Netol's Vow": {
+							"text": "Drops from It That Was Esh and It That Was Tul",
+							"priority": -5
+						}
+					}
+				},
+				"Tyrant's Sekhem": {
+					"text": null,
+					"items": {
+						"The Sands of Time": {
+							"text": "Drops from Saresh",
 							"priority": -5
 						}
 					}
