@@ -319,12 +319,12 @@ Chapter() {
             Function essencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["essences", "O"]); }
             TierListToolBar();
 
-            essencesFunc([1.0, "Essences T1+2", "currency->essence;t1"], "SH", "LVL7: Defeaning and Exotics");
-            essencesFunc([1.0, "Essences T3", "currency->essence;t2"], "SH", "LVL6: Shrieking and Remnants");
-            essencesFunc([1.0, "Essences T4", "currency->essence;t3"], "SH", "LVL5: Screaming");
-            essencesFunc([1.0, "Essences T5", "currency->essence;t4"], "SH", "LVL4: Wailing");
-            essencesFunc([1.0, "Essences T6", "currency->essence;t5"], "SH", "LVL3: Weeping");
-            essencesFunc([1.0, "Essences T7", "currency->essence;t6"], "SH", "LVL1+2: Muttering&Whispering");
+            essencesFunc([1.0, "Essences T1+2", "currency->essence;t1"], "SH", "LVL7: Exotics");
+            essencesFunc([1.0, "Essences T3", "currency->essence;t2"], "SH", "LVL6: Defeaning");
+            essencesFunc([1.0, "Essences T4", "currency->essence;t3"], "SH", "LVL5: Shrieking");
+            essencesFunc([1.0, "Essences T5", "currency->essence;t4"], "SH", "LVL4: Screaming and Remnants");
+            essencesFunc([1.0, "Essences T6", "currency->essence;t5"], "SH", "LVL3: Wailing");
+            essencesFunc([1.0, "Essences T7", "currency->essence;t6"], "SH", "LVL1+2");
 
             QuickUI([1.0, "Remaining essences", "currency->essence;exhide"], "SH", [], "", [], "Remaining essences that were not caught be the rules above due to possible AreaLevel requirements.");
 
@@ -594,7 +594,7 @@ Chapter() {
             FragmentsFunc([1.1, "Map Fragments T3", "fragments;t4"], "SH", "B Tier");
             FragmentsFunc([1.1, "Map Fragments T4 (remaining)", "fragments;t5"], "SH", "Others");
 
-            Conditional("?MapFragmentNoBreachNewTier") { Show; Class == "Map Fragments" "Breachstones"; SetFontSize 45; SetBorderColor 0 0 0 255; PlayAlertSound 2 300; MinimapIcon 2 White Triangle; PlayEffect White; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; }
+            Conditional("?MapFragmentNoBreachNewTier") { Show; Class == "Map Fragments"; SetFontSize 45; SetBorderColor 0 0 0 255; PlayAlertSound 2 300; MinimapIcon 2 White Triangle; PlayEffect White; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; }
             ElementAdder_Tier("?MapFragmentNoBreachNewTier", "FragmentsFunc");
 
             Conditional("?FragmentNoBreachNewTiersHidden") { }
