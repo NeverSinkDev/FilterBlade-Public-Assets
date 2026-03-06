@@ -8,15 +8,6 @@
 // Meaning, TierTagSearches always show a certain rule and its current state, while Item Searches realistically show how the item is handled and can change rules if the original one changes.
 // =============================================================================================================
 
-StyleSection("Idols", "Idols are only available in 'Phrecia' events as an atlas alternative. <br><br>Any keepers-filter can be used for Phrecia (although Phrecia likely has a different economy). We intend to release a phrecia-economy version soon after launch.")
-{
-    Search S0("skip", "Conqueror Rare Idol") { Rarity Rare; BaseType "Conqueror Idol"; Class "Idols"; AreaLevel 80; }
-    Search S0("skip", "Totemic Rare Idol") { Rarity Rare; BaseType "Totemic Idol";  Class "Idols"; AreaLevel 80; }
-    Search S0("skip", "Totemic Magic Idol") { Rarity Magic; BaseType "Totemic Idol";  Class "Idols"; AreaLevel 80; }
-    Search S0("skip", "Minor Unique Idol") { Rarity Unique; BaseType "Minor Idol"; Class "Idols"; AreaLevel 80; }
-    SS_Item("S0");
-}
-
 StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act as trade goods for players. Chaos Orbs and Divine Orbs are pretty much the standard way to pay for most trades. These are desired drops and it's almost always recommended to pick them up.") {
     Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
     Search S0("skip", "Exalted Orbs") { BaseType "Exalted Orb"; }
@@ -60,21 +51,17 @@ StyleSection("Gold", "You can find gold all throughout the game. It's picked up 
     SS_Item("S0");
 }
 
-SS_SectionTitle("Current League: 3.27 Keepers of the Flame");
+SS_SectionTitle("Current League: 3.28 Mirage");
 
-StyleSection("Grafts", "Otherworldly bodyparts that grant unique abilities, stats and buffs") {
-    Search S0("skip", null, "exotic->grafts;t4") { }
+StyleSection("Mirage League", "Mirages drop coins that can be used to imbue gems and restore specific uniques. Additionally mirages modify other mechanics to drop exotic loot!") {
+    Search S0("skip") { BaseType "Coin of Knowledge"; }
+    Search S0("skip") { BaseType "Cord Belt"; ItemLevel 80; Rarity Normal; }
     SS_Item("S0");
 }
 
-StyleSection("Wombgifts", "Can be offered to the Genesis tree to grow into Grafts, equipment, uniques and currency!") {
-    Search S0("skip", null, "exotic->wombgifts;t3") {  }
-    Search S0("skip", null, "exotic->wombgifts;t4") { }
-    SS_Item("S0");
-}
-
-StyleSection("Foulborn Uniques", "Uniques with special twisted modifiers compared to their normal counterpart.") {
-    Search S0("skip", null, "uniques;foulborn") {  }
+StyleSection("Astrolabes", "Astrolabes are a new way to juice up maps in the endgame. These are found after defeating the incarnations of Dread, Neglect and Fear.") {
+    Search S0("skip") { BaseType "Nameless Astrolabe"; }
+    Search S0("skip") { BaseType "Templar Astrolabe"; }
     SS_Item("S0");
 }
 
@@ -144,9 +131,7 @@ StyleSection("Map Upgrades!", "The filter highlights map drops of a higher tier 
 }
 
 StyleSection("Unique Maps!", "Unique maps are treated like any other unique and are highlighted based on price.") {
-    Search S0("skip", null, "uniques->maps;t2") { BaseType "Promenade Map"; ItemLevel 79; Rarity Unique; }
-    Search S0("skip", null, "uniques->maps;t3") { BaseType "Promenade Map"; ItemLevel 79; Rarity Unique; }
-    Search S0("skip", null, "uniques->maps;t4") { BaseType "Promenade Map"; ItemLevel 79; Rarity Unique; }
+    Search S0("skip", null, "uniques->maps;multispecial") { ItemLevel 79; Rarity Unique; }
     SS_Item("S0");
 }
 
@@ -433,9 +418,9 @@ SS_Ad();
 SS_SectionTitle("Currency Stacks");
 
 StyleSection("Stacked Currencies", "Endgame currency drops are evaluated based on their stacksize based on the ingame economy. Large stacks get a stronger highlight!") {
-    Search S0("skip") { BaseType "Ancient Shard"; StackSize 6; }
-    Search S0("skip") { BaseType "Ancient Shard"; StackSize 3; }
-    Search S0("skip") { BaseType "Ancient Shard"; StackSize 1; }
+    Search S0("skip") { BaseType "Orb of Chance"; StackSize 6; }
+    Search S0("skip") { BaseType "Orb of Chance"; StackSize 3; }
+    Search S0("skip") { BaseType "Orb of Chance"; StackSize 1; }
     SS_Item("S0");
 }
 
@@ -490,15 +475,19 @@ StyleSection("DELVE FOSSILS", "Fossils are originally found in the Azurite mine 
     SS_Item("S0");
 }
 
-StyleSection("DELVE RESONATORS", "Resonators are outfitted with fossils for crafting. Mostly found behind crystal walls in the azurite mine (the ones that you destroy with dynamite)") {
-    Search S0("skip", null, "currency->resonator;t2") { }
-    SS_Item("S0");
-}
-
 StyleSection("Forbidden Tome", "Sanctum forbidden tomes. Valuable, especially early on. Run by specialized players early on for good chances of dropping pure Divines.")
 {
     Search S0("skip", "Victory for ASA") { BaseType "Forbidden Tome"; AreaLevel 80; }
     SS_Item("S0");
 }
 
-// SS_SectionTitle("Optional & Exotic Highlights");
+SS_SectionTitle("Optional & Exotic Highlights");
+
+StyleSection("Idols", "Idols are only available in 'Phrecia' events as an atlas alternative. <br><br>Any keepers-filter can be used for Phrecia (although Phrecia likely has a different economy). We intend to release a phrecia-economy version soon after launch.")
+{
+    Search S0("skip", "Conqueror Rare Idol") { Rarity Rare; BaseType "Conqueror Idol"; Class "Idols"; AreaLevel 80; }
+    Search S0("skip", "Totemic Rare Idol") { Rarity Rare; BaseType "Totemic Idol";  Class "Idols"; AreaLevel 80; }
+    Search S0("skip", "Totemic Magic Idol") { Rarity Magic; BaseType "Totemic Idol";  Class "Idols"; AreaLevel 80; }
+    Search S0("skip", "Minor Unique Idol") { Rarity Unique; BaseType "Minor Idol"; Class "Idols"; AreaLevel 80; }
+    SS_Item("S0");
+}
