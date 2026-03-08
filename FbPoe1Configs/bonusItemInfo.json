@@ -4327,6 +4327,14 @@
 						"Voice of the Storm": {
 							"text": "Grown on the Genesis Tree",
 							"priority": -8
+						},
+						"Khatal's Weeping": {
+							"text": "Drops from Mirage encounters",
+							"priority": -3
+						},
+						"Khatal's Geyser": {
+							"text": "Does not drop. Obtained by using a Coin of Restoration on Khatal's Weeping",
+							"priority": -10
 						}
 					}
 				},
@@ -4377,6 +4385,14 @@
 						"Chains of Emancipation": {
 							"text": "Drops from Friedrich Tarollo (Unique Heist Contact Boss).",
 							"priority": -8
+						},
+						"Saresh's Darkness": {
+							"text": "Drops from Mirage encounters",
+							"priority": -3
+						},
+						"Solerai's Radiance": {
+							"text": "Does not drop. Obtained by using a Coin of Restoration on Saresh's Darkness",
+							"priority": -10
 						}
 					}
 				},
@@ -4762,6 +4778,10 @@
 						"The Winds of Fate": {
 							"text": "Drops from Lycia with corresponding relic equipped.",
 							"priority": -8
+						},
+						"The Broken Elegy": {
+							"text": "Drops from Saresh",
+							"priority": -5
 						}
 					}
 				},
@@ -5282,6 +5302,45 @@
 						"The Sands of Time": {
 							"text": "Drops from Saresh",
 							"priority": -5
+						}
+					}
+				},
+				"Maraketh Bow": {
+					"text": null,
+					"items": {
+						"The Bane of Hope": {
+							"text": "Drops from Mirage encounters",
+							"priority": -3
+						},
+						"The Flame of Hope": {
+							"text": "Does not drop. Obtained by using a Coin of Restoration on The Bane of Hope",
+							"priority": -10
+						}
+					}
+				},
+				"Exquisite Blade": {
+					"text": null,
+					"items": {
+						"Fleshrender": {
+							"text": "Drops from Mirage encounters",
+							"priority": -3
+						},
+						"Skysunder": {
+							"text": "Does not drop. Obtained by using a Coin of Restoration on Fleshrender",
+							"priority": -10
+						}
+					}
+				},
+				"Coronal Maul": {
+					"text": null,
+					"items": {
+						"The Desecrated Chalice": {
+							"text": "Drops from Mirage encounters",
+							"priority": -3
+						},
+						"The Sacred Chalice": {
+							"text": "Does not drop. Obtained by using a Coin of Restoration on The Desecrated Chalice",
+							"priority": -10
 						}
 					}
 				},
