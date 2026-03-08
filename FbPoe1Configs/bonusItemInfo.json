@@ -2221,6 +2221,9 @@
 				},
 				"The Slumbering Beast": {
 					"tags": ["CurrencyOutcome"]
+				},
+				"The Eye of Terror": {
+					"tags": ["UniqueOutcome"]
 				}
 			}
 		},
