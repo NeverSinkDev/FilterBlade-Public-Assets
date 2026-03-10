@@ -319,12 +319,12 @@ Chapter() {
             Function essencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["essences", "O"]); }
             TierListToolBar();
 
-            essencesFunc([1.0, "Essences T1+2", "currency->essence;t1"], "SH", "LVL7: Exotics");
-            essencesFunc([1.0, "Essences T3", "currency->essence;t2"], "SH", "LVL6: Defeaning");
-            essencesFunc([1.0, "Essences T4", "currency->essence;t3"], "SH", "LVL5: Shrieking");
-            essencesFunc([1.0, "Essences T5", "currency->essence;t4"], "SH", "LVL4: Screaming and Remnants");
-            essencesFunc([1.0, "Essences T6", "currency->essence;t5"], "SH", "LVL3: Wailing");
-            essencesFunc([1.0, "Essences T7", "currency->essence;t6"], "SH", "LVL1+2");
+            essencesFunc([1.0, "Essences T1+2", "currency->essence;t1"], "SH", "S Tier");
+            essencesFunc([1.0, "Essences T3", "currency->essence;t2"], "SH", "A Tier");
+            essencesFunc([1.0, "Essences T4", "currency->essence;t3"], "SH", "B Tier");
+            essencesFunc([1.0, "Essences T5", "currency->essence;t4"], "SH", "C Tier");
+            essencesFunc([1.0, "Essences T6", "currency->essence;t5"], "SH", "D+E Tier");
+            essencesFunc([1.0, "Essences T7", "currency->essence;t6"], "SH", "F Tier");
 
             QuickUI([1.0, "Remaining essences", "currency->essence;exhide"], "SH", [], "", [], "Remaining essences that were not caught be the rules above due to possible AreaLevel requirements.");
 
