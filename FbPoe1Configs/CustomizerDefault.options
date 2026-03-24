@@ -684,6 +684,9 @@ Section("Current League: Mirage", "Mirage_CoinofRestoration") {
     Description("A little birdy said these may drop from mirage...");
     QuickUI([0.0, "Enchanted Contracts", "heist->contract;enchanted"], "SH", []);
     QuickUI([0.0, "Enchanted Blueprints", "heist->blueprint;enchanted"], "SH", []);
+    Description("The iron flask is in huge demand during mirage league. I've added a special rule to give it temporary massive highlight bonuses. I'll look for a more permanent solution next league.");
+    QuickUI([0.0, "ApexTierBasetypes84", "exoticbases;ecotinkbases84"], "SH", ["ItemLevel"], "Iron Flask: 84", []);
+    QuickUI([0.0, "ApexTierBasetypesAny", "exoticbases;ecotinkbases"], "SH", ["ItemLevel"], "Iron Flask", []);
 }
 
     Section("Highlight specific bases", "Firefly") {
