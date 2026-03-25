@@ -1473,8 +1473,8 @@ Chapter() {
         }
 
         Section("Breach Rings", "BreachRing") {
-            QuickUI([3.0, "Breach Rings High ilvl", "rare->exotic->breachrings;high"], "SH", ["AreaLevel", "ItemLevel"]);
-            QuickUI([3.0, "Breach Rings", "rare->exotic->breachrings;any"], "SH", ["AreaLevel", "ItemLevel"]);
+            QuickUI([3.0, "Breach Rings High ilvl", "rare->exotic->breachrings;high"], "SH", ["AreaLevel", "ItemLevel"], null, ["Gear", "OS"]);
+            QuickUI([3.0, "Breach Rings", "rare->exotic->breachrings;any"], "SH", ["AreaLevel", "ItemLevel"], null, ["Gear", "OS"]);
         }
 
         Section("Talismans", "RewardTalisman.webp") {
