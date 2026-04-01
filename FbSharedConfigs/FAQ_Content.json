@@ -60,7 +60,7 @@
     },
     {
       "question": "How can I import a filter from the PoE ladder to FilterBlade if I only have/follow it in PoE?",
-      "answer": "Importing someone else's filter: if follow a filter on PoE, you can go to their <a target='_blank' href='/Profile'>Profile</a> page and check if they have their filter saved publicly on FilterBlade (include the '#1234' discriminator at the end of the username!). If it's private you may try asking them. Otherwise, you're out of luck.<br><br>Importing your own filter or a .filter file: It's <b>NOT</b> possible to import a .filter file into FilterBlade (or import a filter from your PoE account), as it's missing crucial information about what was changed to enable updating/editing. Imagine it like trying to get raw eggs from a finished cake.",
+      "answer": "Importing someone else's filter: if follow a filter on PoE, you can go to their <a target='_blank' href='/Profile'>Profile</a> page and check if they have their filter saved publicly on FilterBlade (include the '#1234' discriminator at the end of the username for most accounts, leave '#1234' off for older legacy accounts!). If it's private you may try asking them. Otherwise, you're out of luck.<br><br>Importing your own filter or a .filter file: It's <b>NOT</b> possible to import a .filter file into FilterBlade (or import a filter from your PoE account), as it's missing crucial information about what was changed to enable updating/editing. Imagine it like trying to get raw eggs from a finished cake.",
       "tags": "upload create re-create import paste from ingame poe game re-import lost find gone use into from someone else streamer ladder other people streamer adjustments edit from other people someone else else's their his her",
       "group": "Import, Export, Save, Load, Download"
     },
@@ -421,7 +421,7 @@
     {
       "question": "Show/Hide/Disable. Why are there 3 states and what do they mean?",
       "answer": "To put a short story long <br><br> Show: Shows the item that matches ALL the variables in the rule. <br><br> Hide: Hides the item which matches ALL the variables in the rule. <br><br> Disable: This removes the rule from the filter, this means that rule will not and cannot catch any item and it leaves the other rules in the filter to handle the item. You should only be disabling rules if it is the default option in the rule or you know what you are doing. As this can lead to items being unfiltered and caught in the 'Catch All' error rule showing PINK.",
-      "tags": "Show hide disable why mean 3 options what does difference between" ,
+      "tags": "Show hide disable why mean 3 options what does difference between",
       "group": "Basics"
     }
   ]
