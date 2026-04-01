@@ -251,6 +251,12 @@
       "group": "Bonus features/modes"
     },
     {
+      "question": "Why does uber-plus-strict hide valuable boss-drops?",
+      "answer": "Uber Plus strict hides boss-drop-uniques to minimize clutter in maps. Check hidden items when bossing. Filters can't distinguish between uniques of the same basetype, even when they're identified. Uber-Plus-Strict will hide basetypes with multiple associated uniques that have non-boss-drops that are all cheap.",
+      "tags": "show all hide all highlight unique valuable cheap boss drop expensive",
+      "group": "Tierlists"
+    },
+    {
       "question": "How can I update someone else's filter?",
       "answer": "Search for them on the FilterBlade profile page or ask them for a 'Sharing link'. They can get it on the My Filters screen by clicking the Share button. Once you visit the link, you can further edit their filter and save and use this new version for yourself.<br><br>Just following the filter on their PoE profile or having the filter file is not enough.",
       "tags": "have their his her my friend filter file follow followed edit customize afterwards them",

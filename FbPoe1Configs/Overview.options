@@ -8,14 +8,15 @@
 // Meaning, TierTagSearches always show a certain rule and its current state, while Item Searches realistically show how the item is handled and can change rules if the original one changes.
 // =============================================================================================================
 
-StyleSection("COMMON CURRENCIES", "Basic supplies used to perform common operations. They're not worth much, but are important nonetheless. People frequently hide them or buy them in bulk.<hr> Hover over the scroll above for more information! ( recommended for new players )") {
-    Search S0("skip", "High Tier Supplies") { BaseType "Orb of Transmutation"; StackSize 4; AreaLevel 70; }
-    Search S0("skip", "Low Tier Supplies") { BaseType "Orb of Augmentation"; StackSize 4; AreaLevel 70; }
-    Search S0("skip", "Wisdom Scrolls") { BaseType "Scroll of Wisdom"; StackSize 4; AreaLevel 70; }
-    Search S0("skip", "Portal Scrolls") { BaseType "Portal Scroll"; StackSize 4; AreaLevel 70; }
+StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act as trade goods for players. Chaos Orbs and Divine Orbs are pretty much the standard way to pay for most trades. These are desired drops and it's almost always recommended to pick them up.") {
+    Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
+    Search S0("skip", "Exalted Orbs") { BaseType "Exalted Orb"; }
+    Search S0("skip", "Ancient Orb") { BaseType "Ancient Orb"; }
+    Search S0("skip", "Ye Trusty Chaos Orbs") { BaseType "Chaos Orb"; }
+    Search S0("skip", "Alchemy Orbs") { BaseType "Orb of Alchemy"; }
     SS_Item("S0");
 
-    SS_InfoBox(["Detailed explanation", "Vendor transmutation or blacksmith currencies to receive 1:4 wisdom scrolls or use a portal gem instead of portal scrolls to save clicking-time. <hr> The filter has individual rules for stacked and single currency drops and additional rules for the campaign section of the game. <hr> Every time you pick up an item, you have to stop. Optimized characters are better off focusing on the good drops and ignoring the plethora of cheap drops. As your character becomes more optimized, increasing the strictness level of the filter is advised. <hr>"]);
+	SS_InfoBox(["Detailed explanation", "Items have a sound that is linked to their value-tier. All high tier currencies make the same sound. When you hear it - you know 'something dropped'. You can click on the currency preview to hear the sound <hr> They also come with a minimap-icon. The icons can be seen next to the item preview labels on FilterBlade. <hr> You can change all of these settings in the customizer screen here. To quickly jump to the settings for a certain item, right click the item label or CTRL+click the item."]);
 }
 
 StyleSection("MID-TIER CURRENCY", "Rather common, but unless sold in bulk, not too expensive. Often used in basic crafting.") {
@@ -28,15 +29,11 @@ StyleSection("MID-TIER CURRENCY", "Rather common, but unless sold in bulk, not t
     SS_InfoBox(["Detailed explanation", "The site is updated every 4 hours and the tiering of the items may differ. Items might change their tier based on high or low demand. Note that you have to redownload/sync the filter to get the latest economy data! <hr> Don't underrate chance orbs! You can buy maps from Kirac at the start of the league to quickly progress through the atlas! <hr> Alterations, jeweller's and chromatics can also be reliably obtained by doing vendor recipes."]);
 }
 
-StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act as trade goods for players. Chaos Orbs and Divine Orbs are pretty much the standard way to pay for most trades. These are desired drops and it's almost always recommended to pick them up.") {
-    Search S0("skip", "Divine Orbs") { BaseType "Divine Orb"; }
-    Search S0("skip", "Exalted Orbs") { BaseType "Exalted Orb"; }
-    Search S0("skip", "Annulment Orbs") { BaseType "Orb of Annulment"; }
-    Search S0("skip", "Ye Trusty Chaos Orbs") { BaseType "Chaos Orb"; }
-    Search S0("skip", "Alchemy Orbs") { BaseType "Orb of Alchemy"; }
+StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. These rules have priority over normal currency rules, but only apply in areas under level 68. Great for new leagues!") {
+    Search S0("skip", "LEVELING: Transmutations") { BaseType "Orb of Transmutation"; AreaLevel 20; }
+    Search S0("skip", "LEVELING: Portals") { BaseType "Portal Scroll"; AreaLevel 20; }
+    Search S0("skip", "LEVELING: Wisdoms") { BaseType "Scroll of Wisdom"; AreaLevel 20; }
     SS_Item("S0");
-
-	SS_InfoBox(["Detailed explanation", "Items have a sound that is linked to their value-tier. All high tier currencies make the same sound. When you hear it - you know 'something dropped'. You can click on the currency preview to hear the sound <hr> They also come with a minimap-icon. The icons can be seen next to the item preview labels on FilterBlade. <hr> You can change all of these settings in the customizer screen here. To quickly jump to the settings for a certain item, right click the item label or CTRL+click the item."]);
 }
 
 StyleSection("TOP-VALUE ITEMS", "All top tier items have the same white background and drop-sound. They also come with a red beam and a huge red star on the minimap. These items include top tier currencies, valuable uniques, great divination cards, reliquary keys and everything else that is worth a LOT.") {
@@ -48,18 +45,23 @@ StyleSection("TOP-VALUE ITEMS", "All top tier items have the same white backgrou
     SS_InfoBox(["Detailed explanation", "It should be noted that other items without the white background can be just as, if not more valuable. However, with other items it often comes down to mods, luck and crafting, while the white background items are pretty much always great!"]);
 }
 
-StyleSection("LEVELING CURRENCY", "Useful currency that drops while leveling. These rules have priority over normal currency rules, but only apply in areas under level 68. Great for new leagues!") {
-    Search S0("skip", "LEVELING: Transmutations") { BaseType "Orb of Transmutation"; AreaLevel 20; }
-    Search S0("skip", "LEVELING: Portals") { BaseType "Portal Scroll"; AreaLevel 20; }
-    Search S0("skip", "LEVELING: Wisdoms") { BaseType "Scroll of Wisdom"; AreaLevel 20; }
+StyleSection("Gold", "You can find gold all throughout the game. It's picked up automatically as you walk over it.") {
+    Search S0("skip") { BaseType "Gold"; StackSize 1; }
+    Search S0("skip") { BaseType "Gold"; StackSize 1000; }
     SS_Item("S0");
 }
 
-SS_SectionTitle("Current League: 3.25 Settlers of Kalguur");
+SS_SectionTitle("Current League: 3.28 Mirage");
 
-StyleSection("Gold", "You can find gold all throughout the game. Use it to hire workers and build your settlement.") {
-    Search S0("skip") { BaseType "Gold"; StackSize 1; }
-    Search S0("skip") { BaseType "Gold"; StackSize 1000; }
+StyleSection("Mirage League", "Mirages drop coins that can be used to imbue gems and restore specific uniques. Additionally mirages modify other mechanics to drop exotic loot!") {
+    Search S0("skip") { BaseType "Coin of Knowledge"; }
+    Search S0("skip") { BaseType "Cord Belt"; ItemLevel 80; Rarity Normal; }
+    SS_Item("S0");
+}
+
+StyleSection("Astrolabes", "Astrolabes are a new way to juice up maps in the endgame. These are found after defeating the incarnations of Dread, Neglect and Fear.") {
+    Search S0("skip") { BaseType "Nameless Astrolabe"; }
+    Search S0("skip") { BaseType "Templar Astrolabe"; }
     SS_Item("S0");
 }
 
@@ -129,9 +131,7 @@ StyleSection("Map Upgrades!", "The filter highlights map drops of a higher tier 
 }
 
 StyleSection("Unique Maps!", "Unique maps are treated like any other unique and are highlighted based on price.") {
-    Search S0("skip", null, "uniques->maps;t2") { BaseType "Promenade Map"; ItemLevel 79; Rarity Unique; }
-    Search S0("skip", null, "uniques->maps;t3") { BaseType "Promenade Map"; ItemLevel 79; Rarity Unique; }
-    Search S0("skip", null, "uniques->maps;t4") { BaseType "Promenade Map"; ItemLevel 79; Rarity Unique; }
+    Search S0("skip", null, "uniques->maps;multispecial") { ItemLevel 79; Rarity Unique; }
     SS_Item("S0");
 }
 
@@ -190,8 +190,8 @@ StyleSection("Weapon&Armour Tier 4", "These items are usually rendered fairly un
 SS_SectionTitle("Noteworthy Rares");
 
 StyleSection("INFLUENCED ITEMS", "These items drop from influenced maps in the endgame. They come with their own exclusive set of mods. High level versions of these items on certain basetypes can be very valuable and are great crafting bases.") {
-    Search S0("skip", null, "rare->shaper;t21") { }
-    Search S0("skip", null, "rare->any;any") { BaseType "Driftwood Wand"; }
+    Search S0("skip", null, "influenced->all;t1top") { }
+    Search S0("skip", null, "influenced->all;any") { BaseType "Driftwood Wand"; }
     SS_Item("S0");
 
     SS_InfoBox(["Detailed explanation", "As a general rule of thumb a shaper/elder item needs at least level 80 to be useful, often higher. In particular itemlevel 86+ top bases tend to be expensive. The filter attempts to detect expensive bases, based on the economy data, but economy and meta changes can lead to it being outdated fairly quickly. It's recommended to update the filter at least once every few weeks and to be careful with the influenced drops."]);
@@ -267,35 +267,27 @@ StyleSection("Chancing Bases", "By applying an 'Orb of Chance' on these bases, y
 }
 
 StyleSection("Perfect Defenses", "The inherent base defenses on every item vary by up to 15%. Selected itemLevel 86 items with perfect defense rolls get a special highlight. These bases are great for crafting.") {
-    Search S0("skip", null, "crafting->qualityperfection;body1") { BaseType "Hubris Circlet"; BaseDefencePercentile 100; ItemLevel 86; Rarity Normal; }
+    Search S0("skip", null, "crafting->qualityperfection;armors1q1") { BaseType "Hubris Circlet"; BaseDefencePercentile 100; ItemLevel 86; Rarity Normal; }
     SS_Item("S0");
 }
 
 StyleSection("Tier 1 crafting bases", "Exotic basetypes, such as atlas bases. Come in 3 itemlevel subsections (86/84/others). These can be quite expensive at ilvl 86+") {
-    Search S0("skip", null, "normalcraft->i86;t1")  { ItemLevel 86; Rarity Normal; }
-    Search S0("skip", null, "normalcraft->i84;t1")  { ItemLevel 84; Rarity Normal; }
-    Search S0("skip", null, "normalcraft->rest;t1") { ItemLevel 74; Rarity Normal; }
+    Search S0("skip", null, "crafting->generalgear;t1_86")  { ItemLevel 86; Rarity Normal; }
+    Search S0("skip", null, "crafting->generalgear;t1_84")  { ItemLevel 84; Rarity Normal; }
     SS_Item("S0");
 }
 
 StyleSection("Tier 2 crafting bases", "Popular best base-items for crafting. Often expensive at the start of the league, at itemlevel 86+. Works for normal-rare rarities. Come in 3 itemlevel subsections (86/84/others).") {
-    Search S0("skip", null, "normalcraft->i86;t2")  { ItemLevel 86; Rarity Normal; }
-    Search S0("skip", null, "normalcraft->i84;t2")  { ItemLevel 84; Rarity Normal; }
-    Search S0("skip", null, "normalcraft->rest;t2") { ItemLevel 74; Rarity Normal; }
+    Search S0("skip", null, "crafting->generalgear;t2_86")  { ItemLevel 86; Rarity Normal; }
+    Search S0("skip", null, "crafting->generalgear;t2_84")  { ItemLevel 84; Rarity Normal; }
     SS_Item("S0");
 
     SS_InfoBox(["Detailed explanation", "Due to all the special bases (such as atlas, stygian, shaper, elder bases) being added to the game, these bases have become much less popular and a lot of them are hidden on higher filter strictnesses. <hr> Still, especially in SSF and early leagues, these bases can be fairly valuable."]);
 }
 
 StyleSection("Tier 3 crafting bases", "Additional less commonly used crafting bases") {
-    Search S0("skip", null, "normalcraft->i86;t3")  { ItemLevel 86; Rarity Normal; }
-    Search S0("skip", null, "normalcraft->i84;t3")  { ItemLevel 84; Rarity Normal; }
-    Search S0("skip", null, "normalcraft->rest;t3") { ItemLevel 74; Rarity Normal; }
-    SS_Item("S0");
-}
-
-StyleSection("Early endgame crafting", "These crafting items are found in early maps in low filter strictnesses. You can store them for quick essence or harvest crafting to get some upgrades early on.") {
-    Search S0("skip", null, "normalcraft->extra;any")  { ItemLevel 72; Rarity Normal; }
+    Search S0("skip", null, "crafting->generalgear;t3_86")  { ItemLevel 86; Rarity Normal; }
+    Search S0("skip", null, "crafting->generalgear;t3_84")  { ItemLevel 84; Rarity Normal; }
     SS_Item("S0");
 }
 
@@ -324,11 +316,11 @@ StyleSection("Special: Exotic Base", "Some items in the game can only be obtaine
 }
 
 StyleSection("Special: Veiled Bases", "Veiled mods can be 'unveiled' by Jun and become permanent mods + you learn to craft that mod. Member-Specific and small veiled items receive extra highlight!") {
-    
-    Search S0("skip", null, "exoticmods;t1veil") { ItemLevel 74; Identified True; Corrupted False; Rarity Rare; BaseType "Coral Ring"; }
-    Search S0("skip", null, "exoticmods;t2veil") { ItemLevel 74; Identified True; Corrupted False; Rarity Rare;  BaseType "Onyx Amulet"; }
-    Search S0("skip", null, "exoticmods;smallveil1") { ItemLevel 74; Identified True; Corrupted False; Rarity Rare; BaseType "Coral Ring"; }
-    Search S0("skip", null, "exoticmods;veilrest") { ItemLevel 74; Identified True; Corrupted False; Rarity Rare; BaseType "Lathi"; }
+
+    Search S0("skip", null, "rare->exotic->veiled;t1") { ItemLevel 74; Identified True; Corrupted False; Rarity Rare; BaseType "Coral Ring"; }
+    Search S0("skip", null, "rare->exotic->veiled;t2") { ItemLevel 74; Identified True; Corrupted False; Rarity Rare;  BaseType "Onyx Amulet"; }
+    Search S0("skip", null, "rare->exotic->veiled;t3") { ItemLevel 74; Identified True; Corrupted False; Rarity Rare; BaseType "Coral Ring"; }
+    Search S0("skip", null, "rare->exotic->veiled;any") { ItemLevel 74; Identified True; Corrupted False; Rarity Rare; BaseType "Lathi"; }
     SS_Item("S0");
 
     SS_InfoBox(["Detailed explanation", "Some veiled items, like 'Elreon's Veil' tend to be expensive every league. It should be noted that the natural unveil can be very powerful and is stronger than the crafted version of the mod."]);
@@ -426,9 +418,9 @@ SS_Ad();
 SS_SectionTitle("Currency Stacks");
 
 StyleSection("Stacked Currencies", "Endgame currency drops are evaluated based on their stacksize based on the ingame economy. Large stacks get a stronger highlight!") {
-    Search S0("skip") { BaseType "Ancient Shard"; StackSize 6; }
-    Search S0("skip") { BaseType "Ancient Shard"; StackSize 3; }
-    Search S0("skip") { BaseType "Ancient Shard"; StackSize 1; }
+    Search S0("skip") { BaseType "Orb of Chance"; StackSize 6; }
+    Search S0("skip") { BaseType "Orb of Chance"; StackSize 3; }
+    Search S0("skip") { BaseType "Orb of Chance"; StackSize 1; }
     SS_Item("S0");
 }
 
@@ -450,7 +442,7 @@ StyleSection("Stacked Scrolls", "Scrolls dropping in bulk receive a different hi
 
 SS_SectionTitle("Other Endgame Tierlists");
 
-StyleSection("BETRAYAL SCARABS", "Scarabs modify maps and add new encounters to them, they come in 4 tiers and some are highly desirable drops.") {
+StyleSection("SCARABS", "Scarabs add and modify encounters in maps. They come in different rarities and values. A lot of endgame strategies revolve around specific scarab combinations.") {
     Search S0("skip", null, "fragments->scarabs;t2") {  }
     Search S0("skip", null, "fragments->scarabs;t3") {  }
     SS_Item("S0");
@@ -483,7 +475,19 @@ StyleSection("DELVE FOSSILS", "Fossils are originally found in the Azurite mine 
     SS_Item("S0");
 }
 
-StyleSection("DELVE RESONATORS", "Resonators are outfitted with fossils for crafting. Mostly found behind crystal walls in the azurite mine (the ones that you destroy with dynamite)") {
-    Search S0("skip", null, "currency->resonator;t2") { }
+StyleSection("Forbidden Tome", "Sanctum forbidden tomes. Valuable, especially early on. Run by specialized players early on for good chances of dropping pure Divines.")
+{
+    Search S0("skip", "Victory for ASA") { BaseType "Forbidden Tome"; AreaLevel 80; }
+    SS_Item("S0");
+}
+
+SS_SectionTitle("Optional & Exotic Highlights");
+
+StyleSection("Idols", "Idols are only available in 'Phrecia' events as an atlas alternative. <br><br>Any keepers-filter can be used for Phrecia (although Phrecia likely has a different economy). We intend to release a phrecia-economy version soon after launch.")
+{
+    Search S0("skip", "Conqueror Rare Idol") { Rarity Rare; BaseType "Conqueror Idol"; Class "Idols"; AreaLevel 80; }
+    Search S0("skip", "Totemic Rare Idol") { Rarity Rare; BaseType "Totemic Idol";  Class "Idols"; AreaLevel 80; }
+    Search S0("skip", "Totemic Magic Idol") { Rarity Magic; BaseType "Totemic Idol";  Class "Idols"; AreaLevel 80; }
+    Search S0("skip", "Minor Unique Idol") { Rarity Unique; BaseType "Minor Idol"; Class "Idols"; AreaLevel 80; }
     SS_Item("S0");
 }
