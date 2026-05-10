@@ -562,11 +562,11 @@ Chapter() {
         Search MagicT2RC(0.0, "Jewellery, Magic, Tier 2, Rank C", "ut->magic;j2c") { }
 
         Title("Control Tiering:");
-        BaseTypeMatrix(false,
-            "Tier 1", RareT4RA, RareT3RA, RareT2RA, MagicT4RA, MagicT3RA, MagicT2RA, EgNNT1Ideal, EgNNT1, EgNRareT1, NRareT1,
-            "Tier 2", RareT4RB, RareT3RB, RareT2RB, MagicT4RB, MagicT3RB, MagicT2RB, EgNNT2Ideal, EgNNT2, EgNRareT2, NRareT2,
-            "Tier 3", RareT4RC, RareT3RC, RareT2RC, MagicT4RC, MagicT3RC, MagicT2RC, EgNNT3Ideal, EgNNT3, EgNRareT3, NRareT3,
-            "Tier 4", EgNNT4Ideal, EgNNT4, EgNRareT4, NRareT4
+        BaseTypeMatrix("MasterBtmJewellery", "1.0", "Default", false,
+            [[RareT4RA, RareT3RA, RareT2RA, MagicT4RA, MagicT3RA, MagicT2RA, EgNNT1Ideal, EgNNT1, EgNRareT1, NRareT1],
+            [RareT4RB, RareT3RB, RareT2RB, MagicT4RB, MagicT3RB, MagicT2RB, EgNNT2Ideal, EgNNT2, EgNRareT2, NRareT2],
+            [RareT4RC, RareT3RC, RareT2RC, MagicT4RC, MagicT3RC, MagicT2RC, EgNNT3Ideal, EgNNT3, EgNRareT3, NRareT3],
+            [EgNNT4Ideal, EgNNT4, EgNRareT4, NRareT4]]
         );
     }
 
@@ -700,11 +700,11 @@ Chapter() {
         }
 
         Title("Control Tiering:");
-        BaseTypeMatrix(true,
-            "Tier 1", R1Top, R1Other, C1Ideal, C1, IdRareT4RA, IdRareT3RA, IdRareT2RA, IdMagicT4RA, IdMagicT3RA, IdMagicT2RA,
-            "Tier 2", R2Top, R2A1, R2Other, C2Ideal, C2OnLvl, IdRareT4RB, IdRareT3RB, IdRareT2RB, IdMagicT4RB, IdMagicT3RB, IdMagicT2RB,
-            "Tier 3", R3A1, R3A2, R3Other, R3Top, C3Ideal, C3OnLvl, IdRareT4RC, IdRareT3RC, IdRareT2RC, IdMagicT4RC, IdMagicT3RC, IdMagicT2RC,
-            "Tier 4", R4A1, R4A2, R4Other
+        BaseTypeMatrix("MasterBtmGear", "1.0", "Default", true,
+            [[R1Top, R1Other, C1Ideal, C1, IdRareT4RA, IdRareT3RA, IdRareT2RA, IdMagicT4RA, IdMagicT3RA, IdMagicT2RA],
+            [R2Top, R2A1, R2Other, C2Ideal, C2OnLvl, IdRareT4RB, IdRareT3RB, IdRareT2RB, IdMagicT4RB, IdMagicT3RB, IdMagicT2RB],
+            [R3A1, R3A2, R3Other, R3Top, C3Ideal, C3OnLvl, IdRareT4RC, IdRareT3RC, IdRareT2RC, IdMagicT4RC, IdMagicT3RC, IdMagicT2RC],
+            [R4A1, R4A2, R4Other]]
         );
     }
 

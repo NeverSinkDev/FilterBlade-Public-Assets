@@ -1131,7 +1131,7 @@ Chapter() {
         QuickUI(S3, "SD", ["AreaLevel","ItemLevel"], "Rank C - Rings/Amulets");
         QuickUI(B3, "SD", ["AreaLevel","ItemLevel"], "Rank C - Belts");
 
-        BaseTypeMatrix(false, "Tier 1", S1, B1, "Tier 2", S2, B2, "Tier 3", S3, B3);
+        BaseTypeMatrix("EgRaresJewellery", "1.0", "ClassSplit", false, [[S1, B1], [S2, B2], [S3, B3]]);
     }
 
     Section("Weapons and Armours", "RoyalBurgonet") {
@@ -1149,11 +1149,11 @@ Chapter() {
         EgRaresArmours(T4, "Rank D");
         EgRaresArmours(T5, "Rank E");
 
-        BaseTypeMatrix(true,
-            "Tier 1", T1Wep,
-            "Tier 2", T2Wep,
-            "Tier 3", T3Dagger,
-            "Tier 4", T4
+        BaseTypeMatrix("EgRaresGear", "1.0", "Default", true,
+            [[T1Wep],
+            [T2Wep],
+            [T3Dagger],
+            [T4]]
         );
     }
 }
@@ -1211,7 +1211,7 @@ Chapter() {
         }
 
         Title("Control WHAT items are in what tier:");
-        BaseTypeMatrix("RDS", "Tier 1", T1:0, T1:1, T1:2, T1:3, "Tier 2", T2:0, T2:1, T2:2, T2:3, "Tier 3", T3:0, T3:1, T3:2, T3:3);
+        BaseTypeMatrix("EgHighLevelCraftingBases", "1.0", "LevelSplit1", true, [[T1:0, T1:1, T1:2, T1:3], [T2:0, T2:1, T2:2, T2:3], [T3:0, T3:1, T3:2, T3:3]]);
     }
 
     Section("Fractured Items", "FracturingOrb") {
@@ -1223,7 +1223,7 @@ Chapter() {
         QuickUI(S1, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified", "Quality"], "Rank B");
         QuickUI(S2, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified", "Quality"], "Rank C");
         QuickUI([0.0, "Fractured items, others", "exotic->fractured;fractothers"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel", "DropLevel", "Identified", "Quality"], "Rank D/Untiered");
-        BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1, "Tier 3", S2);
+        BaseTypeMatrix("FracturedBases", "1.0", "Default", true, [[S0], [S1], [S2]]);
     }
 
     Section("Memory-Stranded Items", "OrbofIntention")
@@ -1246,7 +1246,7 @@ Chapter() {
         QuickUI(6, "SH", ["Rarity", "MemoryStrands", "ItemLevel", "DropLevel", "Corrupted"]);
         QuickUI(7, "SH", ["Rarity", "MemoryStrands", "ItemLevel", "DropLevel", "Corrupted"]);
 
-        BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1, "Tier 3", S2);
+        BaseTypeMatrix("MemoryStrandedItems", "1.0", "Default", true, [[S0], [S1], [S2]]);
     }
 
      Section ("Influenced Items", "Voidorb") {
@@ -1265,7 +1265,7 @@ Chapter() {
             Description("Rank C - Niche and second grade bases");
             QuickUI(S2, "SH", ["HasInfluence", "ItemLevel"]);
 
-            BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1, "Tier 3", S2);
+            BaseTypeMatrix("InfluencedItems", "1.0", "Default", true, [[S0], [S1], [S2]]);
         }
 
         Description("Sometimes highly specific items not covered by the list above can hold high value, such as a 'Crusader Moonstone Ring'. This list is designed to cover this niche. You can also add your requirements here.");
@@ -1296,7 +1296,7 @@ Chapter() {
             Search S1(0.0, "Exarch Influence", "rare->exarch;any") {}
             Search S0(0.0, "Eater or Worlds Influence, Good Bases", "rare->eater;anyhigh") {}
             Search S1(0.0, "Eater or Worlds Influence", "rare->eater;any") {}
-            QuickUI(S0, "SH", ["Rarity", "ItemLevel", "DropLevel", "Corrupted", "BTM", "Quality"], "High Level");
+            QuickUI(S0, "SH", ["Rarity", "ItemLevel", "DropLevel", "Corrupted", "BTM:ExarchEater1", "Quality"], "High Level");
             QuickUI(S1, "SH", ["Rarity", "ItemLevel", "DropLevel", "Corrupted", "Quality"], "Remaining");
         }
 
@@ -1327,7 +1327,7 @@ Chapter() {
         QuickUI(S3, "SH");
         QuickUI(S4, "SH");
 
-        BaseTypeMatrix(true, "Tier 1", S0, "Tier 2", S1, "Tier 3", S2, "Tier 4", S3);
+        BaseTypeMatrix("VeiledItems", "1.0", "Default", true, [[S0], [S1], [S2], [S3]]);
 
         // new tiers
 //            Conditional("?VeiledModsNewTiers") { Show; Identified True; SetFontSize 45; SetBorderColor 0 240 190 240; PlayEffect White Temp; MinimapIcon 2 White Hexagon; HasExplicitMod "Veil"; }
@@ -1360,7 +1360,7 @@ Chapter() {
             QuickUI(1, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Rank A 24%+ Qual Armors");
             QuickUI(2, "SH", ["Corrupted", "ItemLevel", "BaseDefencePercentile", "Rarity", "Quality"], "Optional Perfection-Based Tiering");
 
-            BaseTypeMatrix(true, "Tier 1", S0, S1, S2);
+            BaseTypeMatrix("OverqualityArmours", "1.0", "Default", true, [[S0, S1, S2]]);
         }
 
         Section("Overquality Weapons") {
@@ -1372,7 +1372,7 @@ Chapter() {
             QuickUI(1, "SH", ["Corrupted", "ItemLevel", "Rarity", "Quality"], "Rank B, 29%+ Quality Weapons");
             QuickUI(2, "SH", ["Corrupted", "ItemLevel", "Rarity", "Quality"], "Rank A, 24%+ Quality Weapons");
             QuickUI(3, "SH", ["Corrupted", "ItemLevel", "Rarity", "Quality"], "Rank B, 24%+ Quality Weapons");
-            BaseTypeMatrix(true, "Tier 1", T1, "Tier 2", T2);
+            BaseTypeMatrix("OverqualityWeapons", "1.0", "Default", true, [[T1], [T2]]);
         }
 
         Section("Overquality") {
@@ -1384,7 +1384,7 @@ Chapter() {
         Title("Special Properties");
 
         Section("Synthesised items") {
-            QuickUI([0.0, "Synthesised items T1", "exotic->synthesised;synthselected"], "SD", ["ItemLevel", "DropLevel", "Identified", "BTM", "Quality"], "Synth: Selected bases");
+            QuickUI([0.0, "Synthesised items T1", "exotic->synthesised;synthselected"], "SD", ["ItemLevel", "DropLevel", "Identified", "BTM:SynthT1", "Quality"], "Synth: Selected bases");
             QuickUI([0.0, "Synthesised items classes", "exotic->synthesised;synthclasses"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified", "Quality"], "Synth: Selected Classes");
             QuickUI([0.0, "Synthesised items", "exotic->synthesised;synthrandom"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel", "DropLevel", "Identified", "Quality"], "Synth: All Others");
         }
