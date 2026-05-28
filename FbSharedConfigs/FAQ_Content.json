@@ -113,6 +113,12 @@
       "group": "Bonus features/modes"
     },
     {
+      "question": "Another rule is overwriting my rule because it has higher priority!",
+      "answer": "The filter has many rules that are in a very specific order to implement priorities, as one item can always be only handled by one rule. You can always right-click rules to view their priority and compare it to other rules. Normal existing rules can not have their priority changed, but new additional custom rules that you can create can have their priority edited!",
+      "tags": "move high low more important order why instead of",
+      "group": "Bonus features/modes"
+    },
+    {
       "question": "How can I change EVERY occurrence of a color/style/sound?",
       "answer": "The 'Style' tab allows you to do just that. With a few clicks, you can change all reoccurring styles (i.e. colors and sounds) over the entire filter without having to go through every single rule individually.<br><br>There are also 'Global Style Edits' that allow you to edit e.g. ALL minimap icons or beams, or scale or maximize all font sizes throughout the filter. If you're looking to do some large scale changes of the entire filter, this is the section to visit!",
       "tags": "utility quickly easy fast redesign design all",
