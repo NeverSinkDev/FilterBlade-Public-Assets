@@ -26,7 +26,7 @@ Chapter("chapter") {
         CurrencyList([3.0, "Currency Tier 4", "currency;c"], "SH", "C Tier");
         CurrencyList([3.0, "Currency Tier 5", "currency;d"], "SH", "D Tier");
         CurrencyList([3.0, "Currency Tier 6", "currency;e"], "SH", "E Tier");
-        CurrencyList([3.0, "Supplies 1: Artifacts", "currency;artifactlike"], "SH", "Special: Expedition Artifacts");
+//        CurrencyList([3.0, "Supplies 1: Artifacts", "currency;artifactlike"], "SH", "Special: Expedition Artifacts");
         CurrencyList([3.0, "Supplies 2: Magic crafting and higher shards", "currency;supplymagic"], "SH", "Supplies: Magic & Shards");
         CurrencyList([3.0, "Supplies 3: Scrolls and low shards", "currency;supplieslow"], "SH", "Supplies: Scrolls");
 
@@ -286,32 +286,65 @@ Chapter("chapter") {
         Description("Gold can be hidden and will still be auto-picked up if you walk next to it.");
 
         Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text); }
+        Function GoldFuncR($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text); }
 
         GoldFunc([0.0, "Gold Pile: Gigantic", "gold;stack3"], "SH");
         GoldFunc([0.0, "Gold Pile: Large", "gold;stack2"], "SH");
         GoldFunc([0.0, "Gold Pile: Medium (Endgame)", "gold;stack1"], "SH");
-        GoldFunc([0.0, "Gold Pile: Small", "gold;any"], "SH");
+        GoldFuncR([0.1, "Gold Pile: Small", "gold;any"], "SH", "Gold Pile: Remaining");
 
         GoldFunc([0.0, "Gold Pile: Medium (Campaign) 1", "gold;stack1lvl"], "SH", "Gold Pile: Medium (Campaign Act 1)");
         GoldFunc([0.0, "Gold Pile: Medium (Campaign) 2", "gold;stack2lvl"], "SH", "Gold Pile: Medium (Campaign Act 2-3)");
-        GoldFunc([0.0, "Gold Pile: Medium (Campaign)", "gold;stack3lvl"], "SH", "Gold Pile: Medium (Campaign Later Acts)");
+        GoldFunc([0.0, "Gold Pile: Medium (Campaign)", "gold;stack3lvl"], "SH", "Gold Pile: Medium (Campaign Acts 4+)");
 
         // new tiers
         Conditional("?GoldNewTier") { Show; BaseType == "Gold"; StackSize >= 1337; SetTextColor 200 200 0; SetBorderColor 200 200 0; }
         ElementAdder_Tier("?GoldNewTier", "GoldFunc");
+
+        // TODO!!!!
+        GoldFunc([0.0, "todo new entry needs name", "gold;stackxl1lvl"], "SH", "");
+        GoldFunc([0.0, "todo new entry needs name", "gold;stackxl2lvl"], "SH", "Campaign Gold,");
     }
 
-    Section("Current League: Fate of the Vaal", "Vaal Orb") {
+    Section("Current WIP") {
+
+        QuickUI([0.0, "todo new entry needs name", "exoticbases;pseudocrafts1"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "exoticbases;pseudocrafts2"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "legacytemp;any"], "SH", []); // todo
+        QuickUI([0.0, "todo new entry needs name", "currency;artifactlike"], "SH", []); // todo
+
+        Section("Verisium") {
+            QuickUI([0.0, "Verisium, massive stack", "verisium;massive"], "SH", ["StackSize"]);
+            QuickUI([0.0, "Verisium, huge stack", "verisium;huge"], "SH", ["StackSize"]);
+            QuickUI([0.0, "Verisium, large stack", "verisium;large"], "SH", ["StackSize"]);
+            QuickUI([0.0, "Verisium", "verisium;any"], "SH", ["StackSize"]);
+        }
+
+        Section("New items") {
+            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+            Function XenoFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Gear", "O"]); }
+            TierListToolBar();
+
+            XenoFunc([0.0, "New items, S Tier", "xenotiering;s"], "SH", "S Tier");
+            XenoFunc([0.0, "New items, A Tier", "xenotiering;a"], "SH", "A Tier");
+            XenoFunc([0.0, "New items, B Tier", "xenotiering;b"], "SH", "B Tier");
+            XenoFunc([0.0, "New items, C Tier", "xenotiering;c"], "SH", "C Tier");
+            XenoFunc([0.0, "New items, D Tier", "xenotiering;d"], "SH", "D Tier");
+            XenoFunc([0.0, "New items, E Tier", "xenotiering;e"], "SH", "E Tier");
+
+            // new tiers
+            Conditional("?XenoNewTier") { }
+            ElementAdder_Tier("?XenoNewTier", "XenoFunc");
+
+            // hide tier
+            Conditional("?XenoNewTiersHidden") { }
+            ElementAdder_Tier("?XenoNewTiersHidden", null, true, "Gear", "OH");
+        }
+    }
+
+    Section("Current League: Fate of the Vaal") {
         Title("Twice-Corruption Outcomes");
-        QuickUI([0.0, "twice corrupted rare items", "exotic->state;twicecorruptedrare"], "SH", []);
-        QuickUI([0.0, "twice corrupted magic items", "exotic->state;twicecorruptedmagic"], "SH", []);
-        QuickUI([0.0, "twice corrupted uniques", "uniques;twicecorrupteduniques"], "SH", []); // todo
-        QuickUI([0.0, "twice corrupted gems: 21/23", "gems;upgradedgemstwice"], "SH", []); // todo
-        QuickUI([0.0, "twice corrupted gems", "gems;upgradedgemslevel"], "SH", []); // todo
-        Title("Vaal-Specific Uniques");
-        QuickUI([0.0, "uniques with a corrupted vaal mod", "uniques;vaalmodunique"], "SH", []); // todo
-        QuickUI([0.0, "vaal-origin uniques", "uniques;vaaltypeuniques"], "SD", []); // todo
-        QuickUI([0.0, "Unhidable Event Outcome items", "special->alwaysshow;any"], "S", []);
+
         Description("All other items have been integrated into their respective tierlists.");
     }
 
@@ -743,6 +776,11 @@ Chapter() {
             QuickUI(UniqExcSock, "SH", [], "Uniques: Oversocket");
         }
 
+        Section("Double Corrupted Items", "Vaal Orb") {
+            QuickUI([0.0, "twice corrupted rare items", "exotic->state;twicecorruptedrare"], "SH", []);
+            QuickUI([0.0, "twice corrupted magic items", "exotic->state;twicecorruptedmagic"], "SH", []);
+        }
+
         Section("Identified Mod Filtering", "IdentifiedItem") {
             Description("Identified items with one or multiple desired T1 mods are highlighted here. There intent is to be used for recombinations");
             QuickUI([0.0, "Recombinator Mods, Boots", "exoticmods;cmboots"], "SH", ["Mods"]);
@@ -884,10 +922,6 @@ Chapter() {
             // hide tier
             Conditional("?MapFragmentsNewTiersHidden") { }
             ElementAdder_Tier("?MapFragmentsNewTiersHidden", null, true, "MapFragAndTablets", "OH");
-        }
-
-        Section("Rare Tablets", "PrecursorTabletRitual.webp") {
-            QuickUI([0.0, "Exotic Tablets: Rare", "fragments->generic;exraretablets"], "SH", ["ItemLevel"]);
         }
 
         Section("Splinters", "deliriumsplinter.webp") {
@@ -1034,13 +1068,13 @@ Chapter() {
 
         Function ItemProgUI($s) { QuickUI($s, "", ["Rarity", "AreaLevel", "Corrupted", "Progression", "Quality"], "Item Progression Editor"); }
 
-        Conditional("?LvlItemProgression1", ["c21.leveling.magicvendor.all"], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
+        Conditional("?LvlItemProgression1", ["c21.leveling.rares.armors"], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
         ItemProgUI("?LvlItemProgression1");
 
-        Conditional("?LvlItemProgression2", ["c21.leveling.magicvendor.all"], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
+        Conditional("?LvlItemProgression2", ["c21.leveling.rares.armors"], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
         ItemProgUI("?LvlItemProgression2");
 
-        Conditional("?LvlItemProgression3", ["c21.leveling.magicvendor.all"], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
+        Conditional("?LvlItemProgression3", ["c21.leveling.rares.armors"], "notSimpleBuilder") { Show; Rarity Normal Magic; SetBorderColor 200 0 0; SetFontSize 38; }
         ItemProgUI("?LvlItemProgression3");
     }
 
@@ -1057,6 +1091,8 @@ Chapter() {
         Section("Rare Items") {
             Title("Rares Jewellery");
             QuickUI([0.0, "Campaign Rares, Jewellery", "leveling->rare->universal;jewellery"], "SH", ["AreaLevel", "JewelleryClasses"]);
+            QuickUI([0.0, "Campaign Rare, High Tier 4", "leveling->rare->universal;highertier4"], "SH", []);
+            QuickUI([0.0, "Campaign Rare, High Tier 3", "leveling->rare->universal;highertier3"], "SH", []);
             Title("Armor Types (Rare)");
             QuickUI([0.0, "Campaign Rares, Armour", "leveling->rare->armours;ar"], "SH", ["AreaLevel"]);
             QuickUI([0.0, "Campaign Rares, Evasion", "leveling->rare->armours;ev"], "SH", ["AreaLevel"]);
@@ -1260,6 +1296,7 @@ Chapter() {
     }
 
     Section("Special Rules", "GoldenKey") {
+
         Section("Relics") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
             Function RelicsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Relics", "O"]); }
@@ -1276,12 +1313,21 @@ Chapter() {
             ElementAdder_Tier("?RelicsNewTiersHidden", null, true, "C:Relics", "OH");
         }
 
+        Section("Special Gem Rules") {
+            QuickUI([0.0, "twice corrupted gems: 21/23", "gems;upgradedgemstwice"], "SH", []);
+            QuickUI([0.0, "twice corrupted gems", "gems;upgradedgemslevel"], "SH", []);
+        }
+
         Section("Unique Special Cases") {
             QuickUI([0.0, "Unique Exception: Sekhema Ring", "uniques;sekhemaring"], "SH");
             QuickUI([0.0, "Corrupted Uniques", "uniques;corrupteduniques"], "SH");
+            QuickUI([0.0, "twice corrupted uniques", "uniques;twicecorrupteduniques"], "SH", []);
+            QuickUI([0.0, "vaal-origin uniques", "uniques;vaaltypeuniques"], "SD", []);
+            QuickUI([0.0, "uniques with a corrupted vaal mod", "uniques;vaalmodunique"], "SH", []);
         }
 
         Section("Exotic Bases") {
+            QuickUI([0.0, "Unhidable Event Outcome items", "special->alwaysshow;any"], "S", []);
             QuickUI([0.0, "Non-Unique Diamonds", "exoticbases;superexoticbases"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
             QuickUI([0.0, "Kalandra Bases", "exoticbases;kalandrabases"], "SH", ["ItemLevel", "Rarity"], null, ["Gear", "OS"]);
             QuickUI([0.0, "Fishing Rod", "artifact;fishingrod"], "SH", []);
@@ -1325,6 +1371,7 @@ Chapter() {
             QuickUI([0.0, "Remaining Emotions", "currency->emotions;exhide"], "SH", [], "", [], "Remaining Emotions, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
             QuickUI([0.0, "Remaining Catalysts", "currency->catalysts;exhide"], "SH", [], "", [], "Remaining Catalysts, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
             QuickUI([0.0, "Remaining Omen", "currency->omen;exhide"], "SH", [], "", [], "Remaining Omen, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
+            QuickUI([0.0, "Remaining new items", "xenotiering;exhide"], "SH", [], "", [], "Remaining new items, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
             QuickUI([0.0, "Remaining Essences", "currency->essence;exhide"], "SH", [], "", [], "Remaining Essences, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
             QuickUI([0.0, "Remaining Socketables", "sockets->general;exhide"], "SH", [], "", [], "Remaining Runes, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
             QuickUI([0.0, "Remaining Waystones", "waystones;exhide"], "SH", [], "", [], "Remaining Maps, which are not matched by any of the above rules, probably due to unmet filtering requirements.");

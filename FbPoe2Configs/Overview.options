@@ -27,9 +27,9 @@ StyleSection("MID-TIER CURRENCY", "Rather common, but unless sold in bulk, not t
 }
 
 StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act as trade goods for players. Chaos Orbs and Divine Orbs are pretty much the standard way to pay for most trades. These are desired drops and it's almost always recommended to pick them up.") {
-    Search S0("skip", "Greater Jeweller's Orb") { BaseType "Greater Jeweller's Orb"; }
     Search S0("skip", "Annulment Orbs") { BaseType "Orb of Annulment"; }
     Search S0("skip", "Ye Trusty Chaos Orbs") { BaseType "Chaos Orb"; }
+    Search S0("skip", "Greater Jeweller's Orb") { BaseType "Greater Jeweller's Orb"; }
     Search S0("skip", "Exalted Orbs") { BaseType "Exalted Orb"; }
     SS_Item("S0");
 
@@ -75,8 +75,8 @@ StyleSection("SOMETIMES LUCKY", "The blue or purple map icons and beams signaliz
 
 StyleSection("Tablets", "Tablets and fragments have their own tierlist!") {
     Search S0("skip", "Breach Splinter 2") { BaseType "Cowardly Fate"; }
-    Search S0("skip", "Breach Splinter 5") { BaseType "Breach Precursor Tablet"; }
-    Search S0("skip", "Breach Splinter 1") { BaseType "Precursor Tablet"; }
+    Search S0("skip", "Breach Splinter 5") { BaseType "Breach Tablet"; }
+    Search S0("skip", "Breach Splinter 1") { BaseType "Irradiated Precursor Tablet"; }
 
     SS_Item("S0");
 }
