@@ -36,6 +36,16 @@ StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act 
 	SS_InfoBox(["Detailed explanation", "Items have a sound that is linked to their value-tier. All high tier currencies make the same sound. When you hear it - you know 'something dropped'. You can click on the currency preview to hear the sound <hr> They also come with a minimap-icon. The icons can be seen next to the item preview labels on FilterBlade. <hr> You can change all of these settings in the customizer screen here. To quickly jump to the settings for a certain item, right click the item label or CTRL+click the item."]);
 }
 
+StyleSection("RUNES OF ALDUR DROPS", "Many items are undiscovered (we only know the names). These come with a new highlight. Keep the filter updated frequently, until we know more!") {
+    Search S0("skip", "Annulment Orbs") { BaseType "Cryptic Key"; }
+    Search S0("skip", "Ye Trusty Chaos Orbs") { BaseType "Exceptional Verisium"; }
+    Search S0("skip", "Greater Jeweller's Orb") { BaseType "Ornate Wombgift"; }
+    Search S0("skip", "Exalted Orbs") { BaseType "Conductive Runes"; }
+    SS_Item("S0");
+
+	SS_InfoBox(["Detailed explanation", "Items have a sound that is linked to their value-tier. All high tier currencies make the same sound. When you hear it - you know 'something dropped'. You can click on the currency preview to hear the sound <hr> They also come with a minimap-icon. The icons can be seen next to the item preview labels on FilterBlade. <hr> You can change all of these settings in the customizer screen here. To quickly jump to the settings for a certain item, right click the item label or CTRL+click the item."]);
+}
+
 StyleSection("Gold", "You can find gold all throughout the game. Use it to shop at vendors or respec your skill tree.") {
     Search S0("skip") { BaseType "Gold"; StackSize 30; AreaLevel 70; }
     Search S0("skip") { BaseType "Gold"; StackSize 100; AreaLevel 70; }

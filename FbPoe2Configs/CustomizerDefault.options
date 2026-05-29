@@ -309,7 +309,7 @@ Chapter("chapter") {
     Section("Current league: Return of the Ancients", "VoicesPoE2") {
 
         Description("Most of the new currencies, omens and augments have been added to the 'general' tierlists, however with these, we know so little, I've put into their own list. Will be updated once we have data");
-        Section("Undiscovered Items + Wombgifts") {
+        Section("Wombgifts, Ward-Gems, Undiscovered Items") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
             Function XenoFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["G:xeno", "O"]); }
             TierListToolBar();
