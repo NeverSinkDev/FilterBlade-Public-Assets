@@ -9,9 +9,9 @@
 // =============================================================================================================
 
 StyleSection("COMMON CURRENCIES", "Basic supplies used to perform common operations. They're not worth much, but are important nonetheless. People frequently hide them or buy them in bulk.<hr> Hover over the scroll above for more information! ( recommended for new players )") {
-    Search S0("skip", "High Tier Supplies") { BaseType "Orb of Transmutation"; StackSize 1; AreaLevel 70; }
-    Search S0("skip", "Low Tier Supplies") { BaseType "Orb of Augmentation"; StackSize 1; AreaLevel 70; }
-    Search S0("skip", "Wisdom Scrolls") { BaseType "Scroll of Wisdom"; StackSize 1; AreaLevel 70; }
+    Search S0("skip", "High Tier Supplies") { BaseType == "Orb of Transmutation"; StackSize 1; AreaLevel 70; }
+    Search S0("skip", "Low Tier Supplies") { BaseType == "Orb of Augmentation"; StackSize 1; AreaLevel 70; }
+    Search S0("skip", "Wisdom Scrolls") { BaseType == "Scroll of Wisdom"; StackSize 1; AreaLevel 70; }
     SS_Item("S0");
 
     SS_InfoBox(["Detailed explanation", "Basic supplies for early game crafting operations. Wisdoms can be purchased from vendors for 25 gold each, so they're hidden in the endgame<hr> The filter has individual rules for the campaign section of the game. <hr> Every time you pick up an item, you have to stop. Optimized characters are better off focusing on the good drops and ignoring the plethora of cheap drops. As your character becomes more optimized, increasing the strictness level of the filter is advised. <hr>"]);
