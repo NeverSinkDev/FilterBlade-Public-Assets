@@ -320,7 +320,7 @@ Chapter("chapter") {
 
         Section("New items") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function XenoFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Gear", "O"]); }
+            Function XenoFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["G:xeno", "O"]); }
             TierListToolBar();
 
             XenoFunc([0.0, "New items, S Tier", "xenotiering;s"], "SH", "S Tier");
@@ -336,7 +336,7 @@ Chapter("chapter") {
 
             // hide tier
             Conditional("?XenoNewTiersHidden") { }
-            ElementAdder_Tier("?XenoNewTiersHidden", null, true, "Gear", "OH");
+            ElementAdder_Tier("?XenoNewTiersHidden", null, true, "G:xeno", "OH");
         }
     }
 

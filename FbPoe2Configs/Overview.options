@@ -76,7 +76,7 @@ StyleSection("SOMETIMES LUCKY", "The blue or purple map icons and beams signaliz
 StyleSection("Tablets", "Tablets and fragments have their own tierlist!") {
     Search S0("skip", "Breach Splinter 2") { BaseType "Cowardly Fate"; }
     Search S0("skip", "Breach Splinter 5") { BaseType "Breach Tablet"; }
-    Search S0("skip", "Breach Splinter 1") { BaseType "Irradiated Precursor Tablet"; }
+    Search S0("skip", "Breach Splinter 1") { BaseType "Irradiated Tablet"; }
 
     SS_Item("S0");
 }
