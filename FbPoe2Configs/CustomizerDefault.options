@@ -288,22 +288,24 @@ Chapter("chapter") {
         Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text); }
         Function GoldFuncR($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text); }
 
+        Section("Campaign Exclusive Gold Rules")
+        {
+            GoldFunc([0.0, "Gold Pile: Large (Early Acts)", "gold;stackxl1lvl"], "SH", "Campaign Gold Large Stacks Act 1-2");
+            GoldFunc([0.0, "Gold Pile: Large (Late Acts)", "gold;stackxl2lvl"], "SH", "Campaign Gold Large Stacks Act 3+");
+
+            GoldFunc([0.0, "Gold Pile: Medium (Campaign) 1", "gold;stack1lvl"], "SH", "Gold Pile: Medium (Campaign Act 1)");
+            GoldFunc([0.0, "Gold Pile: Medium (Campaign) 2", "gold;stack2lvl"], "SH", "Gold Pile: Medium (Campaign Act 2-3)");
+            GoldFunc([0.0, "Gold Pile: Medium (Campaign)", "gold;stack3lvl"], "SH", "Gold Pile: Medium (Campaign Acts 4+)");
+        }
+
         GoldFunc([0.0, "Gold Pile: Gigantic", "gold;stack3"], "SH");
         GoldFunc([0.0, "Gold Pile: Large", "gold;stack2"], "SH");
         GoldFunc([0.0, "Gold Pile: Medium (Endgame)", "gold;stack1"], "SH");
         GoldFuncR([0.1, "Gold Pile: Small", "gold;any"], "SH", "Gold Pile: Remaining");
 
-        GoldFunc([0.0, "Gold Pile: Medium (Campaign) 1", "gold;stack1lvl"], "SH", "Gold Pile: Medium (Campaign Act 1)");
-        GoldFunc([0.0, "Gold Pile: Medium (Campaign) 2", "gold;stack2lvl"], "SH", "Gold Pile: Medium (Campaign Act 2-3)");
-        GoldFunc([0.0, "Gold Pile: Medium (Campaign)", "gold;stack3lvl"], "SH", "Gold Pile: Medium (Campaign Acts 4+)");
-
         // new tiers
         Conditional("?GoldNewTier") { Show; BaseType == "Gold"; StackSize >= 1337; SetTextColor 200 200 0; SetBorderColor 200 200 0; }
         ElementAdder_Tier("?GoldNewTier", "GoldFunc");
-
-        // TODO!!!!
-        GoldFunc([0.0, "todo new entry needs name", "gold;stackxl1lvl"], "SH", "");
-        GoldFunc([0.0, "todo new entry needs name", "gold;stackxl2lvl"], "SH", "Campaign Gold,");
     }
 
     Section("Current league: Return of the Ancients", "VoicesPoE2") {
