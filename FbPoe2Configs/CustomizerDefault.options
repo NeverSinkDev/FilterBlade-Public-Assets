@@ -308,17 +308,8 @@ Chapter("chapter") {
 
     Section("Current league: Return of the Ancients", "VoicesPoE2") {
 
-        QuickUI([0.0, "Legacies", "legacytemp;any"], "SH", []); // todo??
-        QuickUI([0.0, "Artifact-Currency", "currency;artifactlike"], "SH", []); // todo!
-
-        Section("Verisium") {
-            QuickUI([0.0, "Verisium, massive stack", "verisium;massive"], "SH", ["StackSize"]);
-            QuickUI([0.0, "Verisium, huge stack", "verisium;huge"], "SH", ["StackSize"]);
-            QuickUI([0.0, "Verisium, large stack", "verisium;large"], "SH", ["StackSize"]);
-            QuickUI([0.0, "Verisium", "verisium;any"], "SH", ["StackSize"]);
-        }
-
-        Section("New items") {
+        Description("Most of the new currencies, omens and augments have been added to the 'general' tierlists, however with these, we know so little, I've put into their own list. Will be updated once we have data");
+        Section("Undiscovered Items + Wombgifts") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
             Function XenoFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["G:xeno", "O"]); }
             TierListToolBar();
@@ -338,6 +329,28 @@ Chapter("chapter") {
             Conditional("?XenoNewTiersHidden") { }
             ElementAdder_Tier("?XenoNewTiersHidden", null, true, "G:xeno", "OH");
         }
+
+        Section("Verisium") {
+            QuickUI([0.0, "Verisium, massive stack", "verisium;massive"], "SH", ["StackSize"]);
+            QuickUI([0.0, "Verisium, huge stack", "verisium;huge"], "SH", ["StackSize"]);
+            QuickUI([0.0, "Verisium, large stack", "verisium;large"], "SH", ["StackSize"]);
+            QuickUI([0.0, "Verisium", "verisium;any"], "SH", ["StackSize"]);
+        }
+
+        Section ("Breach Crafting")
+        {
+            QuickUI([0.0, "Pseudo crafts 1", "exoticbases;pseudocrafts1"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
+            QuickUI([0.0, "Pseudo crafts 2", "exoticbases;pseudocrafts2"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
+        }
+
+        Section ("MiscRules (safeguards, just in case)")
+        {
+            Description("Unused and empty, kept here, just in case.");
+            QuickUI([0.0, "Artifact-Currency", "currency;artifactlike"], "SH", []);
+            Description("These augments likely don't drop, but we have a safety rule just in case.");
+            QuickUI([0.0, "Unique-Extracted Augments", "legacytemp;any"], "SH", []);
+        }
+
     }
 
     Section("Highlight specific bases", "Firefly") {
@@ -1320,13 +1333,9 @@ Chapter() {
 
         Section("Exotic Bases") {
             QuickUI([0.0, "Unhidable Event Outcome items", "special->alwaysshow;any"], "S", []);
-            QuickUI([0.0, "Non-Unique Diamonds", "exoticbases;superexoticbases"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
+            QuickUI([0.0, "Non-Unique Diamonds", "exoticbases;superexoticbases"], "SH", ["ItemLevel"], "Unique Only Bases and Quest Drops", ["Gear", "OS"]);
             QuickUI([0.0, "Kalandra Bases", "exoticbases;kalandrabases"], "SH", ["ItemLevel", "Rarity"], null, ["Gear", "OS"]);
             QuickUI([0.0, "Fishing Rod", "artifact;fishingrod"], "SH", []);
-
-            // todo??
-            QuickUI([0.0, "Pseudo crafts 1", "exoticbases;pseudocrafts1"], "SH", [], null, ["Gear", "OS"]);
-            QuickUI([0.0, "Pseudo crafts 2", "exoticbases;pseudocrafts2"], "SH", [], null, ["Gear", "OS"]);
         }
 
         Section("Quest Items") {
