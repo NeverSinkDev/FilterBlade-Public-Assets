@@ -308,10 +308,8 @@ Chapter("chapter") {
 
     Section("Current league: Return of the Ancients", "VoicesPoE2") {
 
-        QuickUI([0.0, "todo new entry needs name", "exoticbases;pseudocrafts1"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "exoticbases;pseudocrafts2"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "legacytemp;any"], "SH", []); // todo
-        QuickUI([0.0, "todo new entry needs name", "currency;artifactlike"], "SH", []); // todo
+        QuickUI([0.0, "Legacies", "legacytemp;any"], "SH", []); // todo??
+        QuickUI([0.0, "Artifact-Currency", "currency;artifactlike"], "SH", []); // todo!
 
         Section("Verisium") {
             QuickUI([0.0, "Verisium, massive stack", "verisium;massive"], "SH", ["StackSize"]);
@@ -1325,6 +1323,10 @@ Chapter() {
             QuickUI([0.0, "Non-Unique Diamonds", "exoticbases;superexoticbases"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
             QuickUI([0.0, "Kalandra Bases", "exoticbases;kalandrabases"], "SH", ["ItemLevel", "Rarity"], null, ["Gear", "OS"]);
             QuickUI([0.0, "Fishing Rod", "artifact;fishingrod"], "SH", []);
+
+            // todo??
+            QuickUI([0.0, "Pseudo crafts 1", "exoticbases;pseudocrafts1"], "SH", [], null, ["Gear", "OS"]);
+            QuickUI([0.0, "Pseudo crafts 2", "exoticbases;pseudocrafts2"], "SH", [], null, ["Gear", "OS"]);
         }
 
         Section("Quest Items") {
