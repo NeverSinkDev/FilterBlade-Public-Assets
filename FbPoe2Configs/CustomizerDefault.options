@@ -306,7 +306,7 @@ Chapter("chapter") {
         GoldFunc([0.0, "todo new entry needs name", "gold;stackxl2lvl"], "SH", "Campaign Gold,");
     }
 
-    Section("Current WIP") {
+    Section("Current league: Return of the Ancients", "VoicesPoE2") {
 
         QuickUI([0.0, "todo new entry needs name", "exoticbases;pseudocrafts1"], "SH", []); // todo
         QuickUI([0.0, "todo new entry needs name", "exoticbases;pseudocrafts2"], "SH", []); // todo
@@ -340,12 +340,6 @@ Chapter("chapter") {
             Conditional("?XenoNewTiersHidden") { }
             ElementAdder_Tier("?XenoNewTiersHidden", null, true, "Gear", "OH");
         }
-    }
-
-    Section("Current League: Fate of the Vaal") {
-        Title("Twice-Corruption Outcomes");
-
-        Description("All other items have been integrated into their respective tierlists.");
     }
 
     Section("Highlight specific bases", "Firefly") {
@@ -1165,8 +1159,8 @@ Chapter() {
             Title("Other Magic/Normal Rules");
             Description("If any of the rules above are disabled, magic items will be matched by these 2 rules:");
 
-            QuickUI([0.0, "Campaign First Areas Magic", "leveling->firstlevelsnormal;any"], "SH", ["AreaLevel", "Rarity"], "Magic Items Arealevel 1-3");
-            QuickUI([0.0, "Campaign First Areas Normal", "leveling->firstlevelsmagic;any"], "SH", ["AreaLevel", "Rarity"], "Normal Items Arealevel 1-3");
+            QuickUI([1.0, "Campaign First Areas Normal", "leveling->firstlevelsnormal;any"], "SH", ["AreaLevel", "Rarity"], "Normal Items Arealevel 1-3");
+            QuickUI([1.0, "Campaign First Areas Magic", "leveling->firstlevelsmagic;any"], "SH", ["AreaLevel", "Rarity"], "Magic Items Arealevel 1-3");
 
             QuickUI([0.0, "Campaign Magic, Act 1", "leveling->magic->remaining;act1"], "SH", ["AreaLevel"], "Magic Items Act 1");
             QuickUI([0.0, "Campaign Magic, Act 2", "leveling->magic->remaining;act2"], "SH", ["AreaLevel"], "Magic Items Act 2");
