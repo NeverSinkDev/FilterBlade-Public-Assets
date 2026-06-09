@@ -30,7 +30,7 @@ Chapter("chapter") {
         CurrencyList([3.0, "Supplies 2: Magic crafting and higher shards", "currency;supplymagic"], "SH", "Supplies: Magic & Shards");
         CurrencyList([3.0, "Supplies 3: Scrolls and low shards", "currency;supplieslow"], "SH", "Supplies: Scrolls");
 
-        Conditional("?CurrencyNewTiers") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+        Conditional("?CurrencyNewTiers") { Show; Class == "Stackable Currency" "Incubators"; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
         ElementAdder_Tier("?CurrencyNewTiers", "CurrencyList");
 
         Conditional("?CurrencyNewTiersHidden") { }
