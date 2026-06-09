@@ -1333,6 +1333,8 @@ Chapter() {
         }
 
         Section("Unique Special Cases") {
+            Description("Expedition has a secret recipe tha tallows converting 60 unique rings into a valuable unique armor: 'Loreweave'. This keeps rings shown.");
+            QuickUI([0.0, "Loreweave Rings", "uniques;loreweaverecipe"], "SD");
             QuickUI([0.0, "Unique Exception: Sekhema Ring", "uniques;sekhemaring"], "SH");
             QuickUI([0.0, "Corrupted Uniques", "uniques;corrupteduniques"], "SH");
             QuickUI([0.0, "twice corrupted uniques", "uniques;twicecorrupteduniques"], "SH", []);
