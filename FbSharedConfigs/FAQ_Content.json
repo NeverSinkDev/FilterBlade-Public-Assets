@@ -13,13 +13,13 @@
     {
       "question": "What's the difference between NeverSink and FilterBlade?",
       "answer": "They're two different things. NeverSink's filter is the actual loot filter: a set of rules that highlights valuable items and hides the clutter. You can follow it in-game or grab it from GitHub.<br><br>FilterBlade (<a target='_blank' href='https://www.filterblade.xyz'>filterblade.xyz</a>) is the free website where you customize that filter. You can pick a strictness, change the styles, sounds and colors, retier individual items, then sync or download your own version. So NeverSink is the filter and FilterBlade is where you make it your own.",
-      "tags": "Onboarding difference between neversink filterblade what is who relationship filter website tool customize versus vs",
+      "tags": "Onboarding difference between neversink filterblade what is who relationship filter website tool customize versus vs livecycling",
       "group": "Basics"
     },
     {
       "question": "How do I best get NeverSink's item filter?",
       "answer": "If you're new, just follow my filter in-game from the ladder (<a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower'>PoE1</a> / <a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower/type/PoE2'>PoE2</a>). It's the simplest route and it auto-updates every time you restart the game.<br><br>If you want to customize things, use <a target='_blank' href='https://www.filterblade.xyz'>FilterBlade</a> to set your own strictness, styles, sounds and per-item edits. Both use the same base filter, so you can start by following and switch over to FilterBlade whenever you like.",
-      "tags": "Onboarding download get install obtain start begin follow copy ladder beginner experienced how do i",
+      "tags": "Onboarding download get install obtain start begin follow copy ladder beginner experienced how do i livecycling",
       "group": "Basics"
     },
     {
@@ -41,60 +41,6 @@
       "group": "Troubleshooting"
     },
     {
-      "question": "What's the difference between NeverSink and FilterBlade?",
-      "answer": "They're two different things. NeverSink's filter is the actual loot filter: a set of rules that highlights valuable items and hides the clutter. You can follow it in-game or grab it from GitHub.<br><br>FilterBlade (<a target='_blank' href='https://www.filterblade.xyz'>filterblade.xyz</a>) is the free website where you customize that filter. You can pick a strictness, change the styles, sounds and colors, retier individual items, then sync or download your own version. So NeverSink is the filter and FilterBlade is where you make it your own.",
-      "tags": "",
-      "group": "Essentials"
-    },
-    {
-      "question": "How do I best get NeverSink's item filter?",
-      "answer": "If you're new, just follow my filter in-game from the ladder (<a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower'>PoE1</a> / <a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower/type/PoE2'>PoE2</a>). It's the simplest route and it auto-updates every time you restart the game.<br><br>If you want to customize things, use <a target='_blank' href='https://www.filterblade.xyz'>FilterBlade</a> to set your own strictness, styles, sounds and per-item edits. Both use the same base filter, so you can start by following and switch over to FilterBlade whenever you like.",
-      "tags": "",
-      "group": "Essentials"
-    },
-    {
-      "question": "How do I update? Is it auto-updated?",
-      "answer": "It depends on how you use it.<br><br>If you follow my filter on the ladder (<a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower'>PoE1</a> / <a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower/type/PoE2'>PoE2</a>), it's auto-updated. You get the latest version every time you restart the game, with no manual steps. This covers my base filters (7 for PoE2, 14 for PoE1), which are refreshed every 4 hours.<br><br>If you customized your filter on FilterBlade, just load it and re-sync or re-download. FilterBlade pulls the latest base, applies the current economy tiering and merges your changes on top. Do this every few days, or let the <a target='_blank' href='https://www.patreon.com/Neversink/membership'>Patreon auto-updater</a> handle it on our servers for you.<br><br>Note that downloaded filter files and GitHub versions are never auto-updated, you have to re-download those manually.<br><br>Your own changes always have priority. If you retier an item and I change it later, your version is kept when you reload, and new or renamed items are added and migrated automatically. If you want to freeze an entire tierlist, use the 'LOCK' tool.",
-      "tags": "",
-      "group": "Essentials"
-    },
-    {
-      "question": "What's included in the auto-updates?",
-      "answer": "All of the tierlists: currency, uniques, gems, fragments and 20+ others, plus the Crafting Bases. The economy updates run through a bunch of safeguards and special rules that filter out market manipulation, bugs and noise, so the tiering stays clean and reliable.",
-      "tags": "",
-      "group": "Essentials"
-    },
-    {
-      "question": "What about consoles?",
-      "answer": "Consoles work too, mostly the same as on PC: follow on the ladder (<a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower'>PoE1</a> / <a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower/type/PoE2'>PoE2</a>) or Sync on FilterBlade. There are two differences though: you have to use Sync and not Download, and you can't use CustomSounds, since those have to be placed into the game folder, which consoles don't allow.<br><br>Also keep in mind that GGG releases console updates about a week after PC. Just after a league starts the PC version can be ahead, so grabbing a filter in that gap might cause a version mismatch. If that happens, just wait for the console update.",
-      "tags": "",
-      "group": "Essentials"
-    },
-    {
-      "question": "How often should I update my filter?",
-      "answer": "During the first week of a league the economy moves fast, so updating daily is a good idea. After that, weekly is plenty as long as you're actively playing. If you follow on the ladder or use the Patreon auto-updater this happens automatically. Only downloaded or manually-synced filters need you to re-download or re-sync them yourself.",
-      "tags": "",
-      "group": "Essentials"
-    },
-    {
-      "question": "Is the filter up-to-date? What about new leagues?",
-      "answer": "Yes, the live filters are always kept up-to-date. The economy tiering refreshes every 4 hours and I push base updates regularly: every couple of days early in a league, then every few weeks later on.<br><br>For new leagues, the big base update goes live the day before launch (a few hours before). We use that window to refine it, and the new version wouldn't run in the old league anyway. Once the new version is live, just load your filter on FilterBlade to convert it over.",
-      "tags": "",
-      "group": "Essentials"
-    },
-    {
-      "question": "Economy vs Stable: which should I use?",
-      "answer": "The Economy (Eco) filter tracks the live economy. Its tiering for currency, uniques, fragments, gems and 20+ other lists refreshes every 4 hours, and that's what most players want. The Stable filter ignores economy updates and only changes a couple of times per league, which makes it a good choice for SSF or if you simply want a fixed, predictable filter that doesn't move around on you.<br><br>So for most people Eco is the way to go, while Stable is great for SSF. Either way, remember to load and re-download or re-sync to get the changes in-game.",
-      "tags": "",
-      "group": "Essentials"
-    },
-    {
-      "question": "How can I support the project/development?",
-      "answer": "Consider turning ad-block off. We're only showing minimal ads and have disabled all the risky categories.<br>You can also subscribe on <a href='https://www.patreon.com/Neversink/membership' target='_blank'>Patreon</a> and also receive the FilterBlade <a href='https://www.youtube.com/watch?v=i8RJx0s0zsA' target='_blank'>auto-updater</a> access!<br>If you prefer, we also have a PayPal: <form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_blank\" style=\"display: inline-block; vertical-align: middle; height: 35px\">\n                        <input type=\"hidden\" name=\"cmd\" value=\"_donations\" />\n                        <input type=\"hidden\" name=\"business\" value=\"FilterBladeContact@gmail.com\" />\n                        <input type=\"hidden\" name=\"item_name\" value=\"Support the FilterBlade Dev Team\" />\n                        <input type=\"hidden\" name=\"currency_code\" value=\"EUR\" />\n                        <input type=\"image\" src=\"https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif\" border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\" style=\"border: none; width: 90px; background: #0e0e0e\" />\n                        <img alt=\"\" border=\"0\" src=\"https://www.paypal.com/en_DE/i/scr/pixel.gif\" width=\"1\" height=\"1\" />\n                    </form>",
-      "tags": "",
-      "group": "Essentials"
-    },
-    {
       "question": "Do I have to re-customize my filter every league/time I visit the website?",
       "answer": "No! After customizing your filter, save it using the FilterBlade save & load feature. Simply load your save and if there's a new version, you will get the updated filter, with all your changes merged into it. You can read more in the My Filters screen.",
       "tags": "update apply changes keep customization don't redo dont have to redo everything lose all lose everything lose changes lose customization new version league",
@@ -103,25 +49,25 @@
     {
       "question": "How do I update? Is it auto-updated?",
       "answer": "It depends on how you use it.<br><br>If you follow my filter on the ladder (<a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower'>PoE1</a> / <a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower/type/PoE2'>PoE2</a>), it's auto-updated. You get the latest version every time you restart the game, with no manual steps. This covers my base filters (7 for PoE2, 14 for PoE1), which are refreshed every 4 hours.<br><br>If you customized your filter on FilterBlade, just load it and re-sync or re-download. FilterBlade pulls the latest base, applies the current economy tiering and merges your changes on top. Do this every few days, or let the <a target='_blank' href='https://www.patreon.com/Neversink/membership'>Patreon auto-updater</a> handle it on our servers for you.<br><br>Note that downloaded filter files and GitHub versions are never auto-updated, you have to re-download those manually.<br><br>Your own changes always have priority. If you retier an item and I change it later, your version is kept when you reload, and new or renamed items are added and migrated automatically. If you want to freeze an entire tierlist, use the 'LOCK' tool.",
-      "tags": "Onboarding update auto autoupdate ladder follow resync redownload sync export merge changes keep custom edits patreon autoupdater lock 4 hours how do i",
+      "tags": "Onboarding update auto autoupdate ladder follow resync redownload sync export merge changes keep custom edits patreon autoupdater lock 4 hours how do i livecycling",
       "group": "Updates"
     },
     {
       "question": "What's included in the auto-updates?",
       "answer": "All of the tierlists: currency, uniques, gems, fragments and 20+ others, plus the Crafting Bases. The economy updates run through a bunch of safeguards and special rules that filter out market manipulation, bugs and noise, so the tiering stays clean and reliable.",
-      "tags": "Onboarding auto autoupdate economy included contents what tierlist currency uniques gems crafting bases safeguards manipulation noise",
+      "tags": "Onboarding auto autoupdate economy included contents what tierlist currency uniques gems crafting bases safeguards manipulation noise livecycling",
       "group": "Updates"
     },
     {
       "question": "How often should I update my filter?",
       "answer": "During the first week of a league the economy moves fast, so updating daily is a good idea. After that, weekly is plenty as long as you're actively playing. If you follow on the ladder or use the Patreon auto-updater this happens automatically. Only downloaded or manually-synced filters need you to re-download or re-sync them yourself.",
-      "tags": "Onboarding how often frequency daily weekly when refresh manually renew league economy",
+      "tags": "Onboarding how often frequency daily weekly when refresh manually renew league economy livecycling",
       "group": "Updates"
     },
     {
       "question": "Is the filter up-to-date? What about new leagues?",
       "answer": "Yes, the live filters are always kept up-to-date. The economy tiering refreshes every 4 hours and I push base updates regularly: every couple of days early in a league, then every few weeks later on.<br><br>For new leagues, the big base update goes live the day before launch (a few hours before). We use that window to refine it, and the new version wouldn't run in the old league anyway. Once the new version is live, just load your filter on FilterBlade to convert it over.",
-      "tags": "Onboarding up to date current new league launch start release when day before patch base update timing fresh latest always",
+      "tags": "Onboarding up to date current new league launch start release when day before patch base update timing fresh latest always livecycling",
       "group": "Updates"
     },
     {
@@ -133,7 +79,7 @@
     {
       "question": "Economy vs Stable: which should I use?",
       "answer": "The Economy (Eco) filter tracks the live economy. Its tiering for currency, uniques, fragments, gems and 20+ other lists refreshes every 4 hours, and that's what most players want. The Stable filter ignores economy updates and only changes a couple of times per league, which makes it a good choice for SSF or if you simply want a fixed, predictable filter that doesn't move around on you.<br><br>So for most people Eco is the way to go, while Stable is great for SSF. Either way, remember to load and re-download or re-sync to get the changes in-game.",
-      "tags": "Onboarding economy eco stable difference which choose recommended frozen fixed tiering github sc hc softcore hardcore ssf solo self found",
+      "tags": "Onboarding economy eco stable difference which choose recommended frozen fixed tiering github sc hc softcore hardcore ssf solo self found livecycling",
       "group": "Tierlists"
     },
     {
@@ -271,7 +217,7 @@
     {
       "question": "How can I support the project/development?",
       "answer": "Consider turning ad-block off. We're only showing minimal ads and have disabled all the risky categories.<br>You can also subscribe on <a href='https://www.patreon.com/Neversink/membership' target='_blank'>Patreon</a> and also receive the FilterBlade <a href='https://www.youtube.com/watch?v=i8RJx0s0zsA' target='_blank'>auto-updater</a> access!<br>If you prefer, we also have a PayPal: <form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" target=\"_blank\" style=\"display: inline-block; vertical-align: middle; height: 35px\">\n                        <input type=\"hidden\" name=\"cmd\" value=\"_donations\" />\n                        <input type=\"hidden\" name=\"business\" value=\"FilterBladeContact@gmail.com\" />\n                        <input type=\"hidden\" name=\"item_name\" value=\"Support the FilterBlade Dev Team\" />\n                        <input type=\"hidden\" name=\"currency_code\" value=\"EUR\" />\n                        <input type=\"image\" src=\"https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif\" border=\"0\" name=\"submit\" alt=\"PayPal - The safer, easier way to pay online!\" style=\"border: none; width: 90px; background: #0e0e0e\" />\n                        <img alt=\"\" border=\"0\" src=\"https://www.paypal.com/en_DE/i/scr/pixel.gif\" width=\"1\" height=\"1\" />\n                    </form>",
-      "tags": "Onboarding autoupdate auto automatically automated economy update support donate patreon paypal help",
+      "tags": "Onboarding autoupdate auto automatically automated economy update support donate patreon paypal help livecycling",
       "group": "Misc."
     },
     {
@@ -409,7 +355,7 @@
     {
       "question": "What about consoles?",
       "answer": "Consoles work too, mostly the same as on PC: follow on the ladder (<a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower'>PoE1</a> / <a target='_blank' href='https://www.pathofexile.com/item-filter/ladder/follower/type/PoE2'>PoE2</a>) or Sync on FilterBlade. There are two differences though: you have to use Sync and not Download, and you can't use CustomSounds, since those have to be placed into the game folder, which consoles don't allow.<br><br>Also keep in mind that GGG releases console updates about a week after PC. Just after a league starts the PC version can be ahead, so grabbing a filter in that gap might cause a version mismatch. If that happens, just wait for the console update.",
-      "tags": "Onboarding console konsole xbox playstation sony ps5 ps4 nvidia handheld download update sync follow sounds wait",
+      "tags": "Onboarding console konsole xbox playstation sony ps5 ps4 nvidia handheld download update sync follow sounds wait livecycling",
       "group": "Import, Export, Save, Load, Download"
     },
     {
