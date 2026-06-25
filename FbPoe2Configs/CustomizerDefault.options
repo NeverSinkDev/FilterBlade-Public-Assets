@@ -347,8 +347,6 @@ Chapter("chapter") {
 
         Section ("MiscRules (safeguards, just in case)")
         {
-            Description("Unused and empty, kept here, just in case.");
-            QuickUI([0.0, "Artifact-Currency", "currency;artifactlike"], "SH", []);
             Description("These augments likely don't drop, but we have a safety rule just in case.");
             QuickUI([0.0, "Unique-Extracted Augments", "legacytemp;any"], "SH", []);
         }
@@ -504,7 +502,11 @@ Chapter() {
 
         QuickUI([0.0, "Eco-Based Lvl82 Crafting (high)", "endgame->normalcraft->economy;group1t1"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL82 bases (High Tier)", ["Gear", "OS"]);
         QuickUI([0.0, "Eco-Based Lvl82 Crafting (low)", "endgame->normalcraft->economy;group1t2"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL82 bases (Common Tier)", ["Gear", "OS"]);
-        QuickUI([0.0, "Eco-Based Lvl79 Crafting", "endgame->normalcraft->economy;group2t2"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL79 bases", ["Gear", "OS"]);
+
+        QuickUI([0.0, "Eco-Based Lvl81 Crafting (low)", "endgame->normalcraft->economy;group2t1"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL81 bases (High Tier)", ["Gear", "OS"]);
+        QuickUI([0.0, "Eco-Based Lvl81 Crafting (low)", "endgame->normalcraft->economy;group2t2"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL81 bases (Common Tier)", ["Gear", "OS"]);
+
+        QuickUI([0.0, "Eco-Based Lvl79 Crafting", "endgame->normalcraft->economy;group3t2"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL79 bases", ["Gear", "OS"]);
     }
 
     Section("Rings, Amulets, Belts", "Amethyst_Ring_inventory_icon") {

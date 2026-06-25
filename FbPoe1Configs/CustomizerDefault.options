@@ -445,26 +445,6 @@ Chapter() {
             Conditional("?RunegraftsNewTiersHidden") { }
             ElementAdder_Tier("?RunegraftsNewTiersHidden", null, true, "B:Runegraft of", "OH");
         }
-
-        Section("Tattoos", "HonouredTattoooftheWiseMan", "E") {
-            Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
-
-            TierListToolBar("Tattoo");
-
-            Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
-            TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH", "S Tier");
-            TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH", "A Tier");
-            TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH", "B Tier");
-            TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH", "Others");
-
-            // new tiers
-            Conditional("?AncTrialTattooTier") { }
-            ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
-
-            // hide tier
-            Conditional("?AncTrialTattooHidden") { }
-            ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
-        }
     }
 
     Section("Unique items", "RewardUniques.webp", "E") {
@@ -689,7 +669,37 @@ Section("Current League: Mirage", "Mirage_CoinofRestoration") {
     QuickUI([0.0, "ApexTierBasetypesAny", "exoticbases;ecotinkbases"], "SH", ["ItemLevel"], "Iron Flask", []);
 }
 
-    Section("Highlight specific bases", "Firefly") {
+//===================================================================================================
+// CURRENT EVENT
+//===================================================================================================
+
+Section("Current Event: Phrecia+Ancestors", "HonouredTattoooftheWiseMan", "E") {
+        Section("Tattoos", "HonouredTattoooftheWiseMan", "E") {
+            Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
+
+            TierListToolBar("Tattoo");
+
+            Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
+            TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH", "S Tier");
+            TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH", "A Tier");
+            TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH", "B Tier");
+            TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH", "Others");
+
+            // new tiers
+            Conditional("?AncTrialTattooTier") { }
+            ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
+
+            // hide tier
+            Conditional("?AncTrialTattooHidden") { }
+            ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
+        }
+
+        Section("Silver Coins", "Silver Coin") {
+            QuickUI([0.0, "SilverCoinEvent", "currency->leagueexclusive;silvercoin"], "SH", [], "Silver Coins for the Trial", []);
+        }
+}
+
+Section("Highlight specific bases", "Firefly") {
 
         Description("Quickly highlight bases by adding a custom rule! If you need more power and options, there's a lot more custom rules lower in the customizer");
 
@@ -701,7 +711,6 @@ Section("Current League: Mirage", "Mirage_CoinofRestoration") {
         Conditional("?CQuickEndgameCustomRule1", ["c4.rare.trinkets.all"]) { Show; BaseType == "Kinetic Wand"; SetBorderColor 200 0 0; SetBackgroundColor 60 0 0; SetFontSize 40; ItemLevel >= 68; Rarity Normal; Corrupted False; Mirrored False; }
         ElementAdder_Tier("?CQuickEndgameCustomRule1", "CondShowBaseQuick");
     }
-
 }
 
 //===================================================================================================
