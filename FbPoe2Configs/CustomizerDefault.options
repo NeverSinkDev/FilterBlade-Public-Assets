@@ -172,8 +172,8 @@ Section("Basics", "Gold_inventory_icon") {
         }
 
         Section("CAMPAIGN: Socketables", "Iron_Rune_inventory_icon") {
-            QuickUI([0.0, "Socketable during leveling1", "sockets->general;socketleveling1"], "SD", ["AreaLevel"], "Campaign Runes: Resists&Damage", ["C:Augment", "OS"]);
-            QuickUI([0.0, "Socketable during leveling2", "sockets->general;socketleveling2"], "SD", ["AreaLevel"], "Campaign Runes: Other", ["C:Augment", "OS"]);
+            QuickUI([0.0, "Socketable during leveling1", "sockets->general;socketleveling1"], "SD", ["AreaLevel"], "Resists & Damage", ["C:Augment", "OS"]);
+            QuickUI([0.0, "Socketable during leveling2", "sockets->general;socketleveling2"], "SD", ["AreaLevel"], "Other", ["C:Augment", "OS"]);
         }
 
         Section("Emotions (Delirium)", "distilledfear.webp", "E") {
@@ -1195,7 +1195,7 @@ Section("Campaign", "Shabby_Hood_inventory_icon") {
         }
     }
 
-    Section("Campaign Flasks & Charms", "Thawing_Charm_inventory_icon") {
+    Section("Flasks & Charms", "Thawing_Charm_inventory_icon") {
         Section("Flasks", "flasklife09.webp") {
             Description("The following two rules combine 30 different rules that will highlight the best available flasks during your Campaign progress.");
 

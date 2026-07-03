@@ -70,24 +70,24 @@ DefensiveSearch S10(1, "skip", "hidelayer;raresendgame"){ DropLevel 1; ItemLevel
 
         Section("Large Stacks", "Chaos", "E") {
             Description("These tiers are value based. A single Chaos Orb is in 'C Tier', 3 of them will be in 'B Tier'. Use the 'Custom Stacked Tiering Mode' to auto-Manage this list");
-            CurrencyStackList([0.0, "Stacked Currency - T1, Huge", "currency->stackedsix;t1"], "SD", "S Tier (Large Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T2, Huge", "currency->stackedsix;t2"], "SD", "A Tier (Large Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T3, Huge", "currency->stackedsix;t3"], "SD", "B Tier (Large Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T4, Huge", "currency->stackedsix;t4"], "SD", "C Tier (Large Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T5, Huge", "currency->stackedsix;t5"], "SD", "D Tier (Large Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T6, Huge", "currency->stackedsix;t6"], "SD", "E+ Tier (Large Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T7, Huge", "currency->stackedsix;t7"], "SD", "E- Tier (Large Stack)");
+            CurrencyStackList([0.0, "Stacked Currency - T1, Huge", "currency->stackedsix;t1"], "SD", "S Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T2, Huge", "currency->stackedsix;t2"], "SD", "A Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T3, Huge", "currency->stackedsix;t3"], "SD", "B Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T4, Huge", "currency->stackedsix;t4"], "SD", "C Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T5, Huge", "currency->stackedsix;t5"], "SD", "D Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T6, Huge", "currency->stackedsix;t6"], "SD", "E+ Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T7, Huge", "currency->stackedsix;t7"], "SD", "E- Tier");
         }
 
         Section("Small Stacks", "GCP", "E") {
             Description("These tiers are value based. A single Chaos Orb is in 'C Tier', 3 of them will be in 'B Tier'. Use the 'Custom Stacked Tiering Mode' to auto-Manage this list");
-            CurrencyStackList([0.0, "Stacked Currency - T1, Large", "currency->stackedthree;t1"], "SD", "S Tier (Small Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T2, Large", "currency->stackedthree;t2"], "SD", "A Tier (Small Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T3, Large", "currency->stackedthree;t3"], "SD", "B Tier (Small Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T4, Large", "currency->stackedthree;t4"], "SD", "C Tier (Small Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T5, Large", "currency->stackedthree;t5"], "SD", "D Tier (Small Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T6, Large", "currency->stackedthree;t6"], "SD", "E+ Tier (Small Stack)");
-            CurrencyStackList([0.0, "Stacked Currency - T7, Large", "currency->stackedthree;t7"], "SD", "E- Tier (Small Stack)");
+            CurrencyStackList([0.0, "Stacked Currency - T1, Large", "currency->stackedthree;t1"], "SD", "S Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T2, Large", "currency->stackedthree;t2"], "SD", "A Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T3, Large", "currency->stackedthree;t3"], "SD", "B Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T4, Large", "currency->stackedthree;t4"], "SD", "C Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T5, Large", "currency->stackedthree;t5"], "SD", "D Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T6, Large", "currency->stackedthree;t6"], "SD", "E+ Tier");
+            CurrencyStackList([0.0, "Stacked Currency - T7, Large", "currency->stackedthree;t7"], "SD", "E- Tier");
         }
 
         Section("Stacked Supplies: Trans, Armour+", "Transmut") {
@@ -138,12 +138,12 @@ DefensiveSearch S10(1, "skip", "hidelayer;raresendgame"){ DropLevel 1; ItemLevel
         Section("Campaign Specific - Stacked Drops", "Transmut") {
             Function CurrencyLevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
 
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Chance", "currency->levelingstacked;t2chance"], "SD", "Campaign: Stacked Chance Orbs+");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Transmutations", "currency->levelingstacked;t3trans"], "SD", "Campaign: Stacked Trans&Alt");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Misc", "currency->levelingstacked;t4misc"], "SD", "Campaign: Stacked Misc");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign T5 Aug", "currency->levelingstacked;t5aug"], "SD", "Campaign: Stacked Augment");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Portal Scrolls", "currency->levelingstacked;portal"], "SD", "Campaign: Stacked Portals");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Wisdom Scrolls", "currency->levelingstacked;wisdom"], "SD", "Campaign: Stacked Wisdoms");
+            CurrencyLevelingStackList([0.0, "Stacked Campaign Chance", "currency->levelingstacked;t2chance"], "SD", "Stacked Chance Orbs+");
+            CurrencyLevelingStackList([0.0, "Stacked Campaign Transmutations", "currency->levelingstacked;t3trans"], "SD", "Stacked Trans&Alt");
+            CurrencyLevelingStackList([0.0, "Stacked Campaign Misc", "currency->levelingstacked;t4misc"], "SD", "Stacked Misc");
+            CurrencyLevelingStackList([0.0, "Stacked Campaign T5 Aug", "currency->levelingstacked;t5aug"], "SD", "Stacked Augment");
+            CurrencyLevelingStackList([0.0, "Stacked Campaign Portal Scrolls", "currency->levelingstacked;portal"], "SD", "Stacked Portals");
+            CurrencyLevelingStackList([0.0, "Stacked Campaign Wisdom Scrolls", "currency->levelingstacked;wisdom"], "SD", "Stacked Wisdoms");
 
             Conditional("?CurrencyLevelingStacksNewTiers") {  }
             ElementAdder_Tier("?CurrencyLevelingStacksNewTiers", "CurrencyLevelingStackList");
@@ -540,7 +540,7 @@ Section("General", "RewardEssences.webp") {
     }
 
     Section("Divination Cards", "RewardDivinationCards.webp", "E") {
-        Section("Divination Card Tierlist", "StackedDeck", "E"){
+        Section("Tierlist", "StackedDeck", "E"){
         Function DivCardList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Divination Cards", "O"]); }
 
         TierListToolBar("DivinationCard", [S5, S6], []);
@@ -688,11 +688,11 @@ Section("General", "RewardEssences.webp") {
 
         Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text); }
 
-        GoldFunc([0.0, "Settlers Gold - Huge Stack", "gold;stack3"], "SH", "Goldpile: Massive");
-        GoldFunc([0.0, "Settlers Gold - Medium Stack", "gold;stack2"], "SH", "Goldpile: Huge");
-        GoldFunc([0.0, "Settlers Gold - Small Stack", "gold;stack1"], "SH", "Goldpile: Large");
-        GoldFunc([0.0, "Settlers Gold - Tiny Stack", "gold;stacklvl1"], "SH", "Goldpile: Large (leveling only)");
-        QuickUI([1.0, "Settlers Gold - No Stack", "gold;anyother"], "SH", [], "Goldpile: Any");
+        GoldFunc([0.0, "Settlers Gold - Huge Stack", "gold;stack3"], "SH", "Massive");
+        GoldFunc([0.0, "Settlers Gold - Medium Stack", "gold;stack2"], "SH", "Huge");
+        GoldFunc([0.0, "Settlers Gold - Small Stack", "gold;stack1"], "SH", "Large");
+        GoldFunc([0.0, "Settlers Gold - Tiny Stack", "gold;stacklvl1"], "SH", "Large (leveling only)");
+        QuickUI([1.0, "Settlers Gold - No Stack", "gold;anyother"], "SH", [], "Any");
 
         // new tiers
         Conditional("?GoldNewTier") { Show; BaseType == "Gold"; StackSize >= 1337; SetTextColor 200 200 0; SetBorderColor 200 200 0; }
@@ -1110,19 +1110,19 @@ Section("Endgame - Rares", "RewardJewellery.webp") {
     Section("Decorators", "Chromatic") {
             Description("Decorators highlight specific characteristics of an item, by changing the appearance, without deciding whether it is hidden or shown.");
 
-            QuickUI([1.0, "Endgame rare deco tiny", "decorators->rareeg;tinyrares"], "SD", ["Width", "Height"], "Decorator: Tiny");
-            QuickUI([1.0, "Endgame rare deco medium 1", "decorators->rareeg;mediumrares1"], "SD", ["Width", "Height"], "Decorator: Medium (1x3)");
-            QuickUI([1.0, "Endgame rare deco medium 2", "decorators->rareeg;mediumrares2"], "SD", ["Width", "Height"], "Decorator: Medium (2x2)");
-            QuickUI([1.0, "Endgame rare deco large", "decorators->rareeg;largerares"], "SD", ["Width", "Height"], "Decorator: Large");
-            QuickUI([1.0, "Endgame rare deco ilvl 86", "decorators->rareeg;topilvl86"], "SD", ["ItemLevel"], "Decorator: ItemLevel 86");
-            QuickUI([1.0, "Endgame rare deco ilvl 85", "decorators->rareeg;topilvl85"], "SD", ["ItemLevel"], "Decorator: ItemLevel 85");
-            QuickUI([1.0, "Endgame rare deco ilvl 84", "decorators->rareeg;topilvl84"], "SD", ["ItemLevel"], "Decorator: ItemLevel 84");
-            QuickUI([1.0, "Endgame rare deco ilvl 83", "decorators->rareeg;topilvl83"], "SD", ["ItemLevel"], "Decorator: ItemLevel 83");
-            QuickUI([1.0, "Endgame rare deco ilvl 75", "decorators->rareeg;ilvl75"], "SD", ["ItemLevel"], "Decorator: ItemLevel 75");
-            QuickUI([1.0, "Endgame rare deco ilvl 68", "decorators->rareeg;ilvl68"], "SD", ["ItemLevel"], "Decorator: ItemLevel 68");
-            QuickUI([1.0, "Endgame rare deco corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted Implicit");
-            QuickUI([1.0, "Endgame rare deco corrupted", "decorators->rareeg;corruptedrares"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: Corrupted - No implicit");
-            QuickUI([1.0, "Endgame rare deco 4 links", "decorators->rareeg;fourlinkedrares"], "SD", ["Corrupted", "CorruptedMods"], "Decorator: 4 Links");
+            QuickUI([1.0, "Endgame rare deco tiny", "decorators->rareeg;tinyrares"], "SD", ["Width", "Height"], "Tiny");
+            QuickUI([1.0, "Endgame rare deco medium 1", "decorators->rareeg;mediumrares1"], "SD", ["Width", "Height"], "Medium (1x3)");
+            QuickUI([1.0, "Endgame rare deco medium 2", "decorators->rareeg;mediumrares2"], "SD", ["Width", "Height"], "Medium (2x2)");
+            QuickUI([1.0, "Endgame rare deco large", "decorators->rareeg;largerares"], "SD", ["Width", "Height"], "Large");
+            QuickUI([1.0, "Endgame rare deco ilvl 86", "decorators->rareeg;topilvl86"], "SD", ["ItemLevel"], "ItemLevel 86");
+            QuickUI([1.0, "Endgame rare deco ilvl 85", "decorators->rareeg;topilvl85"], "SD", ["ItemLevel"], "ItemLevel 85");
+            QuickUI([1.0, "Endgame rare deco ilvl 84", "decorators->rareeg;topilvl84"], "SD", ["ItemLevel"], "ItemLevel 84");
+            QuickUI([1.0, "Endgame rare deco ilvl 83", "decorators->rareeg;topilvl83"], "SD", ["ItemLevel"], "ItemLevel 83");
+            QuickUI([1.0, "Endgame rare deco ilvl 75", "decorators->rareeg;ilvl75"], "SD", ["ItemLevel"], "ItemLevel 75");
+            QuickUI([1.0, "Endgame rare deco ilvl 68", "decorators->rareeg;ilvl68"], "SD", ["ItemLevel"], "ItemLevel 68");
+            QuickUI([1.0, "Endgame rare deco corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SD", ["Corrupted", "CorruptedMods"], "Corrupted Implicit");
+            QuickUI([1.0, "Endgame rare deco corrupted", "decorators->rareeg;corruptedrares"], "SD", ["Corrupted", "CorruptedMods"], "Corrupted - No implicit");
+            QuickUI([1.0, "Endgame rare deco 4 links", "decorators->rareeg;fourlinkedrares"], "SD", ["Corrupted", "CorruptedMods"], "4 Links");
     }
 
     Section("Jewellery", "RewardJewellery.webp") {
@@ -1463,10 +1463,10 @@ Section("Endgame - Special Rares & Crafting", "CraftingUnlockObject.webp") {
             Function WombgiftsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Wombgifts", "O"]); }
             TierListToolBar();
 
-            WombgiftsFunc([1.0, "Wombgifts S-Tier", "exotic->wombgifts;t2"], "SH");
-            WombgiftsFunc([1.0, "Wombgifts A-Tier", "exotic->wombgifts;t3"], "SH");
-            WombgiftsFunc([1.0, "Wombgifts B-Tier", "exotic->wombgifts;t4"], "SH");
-            WombgiftsFunc([1.0, "Wombgifts C-Tier", "exotic->wombgifts;t5"], "SH");
+            WombgiftsFunc([1.0, "Wombgifts S-Tier", "exotic->wombgifts;t2"], "SH", "S Tier");
+            WombgiftsFunc([1.0, "Wombgifts A-Tier", "exotic->wombgifts;t3"], "SH", "A Tier");
+            WombgiftsFunc([1.0, "Wombgifts B-Tier", "exotic->wombgifts;t4"], "SH", "B Tier");
+            WombgiftsFunc([1.0, "Wombgifts C-Tier", "exotic->wombgifts;t5"], "SH", "C Tier");
 
             // new tiers
             Conditional("?WombgiftsNewTier") { }
@@ -1510,8 +1510,8 @@ Section("Endgame - Special Rares & Crafting", "CraftingUnlockObject.webp") {
         }
 
         Section("Stygian Vise", "StygianVise") {
-            QuickUI([0.0, "Stygian Vise, High ItemLevel", "exoticbaseslower;stygian86"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Stygian Vise", "exoticbaseslower;stygian"], "SH", []);
+            QuickUI([0.0, "Stygian Vise, High ItemLevel", "exoticbaseslower;stygian86"], "SH", ["ItemLevel"], "High ItemLevel");
+            QuickUI([0.0, "Stygian Vise", "exoticbaseslower;stygian"], "SH", [], "Remaining");
         }
 
         Section("Sacrificial Garbs", "SacrificeAtMidnight") {
@@ -1692,9 +1692,9 @@ Section("Endgame - Misc. Gear", "CobaltJewel") {
         Section("Tinctures", "Fulgurite_Tincture_inventory_icon") {
             QuickUI([0.0, "High Quality & ItemLevel Tinctures", "endgametinctures;overqual1"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"], "Overquality: 26%+ quality");
             QuickUI([0.0, "Quality & High ItemLevel Tinctures", "endgametinctures;overqual2"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"], "Overquality: 21%+ quality");
-            QuickUI([0.0, "Very High ItemLevel Tinctures", "endgametinctures;tinc85"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"], "Tinctures: ILVL 85+");
-            QuickUI([0.0, "High ItemLevel Tinctures", "endgametinctures;tinc82"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"], "Tinctures: ILVL 82+");
-            QuickUI([0.0, "Remaining Endgame Tinctures", "endgametinctures;any"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"], "Tinctures: Other");
+            QuickUI([0.0, "Very High ItemLevel Tinctures", "endgametinctures;tinc85"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"], "ILVL 85+");
+            QuickUI([0.0, "High ItemLevel Tinctures", "endgametinctures;tinc82"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"], "ILVL 82+");
+            QuickUI([0.0, "Remaining Endgame Tinctures", "endgametinctures;any"], "SH", ["RarityNM", "ItemLevel", "Quality", "Tinctures"], "Other");
         }
     }
 
@@ -1730,82 +1730,82 @@ Section("Endgame - Misc. Gear", "CobaltJewel") {
             Warning("This section is economy based: it's generated based on poe.ninja economy data. This section is not perfect. Hide the general section on your own risk.");
 
             Title("12 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 12 Notes", "jewels->clustereco;n12_i84_t1"], "SDH", "Cluster Jewel: T1, iLvl84, 12 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 12 Notes", "jewels->clustereco;n12_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 12 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 12 Notes", "jewels->clustereco;n12_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 12 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 12 Notes", "jewels->clustereco;n12_i84_t1"], "SDH", "Tier 1, iLvl84, 12 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 12 Notes", "jewels->clustereco;n12_i75_t1"], "SHD", "Tier 1, iLvl84, 12 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 12 Notes", "jewels->clustereco;n12_i68_t1"], "SHD", "Tier 1, iLvl84, 12 Nodes");
             Title("11 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 11 Notes", "jewels->clustereco;n11_i84_t1"], "SDH", "Cluster Jewel: T1, iLvl84, 11 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 11 Notes", "jewels->clustereco;n11_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 11 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 11 Notes", "jewels->clustereco;n11_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 11 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 11 Notes", "jewels->clustereco;n11_i84_t1"], "SDH", "Tier 1, iLvl84, 11 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 11 Notes", "jewels->clustereco;n11_i75_t1"], "SHD", "Tier 1, iLvl75, 11 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 11 Notes", "jewels->clustereco;n11_i68_t1"], "SHD", "Tier 1, iLvl68, 11 Nodes");
             Title("10 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 10 Notes", "jewels->clustereco;n10_i84_t1"], "SDH", "Cluster Jewel: T1, iLvl84, 10 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 10 Notes", "jewels->clustereco;n10_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 10 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 10 Notes", "jewels->clustereco;n10_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 10 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 10 Notes", "jewels->clustereco;n10_i84_t1"], "SDH", "Tier 1, iLvl84, 10 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 10 Notes", "jewels->clustereco;n10_i75_t1"], "SHD", "Tier 1, iLvl75, 10 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 10 Notes", "jewels->clustereco;n10_i68_t1"], "SHD", "Tier 1, iLvl68, 10 Nodes");
             Title("9 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 9 Notes", "jewels->clustereco;n9_i84_t1"], "SDH", "Cluster Jewel: T1, iLvl84, 9 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 9 Notes", "jewels->clustereco;n9_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 9 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 9 Notes", "jewels->clustereco;n9_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 9 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 9 Notes", "jewels->clustereco;n9_i84_t1"], "SDH", "Tier 1, iLvl84, 9 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 9 Notes", "jewels->clustereco;n9_i75_t1"], "SHD", "Tier 1, iLvl75, 9 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 9 Notes", "jewels->clustereco;n9_i68_t1"], "SHD", "Tier 1, iLvl68, 9 Nodes");
             Title("8 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 8 Notes", "jewels->clustereco;n8_i84_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 8 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 8 Notes", "jewels->clustereco;n8_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 8 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 8 Notes", "jewels->clustereco;n8_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 8 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 8 Notes", "jewels->clustereco;n8_i84_t1"], "SHD", "Tier 1, iLvl84, 8 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 8 Notes", "jewels->clustereco;n8_i75_t1"], "SHD", "Tier 1, iLvl75, 8 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 8 Notes", "jewels->clustereco;n8_i68_t1"], "SHD", "Tier 1, iLvl68, 8 Nodes");
             Title("6 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 6 Notes", "jewels->clustereco;n6_i84_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 6 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 6 Notes", "jewels->clustereco;n6_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 6 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 6 Notes", "jewels->clustereco;n6_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 6 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 6 Notes", "jewels->clustereco;n6_i84_t1"], "SHD", "Tier 1, iLvl84, 6 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 6 Notes", "jewels->clustereco;n6_i75_t1"], "SHD", "Tier 1, iLvl75, 6 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 6 Notes", "jewels->clustereco;n6_i68_t1"], "SHD", "Tier 1, iLvl68, 6 Nodes");
             Title("4-5 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 4 Notes", "jewels->clustereco;n4_i84_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 4-5 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 4 Notes", "jewels->clustereco;n4_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 4-5 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 4 Notes", "jewels->clustereco;n4_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 4-5 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 4 Notes", "jewels->clustereco;n4_i84_t1"], "SHD", "Tier 1, iLvl84, 4-5 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 4 Notes", "jewels->clustereco;n4_i75_t1"], "SHD", "Tier 1, iLvl75, 4-5 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 4 Notes", "jewels->clustereco;n4_i68_t1"], "SHD", "Tier 1, iLvl68, 4-5 Nodes");
             Title("3 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 3 Notes", "jewels->clustereco;n3_i84_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 3 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 3 Notes", "jewels->clustereco;n3_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 3 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 3 Notes", "jewels->clustereco;n3_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 3 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 3 Notes", "jewels->clustereco;n3_i84_t1"], "SHD", "Tier 1, iLvl84, 3 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 3 Notes", "jewels->clustereco;n3_i75_t1"], "SHD", "Tier 1, iLvl75, 3 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 3 Notes", "jewels->clustereco;n3_i68_t1"], "SHD", "Tier 1, iLvl68, 3 Nodes");
             Title("2 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 2 Notes", "jewels->clustereco;n2_i84_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 2 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 2 Notes", "jewels->clustereco;n2_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 2 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 2 Notes", "jewels->clustereco;n2_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 2 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 2 Notes", "jewels->clustereco;n2_i84_t1"], "SHD", "Tier 1, iLvl84, 2 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 2 Notes", "jewels->clustereco;n2_i75_t1"], "SHD", "Tier 1, iLvl75, 2 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 2 Notes", "jewels->clustereco;n2_i68_t1"], "SHD", "Tier 1, iLvl68, 2 Nodes");
         }
 
         Section("Cluster Jewels: Good Enchantments", null, "E") {
             Warning("This section is economy based: it's generated based on poe.ninja economy data. This section is not perfect. Hide the general section on your own risk.");
 
             Title("12 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 12 Notes", "jewels->clustereco;n12_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 12 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 12 Notes", "jewels->clustereco;n12_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 12 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 12 Notes", "jewels->clustereco;n12_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 12 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 12 Notes", "jewels->clustereco;n12_i84_t2"], "SHD", "Tier 2, iLvl84, 12 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 12 Notes", "jewels->clustereco;n12_i75_t2"], "SHD", "Tier 2, iLvl75, 12 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 12 Notes", "jewels->clustereco;n12_i68_t2"], "SHD", "Tier 2, iLvl68, 12 Nodes");
             Title("11 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 11 Notes", "jewels->clustereco;n11_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 11 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 11 Notes", "jewels->clustereco;n11_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 11 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 11 Notes", "jewels->clustereco;n11_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 11 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 11 Notes", "jewels->clustereco;n11_i84_t2"], "SHD", "Tier 2, iLvl84, 11 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 11 Notes", "jewels->clustereco;n11_i75_t2"], "SHD", "Tier 2, iLvl75, 11 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 11 Notes", "jewels->clustereco;n11_i68_t2"], "SHD", "Tier 2, iLvl68, 11 Nodes");
             Title("10 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 10 Notes", "jewels->clustereco;n10_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 10 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 10 Notes", "jewels->clustereco;n10_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 10 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 10 Notes", "jewels->clustereco;n10_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 10 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 10 Notes", "jewels->clustereco;n10_i84_t2"], "SHD", "Tier 2, iLvl84, 10 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 10 Notes", "jewels->clustereco;n10_i75_t2"], "SHD", "Tier 2, iLvl75, 10 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 10 Notes", "jewels->clustereco;n10_i68_t2"], "SHD", "Tier 2, iLvl68, 10 Nodes");
             Title("9 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 9 Notes", "jewels->clustereco;n9_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 9 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 9 Notes", "jewels->clustereco;n9_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 9 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 9 Notes", "jewels->clustereco;n9_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 9 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 9 Notes", "jewels->clustereco;n9_i84_t2"], "SHD", "Tier 2, iLvl84, 9 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 9 Notes", "jewels->clustereco;n9_i75_t2"], "SHD", "Tier 2, iLvl75, 9 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 9 Notes", "jewels->clustereco;n9_i68_t2"], "SHD", "Tier 2, iLvl68, 9 Nodes");
             Title("8 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 8 Notes", "jewels->clustereco;n8_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 8 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 8 Notes", "jewels->clustereco;n8_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 8 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 8 Notes", "jewels->clustereco;n8_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 8 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 8 Notes", "jewels->clustereco;n8_i84_t2"], "SHD", "Tier 2, iLvl84, 8 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 8 Notes", "jewels->clustereco;n8_i75_t2"], "SHD", "Tier 2, iLvl75, 8 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 8 Notes", "jewels->clustereco;n8_i68_t2"], "SHD", "Tier 2, iLvl68, 8 Nodes");
             Title("6 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 6 Notes", "jewels->clustereco;n6_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 6 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 6 Notes", "jewels->clustereco;n6_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 6 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 6 Notes", "jewels->clustereco;n6_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 6 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 6 Notes", "jewels->clustereco;n6_i84_t2"], "SHD", "Tier 2, iLvl84, 6 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 6 Notes", "jewels->clustereco;n6_i75_t2"], "SHD", "Tier 2, iLvl75, 6 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 6 Notes", "jewels->clustereco;n6_i68_t2"], "SHD", "Tier 2, iLvl68, 6 Nodes");
             Title("4-5 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 4 Notes", "jewels->clustereco;n4_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 4-5 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 4 Notes", "jewels->clustereco;n4_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 4-5 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 4 Notes", "jewels->clustereco;n4_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 4-5 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 4 Notes", "jewels->clustereco;n4_i84_t2"], "SHD", "Tier 2, iLvl84, 4-5 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 4 Notes", "jewels->clustereco;n4_i75_t2"], "SHD", "Tier 2, iLvl75, 4-5 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 4 Notes", "jewels->clustereco;n4_i68_t2"], "SHD", "Tier 2, iLvl68, 4-5 Nodes");
             Title("3 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 3 Notes", "jewels->clustereco;n3_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 3 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 3 Notes", "jewels->clustereco;n3_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 3 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 3 Notes", "jewels->clustereco;n3_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 3 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 3 Notes", "jewels->clustereco;n3_i84_t2"], "SHD", "Tier 2, iLvl84, 3 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 3 Notes", "jewels->clustereco;n3_i75_t2"], "SHD", "Tier 2, iLvl75, 3 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 3 Notes", "jewels->clustereco;n3_i68_t2"], "SHD", "Tier 2, iLvl68, 3 Nodes");
             Title("2 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 2 Notes", "jewels->clustereco;n2_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 2 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 2 Notes", "jewels->clustereco;n2_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 2 Nodes");
-            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 2 Notes", "jewels->clustereco;n2_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 2 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 2 Notes", "jewels->clustereco;n2_i84_t2"], "SHD", "Tier 2, iLvl84, 2 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 2 Notes", "jewels->clustereco;n2_i75_t2"], "SHD", "Tier 2, iLvl75, 2 Nodes");
+            ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 2 Notes", "jewels->clustereco;n2_i68_t2"], "SHD", "Tier 2, iLvl68, 2 Nodes");
         }
 
         Section("Cluster Jewels: Any Enchantment") {
@@ -1855,8 +1855,8 @@ Section("Endgame - Misc. Gear", "CobaltJewel") {
             Function SanctumRelicsUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Rarity"], $text, ["SanctumRelics", "O"]); }
             Description("Relics drop in the sanctum and provide sanctum-exclusive benefits to your runs.");
 
-            SanctumRelicsUI([0.0, "Forbidden Sanctum Relics Tier 1", "artefact->sanctifiedrelics;selectedrelics"], "SH", "Sanctum Relics");
-            QuickUI([0.0, "Remaining Forbidden Sanctum Relics", "artefact->sanctifiedrelics;anyrelic"], "SH", "", "Remaining Relics");
+            SanctumRelicsUI([0.0, "Forbidden Sanctum Relics Tier 1", "artefact->sanctifiedrelics;selectedrelics"], "SH", "Tier 1");
+            QuickUI([0.0, "Remaining Forbidden Sanctum Relics", "artefact->sanctifiedrelics;anyrelic"], "SH", "", "Others");
 
             // new tiers
             Conditional("?SanctumRelicsNewTiers") { }
@@ -2122,23 +2122,23 @@ Section("Campaign", "IronRing") {
         Section("Act 1") {
             QuickUI([0.0, "Act 1 Caster weapons", "leveling->normalmagic->act1;casterweapons"], "SD", ["AllGearClasses", "Rarity", "Sockets", "LinkedSockets?", "AreaLevel"], "Magic Caster Weapons");
             QuickUI([0.0, "Early Leveling Boots ilvl 12", "leveling->normalmagic->act1;boots"], "SD", ["Rarity", "AreaLevel"], "Magic boots (for movement speed)");
-            BaseTypeBoxX([1.0, "Act 1 Caster rings", "leveling->normalmagic->act1;castercraftrings"], "SD", "");
-            BaseTypeBoxX([0.0, "Act 1 Physical accessories", "leveling->normalmagic->act1;physical"], "SD");
-            BaseTypeBoxX([2.0, "Act 1 selected jewellery", "leveling->normalmagic->act1;general"], "SD");
+            BaseTypeBoxX([1.0, "Act 1 Caster rings", "leveling->normalmagic->act1;castercraftrings"], "SD", "Caster rings");
+            BaseTypeBoxX([0.0, "Act 1 Physical accessories", "leveling->normalmagic->act1;physical"], "SD", "Physical accessories");
+            BaseTypeBoxX([2.0, "Act 1 selected jewellery", "leveling->normalmagic->act1;general"], "SD", "Selected jewellery");
             ClassBox([0.0, "Act 1 Jewellery", "leveling->normalmagic->act1;jewellery"], "SD", "Remaining Act 1 jewellery");
         }
 
         Section("Act 2/3")
         {
             Description("Act 2 and 3 are fairly lightning heavy. Topaz rings are a good opportunity to boost your defenses, when rushing.");
-            BaseTypeBoxX([0.0, "Act 2/3 Rings", "leveling->normalmagic->act2;castercraftrings"], "SD", "Act 2/3 Top Rings (Norm/Magic)");
-            BaseTypeBoxX([0.0, "Act 2/3 Rustic Sash", "leveling->normalmagic->act2;physical"], "SD", "Act 2/3 Rustic Sash (Norm/Magic)");
+            BaseTypeBoxX([0.0, "Act 2/3 Rings", "leveling->normalmagic->act2;castercraftrings"], "SD", "Top Rings (Norm/Magic)");
+            BaseTypeBoxX([0.0, "Act 2/3 Rustic Sash", "leveling->normalmagic->act2;physical"], "SD", "Rustic Sash (Norm/Magic)");
         }
 
         Section("Act 4/5/6") {
             Description("Acts 4-6 contain a lot of deadly fire damage sources. Ruby rings help a lot. After act 5 you want keep your resistances as high as possible. Consider throwing an essence or even an alchemy orb on one of these!");
-            BaseTypeBoxX([1.0, "Act 4-6 Fire-Res Gear", "leveling->normalmagic->otheracts;fireresistgear"], "SD", "Act 4/5/6 Fire-Res Gear");
-            BaseTypeBoxX([0.0, "Act 4/5/6 Rings", "leveling->normalmagic->otheracts;generalcrafting"], "SD", "Act 4/5/6 Rings (norm/magic)");
+            BaseTypeBoxX([1.0, "Act 4-6 Fire-Res Gear", "leveling->normalmagic->otheracts;fireresistgear"], "SD", "Fire-Res Gear");
+            BaseTypeBoxX([0.0, "Act 4/5/6 Rings", "leveling->normalmagic->otheracts;generalcrafting"], "SD", "Rings (norm/magic)");
         }
 
         Section("Jewels") {
@@ -2149,8 +2149,8 @@ Section("Campaign", "IronRing") {
 
         Section("Quivers") {
             Description("These upgrades are built around the moments when the player can get a solid boost out of a new quiver type.");
-            QuickUI([0.0, "Leveling Quivers lvl 1-8", "leveling->normalmagic->act1;quivers"], "SD", ["AreaLevel", "Rarity"], "Quivers: Early Act1");
-            QuickUI([0.0, "Leveling Quivers lvl 24-34", "leveling->normalmagic->otheracts;highphysquivers"], "SD", ["AreaLevel", "Rarity"], "Quivers: High Phys", ["Gear", "SO"]);
+            QuickUI([0.0, "Leveling Quivers lvl 1-8", "leveling->normalmagic->act1;quivers"], "SD", ["AreaLevel", "Rarity"], "Early Act 1");
+            QuickUI([0.0, "Leveling Quivers lvl 24-34", "leveling->normalmagic->otheracts;highphysquivers"], "SD", ["AreaLevel", "Rarity"], "High Phys", ["Gear", "SO"]);
         }
 
         Section("Summoner gear") {
@@ -2643,10 +2643,10 @@ Section("Miscellaneous", "Empower") {
         }
 
         Section("Abyss Jewels") {
-            BasicModItemUI([0.0, "ModFiltering: Abyss Jewels Minion", "rareid;idaj_minion"], "Minion Abyss Jewels");
-            BasicModItemUI([0.0, "ModFiltering: Abyss Jewels Caster", "rareid;idaj_caster"], "Caster Abyss Jewels");
-            BasicModItemUI([0.0, "ModFiltering: Abyss Jewels Attack", "rareid;idaj_attack"], "Attack Abyss Jewels");
-            BasicModItemUI([0.0, "ModFiltering: Abyss Jewels Mixed", "rareid;idaj_mixer"], "Mixed Abyss Jewels");
+            BasicModItemUI([0.0, "ModFiltering: Abyss Jewels Minion", "rareid;idaj_minion"], "Minion");
+            BasicModItemUI([0.0, "ModFiltering: Abyss Jewels Caster", "rareid;idaj_caster"], "Caster");
+            BasicModItemUI([0.0, "ModFiltering: Abyss Jewels Attack", "rareid;idaj_attack"], "Attack");
+            BasicModItemUI([0.0, "ModFiltering: Abyss Jewels Mixed", "rareid;idaj_mixer"], "Mixed");
         }
 
         Section("Items with Corrupted Implicits") {
