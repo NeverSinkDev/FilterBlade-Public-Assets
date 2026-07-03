@@ -9,11 +9,7 @@ DefensiveSearch S10(3, "skip", "hidelayer;outdatedlevelflaskd") { };
 DefensiveSearch S10(3, "skip", "hidelayer;outdatedlevelflaske") { };
 DefensiveSearch S10(3, "skip", "hidelayer;final") { };
 
-Section("Basics", "Exalted_Orb_inventory_icon") {
-
-//    SectionTitle("Basics");
-
-    Section("General Currency", "Exalted_Orb_inventory_icon", "E") {
+    Section("Currency", "Exalted_Orb_inventory_icon", "E") {
         Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize?"], $text, ["normalCurrencyPoe2", "O"]); }
 
         TierListToolBar("currency");
@@ -39,28 +35,122 @@ Section("Basics", "Exalted_Orb_inventory_icon") {
         Description("Note that there are also additional rules for currency during the campaign.");
     }
 
-    Section("Socketables", "Iron_Rune_inventory_icon", "E") {
+        Section("Current league: Return of the Ancients", "VoicesPoE2") {
 
-            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function SocketsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Augment", "O"]); }
-            TierListToolBar("Socketables");
+            Description("Most of the new currencies, omens and augments have been added to the 'general' tierlists, however with these, we know so little, I've put into their own list. Will be updated once we have data");
+            Section("Wombgifts, Ward-Gems, Undiscovered Items") {
+                // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+                Function XenoFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["G:xeno", "O"]); }
+                TierListToolBar();
 
-            SocketsFunc([0.0, "Sockets S", "sockets->general;s"], "SH", "S Tier");
-            SocketsFunc([0.0, "Sockets A", "sockets->general;a"], "SH", "A Tier");
-            SocketsFunc([0.0, "Sockets B", "sockets->general;b"], "SH", "B Tier");
-            SocketsFunc([0.0, "Sockets C", "sockets->general;c"], "SH", "C Tier");
-            SocketsFunc([0.0, "Sockets D", "sockets->general;d"], "SH", "D Tier");
-            SocketsFunc([0.0, "Sockets E", "sockets->general;e"], "SH", "E Tier");
-            SocketsFunc([0.0, "Sockets Supplies", "sockets->general;supplylow"], "SH", "Supplies: Lesser Runes");
+                XenoFunc([0.0, "New items, S Tier", "xenotiering;s"], "SH", "S Tier");
+                XenoFunc([0.0, "New items, A Tier", "xenotiering;a"], "SH", "A Tier");
+                XenoFunc([0.0, "New items, B Tier", "xenotiering;b"], "SH", "B Tier");
+                XenoFunc([0.0, "New items, C Tier", "xenotiering;c"], "SH", "C Tier");
+                XenoFunc([0.0, "New items, D Tier", "xenotiering;d"], "SH", "D Tier");
+                XenoFunc([0.0, "New items, E Tier", "xenotiering;e"], "SH", "E Tier");
 
-            // new tiers
-            Conditional("?SocketsNewTier") { }
-            ElementAdder_Tier("?SocketsNewTier", "SocketsFunc");
+                // new tiers
+                Conditional("?XenoNewTier") { }
+                ElementAdder_Tier("?XenoNewTier", "XenoFunc");
 
-            // hide tier
-            Conditional("?SocketsNewTiersHidden") { }
-            ElementAdder_Tier("?SocketsNewTiersHidden", null, true, "C:Augment", "OH");
-    }
+                // hide tier
+                Conditional("?XenoNewTiersHidden") { }
+                ElementAdder_Tier("?XenoNewTiersHidden", null, true, "G:xeno", "OH");
+            }
+
+            Section("Verisium") {
+                QuickUI([0.0, "Verisium, massive stack", "verisium;massive"], "SH", ["StackSize"]);
+                QuickUI([0.0, "Verisium, huge stack", "verisium;huge"], "SH", ["StackSize"]);
+                QuickUI([0.0, "Verisium, large stack", "verisium;large"], "SH", ["StackSize"]);
+                QuickUI([0.0, "Verisium", "verisium;any"], "SH", ["StackSize"]);
+            }
+
+            Section ("Breach Crafting")
+            {
+                QuickUI([0.0, "Pseudo crafts 1", "exoticbases;pseudocrafts1"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
+                QuickUI([0.0, "Pseudo crafts 2", "exoticbases;pseudocrafts2"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
+            }
+
+            Section ("MiscRules (safeguards, just in case)")
+            {
+                Description("These augments likely don't drop, but we have a safety rule just in case.");
+                QuickUI([0.0, "Unique-Extracted Augments", "legacytemp;any"], "SH", []);
+            }
+
+        }
+
+            Section("Socketables", "Iron_Rune_inventory_icon", "E") {
+
+                    // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+                    Function SocketsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Augment", "O"]); }
+                    TierListToolBar("Socketables");
+
+                    SocketsFunc([0.0, "Sockets S", "sockets->general;s"], "SH", "S Tier");
+                    SocketsFunc([0.0, "Sockets A", "sockets->general;a"], "SH", "A Tier");
+                    SocketsFunc([0.0, "Sockets B", "sockets->general;b"], "SH", "B Tier");
+                    SocketsFunc([0.0, "Sockets C", "sockets->general;c"], "SH", "C Tier");
+                    SocketsFunc([0.0, "Sockets D", "sockets->general;d"], "SH", "D Tier");
+                    SocketsFunc([0.0, "Sockets E", "sockets->general;e"], "SH", "E Tier");
+                    SocketsFunc([0.0, "Sockets Supplies", "sockets->general;supplylow"], "SH", "Supplies: Lesser Runes");
+
+                    // new tiers
+                    Conditional("?SocketsNewTier") { }
+                    ElementAdder_Tier("?SocketsNewTier", "SocketsFunc");
+
+                    // hide tier
+                    Conditional("?SocketsNewTiersHidden") { }
+                    ElementAdder_Tier("?SocketsNewTiersHidden", null, true, "C:Augment", "OH");
+            }
+
+                Section("Gems", "Uncut_Skill_Gem_inventory_icon") {
+
+                    Section("CAMPAIGN: Gems")
+                    {
+                        QuickUI([0.0, "Gems, Spirit, Campaign ", "gems->uncut;spiritcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Spirit");
+                        QuickUI([0.0, "Gems, Skill, Campaign ", "gems->uncut;skillcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Skill");
+                        QuickUI([0.0, "Gems, Support, Campaign ", "gems->uncut;supportcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Support");
+                        QuickUI([0.0, "Cut Gems ", "gems;any"], "SH", ["AreaLevel", "ItemLevel"]);
+                    }
+
+                    Section("ENDGAME: Skill Gems")
+                    {
+                        Title("High Level Gems");
+                        QuickUI([0.0, "Gems, Skill, Level 20 ", "gems->uncut;skill20"], "SH", ["AreaLevel", "ItemLevel"], "Skill, Level 20");
+                        QuickUI([0.0, "Gems, Skill, Level 19 ", "gems->uncut;skill19"], "SH", ["AreaLevel", "ItemLevel"], "Skill, Level 19");
+                        Title("Progression: Best gems Droppable in Waystone Tier");
+                        QuickUI([0.0, "Gems, Progression, Level 18", "gems->uncut;skillgemprogression18"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 18");
+                        QuickUI([0.0, "Gems, Progression, Level 17", "gems->uncut;skillgemprogression17"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 17");
+                        QuickUI([0.0, "Gems, Progression, Level 16", "gems->uncut;skillgemprogression16"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 16");
+                        QuickUI([0.0, "Gems, Progression, Level 15", "gems->uncut;skillgemprogression15"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 15");
+                        QuickUI([0.0, "Gems, Progression, Level 14", "gems->uncut;skillgemprogression14"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 14");
+                        QuickUI([0.0, "Gems, Skill, Endgame ", "gems->uncut;otherskilleg"], "SH", ["AreaLevel", "ItemLevel"], "Other Lower Level Skill Gems");
+                    }
+
+                    Section("ENDGAME: Spirit Gems")
+                    {
+                        Title("High Level Gems");
+                        QuickUI([0.0, "Gems, Spirit, Level 20 ", "gems->uncut;spirit20"], "SH", ["AreaLevel", "ItemLevel"], "Spirit, Level 20");
+                        QuickUI([0.0, "Gems, Spirit, Level 19 ", "gems->uncut;spirit19"], "SH", ["AreaLevel", "ItemLevel"], "Spirit, Level 19");
+                        Title("Progression: Best gems Droppable in Waystone Tier");
+                        QuickUI([0.0, "Spirit Gems, Progression, Level 18", "gems->uncut;spiritgemprogression18"], "SH", ["AreaLevel", "ItemLevel"]);
+                        QuickUI([0.0, "Spirit Gems, Progression, Level 17", "gems->uncut;spiritgemprogression17"], "SH", ["AreaLevel", "ItemLevel"]);
+                        QuickUI([0.0, "Spirit Gems, Progression, Level 16", "gems->uncut;spiritgemprogression16"], "SH", ["AreaLevel", "ItemLevel"]);
+                        QuickUI([0.0, "Spirit Gems, Progression, Level 15", "gems->uncut;spiritgemprogression15"], "SH", ["AreaLevel", "ItemLevel"]);
+                        QuickUI([0.0, "Spirit Gems, Progression, Level 14", "gems->uncut;spiritgemprogression14"], "SH", ["AreaLevel", "ItemLevel"]);
+                        QuickUI([0.0, "Gems, Spirit, Endgame ", "gems->uncut;otherspiriteg"], "SH", ["AreaLevel", "ItemLevel"], "Other Lower Level Spirit Gems");
+                    }
+
+                    Section("ENDGAME: Support")
+                    {
+                        QuickUI([0.0, "Gems, Support, Endgame ", "gems->uncut;othersupporteg"], "SH", ["AreaLevel", "ItemLevel"], "Support Gems in T15+ maps");
+                        QuickUI([0.0, "Gems, Support, Endgame Early", "gems->uncut;supportearlymaps"], "SH", ["AreaLevel", "ItemLevel"], "Support Gems in lower maps");
+                    }
+                }
+
+Section("Basics", "Gold_inventory_icon") {
+
+//    SectionTitle("Basics");
 
     Section("Campaign & Exotics Currencies", "Essence_of_Ruin_inventory_icon", "E") {
 
@@ -213,51 +303,6 @@ Section("Basics", "Exalted_Orb_inventory_icon") {
         ElementAdder_Tier("?ChancingNewTier", "ChancingFunc");
     }
 
-    Section("Gems", "Uncut_Skill_Gem_inventory_icon") {
-
-        Section("CAMPAIGN: Gems")
-        {
-            QuickUI([0.0, "Gems, Spirit, Campaign ", "gems->uncut;spiritcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Spirit");
-            QuickUI([0.0, "Gems, Skill, Campaign ", "gems->uncut;skillcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Skill");
-            QuickUI([0.0, "Gems, Support, Campaign ", "gems->uncut;supportcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Support");
-            QuickUI([0.0, "Cut Gems ", "gems;any"], "SH", ["AreaLevel", "ItemLevel"]);
-        }
-
-        Section("ENDGAME: Skill Gems")
-        {
-            Title("High Level Gems");
-            QuickUI([0.0, "Gems, Skill, Level 20 ", "gems->uncut;skill20"], "SH", ["AreaLevel", "ItemLevel"], "Skill, Level 20");
-            QuickUI([0.0, "Gems, Skill, Level 19 ", "gems->uncut;skill19"], "SH", ["AreaLevel", "ItemLevel"], "Skill, Level 19");
-            Title("Progression: Best gems Droppable in Waystone Tier");
-            QuickUI([0.0, "Gems, Progression, Level 18", "gems->uncut;skillgemprogression18"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 18");
-            QuickUI([0.0, "Gems, Progression, Level 17", "gems->uncut;skillgemprogression17"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 17");
-            QuickUI([0.0, "Gems, Progression, Level 16", "gems->uncut;skillgemprogression16"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 16");
-            QuickUI([0.0, "Gems, Progression, Level 15", "gems->uncut;skillgemprogression15"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 15");
-            QuickUI([0.0, "Gems, Progression, Level 14", "gems->uncut;skillgemprogression14"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 14");
-            QuickUI([0.0, "Gems, Skill, Endgame ", "gems->uncut;otherskilleg"], "SH", ["AreaLevel", "ItemLevel"], "Other Lower Level Skill Gems");
-        }
-
-        Section("ENDGAME: Spirit Gems")
-        {
-            Title("High Level Gems");
-            QuickUI([0.0, "Gems, Spirit, Level 20 ", "gems->uncut;spirit20"], "SH", ["AreaLevel", "ItemLevel"], "Spirit, Level 20");
-            QuickUI([0.0, "Gems, Spirit, Level 19 ", "gems->uncut;spirit19"], "SH", ["AreaLevel", "ItemLevel"], "Spirit, Level 19");
-            Title("Progression: Best gems Droppable in Waystone Tier");
-            QuickUI([0.0, "Spirit Gems, Progression, Level 18", "gems->uncut;spiritgemprogression18"], "SH", ["AreaLevel", "ItemLevel"]);
-            QuickUI([0.0, "Spirit Gems, Progression, Level 17", "gems->uncut;spiritgemprogression17"], "SH", ["AreaLevel", "ItemLevel"]);
-            QuickUI([0.0, "Spirit Gems, Progression, Level 16", "gems->uncut;spiritgemprogression16"], "SH", ["AreaLevel", "ItemLevel"]);
-            QuickUI([0.0, "Spirit Gems, Progression, Level 15", "gems->uncut;spiritgemprogression15"], "SH", ["AreaLevel", "ItemLevel"]);
-            QuickUI([0.0, "Spirit Gems, Progression, Level 14", "gems->uncut;spiritgemprogression14"], "SH", ["AreaLevel", "ItemLevel"]);
-            QuickUI([0.0, "Gems, Spirit, Endgame ", "gems->uncut;otherspiriteg"], "SH", ["AreaLevel", "ItemLevel"], "Other Lower Level Spirit Gems");
-        }
-
-        Section("ENDGAME: Support")
-        {
-            QuickUI([0.0, "Gems, Support, Endgame ", "gems->uncut;othersupporteg"], "SH", ["AreaLevel", "ItemLevel"], "Support Gems in T15+ maps");
-            QuickUI([0.0, "Gems, Support, Endgame Early", "gems->uncut;supportearlymaps"], "SH", ["AreaLevel", "ItemLevel"], "Support Gems in lower maps");
-        }
-    }
-
     Section("Lineage Gems", "RathasAssault", "E")
     {
         Description("More gem tiers and a better visual will be added once more is known about these gems!");
@@ -306,51 +351,6 @@ Section("Basics", "Exalted_Orb_inventory_icon") {
         // new tiers
         Conditional("?GoldNewTier") { Show; BaseType == "Gold"; StackSize >= 1337; SetTextColor 200 200 0; SetBorderColor 200 200 0; }
         ElementAdder_Tier("?GoldNewTier", "GoldFunc");
-    }
-
-    Section("Current league: Return of the Ancients", "VoicesPoE2") {
-
-        Description("Most of the new currencies, omens and augments have been added to the 'general' tierlists, however with these, we know so little, I've put into their own list. Will be updated once we have data");
-        Section("Wombgifts, Ward-Gems, Undiscovered Items") {
-            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function XenoFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["G:xeno", "O"]); }
-            TierListToolBar();
-
-            XenoFunc([0.0, "New items, S Tier", "xenotiering;s"], "SH", "S Tier");
-            XenoFunc([0.0, "New items, A Tier", "xenotiering;a"], "SH", "A Tier");
-            XenoFunc([0.0, "New items, B Tier", "xenotiering;b"], "SH", "B Tier");
-            XenoFunc([0.0, "New items, C Tier", "xenotiering;c"], "SH", "C Tier");
-            XenoFunc([0.0, "New items, D Tier", "xenotiering;d"], "SH", "D Tier");
-            XenoFunc([0.0, "New items, E Tier", "xenotiering;e"], "SH", "E Tier");
-
-            // new tiers
-            Conditional("?XenoNewTier") { }
-            ElementAdder_Tier("?XenoNewTier", "XenoFunc");
-
-            // hide tier
-            Conditional("?XenoNewTiersHidden") { }
-            ElementAdder_Tier("?XenoNewTiersHidden", null, true, "G:xeno", "OH");
-        }
-
-        Section("Verisium") {
-            QuickUI([0.0, "Verisium, massive stack", "verisium;massive"], "SH", ["StackSize"]);
-            QuickUI([0.0, "Verisium, huge stack", "verisium;huge"], "SH", ["StackSize"]);
-            QuickUI([0.0, "Verisium, large stack", "verisium;large"], "SH", ["StackSize"]);
-            QuickUI([0.0, "Verisium", "verisium;any"], "SH", ["StackSize"]);
-        }
-
-        Section ("Breach Crafting")
-        {
-            QuickUI([0.0, "Pseudo crafts 1", "exoticbases;pseudocrafts1"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
-            QuickUI([0.0, "Pseudo crafts 2", "exoticbases;pseudocrafts2"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
-        }
-
-        Section ("MiscRules (safeguards, just in case)")
-        {
-            Description("These augments likely don't drop, but we have a safety rule just in case.");
-            QuickUI([0.0, "Unique-Extracted Augments", "legacytemp;any"], "SH", []);
-        }
-
     }
 
     Section("Highlight specific bases", "Firefly") {
