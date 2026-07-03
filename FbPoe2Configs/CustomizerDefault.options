@@ -9,9 +9,9 @@ DefensiveSearch S10(3, "skip", "hidelayer;outdatedlevelflaskd") { };
 DefensiveSearch S10(3, "skip", "hidelayer;outdatedlevelflaske") { };
 DefensiveSearch S10(3, "skip", "hidelayer;final") { };
 
-Chapter("chapter") {
+Section("Basics", "Exalted_Orb_inventory_icon") {
 
-    SectionTitle("Basics");
+//    SectionTitle("Basics");
 
     Section("General Currency", "Exalted_Orb_inventory_icon", "E") {
         Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize?"], $text, ["normalCurrencyPoe2", "O"]); }
@@ -367,8 +367,8 @@ Chapter("chapter") {
     }
 }
 
-Chapter() {
-    SectionTitle("Endgame Rares & Crafting");
+Section("Endgame Rares & Crafting", "Amethyst_Ring_inventory_icon") {
+//    SectionTitle("Endgame Rares & Crafting");
 
     Section("Hide Armour Classes & Weapon Types", "annullorb.webp") {
         Title("Normal/Magic");
@@ -823,8 +823,8 @@ Chapter() {
     }
 }
 
-Chapter() {
-    SectionTitle("Other Endgame Items");
+Section("Other Endgame Items", "Breach_Precursor_Tablet_inventory_icon") {
+//    SectionTitle("Other Endgame Items");
 
     Section("Flasks & Charms", "Thawing_Charm_inventory_icon") {
         Section("Flasks", "flasklife09.webp") {
@@ -1020,8 +1020,8 @@ Chapter() {
     }
 }
 
-Chapter() {
-    SectionTitle("Campaign");
+Section("Campaign", "Shabby_Hood_inventory_icon") {
+//    SectionTitle("Campaign");
 
     Section("Add custom Show/Hide rules (campaign)", "Firefly") {
 
@@ -1249,8 +1249,8 @@ Chapter() {
     }
 }
 
-Chapter() {
-    SectionTitle("Misc.");
+Section("Misc.", "GoldenKey") {
+//    SectionTitle("Misc.");
 
     Section("Add additional Show/Hide rules", "Firefly") {
         Description("Use this section to add exotic rules and exception. This section is NOT foolproof, you can accidentally hide valuable items by misusing it. With great power comes great responsibility.");
