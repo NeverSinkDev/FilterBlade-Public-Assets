@@ -25,9 +25,10 @@ DefensiveSearch S10(1, "skip", "hidelayer;raresendgame"){ DropLevel 1; ItemLevel
 // VENDOR RECIPES
 //===================================================================================================
 
-Chapter() {
 
-    SectionTitle("General");
+Section("General", "RewardCurrency.webp") {
+// Chapter() {
+//     SectionTitle("General");
 
     Section("Vendor Recipes", "Chromatic") {
 
@@ -715,8 +716,9 @@ Section("Highlight specific bases", "Firefly") {
 //===================================================================================================
 // MAPS
 //===================================================================================================
-Chapter() {
-    SectionTitle("Maps, Fragments and Map-like Items");
+Section("Maps, Fragments and Map-like Items", "RewardMaps.webp") {
+//Chapter() {
+//    SectionTitle("Maps, Fragments and Map-like Items");
 
     Section("Maps - Highlight and Hide", "Firefly") {
 
@@ -977,15 +979,15 @@ Chapter() {
     }
 }
 
-Chapter() { Ad(); }
+// todo: Chapter() { Ad(); }
 
 //===================================================================================================
 // RARES
 //===================================================================================================
 
-Chapter() {
-
-    SectionTitle("Endgame - Rare Tiering (lvl 68+)", "ImpClaw");
+Section("Endgame - Rare Tiering (lvl 68+)", "RewardJewellery.webp") {
+// Chapter() {
+//    SectionTitle("Endgame - Rare Tiering (lvl 68+)", "ImpClaw");
 
     Section("Add custom Show/Hide rule (EG rares)", "Firefly") {
 
@@ -1170,8 +1172,9 @@ Chapter() {
 // CRAFTING
 //===================================================================================================
 
-Chapter() {
-    SectionTitle("Endgame - Special Rares & Crafting (lvl 68+)");
+Section("Endgame - Special Rares & Crafting (lvl 68+)", "CraftingUnlockObject.webp") {
+//Chapter() {
+//    SectionTitle("Endgame - Special Rares & Crafting (lvl 68+)");
 
     Section("High Level Crafting Bases", "CraftingUnlockObject.webp") {
         Description("High level, specific crafting bases are in high demand early in the league and can be useful in SSF environments. This section handles non-influenced versions of these items.");
@@ -1621,8 +1624,9 @@ Chapter() {
     }
 }
 
-Chapter() {
-    SectionTitle("Other Endgame Gear");
+Section("Other Endgame Gear", "CobaltJewel") {
+//Chapter() {
+//    SectionTitle("Other Endgame Gear");
 
     Section("Chancing Bases", "Skyforth") {
         Description("Chancing is considered to be very inefficient by most PoE players, but some enjoy it a lot. Boss drops, recipe-exclusive or league exclusive drops can not be chanced.");
@@ -1863,15 +1867,15 @@ Chapter() {
     }
 }
 
-Chapter() { Ad(); }
+// todo: Chapter() { Ad(); }
 
 //===================================================================================================
 // LEVELING / Campaign
 //===================================================================================================
 
-Chapter() {
-
-    SectionTitle("Campaign (below lvl 68)");
+Section("Campaign (below lvl 68)", "IronRing") {
+//Chapter() {
+//    SectionTitle("Campaign (below lvl 68)");
 
     Section("Add custom Show/Hide rules (campaign)", "Firefly") {
 
@@ -2231,9 +2235,9 @@ Chapter() {
 // MISC ITEMS
 //===================================================================================================
 
-Chapter() {
-
-    SectionTitle("Miscellaneous", "last");
+Section("Miscellaneous", "Empower") {
+//Chapter() {
+//    SectionTitle("Miscellaneous", "last");
 
     Section("Add additional Show/Hide rules", "Firefly") {
     Description("Use this section to add exotic rules and exception. This section is NOT foolproof, you can accidentally hide valuable items by misusing it. With great power comes great responsibility.");
