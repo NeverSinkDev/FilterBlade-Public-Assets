@@ -21,86 +21,7 @@ DefensiveSearch S10(1, "skip", "hidelayer;final"){ DropLevel 1; ItemLevel 60; Ra
 DefensiveSearch S10(1, "skip", "hidelayer;normalmagicendgame"){ DropLevel 1; ItemLevel 99; Rarity Normal; SocketGroup "R"; };
 DefensiveSearch S10(1, "skip", "hidelayer;raresendgame"){ DropLevel 1; ItemLevel 75; Rarity Rare; SocketGroup "R"; };
 
-//===================================================================================================
-// VENDOR RECIPES
-//===================================================================================================
-
-
-Section("General", "RewardCurrency.webp") {
-// Chapter() {
-//     SectionTitle("General");
-
-    Section("Vendor Recipes", "Chromatic") {
-
-        Title("Currency Reward Recipes");
-
-        Description("Disabling recipe item rules will NOT hide uniques, 6links, interesting synthesised items etc. Priorities are handled internally and you don't need to worry about them.");
-        Section("Chromatic Orb", "Chromatic") {
-
-            Search S0(1.0, "RGB Chromatic recipe EG small2x2", "endgamergb;rgbsmall1") {}
-            Search S1(1.0, "RGB Chromatic recipe EG small1x3", "endgamergb;rgbsmall2") {}
-            Search S2(1.0, "RGB Chromatic recipe EG medium", "endgamergb;rgbmedium") {}
-            Search S3(1.0, "RGB Chromatic recipe EG large", "endgamergb;rgblarge") {}
-
-            Title("Endgame Chromatic Recipes");
-            Description("1 Chromatic orb - reward for selling an item with a Red-Green-Blue socket group. The 3 colors need to be linked order and other sockets don't matter. Hover over the scroll left for more info.", "'RGB' items", "It's more efficient to pick up small RGB-items. This recipe is mostly useful during the early stages of a league/character progression. Later on the player usually finds enough natural chromatic orbs to sustain their coloring needs, without needing to do recipes.");
-            QuickUI(S0, "SH", ["AreaLevel"], "Small Items (2x2)");
-            QuickUI(S1, "SH", ["AreaLevel",  "Height"], "Small Items (1x3, 1x4)");
-            QuickUI(S2, "SH", ["AreaLevel"], "Medium-sized Items (2x3)");
-            QuickUI(S3, "SH", ["AreaLevel"], "Large Items (2x4)");
-            Title("Campaign Chromatic Recipes");
-            Description("The campaign chromatic recipe can be changed in the 'Campaign -> Colors and Links' section");
-        }
-
-        Section("Gemcutter's Prism", "GCP") {
-            Description("1 Gemcutter's Prism - reward for selling a single gem with 20% quality gem or multiple gems with a combined total of 40% quality to a vendor.");
-
-            QuickUI([0.0, "Gemcutter recipe high quality gems", "gems->generic;qt2"], "SD", ["Quality", "AreaLevel"], "Max Quality Gems");
-            QuickUI([0.0, "Gemcutter recipe mid quality gems", "gems->generic;qt3"], "SD", ["Quality", "AreaLevel"], "Mid Quality Gems");
-            QuickUI([0.0, "Gemcutter recipe low quality gems", "gems->generic;qt4"], "SD", ["Quality", "AreaLevel"], "Low Quality Gems");
-        }
-
-        Section("Jeweller's Orbs", "Jeweller") {
-            Description("7 Jeweller's Orb - reward for selling an item with 6 sockets.");
-
-            QuickUI([0.0, "Jeweller recipe 6 sockets (large)", "socketslinks;6sockets4h"], "SD", ["AreaLevel", "Height"], "6 sockets (large)");
-            QuickUI([0.0, "Jeweller recipe 6 sockets", "socketslinks;6sockets"], "SD", ["AreaLevel", "Height"], "6 sockets");
-            QuickUI([0.0, "Jeweller recipe 6sock-5links", "socketslinks;5link6sockets"], "SD", ["AreaLevel", "Height"], "6sock-5links");
-        }
-
-        Title("Build & Special-Item Recipes");
-
-
-
-        Section("+1 Skill Gem Recipes", "SkillGemRed1") {
-            Description("By selling a total of 40% quality worth of gems with a specific tag (such as fire) together with a Wand, Sceptre, Rune Dagger or Staff you will be rewarded with a weapon with a +1 GLOBAL level to ALL tagged spell gems. This is a powerful caster weapon early in the endgame.");
-
-            QuickUI([0.0, "+1 Skill Gem Recipe (Cold)", "gems->generic;plusonegemcold"], "SD", ["Quality", "AreaLevel"], "+1 Cold");
-            QuickUI([0.0, "+1 Skill Gem Recipe (Fire)", "gems->generic;plusonegemfire"], "SD", ["Quality", "AreaLevel"], "+1 Fire");
-            QuickUI([0.0, "+1 Skill Gem Recipe (Lightning)", "gems->generic;plusonegemlight"], "SD", ["Quality", "AreaLevel"], "+1 Lightning");
-            QuickUI([0.0, "+1 Skill Gem Recipe (Chaos)", "gems->generic;plusonegemchaos"], "SD", ["Quality", "AreaLevel"], "+1 Chaos");
-            QuickUI([0.0, "+1 Skill Gem Recipe (Physical)", "gems->generic;plusonegemphys"], "SD", ["Quality", "AreaLevel"], "+1 Physical");
-            QuickUI([0.0, "+1 Skill Gem Recipe (Minion)", "gems->generic;plusonegemminion"], "SD", ["Quality", "AreaLevel"], "+1 Minion");
-        }
-
-        Title("Niche and NOT recommended recipes");
-
-        Section("Glassblower's Bauble", "Glassblower") {
-            Description("1 Glassblower's Bauble - reward for selling a single 20% quality flask or multiple quality flasks with a total quality of 40%.", "Glassblower Recipe", "It's recommended to at least use the threshold of 14. This allows you to get 1 glassblower per 3 mid quality flasks. Note that glassblowers can also be acquired by buying it for 8 whetstones from vendors and drop naturally, so the recipe is not very efficient. That being said, glassblowers are in high demand at the start of the league, not only for quality, but also to apply instilling orb recipes onto the player flasks.");
-
-            QuickUI([0.0, "Glassblower recipe top quality", "endgameflasks;any20qualflask"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Max quality flasks");
-            QuickUI([0.0, "Glassblower recipe mid quality", "endgameflasks;qualityhigh"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Mid Quality flasks");
-            QuickUI([0.0, "Glassblower recipe low quality", "endgameflasks;qualitylow"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Low Quality flasks");
-
-            Description("You can find more quality flasks rules in the 'Endgame -> Flasks' and 'Campaign -> Flasks' sections.");
-        }
-    }
-
-    //===================================================================================================
-    // TIER LISTS
-    //===================================================================================================
-
-    Section("Currency - Normal", "RewardCurrency.webp", "E") {
+    Section("Currency", "RewardCurrency.webp", "E") {
 
         Title("Main");
 
@@ -237,6 +158,132 @@ Section("General", "RewardCurrency.webp") {
             ElementAdder_Tier("?CurrencyStackNewTiers", "CurrencyStackListWithArea");
         }
     }
+
+//===================================================================================================
+// CURRENT LEAGUE
+//===================================================================================================
+
+Section("Current League: Mirage", "Mirage_CoinofRestoration") {
+    Description("All other Mirage drops are part of the 'standard' tierlists. For instance all currency drops, astrolabes and coins are part of the currency tierlist.");
+
+    QuickUI([0.0, "Cord Belt", "exoticbaseslower;exoticmiragebases"], "SH", [], "Mirage Exclusive: Cord Belt");
+    QuickUI([0.0, "Mirage Stygian", "exoticbaseslower;stygianmirage"], "SH", [], "Stygian Vise with Mirage Mods");
+    Description("If imbued gems can drop, this will catch them (and any other imbued item). Better handling will be added once we know more.");
+    QuickUI([0.0, "Imbued", "artefact->misc;anyimbued"], "SH", [], "Any Imbued Drop");
+    Description("A little birdy said these may drop from mirage...");
+    QuickUI([0.0, "Enchanted Contracts", "heist->contract;enchanted"], "SH", []);
+    QuickUI([0.0, "Enchanted Blueprints", "heist->blueprint;enchanted"], "SH", []);
+    Description("The iron flask is in huge demand during mirage league. I've added a special rule to give it temporary massive highlight bonuses. I'll look for a more permanent solution next league.");
+    QuickUI([0.0, "ApexTierBasetypes84", "exoticbases;ecotinkbases84"], "SH", ["ItemLevel"], "Iron Flask: 84", []);
+    QuickUI([0.0, "ApexTierBasetypesAny", "exoticbases;ecotinkbases"], "SH", ["ItemLevel"], "Iron Flask", []);
+}
+
+//===================================================================================================
+// CURRENT EVENT
+//===================================================================================================
+
+Section("Current Event: Phrecia+Ancestors", "HonouredTattoooftheWiseMan", "E") {
+        Section("Tattoos", "HonouredTattoooftheWiseMan", "E") {
+            Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
+
+            TierListToolBar("Tattoo");
+
+            Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
+            TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH", "S Tier");
+            TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH", "A Tier");
+            TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH", "B Tier");
+            TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH", "Others");
+
+            // new tiers
+            Conditional("?AncTrialTattooTier") { }
+            ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
+
+            // hide tier
+            Conditional("?AncTrialTattooHidden") { }
+            ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
+        }
+
+        Section("Silver Coins", "Silver Coin") {
+            QuickUI([0.0, "SilverCoinEvent", "currency->leagueexclusive;silvercoin"], "SH", [], "Silver Coins for the Trial", []);
+        }
+}
+
+//===================================================================================================
+// VENDOR RECIPES
+//===================================================================================================
+
+
+Section("General", "RewardEssences.webp") {
+// Chapter() {
+//     SectionTitle("General");
+
+    Section("Vendor Recipes", "Chromatic") {
+
+        Title("Currency Reward Recipes");
+
+        Description("Disabling recipe item rules will NOT hide uniques, 6links, interesting synthesised items etc. Priorities are handled internally and you don't need to worry about them.");
+        Section("Chromatic Orb", "Chromatic") {
+
+            Search S0(1.0, "RGB Chromatic recipe EG small2x2", "endgamergb;rgbsmall1") {}
+            Search S1(1.0, "RGB Chromatic recipe EG small1x3", "endgamergb;rgbsmall2") {}
+            Search S2(1.0, "RGB Chromatic recipe EG medium", "endgamergb;rgbmedium") {}
+            Search S3(1.0, "RGB Chromatic recipe EG large", "endgamergb;rgblarge") {}
+
+            Title("Endgame Chromatic Recipes");
+            Description("1 Chromatic orb - reward for selling an item with a Red-Green-Blue socket group. The 3 colors need to be linked order and other sockets don't matter. Hover over the scroll left for more info.", "'RGB' items", "It's more efficient to pick up small RGB-items. This recipe is mostly useful during the early stages of a league/character progression. Later on the player usually finds enough natural chromatic orbs to sustain their coloring needs, without needing to do recipes.");
+            QuickUI(S0, "SH", ["AreaLevel"], "Small Items (2x2)");
+            QuickUI(S1, "SH", ["AreaLevel",  "Height"], "Small Items (1x3, 1x4)");
+            QuickUI(S2, "SH", ["AreaLevel"], "Medium-sized Items (2x3)");
+            QuickUI(S3, "SH", ["AreaLevel"], "Large Items (2x4)");
+            Title("Campaign Chromatic Recipes");
+            Description("The campaign chromatic recipe can be changed in the 'Campaign -> Colors and Links' section");
+        }
+
+        Section("Gemcutter's Prism", "GCP") {
+            Description("1 Gemcutter's Prism - reward for selling a single gem with 20% quality gem or multiple gems with a combined total of 40% quality to a vendor.");
+
+            QuickUI([0.0, "Gemcutter recipe high quality gems", "gems->generic;qt2"], "SD", ["Quality", "AreaLevel"], "Max Quality Gems");
+            QuickUI([0.0, "Gemcutter recipe mid quality gems", "gems->generic;qt3"], "SD", ["Quality", "AreaLevel"], "Mid Quality Gems");
+            QuickUI([0.0, "Gemcutter recipe low quality gems", "gems->generic;qt4"], "SD", ["Quality", "AreaLevel"], "Low Quality Gems");
+        }
+
+        Section("Jeweller's Orbs", "Jeweller") {
+            Description("7 Jeweller's Orb - reward for selling an item with 6 sockets.");
+
+            QuickUI([0.0, "Jeweller recipe 6 sockets (large)", "socketslinks;6sockets4h"], "SD", ["AreaLevel", "Height"], "6 sockets (large)");
+            QuickUI([0.0, "Jeweller recipe 6 sockets", "socketslinks;6sockets"], "SD", ["AreaLevel", "Height"], "6 sockets");
+            QuickUI([0.0, "Jeweller recipe 6sock-5links", "socketslinks;5link6sockets"], "SD", ["AreaLevel", "Height"], "6sock-5links");
+        }
+
+        Title("Build & Special-Item Recipes");
+
+        Section("+1 Skill Gem Recipes", "SkillGemRed1") {
+            Description("By selling a total of 40% quality worth of gems with a specific tag (such as fire) together with a Wand, Sceptre, Rune Dagger or Staff you will be rewarded with a weapon with a +1 GLOBAL level to ALL tagged spell gems. This is a powerful caster weapon early in the endgame.");
+
+            QuickUI([0.0, "+1 Skill Gem Recipe (Cold)", "gems->generic;plusonegemcold"], "SD", ["Quality", "AreaLevel"], "+1 Cold");
+            QuickUI([0.0, "+1 Skill Gem Recipe (Fire)", "gems->generic;plusonegemfire"], "SD", ["Quality", "AreaLevel"], "+1 Fire");
+            QuickUI([0.0, "+1 Skill Gem Recipe (Lightning)", "gems->generic;plusonegemlight"], "SD", ["Quality", "AreaLevel"], "+1 Lightning");
+            QuickUI([0.0, "+1 Skill Gem Recipe (Chaos)", "gems->generic;plusonegemchaos"], "SD", ["Quality", "AreaLevel"], "+1 Chaos");
+            QuickUI([0.0, "+1 Skill Gem Recipe (Physical)", "gems->generic;plusonegemphys"], "SD", ["Quality", "AreaLevel"], "+1 Physical");
+            QuickUI([0.0, "+1 Skill Gem Recipe (Minion)", "gems->generic;plusonegemminion"], "SD", ["Quality", "AreaLevel"], "+1 Minion");
+        }
+
+        Title("Niche and NOT recommended recipes");
+
+        Section("Glassblower's Bauble", "Glassblower") {
+            Description("1 Glassblower's Bauble - reward for selling a single 20% quality flask or multiple quality flasks with a total quality of 40%.", "Glassblower Recipe", "It's recommended to at least use the threshold of 14. This allows you to get 1 glassblower per 3 mid quality flasks. Note that glassblowers can also be acquired by buying it for 8 whetstones from vendors and drop naturally, so the recipe is not very efficient. That being said, glassblowers are in high demand at the start of the league, not only for quality, but also to apply instilling orb recipes onto the player flasks.");
+
+            QuickUI([0.0, "Glassblower recipe top quality", "endgameflasks;any20qualflask"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Max quality flasks");
+            QuickUI([0.0, "Glassblower recipe mid quality", "endgameflasks;qualityhigh"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Mid Quality flasks");
+            QuickUI([0.0, "Glassblower recipe low quality", "endgameflasks;qualitylow"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Low Quality flasks");
+
+            Description("You can find more quality flasks rules in the 'Endgame -> Flasks' and 'Campaign -> Flasks' sections.");
+        }
+    }
+
+    //===================================================================================================
+    // TIER LISTS
+    //===================================================================================================
 
     Section("Currency - Special", "RewardEssences.webp", "E") {
 
@@ -650,55 +697,6 @@ Section("General", "RewardCurrency.webp") {
         ElementAdder_Tier("?GoldNewTier", "GoldFunc");
     }
 
-//===================================================================================================
-// CURRENT LEAGUE
-//===================================================================================================
-
-Section("Current League: Mirage", "Mirage_CoinofRestoration") {
-    Description("All other Mirage drops are part of the 'standard' tierlists. For instance all currency drops, astrolabes and coins are part of the currency tierlist.");
-
-    QuickUI([0.0, "Cord Belt", "exoticbaseslower;exoticmiragebases"], "SH", [], "Mirage Exclusive: Cord Belt");
-    QuickUI([0.0, "Mirage Stygian", "exoticbaseslower;stygianmirage"], "SH", [], "Stygian Vise with Mirage Mods");
-    Description("If imbued gems can drop, this will catch them (and any other imbued item). Better handling will be added once we know more.");
-    QuickUI([0.0, "Imbued", "artefact->misc;anyimbued"], "SH", [], "Any Imbued Drop");
-    Description("A little birdy said these may drop from mirage...");
-    QuickUI([0.0, "Enchanted Contracts", "heist->contract;enchanted"], "SH", []);
-    QuickUI([0.0, "Enchanted Blueprints", "heist->blueprint;enchanted"], "SH", []);
-    Description("The iron flask is in huge demand during mirage league. I've added a special rule to give it temporary massive highlight bonuses. I'll look for a more permanent solution next league.");
-    QuickUI([0.0, "ApexTierBasetypes84", "exoticbases;ecotinkbases84"], "SH", ["ItemLevel"], "Iron Flask: 84", []);
-    QuickUI([0.0, "ApexTierBasetypesAny", "exoticbases;ecotinkbases"], "SH", ["ItemLevel"], "Iron Flask", []);
-}
-
-//===================================================================================================
-// CURRENT EVENT
-//===================================================================================================
-
-Section("Current Event: Phrecia+Ancestors", "HonouredTattoooftheWiseMan", "E") {
-        Section("Tattoos", "HonouredTattoooftheWiseMan", "E") {
-            Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
-
-            TierListToolBar("Tattoo");
-
-            Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
-            TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH", "S Tier");
-            TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH", "A Tier");
-            TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH", "B Tier");
-            TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH", "Others");
-
-            // new tiers
-            Conditional("?AncTrialTattooTier") { }
-            ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
-
-            // hide tier
-            Conditional("?AncTrialTattooHidden") { }
-            ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
-        }
-
-        Section("Silver Coins", "Silver Coin") {
-            QuickUI([0.0, "SilverCoinEvent", "currency->leagueexclusive;silvercoin"], "SH", [], "Silver Coins for the Trial", []);
-        }
-}
-
 Section("Highlight specific bases", "Firefly") {
 
         Description("Quickly highlight bases by adding a custom rule! If you need more power and options, there's a lot more custom rules lower in the customizer");
@@ -716,7 +714,7 @@ Section("Highlight specific bases", "Firefly") {
 //===================================================================================================
 // MAPS
 //===================================================================================================
-Section("Maps, Fragments and Map-like Items", "RewardMaps.webp") {
+Section("Endgame - Maps, Fragments & Co.", "RewardMaps.webp") {
 //Chapter() {
 //    SectionTitle("Maps, Fragments and Map-like Items");
 
@@ -985,7 +983,7 @@ Section("Maps, Fragments and Map-like Items", "RewardMaps.webp") {
 // RARES
 //===================================================================================================
 
-Section("Endgame - Rare Tiering (lvl 68+)", "RewardJewellery.webp") {
+Section("Endgame - Rares", "RewardJewellery.webp") {
 // Chapter() {
 //    SectionTitle("Endgame - Rare Tiering (lvl 68+)", "ImpClaw");
 
@@ -1172,7 +1170,7 @@ Section("Endgame - Rare Tiering (lvl 68+)", "RewardJewellery.webp") {
 // CRAFTING
 //===================================================================================================
 
-Section("Endgame - Special Rares & Crafting (lvl 68+)", "CraftingUnlockObject.webp") {
+Section("Endgame - Special Rares & Crafting", "CraftingUnlockObject.webp") {
 //Chapter() {
 //    SectionTitle("Endgame - Special Rares & Crafting (lvl 68+)");
 
@@ -1624,7 +1622,7 @@ Section("Endgame - Special Rares & Crafting (lvl 68+)", "CraftingUnlockObject.we
     }
 }
 
-Section("Other Endgame Gear", "CobaltJewel") {
+Section("Endgame - Misc. Gear", "CobaltJewel") {
 //Chapter() {
 //    SectionTitle("Other Endgame Gear");
 
@@ -1873,7 +1871,7 @@ Section("Other Endgame Gear", "CobaltJewel") {
 // LEVELING / Campaign
 //===================================================================================================
 
-Section("Campaign (below lvl 68)", "IronRing") {
+Section("Campaign", "IronRing") {
 //Chapter() {
 //    SectionTitle("Campaign (below lvl 68)");
 
