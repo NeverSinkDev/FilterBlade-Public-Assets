@@ -409,6 +409,8 @@ Section("General", "RewardEssences.webp") {
 
             TierListToolBar("Incubator", [], []);
 
+            Title("Normal tierlist");
+
             IncubatorTierList([0.0, "Incubators T0", "currency->incubators;t2"], "SH", "A Tier");
             IncubatorTierList([0.0, "Incubators T1.5", "currency->incubators;t3"], "SH", "B Tier");
             IncubatorTierList([0.0, "Incubators T1", "currency->incubators;t4"], "SH", "C Tier");
@@ -419,7 +421,7 @@ Section("General", "RewardEssences.webp") {
             Conditional("?LegionIncubatorsNewTier", ["c9.currency.incubators.all"], "notSimpleBuilder") { Show; Class Incubator; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
             ElementAdder_Tier("?LegionIncubatorsNewTier", "IncubatorILvlTierList");
 
-            Divider();
+            Title("Special rules");
 
             // high level
             Function IncubatorILvlTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Incubators", "ItemLevel"], $text); }
@@ -1727,38 +1729,39 @@ Section("Endgame - Misc. Gear", "CobaltJewel") {
         Section("Cluster Jewels: Top Enchantments", null, "E") {
             Warning("This section is economy based: it's generated based on poe.ninja economy data. This section is not perfect. Hide the general section on your own risk.");
 
+            Title("12 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 12 Notes", "jewels->clustereco;n12_i84_t1"], "SDH", "Cluster Jewel: T1, iLvl84, 12 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 12 Notes", "jewels->clustereco;n12_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 12 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 12 Notes", "jewels->clustereco;n12_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 12 Nodes");
-            Divider();
+            Title("11 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 11 Notes", "jewels->clustereco;n11_i84_t1"], "SDH", "Cluster Jewel: T1, iLvl84, 11 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 11 Notes", "jewels->clustereco;n11_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 11 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 11 Notes", "jewels->clustereco;n11_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 11 Nodes");
-            Divider();
+            Title("10 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 10 Notes", "jewels->clustereco;n10_i84_t1"], "SDH", "Cluster Jewel: T1, iLvl84, 10 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 10 Notes", "jewels->clustereco;n10_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 10 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 10 Notes", "jewels->clustereco;n10_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 10 Nodes");
-            Divider();
+            Title("9 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 9 Notes", "jewels->clustereco;n9_i84_t1"], "SDH", "Cluster Jewel: T1, iLvl84, 9 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 9 Notes", "jewels->clustereco;n9_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 9 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 9 Notes", "jewels->clustereco;n9_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 9 Nodes");
-            Divider();
+            Title("8 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 8 Notes", "jewels->clustereco;n8_i84_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 8 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 8 Notes", "jewels->clustereco;n8_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 8 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 8 Notes", "jewels->clustereco;n8_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 8 Nodes");
-            Divider();
+            Title("6 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 6 Notes", "jewels->clustereco;n6_i84_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 6 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 6 Notes", "jewels->clustereco;n6_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 6 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 6 Notes", "jewels->clustereco;n6_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 6 Nodes");
-            Divider();
+            Title("4-5 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 4 Notes", "jewels->clustereco;n4_i84_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 4-5 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 4 Notes", "jewels->clustereco;n4_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 4-5 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 4 Notes", "jewels->clustereco;n4_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 4-5 Nodes");
-            Divider();
+            Title("3 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 3 Notes", "jewels->clustereco;n3_i84_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 3 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 3 Notes", "jewels->clustereco;n3_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 3 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 3 Notes", "jewels->clustereco;n3_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 3 Nodes");
-            Divider();
+            Title("2 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl84, 2 Notes", "jewels->clustereco;n2_i84_t1"], "SHD", "Cluster Jewel: T1, iLvl84, 2 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl75, 2 Notes", "jewels->clustereco;n2_i75_t1"], "SHD", "Cluster Jewel: T1, iLvl75, 2 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T1, iLvl68, 2 Notes", "jewels->clustereco;n2_i68_t1"], "SHD", "Cluster Jewel: T1, iLvl68, 2 Nodes");
@@ -1767,38 +1770,39 @@ Section("Endgame - Misc. Gear", "CobaltJewel") {
         Section("Cluster Jewels: Good Enchantments", null, "E") {
             Warning("This section is economy based: it's generated based on poe.ninja economy data. This section is not perfect. Hide the general section on your own risk.");
 
+            Title("12 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 12 Notes", "jewels->clustereco;n12_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 12 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 12 Notes", "jewels->clustereco;n12_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 12 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 12 Notes", "jewels->clustereco;n12_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 12 Nodes");
-            Divider();
+            Title("11 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 11 Notes", "jewels->clustereco;n11_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 11 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 11 Notes", "jewels->clustereco;n11_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 11 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 11 Notes", "jewels->clustereco;n11_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 11 Nodes");
-            Divider();
+            Title("10 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 10 Notes", "jewels->clustereco;n10_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 10 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 10 Notes", "jewels->clustereco;n10_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 10 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 10 Notes", "jewels->clustereco;n10_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 10 Nodes");
-            Divider();
+            Title("9 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 9 Notes", "jewels->clustereco;n9_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 9 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 9 Notes", "jewels->clustereco;n9_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 9 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 9 Notes", "jewels->clustereco;n9_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 9 Nodes");
-            Divider();
+            Title("8 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 8 Notes", "jewels->clustereco;n8_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 8 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 8 Notes", "jewels->clustereco;n8_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 8 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 8 Notes", "jewels->clustereco;n8_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 8 Nodes");
-            Divider();
+            Title("6 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 6 Notes", "jewels->clustereco;n6_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 6 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 6 Notes", "jewels->clustereco;n6_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 6 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 6 Notes", "jewels->clustereco;n6_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 6 Nodes");
-            Divider();
+            Title("4-5 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 4 Notes", "jewels->clustereco;n4_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 4-5 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 4 Notes", "jewels->clustereco;n4_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 4-5 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 4 Notes", "jewels->clustereco;n4_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 4-5 Nodes");
-            Divider();
+            Title("3 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 3 Notes", "jewels->clustereco;n3_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 3 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 3 Notes", "jewels->clustereco;n3_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 3 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 3 Notes", "jewels->clustereco;n3_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 3 Nodes");
-            Divider();
+            Title("2 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl84, 2 Notes", "jewels->clustereco;n2_i84_t2"], "SHD", "Cluster Jewel: T2, iLvl84, 2 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl75, 2 Notes", "jewels->clustereco;n2_i75_t2"], "SHD", "Cluster Jewel: T2, iLvl75, 2 Nodes");
             ClusterJewelTierList_Ench([0.0, "Cluster Jewel: T2, iLvl68, 2 Notes", "jewels->clustereco;n2_i68_t2"], "SHD", "Cluster Jewel: T2, iLvl68, 2 Nodes");

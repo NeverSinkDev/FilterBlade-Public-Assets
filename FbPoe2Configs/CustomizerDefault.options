@@ -956,16 +956,17 @@ Section("Other Endgame Items", "Breach_Precursor_Tablet_inventory_icon") {
         }
 
         Section("Ascendancy Keys", "ultimatumtrialitem.webp") {
+            Title("Sanctum");
             QuickUI([0.0, "Djinn Barya, Top Level", "miscmapitemsextra;trialkeysanctumtop"], "SH", ["ItemLevel"], "Sanctum best rewards");
             QuickUI([0.0, "Djinn Barya, High Level", "miscmapitemsextra;trialkeysanctum3"], "SH", ["ItemLevel"], "Sanctum 3-4 points");
             QuickUI([0.0, "Djinn Barya Leveling 2", "miscmapitemsextra;trialkeysanctum2"], "SH", ["ItemLevel"], "Sanctum 2 points");
             QuickUI([0.0, "Djinn Barya Leveling 1", "miscmapitemsextra;trialkeysanctum1"], "SH", ["ItemLevel"], "Sanctum 1 points");
-            Divider();
+            Title("Ultimatum");
             QuickUI([0.0, "Ultimatum Reward", "miscmapitemsextra;trialkeyultimatumreward"], "SH", ["RarityU"]);
             QuickUI([0.0, "Ultimatum, Top Level", "miscmapitemsextra;trialkeyultimatumtop"], "SH", ["ItemLevel"]);
             QuickUI([0.0, "Ultimatum, High Level", "miscmapitemsextra;trialkeyultimatumhigh"], "SH", ["ItemLevel"]);
             QuickUI([0.0, "Ultimatum", "miscmapitemsextra;trialkeyultimatumlow"], "SH", ["ItemLevel"]);
-            Divider();
+            Title("Other");
             QuickUI([0.0, "Special Trials", "miscmapitemsextra;trialspecial"], "SH", ["ItemLevel"]);
         }
 
