@@ -21,147 +21,529 @@ DefensiveSearch S10(1, "skip", "hidelayer;final"){ DropLevel 1; ItemLevel 60; Ra
 DefensiveSearch S10(1, "skip", "hidelayer;normalmagicendgame"){ DropLevel 1; ItemLevel 99; Rarity Normal; SocketGroup "R"; };
 DefensiveSearch S10(1, "skip", "hidelayer;raresendgame"){ DropLevel 1; ItemLevel 75; Rarity Rare; SocketGroup "R"; };
 
-    Section("Currency", "RewardCurrency.webp", "E") {
+Chapter(){
 
-        Title("Main");
+Section("Currency", "RewardCurrency.webp", "E") {
 
-        MultiTierThresholdEditor(
-            ["Currency God Tier 1", "Currency God Tier 2", "Currency High Tier 1", "Currency High Tier 2", "Currency High Tier 3", "Currency Mid Tier 1", "Currency Mid Tier 2", "Currency Basic Tier 1", "Currency Basic Tier 2", "Currency Basic Tier 3", "Currency Basic Tier 4" ],
-            ["Stacked Currency - T1, Huge", "Stacked Currency - T2, Huge", "Stacked Currency - T3, Huge", "Stacked Currency - T4, Huge", "Stacked Currency - T5, Huge", "Stacked Currency - T6, Huge", "Stacked Currency - T7, Huge", "Stacked Currency - T1, Large", "Stacked Currency - T2, Large", "Stacked Currency - T3, Large", "Stacked Currency - T4, Large", "Stacked Currency - T5, Large", "Stacked Currency - T6, Large", "Stacked Currency - T7, Large", "Stacked Currency - High Supply Large", "Stacked Currency - High Supply Medium", "Stacked Currency - High Supply Small", "Stacked Currency - Low Supply Large", "Stacked Currency - Low Supply Medium", "Stacked Currency - Low Supply Small", "Stacked Currency - Portal Large", "Stacked Currency - Portal Medium", "Stacked Currency - Portal Small", "Stacked Currency - Wisdom Large", "Stacked Currency - Wisdom Medium", "Stacked Currency - Wisdom Small"],
-            "BaseType",
-            "StackSize",
-            [],
-            [["Currency Basic Tier 1",    "Stacked Currency - High Supply Small", "Stacked Currency - High Supply Large"],
-                ["Currency Basic Tier 2", "Stacked Currency - Low Supply Small", "Stacked Currency - Low Supply Large"],
-                ["Currency Basic Tier 3", "Stacked Currency - Portal Small", "Stacked Currency - Portal Large"],
-                ["Currency Basic Tier 4", "Stacked Currency - Wisdom Small", "Stacked Currency - Wisdom Large"]]);
+    Title("Main");
 
-        Section("General Currency", "Chaos", "E") {
-            Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["normalCurrency", "O"]); }
+    MultiTierThresholdEditor(
+        ["Currency God Tier 1", "Currency God Tier 2", "Currency High Tier 1", "Currency High Tier 2", "Currency High Tier 3", "Currency Mid Tier 1", "Currency Mid Tier 2", "Currency Basic Tier 1", "Currency Basic Tier 2", "Currency Basic Tier 3", "Currency Basic Tier 4" ],
+        ["Stacked Currency - T1, Huge", "Stacked Currency - T2, Huge", "Stacked Currency - T3, Huge", "Stacked Currency - T4, Huge", "Stacked Currency - T5, Huge", "Stacked Currency - T6, Huge", "Stacked Currency - T7, Huge", "Stacked Currency - T1, Large", "Stacked Currency - T2, Large", "Stacked Currency - T3, Large", "Stacked Currency - T4, Large", "Stacked Currency - T5, Large", "Stacked Currency - T6, Large", "Stacked Currency - T7, Large", "Stacked Currency - High Supply Large", "Stacked Currency - High Supply Medium", "Stacked Currency - High Supply Small", "Stacked Currency - Low Supply Large", "Stacked Currency - Low Supply Medium", "Stacked Currency - Low Supply Small", "Stacked Currency - Portal Large", "Stacked Currency - Portal Medium", "Stacked Currency - Portal Small", "Stacked Currency - Wisdom Large", "Stacked Currency - Wisdom Medium", "Stacked Currency - Wisdom Small"],
+        "BaseType",
+        "StackSize",
+        [],
+        [["Currency Basic Tier 1",    "Stacked Currency - High Supply Small", "Stacked Currency - High Supply Large"],
+            ["Currency Basic Tier 2", "Stacked Currency - Low Supply Small", "Stacked Currency - Low Supply Large"],
+            ["Currency Basic Tier 3", "Stacked Currency - Portal Small", "Stacked Currency - Portal Large"],
+            ["Currency Basic Tier 4", "Stacked Currency - Wisdom Small", "Stacked Currency - Wisdom Large"]]);
 
-            TierListToolBar("Currency", [], ["Sacred Crystallised Lifeforce", "Primal Crystallised Lifeforce", "Vivid Crystallised Lifeforce", "Wild Crystallised Lifeforce"]); // ignore lifeforce because it always drops in huge stacks and poeNinja only considers the individual price
-            Description("DRAG & DROP items to change the tier. Add new tiers at the bottom or in the toolbar. Hover over the wisdom scroll to receive additional advise for currency management.", "Currency Strategy", "Path of Exile rewards speed. It's an efficient strategy to save time by picking up just the minimum amount of scrolls, scraps, augments and other low currency. You can even completely stop picking them up. Sell transmutation orbs and whetstones for a 1:4 wisdom scroll gain and armorer scraps for 1:2 wisdom scrolls. You can also buy a portal gem to save on portal scrolls. <hr> You can use the 'Stacked Tiering Mode' above to automate behaviour for stacked item drops! <hr> This list is already economy-updated if you're using the SC/HC base filter! <hr> Remember that there are special rules for currency during the campaign and for stacked currency.");
+    Section("General Currency", "Chaos", "E") {
+        Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["normalCurrency", "O"]); }
 
-            CurrencyList([3.0, "Currency God Tier 1", "currency;t1exalted"], "S", "S Tier:");
-            CurrencyList([3.0, "Currency God Tier 2", "currency;t2divine"], "SH", "A Tier:");
-            CurrencyList([3.0, "Currency High Tier 1", "currency;t3annul"], "SH", "B Tier:");
-            CurrencyList([3.0, "Currency High Tier 2", "currency;t4chaos"], "SH", "C Tier:");
-            CurrencyList([3.0, "Currency High Tier 3", "currency;t5alchemy"], "SH", "D Tier:");
-            CurrencyList([3.0, "Currency Mid Tier 1", "currency;t6chrom"], "SH", "E+ Tier:");
-            CurrencyList([3.0, "Currency Mid Tier 2", "currency;t7chance"], "SH", "E- Tier:");
-            CurrencyList([3.0, "Currency Basic Tier 1", "currency;t8trans"], "SH", "Supplies 1 (Transmutes)");
-            CurrencyList([3.0, "Currency Basic Tier 2", "currency;t9armour"], "SH", "Supplies 2 (Armourers)");
-            CurrencyList([3.0, "Currency Basic Tier 3", "currency;tportal"], "SH", "Supplies 3 (Portals)");
-            CurrencyList([3.0, "Currency Basic Tier 4", "currency;twisdom"], "SH", "Supplies 4 (Wisdoms)");
+        TierListToolBar("Currency", [], ["Sacred Crystallised Lifeforce", "Primal Crystallised Lifeforce", "Vivid Crystallised Lifeforce", "Wild Crystallised Lifeforce"]); // ignore lifeforce because it always drops in huge stacks and poeNinja only considers the individual price
+        Description("DRAG & DROP items to change the tier. Add new tiers at the bottom or in the toolbar. Hover over the wisdom scroll to receive additional advise for currency management.", "Currency Strategy", "Path of Exile rewards speed. It's an efficient strategy to save time by picking up just the minimum amount of scrolls, scraps, augments and other low currency. You can even completely stop picking them up. Sell transmutation orbs and whetstones for a 1:4 wisdom scroll gain and armorer scraps for 1:2 wisdom scrolls. You can also buy a portal gem to save on portal scrolls. <hr> You can use the 'Stacked Tiering Mode' above to automate behaviour for stacked item drops! <hr> This list is already economy-updated if you're using the SC/HC base filter! <hr> Remember that there are special rules for currency during the campaign and for stacked currency.");
 
-            Description("Remember that there are special rules for currency during the campaign and for stacked currency.");
+        CurrencyList([3.0, "Currency God Tier 1", "currency;t1exalted"], "S", "S Tier:");
+        CurrencyList([3.0, "Currency God Tier 2", "currency;t2divine"], "SH", "A Tier:");
+        CurrencyList([3.0, "Currency High Tier 1", "currency;t3annul"], "SH", "B Tier:");
+        CurrencyList([3.0, "Currency High Tier 2", "currency;t4chaos"], "SH", "C Tier:");
+        CurrencyList([3.0, "Currency High Tier 3", "currency;t5alchemy"], "SH", "D Tier:");
+        CurrencyList([3.0, "Currency Mid Tier 1", "currency;t6chrom"], "SH", "E+ Tier:");
+        CurrencyList([3.0, "Currency Mid Tier 2", "currency;t7chance"], "SH", "E- Tier:");
+        CurrencyList([3.0, "Currency Basic Tier 1", "currency;t8trans"], "SH", "Supplies 1 (Transmutes)");
+        CurrencyList([3.0, "Currency Basic Tier 2", "currency;t9armour"], "SH", "Supplies 2 (Armourers)");
+        CurrencyList([3.0, "Currency Basic Tier 3", "currency;tportal"], "SH", "Supplies 3 (Portals)");
+        CurrencyList([3.0, "Currency Basic Tier 4", "currency;twisdom"], "SH", "Supplies 4 (Wisdoms)");
 
-            Conditional("?CurrencyNewTiers") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?CurrencyNewTiers", "CurrencyList");
+        Description("Remember that there are special rules for currency during the campaign and for stacked currency.");
 
-            Conditional("?CurrencyNewTiersHidden") { }
-            ElementAdder_Tier("?CurrencyNewTiersHidden", null, true, "normalCurrency", "OH");
-        }
+        Conditional("?CurrencyNewTiers") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+        ElementAdder_Tier("?CurrencyNewTiers", "CurrencyList");
 
-        Title("Stacked Currency Drops (Endgame)");
-
-        Function CurrencyStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Currency", "DO"]); }
-        Function CurrencyStackListWithArea($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
-
-        Section("Large Stacks", "Chaos", "E") {
-            Description("These tiers are value based. A single Chaos Orb is in 'C Tier', 3 of them will be in 'B Tier'. Use the 'Custom Stacked Tiering Mode' to auto-Manage this list");
-            CurrencyStackList([0.0, "Stacked Currency - T1, Huge", "currency->stackedsix;t1"], "SD", "S Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T2, Huge", "currency->stackedsix;t2"], "SD", "A Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T3, Huge", "currency->stackedsix;t3"], "SD", "B Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T4, Huge", "currency->stackedsix;t4"], "SD", "C Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T5, Huge", "currency->stackedsix;t5"], "SD", "D Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T6, Huge", "currency->stackedsix;t6"], "SD", "E+ Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T7, Huge", "currency->stackedsix;t7"], "SD", "E- Tier");
-        }
-
-        Section("Small Stacks", "GCP", "E") {
-            Description("These tiers are value based. A single Chaos Orb is in 'C Tier', 3 of them will be in 'B Tier'. Use the 'Custom Stacked Tiering Mode' to auto-Manage this list");
-            CurrencyStackList([0.0, "Stacked Currency - T1, Large", "currency->stackedthree;t1"], "SD", "S Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T2, Large", "currency->stackedthree;t2"], "SD", "A Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T3, Large", "currency->stackedthree;t3"], "SD", "B Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T4, Large", "currency->stackedthree;t4"], "SD", "C Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T5, Large", "currency->stackedthree;t5"], "SD", "D Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T6, Large", "currency->stackedthree;t6"], "SD", "E+ Tier");
-            CurrencyStackList([0.0, "Stacked Currency - T7, Large", "currency->stackedthree;t7"], "SD", "E- Tier");
-        }
-
-        Section("Stacked Supplies: Trans, Armour+", "Transmut") {
-            Title("Higher Supplies: Transmutes, Whetstones");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Large", "currency->stackedsupplieshigh;t1"], "SD", "Higher Supplies: 10+ Stack");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Medium", "currency->stackedsupplieshigh;t2"], "SD", "Higher Supplies: 5+ Stack");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Small", "currency->stackedsupplieshigh;t3"], "SD", "Higher Supplies: 3+ Stack");
-            Title("Lower Supplies: Armourers, Augments");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - Low Supply Large", "currency->stackedsupplieslow;t1"], "SD", "Lower Supplies: 10+ Stack");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - Low Supply Medium", "currency->stackedsupplieslow;t2"], "SD", "Lower Supplies: 5+ Stack");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - Low Supply Small", "currency->stackedsupplieslow;t3"], "SD", "Lower Supplies: 3+ Stack");
-        }
-
-        Section("Stacked Supplies: Wisdoms&Portals", "PortalScroll") {
-            Title("Portal Scrolls");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - Portal Large", "currency->stackedsuppliesportal;t1"], "SD", "Portal Scrolls: 10+ Stack");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - Portal Medium", "currency->stackedsuppliesportal;t2"], "SD", "Portal Scrolls: 5+ Stack");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - Portal Small", "currency->stackedsuppliesportal;t3"], "SD", "Portal Scrolls: 3+ Stack");
-            Title("Wisdom Scrolls");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - Wisdom Large", "currency->stackedsupplieswisdom;t1"], "SD", "Wisdom Scrolls: 10+ Stack");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - Wisdom Medium", "currency->stackedsupplieswisdom;t2"], "SD", "Wisdom Scrolls: 5+ Stack");
-            CurrencyStackListWithArea([0.0, "Stacked Currency - Wisdom Small", "currency->stackedsupplieswisdom;t3"], "SD", "Wisdom Scrolls: 3+ Stack");
-        }
-
-        Title("Currency Drops during the Campaign");
-
-        Section("Campaign Specific - General", "Regret") {
-            Function LevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["Currency", "DO"]); }
-
-            Title("Campaign: Gem Shopping Currencies");
-            LevelingStackList([0.0, "Currency during leveling 5", "currency->leveling;t2chance"], "SH", "Campaign: Chance Orbs");
-            LevelingStackList([0.0, "Currency during leveling 3 early", "currency->leveling;t3transearly"], "SH", "Campaign: Trans&alts Act1-3");
-            LevelingStackList([0.0, "Currency during leveling 1", "currency->leveling;t3trans"], "SH", "Campaign: Trans&alts");
-
-            Title("Campaign: Useful Campaign Currencies");
-            LevelingStackList([0.0, "Currency during leveling 0", "currency->leveling;t1binding"], "SH", "Campaign: Binding Orbs");
-            QuickUI([0.0, "Essences while leveling", "currency->leveling;essences"], "SH", ["AreaLevel"], "Campaign: Essences", ["essences"]);
-
-            LevelingStackList([0.0, "Currency during leveling 4 misc", "currency->leveling;t4misc"], "SH", "Campaign: Quality & Chromatics");
-            LevelingStackList([0.0, "Currency during leveling 5 aug", "currency->leveling;t5aug"], "SH", "Campaign: Augments");
-            LevelingStackList([0.0, "Currency during leveling 3", "currency->leveling;portal"], "SH", "Campaign: Portals");
-            LevelingStackList([0.0, "Currency during leveling 4", "currency->leveling;wisdom"], "SH", "Campaign: Wisdoms");
-
-            Conditional("?CurrencyLevelingNewTiers") { Show; Class Currency; AreaLevel < 65; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?CurrencyLevelingNewTiers", "LevelingStackList");
-        }
-
-        Section("Campaign Specific - Stacked Drops", "Transmut") {
-            Function CurrencyLevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
-
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Chance", "currency->levelingstacked;t2chance"], "SD", "Stacked Chance Orbs+");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Transmutations", "currency->levelingstacked;t3trans"], "SD", "Stacked Trans&Alt");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Misc", "currency->levelingstacked;t4misc"], "SD", "Stacked Misc");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign T5 Aug", "currency->levelingstacked;t5aug"], "SD", "Stacked Augment");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Portal Scrolls", "currency->levelingstacked;portal"], "SD", "Stacked Portals");
-            CurrencyLevelingStackList([0.0, "Stacked Campaign Wisdom Scrolls", "currency->levelingstacked;wisdom"], "SD", "Stacked Wisdoms");
-
-            Conditional("?CurrencyLevelingStacksNewTiers") {  }
-            ElementAdder_Tier("?CurrencyLevelingStacksNewTiers", "CurrencyLevelingStackList");
-        }
-
-        Title("Custom");
-
-        Section("Add Custom Currency Rules", "Firefly") {
-            Description("For all your special AreaLevel & StackSize Currency needs!"");
-
-            Conditional("?CurrencyStackNewTiers", ["c9.currency.stacked.all"], "notSimpleBuilder") { Show; Class Currency; StackSize >= 3; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?CurrencyStackNewTiers", "CurrencyStackListWithArea");
-        }
+        Conditional("?CurrencyNewTiersHidden") { }
+        ElementAdder_Tier("?CurrencyNewTiersHidden", null, true, "normalCurrency", "OH");
     }
 
+    Title("Stacked Currency Drops (Endgame)");
+
+    Function CurrencyStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Currency", "DO"]); }
+    Function CurrencyStackListWithArea($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
+
+    Section("Large Stacks", "Chaos", "E") {
+        Description("These tiers are value based. A single Chaos Orb is in 'C Tier', 3 of them will be in 'B Tier'. Use the 'Custom Stacked Tiering Mode' to auto-Manage this list");
+        CurrencyStackList([0.0, "Stacked Currency - T1, Huge", "currency->stackedsix;t1"], "SD", "S Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T2, Huge", "currency->stackedsix;t2"], "SD", "A Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T3, Huge", "currency->stackedsix;t3"], "SD", "B Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T4, Huge", "currency->stackedsix;t4"], "SD", "C Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T5, Huge", "currency->stackedsix;t5"], "SD", "D Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T6, Huge", "currency->stackedsix;t6"], "SD", "E+ Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T7, Huge", "currency->stackedsix;t7"], "SD", "E- Tier");
+    }
+
+    Section("Small Stacks", "GCP", "E") {
+        Description("These tiers are value based. A single Chaos Orb is in 'C Tier', 3 of them will be in 'B Tier'. Use the 'Custom Stacked Tiering Mode' to auto-Manage this list");
+        CurrencyStackList([0.0, "Stacked Currency - T1, Large", "currency->stackedthree;t1"], "SD", "S Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T2, Large", "currency->stackedthree;t2"], "SD", "A Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T3, Large", "currency->stackedthree;t3"], "SD", "B Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T4, Large", "currency->stackedthree;t4"], "SD", "C Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T5, Large", "currency->stackedthree;t5"], "SD", "D Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T6, Large", "currency->stackedthree;t6"], "SD", "E+ Tier");
+        CurrencyStackList([0.0, "Stacked Currency - T7, Large", "currency->stackedthree;t7"], "SD", "E- Tier");
+    }
+
+    Section("Stacked Supplies: Trans, Armour+", "Transmut") {
+        Title("Higher Supplies: Transmutes, Whetstones");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Large", "currency->stackedsupplieshigh;t1"], "SD", "Higher Supplies: 10+ Stack");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Medium", "currency->stackedsupplieshigh;t2"], "SD", "Higher Supplies: 5+ Stack");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - High Supply Small", "currency->stackedsupplieshigh;t3"], "SD", "Higher Supplies: 3+ Stack");
+        Title("Lower Supplies: Armourers, Augments");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - Low Supply Large", "currency->stackedsupplieslow;t1"], "SD", "Lower Supplies: 10+ Stack");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - Low Supply Medium", "currency->stackedsupplieslow;t2"], "SD", "Lower Supplies: 5+ Stack");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - Low Supply Small", "currency->stackedsupplieslow;t3"], "SD", "Lower Supplies: 3+ Stack");
+    }
+
+    Section("Stacked Supplies: Wisdoms&Portals", "PortalScroll") {
+        Title("Portal Scrolls");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - Portal Large", "currency->stackedsuppliesportal;t1"], "SD", "Portal Scrolls: 10+ Stack");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - Portal Medium", "currency->stackedsuppliesportal;t2"], "SD", "Portal Scrolls: 5+ Stack");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - Portal Small", "currency->stackedsuppliesportal;t3"], "SD", "Portal Scrolls: 3+ Stack");
+        Title("Wisdom Scrolls");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - Wisdom Large", "currency->stackedsupplieswisdom;t1"], "SD", "Wisdom Scrolls: 10+ Stack");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - Wisdom Medium", "currency->stackedsupplieswisdom;t2"], "SD", "Wisdom Scrolls: 5+ Stack");
+        CurrencyStackListWithArea([0.0, "Stacked Currency - Wisdom Small", "currency->stackedsupplieswisdom;t3"], "SD", "Wisdom Scrolls: 3+ Stack");
+    }
+
+    Title("Currency Drops during the Campaign");
+
+    Section("Campaign Specific - General", "Regret") {
+        Function LevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["Currency", "DO"]); }
+
+        Title("Campaign: Gem Shopping Currencies");
+        LevelingStackList([0.0, "Currency during leveling 5", "currency->leveling;t2chance"], "SH", "Campaign: Chance Orbs");
+        LevelingStackList([0.0, "Currency during leveling 3 early", "currency->leveling;t3transearly"], "SH", "Campaign: Trans&alts Act1-3");
+        LevelingStackList([0.0, "Currency during leveling 1", "currency->leveling;t3trans"], "SH", "Campaign: Trans&alts");
+
+        Title("Campaign: Useful Campaign Currencies");
+        LevelingStackList([0.0, "Currency during leveling 0", "currency->leveling;t1binding"], "SH", "Campaign: Binding Orbs");
+        QuickUI([0.0, "Essences while leveling", "currency->leveling;essences"], "SH", ["AreaLevel"], "Campaign: Essences", ["essences"]);
+
+        LevelingStackList([0.0, "Currency during leveling 4 misc", "currency->leveling;t4misc"], "SH", "Campaign: Quality & Chromatics");
+        LevelingStackList([0.0, "Currency during leveling 5 aug", "currency->leveling;t5aug"], "SH", "Campaign: Augments");
+        LevelingStackList([0.0, "Currency during leveling 3", "currency->leveling;portal"], "SH", "Campaign: Portals");
+        LevelingStackList([0.0, "Currency during leveling 4", "currency->leveling;wisdom"], "SH", "Campaign: Wisdoms");
+
+        Conditional("?CurrencyLevelingNewTiers") { Show; Class Currency; AreaLevel < 65; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+        ElementAdder_Tier("?CurrencyLevelingNewTiers", "LevelingStackList");
+    }
+
+    Section("Campaign Specific - Stacked Drops", "Transmut") {
+        Function CurrencyLevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
+
+        CurrencyLevelingStackList([0.0, "Stacked Campaign Chance", "currency->levelingstacked;t2chance"], "SD", "Stacked Chance Orbs+");
+        CurrencyLevelingStackList([0.0, "Stacked Campaign Transmutations", "currency->levelingstacked;t3trans"], "SD", "Stacked Trans&Alt");
+        CurrencyLevelingStackList([0.0, "Stacked Campaign Misc", "currency->levelingstacked;t4misc"], "SD", "Stacked Misc");
+        CurrencyLevelingStackList([0.0, "Stacked Campaign T5 Aug", "currency->levelingstacked;t5aug"], "SD", "Stacked Augment");
+        CurrencyLevelingStackList([0.0, "Stacked Campaign Portal Scrolls", "currency->levelingstacked;portal"], "SD", "Stacked Portals");
+        CurrencyLevelingStackList([0.0, "Stacked Campaign Wisdom Scrolls", "currency->levelingstacked;wisdom"], "SD", "Stacked Wisdoms");
+
+        Conditional("?CurrencyLevelingStacksNewTiers") {  }
+        ElementAdder_Tier("?CurrencyLevelingStacksNewTiers", "CurrencyLevelingStackList");
+    }
+
+    Title("Custom");
+
+    Section("Add Custom Currency Rules", "Firefly") {
+        Description("For all your special AreaLevel & StackSize Currency needs!"");
+
+        Conditional("?CurrencyStackNewTiers", ["c9.currency.stacked.all"], "notSimpleBuilder") { Show; Class Currency; StackSize >= 3; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+        ElementAdder_Tier("?CurrencyStackNewTiers", "CurrencyStackListWithArea");
+    }
+}
+
+Section("Currency - Special", "RewardEssences.webp", "E") {
+
+    Title("Crafting");
+
+    Section("Delve Fossils & Resonators", "RewardFossils.webp", "E") {
+        Function FossilTierFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["fossilsWithResonators", "O"]); }
+
+        TierListToolBar("Fossil", [], []);
+
+        FossilTierFunc([0.0, "Delve Currency Fossils T1", "currency->fossil;t1"], "SH", "S Tier");
+        FossilTierFunc([0.0, "Delve Currency Fossils T2", "currency->fossil;t2"], "SH", "A Tier");
+        FossilTierFunc([0.0, "Delve Currency Fossils T3", "currency->fossil;t3"], "SH", "B Tier");
+        FossilTierFunc([0.0, "Delve Currency Fossils T4", "currency->fossil;t4"], "SH", "C Tier");
+        FossilTierFunc([0.0, "Delve Currency Fossils T5", "currency->fossil;t5"], "SH", "D Tier");
+        QuickUI([0.0, "Remaining Fossils", "currency->fossil;exhide"], "SH", [], "", false, "Untiered Fossils, which are not matched by any of the above rules, probably due to unmet AreaLevel requirements.");
+
+        // new tiers
+        Function FossilTierStackFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["fossilsWithResonators", "O"]); }
+        Conditional("?DelveFossilsNewTier") { }
+        ElementAdder_Tier("?DelveFossilsNewTier", "FossilTierStackFunc");
+
+        Conditional("?FossilNewTiersHidden") { }
+        ElementAdder_Tier("?FossilNewTiersHidden", null, true, "fossilsWithResonators", "OH");
+    }
+
+    Section("Delirium Orbs", "RewardChestDelirium.webp", "E") {
+        TierListToolBar("DeliriumOrb", [], []);
+
+        Function DeliriumOrbTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["DeliriumOrbs", "O"]); }
+
+        DeliriumOrbTierList([0.0, "Delirium Orbs Tier 1", "currency->deliriumorbs;t1"], "SH", "S Tier");
+        QuickUI([0.0, "Delirium Orbs Tier 2", "currency->deliriumorbs;t2"], "SH", [], "A Tier", ["DeliriumOrbs", "O"]);
+        QuickUI([0.0, "Delirium Orbs Tier 3", "currency->deliriumorbs;t3"], "SH", [], "Others", ["DeliriumOrbs", "O"]);
+
+        Conditional("?DeliriumOrbNewTier") { }
+        ElementAdder_Tier("?DeliriumOrbNewTier", "DeliriumOrbTierList");
+
+        Conditional("?DeliriumOrbNewTiersHidden") { }
+        ElementAdder_Tier("?DeliriumOrbNewTiersHidden", null, true, "DeliriumOrbs", "OH");
+    }
+
+    Section("Blight Oils", "RewardBlight.webp", "E") {
+        Function OilTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel", "StackSize"], $text, ["BlightOils", "O"]); }
+
+        TierListToolBar("Oil", [], []);
+
+        OilTierList([0.0, "Blight Oils T1", "currency->oil;t1"], "SH", "S Tier");
+        OilTierList([0.0, "Blight Oils T2", "currency->oil;t2"], "SH", "A Tier");
+        OilTierList([0.0, "Blight Oils T3", "currency->oil;t3"], "SH", "B Tier");
+        OilTierList([0.0, "Blight Oils T4", "currency->oil;t4"], "SH", "C Tier");
+        OilTierList([0.0, "Blight Oils T5", "currency->oil;t5"], "SH", "Others");
+        QuickUI([0.0, "Remaining Oils", "currency->oil;exhide"], "SH", [], "", false, "Untiered oils, which are not matched by any of the above rules, probably due to unmet AreaLevel requirements.");
+
+        Conditional("?BlightOilNewTier") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+        ElementAdder_Tier("?BlightOilNewTier", "OilTierList");
+
+        Conditional("?BlightOilNewTiersHidden") { }
+        ElementAdder_Tier("?BlightOilNewTiersHidden", null, true, "BlightOils", "OH");
+    }
+
+    Section("Harvest Lifeforce", "Lifeforce")
+    {
+        Function LifeForceFunc($s, $shd = "SHD", $text = "") { QuickUI($s, $shd, ["AreaLevel", "StackSize"], $text, ["Currency", "DO"]); }
+
+        LifeForceFunc([0.0, "Lifeforce Stacksize: S", "currency->harvest;t1lifeforce"], "SH");
+        LifeForceFunc([0.0, "Lifeforce Stacksize: A", "currency->harvest;t2lifeforce"], "SH");
+        LifeForceFunc([0.0, "Lifeforce Stacksize: B", "currency->harvest;t3lifeforce"], "SH");
+        LifeForceFunc([0.0, "Lifeforce Stacksize: C", "currency->harvest;t4lifeforce"], "SH");
+        LifeForceFunc([0.0, "Lifeforce Stacksize: D", "currency->harvest;t5lifeforce"], "SH");
+        LifeForceFunc([0.0, "Lifeforce Stacksize: E", "currency->harvest;t6lifeforce"], "SH");
+
+        QuickUI([0.0, "Remaining Lifeforce", "currency->harvest;exhide"], "SH", [], "", [], "Remaining lifeforce that was not caught be the rules above due to possible AreaLevel requirements.");
+
+        Conditional("?LifeForceNewTier") { Show; Class Currency; BaseType == "Primal Crystallised Lifeforce" "Vivid Crystallised Lifeforce" "Wild Crystallised Lifeforce"; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 45; }
+        ElementAdder_Tier("?LifeForceNewTier", "LifeForceFunc");
+    }
+
+    Section("Essences", "RewardEssences.webp") {
+        Function essencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["essences", "O"]); }
+        TierListToolBar();
+
+        essencesFunc([1.0, "Essences T1+2", "currency->essence;t1"], "SH", "S Tier");
+        essencesFunc([1.0, "Essences T3", "currency->essence;t2"], "SH", "A Tier");
+        essencesFunc([1.0, "Essences T4", "currency->essence;t3"], "SH", "B Tier");
+        essencesFunc([1.0, "Essences T5", "currency->essence;t4"], "SH", "C Tier");
+        essencesFunc([1.0, "Essences T6", "currency->essence;t5"], "SH", "D+E Tier");
+        essencesFunc([1.0, "Essences T7", "currency->essence;t6"], "SH", "F Tier");
+
+        QuickUI([1.0, "Remaining essences", "currency->essence;exhide"], "SH", [], "", [], "Remaining essences that were not caught be the rules above due to possible AreaLevel requirements.");
+
+        // new tiers
+        Conditional("?essencesNewTier") { Show; Class Currency; SetFontSize 40; PlayAlertSound 2 300; SetBorderColor 0 0 0; SetTextColor 0 0 0; SetBackgroundColor 180 0 230; }
+        ElementAdder_Tier("?essencesNewTier", "essencesFunc");
+
+        Conditional("?EssencesNewTiersHidden") { }
+        ElementAdder_Tier("?EssencesNewTiersHidden", null, true, "essences", "OH");
+    }
+
+    Section("Highlight Essences by Type", "RewardEssences.webp")
+    {
+        Conditional("?EssenceHighlight", ["c9.currency.essences.all"]) { Show; Class Currency; SetFontSize 40; PlayAlertSound 2 300; SetBorderColor 0 0 0; SetTextColor 0 0 0; SetBackgroundColor 180 0 230; }
+        QuickUI("?EssenceHighlight", "SDH", ["EssenceTypes"], "Highlight Essences by type:");
+    }
+
+    Title("Misc.");
+
+    Section("Heist Rogue's Markers", "HeistCoin") {
+        Function CustomCoinFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"]); }
+
+        Search S1(0.1, "Rogue's Marker (Heist Coins)") { BaseType "Rogue's Marker"; }
+        QuickUI([0.0, "Rogue's Marker (Heist Coins) Stack", "currency->heist;highstack"], "SH", ["StackSize", "AreaLevel"], "Large Stacks");
+        QuickUI(S1, "SH", ["StackSize", "AreaLevel"], "Others", "");
+        QuickUI([0.0, "Remaining Rogue Markers", "currency->heist;exhide"], "SH", [], "", [], "Remaining coins that were not caught due to potential Stack/Area requirements of the rules above.");
+
+        // new tiers
+        Conditional("?HeistCustomCoins") { Show; BaseType == "Rogue's Marker"; StackSize > 250; SetTextColor 0 0 0 255; SetBackgroundColor 255 178 135 255; SetBorderColor 0 0 0 255; SetFontSize 45; }
+        ElementAdder_Tier("?HeistCustomCoins", "CustomCoinFunc");
+    }
+
+    Section("Incubators", "Incubator", "E") {
+        Function IncubatorTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ItemLevel"], $text, ["Incubators", "O"]); }
+
+        TierListToolBar("Incubator", [], []);
+
+        Title("Normal tierlist");
+
+        IncubatorTierList([0.0, "Incubators T0", "currency->incubators;t2"], "SH", "A Tier");
+        IncubatorTierList([0.0, "Incubators T1.5", "currency->incubators;t3"], "SH", "B Tier");
+        IncubatorTierList([0.0, "Incubators T1", "currency->incubators;t4"], "SH", "C Tier");
+        IncubatorTierList([0.0, "Incubators T4", "currency->incubators;t5"], "SH", "Others");
+
+        Conditional("?IncubatorNewTiersHidden") { }
+        ElementAdder_Tier("?IncubatorNewTiersHidden", null, true, "Incubators", "OH");
+        Conditional("?LegionIncubatorsNewTier", ["c9.currency.incubators.all"], "notSimpleBuilder") { Show; Class Incubator; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+        ElementAdder_Tier("?LegionIncubatorsNewTier", "IncubatorILvlTierList");
+
+        Title("Special rules");
+
+        // high level
+        Function IncubatorILvlTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Incubators", "ItemLevel"], $text); }
+        Search SS(0.0, "High Level Incubators", "currency->incubators;leveledex") { BaseType "Thaumaturge's Incubator"; ItemLevel 85; }
+        IncubatorILvlTierList(SS, "SD", "High Level Incubators");
+
+        QuickUI([0.0, "Leveling Incubators", "currency->incubators;levelingonlyincubatorsex"], "SH", ["ItemLevel"]);
+
+        QuickUI([0.0, "Remaining Incubators", "currency->incubators;exhide"], "SH", [], "", [], "Remaining Incubators, which are not matched by any of the above rules, probably due to unmet ItemLevel requirements.");
+    }
+
+    Section("Incursion Vials", "IncursionVial", "E") {
+        TierListToolBar();
+        QuickUI([0.0, "Incursion Vials T1", "vials;t1"], "SH", [], "S Tier", ["IncursionVials", "O"]);
+        QuickUI([0.0, "Incursion Vials T2", "vials;t2"], "SH", [], "A Tier", ["IncursionVials", "O"]);
+        QuickUI([0.0, "Incursion Vials T3", "vials;t3"], "SH", [], "Others", ["IncursionVials", "O"]);
+
+        // new vial tiers
+        Function VialTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["IncursionVials", "O"]); }
+        Conditional("?IncVialNewTier") { Show; Class Currency; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; SetBorderColor 0 0 0 255; SetFontSize 45; PlayAlertSound 2 300; }
+        ElementAdder_Tier("?IncVialNewTier", "VialTierList");
+
+        Conditional("?VialNewTiersHidden") { }
+        ElementAdder_Tier("?VialNewTiersHidden", null, true, "IncursionVials", "OH");
+    }
+
+//        Section("Hinekora's Lock", "HinekorasLock") {
+//            // crafting prediction items thingy
+//            QuickUI([0.0, "Hinekora's Lock", "currency->trial->orblike;t1"], "S", [], null, null, "Hinekor's lock is a valuable reward from the trial. Once applied on an item, you'll foresee the outcome of currency items used on the same item - until you'll actually use one of them.");
+//        }
+
+    Section("Omens", "OmenoftheSoulDevourer", "E") {
+        Function OmenFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialOmens", "O"]); }
+
+        TierListToolBar("Omen");
+
+        Description("Omens automatically trigger upon a certain condition when placed in your inventory. The omen is then consumed.");
+        OmenFunc([0.0, "Omens Tier 1", "currency->trial->omen;t1"], "SH", "S Tier");
+        OmenFunc([0.0, "Omens Tier 2", "currency->trial->omen;t2"], "SH", "A Tier");
+        OmenFunc([0.0, "Omens Tier 3", "currency->trial->omen;t3"], "SH", "B Tier");
+        OmenFunc([0.0, "Omens Tier 4", "currency->trial->omen;t4"], "SH", "C Tier");
+        OmenFunc([0.0, "Omens Tier 5", "currency->trial->omen;t5"], "SH", "Others");
+
+
+        // new tiers
+        Conditional("?AncTrialOmensNewTier") { }
+        ElementAdder_Tier("?AncTrialOmensNewTier", "OmenFunc");
+
+        // hide tier
+        Conditional("?AncTrialOmensHidden") { }
+        ElementAdder_Tier("?AncTrialOmensHidden", null, true, "AncTrialOmens", "OH");
+    }
+
+    Section("Runegrafts", "RuneGraft", "E") {
+        // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+        Function RunegraftsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Runegraft of", "O"]); }
+        TierListToolBar();
+
+        RunegraftsFunc([0.0, "S Tier", "runesgrafts;t1"], "SH", "S Tier");
+        RunegraftsFunc([0.0, "A Tier", "runesgrafts;t2"], "SH", "A Tier");
+        RunegraftsFunc([0.0, "B Tier", "runesgrafts;t3"], "SH", "B Tier");
+        RunegraftsFunc([0.0, "C Tier", "runesgrafts;t4"], "SH", "C Tier");
+        RunegraftsFunc([0.0, "D Tier", "runesgrafts;t5"], "SH", "D Tier");
+
+        // new tiers
+        Conditional("?RunegraftsNewTier") { }
+        ElementAdder_Tier("?RunegraftsNewTier", "RunegraftsFunc");
+
+        // hide tier
+        Conditional("?RunegraftsNewTiersHidden") { }
+        ElementAdder_Tier("?RunegraftsNewTiersHidden", null, true, "B:Runegraft of", "OH");
+    }
+}
+
 //===================================================================================================
-// CURRENT LEAGUE
+// TIER LISTS
 //===================================================================================================
+
+Section("Unique items", "RewardUniques.webp", "E") {
+    Function UniqueList($s, $shd = "SHD", $text, $descr = false) { QuickUI($s, $shd, [], $text, ["GearPlusFlasks", "O"], $descr); }
+
+            // important: the first search we ever reference (NOT declare) here is what determines the position of the hide-rule and new tiers.
+            // we want (especially the hide-rule) to be low, so that corrupted uniques, 6 sockets, etc. are still shown, and only the regular normal unique is hidden
+            // because of that, we HAVE TO list S10 (boss-drop uniques) first in the exceptionEntries, because that way it's the first referenced entry
+            TierListToolBar("Uniques", [S10, S2, SMulti, S7, S8, S11], ["Ruby Flask"]);
+
+            // we meed to keep these searches defined to reference them in the ecoLoader (auto-sort-excluded entries)
+            Search S0(8.1, "Uniques Tier 1", "uniques;t1") { Rarity Unique; BaseType "Glorious Plate"; }
+            Search S1(8.1, "Uniques Tier 2", "uniques;t2") { Rarity Unique; BaseType "Rotfeather Talisman"; }
+            Search S2(8.1, "Uniques (MultiBase)", "uniques;multispecial") { Rarity Unique; BaseType "Gold Amulet"; }
+            Search SMulti(8.1, "Uniques (MultiBaseHigh)", "uniques;multispecialhigh") { Rarity Unique; BaseType "Leather Belt"; }
+            Search S3(8.1, "Uniques (Remaining)", "uniques;t3") { Rarity Unique; BaseType "Vaal Axe"; }
+            Search S6(8.1, "Uniques (Hideable trash)", "uniques;hideable") { Rarity Unique; BaseType "Bone Armour"; }
+            Search S7(8.1, "Uniques (early league)", "uniques;earlyleague") { Rarity Unique; BaseType "Deerskin Gloves"; }
+            Search S8(8.1, "Unique Jewels", "uniques;exjewels") { Rarity Unique; BaseType "Crimson Jewel"; }
+            Search S10(8.1, "Boss-Drop Uniques", "uniques;t3boss") { Rarity Unique; BaseType "Agate Amulet"; }
+            Search S11(8.1, "Uniques (Hideable 2)", "uniques;hideable2") { Rarity Unique; BaseType "Iron Hat"; }
+
+            Title("Predictable Tiers");
+            UniqueList(S0, "S", "S Tier", "Tier 1 uniques are always an expensive and lucky find!");
+            UniqueList(S1, "SH", "A Tier", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
+            UniqueList(S8, "S", "A tier - Jewels", "The filter can't disintinguish between expensive and cheap unique jewels. All of them are treated the same way!");
+
+            UniqueList(S3, "SH", "B+C Tier", "These are highly roll dependent. Keep your filter updated, especially if you want to hide this section!");
+            UniqueList(S7, "SDH", "D Tier - Early league Uniques:", "Expensive or interesting at the start of the new league, but lose value VERY fast! This tier stays empty, after the first days of the new league");
+            UniqueList(S11, "SH", "D Tier - Low Value+NonDrops:", "These uniques have an expensive version that is ONLY obtained through special means, such as vendor recipes.");
+            UniqueList(S6, "SH", "D Tier - Low Value:", "These uniques are worth very little. Keep your filter updated, if you want to hide this section! Hiding this section at the start of new leagues and in SSF is a bad idea.");
+
+            Title("High Variety Tiers");
+
+            UniqueList(SMulti, "S", "High Variety - Top Multi-Bases:", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a VERY small chance for these to be VERY expensive");
+            UniqueList(S2, "SH", "High Variety - Multi-Bases:", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a small chance for these to be expensive");
+            UniqueList(S10, "SH", "High Variety - Boss-Drops:", "A potentially expensive unique version of this item drops ONLY from bosses! The world drop unique is fairly cheap! You can hide this tier, BUT remember to check the hidden items dropped by bosses!");
+
+            Conditional("?UniqueNewTiers") { Show; Rarity Unique; SetTextColor 175 96 37 255; SetBackgroundColor 0 0 0 255; SetBorderColor 175 96 37 255; SetFontSize 42; PlayAlertSound 3 300; }
+            ElementAdder_Tier("?UniqueNewTiers", "UniqueList");
+
+            Conditional("?UniquesNewTiersHidden") { }
+            ElementAdder_Tier("?UniquesNewTiersHidden", null, true, "GearPlusFlasks", "OH");
+}
+
+Section("Divination Cards", "RewardDivinationCards.webp", "E") {
+    Section("Tierlist", "StackedDeck", "E"){
+    Function DivCardList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Divination Cards", "O"]); }
+
+    TierListToolBar("DivinationCard", [S5, S6], []);
+
+    Search S0(5.1, "Divination Cards T1", "divination;t1") { BaseType "House of Mirrors"; }
+    Search S1(5.1, "Divination Cards T2", "divination;t2") { BaseType "The Hoarder"; }
+    Search S2(5.1, "Divination Cards T3", "divination;t3") { BaseType "The Dapper Prodigy"; }
+    Search S3(5.1, "Divination Cards T4", "divination;t4") { Class "Divination Cards"; }
+    Search S4(5.1, "Divination Cards T5", "divination;t5") { BaseType "The Carrion Crow"; }
+    Search S5(5.1, "Divination Cards T5C", "divination;t5c") { BaseType "Rain of Chaos"; }
+    Search S6(5.1, "Divination Cards T4C", "divination;t4c") { BaseType "Emperor's Luck"; }
+    Search S7(5.1, "Divination Cards New", "divination;tnew") { BaseType "The Tumbleweed"; }
+
+    DivCardList(0, "S", "S Tier");
+    DivCardList(1, "SH", "A Tier");
+    DivCardList(2, "SH", "B Tier");
+    DivCardList(6, "SH", "C+D Tier (Currency Rewards)");
+    DivCardList(3, "SH", "C+D Tier");
+    DivCardList(5, "SH", "E Tier (Currency Rewards):");
+    DivCardList(4, "SH", "E+F Tier");
+    DivCardList(S7, "SDH", "Tier X - New, Unknown cards:");
+
+    Conditional("?DivCardsNewTiers") { Show; Class "Divination"; SetTextColor 0 0 0 255; SetBackgroundColor 145 215 230 225; SetBorderColor 0 100 150 255; SetFontSize 40; PlayAlertSound 2 300; }
+    ElementAdder_Tier("?DivCardsNewTiers", "DivCardList");
+
+    Conditional("?DivCardsNewTiersHidden") { }
+    ElementAdder_Tier("?DivCardsNewTiersHidden", null, true, "Divination Cards","OH");
+    }
+
+    Section("Exotics: Stacked Card Drops", "StackedDeck") {
+
+    Description("Card added here will receive a higher highlight if dropped in a stack!");
+        QuickUI([0.0, "Stacked High Tier Div Cards", "divination;excustomstack"], $shd, ["StackSize"], null, ["Divination Cards", "OS"]);
+
+        Function StackedDivCardFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Divination Cards", "OA"]); }
+
+        Description("Designed to highlight lower tiers (Tier C and lower) divination cards if they drop in a stack. Useful, if you want to see the cards only if they're stacked.");
+        StackedDivCardFunc([0.0, "Stacked Divination Cards", "divination;exstack"], "SH", "Stacked Low Tier Div Cards");
+        // new tiers
+        Conditional("?StackedDivCardsNewTier") { }
+        ElementAdder_Tier("?StackedDivCardsNewTier", "StackedDivCardFunc");
+    }
+}
+
+Section("Gold", "Gold_inventory_icon") {
+    Description("Gold is auto-picked-up! You will even pick up the gold if the rules are disabled.");
+
+    Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text); }
+
+    GoldFunc([0.0, "Settlers Gold - Huge Stack", "gold;stack3"], "SH", "Massive");
+    GoldFunc([0.0, "Settlers Gold - Medium Stack", "gold;stack2"], "SH", "Huge");
+    GoldFunc([0.0, "Settlers Gold - Small Stack", "gold;stack1"], "SH", "Large");
+    GoldFunc([0.0, "Settlers Gold - Tiny Stack", "gold;stacklvl1"], "SH", "Large (leveling only)");
+    QuickUI([1.0, "Settlers Gold - No Stack", "gold;anyother"], "SH", [], "Any");
+
+    // new tiers
+    Conditional("?GoldNewTier") { Show; BaseType == "Gold"; StackSize >= 1337; SetTextColor 200 200 0; SetBorderColor 200 200 0; }
+    ElementAdder_Tier("?GoldNewTier", "GoldFunc");
+}
+
+Section("Vendor Recipes", "Chromatic") {
+
+    Title("Currency Reward Recipes");
+
+    Description("Disabling recipe item rules will NOT hide uniques, 6links, interesting synthesised items etc. Priorities are handled internally and you don't need to worry about them.");
+    Section("Chromatic Orb", "Chromatic") {
+
+        Search S0(1.0, "RGB Chromatic recipe EG small2x2", "endgamergb;rgbsmall1") {}
+        Search S1(1.0, "RGB Chromatic recipe EG small1x3", "endgamergb;rgbsmall2") {}
+        Search S2(1.0, "RGB Chromatic recipe EG medium", "endgamergb;rgbmedium") {}
+        Search S3(1.0, "RGB Chromatic recipe EG large", "endgamergb;rgblarge") {}
+
+        Title("Endgame Chromatic Recipes");
+        Description("1 Chromatic orb - reward for selling an item with a Red-Green-Blue socket group. The 3 colors need to be linked order and other sockets don't matter. Hover over the scroll left for more info.", "'RGB' items", "It's more efficient to pick up small RGB-items. This recipe is mostly useful during the early stages of a league/character progression. Later on the player usually finds enough natural chromatic orbs to sustain their coloring needs, without needing to do recipes.");
+        QuickUI(S0, "SH", ["AreaLevel"], "Small Items (2x2)");
+        QuickUI(S1, "SH", ["AreaLevel",  "Height"], "Small Items (1x3, 1x4)");
+        QuickUI(S2, "SH", ["AreaLevel"], "Medium-sized Items (2x3)");
+        QuickUI(S3, "SH", ["AreaLevel"], "Large Items (2x4)");
+        Title("Campaign Chromatic Recipes");
+        Description("The campaign chromatic recipe can be changed in the 'Campaign -> Colors and Links' section");
+    }
+
+    Section("Gemcutter's Prism", "GCP") {
+        Description("1 Gemcutter's Prism - reward for selling a single gem with 20% quality gem or multiple gems with a combined total of 40% quality to a vendor.");
+
+        QuickUI([0.0, "Gemcutter recipe high quality gems", "gems->generic;qt2"], "SD", ["Quality", "AreaLevel"], "Max Quality Gems");
+        QuickUI([0.0, "Gemcutter recipe mid quality gems", "gems->generic;qt3"], "SD", ["Quality", "AreaLevel"], "Mid Quality Gems");
+        QuickUI([0.0, "Gemcutter recipe low quality gems", "gems->generic;qt4"], "SD", ["Quality", "AreaLevel"], "Low Quality Gems");
+    }
+
+    Section("Jeweller's Orbs", "Jeweller") {
+        Description("7 Jeweller's Orb - reward for selling an item with 6 sockets.");
+
+        QuickUI([0.0, "Jeweller recipe 6 sockets (large)", "socketslinks;6sockets4h"], "SD", ["AreaLevel", "Height"], "6 sockets (large)");
+        QuickUI([0.0, "Jeweller recipe 6 sockets", "socketslinks;6sockets"], "SD", ["AreaLevel", "Height"], "6 sockets");
+        QuickUI([0.0, "Jeweller recipe 6sock-5links", "socketslinks;5link6sockets"], "SD", ["AreaLevel", "Height"], "6sock-5links");
+    }
+
+    Title("Build & Special-Item Recipes");
+
+    Section("+1 Skill Gem Recipes", "SkillGemRed1") {
+        Description("By selling a total of 40% quality worth of gems with a specific tag (such as fire) together with a Wand, Sceptre, Rune Dagger or Staff you will be rewarded with a weapon with a +1 GLOBAL level to ALL tagged spell gems. This is a powerful caster weapon early in the endgame.");
+
+        QuickUI([0.0, "+1 Skill Gem Recipe (Cold)", "gems->generic;plusonegemcold"], "SD", ["Quality", "AreaLevel"], "+1 Cold");
+        QuickUI([0.0, "+1 Skill Gem Recipe (Fire)", "gems->generic;plusonegemfire"], "SD", ["Quality", "AreaLevel"], "+1 Fire");
+        QuickUI([0.0, "+1 Skill Gem Recipe (Lightning)", "gems->generic;plusonegemlight"], "SD", ["Quality", "AreaLevel"], "+1 Lightning");
+        QuickUI([0.0, "+1 Skill Gem Recipe (Chaos)", "gems->generic;plusonegemchaos"], "SD", ["Quality", "AreaLevel"], "+1 Chaos");
+        QuickUI([0.0, "+1 Skill Gem Recipe (Physical)", "gems->generic;plusonegemphys"], "SD", ["Quality", "AreaLevel"], "+1 Physical");
+        QuickUI([0.0, "+1 Skill Gem Recipe (Minion)", "gems->generic;plusonegemminion"], "SD", ["Quality", "AreaLevel"], "+1 Minion");
+    }
+
+    Title("Niche and NOT recommended recipes");
+
+    Section("Glassblower's Bauble", "Glassblower") {
+        Description("1 Glassblower's Bauble - reward for selling a single 20% quality flask or multiple quality flasks with a total quality of 40%.", "Glassblower Recipe", "It's recommended to at least use the threshold of 14. This allows you to get 1 glassblower per 3 mid quality flasks. Note that glassblowers can also be acquired by buying it for 8 whetstones from vendors and drop naturally, so the recipe is not very efficient. That being said, glassblowers are in high demand at the start of the league, not only for quality, but also to apply instilling orb recipes onto the player flasks.");
+
+        QuickUI([0.0, "Glassblower recipe top quality", "endgameflasks;any20qualflask"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Max quality flasks");
+        QuickUI([0.0, "Glassblower recipe mid quality", "endgameflasks;qualityhigh"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Mid Quality flasks");
+        QuickUI([0.0, "Glassblower recipe low quality", "endgameflasks;qualitylow"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Low Quality flasks");
+
+        Description("You can find more quality flasks rules in the 'Endgame -> Flasks' and 'Campaign -> Flasks' sections.");
+    }
+}
 
 Section("Current League: Mirage", "Mirage_CoinofRestoration") {
     Description("All other Mirage drops are part of the 'standard' tierlists. For instance all currency drops, astrolabes and coins are part of the currency tierlist.");
@@ -182,7 +564,8 @@ Section("Current League: Mirage", "Mirage_CoinofRestoration") {
 // CURRENT EVENT
 //===================================================================================================
 
-Section("Current Event: Phrecia+Ancestors", "HonouredTattoooftheWiseMan", "E") {
+Section("Current Event: Phrecia+Ancestors", "HonouredTattoooftheWiseMan", "E")
+{
         Section("Tattoos", "HonouredTattoooftheWiseMan", "E") {
             Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
 
@@ -207,509 +590,110 @@ Section("Current Event: Phrecia+Ancestors", "HonouredTattoooftheWiseMan", "E") {
             QuickUI([0.0, "SilverCoinEvent", "currency->leagueexclusive;silvercoin"], "SH", [], "Silver Coins for the Trial", []);
         }
 }
+}
+
+Chapter() {
+// SectionTitle("Endgame Basetypes, Maps & Fragments");
 
 //===================================================================================================
-// VENDOR RECIPES
+// CURRENT LEAGUE
 //===================================================================================================
 
-
-Section("General", "RewardEssences.webp") {
-// Chapter() {
-//     SectionTitle("General");
-
-    Section("Vendor Recipes", "Chromatic") {
-
-        Title("Currency Reward Recipes");
-
-        Description("Disabling recipe item rules will NOT hide uniques, 6links, interesting synthesised items etc. Priorities are handled internally and you don't need to worry about them.");
-        Section("Chromatic Orb", "Chromatic") {
-
-            Search S0(1.0, "RGB Chromatic recipe EG small2x2", "endgamergb;rgbsmall1") {}
-            Search S1(1.0, "RGB Chromatic recipe EG small1x3", "endgamergb;rgbsmall2") {}
-            Search S2(1.0, "RGB Chromatic recipe EG medium", "endgamergb;rgbmedium") {}
-            Search S3(1.0, "RGB Chromatic recipe EG large", "endgamergb;rgblarge") {}
-
-            Title("Endgame Chromatic Recipes");
-            Description("1 Chromatic orb - reward for selling an item with a Red-Green-Blue socket group. The 3 colors need to be linked order and other sockets don't matter. Hover over the scroll left for more info.", "'RGB' items", "It's more efficient to pick up small RGB-items. This recipe is mostly useful during the early stages of a league/character progression. Later on the player usually finds enough natural chromatic orbs to sustain their coloring needs, without needing to do recipes.");
-            QuickUI(S0, "SH", ["AreaLevel"], "Small Items (2x2)");
-            QuickUI(S1, "SH", ["AreaLevel",  "Height"], "Small Items (1x3, 1x4)");
-            QuickUI(S2, "SH", ["AreaLevel"], "Medium-sized Items (2x3)");
-            QuickUI(S3, "SH", ["AreaLevel"], "Large Items (2x4)");
-            Title("Campaign Chromatic Recipes");
-            Description("The campaign chromatic recipe can be changed in the 'Campaign -> Colors and Links' section");
-        }
-
-        Section("Gemcutter's Prism", "GCP") {
-            Description("1 Gemcutter's Prism - reward for selling a single gem with 20% quality gem or multiple gems with a combined total of 40% quality to a vendor.");
-
-            QuickUI([0.0, "Gemcutter recipe high quality gems", "gems->generic;qt2"], "SD", ["Quality", "AreaLevel"], "Max Quality Gems");
-            QuickUI([0.0, "Gemcutter recipe mid quality gems", "gems->generic;qt3"], "SD", ["Quality", "AreaLevel"], "Mid Quality Gems");
-            QuickUI([0.0, "Gemcutter recipe low quality gems", "gems->generic;qt4"], "SD", ["Quality", "AreaLevel"], "Low Quality Gems");
-        }
-
-        Section("Jeweller's Orbs", "Jeweller") {
-            Description("7 Jeweller's Orb - reward for selling an item with 6 sockets.");
-
-            QuickUI([0.0, "Jeweller recipe 6 sockets (large)", "socketslinks;6sockets4h"], "SD", ["AreaLevel", "Height"], "6 sockets (large)");
-            QuickUI([0.0, "Jeweller recipe 6 sockets", "socketslinks;6sockets"], "SD", ["AreaLevel", "Height"], "6 sockets");
-            QuickUI([0.0, "Jeweller recipe 6sock-5links", "socketslinks;5link6sockets"], "SD", ["AreaLevel", "Height"], "6sock-5links");
-        }
-
-        Title("Build & Special-Item Recipes");
-
-        Section("+1 Skill Gem Recipes", "SkillGemRed1") {
-            Description("By selling a total of 40% quality worth of gems with a specific tag (such as fire) together with a Wand, Sceptre, Rune Dagger or Staff you will be rewarded with a weapon with a +1 GLOBAL level to ALL tagged spell gems. This is a powerful caster weapon early in the endgame.");
-
-            QuickUI([0.0, "+1 Skill Gem Recipe (Cold)", "gems->generic;plusonegemcold"], "SD", ["Quality", "AreaLevel"], "+1 Cold");
-            QuickUI([0.0, "+1 Skill Gem Recipe (Fire)", "gems->generic;plusonegemfire"], "SD", ["Quality", "AreaLevel"], "+1 Fire");
-            QuickUI([0.0, "+1 Skill Gem Recipe (Lightning)", "gems->generic;plusonegemlight"], "SD", ["Quality", "AreaLevel"], "+1 Lightning");
-            QuickUI([0.0, "+1 Skill Gem Recipe (Chaos)", "gems->generic;plusonegemchaos"], "SD", ["Quality", "AreaLevel"], "+1 Chaos");
-            QuickUI([0.0, "+1 Skill Gem Recipe (Physical)", "gems->generic;plusonegemphys"], "SD", ["Quality", "AreaLevel"], "+1 Physical");
-            QuickUI([0.0, "+1 Skill Gem Recipe (Minion)", "gems->generic;plusonegemminion"], "SD", ["Quality", "AreaLevel"], "+1 Minion");
-        }
-
-        Title("Niche and NOT recommended recipes");
-
-        Section("Glassblower's Bauble", "Glassblower") {
-            Description("1 Glassblower's Bauble - reward for selling a single 20% quality flask or multiple quality flasks with a total quality of 40%.", "Glassblower Recipe", "It's recommended to at least use the threshold of 14. This allows you to get 1 glassblower per 3 mid quality flasks. Note that glassblowers can also be acquired by buying it for 8 whetstones from vendors and drop naturally, so the recipe is not very efficient. That being said, glassblowers are in high demand at the start of the league, not only for quality, but also to apply instilling orb recipes onto the player flasks.");
-
-            QuickUI([0.0, "Glassblower recipe top quality", "endgameflasks;any20qualflask"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Max quality flasks");
-            QuickUI([0.0, "Glassblower recipe mid quality", "endgameflasks;qualityhigh"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Mid Quality flasks");
-            QuickUI([0.0, "Glassblower recipe low quality", "endgameflasks;qualitylow"], "SD", ["Quality", "AreaLevel", "RarityNM"], "Low Quality flasks");
-
-            Description("You can find more quality flasks rules in the 'Endgame -> Flasks' and 'Campaign -> Flasks' sections.");
-        }
-    }
-
-    //===================================================================================================
-    // TIER LISTS
-    //===================================================================================================
-
-    Section("Currency - Special", "RewardEssences.webp", "E") {
-
-        Title("Crafting");
-
-        Section("Delve Fossils & Resonators", "RewardFossils.webp", "E") {
-            Function FossilTierFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["fossilsWithResonators", "O"]); }
-
-            TierListToolBar("Fossil", [], []);
-
-            FossilTierFunc([0.0, "Delve Currency Fossils T1", "currency->fossil;t1"], "SH", "S Tier");
-            FossilTierFunc([0.0, "Delve Currency Fossils T2", "currency->fossil;t2"], "SH", "A Tier");
-            FossilTierFunc([0.0, "Delve Currency Fossils T3", "currency->fossil;t3"], "SH", "B Tier");
-            FossilTierFunc([0.0, "Delve Currency Fossils T4", "currency->fossil;t4"], "SH", "C Tier");
-            FossilTierFunc([0.0, "Delve Currency Fossils T5", "currency->fossil;t5"], "SH", "D Tier");
-            QuickUI([0.0, "Remaining Fossils", "currency->fossil;exhide"], "SH", [], "", false, "Untiered Fossils, which are not matched by any of the above rules, probably due to unmet AreaLevel requirements.");
-
-            // new tiers
-            Function FossilTierStackFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["fossilsWithResonators", "O"]); }
-            Conditional("?DelveFossilsNewTier") { }
-            ElementAdder_Tier("?DelveFossilsNewTier", "FossilTierStackFunc");
-
-            Conditional("?FossilNewTiersHidden") { }
-            ElementAdder_Tier("?FossilNewTiersHidden", null, true, "fossilsWithResonators", "OH");
-        }
-
-        Section("Delirium Orbs", "RewardChestDelirium.webp", "E") {
-            TierListToolBar("DeliriumOrb", [], []);
-
-            Function DeliriumOrbTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["DeliriumOrbs", "O"]); }
-
-            DeliriumOrbTierList([0.0, "Delirium Orbs Tier 1", "currency->deliriumorbs;t1"], "SH", "S Tier");
-            QuickUI([0.0, "Delirium Orbs Tier 2", "currency->deliriumorbs;t2"], "SH", [], "A Tier", ["DeliriumOrbs", "O"]);
-            QuickUI([0.0, "Delirium Orbs Tier 3", "currency->deliriumorbs;t3"], "SH", [], "Others", ["DeliriumOrbs", "O"]);
-
-            Conditional("?DeliriumOrbNewTier") { }
-            ElementAdder_Tier("?DeliriumOrbNewTier", "DeliriumOrbTierList");
-
-            Conditional("?DeliriumOrbNewTiersHidden") { }
-            ElementAdder_Tier("?DeliriumOrbNewTiersHidden", null, true, "DeliriumOrbs", "OH");
-        }
-
-        Section("Blight Oils", "RewardBlight.webp", "E") {
-            Function OilTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel", "StackSize"], $text, ["BlightOils", "O"]); }
-
-            TierListToolBar("Oil", [], []);
-
-            OilTierList([0.0, "Blight Oils T1", "currency->oil;t1"], "SH", "S Tier");
-            OilTierList([0.0, "Blight Oils T2", "currency->oil;t2"], "SH", "A Tier");
-            OilTierList([0.0, "Blight Oils T3", "currency->oil;t3"], "SH", "B Tier");
-            OilTierList([0.0, "Blight Oils T4", "currency->oil;t4"], "SH", "C Tier");
-            OilTierList([0.0, "Blight Oils T5", "currency->oil;t5"], "SH", "Others");
-            QuickUI([0.0, "Remaining Oils", "currency->oil;exhide"], "SH", [], "", false, "Untiered oils, which are not matched by any of the above rules, probably due to unmet AreaLevel requirements.");
-
-            Conditional("?BlightOilNewTier") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?BlightOilNewTier", "OilTierList");
-
-            Conditional("?BlightOilNewTiersHidden") { }
-            ElementAdder_Tier("?BlightOilNewTiersHidden", null, true, "BlightOils", "OH");
-        }
-
-        Section("Harvest Lifeforce", "Lifeforce")
-        {
-            Function LifeForceFunc($s, $shd = "SHD", $text = "") { QuickUI($s, $shd, ["AreaLevel", "StackSize"], $text, ["Currency", "DO"]); }
-
-            LifeForceFunc([0.0, "Lifeforce Stacksize: S", "currency->harvest;t1lifeforce"], "SH");
-            LifeForceFunc([0.0, "Lifeforce Stacksize: A", "currency->harvest;t2lifeforce"], "SH");
-            LifeForceFunc([0.0, "Lifeforce Stacksize: B", "currency->harvest;t3lifeforce"], "SH");
-            LifeForceFunc([0.0, "Lifeforce Stacksize: C", "currency->harvest;t4lifeforce"], "SH");
-            LifeForceFunc([0.0, "Lifeforce Stacksize: D", "currency->harvest;t5lifeforce"], "SH");
-            LifeForceFunc([0.0, "Lifeforce Stacksize: E", "currency->harvest;t6lifeforce"], "SH");
-
-            QuickUI([0.0, "Remaining Lifeforce", "currency->harvest;exhide"], "SH", [], "", [], "Remaining lifeforce that was not caught be the rules above due to possible AreaLevel requirements.");
-
-            Conditional("?LifeForceNewTier") { Show; Class Currency; BaseType == "Primal Crystallised Lifeforce" "Vivid Crystallised Lifeforce" "Wild Crystallised Lifeforce"; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 45; }
-            ElementAdder_Tier("?LifeForceNewTier", "LifeForceFunc");
-        }
-
-        Section("Essences", "RewardEssences.webp") {
-            Function essencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["essences", "O"]); }
-            TierListToolBar();
-
-            essencesFunc([1.0, "Essences T1+2", "currency->essence;t1"], "SH", "S Tier");
-            essencesFunc([1.0, "Essences T3", "currency->essence;t2"], "SH", "A Tier");
-            essencesFunc([1.0, "Essences T4", "currency->essence;t3"], "SH", "B Tier");
-            essencesFunc([1.0, "Essences T5", "currency->essence;t4"], "SH", "C Tier");
-            essencesFunc([1.0, "Essences T6", "currency->essence;t5"], "SH", "D+E Tier");
-            essencesFunc([1.0, "Essences T7", "currency->essence;t6"], "SH", "F Tier");
-
-            QuickUI([1.0, "Remaining essences", "currency->essence;exhide"], "SH", [], "", [], "Remaining essences that were not caught be the rules above due to possible AreaLevel requirements.");
-
-            // new tiers
-            Conditional("?essencesNewTier") { Show; Class Currency; SetFontSize 40; PlayAlertSound 2 300; SetBorderColor 0 0 0; SetTextColor 0 0 0; SetBackgroundColor 180 0 230; }
-            ElementAdder_Tier("?essencesNewTier", "essencesFunc");
-
-            Conditional("?EssencesNewTiersHidden") { }
-            ElementAdder_Tier("?EssencesNewTiersHidden", null, true, "essences", "OH");
-        }
-
-        Section("Highlight Essences by Type", "RewardEssences.webp")
-        {
-            Conditional("?EssenceHighlight", ["c9.currency.essences.all"]) { Show; Class Currency; SetFontSize 40; PlayAlertSound 2 300; SetBorderColor 0 0 0; SetTextColor 0 0 0; SetBackgroundColor 180 0 230; }
-            QuickUI("?EssenceHighlight", "SDH", ["EssenceTypes"], "Highlight Essences by type:");
-        }
-
-        Title("Misc.");
-
-        Section("Heist Rogue's Markers", "HeistCoin") {
-            Function CustomCoinFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"]); }
-
-            Search S1(0.1, "Rogue's Marker (Heist Coins)") { BaseType "Rogue's Marker"; }
-            QuickUI([0.0, "Rogue's Marker (Heist Coins) Stack", "currency->heist;highstack"], "SH", ["StackSize", "AreaLevel"], "Large Stacks");
-            QuickUI(S1, "SH", ["StackSize", "AreaLevel"], "Others", "");
-            QuickUI([0.0, "Remaining Rogue Markers", "currency->heist;exhide"], "SH", [], "", [], "Remaining coins that were not caught due to potential Stack/Area requirements of the rules above.");
-
-            // new tiers
-            Conditional("?HeistCustomCoins") { Show; BaseType == "Rogue's Marker"; StackSize > 250; SetTextColor 0 0 0 255; SetBackgroundColor 255 178 135 255; SetBorderColor 0 0 0 255; SetFontSize 45; }
-            ElementAdder_Tier("?HeistCustomCoins", "CustomCoinFunc");
-        }
-
-        Section("Incubators", "Incubator", "E") {
-            Function IncubatorTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ItemLevel"], $text, ["Incubators", "O"]); }
-
-            TierListToolBar("Incubator", [], []);
-
-            Title("Normal tierlist");
-
-            IncubatorTierList([0.0, "Incubators T0", "currency->incubators;t2"], "SH", "A Tier");
-            IncubatorTierList([0.0, "Incubators T1.5", "currency->incubators;t3"], "SH", "B Tier");
-            IncubatorTierList([0.0, "Incubators T1", "currency->incubators;t4"], "SH", "C Tier");
-            IncubatorTierList([0.0, "Incubators T4", "currency->incubators;t5"], "SH", "Others");
-
-            Conditional("?IncubatorNewTiersHidden") { }
-            ElementAdder_Tier("?IncubatorNewTiersHidden", null, true, "Incubators", "OH");
-            Conditional("?LegionIncubatorsNewTier", ["c9.currency.incubators.all"], "notSimpleBuilder") { Show; Class Incubator; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?LegionIncubatorsNewTier", "IncubatorILvlTierList");
-
-            Title("Special rules");
-
-            // high level
-            Function IncubatorILvlTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Incubators", "ItemLevel"], $text); }
-            Search SS(0.0, "High Level Incubators", "currency->incubators;leveledex") { BaseType "Thaumaturge's Incubator"; ItemLevel 85; }
-            IncubatorILvlTierList(SS, "SD", "High Level Incubators");
-
-            QuickUI([0.0, "Leveling Incubators", "currency->incubators;levelingonlyincubatorsex"], "SH", ["ItemLevel"]);
-
-            QuickUI([0.0, "Remaining Incubators", "currency->incubators;exhide"], "SH", [], "", [], "Remaining Incubators, which are not matched by any of the above rules, probably due to unmet ItemLevel requirements.");
-        }
-
-        Section("Incursion Vials", "IncursionVial", "E") {
-            TierListToolBar();
-            QuickUI([0.0, "Incursion Vials T1", "vials;t1"], "SH", [], "S Tier", ["IncursionVials", "O"]);
-            QuickUI([0.0, "Incursion Vials T2", "vials;t2"], "SH", [], "A Tier", ["IncursionVials", "O"]);
-            QuickUI([0.0, "Incursion Vials T3", "vials;t3"], "SH", [], "Others", ["IncursionVials", "O"]);
-
-            // new vial tiers
-            Function VialTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["IncursionVials", "O"]); }
-            Conditional("?IncVialNewTier") { Show; Class Currency; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; SetBorderColor 0 0 0 255; SetFontSize 45; PlayAlertSound 2 300; }
-            ElementAdder_Tier("?IncVialNewTier", "VialTierList");
-
-            Conditional("?VialNewTiersHidden") { }
-            ElementAdder_Tier("?VialNewTiersHidden", null, true, "IncursionVials", "OH");
-        }
-
-//        Section("Hinekora's Lock", "HinekorasLock") {
-//            // crafting prediction items thingy
-//            QuickUI([0.0, "Hinekora's Lock", "currency->trial->orblike;t1"], "S", [], null, null, "Hinekor's lock is a valuable reward from the trial. Once applied on an item, you'll foresee the outcome of currency items used on the same item - until you'll actually use one of them.");
-//        }
-
-        Section("Omens", "OmenoftheSoulDevourer", "E") {
-            Function OmenFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialOmens", "O"]); }
-
-            TierListToolBar("Omen");
-
-            Description("Omens automatically trigger upon a certain condition when placed in your inventory. The omen is then consumed.");
-            OmenFunc([0.0, "Omens Tier 1", "currency->trial->omen;t1"], "SH", "S Tier");
-            OmenFunc([0.0, "Omens Tier 2", "currency->trial->omen;t2"], "SH", "A Tier");
-            OmenFunc([0.0, "Omens Tier 3", "currency->trial->omen;t3"], "SH", "B Tier");
-            OmenFunc([0.0, "Omens Tier 4", "currency->trial->omen;t4"], "SH", "C Tier");
-            OmenFunc([0.0, "Omens Tier 5", "currency->trial->omen;t5"], "SH", "Others");
-
-
-            // new tiers
-            Conditional("?AncTrialOmensNewTier") { }
-            ElementAdder_Tier("?AncTrialOmensNewTier", "OmenFunc");
-
-            // hide tier
-            Conditional("?AncTrialOmensHidden") { }
-            ElementAdder_Tier("?AncTrialOmensHidden", null, true, "AncTrialOmens", "OH");
-        }
-
-        Section("Runegrafts", "RuneGraft", "E") {
-            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function RunegraftsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Runegraft of", "O"]); }
-            TierListToolBar();
-
-            RunegraftsFunc([0.0, "S Tier", "runesgrafts;t1"], "SH", "S Tier");
-            RunegraftsFunc([0.0, "A Tier", "runesgrafts;t2"], "SH", "A Tier");
-            RunegraftsFunc([0.0, "B Tier", "runesgrafts;t3"], "SH", "B Tier");
-            RunegraftsFunc([0.0, "C Tier", "runesgrafts;t4"], "SH", "C Tier");
-            RunegraftsFunc([0.0, "D Tier", "runesgrafts;t5"], "SH", "D Tier");
-
-            // new tiers
-            Conditional("?RunegraftsNewTier") { }
-            ElementAdder_Tier("?RunegraftsNewTier", "RunegraftsFunc");
-
-            // hide tier
-            Conditional("?RunegraftsNewTiersHidden") { }
-            ElementAdder_Tier("?RunegraftsNewTiersHidden", null, true, "B:Runegraft of", "OH");
-        }
-    }
-
-    Section("Unique items", "RewardUniques.webp", "E") {
-        Function UniqueList($s, $shd = "SHD", $text, $descr = false) { QuickUI($s, $shd, [], $text, ["GearPlusFlasks", "O"], $descr); }
-
-                // important: the first search we ever reference (NOT declare) here is what determines the position of the hide-rule and new tiers.
-                // we want (especially the hide-rule) to be low, so that corrupted uniques, 6 sockets, etc. are still shown, and only the regular normal unique is hidden
-                // because of that, we HAVE TO list S10 (boss-drop uniques) first in the exceptionEntries, because that way it's the first referenced entry
-                TierListToolBar("Uniques", [S10, S2, SMulti, S7, S8, S11], ["Ruby Flask"]);
-
-                // we meed to keep these searches defined to reference them in the ecoLoader (auto-sort-excluded entries)
-                Search S0(8.1, "Uniques Tier 1", "uniques;t1") { Rarity Unique; BaseType "Glorious Plate"; }
-                Search S1(8.1, "Uniques Tier 2", "uniques;t2") { Rarity Unique; BaseType "Rotfeather Talisman"; }
-                Search S2(8.1, "Uniques (MultiBase)", "uniques;multispecial") { Rarity Unique; BaseType "Gold Amulet"; }
-                Search SMulti(8.1, "Uniques (MultiBaseHigh)", "uniques;multispecialhigh") { Rarity Unique; BaseType "Leather Belt"; }
-                Search S3(8.1, "Uniques (Remaining)", "uniques;t3") { Rarity Unique; BaseType "Vaal Axe"; }
-                Search S6(8.1, "Uniques (Hideable trash)", "uniques;hideable") { Rarity Unique; BaseType "Bone Armour"; }
-                Search S7(8.1, "Uniques (early league)", "uniques;earlyleague") { Rarity Unique; BaseType "Deerskin Gloves"; }
-                Search S8(8.1, "Unique Jewels", "uniques;exjewels") { Rarity Unique; BaseType "Crimson Jewel"; }
-                Search S10(8.1, "Boss-Drop Uniques", "uniques;t3boss") { Rarity Unique; BaseType "Agate Amulet"; }
-                Search S11(8.1, "Uniques (Hideable 2)", "uniques;hideable2") { Rarity Unique; BaseType "Iron Hat"; }
-
-                Title("Predictable Tiers");
-                UniqueList(S0, "S", "S Tier", "Tier 1 uniques are always an expensive and lucky find!");
-                UniqueList(S1, "SH", "A Tier", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
-                UniqueList(S8, "S", "A tier - Jewels", "The filter can't disintinguish between expensive and cheap unique jewels. All of them are treated the same way!");
-
-                UniqueList(S3, "SH", "B+C Tier", "These are highly roll dependent. Keep your filter updated, especially if you want to hide this section!");
-                UniqueList(S7, "SDH", "D Tier - Early league Uniques:", "Expensive or interesting at the start of the new league, but lose value VERY fast! This tier stays empty, after the first days of the new league");
-                UniqueList(S11, "SH", "D Tier - Low Value+NonDrops:", "These uniques have an expensive version that is ONLY obtained through special means, such as vendor recipes.");
-                UniqueList(S6, "SH", "D Tier - Low Value:", "These uniques are worth very little. Keep your filter updated, if you want to hide this section! Hiding this section at the start of new leagues and in SSF is a bad idea.");
-
-                Title("High Variety Tiers");
-
-                UniqueList(SMulti, "S", "High Variety - Top Multi-Bases:", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a VERY small chance for these to be VERY expensive");
-                UniqueList(S2, "SH", "High Variety - Multi-Bases:", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a small chance for these to be expensive");
-                UniqueList(S10, "SH", "High Variety - Boss-Drops:", "A potentially expensive unique version of this item drops ONLY from bosses! The world drop unique is fairly cheap! You can hide this tier, BUT remember to check the hidden items dropped by bosses!");
-
-                Conditional("?UniqueNewTiers") { Show; Rarity Unique; SetTextColor 175 96 37 255; SetBackgroundColor 0 0 0 255; SetBorderColor 175 96 37 255; SetFontSize 42; PlayAlertSound 3 300; }
-                ElementAdder_Tier("?UniqueNewTiers", "UniqueList");
-
-                Conditional("?UniquesNewTiersHidden") { }
-                ElementAdder_Tier("?UniquesNewTiersHidden", null, true, "GearPlusFlasks", "OH");
-    }
-
-    Section("Divination Cards", "RewardDivinationCards.webp", "E") {
-        Section("Tierlist", "StackedDeck", "E"){
-        Function DivCardList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Divination Cards", "O"]); }
-
-        TierListToolBar("DivinationCard", [S5, S6], []);
-
-        Search S0(5.1, "Divination Cards T1", "divination;t1") { BaseType "House of Mirrors"; }
-        Search S1(5.1, "Divination Cards T2", "divination;t2") { BaseType "The Hoarder"; }
-        Search S2(5.1, "Divination Cards T3", "divination;t3") { BaseType "The Dapper Prodigy"; }
-        Search S3(5.1, "Divination Cards T4", "divination;t4") { Class "Divination Cards"; }
-        Search S4(5.1, "Divination Cards T5", "divination;t5") { BaseType "The Carrion Crow"; }
-        Search S5(5.1, "Divination Cards T5C", "divination;t5c") { BaseType "Rain of Chaos"; }
-        Search S6(5.1, "Divination Cards T4C", "divination;t4c") { BaseType "Emperor's Luck"; }
-        Search S7(5.1, "Divination Cards New", "divination;tnew") { BaseType "The Tumbleweed"; }
-
-        DivCardList(0, "S", "S Tier");
-        DivCardList(1, "SH", "A Tier");
-        DivCardList(2, "SH", "B Tier");
-        DivCardList(6, "SH", "C+D Tier (Currency Rewards)");
-        DivCardList(3, "SH", "C+D Tier");
-        DivCardList(5, "SH", "E Tier (Currency Rewards):");
-        DivCardList(4, "SH", "E+F Tier");
-        DivCardList(S7, "SDH", "Tier X - New, Unknown cards:");
-
-        Conditional("?DivCardsNewTiers") { Show; Class "Divination"; SetTextColor 0 0 0 255; SetBackgroundColor 145 215 230 225; SetBorderColor 0 100 150 255; SetFontSize 40; PlayAlertSound 2 300; }
-        ElementAdder_Tier("?DivCardsNewTiers", "DivCardList");
-
-        Conditional("?DivCardsNewTiersHidden") { }
-        ElementAdder_Tier("?DivCardsNewTiersHidden", null, true, "Divination Cards","OH");
-        }
-
-        Section("Exotics: Stacked Card Drops", "StackedDeck") {
-
-        Description("Card added here will receive a higher highlight if dropped in a stack!");
-            QuickUI([0.0, "Stacked High Tier Div Cards", "divination;excustomstack"], $shd, ["StackSize"], null, ["Divination Cards", "OS"]);
-
-            Function StackedDivCardFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Divination Cards", "OA"]); }
-
-            Description("Designed to highlight lower tiers (Tier C and lower) divination cards if they drop in a stack. Useful, if you want to see the cards only if they're stacked.");
-            StackedDivCardFunc([0.0, "Stacked Divination Cards", "divination;exstack"], "SH", "Stacked Low Tier Div Cards");
-            // new tiers
-            Conditional("?StackedDivCardsNewTier") { }
-            ElementAdder_Tier("?StackedDivCardsNewTier", "StackedDivCardFunc");
-        }
-    }
-
-    Section("Scarabs, Fragments and Splinters", "RewardScarabs.webp", "E") {
-        Title("Full Scarabs");
-
-        Section("Scarabs & Allflames", "Scarab", "E") {
-            Function ScarabTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Scarabs", "O"]); }
-
-            TierListToolBar("Scarab", [], []);
-
-            ScarabTierList([0.0, "Betrayal Scarabs T1", "fragments->scarabs;t1"], "SH", "S Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T2", "fragments->scarabs;t2"], "SH", "A Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T3", "fragments->scarabs;t3"], "SH", "B Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T4", "fragments->scarabs;t4"], "SH", "C Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T5", "fragments->scarabs;t5"], "SH", "D Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T6", "fragments->scarabs;t6"], "SH", "Others");
-
-            // new tiers
-            Conditional("?ScarabNewTiers") { Show; Class "Map Fragments"; SetFontSize 45; SetTextColor 159 15 213 255; SetBorderColor 159 15 213 255; SetBackgroundColor 0 0 0 255; PlayAlertSound 2 300; PlayEffect Yellow; MinimapIcon 2 Yellow Hexagon; }
-            ElementAdder_Tier("?ScarabNewTiers", "ScarabTierList");
-
-            Conditional("?ScarabNewTiersHidden") {}
-            ElementAdder_Tier("?ScarabNewTiersHidden", null, true, "Scarabs", "OH");
-        }
-
-        Section("Stacked T4 Scarabs", "Scarab", "E") {
-            Function StackedScarabsFunc($s, $shd = "SD", $title) { QuickUI($s, $shd, ["StackSize"], $title, ["Scarabs", "SO"]); }
-            StackedScarabsFunc([1.0, "Stacked Scarabs", "fragments->scarabs;t3stackedex"], "SD");
-        }
-
-        Section("Map Fragments & Invitations", "RewardFragments.webp", "E") {
-            Function FragmentsFunc($s, $shd = "SHD", $title, $descr = false) { QuickUI($s, $shd, [], $title, ["normalFragmentsAndInvitations", "O"], $descr); }
-
-            TierListToolBar("Fragment", [], []);
-
-            FragmentsFunc([1.1, "Map Fragments T1", "fragments;t1"], "SH", "S Tier");
-            FragmentsFunc([1.1, "Map Fragments T2", "fragments;t2"], "SH", "A Tier");
-            FragmentsFunc([1.1, "Map Fragments T3", "fragments;t4"], "SH", "B Tier");
-            FragmentsFunc([1.1, "Map Fragments T4 (remaining)", "fragments;t5"], "SH", "Others");
-
-            Conditional("?MapFragmentNoBreachNewTier") { Show; Class == "Map Fragments"; SetFontSize 45; SetBorderColor 0 0 0 255; PlayAlertSound 2 300; MinimapIcon 2 White Triangle; PlayEffect White; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; }
-            ElementAdder_Tier("?MapFragmentNoBreachNewTier", "FragmentsFunc");
-
-            Conditional("?FragmentNoBreachNewTiersHidden") { }
-            ElementAdder_Tier("?FragmentNoBreachNewTiersHidden", null, true, "normalFragmentsAndInvitations", "OH");
-        }
-
-        Section("Stacked Sacrifice Fragments", "SacrificeAtMidnight") {
-            Function FragmentsFunc($s, $shd = "SD", $title, $descr = false) { QuickUI($s, $shd, ["StackSize"], $title, ["MapFragmentsNoScarabs", "SO"], $descr); }
-            FragmentsFunc([1.0, "Stacked Map Fragments T3", "fragments->stacked;t3"], "SD", "Stacked Sacrifice Fragments:");
-        }
-
-        Title("Splinters");
-
-        Section("Simulacrum Splinters", "DeliriumMapItemSimulacrum") {
-            QuickUI([0.0, "Simulacrum Splinter Stacks 4", "currency->splinter->simulacrum;t1"], "SD", ["StackSize"], "Huge Stacks");
-            QuickUI([0.0, "Simulacrum Splinter Stacks 3", "currency->splinter->simulacrum;t2"], "SD", ["StackSize"], "Large Stacks");
-            QuickUI([0.0, "Simulacrum Splinter Stacks 2", "currency->splinter->simulacrum;t3"], "SD", ["StackSize"], "Medium Stacks");
-            QuickUI([0.0, "Simulacrum Splinter Stacks 1", "currency->splinter->simulacrum;t4"], "SD", ["StackSize"], "Small Stacks");
-            QuickUI([0.0, "Simulacrum Splinters", "currency->splinter->simulacrum;t5"], "SH", [], "Others");
-        }
-
-        Section("Splinters - Single", "MergedSplinters", "E") {
-            Function SplinterTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Splinters", "O"]); }
-
-            TierListToolBar();
-
-            SplinterTierList([0.0, "Breach Splinters & Legion Splinters T1", "currency->splinter;t1"], "SH", "Higher Tier");
-            SplinterTierList([0.0, "Breach Splinters & Legion Splinters T2", "currency->splinter;t3"], "SH", "Lower Tier");
-
-            Conditional("?LegionSplintersNewTier") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?LegionSplintersNewTier", "SplinterTierList");
-
-            Conditional("?LegionSplinterNewTiersHidden") {}
-            ElementAdder_Tier("?LegionSplinterNewTiersHidden", null, true, "Splinters", "OH");
-        }
-
-        Section("Splinters - High Tier (Stacked)", "MergedSplinters", "E") {
-            Function SplinterStacksUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Splinters", "OS"]); }
-
-            SplinterStacksUI([0.0, "Breach and Legion splinter very large stacks 1", "currency->stackedsplintershigh;t1"], "SD", "High Tier Splinters 66+ Stacks");
-            SplinterStacksUI([0.0, "Breach and Legion splinter large stacks 1", "currency->stackedsplintershigh;t2"], "SD", "High Tier Splinters 25+ Stacks");
-            SplinterStacksUI([0.0, "Breach and Legion splinter stacks 1", "currency->stackedsplintershigh;t3"], "SD", "High Tier Splinters 10+ Stacks");
-            SplinterStacksUI([0.0, "Breach and Legion splinter small stacks 1", "currency->stackedsplintershigh;t4"], "SD", "High Tier Splinters 5+ Stacks");
-            SplinterStacksUI([0.0, "Breach and Legion splinter tiny stacks 1", "currency->stackedsplintershigh;t5"], "SD", "High Tier Splinters 2+ Stacks");
-
-            Conditional("?BreachLegionSplinterStacksNewTier") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?BreachLegionSplinterStacksNewTier", "SplinterStacksUI");
-        }
-
-        Section("Splinters - Low Tier (Stacked)", "MergedSplinters", "E") {
-            Function SplinterStacksUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Splinters", "SO"]); }
-            SplinterStacksUI([0.0, "Breach and Legion splinter very large stacks 2 large", "currency->stackedsplinterslow;t1"], "SD", "Low Tier Splinters 66+ Stacks");
-            SplinterStacksUI([0.0, "Breach and Legion splinter large stacks 2", "currency->stackedsplinterslow;t2"], "SD", "Low Tier Splinters 25+ Stacks");
-            SplinterStacksUI([0.0, "Breach and Legion splinter stacks 2", "currency->stackedsplinterslow;t3"], "SD", "Low Tier Splinters 10+ Stacks");
-            SplinterStacksUI([0.0, "Breach and Legion splinter small stacks 2", "currency->stackedsplinterslow;t4"], "SD", "Low Tier Splinters 5+ Stacks");
-            SplinterStacksUI([0.0, "Breach and Legion splinter tiny stacks 2", "currency->stackedsplinterslow;t5"], "SD", "Low Tier Splinters 2+ Stacks");
-        }
-    }
-
-    Section("Gold", "Gold_inventory_icon") {
-        Description("Gold is auto-picked-up! You will even pick up the gold if the rules are disabled.");
-
-        Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text); }
-
-        GoldFunc([0.0, "Settlers Gold - Huge Stack", "gold;stack3"], "SH", "Massive");
-        GoldFunc([0.0, "Settlers Gold - Medium Stack", "gold;stack2"], "SH", "Huge");
-        GoldFunc([0.0, "Settlers Gold - Small Stack", "gold;stack1"], "SH", "Large");
-        GoldFunc([0.0, "Settlers Gold - Tiny Stack", "gold;stacklvl1"], "SH", "Large (leveling only)");
-        QuickUI([1.0, "Settlers Gold - No Stack", "gold;anyother"], "SH", [], "Any");
+Section("Scarabs, Fragments and Splinters", "RewardScarabs.webp", "E") {
+    Title("Full Scarabs");
+
+    Section("Scarabs & Allflames", "Scarab", "E") {
+        Function ScarabTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Scarabs", "O"]); }
+
+        TierListToolBar("Scarab", [], []);
+
+        ScarabTierList([0.0, "Betrayal Scarabs T1", "fragments->scarabs;t1"], "SH", "S Tier");
+        ScarabTierList([0.0, "Betrayal Scarabs T2", "fragments->scarabs;t2"], "SH", "A Tier");
+        ScarabTierList([0.0, "Betrayal Scarabs T3", "fragments->scarabs;t3"], "SH", "B Tier");
+        ScarabTierList([0.0, "Betrayal Scarabs T4", "fragments->scarabs;t4"], "SH", "C Tier");
+        ScarabTierList([0.0, "Betrayal Scarabs T5", "fragments->scarabs;t5"], "SH", "D Tier");
+        ScarabTierList([0.0, "Betrayal Scarabs T6", "fragments->scarabs;t6"], "SH", "Others");
 
         // new tiers
-        Conditional("?GoldNewTier") { Show; BaseType == "Gold"; StackSize >= 1337; SetTextColor 200 200 0; SetBorderColor 200 200 0; }
-        ElementAdder_Tier("?GoldNewTier", "GoldFunc");
+        Conditional("?ScarabNewTiers") { Show; Class "Map Fragments"; SetFontSize 45; SetTextColor 159 15 213 255; SetBorderColor 159 15 213 255; SetBackgroundColor 0 0 0 255; PlayAlertSound 2 300; PlayEffect Yellow; MinimapIcon 2 Yellow Hexagon; }
+        ElementAdder_Tier("?ScarabNewTiers", "ScarabTierList");
+
+        Conditional("?ScarabNewTiersHidden") {}
+        ElementAdder_Tier("?ScarabNewTiersHidden", null, true, "Scarabs", "OH");
     }
 
-Section("Highlight specific bases", "Firefly") {
+    Section("Stacked T4 Scarabs", "Scarab", "E") {
+        Function StackedScarabsFunc($s, $shd = "SD", $title) { QuickUI($s, $shd, ["StackSize"], $title, ["Scarabs", "SO"]); }
+        StackedScarabsFunc([1.0, "Stacked Scarabs", "fragments->scarabs;t3stackedex"], "SD");
+    }
 
-        Description("Quickly highlight bases by adding a custom rule! If you need more power and options, there's a lot more custom rules lower in the customizer");
+    Section("Map Fragments & Invitations", "RewardFragments.webp", "E") {
+        Function FragmentsFunc($s, $shd = "SHD", $title, $descr = false) { QuickUI($s, $shd, [], $title, ["normalFragmentsAndInvitations", "O"], $descr); }
 
-        Function CondShowBaseQuick ($s, $shd = "SD", $title)
-        {
-            QuickUI($s, $shd, ["RarityU", "ItemLevel", "Corrupted", "Stats_Rarity"], $title, ["rarityItems", "OS"]);
-        }
+        TierListToolBar("Fragment", [], []);
 
-        Conditional("?CQuickEndgameCustomRule1", ["c4.rare.trinkets.all"]) { Show; BaseType == "Kinetic Wand"; SetBorderColor 200 0 0; SetBackgroundColor 60 0 0; SetFontSize 40; ItemLevel >= 68; Rarity Normal; Corrupted False; Mirrored False; }
-        ElementAdder_Tier("?CQuickEndgameCustomRule1", "CondShowBaseQuick");
+        FragmentsFunc([1.1, "Map Fragments T1", "fragments;t1"], "SH", "S Tier");
+        FragmentsFunc([1.1, "Map Fragments T2", "fragments;t2"], "SH", "A Tier");
+        FragmentsFunc([1.1, "Map Fragments T3", "fragments;t4"], "SH", "B Tier");
+        FragmentsFunc([1.1, "Map Fragments T4 (remaining)", "fragments;t5"], "SH", "Others");
+
+        Conditional("?MapFragmentNoBreachNewTier") { Show; Class == "Map Fragments"; SetFontSize 45; SetBorderColor 0 0 0 255; PlayAlertSound 2 300; MinimapIcon 2 White Triangle; PlayEffect White; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; }
+        ElementAdder_Tier("?MapFragmentNoBreachNewTier", "FragmentsFunc");
+
+        Conditional("?FragmentNoBreachNewTiersHidden") { }
+        ElementAdder_Tier("?FragmentNoBreachNewTiersHidden", null, true, "normalFragmentsAndInvitations", "OH");
+    }
+
+    Section("Stacked Sacrifice Fragments", "SacrificeAtMidnight") {
+        Function FragmentsFunc($s, $shd = "SD", $title, $descr = false) { QuickUI($s, $shd, ["StackSize"], $title, ["MapFragmentsNoScarabs", "SO"], $descr); }
+        FragmentsFunc([1.0, "Stacked Map Fragments T3", "fragments->stacked;t3"], "SD", "Stacked Sacrifice Fragments:");
+    }
+
+    Title("Splinters");
+
+    Section("Simulacrum Splinters", "DeliriumMapItemSimulacrum") {
+        QuickUI([0.0, "Simulacrum Splinter Stacks 4", "currency->splinter->simulacrum;t1"], "SD", ["StackSize"], "Huge Stacks");
+        QuickUI([0.0, "Simulacrum Splinter Stacks 3", "currency->splinter->simulacrum;t2"], "SD", ["StackSize"], "Large Stacks");
+        QuickUI([0.0, "Simulacrum Splinter Stacks 2", "currency->splinter->simulacrum;t3"], "SD", ["StackSize"], "Medium Stacks");
+        QuickUI([0.0, "Simulacrum Splinter Stacks 1", "currency->splinter->simulacrum;t4"], "SD", ["StackSize"], "Small Stacks");
+        QuickUI([0.0, "Simulacrum Splinters", "currency->splinter->simulacrum;t5"], "SH", [], "Others");
+    }
+
+    Section("Splinters - Single", "MergedSplinters", "E") {
+        Function SplinterTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Splinters", "O"]); }
+
+        TierListToolBar();
+
+        SplinterTierList([0.0, "Breach Splinters & Legion Splinters T1", "currency->splinter;t1"], "SH", "Higher Tier");
+        SplinterTierList([0.0, "Breach Splinters & Legion Splinters T2", "currency->splinter;t3"], "SH", "Lower Tier");
+
+        Conditional("?LegionSplintersNewTier") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+        ElementAdder_Tier("?LegionSplintersNewTier", "SplinterTierList");
+
+        Conditional("?LegionSplinterNewTiersHidden") {}
+        ElementAdder_Tier("?LegionSplinterNewTiersHidden", null, true, "Splinters", "OH");
+    }
+
+    Section("Splinters - High Tier (Stacked)", "MergedSplinters", "E") {
+        Function SplinterStacksUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Splinters", "OS"]); }
+
+        SplinterStacksUI([0.0, "Breach and Legion splinter very large stacks 1", "currency->stackedsplintershigh;t1"], "SD", "High Tier Splinters 66+ Stacks");
+        SplinterStacksUI([0.0, "Breach and Legion splinter large stacks 1", "currency->stackedsplintershigh;t2"], "SD", "High Tier Splinters 25+ Stacks");
+        SplinterStacksUI([0.0, "Breach and Legion splinter stacks 1", "currency->stackedsplintershigh;t3"], "SD", "High Tier Splinters 10+ Stacks");
+        SplinterStacksUI([0.0, "Breach and Legion splinter small stacks 1", "currency->stackedsplintershigh;t4"], "SD", "High Tier Splinters 5+ Stacks");
+        SplinterStacksUI([0.0, "Breach and Legion splinter tiny stacks 1", "currency->stackedsplintershigh;t5"], "SD", "High Tier Splinters 2+ Stacks");
+
+        Conditional("?BreachLegionSplinterStacksNewTier") { Show; Class Currency; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
+        ElementAdder_Tier("?BreachLegionSplinterStacksNewTier", "SplinterStacksUI");
+    }
+
+    Section("Splinters - Low Tier (Stacked)", "MergedSplinters", "E") {
+        Function SplinterStacksUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Splinters", "SO"]); }
+        SplinterStacksUI([0.0, "Breach and Legion splinter very large stacks 2 large", "currency->stackedsplinterslow;t1"], "SD", "Low Tier Splinters 66+ Stacks");
+        SplinterStacksUI([0.0, "Breach and Legion splinter large stacks 2", "currency->stackedsplinterslow;t2"], "SD", "Low Tier Splinters 25+ Stacks");
+        SplinterStacksUI([0.0, "Breach and Legion splinter stacks 2", "currency->stackedsplinterslow;t3"], "SD", "Low Tier Splinters 10+ Stacks");
+        SplinterStacksUI([0.0, "Breach and Legion splinter small stacks 2", "currency->stackedsplinterslow;t4"], "SD", "Low Tier Splinters 5+ Stacks");
+        SplinterStacksUI([0.0, "Breach and Legion splinter tiny stacks 2", "currency->stackedsplinterslow;t5"], "SD", "Low Tier Splinters 2+ Stacks");
     }
 }
 
@@ -981,6 +965,22 @@ Section("Endgame - Maps, Fragments & Co.", "RewardMaps.webp") {
 
 // todo: Chapter() { Ad(); }
 
+// Chapter() {
+//     SectionTitle("General");
+
+Section("Highlight specific bases", "Firefly")
+{
+    Description("Quickly highlight bases by adding a custom rule! If you need more power and options, there's a lot more custom rules lower in the customizer");
+
+    Function CondShowBaseQuick ($s, $shd = "SD", $title)
+    {
+        QuickUI($s, $shd, ["RarityU", "ItemLevel", "Corrupted", "Stats_Rarity"], $title, ["rarityItems", "OS"]);
+    }
+
+    Conditional("?CQuickEndgameCustomRule1", ["c4.rare.trinkets.all"]) { Show; BaseType == "Kinetic Wand"; SetBorderColor 200 0 0; SetBackgroundColor 60 0 0; SetFontSize 40; ItemLevel >= 68; Rarity Normal; Corrupted False; Mirrored False; }
+    ElementAdder_Tier("?CQuickEndgameCustomRule1", "CondShowBaseQuick");
+}
+
 //===================================================================================================
 // RARES
 //===================================================================================================
@@ -1172,7 +1172,7 @@ Section("Endgame - Rares", "RewardJewellery.webp") {
 // CRAFTING
 //===================================================================================================
 
-Section("Endgame - Special Rares & Crafting", "CraftingUnlockObject.webp") {
+Section("Endgame - Special Bases & Crafting", "CraftingUnlockObject.webp") {
 //Chapter() {
 //    SectionTitle("Endgame - Special Rares & Crafting (lvl 68+)");
 
@@ -1868,6 +1868,7 @@ Section("Endgame - Misc. Gear", "CobaltJewel") {
         }
     }
 }
+}
 
 // todo: Chapter() { Ad(); }
 
@@ -1875,9 +1876,10 @@ Section("Endgame - Misc. Gear", "CobaltJewel") {
 // LEVELING / Campaign
 //===================================================================================================
 
+Chapter() {
+
+
 Section("Campaign", "IronRing") {
-//Chapter() {
-//    SectionTitle("Campaign (below lvl 68)");
 
     Section("Add custom Show/Hide rules (campaign)", "Firefly") {
 
@@ -2792,4 +2794,5 @@ Section("Miscellaneous", "Empower") {
         QuickUI([0.0, "Dusting Uniques T2", "uniques;exdust2"], "SD", ["AreaLevel"], "2500+ Dust/Slot Uniques", ["Gear", "OS"]);
         QuickUI([0.0, "Dusting Uniques T3", "uniques;exdust3"], "SD", ["AreaLevel"], "1250+ Dust/Slot Uniques", ["Gear", "OS"]);
     }
+}
 }
