@@ -9,6 +9,8 @@ DefensiveSearch S10(3, "skip", "hidelayer;outdatedlevelflaskd") { };
 DefensiveSearch S10(3, "skip", "hidelayer;outdatedlevelflaske") { };
 DefensiveSearch S10(3, "skip", "hidelayer;final") { };
 
+Chapter(){
+
     Section("Currency", "Exalted_Orb_inventory_icon", "E") {
         Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize?"], $text, ["normalCurrencyPoe2", "O"]); }
 
@@ -34,123 +36,6 @@ DefensiveSearch S10(3, "skip", "hidelayer;final") { };
 
         Description("Note that there are also additional rules for currency during the campaign.");
     }
-
-        Section("Current league: Return of the Ancients", "VoicesPoE2") {
-
-            Description("Most of the new currencies, omens and augments have been added to the 'general' tierlists, however with these, we know so little, I've put into their own list. Will be updated once we have data");
-            Section("Wombgifts, Ward-Gems, Undiscovered Items") {
-                // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-                Function XenoFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["G:xeno", "O"]); }
-                TierListToolBar();
-
-                XenoFunc([0.0, "New items, S Tier", "xenotiering;s"], "SH", "S Tier");
-                XenoFunc([0.0, "New items, A Tier", "xenotiering;a"], "SH", "A Tier");
-                XenoFunc([0.0, "New items, B Tier", "xenotiering;b"], "SH", "B Tier");
-                XenoFunc([0.0, "New items, C Tier", "xenotiering;c"], "SH", "C Tier");
-                XenoFunc([0.0, "New items, D Tier", "xenotiering;d"], "SH", "D Tier");
-                XenoFunc([0.0, "New items, E Tier", "xenotiering;e"], "SH", "E Tier");
-
-                // new tiers
-                Conditional("?XenoNewTier") { }
-                ElementAdder_Tier("?XenoNewTier", "XenoFunc");
-
-                // hide tier
-                Conditional("?XenoNewTiersHidden") { }
-                ElementAdder_Tier("?XenoNewTiersHidden", null, true, "G:xeno", "OH");
-            }
-
-            Section("Verisium") {
-                QuickUI([0.0, "Verisium, massive stack", "verisium;massive"], "SH", ["StackSize"]);
-                QuickUI([0.0, "Verisium, huge stack", "verisium;huge"], "SH", ["StackSize"]);
-                QuickUI([0.0, "Verisium, large stack", "verisium;large"], "SH", ["StackSize"]);
-                QuickUI([0.0, "Verisium", "verisium;any"], "SH", ["StackSize"]);
-            }
-
-            Section ("Breach Crafting")
-            {
-                QuickUI([0.0, "Pseudo crafts 1", "exoticbases;pseudocrafts1"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
-                QuickUI([0.0, "Pseudo crafts 2", "exoticbases;pseudocrafts2"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
-            }
-
-            Section ("MiscRules (safeguards, just in case)")
-            {
-                Description("These augments likely don't drop, but we have a safety rule just in case.");
-                QuickUI([0.0, "Unique-Extracted Augments", "legacytemp;any"], "SH", []);
-            }
-
-        }
-
-            Section("Socketables", "Iron_Rune_inventory_icon", "E") {
-
-                    // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-                    Function SocketsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Augment", "O"]); }
-                    TierListToolBar("Socketables");
-
-                    SocketsFunc([0.0, "Sockets S", "sockets->general;s"], "SH", "S Tier");
-                    SocketsFunc([0.0, "Sockets A", "sockets->general;a"], "SH", "A Tier");
-                    SocketsFunc([0.0, "Sockets B", "sockets->general;b"], "SH", "B Tier");
-                    SocketsFunc([0.0, "Sockets C", "sockets->general;c"], "SH", "C Tier");
-                    SocketsFunc([0.0, "Sockets D", "sockets->general;d"], "SH", "D Tier");
-                    SocketsFunc([0.0, "Sockets E", "sockets->general;e"], "SH", "E Tier");
-                    SocketsFunc([0.0, "Sockets Supplies", "sockets->general;supplylow"], "SH", "Supplies: Lesser Runes");
-
-                    // new tiers
-                    Conditional("?SocketsNewTier") { }
-                    ElementAdder_Tier("?SocketsNewTier", "SocketsFunc");
-
-                    // hide tier
-                    Conditional("?SocketsNewTiersHidden") { }
-                    ElementAdder_Tier("?SocketsNewTiersHidden", null, true, "C:Augment", "OH");
-            }
-
-                Section("Gems", "Uncut_Skill_Gem_inventory_icon") {
-
-                    Section("CAMPAIGN: Gems")
-                    {
-                        QuickUI([0.0, "Gems, Spirit, Campaign ", "gems->uncut;spiritcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Spirit");
-                        QuickUI([0.0, "Gems, Skill, Campaign ", "gems->uncut;skillcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Skill");
-                        QuickUI([0.0, "Gems, Support, Campaign ", "gems->uncut;supportcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Support");
-                        QuickUI([0.0, "Cut Gems ", "gems;any"], "SH", ["AreaLevel", "ItemLevel"]);
-                    }
-
-                    Section("ENDGAME: Skill Gems")
-                    {
-                        Title("High Level Gems");
-                        QuickUI([0.0, "Gems, Skill, Level 20 ", "gems->uncut;skill20"], "SH", ["AreaLevel", "ItemLevel"], "Skill, Level 20");
-                        QuickUI([0.0, "Gems, Skill, Level 19 ", "gems->uncut;skill19"], "SH", ["AreaLevel", "ItemLevel"], "Skill, Level 19");
-                        Title("Progression: Best gems Droppable in Waystone Tier");
-                        QuickUI([0.0, "Gems, Progression, Level 18", "gems->uncut;skillgemprogression18"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 18");
-                        QuickUI([0.0, "Gems, Progression, Level 17", "gems->uncut;skillgemprogression17"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 17");
-                        QuickUI([0.0, "Gems, Progression, Level 16", "gems->uncut;skillgemprogression16"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 16");
-                        QuickUI([0.0, "Gems, Progression, Level 15", "gems->uncut;skillgemprogression15"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 15");
-                        QuickUI([0.0, "Gems, Progression, Level 14", "gems->uncut;skillgemprogression14"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 14");
-                        QuickUI([0.0, "Gems, Skill, Endgame ", "gems->uncut;otherskilleg"], "SH", ["AreaLevel", "ItemLevel"], "Other Lower Level Skill Gems");
-                    }
-
-                    Section("ENDGAME: Spirit Gems")
-                    {
-                        Title("High Level Gems");
-                        QuickUI([0.0, "Gems, Spirit, Level 20 ", "gems->uncut;spirit20"], "SH", ["AreaLevel", "ItemLevel"], "Spirit, Level 20");
-                        QuickUI([0.0, "Gems, Spirit, Level 19 ", "gems->uncut;spirit19"], "SH", ["AreaLevel", "ItemLevel"], "Spirit, Level 19");
-                        Title("Progression: Best gems Droppable in Waystone Tier");
-                        QuickUI([0.0, "Spirit Gems, Progression, Level 18", "gems->uncut;spiritgemprogression18"], "SH", ["AreaLevel", "ItemLevel"]);
-                        QuickUI([0.0, "Spirit Gems, Progression, Level 17", "gems->uncut;spiritgemprogression17"], "SH", ["AreaLevel", "ItemLevel"]);
-                        QuickUI([0.0, "Spirit Gems, Progression, Level 16", "gems->uncut;spiritgemprogression16"], "SH", ["AreaLevel", "ItemLevel"]);
-                        QuickUI([0.0, "Spirit Gems, Progression, Level 15", "gems->uncut;spiritgemprogression15"], "SH", ["AreaLevel", "ItemLevel"]);
-                        QuickUI([0.0, "Spirit Gems, Progression, Level 14", "gems->uncut;spiritgemprogression14"], "SH", ["AreaLevel", "ItemLevel"]);
-                        QuickUI([0.0, "Gems, Spirit, Endgame ", "gems->uncut;otherspiriteg"], "SH", ["AreaLevel", "ItemLevel"], "Other Lower Level Spirit Gems");
-                    }
-
-                    Section("ENDGAME: Support")
-                    {
-                        QuickUI([0.0, "Gems, Support, Endgame ", "gems->uncut;othersupporteg"], "SH", ["AreaLevel", "ItemLevel"], "Support Gems in T15+ maps");
-                        QuickUI([0.0, "Gems, Support, Endgame Early", "gems->uncut;supportearlymaps"], "SH", ["AreaLevel", "ItemLevel"], "Support Gems in lower maps");
-                    }
-                }
-
-Section("Basics", "Gold_inventory_icon") {
-
-//    SectionTitle("Basics");
 
     Section("Campaign & Exotics Currencies", "Essence_of_Ruin_inventory_icon", "E") {
 
@@ -261,6 +146,98 @@ Section("Basics", "Gold_inventory_icon") {
         }
     }
 
+            Section("Socketables", "Iron_Rune_inventory_icon", "E") {
+
+                    // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+                    Function SocketsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Augment", "O"]); }
+                    TierListToolBar("Socketables");
+
+                    SocketsFunc([0.0, "Sockets S", "sockets->general;s"], "SH", "S Tier");
+                    SocketsFunc([0.0, "Sockets A", "sockets->general;a"], "SH", "A Tier");
+                    SocketsFunc([0.0, "Sockets B", "sockets->general;b"], "SH", "B Tier");
+                    SocketsFunc([0.0, "Sockets C", "sockets->general;c"], "SH", "C Tier");
+                    SocketsFunc([0.0, "Sockets D", "sockets->general;d"], "SH", "D Tier");
+                    SocketsFunc([0.0, "Sockets E", "sockets->general;e"], "SH", "E Tier");
+                    SocketsFunc([0.0, "Sockets Supplies", "sockets->general;supplylow"], "SH", "Supplies: Lesser Runes");
+
+                    // new tiers
+                    Conditional("?SocketsNewTier") { }
+                    ElementAdder_Tier("?SocketsNewTier", "SocketsFunc");
+
+                    // hide tier
+                    Conditional("?SocketsNewTiersHidden") { }
+                    ElementAdder_Tier("?SocketsNewTiersHidden", null, true, "C:Augment", "OH");
+            }
+
+                Section("Gems", "Uncut_Skill_Gem_inventory_icon") {
+
+    Section("Lineage Gems", "RathasAssault", "E")
+    {
+        Description("More gem tiers and a better visual will be added once more is known about these gems!");
+
+        // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+        Function LineageGemsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["G:LineageGems", "O"]); }
+        TierListToolBar("LineageSupportGems");
+
+        LineageGemsFunc([0.0, "Gems, Lineage, Tier S", "gems->lineage;s"], "SH", "S Tier");
+        LineageGemsFunc([0.0, "Gems, Lineage, Tier A", "gems->lineage;a"], "SH", "A Tier");
+        LineageGemsFunc([0.0, "Gems, Lineage, Tier B", "gems->lineage;b"], "SH", "B Tier");
+        LineageGemsFunc([0.0, "Gems, Lineage, Tier C", "gems->lineage;c"], "SH", "C Tier");
+        // LineageGemsFunc([0.0, "Gems, Lineage, Tier D", "gems->lineage;d"], "SH", "D Tier");
+        // LineageGemsFunc([0.0, "Gems, Lineage, Tier E", "gems->lineage;e"], "SH", "E Tier");
+
+        // new tiers
+        Conditional("?LineageGemsNewTier") { }
+        ElementAdder_Tier("?LineageGemsNewTier", "LineageGemsFunc");
+
+        // hide tier
+        Conditional("?LineageGemsNewTiersHidden") { }
+        ElementAdder_Tier("?LineageGemsNewTiersHidden", null, true, "G:LineageGems", "OH");
+    }
+
+        Section("ENDGAME: Skill Gems")
+        {
+            Title("High Level Gems");
+            QuickUI([0.0, "Gems, Skill, Level 20 ", "gems->uncut;skill20"], "SH", ["AreaLevel", "ItemLevel"], "Skill, Level 20");
+            QuickUI([0.0, "Gems, Skill, Level 19 ", "gems->uncut;skill19"], "SH", ["AreaLevel", "ItemLevel"], "Skill, Level 19");
+            Title("Progression: Best gems Droppable in Waystone Tier");
+            QuickUI([0.0, "Gems, Progression, Level 18", "gems->uncut;skillgemprogression18"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 18");
+            QuickUI([0.0, "Gems, Progression, Level 17", "gems->uncut;skillgemprogression17"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 17");
+            QuickUI([0.0, "Gems, Progression, Level 16", "gems->uncut;skillgemprogression16"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 16");
+            QuickUI([0.0, "Gems, Progression, Level 15", "gems->uncut;skillgemprogression15"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 15");
+            QuickUI([0.0, "Gems, Progression, Level 14", "gems->uncut;skillgemprogression14"], "SH", ["AreaLevel", "ItemLevel"], "Skill Gems, Progression, Level 14");
+            QuickUI([0.0, "Gems, Skill, Endgame ", "gems->uncut;otherskilleg"], "SH", ["AreaLevel", "ItemLevel"], "Other Lower Level Skill Gems");
+        }
+
+        Section("ENDGAME: Spirit Gems")
+        {
+            Title("High Level Gems");
+            QuickUI([0.0, "Gems, Spirit, Level 20 ", "gems->uncut;spirit20"], "SH", ["AreaLevel", "ItemLevel"], "Spirit, Level 20");
+            QuickUI([0.0, "Gems, Spirit, Level 19 ", "gems->uncut;spirit19"], "SH", ["AreaLevel", "ItemLevel"], "Spirit, Level 19");
+            Title("Progression: Best gems Droppable in Waystone Tier");
+            QuickUI([0.0, "Spirit Gems, Progression, Level 18", "gems->uncut;spiritgemprogression18"], "SH", ["AreaLevel", "ItemLevel"]);
+            QuickUI([0.0, "Spirit Gems, Progression, Level 17", "gems->uncut;spiritgemprogression17"], "SH", ["AreaLevel", "ItemLevel"]);
+            QuickUI([0.0, "Spirit Gems, Progression, Level 16", "gems->uncut;spiritgemprogression16"], "SH", ["AreaLevel", "ItemLevel"]);
+            QuickUI([0.0, "Spirit Gems, Progression, Level 15", "gems->uncut;spiritgemprogression15"], "SH", ["AreaLevel", "ItemLevel"]);
+            QuickUI([0.0, "Spirit Gems, Progression, Level 14", "gems->uncut;spiritgemprogression14"], "SH", ["AreaLevel", "ItemLevel"]);
+            QuickUI([0.0, "Gems, Spirit, Endgame ", "gems->uncut;otherspiriteg"], "SH", ["AreaLevel", "ItemLevel"], "Other Lower Level Spirit Gems");
+        }
+
+        Section("ENDGAME: Support")
+        {
+            QuickUI([0.0, "Gems, Support, Endgame ", "gems->uncut;othersupporteg"], "SH", ["AreaLevel", "ItemLevel"], "Support Gems in T15+ maps");
+            QuickUI([0.0, "Gems, Support, Endgame Early", "gems->uncut;supportearlymaps"], "SH", ["AreaLevel", "ItemLevel"], "Support Gems in lower maps");
+        }
+
+        Section("CAMPAIGN: Gems")
+        {
+            QuickUI([0.0, "Gems, Spirit, Campaign ", "gems->uncut;spiritcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Spirit");
+            QuickUI([0.0, "Gems, Skill, Campaign ", "gems->uncut;skillcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Skill");
+            QuickUI([0.0, "Gems, Support, Campaign ", "gems->uncut;supportcampaign"], "SH", ["AreaLevel", "ItemLevel"], "Support");
+            QuickUI([0.0, "Cut Gems ", "gems;any"], "SH", ["AreaLevel", "ItemLevel"]);
+        }
+    }
+
     Section("Uniques", "Alphas_Howl_inventory_icon", "E") {
         // generated via manualUtil_GenerateOptFileTierListCode(); util function!
         Function UniquesFunc($s, $shd = "SHD", $text, $descr = false) { QuickUI($s, $shd, [], $text, ["GearPlusFlasks", "O"], $descr); }
@@ -287,45 +264,50 @@ Section("Basics", "Gold_inventory_icon") {
         ElementAdder_Tier("?UniquesNewTiersHidden", null, true, "GearPlusFlasks", "OH");
     }
 
-    Section("Chancing", "Astramentis_inventory_icon") {
-        // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-        Function ChancingFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["gearPlusFlasks", "OS"]); }
-        TierListToolBar();
+        Section("Current league: Return of the Ancients", "VoicesPoE2") {
 
-        Description("An 'Orb of Chance' has a chance to turn a normal item into a unique. The chances for that are fairly low, but it can be pretty thrilling and profitable if you hit the lottery. The following section suggests potential chancing bases.<br> Only non-boss drops can be chanced. Acquiring certain bases is harder than finding the chance orbs. So some very profitable chance bases can be VERY expensive:");
+            Description("Most of the new currencies, omens and augments have been added to the 'general' tierlists, however with these, we know so little, I've put into their own list. Will be updated once we have data");
+            Section("Wombgifts, Ward-Gems, Undiscovered Items") {
+                // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+                Function XenoFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["G:xeno", "O"]); }
+                TierListToolBar();
 
-        ChancingFunc([0.0, "Chancing bases Tier S", "chancing;chances"], "SD");
-        ChancingFunc([0.0, "Chancing bases Tier A", "chancing;chancea"], "SD");
-        ChancingFunc([0.0, "Chancing bases", "chancing;chanceany"], "SD");
+                XenoFunc([0.0, "New items, S Tier", "xenotiering;s"], "SH", "S Tier");
+                XenoFunc([0.0, "New items, A Tier", "xenotiering;a"], "SH", "A Tier");
+                XenoFunc([0.0, "New items, B Tier", "xenotiering;b"], "SH", "B Tier");
+                XenoFunc([0.0, "New items, C Tier", "xenotiering;c"], "SH", "C Tier");
+                XenoFunc([0.0, "New items, D Tier", "xenotiering;d"], "SH", "D Tier");
+                XenoFunc([0.0, "New items, E Tier", "xenotiering;e"], "SH", "E Tier");
 
-        // new tiers
-        Conditional("?ChancingNewTier") { }
-        ElementAdder_Tier("?ChancingNewTier", "ChancingFunc");
-    }
+                // new tiers
+                Conditional("?XenoNewTier") { }
+                ElementAdder_Tier("?XenoNewTier", "XenoFunc");
 
-    Section("Lineage Gems", "RathasAssault", "E")
-    {
-        Description("More gem tiers and a better visual will be added once more is known about these gems!");
+                // hide tier
+                Conditional("?XenoNewTiersHidden") { }
+                ElementAdder_Tier("?XenoNewTiersHidden", null, true, "G:xeno", "OH");
+            }
 
-        // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-        Function LineageGemsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["G:LineageGems", "O"]); }
-        TierListToolBar("LineageSupportGems");
+            Section("Verisium") {
+                QuickUI([0.0, "Verisium, massive stack", "verisium;massive"], "SH", ["StackSize"]);
+                QuickUI([0.0, "Verisium, huge stack", "verisium;huge"], "SH", ["StackSize"]);
+                QuickUI([0.0, "Verisium, large stack", "verisium;large"], "SH", ["StackSize"]);
+                QuickUI([0.0, "Verisium", "verisium;any"], "SH", ["StackSize"]);
+            }
 
-        LineageGemsFunc([0.0, "Gems, Lineage, Tier S", "gems->lineage;s"], "SH", "S Tier");
-        LineageGemsFunc([0.0, "Gems, Lineage, Tier A", "gems->lineage;a"], "SH", "A Tier");
-        LineageGemsFunc([0.0, "Gems, Lineage, Tier B", "gems->lineage;b"], "SH", "B Tier");
-        LineageGemsFunc([0.0, "Gems, Lineage, Tier C", "gems->lineage;c"], "SH", "C Tier");
-        // LineageGemsFunc([0.0, "Gems, Lineage, Tier D", "gems->lineage;d"], "SH", "D Tier");
-        // LineageGemsFunc([0.0, "Gems, Lineage, Tier E", "gems->lineage;e"], "SH", "E Tier");
+            Section ("Breach Crafting")
+            {
+                QuickUI([0.0, "Pseudo crafts 1", "exoticbases;pseudocrafts1"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
+                QuickUI([0.0, "Pseudo crafts 2", "exoticbases;pseudocrafts2"], "SH", ["ItemLevel"], null, ["Gear", "OS"]);
+            }
 
-        // new tiers
-        Conditional("?LineageGemsNewTier") { }
-        ElementAdder_Tier("?LineageGemsNewTier", "LineageGemsFunc");
+            Section ("MiscRules (safeguards, just in case)")
+            {
+                Description("These augments likely don't drop, but we have a safety rule just in case.");
+                QuickUI([0.0, "Unique-Extracted Augments", "legacytemp;any"], "SH", []);
+            }
 
-        // hide tier
-        Conditional("?LineageGemsNewTiersHidden") { }
-        ElementAdder_Tier("?LineageGemsNewTiersHidden", null, true, "G:LineageGems", "OH");
-    }
+        }
 
     Section("Gold", "Gold_inventory_icon") {
         Description("Gold can be hidden and will still be auto-picked up if you walk next to it.");
@@ -352,20 +334,213 @@ Section("Basics", "Gold_inventory_icon") {
         Conditional("?GoldNewTier") { Show; BaseType == "Gold"; StackSize >= 1337; SetTextColor 200 200 0; SetBorderColor 200 200 0; }
         ElementAdder_Tier("?GoldNewTier", "GoldFunc");
     }
+}
 
-    Section("Highlight specific bases", "Firefly") {
+Chapter()
+{
 
-        Description("Quickly highlight bases by adding a custom rule! If you need more power and options, there's a lot more custom rules lower in the customizer");
+Section("Waystones, Tablets & Content Keys", "Breach_Precursor_Tablet_inventory_icon") {
+    Section("Waystones", "Waystone_Tier_7_inventory_icon") {
 
-        Function CondShowBaseQuick ($s, $shd = "SD", $title)
-        {
-            QuickUI($s, $shd, ["RarityU", "ItemLevel", "Corrupted?", "Stats_Rarity?", "UnidentifiedItemTier?"], $title, ["rarityItems", "OS"]);
+            Section("Special Waystones") {
+                QuickUI([0.0, "Waystones, Enchanted 1", "waystones;enchanted1"], "SH", ["WaystoneTier"], "Delirium 'Enchanted' High");
+                QuickUI([0.0, "Waystones, Enchanted 2", "waystones;enchanted2"], "SH", ["WaystoneTier"], "Delirium 'Enchanted' Mid");
+                QuickUI([0.0, "Waystones, Enchanted 34", "waystones;enchanted34"], "SH", ["WaystoneTier"], "Delirium 'Enchanted' Low");
+                QuickUI([0.0, "Waystones, Corrupted 8 Mods High", "waystones;corrupted8high"], "SDH", ["WaystoneTier"], "Corrupted with 7+ Mods (high)");
+                QuickUI([0.0, "Waystones, Corrupted 8 Mods", "waystones;corrupted8"], "SDH", ["WaystoneTier"], "Corrupted with 7+ Mods (low)");
+                QuickUI([0.0, "Waystones, Corrupted", "waystone->hiders;corruptedmaphider"], "SDH", ["WaystoneTier"], "Any Corrupted (Normal/Magic)");
+                QuickUI([0.0, "Waystones, Mirrored", "waystone->hiders;mirroredmaphider"], "SDH", ["WaystoneTier"], "Any Mirrored (Normal/Magic)");
+                Description("The following rule will highlight all RARE waystones, however it takes less priority than other rules. It's useful if you want to sell them for gold to vendors.");
+                QuickUI([0.0, "Waystones, Rare", "waystones;waystone_rares_other"], "SDH", ["WaystoneTier"], "Any Remaining Rare");
+            }
+
+            Section("Normal") {
+                QuickUI([0.0, "Waystones Tier 16", "waystones;waystone_t16"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 15", "waystones;waystone_t15"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 14", "waystones;waystone_t14"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 13", "waystones;waystone_t13"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 12", "waystones;waystone_t12"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 11", "waystones;waystone_t11"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 10", "waystones;waystone_t10"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 9", "waystones;waystone_t9"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 8", "waystones;waystone_t8"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 7", "waystones;waystone_t7"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 6", "waystones;waystone_t6"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 5", "waystones;waystone_t5"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 4", "waystones;waystone_t4"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 3", "waystones;waystone_t3"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 2", "waystones;waystone_t2"], "SD", []);
+                QuickUI([0.0, "Waystones Tier 1", "waystones;waystone_t1"], "SD", []);
+            }
+
+            Section("Decorators (advanced)") {
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 16", "waystones;deco_wsup_t16") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 15", "waystones;deco_wsup_t15") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 14", "waystones;deco_wsup_t14") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 13", "waystones;deco_wsup_t13") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 12", "waystones;deco_wsup_t12") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 11", "waystones;deco_wsup_t11") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 10", "waystones;deco_wsup_t10") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 9", "waystones;deco_wsup_t9") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 8", "waystones;deco_wsup_t8") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 7", "waystones;deco_wsup_t7") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 6", "waystones;deco_wsup_t6") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 5", "waystones;deco_wsup_t5") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 4", "waystones;deco_wsup_t4") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 3", "waystones;deco_wsup_t3") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 2", "waystones;deco_wsup_t2") { }
+                Search S0(0.0, "Waystone Upgrade Decorator Tier 1", "waystones;deco_wsup_t1") { }
+
+                Description("Decorators are special rules. They change the APPEARANCE (only) of certain items, without deciding if the item should be hidden or show. They allow highlighting certain properties on gear.");
+
+                QuickUI(S0, "SD", [], "If waystone is a tier upgrade...", false, "These rules add highlighting to waystones that one one tier higher than the one you're currently in - without affecting if the item gets hidden or not.");
+
+                QuickUI([0.0, "Waystones, Decorator, Corrupted Mod", "waystones;deco_corruptedmod"], "SD", ["WaystoneTier"], "If corrupted+has implicit...");
+                QuickUI([0.0, "Waystones, Decorator, Top Tier", "waystones;decomap1"], "SD", ["WaystoneTier"], "If Tier15+...");
+                QuickUI([0.0, "Waystones, Decorator, High Tier", "waystones;decomap2"], "SD", ["WaystoneTier"], "If Tier is 12-14...");
+                QuickUI([0.0, "Waystones, Decorator, Mid Tier", "waystones;decomap3"], "SD", ["WaystoneTier"], "If Tier is 6-11...");
+                QuickUI([0.0, "Waystones, Decorator, Low Tier", "waystones;decomap4"], "SD", ["WaystoneTier"], "If Tier is 1-5...");
+
+                QuickUI([0.0, "Waystones, Decorator, Overleveled 1", "waystones;decomap1overleveled"], "SD", ["WaystoneTier", "AreaLevel"], "If waystone is outleveled 1...");
+                QuickUI([0.0, "Waystones, Decorator, Overleveled 2", "waystones;decomap2overleveled"], "SD", ["WaystoneTier", "AreaLevel"], "If waystone is outleveled 2...");
+                QuickUI([0.0, "Waystones, Decorator, Overleveled 3", "waystones;decomap3overleveled"], "SD", ["WaystoneTier", "AreaLevel"], "If waystone is outleveled 2...");
+                QuickUI([0.0, "Waystones, Decorator, Overleveled 4", "waystones;decomap4overleveled"], "SD", ["WaystoneTier", "AreaLevel"], "If waystone is outleveled 3...");
+            }
         }
 
-        Conditional("?CQuickEndgameCustomRule1", ["c3.gear.chancing"], null, 4190) { Show; BaseType == "Gemini Bow" "Primed Quiver"; SetBorderColor 200 0 0; SetBackgroundColor 60 0 0; SetFontSize 40; ItemLevel >= 68; Rarity Normal Magic; Corrupted False; Mirrored False; }
-        ElementAdder_Tier("?CQuickEndgameCustomRule1", "CondShowBaseQuick");
-    }
+           Section("Map Fragments & Tablets", "PrecursorTabletGeneric.webp") {
+                // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+                Function MapFragmentsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["MapFragAndTablets", "O"]); }
+                TierListToolBar();
+
+                MapFragmentsFunc([0.0, "Map Fragments Tier 1", "fragments->generic;s"], "SH", "S Tier");
+                MapFragmentsFunc([0.0, "Map Fragments Tier 2", "fragments->generic;a"], "SH", "A Tier");
+                MapFragmentsFunc([0.0, "Map Fragments Tier 3", "fragments->generic;b"], "SH", "B Tier");
+                MapFragmentsFunc([0.0, "Map Fragments Tier 4", "fragments->generic;c"], "SH", "C Tier");
+                MapFragmentsFunc([0.0, "Map Fragments Tier 5", "fragments->generic;d"], "SH", "D Tier");
+                MapFragmentsFunc([0.0, "Map Fragments Tier 6", "fragments->generic;e"], "SH", "E Tier");
+
+                // new tiers
+                Conditional("?MapFragmentsNewTier") { }
+                ElementAdder_Tier("?MapFragmentsNewTier", "MapFragmentsFunc");
+
+                // hide tier
+                Conditional("?MapFragmentsNewTiersHidden") { }
+                ElementAdder_Tier("?MapFragmentsNewTiersHidden", null, true, "MapFragAndTablets", "OH");
+            }
+
+            Section("Splinters", "deliriumsplinter.webp") {
+                Function SplinterFunc($s, $shd = "SH", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["B: Splinter;C:Stackable Currency", "OS"]); }
+
+                SplinterFunc([0.0, "Splinters Tier 1", "currency->splinter;t1"], "SH", "S Tier");
+                SplinterFunc([0.0, "Splinters Tier 2", "currency->splinter;t2"], "SH", "A Tier");
+                SplinterFunc([0.0, "Splinters Tier 3", "currency->splinter;t3"], "SH", "B Tier");
+                SplinterFunc([0.0, "Splinters Tier 4", "currency->splinter;t4"], "SH", "C Tier");
+                SplinterFunc([0.0, "Splinters Tier 5", "currency->splinter;t5"], "SH", "D Tier");
+
+                // new tiers
+                Conditional("?SplintersNewTier") { }
+                ElementAdder_Tier("?SplintersNewTier", "SplinterFunc");
+            }
+
+            Section("Ascendancy Keys", "ultimatumtrialitem.webp") {
+                Title("Sanctum");
+                QuickUI([0.0, "Djinn Barya, Top Level", "miscmapitemsextra;trialkeysanctumtop"], "SH", ["ItemLevel"], "Sanctum best rewards");
+                QuickUI([0.0, "Djinn Barya, High Level", "miscmapitemsextra;trialkeysanctum3"], "SH", ["ItemLevel"], "Sanctum 3-4 points");
+                QuickUI([0.0, "Djinn Barya Leveling 2", "miscmapitemsextra;trialkeysanctum2"], "SH", ["ItemLevel"], "Sanctum 2 points");
+                QuickUI([0.0, "Djinn Barya Leveling 1", "miscmapitemsextra;trialkeysanctum1"], "SH", ["ItemLevel"], "Sanctum 1 points");
+                Title("Ultimatum");
+                QuickUI([0.0, "Ultimatum Reward", "miscmapitemsextra;trialkeyultimatumreward"], "SH", ["RarityU"]);
+                QuickUI([0.0, "Ultimatum, Top Level", "miscmapitemsextra;trialkeyultimatumtop"], "SH", ["ItemLevel"]);
+                QuickUI([0.0, "Ultimatum, High Level", "miscmapitemsextra;trialkeyultimatumhigh"], "SH", ["ItemLevel"]);
+                QuickUI([0.0, "Ultimatum", "miscmapitemsextra;trialkeyultimatumlow"], "SH", ["ItemLevel"]);
+                Title("Other");
+                QuickUI([0.0, "Special Trials", "miscmapitemsextra;trialspecial"], "SH", ["ItemLevel"]);
+            }
+
+            Section("Vault Keys, Pinnacle Keys, Logbooks", "expeditionchronicle3.webp") {
+                Description("Expedition Logbooks");
+                QuickUI([1.0, "Logbooks", "maplike->special;logbookshigh"], "SH");
+                Warning("Currently Vault keys can NOT be completely hidden. You can make them small/transparent instead.");
+                QuickUI([0.0, "Pinnacle Boss Keys", "maplike->special;superkeys"], "SH", []);
+                QuickUI([0.0, "Vault Keys Rare", "maplike->special;vaultkeysrare"], "S", [], "Boss-Drop Vault Keys", ["C:Vault Keys", "OS"]);
+                QuickUI([0.0, "Vault Keys", "maplike->special;vaultkeys"], "S", [], "Common Vault Keys", ["C:Vault Keys", "SO"]);
+                QuickUI([0.0, "Vault Keys (Other)", "miscmapitemsextra;relickeyssafe"], "S", [], "Other Vault Keys");
+            }
 }
+
+    Section("Chancing & Salvaging", "Astramentis_inventory_icon") {
+        Section ("Chancing", "Astramentis_inventory_icon")
+        {
+                // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+                Function ChancingFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["gearPlusFlasks", "OS"]); }
+                TierListToolBar();
+
+                Description("An 'Orb of Chance' has a chance to turn a normal item into a unique. The chances for that are fairly low, but it can be pretty thrilling and profitable if you hit the lottery. The following section suggests potential chancing bases.<br> Only non-boss drops can be chanced. Acquiring certain bases is harder than finding the chance orbs. So some very profitable chance bases can be VERY expensive:");
+
+                ChancingFunc([0.0, "Chancing bases Tier S", "chancing;chances"], "SD");
+                ChancingFunc([0.0, "Chancing bases Tier A", "chancing;chancea"], "SD");
+                ChancingFunc([0.0, "Chancing bases", "chancing;chanceany"], "SD");
+
+                // new tiers
+                Conditional("?ChancingNewTier") { }
+                ElementAdder_Tier("?ChancingNewTier", "ChancingFunc");
+        }
+
+        Section("Endgame Salvagable Items", "Artificers_Orb_inventory_icon") {
+            Description("Certain items can be salvaged at an NPC in town in return for crafting currencies.");
+
+            Search S0(0.0, "Salvagable (High Quality, weapons)", "endgame->salvagable;quality2martialany") { }
+            Search S1(0.0, "Salvagable (High Quality, caster)", "endgame->salvagable;quality2casterany") { }
+            Search S2(0.0, "Salvagable (High Quality, armour)", "endgame->salvagable;quality2armorany") { }
+            Search S3(0.0, "Salvagable (Quality, weapons)", "endgame->salvagable;qualitymartialany") { }
+            Search S4(0.0, "Salvagable (Quality, caster)", "endgame->salvagable;qualitycasterany") { }
+            Search S5(0.0, "Salvagable (Quality, armour)", "endgame->salvagable;qualityarmorany") { }
+
+            Search S6(0.0, "Salvagable (Sockets, large 1)", "endgame->salvagable;socketsothers") { }
+            Search S7(0.0, "Salvagable (Sockets, small 1)", "endgame->salvagable;socketssmall1") { }
+            Search S7(0.0, "Salvagable (Sockets, small 2)", "endgame->salvagable;socketssmall2") { }
+
+            Search S0(0.0, "Salvagable (High Quality, weapons, rare)", "rare->salvagable;quality2martialany") { }
+            Search S1(0.0, "Salvagable (High Quality, caster, rare)", "rare->salvagable;quality2casterany") { }
+            Search S2(0.0, "Salvagable (High Quality, armour, rare)", "rare->salvagable;quality2armorany") { }
+            Search S3(0.0, "Salvagable (Quality, weapons, rare)", "rare->salvagable;qualitymartialany") { }
+            Search S4(0.0, "Salvagable (Quality, caster, rare)", "rare->salvagable;qualitycasterany") { }
+            Search S5(0.0, "Salvagable (Quality, armour, rare)", "rare->salvagable;qualityarmorany") { }
+
+            Search S6(0.0, "Salvagable (Sockets, large, rare 1)", "rare->salvagable;socketsothers") { }
+            Search S7(0.0, "Salvagable (Sockets, small 1, rare)", "rare->salvagable;socketssmall1") { }
+            Search S7(0.0, "Salvagable (Sockets, small 2, rare)", "rare->salvagable;socketssmall2") { }
+
+
+            QuickUI(S0, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 2+ Whetstones");
+            QuickUI(S1, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 2+ Etchers" );
+            QuickUI(S2, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 2+ Armourers");
+            QuickUI([0.0, "Salvagable (High Quality, flasks)", "endgame->salvagable;quality2flask"], "SH", ["Quality"], "Salvages into: 2+ Glassblowers");
+            QuickUI(S3, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 1 Whetstone");
+            QuickUI(S4, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 1 Etcher" );
+            QuickUI(S5, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 1 Armourer");
+            QuickUI([0.0, "Salvagable (Quality, flasks)", "endgame->salvagable;qualityflask"], "SH", ["Quality"], "Salvages into: 1 Glassblowers");
+            Title("Salvaging small items is more efficient:");
+            QuickUI(S7, "SH", ["Sockets", "Width?", "Height?", "AreaLevel?"], "Small Item: Artificer Shards");
+            QuickUI(S6, "SH", ["Sockets", "Width?", "Height?", "AreaLevel?"], "Large Item: Artificer Shards");
+        }
+
+        Section("Campaign Salvagable Items", "Artificers_Orb_inventory_icon") {
+            QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 2+ Whetstones");
+            QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 2+ Etchers" );
+            QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 2+ Armourers");
+            QuickUI([0.0, "Campaign Salvable (High Quality, flasks)", "leveling->salvagable;quality2flask"], "SH", ["Quality", "ItemLevel?"], "Salvages into: 2+ Glassblower");
+            QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 1 Whetstone");
+            QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 1 Etcher" );
+            QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 1 Armourer");
+            QuickUI([0.0, "Campaign Salvable (Quality, flasks)", "leveling->salvagable;qualityflask"], "SH", ["Quality", "ItemLevel?"], "Salvages into: 1 Glassblower");
+
+            QuickUI([0.0, "Campaign Salvable (Sockets, small 1)", "leveling->salvagable;socketssmall1"], "SH", ["Sockets?", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Small Item: Artificer Shards (2x2)");
+            QuickUI([0.0, "Campaign Salvable (Sockets, small 2)", "leveling->salvagable;socketssmall2"], "SH", ["Sockets?", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Small Item: Artificer Shards (1x4");
+            QuickUI([0.0, "Campaign Salvable (Sockets, large 1)", "leveling->salvagable;socketsothers"], "SH", ["Sockets?", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Large Item: Artificer Shards");
+        }
+    }
 
 Section("Endgame Rares & Crafting", "Amethyst_Ring_inventory_icon") {
 //    SectionTitle("Endgame Rares & Crafting");
@@ -823,205 +998,56 @@ Section("Endgame Rares & Crafting", "Amethyst_Ring_inventory_icon") {
     }
 }
 
-Section("Other Endgame Items", "Breach_Precursor_Tablet_inventory_icon") {
+Section("Flasks, Charms, Jewels", "rubyjewel.webp") {
 //    SectionTitle("Other Endgame Items");
 
-    Section("Flasks & Charms", "Thawing_Charm_inventory_icon") {
-        Section("Flasks", "flasklife09.webp") {
-            QuickUI([0.0, "Endgame Flasks, Quality, Top", "endgame->flasks;toplevelqualityflasks"], "SH", ["Quality", "RarityNM", "ItemLevel", "Identified"], "ILVL83 Flasks+Quality", ["Flasks", "SOA"]);
-            QuickUI([0.0, "Endgame Flasks, Top", "endgame->flasks;toplevelflasks"], "SH", ["Quality", "RarityNM", "ItemLevel", "Identified"], "ILVL83 Flasks", ["Flasks", "SOA"]);
-            QuickUI([0.0, "Endgame Flasks, Early, Life", "endgame->flasks;earlymappinglifemana"], "SDH", ["Quality", "RarityNM", "AreaLevel", "Identified"], "Flasks: Early Endgame ", ["Flasks", "SOA"]);
-
-            Function FlaskFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Quality", "RarityNM", "ItemLevel", "AreaLevel", "Identified"], $text, ["Flasks", "SOA"]); }
-            Conditional("?EgFlasksNewRule") { Show; BaseType == "Ultimate Life Flask"; Class "Flasks"; ItemLevel >= 65; SetTextColor 150 225 150; SetBorderColor 150 225 150; SetFontSize 40; }
-            ElementAdder_Tier("?EgFlasksNewRule", "FlaskFunc");
-        }
-
-        Section("Charms", "topazcharm.webp") {
-            QuickUI([0.0, "Endgame Charms, High, T1", "endgame->charms;hight1charms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: ILVL 83+, Handpicked Base");
-            QuickUI([0.0, "Endgame Charms, High", "endgame->charms;highothercharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: ILVL 83+, Random Base");
-            QuickUI([0.0, "Endgame Charms, Quality, Top", "endgame->charms;topqualitycharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: Quality 18%+");
-            QuickUI([0.0, "Endgame Charms, Quality", "endgame->charms;qualitycharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: Any Quality");
-            QuickUI([0.0, "Endgame Charms, Early", "endgame->charms;earlymappingcharms"], "SH", ["ItemLevel?", "Quality?", "RarityNM?", "AreaLevel", "charms"], "Charms: Early Endgame");
-            QuickUI([0.0, "Endgame Charms", "endgame->charms;anycharm"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Remaining");
-
-            Function CharmFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Quality", "RarityNM", "ItemLevel", "AreaLevel", "charms"], $text); }
-            Conditional("?EgCharmsNewRule") { Show; BaseType == "Golden Charm"; Class "Charms"; ItemLevel >= 65; SetTextColor 150 225 150; SetBorderColor 150 225 150; SetFontSize 40; }
-            ElementAdder_Tier("?EgCharmsNewRule", "CharmFunc");
-        }
+    Section("Jewels", "rubyjewel.webp") {
+        QuickUI([0.0, "Rare Jewels", "jewels->generic;anyrare"], "SH", ["JewelsPoe2", "ItemLevel"]);
+        QuickUI([0.0, "Magic Jewels", "jewels->generic;anymagic"], "SH", ["JewelsPoe2", "ItemLevel"]);
+        QuickUI([0.0, "Time-lost Jewels", "jewels->generic;anytimelost"], "SH", ["Rarity", "JewelsPoe2", "ItemLevel"]);
+        QuickUI([0.0, "Corrupted Jewels: enchanted", "jewels->generic;anycorruptedmod"], "SH", ["Rarity", "JewelsPoe2", "ItemLevel"]);
+        QuickUI([0.0, "Corrupted Jewels: 5-Mod", "jewels->generic;any5modded"], "SH", ["JewelsPoe2", "ItemLevel"]);
     }
 
-    Section("Waystones", "Waystone_Tier_7_inventory_icon") {
+    Section("Flasks", "flasklife09.webp") {
+        QuickUI([0.0, "Endgame Flasks, Quality, Top", "endgame->flasks;toplevelqualityflasks"], "SH", ["Quality", "RarityNM", "ItemLevel", "Identified"], "ILVL83 Flasks+Quality", ["Flasks", "SOA"]);
+        QuickUI([0.0, "Endgame Flasks, Top", "endgame->flasks;toplevelflasks"], "SH", ["Quality", "RarityNM", "ItemLevel", "Identified"], "ILVL83 Flasks", ["Flasks", "SOA"]);
+        QuickUI([0.0, "Endgame Flasks, Early, Life", "endgame->flasks;earlymappinglifemana"], "SDH", ["Quality", "RarityNM", "AreaLevel", "Identified"], "Flasks: Early Endgame ", ["Flasks", "SOA"]);
 
-        Section("Special Waystones") {
-            QuickUI([0.0, "Waystones, Enchanted 1", "waystones;enchanted1"], "SH", ["WaystoneTier"], "Delirium 'Enchanted' High");
-            QuickUI([0.0, "Waystones, Enchanted 2", "waystones;enchanted2"], "SH", ["WaystoneTier"], "Delirium 'Enchanted' Mid");
-            QuickUI([0.0, "Waystones, Enchanted 34", "waystones;enchanted34"], "SH", ["WaystoneTier"], "Delirium 'Enchanted' Low");
-            QuickUI([0.0, "Waystones, Corrupted 8 Mods High", "waystones;corrupted8high"], "SDH", ["WaystoneTier"], "Corrupted with 7+ Mods (high)");
-            QuickUI([0.0, "Waystones, Corrupted 8 Mods", "waystones;corrupted8"], "SDH", ["WaystoneTier"], "Corrupted with 7+ Mods (low)");
-            QuickUI([0.0, "Waystones, Corrupted", "waystone->hiders;corruptedmaphider"], "SDH", ["WaystoneTier"], "Any Corrupted (Normal/Magic)");
-            QuickUI([0.0, "Waystones, Mirrored", "waystone->hiders;mirroredmaphider"], "SDH", ["WaystoneTier"], "Any Mirrored (Normal/Magic)");
-            Description("The following rule will highlight all RARE waystones, however it takes less priority than other rules. It's useful if you want to sell them for gold to vendors.");
-            QuickUI([0.0, "Waystones, Rare", "waystones;waystone_rares_other"], "SDH", ["WaystoneTier"], "Any Remaining Rare");
-        }
-
-        Section("Normal") {
-            QuickUI([0.0, "Waystones Tier 16", "waystones;waystone_t16"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 15", "waystones;waystone_t15"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 14", "waystones;waystone_t14"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 13", "waystones;waystone_t13"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 12", "waystones;waystone_t12"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 11", "waystones;waystone_t11"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 10", "waystones;waystone_t10"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 9", "waystones;waystone_t9"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 8", "waystones;waystone_t8"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 7", "waystones;waystone_t7"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 6", "waystones;waystone_t6"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 5", "waystones;waystone_t5"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 4", "waystones;waystone_t4"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 3", "waystones;waystone_t3"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 2", "waystones;waystone_t2"], "SD", []);
-            QuickUI([0.0, "Waystones Tier 1", "waystones;waystone_t1"], "SD", []);
-        }
-
-        Section("Decorators (advanced)") {
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 16", "waystones;deco_wsup_t16") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 15", "waystones;deco_wsup_t15") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 14", "waystones;deco_wsup_t14") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 13", "waystones;deco_wsup_t13") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 12", "waystones;deco_wsup_t12") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 11", "waystones;deco_wsup_t11") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 10", "waystones;deco_wsup_t10") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 9", "waystones;deco_wsup_t9") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 8", "waystones;deco_wsup_t8") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 7", "waystones;deco_wsup_t7") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 6", "waystones;deco_wsup_t6") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 5", "waystones;deco_wsup_t5") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 4", "waystones;deco_wsup_t4") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 3", "waystones;deco_wsup_t3") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 2", "waystones;deco_wsup_t2") { }
-            Search S0(0.0, "Waystone Upgrade Decorator Tier 1", "waystones;deco_wsup_t1") { }
-
-            Description("Decorators are special rules. They change the APPEARANCE (only) of certain items, without deciding if the item should be hidden or show. They allow highlighting certain properties on gear.");
-
-            QuickUI(S0, "SD", [], "If waystone is a tier upgrade...", false, "These rules add highlighting to waystones that one one tier higher than the one you're currently in - without affecting if the item gets hidden or not.");
-
-            QuickUI([0.0, "Waystones, Decorator, Corrupted Mod", "waystones;deco_corruptedmod"], "SD", ["WaystoneTier"], "If corrupted+has implicit...");
-            QuickUI([0.0, "Waystones, Decorator, Top Tier", "waystones;decomap1"], "SD", ["WaystoneTier"], "If Tier15+...");
-            QuickUI([0.0, "Waystones, Decorator, High Tier", "waystones;decomap2"], "SD", ["WaystoneTier"], "If Tier is 12-14...");
-            QuickUI([0.0, "Waystones, Decorator, Mid Tier", "waystones;decomap3"], "SD", ["WaystoneTier"], "If Tier is 6-11...");
-            QuickUI([0.0, "Waystones, Decorator, Low Tier", "waystones;decomap4"], "SD", ["WaystoneTier"], "If Tier is 1-5...");
-
-            QuickUI([0.0, "Waystones, Decorator, Overleveled 1", "waystones;decomap1overleveled"], "SD", ["WaystoneTier", "AreaLevel"], "If waystone is outleveled 1...");
-            QuickUI([0.0, "Waystones, Decorator, Overleveled 2", "waystones;decomap2overleveled"], "SD", ["WaystoneTier", "AreaLevel"], "If waystone is outleveled 2...");
-            QuickUI([0.0, "Waystones, Decorator, Overleveled 3", "waystones;decomap3overleveled"], "SD", ["WaystoneTier", "AreaLevel"], "If waystone is outleveled 2...");
-            QuickUI([0.0, "Waystones, Decorator, Overleveled 4", "waystones;decomap4overleveled"], "SD", ["WaystoneTier", "AreaLevel"], "If waystone is outleveled 3...");
-        }
+        Function FlaskFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Quality", "RarityNM", "ItemLevel", "AreaLevel", "Identified"], $text, ["Flasks", "SOA"]); }
+        Conditional("?EgFlasksNewRule") { Show; BaseType == "Ultimate Life Flask"; Class "Flasks"; ItemLevel >= 65; SetTextColor 150 225 150; SetBorderColor 150 225 150; SetFontSize 40; }
+        ElementAdder_Tier("?EgFlasksNewRule", "FlaskFunc");
     }
 
-    Section("Tablets and Map-like items", "Breach_Precursor_Tablet_inventory_icon") {
-        Section("Map Fragments & Tablets", "PrecursorTabletGeneric.webp") {
-            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function MapFragmentsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["MapFragAndTablets", "O"]); }
-            TierListToolBar();
+    Section("Charms", "topazcharm.webp") {
+        QuickUI([0.0, "Endgame Charms, High, T1", "endgame->charms;hight1charms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: ILVL 83+, Handpicked Base");
+        QuickUI([0.0, "Endgame Charms, High", "endgame->charms;highothercharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: ILVL 83+, Random Base");
+        QuickUI([0.0, "Endgame Charms, Quality, Top", "endgame->charms;topqualitycharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: Quality 18%+");
+        QuickUI([0.0, "Endgame Charms, Quality", "endgame->charms;qualitycharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: Any Quality");
+        QuickUI([0.0, "Endgame Charms, Early", "endgame->charms;earlymappingcharms"], "SH", ["ItemLevel?", "Quality?", "RarityNM?", "AreaLevel", "charms"], "Charms: Early Endgame");
+        QuickUI([0.0, "Endgame Charms", "endgame->charms;anycharm"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Remaining");
 
-            MapFragmentsFunc([0.0, "Map Fragments Tier 1", "fragments->generic;s"], "SH", "S Tier");
-            MapFragmentsFunc([0.0, "Map Fragments Tier 2", "fragments->generic;a"], "SH", "A Tier");
-            MapFragmentsFunc([0.0, "Map Fragments Tier 3", "fragments->generic;b"], "SH", "B Tier");
-            MapFragmentsFunc([0.0, "Map Fragments Tier 4", "fragments->generic;c"], "SH", "C Tier");
-            MapFragmentsFunc([0.0, "Map Fragments Tier 5", "fragments->generic;d"], "SH", "D Tier");
-            MapFragmentsFunc([0.0, "Map Fragments Tier 6", "fragments->generic;e"], "SH", "E Tier");
-
-            // new tiers
-            Conditional("?MapFragmentsNewTier") { }
-            ElementAdder_Tier("?MapFragmentsNewTier", "MapFragmentsFunc");
-
-            // hide tier
-            Conditional("?MapFragmentsNewTiersHidden") { }
-            ElementAdder_Tier("?MapFragmentsNewTiersHidden", null, true, "MapFragAndTablets", "OH");
-        }
-
-        Section("Splinters", "deliriumsplinter.webp") {
-            Function SplinterFunc($s, $shd = "SH", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["B: Splinter;C:Stackable Currency", "OS"]); }
-
-            SplinterFunc([0.0, "Splinters Tier 1", "currency->splinter;t1"], "SH", "S Tier");
-            SplinterFunc([0.0, "Splinters Tier 2", "currency->splinter;t2"], "SH", "A Tier");
-            SplinterFunc([0.0, "Splinters Tier 3", "currency->splinter;t3"], "SH", "B Tier");
-            SplinterFunc([0.0, "Splinters Tier 4", "currency->splinter;t4"], "SH", "C Tier");
-            SplinterFunc([0.0, "Splinters Tier 5", "currency->splinter;t5"], "SH", "D Tier");
-
-            // new tiers
-            Conditional("?SplintersNewTier") { }
-            ElementAdder_Tier("?SplintersNewTier", "SplinterFunc");
-        }
-
-        Section("Ascendancy Keys", "ultimatumtrialitem.webp") {
-            Title("Sanctum");
-            QuickUI([0.0, "Djinn Barya, Top Level", "miscmapitemsextra;trialkeysanctumtop"], "SH", ["ItemLevel"], "Sanctum best rewards");
-            QuickUI([0.0, "Djinn Barya, High Level", "miscmapitemsextra;trialkeysanctum3"], "SH", ["ItemLevel"], "Sanctum 3-4 points");
-            QuickUI([0.0, "Djinn Barya Leveling 2", "miscmapitemsextra;trialkeysanctum2"], "SH", ["ItemLevel"], "Sanctum 2 points");
-            QuickUI([0.0, "Djinn Barya Leveling 1", "miscmapitemsextra;trialkeysanctum1"], "SH", ["ItemLevel"], "Sanctum 1 points");
-            Title("Ultimatum");
-            QuickUI([0.0, "Ultimatum Reward", "miscmapitemsextra;trialkeyultimatumreward"], "SH", ["RarityU"]);
-            QuickUI([0.0, "Ultimatum, Top Level", "miscmapitemsextra;trialkeyultimatumtop"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Ultimatum, High Level", "miscmapitemsextra;trialkeyultimatumhigh"], "SH", ["ItemLevel"]);
-            QuickUI([0.0, "Ultimatum", "miscmapitemsextra;trialkeyultimatumlow"], "SH", ["ItemLevel"]);
-            Title("Other");
-            QuickUI([0.0, "Special Trials", "miscmapitemsextra;trialspecial"], "SH", ["ItemLevel"]);
-        }
-
-        Section("Vault Keys, Pinnacle Keys, Logbooks", "expeditionchronicle3.webp") {
-            Description("Expedition Logbooks");
-            QuickUI([1.0, "Logbooks", "maplike->special;logbookshigh"], "SH");
-            Warning("Currently Vault keys can NOT be completely hidden. You can make them small/transparent instead.");
-            QuickUI([0.0, "Pinnacle Boss Keys", "maplike->special;superkeys"], "SH", []);
-            QuickUI([0.0, "Vault Keys Rare", "maplike->special;vaultkeysrare"], "S", [], "Boss-Drop Vault Keys", ["C:Vault Keys", "OS"]);
-            QuickUI([0.0, "Vault Keys", "maplike->special;vaultkeys"], "S", [], "Common Vault Keys", ["C:Vault Keys", "SO"]);
-            QuickUI([0.0, "Vault Keys (Other)", "miscmapitemsextra;relickeyssafe"], "S", [], "Other Vault Keys");
-        }
-    }
-
-    Section("Endgame Salvagable Items", "Artificers_Orb_inventory_icon") {
-        Description("Certain items can be salvaged at an NPC in town in return for crafting currencies.");
-
-        Search S0(0.0, "Salvagable (High Quality, weapons)", "endgame->salvagable;quality2martialany") { }
-        Search S1(0.0, "Salvagable (High Quality, caster)", "endgame->salvagable;quality2casterany") { }
-        Search S2(0.0, "Salvagable (High Quality, armour)", "endgame->salvagable;quality2armorany") { }
-        Search S3(0.0, "Salvagable (Quality, weapons)", "endgame->salvagable;qualitymartialany") { }
-        Search S4(0.0, "Salvagable (Quality, caster)", "endgame->salvagable;qualitycasterany") { }
-        Search S5(0.0, "Salvagable (Quality, armour)", "endgame->salvagable;qualityarmorany") { }
-
-        Search S6(0.0, "Salvagable (Sockets, large 1)", "endgame->salvagable;socketsothers") { }
-        Search S7(0.0, "Salvagable (Sockets, small 1)", "endgame->salvagable;socketssmall1") { }
-        Search S7(0.0, "Salvagable (Sockets, small 2)", "endgame->salvagable;socketssmall2") { }
-
-        Search S0(0.0, "Salvagable (High Quality, weapons, rare)", "rare->salvagable;quality2martialany") { }
-        Search S1(0.0, "Salvagable (High Quality, caster, rare)", "rare->salvagable;quality2casterany") { }
-        Search S2(0.0, "Salvagable (High Quality, armour, rare)", "rare->salvagable;quality2armorany") { }
-        Search S3(0.0, "Salvagable (Quality, weapons, rare)", "rare->salvagable;qualitymartialany") { }
-        Search S4(0.0, "Salvagable (Quality, caster, rare)", "rare->salvagable;qualitycasterany") { }
-        Search S5(0.0, "Salvagable (Quality, armour, rare)", "rare->salvagable;qualityarmorany") { }
-
-        Search S6(0.0, "Salvagable (Sockets, large, rare 1)", "rare->salvagable;socketsothers") { }
-        Search S7(0.0, "Salvagable (Sockets, small 1, rare)", "rare->salvagable;socketssmall1") { }
-        Search S7(0.0, "Salvagable (Sockets, small 2, rare)", "rare->salvagable;socketssmall2") { }
-
-
-        QuickUI(S0, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 2+ Whetstones");
-        QuickUI(S1, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 2+ Etchers" );
-        QuickUI(S2, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 2+ Armourers");
-        QuickUI([0.0, "Salvagable (High Quality, flasks)", "endgame->salvagable;quality2flask"], "SH", ["Quality"], "Salvages into: 2+ Glassblowers");
-        QuickUI(S3, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 1 Whetstone");
-        QuickUI(S4, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 1 Etcher" );
-        QuickUI(S5, "SH", ["Quality", "Width?", "Height?", "AreaLevel?"], "Salvages into: 1 Armourer");
-        QuickUI([0.0, "Salvagable (Quality, flasks)", "endgame->salvagable;qualityflask"], "SH", ["Quality"], "Salvages into: 1 Glassblowers");
-        Title("Salvaging small items is more efficient:");
-        QuickUI(S7, "SH", ["Sockets", "Width?", "Height?", "AreaLevel?"], "Small Item: Artificer Shards");
-        QuickUI(S6, "SH", ["Sockets", "Width?", "Height?", "AreaLevel?"], "Large Item: Artificer Shards");
+        Function CharmFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Quality", "RarityNM", "ItemLevel", "AreaLevel", "charms"], $text); }
+        Conditional("?EgCharmsNewRule") { Show; BaseType == "Golden Charm"; Class "Charms"; ItemLevel >= 65; SetTextColor 150 225 150; SetBorderColor 150 225 150; SetFontSize 40; }
+        ElementAdder_Tier("?EgCharmsNewRule", "CharmFunc");
     }
 }
 
-Section("Campaign", "Shabby_Hood_inventory_icon") {
+    Section("Highlight specific bases", "Firefly") {
+
+        Description("Quickly highlight bases by adding a custom rule! If you need more power and options, there's a lot more custom rules lower in the customizer");
+
+        Function CondShowBaseQuick ($s, $shd = "SD", $title)
+        {
+            QuickUI($s, $shd, ["RarityU", "ItemLevel", "Corrupted?", "Stats_Rarity?", "UnidentifiedItemTier?"], $title, ["rarityItems", "OS"]);
+        }
+
+        Conditional("?CQuickEndgameCustomRule1", ["c3.gear.chancing"], null, 4190) { Show; BaseType == "Gemini Bow" "Primed Quiver"; SetBorderColor 200 0 0; SetBackgroundColor 60 0 0; SetFontSize 40; ItemLevel >= 68; Rarity Normal Magic; Corrupted False; Mirrored False; }
+        ElementAdder_Tier("?CQuickEndgameCustomRule1", "CondShowBaseQuick");
+    }
+}
+
+Section("Campaign Gear", "Shabby_Hood_inventory_icon") {
 //    SectionTitle("Campaign");
 
     Section("Add custom Show/Hide rules (campaign)", "Firefly") {
@@ -1233,21 +1259,6 @@ Section("Campaign", "Shabby_Hood_inventory_icon") {
             ElementAdder_Tier("?LvlCharmsNewRule", "CharmFunc");
         }
     }
-
-    Section("Campaign Salvagable Items", "Artificers_Orb_inventory_icon") {
-        QuickUI([0.0, "Campaign Salvable (High Quality, weapons)", "leveling->salvagable;quality2martialany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 2+ Whetstones");
-        QuickUI([0.0, "Campaign Salvable (High Quality, caster)", "leveling->salvagable;quality2casterany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 2+ Etchers" );
-        QuickUI([0.0, "Campaign Salvable (High Quality, armour)", "leveling->salvagable;quality2armorany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 2+ Armourers");
-        QuickUI([0.0, "Campaign Salvable (High Quality, flasks)", "leveling->salvagable;quality2flask"], "SH", ["Quality", "ItemLevel?"], "Salvages into: 2+ Glassblower");
-        QuickUI([0.0, "Campaign Salvable (Quality, weapons)", "leveling->salvagable;qualitymartialany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 1 Whetstone");
-        QuickUI([0.0, "Campaign Salvable (Quality, caster)", "leveling->salvagable;qualitycasterany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 1 Etcher" );
-        QuickUI([0.0, "Campaign Salvable (Quality, armour)", "leveling->salvagable;qualityarmorany"], "SH", ["Quality", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Salvages into: 1 Armourer");
-        QuickUI([0.0, "Campaign Salvable (Quality, flasks)", "leveling->salvagable;qualityflask"], "SH", ["Quality", "ItemLevel?"], "Salvages into: 1 Glassblower");
-
-        QuickUI([0.0, "Campaign Salvable (Sockets, small 1)", "leveling->salvagable;socketssmall1"], "SH", ["Sockets?", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Small Item: Artificer Shards (2x2)");
-        QuickUI([0.0, "Campaign Salvable (Sockets, small 2)", "leveling->salvagable;socketssmall2"], "SH", ["Sockets?", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Small Item: Artificer Shards (1x4");
-        QuickUI([0.0, "Campaign Salvable (Sockets, large 1)", "leveling->salvagable;socketsothers"], "SH", ["Sockets?", "ItemLevel?", "Width?", "Height?", "Rarity?"], "Large Item: Artificer Shards");
-    }
 }
 
 Section("Misc.", "GoldenKey") {
@@ -1304,45 +1315,40 @@ Section("Misc.", "GoldenKey") {
         }
     }
 
-    Section("Jewels", "rubyjewel.webp") {
-        QuickUI([0.0, "Rare Jewels", "jewels->generic;anyrare"], "SH", ["JewelsPoe2", "ItemLevel"]);
-        QuickUI([0.0, "Magic Jewels", "jewels->generic;anymagic"], "SH", ["JewelsPoe2", "ItemLevel"]);
-        QuickUI([0.0, "Time-lost Jewels", "jewels->generic;anytimelost"], "SH", ["Rarity", "JewelsPoe2", "ItemLevel"]);
-        QuickUI([0.0, "Corrupted Jewels: enchanted", "jewels->generic;anycorruptedmod"], "SH", ["Rarity", "JewelsPoe2", "ItemLevel"]);
-        QuickUI([0.0, "Corrupted Jewels: 5-Mod", "jewels->generic;any5modded"], "SH", ["JewelsPoe2", "ItemLevel"]);
+    Section("Unique Special Cases") {
+        Description("Expedition has a secret recipe tha tallows converting 60 unique rings into a valuable unique armor: 'Loreweave'. This keeps rings shown.");
+        QuickUI([0.0, "Loreweave Rings", "uniques;loreweaverecipe"], "SD");
+        QuickUI([0.0, "Unique Exception: Sekhema Ring", "uniques;sekhemaring"], "SH");
+        QuickUI([0.0, "Corrupted Uniques", "uniques;corrupteduniques"], "SH");
+        QuickUI([0.0, "twice corrupted uniques", "uniques;twicecorrupteduniques"], "SH", []);
+        QuickUI([0.0, "vaal-origin uniques", "uniques;vaaltypeuniques"], "SD", []);
+        QuickUI([0.0, "uniques with a corrupted vaal mod", "uniques;vaalmodunique"], "SH", []);
     }
 
-    Section("Special Rules", "GoldenKey") {
+    Section("Relics") {
+        // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+        Function RelicsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Relics", "O"]); }
+        TierListToolBar();
 
-        Section("Relics") {
-            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function RelicsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Relics", "O"]); }
-            TierListToolBar();
+        Warning("Relics can NOT be fully hidden (game rule/limitation)");
+        RelicsFunc([1.0, "Relics", "relics->generic;any"], "SH", "Any Sekhema Trial Relic");
 
-            RelicsFunc([1.0, "Relics", "relics->generic;any"], "SH", "S Tier");
+        // new tiers
+        Conditional("?RelicsNewTier") { }
+        ElementAdder_Tier("?RelicsNewTier", "RelicsFunc");
 
-            // new tiers
-            Conditional("?RelicsNewTier") { }
-            ElementAdder_Tier("?RelicsNewTier", "RelicsFunc");
+        // hide tier
+        Conditional("?RelicsNewTiersHidden") { }
+        ElementAdder_Tier("?RelicsNewTiersHidden", null, true, "C:Relics", "OH");
+    }
 
-            // hide tier
-            Conditional("?RelicsNewTiersHidden") { }
-            ElementAdder_Tier("?RelicsNewTiersHidden", null, true, "C:Relics", "OH");
-        }
+    Section("Special & Technical Rules", "GoldenKey") {
+
+        Description("Rules in here rarely need adjustment and are either very exotic items, items that are not supposed to drop or safeguards");
 
         Section("Special Gem Rules") {
             QuickUI([0.0, "twice corrupted gems: 21/23", "gems;upgradedgemstwice"], "SH", []);
             QuickUI([0.0, "twice corrupted gems", "gems;upgradedgemslevel"], "SH", []);
-        }
-
-        Section("Unique Special Cases") {
-            Description("Expedition has a secret recipe tha tallows converting 60 unique rings into a valuable unique armor: 'Loreweave'. This keeps rings shown.");
-            QuickUI([0.0, "Loreweave Rings", "uniques;loreweaverecipe"], "SD");
-            QuickUI([0.0, "Unique Exception: Sekhema Ring", "uniques;sekhemaring"], "SH");
-            QuickUI([0.0, "Corrupted Uniques", "uniques;corrupteduniques"], "SH");
-            QuickUI([0.0, "twice corrupted uniques", "uniques;twicecorrupteduniques"], "SH", []);
-            QuickUI([0.0, "vaal-origin uniques", "uniques;vaaltypeuniques"], "SD", []);
-            QuickUI([0.0, "uniques with a corrupted vaal mod", "uniques;vaalmodunique"], "SH", []);
         }
 
         Section("Exotic Bases") {
