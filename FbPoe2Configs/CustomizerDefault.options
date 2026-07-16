@@ -10,6 +10,7 @@ DefensiveSearch S10(3, "skip", "hidelayer;outdatedlevelflaske") { };
 DefensiveSearch S10(3, "skip", "hidelayer;final") { };
 
 Chapter(){
+	SectionTitle("Currency & Rewards");
 
     Section("Currency", "Exalted_Orb_inventory_icon", "E") {
         Function CurrencyList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize?"], $text, ["normalCurrencyPoe2", "O"]); }
@@ -338,6 +339,7 @@ Chapter(){
 
 Chapter()
 {
+	SectionTitle("Endgame");
 
     Section("Waystones, Tablets & Content Keys", "Breach_Precursor_Tablet_inventory_icon") {
         Section("Waystones", "Waystone_Tier_7_inventory_icon") {
@@ -1047,8 +1049,11 @@ Chapter()
     }
 }
 
+Chapter() {
+	SectionTitle("Campaign");
+
 Section("Campaign Gear", "Shabby_Hood_inventory_icon") {
-    //    SectionTitle("Campaign");
+    // SectionTitle("Campaign");
 
     Section("Add custom Show/Hide rules (campaign)", "Firefly") {
 
@@ -1260,6 +1265,10 @@ Section("Campaign Gear", "Shabby_Hood_inventory_icon") {
         }
     }
 }
+}
+
+Chapter() {
+	SectionTitle("Miscellaneous");
 
 Section("Misc.", "GoldenKey") {
     //    SectionTitle("Misc.");
@@ -1422,4 +1431,5 @@ Section("Misc.", "GoldenKey") {
 
 
     }
+}
 }

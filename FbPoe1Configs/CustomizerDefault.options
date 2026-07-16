@@ -22,6 +22,7 @@ DefensiveSearch S10(1, "skip", "hidelayer;normalmagicendgame"){ DropLevel 1; Ite
 DefensiveSearch S10(1, "skip", "hidelayer;raresendgame"){ DropLevel 1; ItemLevel 75; Rarity Rare; SocketGroup "R"; };
 
 Chapter(){
+	SectionTitle("Currency & Rewards");
 
     Section("Currency", "RewardCurrency.webp", "E") {
 
@@ -595,7 +596,7 @@ Chapter(){
 }
 
 Chapter() {
-    // SectionTitle("Endgame Basetypes, Maps & Fragments");
+	SectionTitle("Endgame");
 
     //===================================================================================================
     // CURRENT LEAGUE
@@ -1655,8 +1656,8 @@ Chapter() {
 //===================================================================================================
 
 Chapter() {
-
-    Section("Campaign", "IronRing") {
+	SectionTitle("Campaign");
+    Section("Campaign & Leveling", "IronRing") {
 
         Section("Add custom Show/Hide rules (campaign)", "Firefly") {
 
@@ -2014,6 +2015,7 @@ Chapter() {
 }
 
 Chapter() {
+	SectionTitle("Miscellaneous");
 
     //===================================================================================================
     // MISC ITEMS
