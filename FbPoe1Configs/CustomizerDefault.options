@@ -840,15 +840,15 @@ Chapter() {
             QuickUI(T12, "SH", [], "T12");
             QuickUI(T11, "SH", [], "T11");
             QuickUI(T10, "SH", [], "T10");
-            QuickUI([0.0, "Map appearance T9", "maps;maps_c_t9"], "SH", [], "T9"]);
-            QuickUI([0.0, "Map appearance T8", "maps;maps_c_t8"], "SH", [], "T8"]);
-            QuickUI([0.0, "Map appearance T7", "maps;maps_c_t7"], "SH", [], "T7"]);
-            QuickUI([0.0, "Map appearance T6", "maps;maps_c_t6"], "SH", [], "T6"]);
-            QuickUI([0.0, "Map appearance T5", "maps;maps_d_t5"], "SH", [], "T5"]);
-            QuickUI([0.0, "Map appearance T4", "maps;maps_d_t4"], "SH", [], "T4"]);
-            QuickUI([0.0, "Map appearance T3", "maps;maps_d_t3"], "SH", [], "T3"]);
-            QuickUI([0.0, "Map appearance T2", "maps;maps_d_t2"], "SH", [], "T2"]);
-            QuickUI([0.0, "Map appearance T1", "maps;maps_d_t1"], "SH", [], "T1"]);
+            QuickUI([0.0, "Map appearance T9", "maps;maps_c_t9"], "SH", [], "T9");
+            QuickUI([0.0, "Map appearance T8", "maps;maps_c_t8"], "SH", [], "T8");
+            QuickUI([0.0, "Map appearance T7", "maps;maps_c_t7"], "SH", [], "T7");
+            QuickUI([0.0, "Map appearance T6", "maps;maps_c_t6"], "SH", [], "T6");
+            QuickUI([0.0, "Map appearance T5", "maps;maps_d_t5"], "SH", [], "T5");
+            QuickUI([0.0, "Map appearance T4", "maps;maps_d_t4"], "SH", [], "T4");
+            QuickUI([0.0, "Map appearance T3", "maps;maps_d_t3"], "SH", [], "T3");
+            QuickUI([0.0, "Map appearance T2", "maps;maps_d_t2"], "SH", [], "T2");
+            QuickUI([0.0, "Map appearance T1", "maps;maps_d_t1"], "SH", [], "T1");
 
             //        Section("Beyond Maps (identified)") {
             //            QuickUI([0.0, "ModFiltering: Maps 1", "maps->identified;nemesisbeyond"], "SD", ["MapTier", "Mods"], "Beyond Maps");
@@ -1112,13 +1112,13 @@ Chapter() {
         }
 
         Section("Jewellery", "RewardJewellery.webp") {
-            Search S1(1.0, "Rare rings/amulets T1", "rr->amuring;t1"]) { }
-            Search S2(1.0, "Rare rings/amulets T2", "rr->amuring;t2"]) { }
-            Search S3(1.0, "Rare rings/amulets T3", "rr->amuring;t3"]) { }
+            Search S1(1.0, "Rare rings/amulets T1", "rr->amuring;t1") { }
+            Search S2(1.0, "Rare rings/amulets T2", "rr->amuring;t2") { }
+            Search S3(1.0, "Rare rings/amulets T3", "rr->amuring;t3") { }
 
-            Search B1(1.0, "Rare belts T1", "rr->belts;t1"]) { }
-            Search B2(1.0, "Rare belts T2", "rr->belts;t2"]) { }
-            Search B3(1.0, "Rare belts T3", "rr->belts;t3"]) { }
+            Search B1(1.0, "Rare belts T1", "rr->belts;t1") { }
+            Search B2(1.0, "Rare belts T2", "rr->belts;t2") { }
+            Search B3(1.0, "Rare belts T3", "rr->belts;t3") { }
 
             QuickUI(S1, "SD", ["AreaLevel","ItemLevel"], "Rank A - Rings/Amulets");
             QuickUI(B1, "SD", ["AreaLevel","ItemLevel"], "Rank A - Belts");
@@ -2189,9 +2189,9 @@ Chapter() {
 
         Section("Identified Mods: Delve", "DelveResonator") {
             DeepSearch S2(0.0, "Fractured Delve Mods", "exoticmods;delvefractured") { }
-            QuickUI(S2, "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "SAO"]]);
-            QuickUI([0.0, "Delve mods T1", "exoticmods;delve"], "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "ASO"]]);
-            QuickUI([0.0, "Delve mods T2", "exoticmods;crafting"], "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "OAS"]]);
+            QuickUI(S2, "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "SAO"]);
+            QuickUI([0.0, "Delve mods T1", "exoticmods;delve"], "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "ASO"]);
+            QuickUI([0.0, "Delve mods T2", "exoticmods;crafting"], "SD", ["Mods", "Rarity", "AllGearClasses"], null, ["Gear", "OAS"]);
         }
 
         Section("Identified Mods: Essence", "Essence") {
@@ -2358,7 +2358,7 @@ Chapter() {
                 QuickUI([0.0, "Top Gems, 23q", "gems->special;xx23"], "SH", ["GemLevel", "Quality", "Corrupted", "AreaLevel"], "Qual: 23%", ["Gems", "OD"]);
                 QuickUI([0.0, "Top Gems, lvl 21", "gems->special;21xx"], "SH", ["GemLevel", "Quality", "Corrupted", "AreaLevel"], "LVL: 21", ["Gems", "OD"]);
                 QuickUI([0.0, "Top Gems, lvl 21, 23q", "gems->special;2123any"], "SH", ["GemLevel", "Quality", "Corrupted", "AreaLevel"], "Qual: 23%, LVL: 21 (Any)");
-                QuickUI([0.0, "Top Gems, lvl 20, 23q", "gems->special;2023"], "SH", ["GemLevel", "Quality", "Corrupted", "AreaLevel"], "Qual: 23%, LVL: 20", ["Gems", "OD"]]);
+                QuickUI([0.0, "Top Gems, lvl 20, 23q", "gems->special;2023"], "SH", ["GemLevel", "Quality", "Corrupted", "AreaLevel"], "Qual: 23%, LVL: 20", ["Gems", "OD"]);
                 QuickUI([0.0, "Top Gems, lvl 21, 20q", "gems->special;2120"], "S", ["GemLevel", "Quality", "Corrupted", "AreaLevel"], "Qual: 20%, LVL: 21", ["Gems", "OD"]);
                 QuickUI([0.0, "Top Gems, lvl 20, 20q", "gems->special;2020z"], "S", ["GemLevel", "Quality", "Corrupted", "AreaLevel"], "Qual: 20%, LVL: 20 Not Corrupted", ["Gems", "OD"]);
                 QuickUI([0.0, "Top Gems, 20q, Vaal", "gems->special;vaal20"], "S", ["GemLevel", "Quality", "Corrupted", "AreaLevel"], "Qual: 20%+, Selected Vaal Only", ["Gems", "OD"], "These Vaal Gems are either expensive already or will be once they reach a high level, so it's worth leveling them.");
@@ -2675,7 +2675,7 @@ Chapter() {
                 ModItemUI([0.0, "ModFiltering: Magic - T2 Amulet", "magicid;t2amu"], "SH", "+1 to Gem Type Amu");
                 ModItemUI([0.0, "ModFiltering: Magic - T2 Shield", "magicid;t2shield"], "SH", "+2% Max Resist Shield");
                 ModItemUI([0.0, "ModFiltering: Magic - T2 Suppression", "magicid;t2suppress"], "SH", "Top Suppression Items");
-                ModItemUI([0.0, "ModFiltering: Magic - T2 Physical", "magicid;t2purephys"], "SH"], "Merciless&Dictator Phys Weapons");
+                ModItemUI([0.0, "ModFiltering: Magic - T2 Physical", "magicid;t2purephys"], "SH", "Merciless&Dictator Phys Weapons");
                 ModItemUI([0.0, "ModFiltering: Magic - T2 DoT Wand", "magicid;t2dotwand"], "SH", "DoT Wands");
                 ModItemUI([0.0, "ModFiltering: Magic - T2 Sceptre", "magicid;t2sceptre"], "SH", "DoT Sceptres");
                 ModItemUI([0.0, "ModFiltering: Magic - T2 Elemental Weapons", "magicid;t2eleweapons"], "SH", "Top Elemental Caster Weapons");

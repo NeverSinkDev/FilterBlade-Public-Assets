@@ -919,7 +919,7 @@ Chapter()
                 QuickUI(C2Ideal, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank B Crafting Bases (LVL82+)");
                 QuickUI(C3Ideal, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank C Crafting Bases (LVL82+)");
                 Description("The bases below are designed to be shown when in appropriate zone levels. You'll see T3 bases when in low waystones (because these are the best available at that level)");
-                QuickUI(C1, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank A Bases (any level)"););
+                QuickUI(C1, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank A Bases (any level)");
                 QuickUI(C2OnLvl, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank B Bases (70-75)");
                 QuickUI(C3OnLvl, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank C Bases (65-70)");
             }
