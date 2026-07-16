@@ -917,13 +917,13 @@ Chapter()
             Section("NORMAL BASES + NO TIER MAGICS", "buckler04.webp")
             {
                 Description("Crafting bases with ideal itemlevel (82). The itemlevel allows these bases to roll the highest tiers of mods, that can't be found on lower levels");
-                QuickUI(C1Ideal, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank A Crafting Bases (LVL82+)");
-                QuickUI(C2Ideal, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank B Crafting Bases (LVL82+)");
-                QuickUI(C3Ideal, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank C Crafting Bases (LVL82+)");
+                QuickUI(C1Ideal, "SD", ["AreaLevel?","ItemLevel", "UnidentifiedItemTier?", "Rarity"], "Rank A Crafting Bases (LVL82+)");
+                QuickUI(C2Ideal, "SD", ["AreaLevel?","ItemLevel", "UnidentifiedItemTier?", "Rarity"], "Rank B Crafting Bases (LVL82+)");
+                QuickUI(C3Ideal, "SD", ["AreaLevel?","ItemLevel", "UnidentifiedItemTier?", "Rarity"], "Rank C Crafting Bases (LVL82+)");
                 Description("The bases below are designed to be shown when in appropriate zone levels. You'll see T3 bases when in low waystones (because these are the best available at that level)");
-                QuickUI(C1, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank A Bases (any level)");
-                QuickUI(C2OnLvl, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank B Bases (70-75)");
-                QuickUI(C3OnLvl, "SD", ["AreaLevel","ItemLevel", "UnidentifiedItemTier", "Rarity"], "Rank C Bases (65-70)");
+                QuickUI(C1, "SD", ["AreaLevel?","ItemLevel", "UnidentifiedItemTier?", "Rarity"], "Rank A Bases (any level)");
+                QuickUI(C2OnLvl, "SD", ["AreaLevel?","ItemLevel", "UnidentifiedItemTier?", "Rarity"], "Rank B Bases (70-75)");
+                QuickUI(C3OnLvl, "SD", ["AreaLevel?","ItemLevel", "UnidentifiedItemTier?", "Rarity"], "Rank C Bases (65-70)");
             }
 
             Title("Control Tiering:");
@@ -988,14 +988,14 @@ Chapter()
 
             Section("Breach rings", "BreachRing")
             {
-                QuickUI([0.0, "Breach Rings, high level", "exoticbases;commonexoticbaseshigh"], "SH", ["Rarity", "ItemLevel", "Identified", "UnidentifiedItemTier"]);
-                QuickUI([0.0, "Breach Rings", "exoticbases;commonexoticbases"], "SH", ["Rarity", "ItemLevel", "Identified", "UnidentifiedItemTier"]);
+                QuickUI([0.0, "Breach Rings, high level", "exoticbases;commonexoticbaseshigh"], "SH", ["Rarity", "ItemLevel", "Identified?", "UnidentifiedItemTier?"]);
+                QuickUI([0.0, "Breach Rings", "exoticbases;commonexoticbases"], "SH", ["Rarity", "ItemLevel", "Identified?", "UnidentifiedItemTier?"]);
             }
 
             Section("Optional Rules", "Shrine_Sceptre_Fire_inventory_icon")
             {
-                QuickUI([0.0, "ILVL81 Caster Items", "endgame->normalcraft->any;minionsceptresoptional"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity", "UnidentifiedItemTier"], "", ["gear", "SAO"]);
-                QuickUI([0.0, "ILVL81 Crafting Wands", "endgame->normalcraft->extra;wands"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity", "UnidentifiedItemTier"], "", ["gear", "SAO"]);
+                QuickUI([0.0, "ILVL81 Caster Items", "endgame->normalcraft->any;minionsceptresoptional"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity", "UnidentifiedItemTier?"], "", ["gear", "SAO"]);
+                QuickUI([0.0, "ILVL81 Crafting Wands", "endgame->normalcraft->extra;wands"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity", "UnidentifiedItemTier?"], "", ["gear", "SAO"]);
             }
         }
     }
@@ -1012,9 +1012,9 @@ Chapter()
         }
 
         Section("Flasks", "flasklife09.webp") {
-            QuickUI([0.0, "Endgame Flasks, Quality, Top", "endgame->flasks;toplevelqualityflasks"], "SH", ["Quality", "RarityNM", "ItemLevel", "Identified"], "ILVL83 Flasks+Quality", ["Flasks", "SOA"]);
-            QuickUI([0.0, "Endgame Flasks, Top", "endgame->flasks;toplevelflasks"], "SH", ["Quality", "RarityNM", "ItemLevel", "Identified"], "ILVL83 Flasks", ["Flasks", "SOA"]);
-            QuickUI([0.0, "Endgame Flasks, Early, Life", "endgame->flasks;earlymappinglifemana"], "SDH", ["Quality", "RarityNM", "AreaLevel", "Identified"], "Flasks: Early Endgame", ["Flasks", "SOA"]);
+            QuickUI([0.0, "Endgame Flasks, Quality, Top", "endgame->flasks;toplevelqualityflasks"], "SH", ["Quality?", "RarityNM?", "ItemLevel?", "Identified?"], "ILVL83 Flasks+Quality", ["Flasks", "SOA"]);
+            QuickUI([0.0, "Endgame Flasks, Top", "endgame->flasks;toplevelflasks"], "SH", ["Quality?", "RarityNM?", "ItemLevel", "Identified?"], "ILVL83 Flasks", ["Flasks", "SOA"]);
+            QuickUI([0.0, "Endgame Flasks, Early, Life", "endgame->flasks;earlymappinglifemana"], "SDH", ["Quality", "RarityNM?", "AreaLevel", "Identified?"], "Flasks: Early Endgame", ["Flasks", "SOA"]);
 
             Function FlaskFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Quality", "RarityNM", "ItemLevel", "AreaLevel", "Identified"], $text, ["Flasks", "SOA"]); }
             Conditional("?EgFlasksNewRule") { Show; BaseType == "Ultimate Life Flask"; Class "Flasks"; ItemLevel >= 65; SetTextColor 150 225 150; SetBorderColor 150 225 150; SetFontSize 40; }
@@ -1022,12 +1022,12 @@ Chapter()
         }
 
         Section("Charms", "topazcharm.webp") {
-            QuickUI([0.0, "Endgame Charms, High, T1", "endgame->charms;hight1charms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: ILVL 83+, Handpicked Base");
-            QuickUI([0.0, "Endgame Charms, High", "endgame->charms;highothercharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: ILVL 83+, Random Base");
-            QuickUI([0.0, "Endgame Charms, Quality, Top", "endgame->charms;topqualitycharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: Quality 18%+");
-            QuickUI([0.0, "Endgame Charms, Quality", "endgame->charms;qualitycharms"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Charms: Any Quality");
+            QuickUI([0.0, "Endgame Charms, High, T1", "endgame->charms;hight1charms"], "SH", ["RarityNM?", "Quality?", "ItemLevel", "charms"], "Charms: ILVL 83+, Handpicked Base");
+            QuickUI([0.0, "Endgame Charms, High", "endgame->charms;highothercharms"], "SH", ["RarityNM?", "Quality?", "ItemLevel", "charms"], "Charms: ILVL 83+, Random Base");
+            QuickUI([0.0, "Endgame Charms, Quality, Top", "endgame->charms;topqualitycharms"], "SH", ["RarityNM?", "Quality?", "ItemLevel", "charms"], "Charms: Quality 18%+");
+            QuickUI([0.0, "Endgame Charms, Quality", "endgame->charms;qualitycharms"], "SH", ["RarityNM?", "Quality?", "ItemLevel", "charms"], "Charms: Any Quality");
             QuickUI([0.0, "Endgame Charms, Early", "endgame->charms;earlymappingcharms"], "SH", ["ItemLevel?", "Quality?", "RarityNM?", "AreaLevel", "charms"], "Charms: Early Endgame");
-            QuickUI([0.0, "Endgame Charms", "endgame->charms;anycharm"], "SH", ["RarityNM", "Quality", "ItemLevel", "charms"], "Remaining");
+            QuickUI([0.0, "Endgame Charms", "endgame->charms;anycharm"], "SH", ["RarityNM?", "Quality?", "ItemLevel?", "charms"], "Remaining");
 
             Function CharmFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["Quality", "RarityNM", "ItemLevel", "AreaLevel", "charms"], $text); }
             Conditional("?EgCharmsNewRule") { Show; BaseType == "Golden Charm"; Class "Charms"; ItemLevel >= 65; SetTextColor 150 225 150; SetBorderColor 150 225 150; SetFontSize 40; }
