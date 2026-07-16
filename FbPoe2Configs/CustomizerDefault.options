@@ -575,7 +575,7 @@ Chapter()
             Section("Highlight rares by Base", "Firefly") {
                 Function CondShowBase ($s, $shd = "SD", $title)
                 {
-                    QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel?", "Rarity?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title, ["Gear", "OS"]);
+                    QuickUI($s, $shd, ["CondTargetSelection?", "ItemLevel?", "Rarity?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title, ["Gear", "OS"]);
                 }
 
                 Description("Give specific BaseTypes more highlighting here.");
@@ -591,7 +591,7 @@ Chapter()
 
                 Function CondShowType ($s, $shd = "SD", $title)
                 {
-                    QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "ArmourClasses", "Rarity?", "ItemLevel?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title);
+                    QuickUI($s, $shd, ["CondTargetSelection?", "ItemType", "ArmourClasses", "Rarity?", "ItemLevel?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title);
                 }
 
                 ElementAdder_Tier("?CRareShowItemTypes", "CondShowType");
@@ -601,7 +601,7 @@ Chapter()
 
                 Function CondShowClass ($s, $shd = "SD", $title)
                 {
-                    QuickUI($s, $shd, ["CondTargetSelection", "AllGearClasses", "ItemLevel?", "Rarity?", "DropLevel?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title);
+                    QuickUI($s, $shd, ["CondTargetSelection?", "AllGearClasses", "ItemLevel?", "Rarity?", "DropLevel?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title);
                 }
 
                 Description("Highlight specific item classes here.");
@@ -613,7 +613,7 @@ Chapter()
             Section("Hide rares by Base", "Annulment") {
                 Function CondHideBase ($s, $shd = "HD", $title)
                 {
-                    QuickUI($s, $shd, ["CondTargetSelection", "ItemLevel?", "Rarity?", "UnidentifiedItemTier", "Stats_RareGear?"], $title, ["Gear", "OS"]);
+                    QuickUI($s, $shd, ["CondTargetSelection?", "ItemLevel?", "Rarity?", "UnidentifiedItemTier", "Stats_RareGear?"], $title, ["Gear", "OS"]);
                 }
 
                 Conditional("?CRareHideBases", ["c3.exotic.state.hightier", "c4.gear.salvagable", "c6.rare.t1.all", "c6.rare.t2.all", "c6.rare.t3.all", "c6.rare.t4.all", "c6.rare.t5.all"], null, 4060) { Hide; SetFontSize 18; ItemLevel >= 65; Rarity Rare; }
@@ -625,7 +625,7 @@ Chapter()
 
                 Function CondHideType ($s, $shd = "HD", $title)
                 {
-                    QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "ArmourClasses", "Rarity?", "DropLevel?", "ItemLevel?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title);
+                    QuickUI($s, $shd, ["CondTargetSelection?", "ItemType", "ArmourClasses", "Rarity?", "DropLevel?", "ItemLevel?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title);
                 }
 
                 ElementAdder_Tier("?CRareHideItemTypes", "CondHideType");
@@ -634,7 +634,7 @@ Chapter()
             Section("Hide rares by item slot", "Annulment") {
                 Function CondHideClass ($s, $shd = "HD", $title)
                 {
-                    QuickUI($s, $shd, ["CondTargetSelection", "Rarity?", "AllGearClasses", "ItemLevel?", "DropLevel?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title);
+                    QuickUI($s, $shd, ["CondTargetSelection?", "Rarity?", "AllGearClasses", "ItemLevel?", "DropLevel?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title);
                 }
 
                 Description("Hide uninteresting items, such as bows for melee characters or melee weapons for casters.");
@@ -1057,7 +1057,7 @@ Section("Campaign Gear", "Shabby_Hood_inventory_icon") {
         Section("Highlight items by Base", "Firefly") {
             Function CondShowBase_Lvl ($s, $shd = "SD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "Rarity?", "Stats_RareGear?", "ItemLevel?", "AreaLevel?"], $title, ["rarityItems", "SO"]);
+                QuickUI($s, $shd, ["CondTargetSelection?", "Rarity?", "Stats_RareGear?", "ItemLevel?", "AreaLevel?"], $title, ["rarityItems", "SO"]);
             }
 
             Conditional("?CLevelShowBases", ["c21.leveling.rares.armors", "c21.leveling.rares.low", "c21.leveling.normalmagic", "c20.leveling.salvagable.all"]) { Show; SetBackgroundColor 60 0 0; Rarity Normal Magic Rare; SetBorderColor 200 0 0; AreaLevel <= 64; SetFontSize 40; }
@@ -1068,7 +1068,7 @@ Section("Campaign Gear", "Shabby_Hood_inventory_icon") {
             Conditional("?CLevelShowType", ["c21.leveling.rares.armors", "c21.leveling.rares.low", "c21.leveling.normalmagic", "c20.leveling.salvagable.all"]) { Show; SetBackgroundColor 60 0 0; Rarity Normal Magic Rare; SetBorderColor 200 0 0; AreaLevel <= 64; SetFontSize 40; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields" "Foci"; }
             Function CondShowTypeLVL ($s, $shd = "SD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "Rarity?", "ItemType", "ArmourClasses", "Stats_RareGear?", "ItemLevel?", "AreaLevel?"], $title);
+                QuickUI($s, $shd, ["CondTargetSelection?", "Rarity?", "ItemType", "ArmourClasses", "Stats_RareGear?", "ItemLevel?", "AreaLevel?"], $title);
             }
 
             ElementAdder_Tier("?CLevelShowType", "CondShowTypeLVL");
@@ -1077,7 +1077,7 @@ Section("Campaign Gear", "Shabby_Hood_inventory_icon") {
         Section("Highlight items by slot", "Firefly") {
             Function CondShowClass_Lvl ($s, $shd = "SD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "Rarity?", "AllGearClasses", "Stats_RareGear?", "ItemLevel?", "AreaLevel?"], $title);
+                QuickUI($s, $shd, ["CondTargetSelection?", "Rarity?", "AllGearClasses", "Stats_RareGear?", "ItemLevel?", "AreaLevel?"], $title);
             }
 
             Conditional("?CLevelShowClasses", ["c21.leveling.rares.armors", "c21.leveling.rares.low", "c21.leveling.normalmagic", "c20.leveling.salvagable.all"]) { Show; SetBackgroundColor 60 0 0; Rarity Normal Magic Rare; SetBorderColor 200 0 0; AreaLevel <= 64; SetFontSize 40; }
@@ -1089,7 +1089,7 @@ Section("Campaign Gear", "Shabby_Hood_inventory_icon") {
 
             Function CondHideTypeLVL ($s, $shd = "HD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "Rarity?", "ArmourClasses", "Stats_RareGear?", "ItemLevel?", "AreaLevel?"], $title);
+                QuickUI($s, $shd, ["CondTargetSelection?", "ItemType", "Rarity?", "ArmourClasses", "Stats_RareGear?", "ItemLevel?", "AreaLevel?"], $title);
             }
 
             ElementAdder_Tier("?CLevelHideType", "CondHideTypeLVL");
@@ -1098,7 +1098,7 @@ Section("Campaign Gear", "Shabby_Hood_inventory_icon") {
         Section("Hide items by slot", "Annulment") {
             Function CondHideClass_Lvl ($s, $shd = "HD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "Rarity?", "AllGearClasses", "Stats_RareGear?", "ItemLevel?", "AreaLevel?"], $title);
+                QuickUI($s, $shd, ["CondTargetSelection?", "Rarity?", "AllGearClasses", "Stats_RareGear?", "ItemLevel?", "AreaLevel?"], $title);
             }
 
             Conditional("?CLevelHideClasses", ["c21.leveling.rares.armors", "c21.leveling.rares.low", "c21.leveling.normalmagic", "c20.leveling.salvagable.all"]) { Hide; Rarity Normal Magic Rare; AreaLevel <= 64; SetFontSize 18; }
@@ -1271,7 +1271,7 @@ Section("Misc.", "GoldenKey") {
         {
             Function CondShowBase ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "AreaLevel?", "UnidentifiedItemTier?", "Stats_ALL?"], $title, ["all", "OS"]);
+                QuickUI($s, $shd, ["CondTargetSelection?", "AreaLevel?", "UnidentifiedItemTier?", "Stats_ALL?"], $title, ["all", "OS"]);
             }
 
             Description("Give specific BaseTypes more highlighting here.");
@@ -1283,7 +1283,7 @@ Section("Misc.", "GoldenKey") {
         {
             Function CondShowClass ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "ClassesWithRarity", "RarityU?", "AreaLevel?", "UnidentifiedItemTier?", "Stats_ALL?"], $title, ["all", "SOA"]);
+                QuickUI($s, $shd, ["CondTargetSelection?", "ClassesWithRarity", "RarityU?", "AreaLevel?", "UnidentifiedItemTier?", "Stats_ALL?"], $title, ["all", "SOA"]);
             }
 
             Description("Give specific classes more highlighting here.");
@@ -1295,7 +1295,7 @@ Section("Misc.", "GoldenKey") {
         {
             Function CondShowArmourType ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "ItemType", "RarityU?", "ArmourClasses", "AreaLevel?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title);
+                QuickUI($s, $shd, ["CondTargetSelection?", "ItemType", "RarityU?", "ArmourClasses", "AreaLevel?", "UnidentifiedItemTier?", "Stats_RareGear?"], $title);
             }
 
             Conditional("?CUniversalCustomRuleArmourType", ["c3.gear.chancing", "c0.start", "c4.gear.salvagable", "c7.jewels.generic.all", "c11.uniques.all", "c20.leveling.salvagable.all"], null, 4270) { Show; SetBackgroundColor 60 0 0; SetBorderColor 200 0 0; SetFontSize 40; AreaLevel >= 65; Rarity Normal Magic; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
@@ -1306,7 +1306,7 @@ Section("Misc.", "GoldenKey") {
         {
             Function CondFilterMod ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $shd, ["CondTargetSelection", "RarityU?", "ClassesWithRarity", "Identified?", "Corrupted?", "ItemLevel?", "Stats_Rarity?", "Mods"], $title, ["rarityItems", "SOA?"]);
+                QuickUI($s, $shd, ["CondTargetSelection?", "RarityU?", "ClassesWithRarity", "Identified?", "Corrupted?", "ItemLevel?", "Stats_Rarity?", "Mods"], $title, ["rarityItems", "SOA?"]);
             }
 
             Description("Custom mod filtering. Note that you first need to select the correct classes, then add the mods you need.");
