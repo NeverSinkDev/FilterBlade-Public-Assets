@@ -1661,7 +1661,7 @@ Chapter() {
 
         Section("Add custom Show/Hide rules (campaign)", "Firefly") {
 
-            Box() { YTLink("PiSHS8T63ys", "Creating the Perfect Campaign Filter"); }
+//            Box() { YTLink("PiSHS8T63ys", "Creating the Perfect Campaign Filter"); }
 
             Description("Augment the filter with entirely new rules, such as 'only show AR and AR/EV armors', 'highlight all rare axes' and 'hide all wands'", "Additional Campaign Rules", "This section is designed to be foolproof. It will have no effect on 6-links, endgame items, elder/shaper items, uniques etc), abyss belts, fishing rods and other special bases. These sections frequently feature the 'strictness' dropdown menu. This tool defines how many rules are overwritten by your custom rules. I recommend playing around with the loot simulator, while switching back and forth to the customizer to get familiar with this section");
 
