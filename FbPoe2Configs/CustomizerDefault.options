@@ -475,7 +475,7 @@ Chapter()
         Section ("Chancing", "Astramentis_inventory_icon")
         {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function ChancingFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["gearPlusFlasks", "OS"]); }
+            Function ChancingFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["GearPlusFlasks", "OS"]); }
             TierListToolBar();
 
             Description("An 'Orb of Chance' has a chance to turn a normal item into a unique. The chances for that are fairly low, but it can be pretty thrilling and profitable if you hit the lottery. The following section suggests potential chancing bases.<br> Only non-boss drops can be chanced. Acquiring certain bases is harder than finding the chance orbs. So some very profitable chance bases can be VERY expensive:");
@@ -994,8 +994,8 @@ Chapter()
 
             Section("Optional Rules", "Shrine_Sceptre_Fire_inventory_icon")
             {
-                QuickUI([0.0, "ILVL81 Caster Items", "endgame->normalcraft->any;minionsceptresoptional"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity", "UnidentifiedItemTier?"], "", ["gear", "SAO"]);
-                QuickUI([0.0, "ILVL81 Crafting Wands", "endgame->normalcraft->extra;wands"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity", "UnidentifiedItemTier?"], "", ["gear", "SAO"]);
+                QuickUI([0.0, "ILVL81 Caster Items", "endgame->normalcraft->any;minionsceptresoptional"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity", "UnidentifiedItemTier?"], "", ["Gear", "SAO"]);
+                QuickUI([0.0, "ILVL81 Crafting Wands", "endgame->normalcraft->extra;wands"], "SD", ["ItemLevel", "CasterWeaponClasses", "Rarity", "UnidentifiedItemTier?"], "", ["Gear", "SAO"]);
             }
         }
     }

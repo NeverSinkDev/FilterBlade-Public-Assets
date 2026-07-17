@@ -1333,7 +1333,7 @@ Chapter() {
         }
 
         Section("Linked Items", "Fusing") {
-            QuickUI([0.0, "Top Tier 6 Links", "6l;hightier"], "SH", ["Mirrored", "Corrupted", "ItemLevel", "Rarity?"], "6-Links: Best", ["gear", "SO"]);
+            QuickUI([0.0, "Top Tier 6 Links", "6l;hightier"], "SH", ["Mirrored", "Corrupted", "ItemLevel", "Rarity?"], "6-Links: Best", ["Gear", "SO"]);
             QuickUI([0.0, "6 links (height 4)", "6l;others"], "DS", ["Corrupted"], "6-Links: Others");
             QuickUI([0.0, "Endgame 5 links b", "socketslinks;5links"], "SD", ["AreaLevel", "SixSocketClasses", "ItemType"], "5-Links: Endgame");
             QuickUI([0.0, "68+ 4 Links", "normalcraft->extra;earlyendgame4link"], "SD", ["AreaLevel", "FourPlusSocketClasses", "Rarity"], "4-Links: Early Endgame");
@@ -1456,11 +1456,11 @@ Chapter() {
         Section("Endgame Life & Mana Flasks", "FlaskLife") {
             QuickUI([0.0, "High Level Life/Mana Flasks - iLvl 82", "endgameflasks;lifemana82"], "SHD", ["ItemLevel", "Quality", "AreaLevel?", "RarityNM?", "Identified?"], "Perfect Level Life&Mana Flasks", ["Flasks", "SOA"]);
 
-            QuickUI([0.0, "Early mapping life & mana flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "RarityNM?", "Identified?", "Quality?"], "Early Endgame Life&Mana Flasks", ["allFlasks", "SO"]);
+            QuickUI([0.0, "Early mapping life & mana flasks", "endgameflasks;earlymappinglifemana"], "SHD", ["AreaLevel", "RarityNM?", "Identified?", "Quality?"], "Early Endgame Life&Mana Flasks", ["Flasks", "SO"]);
 
             Function EndgameLifeManaFlaskCustomRuleUI ($s, $shd = "SHD", $title)
             {
-                QuickUI($s, $shd, ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title, ["allFlasks", "SO"]);
+                QuickUI($s, $shd, ["ItemLevel", "Quality", "AreaLevel", "RarityNM", "Identified"], $title, ["Flasks", "SO"]);
             }
 
             Conditional("?EndgameLifeManaFlaskCustomRules") { Show; Class "Flask"; Rarity Normal Magic; };
@@ -1473,11 +1473,11 @@ Chapter() {
             QuickUI([0.0, "Exceptional Quality Utility Flasks", "endgameflasks;overqualutil1"], "SH", ["ItemLevel", "Quality", "RarityNM?", "Utility Flasks"], "Over-Quality Utility Flasks");
             QuickUI([0.0, "High Quality Utility Flasks", "endgameflasks;overqualutil2"], "SH", ["ItemLevel", "Quality", "RarityNM?", "Utility Flasks"], "Over-Quality Utility Flasks");
 
-            QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife1"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Over-Quality Life&Mana", ["allFlasks", "SO"]);
-            QuickUI([0.0, "High Quality Life Flasks", "endgameflasks;overquallife2"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Over-Quality Life&Mana", ["allFlasks", "SO"]);
+            QuickUI([0.0, "Exceptional Quality Life Flasks", "endgameflasks;overquallife1"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Over-Quality Life&Mana", ["Flasks", "SO"]);
+            QuickUI([0.0, "High Quality Life Flasks", "endgameflasks;overquallife2"], "SH", ["ItemLevel", "Quality", "RarityNM"], "Over-Quality Life&Mana", ["Flasks", "SO"]);
 
             // new tiers
-            Function FlaskFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ItemLevel", "Quality", "RarityNM"], $text, ["allFlasks", "SO"]); }
+            Function FlaskFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ItemLevel", "Quality", "RarityNM"], $text, ["Flasks", "SO"]); }
             Conditional("?FlasksNewTier") { }
             ElementAdder_Tier("?FlasksNewTier", "FlaskFunc");
         }
@@ -1669,7 +1669,7 @@ Chapter() {
             Section("Highlight items by Base", "Firefly") {
                 Function CondShowBase_Lvl ($s, $shd = "SD", $title)
                 {
-                    QuickUI($s, $shd, ["CondTargetSelection?", "Rarity", "SocketGroup", "Stats_RareGear?"], $title, ["gearPlusFlasks", "SO"]);
+                    QuickUI($s, $shd, ["CondTargetSelection?", "Rarity", "SocketGroup", "Stats_RareGear?"], $title, ["GearPlusFlasks", "SO"]);
                 }
 
                 Conditional("?CLevelShowBases", ["c11.leveling.gear.all", "c11.leveling.firstlevels.all", "c11.leveling.act12.all", "c11.leveling.rares.low", "c11.leveling.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; }
@@ -2228,7 +2228,7 @@ Chapter() {
     Section("Chancing Bases", "Skyforth") {
         Description("Chancing is considered to be very inefficient by most PoE players, but some enjoy it a lot. Boss drops, recipe-exclusive or league exclusive drops can not be chanced.");
 
-        Function ChancingList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["gearPlusFlasks", "SO"]); }
+        Function ChancingList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["GearPlusFlasks", "SO"]); }
 
         ChancingList([1.0, "Chancing bases (normal)", "chancing;t2"], "SD", "Meta-Uniques Chancing Bases:");
         ChancingList([1.0, "Chancing bases (leather belt HH)", "chancing;hh"], "SD", "Lottery-Tier Chancing Targets:");
@@ -2236,7 +2236,7 @@ Chapter() {
         Conditional("?ChancingBaseNewTiers") { }
         ElementAdder_Tier("?ChancingBaseNewTiers", "ChancingList");
 
-        QuickUI([0.0, "High Quality Chancing", "crafting->qualityperfection;qualchancing"], "SH", ["AreaLevel", "Quality", "BaseDefencePercentile"], $text, ["gearPlusFlasks", "SO"]);
+        QuickUI([0.0, "High Quality Chancing", "crafting->qualityperfection;qualchancing"], "SH", ["AreaLevel", "Quality", "BaseDefencePercentile"], $text, ["GearPlusFlasks", "SO"]);
     }
 
     Section("Miscellaneous", "Empower") {
@@ -2560,7 +2560,7 @@ Chapter() {
         Section("Identified Mod Filtering", "IdentifiedItem") {
             Warning("Note that filtering by mods is only possible for EXPLICIT mods of IDENTIFIED items! This excludes any labyrinth enchantments as those are implicit.");
 
-            Function ModItemUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ItemLevel?", "DropLevel?", "Corrupted?", "AllGearClasses?", "Mods"], $text, ["gearPlusFlasks", "SOA"]); }
+            Function ModItemUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ItemLevel?", "DropLevel?", "Corrupted?", "AllGearClasses?", "Mods"], $text, ["GearPlusFlasks", "SOA"]); }
             Function BasicModItemUI($s, $text) { QuickUI($s, "SD", ["ItemLevel?", "DropLevel?", "Corrupted?", "Mods"], $text); }
 
             Title("Weapons");
@@ -2703,7 +2703,7 @@ Chapter() {
                 Search S3("0.0", "Fishing Rod") { Class "Fishing Rods"; BaseType "Fishing Rod"; Rarity "Normal"; }
                 QuickUI(S3, "SH", [], "", [], ["On the Hook", "YOU'VE BEEN CAPTURED! STUPID EXILE!", "Fishing rods are just incredibly rare. They don't have any secrets or special purposes at all. NeverSink assures that he was not forced to write this message and that the international fishing council of Wraeclast did not impose their supreme will upon him, but merely acted as advisors."]);
 
-                QuickUI([0.0, "Bricked Uniques", "exoticbases;exoticuniquebases"], "SH", ["Rarity", "ItemLevel"], null, ["gear", "OS"], "Will highlight exotic bases bricked into a rare, such as 'Kalandra's Touch'. May generate a lifetime supply of salt if that happens. You're welcome.");
+                QuickUI([0.0, "Bricked Uniques", "exoticbases;exoticuniquebases"], "SH", ["Rarity", "ItemLevel"], null, ["Gear", "OS"], "Will highlight exotic bases bricked into a rare, such as 'Kalandra's Touch'. May generate a lifetime supply of salt if that happens. You're welcome.");
             }
 
             Section("Quest & quest-like items", "GoldenKey") {
@@ -2723,7 +2723,7 @@ Chapter() {
             Section("Misc. Currency", "WisdomScroll") {
                 //            Search S1(0.0, "Harvest Currencies", "currency->others;harbinger") { BaseType "Fragmentation Scroll"; }
                 //            QuickUI(S1, "SH", [], "Harbinger Upgrade Tokens", ["all", "SO"]);
-                QuickUI([1.0, "Misc. Currency", "currency->others;misc"], "SH", [], "Misc Currency", ["currency", "SO"]);
+                QuickUI([1.0, "Misc. Currency", "currency->others;misc"], "SH", [], "Misc Currency", ["Currency", "SO"]);
                 QuickUI([1.0, "Untiered Currency B", "currency;untiereditems"], "SHD");
                 QuickUI([1.0, "Scroll Fragments", "currency;scrollfragments"], "SH");
             }
