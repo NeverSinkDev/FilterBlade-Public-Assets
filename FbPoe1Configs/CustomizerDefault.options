@@ -256,7 +256,7 @@ Chapter(){
 
         Section("Essences", "RewardEssences.webp") {
             Function essencesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["essences", "O"]); }
-            TierListToolBar();
+            TierListToolBar("Essence");
 
             essencesFunc([1.0, "Essences T1+2", "currency->essence;t1"], "SH", "S Tier");
             essencesFunc([1.0, "Essences T3", "currency->essence;t2"], "SH", "A Tier");
@@ -301,7 +301,7 @@ Chapter(){
             }
 
             Section("Incursion Vials", "IncursionVial", "E") {
-                TierListToolBar();
+                TierListToolBar("Vial");
                 QuickUI([0.0, "Incursion Vials T1", "vials;t1"], "SH", [], "S Tier", ["IncursionVials", "O"]);
                 QuickUI([0.0, "Incursion Vials T2", "vials;t2"], "SH", [], "A Tier", ["IncursionVials", "O"]);
                 QuickUI([0.0, "Incursion Vials T3", "vials;t3"], "SH", [], "Others", ["IncursionVials", "O"]);
@@ -2319,7 +2319,7 @@ Chapter() {
             Section("Exceptional Gems Tierlist", "Empower", "E") {
                 // generated via manualUtil_GenerateOptFileTierListCode(); util function!
                 Function ExceptionalGemsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Gems", "O"]); }
-                TierListToolBar();
+                TierListToolBar("SkillGem");
 
                 ExceptionalGemsFunc([0.0, "Exceptional Gems Tier S", "gems->exceptional;t1"], "SH", "S Tier");
                 ExceptionalGemsFunc([0.0, "Exceptional Gems Tier A", "gems->exceptional;t2"], "SH", "A Tier");
