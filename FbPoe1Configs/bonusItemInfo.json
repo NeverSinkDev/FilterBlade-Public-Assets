@@ -253,7 +253,7 @@
 					"tags": ["Eldritch", "Generic"]
 				},
 				"Exceptional Eldritch Ember": {
-					"text": "Drops from The Searing Exarch<br>dds an Exceptional Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"text": "Drops from The Searing Exarch<br>Adds an Exceptional Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
 					"tags": ["Eldritch", "BossDrop"]
 				},
 				"Exceptional Eldritch Ichor": {
@@ -4840,7 +4840,7 @@
 					"text": null,
 					"items": {
 						"Manastorm": {
-							"text": "Drops from Nightmare of Uthred",
+							"text": "Drops from Nightmare of Uhtred",
 							"priority": -3
 						}
 					}
