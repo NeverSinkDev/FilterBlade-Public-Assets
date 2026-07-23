@@ -2094,6 +2094,9 @@
 				},
 				"The Eye of Terror": {
 					"tags": ["UniqueOutcome"]
+				},
+				"Imperfect Memories": {
+					"tags": ["CurrencyOutcome"]
 				}
 			}
 		},
@@ -2427,7 +2430,7 @@
 				"Abyss Scarab of Crystals": {
 					"text": "Abyss Pits in Area that do not contain a reward instead create an Abyssal Crystal"
 				},
-				"Abyssal Scarab of the Consort": {
+				"Abyss Scarab of the Consort": {
 					"text": "Abyss Pit in Area spawns an Abyssal Consort"
 				},
 				"Abyss Scarab of Descending": {
@@ -2694,7 +2697,7 @@
 			}
 		},
 
-		"ExceptionalGems": {
+		"SkillGem": {
 			"items": {
 				"Awakened Empower Support": {
 					"text": "Drops from The Uber Maven"
@@ -2865,19 +2868,6 @@
 							"hideInHoverBox": false,
 							"ruleLink": {
 								"entryName": "Unique Exception: Tabula Rasa",
-								"text": "Link to exception rule"
-							},
-							"priority": -9
-						}
-					}
-				},
-				"Elegant Round Shield": {
-					"text": null,
-					"items": {
-						"The Squire": {
-							"text": "Detected via a special rule (using the 3 white sockets)! The oppressor can be safely hidden in the unique tierlist.",
-							"ruleLink": {
-								"entryName": "Unique Exception: The Squire",
 								"text": "Link to exception rule"
 							},
 							"priority": -9
@@ -4706,7 +4696,7 @@
 						}
 					}
 				},
-				"Primal Arrow Quiver": {
+				"Ornate Quiver": {
 					"text": null,
 					"items": {
 						"Voidfletcher": {
