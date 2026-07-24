@@ -271,25 +271,25 @@ Chapter(){
                 ElementAdder_Tier("?LifeForceNewTier", "LifeForceFunc");
             }
 
-            Section("Incursion Vials", "IncursionVial", "E") {
-                TierListToolBar("Vial");
-                QuickUI([0.0, "Incursion Vials T1", "vials;t1"], "SH", [], "S Tier", ["IncursionVials", "O"]);
-                QuickUI([0.0, "Incursion Vials T2", "vials;t2"], "SH", [], "A Tier", ["IncursionVials", "O"]);
-                QuickUI([0.0, "Incursion Vials T3", "vials;t3"], "SH", [], "Others", ["IncursionVials", "O"]);
+            Section("Tattoos", "HonouredTattoooftheWiseMan", "E") {
+                Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
 
-                // new vial tiers
-                Function VialTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["IncursionVials", "O"]); }
-                Conditional("?IncVialNewTier") { Show; Class Currency; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; SetBorderColor 0 0 0 255; SetFontSize 45; PlayAlertSound 2 300; }
-                ElementAdder_Tier("?IncVialNewTier", "VialTierList");
+                TierListToolBar("Tattoo");
 
-                Conditional("?VialNewTiersHidden") { }
-                ElementAdder_Tier("?VialNewTiersHidden", null, true, "IncursionVials", "OH");
+                Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
+                TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH", "S Tier");
+                TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH", "A Tier");
+                TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH", "B Tier");
+                TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH", "Others");
+
+                // new tiers
+                Conditional("?AncTrialTattooTier") { }
+                ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
+
+                // hide tier
+                Conditional("?AncTrialTattooHidden") { }
+                ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
             }
-
-            //        Section("Hinekora's Lock", "HinekorasLock") {
-            //            // crafting prediction items thingy
-            //            QuickUI([0.0, "Hinekora's Lock", "currency->trial->orblike;t1"], "S", [], null, null, "Hinekor's lock is a valuable reward from the trial. Once applied on an item, you'll foresee the outcome of currency items used on the same item - until you'll actually use one of them.");
-            //        }
 
             Section("Omens", "OmenoftheSoulDevourer", "E") {
                 Function OmenFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialOmens", "O"]); }
@@ -311,6 +311,22 @@ Chapter(){
                 // hide tier
                 Conditional("?AncTrialOmensHidden") { }
                 ElementAdder_Tier("?AncTrialOmensHidden", null, true, "AncTrialOmens", "OH");
+            }
+
+
+            Section("Incursion Vials", "IncursionVial", "E") {
+                TierListToolBar();
+                QuickUI([0.0, "Incursion Vials T1", "vials;t1"], "SH", [], "S Tier", ["IncursionVials", "O"]);
+                QuickUI([0.0, "Incursion Vials T2", "vials;t2"], "SH", [], "A Tier", ["IncursionVials", "O"]);
+                QuickUI([0.0, "Incursion Vials T3", "vials;t3"], "SH", [], "Others", ["IncursionVials", "O"]);
+
+                // new vial tiers
+                Function VialTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["IncursionVials", "O"]); }
+                Conditional("?IncVialNewTier") { Show; Class Currency; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; SetBorderColor 0 0 0 255; SetFontSize 45; PlayAlertSound 2 300; }
+                ElementAdder_Tier("?IncVialNewTier", "VialTierList");
+
+                Conditional("?VialNewTiersHidden") { }
+                ElementAdder_Tier("?VialNewTiersHidden", null, true, "IncursionVials", "OH");
             }
 
             Section("Runegrafts", "RuneGraft", "E") {
@@ -548,55 +564,6 @@ Chapter(){
             QuickUI([0.0, "Pearlescent Amulet", "exoticbaseslower;exoticpearl"], "SH", []);
             //QuickUI([0.0, "Ghostflame Blade", "exoticbaseslower;exoticghostflame"], "SH", []);
         }
-
-    }
-
-    // todo: move/remove!!
-    Section("Current League: Mirage + Ancestors", "Mirage_CoinofRestoration") {
-
-        //===================================================================================================
-        // CURRENT EVENT
-        //===================================================================================================
-
-        Section("Phrecia+Ancestors", "HonouredTattoooftheWiseMan", "E")
-        {
-            Section("Tattoos", "HonouredTattoooftheWiseMan", "E") {
-                Function TattooFunc($s, $shd = "SHD", $title) { QuickUI($s, $shd, [], $title, ["AncTrialTattoos", "O"]); }
-
-                TierListToolBar("Tattoo");
-
-                Description("Tattoos are rewards from the trials - these are applied to your skill tree and replace stat-granting nodes with other effects!");
-                TattooFunc([0.0, "Tattoos Tier 1", "currency->trial->tattoo;t1"], "SH", "S Tier");
-                TattooFunc([0.0, "Tattoos Tier 2", "currency->trial->tattoo;t2"], "SH", "A Tier");
-                TattooFunc([0.0, "Tattoos Tier 3", "currency->trial->tattoo;t3"], "SH", "B Tier");
-                TattooFunc([0.0, "Tattoos Tier 4", "currency->trial->tattoo;t4"], "SH", "Others");
-
-                // new tiers
-                Conditional("?AncTrialTattooTier") { }
-                ElementAdder_Tier("?AncTrialTattooTier", "TattooFunc");
-
-                // hide tier
-                Conditional("?AncTrialTattooHidden") { }
-                ElementAdder_Tier("?AncTrialTattooHidden", null, true, "AncTrialTattoos", "OH");
-            }
-
-            Section("Silver Coins", "Silver Coin") {
-                QuickUI([0.0, "SilverCoinEvent", "currency->leagueexclusive;silvercoin"], "SH", [], "Silver Coins for the Trial", []);
-            }
-        }
-
-        Description("All other Mirage drops are part of the 'standard' tierlists. For instance all currency drops, astrolabes and coins are part of the currency tierlist.");
-
-        QuickUI([0.0, "Cord Belt", "exoticbaseslower;exoticmiragebases"], "SH", [], "Mirage Exclusive: Cord Belt");
-        QuickUI([0.0, "Mirage Stygian", "exoticbaseslower;stygianmirage"], "SH", [], "Stygian Vise with Mirage Mods");
-        Description("If imbued gems can drop, this will catch them (and any other imbued item). Better handling will be added once we know more.");
-        QuickUI([0.0, "Imbued", "artefact->misc;anyimbued"], "SH", [], "Any Imbued Drop");
-        Description("A little birdy said these may drop from mirage...");
-        QuickUI([0.0, "Enchanted Contracts", "heist->contract;enchanted"], "SH", []);
-        QuickUI([0.0, "Enchanted Blueprints", "heist->blueprint;enchanted"], "SH", []);
-        Description("The iron flask is in huge demand during mirage league. I've added a special rule to give it temporary massive highlight bonuses. I'll look for a more permanent solution next league.");
-        QuickUI([0.0, "ApexTierBasetypes84", "exoticbases;ecotinkbases84"], "SH", ["ItemLevel"], "Iron Flask: 84", []);
-        QuickUI([0.0, "ApexTierBasetypesAny", "exoticbases;ecotinkbases"], "SH", ["ItemLevel"], "Iron Flask", []);
     }
 
 }
@@ -766,24 +733,26 @@ Chapter() {
             }
         }
 
-        Section("Maps - Pinnacle, Exotic, Influenced, ...", "T17")
+        Section("Maps - Influenced, Nightmare, Unique and Exotics", "T17")
         {
-            Title("Pinnacle Maps");
-            QuickUI([0.0, "Pinnacle - Zana (High Tier)", "maps->influenced;zanamap"], "SH", ["MapTier"]);
-            QuickUI([0.0, "Pinnacle - Zana (Low Tier)", "maps->influenced;zanamaplow"], "SH", ["MapTier"]);
-
             Title("Influenced Maps");
-            QuickUI([0.0, "New Influenced Maps", "maps->influenced;infconquerors"], "SH", ["MapTier"], "Conqueror Maps");
-//            QuickUI([0.0, "Map appearance (ShaperMap)", "maps->influenced;infshaper"], "SH", ["MapTier"], "Shaper Maps:");
             QuickUI([0.0, "Shaper Guardian Maps", "maps->nightmare;shaperguardianmaps"], "SH", ["MapTier"]);
             QuickUI([0.0, "Map appearance (ElderMap)", "maps->influenced;infelder"], "SH", ["MapTier"], "Elder Maps:");
-            Title("Exotic Corruptions");
+            QuickUI([0.0, "New Influenced Maps", "maps->influenced;infconquerors"], "SH", ["MapTier"], "Conqueror Maps");
+//            QuickUI([0.0, "Map appearance (ShaperMap)", "maps->influenced;infshaper"], "SH", ["MapTier"], "Shaper Maps:");
+
+            Title("Originator & Nightmare Maps");
+            QuickUI([0.0, "Nightmare Maps", "maps->nightmare;nightmaremaps"], "SH", [], "Nightmare (T17) Maps");
+            QuickUI([0.0, "Pinnacle - Zana (High Tier)", "maps->influenced;zanamap"], "SH", ["MapTier"], "Originator / Zana Maps (High)");
+            QuickUI([0.0, "Pinnacle - Zana (Low Tier)", "maps->influenced;zanamaplow"], "SH", ["MapTier"], "Originator / Zana Maps (Low)");
+
+            Title("Unique Maps");
+            QuickUI([0.0, "Unique Maps Multi", "uniques->maps;multispecial"], "SH", []);
+
+            Title("Exotic Variations");
             QuickUI([0.0, "Vaal Temple Map", "maps->vaaltemple;any"], "SH", []);
             QuickUI([0.0, "8-Mod Corrupted Maps", "maps->corruptedspecial;mod8"], "SH", ["MapTier"], null, ["Maps", "ASO"]);
-
             QuickUI([0.0, "Valdo Maps", "maps->nightmare;valdomaps"], "SH", []);
-            QuickUI([0.0, "Nightmare Maps", "maps->nightmare;nightmaremaps"], "SH", []); // todo: sort @NS
-            QuickUI([0.0, "Unique Maps Multi", "uniques->maps;multispecial"], "SH", []);
 
             Title("League Based Maps");
             QuickUI([0.0, "Delirium High Maps", "maps->enchanted;t1"], "SHD", ["MapTier"], "Delirium or Enchanted (T14+)");
@@ -916,6 +885,12 @@ Chapter() {
 
                 Conditional("?HeistBlueprintNewTiersHidden") { }
                 ElementAdder_Tier("?HeistBlueprintNewTiersHidden", null, true, "HeistBlueprints", "HO");
+            }
+
+            Section ("Enchanted Contracts and Blueprints", "HeistGrandBlueprint")
+            {
+                QuickUI([0.0, "Enchanted Blueprints", "heist->blueprint;enchanted"], "SH", []);
+                QuickUI([0.0, "Enchanted Contracts", "heist->contract;enchanted"], "SH", []);
             }
 
             Title("Custom Rules");
@@ -2023,6 +1998,13 @@ Chapter() {
             ElementAdder_Tier("?WombgiftsNewTierFiltering", "WombgiftsCustomFiltering");
         }
 
+        Section ("Apex Tier Bases")
+        {
+            Description("Special rule to give sudden meta items temporary massive highlights.");
+            QuickUI([0.0, "ApexTierBasetypes84", "exoticbases;ecotinkbases84"], "SH", ["ItemLevel"], "Iron Flask: 84", []);
+            QuickUI([0.0, "ApexTierBasetypesAny", "exoticbases;ecotinkbases"], "SH", ["ItemLevel"], "Iron Flask", []);
+        }
+
         Section ("Wombgifts", "MetamorphSampleOrganHeart")
         {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
@@ -2095,7 +2077,7 @@ Chapter() {
             //QuickUI([1.0, "Remaining Talismans", "rare->exotic->talisman;any"], "SH", ["ItemLevel"]);
         }
 
-        Section("Expedition Ward-Bases", "WardBase") {
+        Section("Expedition Ward-Bases & Iron Flask", "WardBase") {
             // Runic Helm, Runic Crest, Runic Crown
             Description("Expedition introduced a new defence mechanic, Ward, in addition to the traditional ones like Armour or Evasion. Ward can only be found on these new BaseTypes:");
             QuickUI([0.0, "Expedition Ward Bases", "exoticbases;exoticexpeditionbases"], "SH", ["ItemLevel?", "Rarity?", "ExpeditionWardBases", "Identified?"]);
@@ -2214,6 +2196,11 @@ Chapter() {
         Title("Currently Unobtainable");
 
         Section("Currently Unobtainable", "JuggernautsUrsineCharmoftheChampion") {
+            QuickUI([0.0, "Cord Belt", "exoticbaseslower;exoticmiragebases"], "SH", [], "Mirage Exclusive: Cord Belt");
+            QuickUI([0.0, "Mirage Stygian", "exoticbaseslower;stygianmirage"], "SH", [], "Stygian Vise with Mirage Mods");
+            Description("If imbued gems can drop, this will catch them (and any other imbued item). Better handling will be added once we know more.");
+            QuickUI([0.0, "Imbued", "artefact->misc;anyimbued"], "SH", [], "Any Imbued Drop");
+
             QuickUI([0.0, "Items with Crucible passive tree", "exotic->crucible;crucibleany"], "SH", ["DropLevel", "Rarity", "ItemLevel"]);
             QuickUI([0.0, "Kalandra Lake exclusive Bases", "exoticbases;exoticlakekala"], "SH", ["Rarity", "ItemLevel"], null, ["Gear", "OS"]);
         }
@@ -2740,6 +2727,10 @@ Chapter() {
                 QuickUI([0.0, "Normal Idols", "event->idols;normalidols"], "SH", ["ItemLevel", "AreaLevel"]);
 
                 QuickUI([0.0, "Unique Idols", "uniques;exuniqueidols"], "SH", ["ItemLevel", "AreaLevel"], "Unique Idols");
+            }
+
+            Section("Silver Coins", "Silver Coin") {
+                QuickUI([0.0, "SilverCoinEvent", "currency->leagueexclusive;silvercoin"], "SH", [], "Silver Coins for the Trial", []);
             }
 
             Section("Untiered Items", "StackedDeck")
