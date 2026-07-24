@@ -224,8 +224,8 @@ StyleSection("Cluster Jewels", "Cluster jewels are delirium exclusive drops, tha
 SS_SectionTitle("Vendor recipes");
 
 StyleSection("7-Jeweller's Orbs", "Items with 6 sockets can be sold at any vendor for 7 Jeweller's Orbs.") {
-    Search S0("skip", "6Socket-Recipe 3x2 item") { BaseType "Glorious Plate"; ItemLevel 80; SocketGroup "R G R R R G"; Rarity Normal; }
-    Search S0("skip", "6Socket-Recipe 4x2 item") { BaseType "Harbinger Bow"; ItemLevel 80; SocketGroup "G G G G R G"; Rarity Magic; }
+    Search S0("skip", "6Socket-Recipe 3x2 item") { BaseType "Glorious Plate"; ItemLevel 80; SocketGroup "W W W W G B"; Rarity Normal; }
+    Search S0("skip", "6Socket-Recipe 4x2 item") { BaseType "Harbinger Bow"; ItemLevel 80; SocketGroup "R G R R R R"; Rarity Magic; }
     SS_Item("S0");
     SS_InfoBox(["Detailed explanation", "The Jeweller's Orb recipe is one of the most useful recipes ingame and are extremely useful, until you're very well geared and wealthy. <hr> Hint: You can buy fusing orbs for 1:4 jeweller orbs from vendors. You can sell those in large quantities for a steady profit. This is a good and steady income source, especially if you're rather new to the game."]);
 }
@@ -233,15 +233,15 @@ StyleSection("7-Jeweller's Orbs", "Items with 6 sockets can be sold at any vendo
 StyleSection("Chromatic Orb", "All red-green-blue linked items sell for exactly one Chromatic Orb. It's more efficient to pick up smaller RGB-items for this recipe.<br>In the endgame, large RGB items are hidden to maximize efficiency.") {
     Search S0("skip", "Small RGB/Chromatic item recipe") { BaseType "Skean"; ItemLevel 70; Rarity "Normal"; SocketGroup "RBG"; }
     Search S0("skip", "Medium RGB/Chromatic item recipe") { BaseType "Shabby Jerkin"; ItemLevel 70; Rarity "Normal"; SocketGroup "RGB"; }
-    Search S0("skip", "Large RGB/Chromatic item recipe") { BaseType "Tiger Sword"; ItemLevel 70; Rarity "Magic"; SocketGroup "BRG RR"; }
+    Search S0("skip", "Large RGB/Chromatic item recipe") { BaseType "Tiger Sword"; ItemLevel 70; Rarity "Magic"; SocketGroup "BRG WW"; }
     SS_Item("S0");
     SS_InfoBox(["Detailed explanation", "Small items like Wands or Boots have additional highlighting for the recipe because the reward of it is always the same, no matter the item size. As your build gets faster you might want to disable this highlight, as you might have enough chromatics at this point."]);
 }
 
 StyleSection("Cartographer's Chisel", "Selling a 20% gavel together with any map will award you with a Cartographer's Chisel. This recipe is rather low profit and not recommended by most players.") {
-    Search S0("skip", "20%q chisel recipe") { BaseType "Gavel"; ItemLevel 66; Quality 20; SocketGroup "R RG"; Rarity Normal; Corrupted False; }
-    Search S0("skip", "15%q+ chisel recipe") { BaseType "Gavel"; ItemLevel 66; Quality 15; SocketGroup "RB G"; Rarity Normal; Corrupted False; }
-    Search S0("skip", "random qual chisel recipe") { BaseType "Gavel"; ItemLevel 66; Quality 5; SocketGroup "B R R"; Rarity Normal; Corrupted False; }
+    Search S0("skip", "20%q chisel recipe") { BaseType "Gavel"; ItemLevel 66; Quality 20; SocketGroup "R WW"; Rarity Normal; Corrupted False; }
+    Search S0("skip", "15%q+ chisel recipe") { BaseType "Gavel"; ItemLevel 66; Quality 15; SocketGroup "WW G"; Rarity Normal; Corrupted False; }
+    Search S0("skip", "random qual chisel recipe") { BaseType "Gavel"; ItemLevel 66; Quality 5; SocketGroup "B W R"; Rarity Normal; Corrupted False; }
     SS_Item("S0");
 }
 
@@ -257,7 +257,7 @@ StyleSection("Glassblower's Bauble", "Selling a 20% quality flask or many flasks
 SS_SectionTitle("Crafting and Chancing");
 
 StyleSection("Chancing Bases", "By applying an 'Orb of Chance' on these bases, you have a tiny chance to turn it into valuable unique item.") {
-    Search S0("skip", null, "chancing;t2") { BaseType "Glorious Plate"; ItemLevel 83; SocketGroup "RRG"; Rarity Normal; Corrupted False; }
+    Search S0("skip", null, "chancing;t2") { BaseType "Glorious Plate"; ItemLevel 83; SocketGroup "WWG"; Rarity Normal; Corrupted False; }
     SS_Item("S0");
 
     SS_InfoBox(["Detailed explanation", "There’s a lot to add here. First of all, chancing is a very controversial thing in Path of Exile. Many players don’t believe it’s worth the time or effort.<hr>Further, the itemlevel or quality does not matter while chancing (example: you can chance a low itemlevel Gold Ring into an Andvarius, even if Andvarius regulary only starts dropping later on).<hr>Another interesting detail is that you can only chance non-drop-restricted uniques. Things that can only be obtained by boss drops, such as Shaper and Atziri drops, can not be chanced. The success chance depends on the unique. Chancing something common might work out with just a dozen of orbs, while getting a headhunter can easily require ten thousands of orbs."]);
@@ -320,8 +320,8 @@ StyleSection("Special: Powerful Mods", "The filer analyzes the mods of identifie
 }
 
 StyleSection("5 Links", "Items with 5 linked sockets are useful and valuable early on in the leagues. If they're also 6-socketed, they get the grey recipe background.") {
-    Search S0("skip", "5link (endgame)") { BaseType "Imperial Bow"; ItemLevel 83; SocketGroup "GRRRR"; Rarity Normal; }
-    Search S0("skip", "5link with 6 sockets (endgame)") { BaseType "Glorious Plate"; ItemLevel 83; SocketGroup "GRRBR G"; Rarity Magic; }
+    Search S0("skip", "5link (endgame)") { BaseType "Imperial Bow"; ItemLevel 83; SocketGroup "WWWWR"; Rarity Normal; }
+    Search S0("skip", "5link with 6 sockets (endgame)") { BaseType "Glorious Plate"; ItemLevel 83; SocketGroup "WWRWW G"; Rarity Magic; }
     SS_Item("S0");
     SS_InfoBox(["Detailed explanation", "In the first days of new leagues, 5-linked body armors are in fairly high demand. They tend to drop in price rapidly though, as players will gradually switch to using 6-links"]);
 }
@@ -357,8 +357,8 @@ StyleSection("Leveling: Rare Weapons", "Good Melee, Archer and Caster rares (esp
 }
 
 StyleSection("Leveling: 4-linked Items", "4-linked items are very useful at the start. They're highlighted by a blue-ish border.") {
-    Search S0("skip", "Leveling: 4link (magic)") { SocketGroup "BBBR"; Rarity Magic; BaseType "Silk Gloves"; ItemLevel 60; }
-    Search S0("skip", "Leveling: 4link (normal)") { SocketGroup "RRGG"; Rarity Normal; BaseType "Iron Greaves"; ItemLevel 35; }
+    Search S0("skip", "Leveling: 4link (magic)") { SocketGroup "WWWR"; Rarity Magic; BaseType "Silk Gloves"; ItemLevel 60; }
+    Search S0("skip", "Leveling: 4link (normal)") { SocketGroup "WWWG"; Rarity Normal; BaseType "Iron Greaves"; ItemLevel 35; }
     SS_Item("S0");
 }
 
@@ -377,8 +377,8 @@ StyleSection("Leveling items", "The filter has several dozens of rules, such as 
 SS_SectionTitle("Other Endgame Items");
 
 StyleSection("SIX-LINKS", "Sixlinks are quite rare and often useful and valuable drops. They can also be sold to the vendor for 20 fusings. Only uncorrupted body armours receive the white background.") {
-    Search S0("skip", "Six Link Armour") { BaseType "Astral Plate"; Rarity Normal;  ItemLevel 70; SocketGroup "RRGBRR"; LinkedSockets 6; }
-    Search S0("skip", "Six Link Weapon") { BaseType "Fleshripper"; Rarity Normal; ItemLevel 70; Corrupted False; SocketGroup "RRGBRR"; LinkedSockets 6; }
+    Search S0("skip", "Six Link Armour") { BaseType "Astral Plate"; Rarity Normal;  ItemLevel 70; SocketGroup "WWWWRR"; LinkedSockets 6; }
+    Search S0("skip", "Six Link Weapon") { BaseType "Fleshripper"; Rarity Normal; ItemLevel 70; Corrupted False; SocketGroup "RWWWWR"; LinkedSockets 6; }
     SS_Item("S0");
 }
 
