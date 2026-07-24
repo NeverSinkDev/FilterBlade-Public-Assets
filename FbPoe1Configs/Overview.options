@@ -21,6 +21,7 @@ StyleSection("RARE CURRENCY", "Their powerful effects aside high currencies act 
 
 StyleSection("MID-TIER CURRENCY", "Rather common, but unless sold in bulk, not too expensive. Often used in basic crafting.") {
     Search S0("skip", "Alterations") { BaseType "Orb of Alteration"; }
+    Search S0("skip", "Chromatics") { BaseType "Chromatic Orb"; }
     Search S0("skip", "Jeweller's Orbs") { BaseType "Jeweller's Orb"; }
     Search S0("skip", "Chance Orbs") { BaseType "Orb of Chance"; }
     SS_Item("S0");
@@ -50,20 +51,17 @@ StyleSection("Gold", "You can find gold all throughout the game. It's picked up 
     SS_Item("S0");
 }
 
-SS_SectionTitle("Current League: 3.29 Allflame");
+SS_SectionTitle("Current League: 3.28 Mirage");
 
-StyleSection("Allflame League", "Dead Man's Sulphur, Ducats and all kind of precious items can be found on the seafloor!") {
-    Search S0("skip") { BaseType "Coral Reef Chart"; ItemLevel 70; Rarity Rare; }
-    Search S0("skip") { BaseType "Dead Man's Sulphur"; StackSize 50; }
-    Search S0("skip") { BaseType "Dead Man's Sulphur"; StackSize 250; }
-    Search S0("skip") { BaseType "Dead Man's Sulphur"; StackSize 1000; }
-    Search S0("skip") { BaseType "Brinehook's Ducat"; }
+StyleSection("Mirage League", "Mirages drop coins that can be used to imbue gems and restore specific uniques. Additionally mirages modify other mechanics to drop exotic loot!") {
+    Search S0("skip") { BaseType "Coin of Knowledge"; }
+    Search S0("skip") { BaseType "Cord Belt"; ItemLevel 80; Rarity Normal; }
     SS_Item("S0");
 }
 
-StyleSection("Vestigial Uniques", "Consume uniques in the Timeless Conflict (Legion) with Enshrouding Crystals. A random 'vestigial' unique will hatch - empowered by the consumed unique.") {
-    Search S0("skip") { BaseType "Vaal Enshrouding Crystal"; }
-    Search S0("skip") { BaseType "Dragonscale Boots"; Rarity Unique; ItemLevel 70; Vestigial True; }
+StyleSection("Astrolabes", "Astrolabes are a new way to juice up maps in the endgame. These are found after defeating the incarnations of Dread, Neglect and Fear.") {
+    Search S0("skip") { BaseType "Nameless Astrolabe"; }
+    Search S0("skip") { BaseType "Templar Astrolabe"; }
     SS_Item("S0");
 }
 
@@ -132,6 +130,13 @@ StyleSection("Map Upgrades!", "The filter highlights map drops of a higher tier 
     SS_Item("S0");
 }
 
+StyleSection("Unique Maps!", "Unique maps are treated like any other unique and are highlighted based on price.") {
+    Search S0("skip", null, "uniques->maps;multispecial") { ItemLevel 79; Rarity Unique; }
+    SS_Item("S0");
+}
+
+SS_Ad();
+
 SS_SectionTitle("Rare Items");
 
 StyleSection("Rare Colors", "The <b>Background</b> of a rare item describes its <b>Tier</b> - the relative usefulness of the item in the current meta. Opaque or colorful backgrounds are better.<div style='text-align: center;'><img src="assets/img/ItemHoverBox/ItemHoverBoxDivider_Unique.png"><br></div>The <b>Border</b> describes the <b>properties</b>: Tiny items have a green, small items a white and big items a black border. Corrupted items come with a red border.<div style='text-align: center;'><img src="assets/img/ItemHoverBox/ItemHoverBoxDivider_Unique.png"><br></div>The <b>Text color</b> is orange, instead of yellow, if the <b>itemLevel</b> is 75 or above, meaning that you can use the item for the Regal recipe instead of the chaos one.") {
@@ -181,8 +186,6 @@ StyleSection("Weapon&Armour Tier 4", "These items are usually rendered fairly un
 
     SS_InfoBox(["Detailed explanation", "A chaos recipe is selling a full “set” of rare items to a vendor - One amulet, two rings, one chest armor, etc… at the same time. The vendor will reward you with one Chaos Orb if all items are itemlevel 60+.<hr>If all items are unidentified, you’ll receive two Chaos Orbs instead. If all items are unidentified and have 20% quality, you’ll get three Chaos Orbs. If all items have an itemlevel of 75+, you’ll get Regal Orbs instead."]);
 }
-
-SS_Ad();
 
 SS_SectionTitle("Noteworthy Rares");
 
@@ -291,7 +294,13 @@ StyleSection("Tier 3 crafting bases", "Additional less commonly used crafting ba
 SS_SectionTitle("Special Purpose Bases");
 
 StyleSection("Teal Highlight!", "Any item with a teal highlight has something special about it! Typical reasons are: enchants, fractured, synthesis, identified mods, incursion mods, delve mods, abyss sockets etc. Their price differs and it often requires a manual check.") {
-    Search S0("skip", null, "exotic->synthesised;synthclasses") { ItemLevel 74; Corrupted False; Rarity Rare; FracturedItem True;  }
+    Search S0("skip", null, "exotic->synthesised;synthclasses") { ItemLevel 74; Corrupted False; Rarity Rare; SynthesisedItem True;  }
+    SS_Item("S0");
+}
+
+StyleSection("Special: Synthesis", "Synthesed items have a special implicit. Some implicits like +1 frenzy charges or curses on hit can be in very high demand.") {
+    Search S0("skip", null, "exotic->synthesised;synthselected") { ItemLevel 74; Corrupted False; Rarity Rare; SynthesisedItem True;  BaseType "Hubris Circlet";  }
+    Search S0("skip", null, "exotic->synthesised;synthrandom") { ItemLevel 74; Corrupted False; Rarity Rare; SynthesisedItem True; BaseType "Lathi";  }
     SS_Item("S0");
 }
 
@@ -456,12 +465,6 @@ StyleSection("DELVE FOSSILS", "Fossils are originally found in the Azurite mine 
     Search S0("skip", null, "currency->fossil;t2") { }
     Search S0("skip", null, "currency->fossil;t3") { }
     Search S0("skip", null, "currency->fossil;t4") { }
-    SS_Item("S0");
-}
-
-StyleSection("Astrolabes", "Astrolabes are a new way to juice up maps in the endgame. These are found after defeating the incarnations of Dread, Neglect and Fear.") {
-    Search S0("skip") { BaseType "Nameless Astrolabe"; }
-    Search S0("skip") { BaseType "Templar Astrolabe"; }
     SS_Item("S0");
 }
 
