@@ -290,11 +290,6 @@ StyleSection("Tier 3 crafting bases", "Additional less commonly used crafting ba
 
 SS_SectionTitle("Special Purpose Bases");
 
-StyleSection("Teal Highlight!", "Any item with a teal highlight has something special about it! Typical reasons are: enchants, fractured, synthesis, identified mods, incursion mods, delve mods, abyss sockets etc. Their price differs and it often requires a manual check.") {
-    Search S0("skip", null, "exotic->synthesised;synthclasses") { ItemLevel 74; Corrupted False; Rarity Rare; FracturedItem True;  }
-    SS_Item("S0");
-}
-
 StyleSection("Special: Fractured", "Fractured items have a permanent mod that can't be removed or changed. These make for good crafting bases, especially when combined with eldritch currency.") {
     Search S0("skip", null, "exotic->fractured;fractt1") { ItemLevel 74; Corrupted False; Rarity Rare; FracturedItem True; BaseType "Onyx Amulet"; }
     Search S0("skip", null, "exotic->fractured;fractt2") { ItemLevel 74; Corrupted False; Rarity Rare; FracturedItem True; BaseType "Tenderizer"; }
