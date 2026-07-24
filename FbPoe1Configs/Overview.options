@@ -448,13 +448,6 @@ StyleSection("SCARABS", "Scarabs add and modify encounters in maps. They come in
     SS_Item("S0");
 }
 
-StyleSection("LEGION INCUBATORS", "Incubators are commonly found in legion encounters and provide a certain rewards upon slaying sufficient monsters.") {
-    Search S0("skip", null, "currency->incubators;t2") { }
-    Search S0("skip", null, "currency->incubators;t3") { }
-    Search S0("skip", null, "currency->incubators;t4") { }
-    SS_Item("S0");
-}
-
 StyleSection("BLIGHT OILS", "Oils are usually found during blight encounters. They can be used to annoint a non-connected node on the tree to your amulet, to enchant your rings and to improve blighted maps.") {
     Search S0("skip", null, "currency->oil;t2") { }
     Search S0("skip", null, "currency->oil;t3") { }

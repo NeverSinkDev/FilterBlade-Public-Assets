@@ -339,7 +339,7 @@ Chapter(){
 
 Chapter()
 {
-	SectionTitle("Endgame");
+	SectionTitle("Endgame (level 65+)");
 
     Section("Waystones, Tablets & Content Keys", "Breach_Precursor_Tablet_inventory_icon") {
         Section("Waystones", "Waystone_Tier_7_inventory_icon") {
@@ -1050,7 +1050,7 @@ Chapter()
 }
 
 Chapter() {
-	SectionTitle("Campaign");
+	SectionTitle("Campaign (level 1-64)");
 
 Section("Campaign Gear", "Shabby_Hood_inventory_icon") {
     // SectionTitle("Campaign");
