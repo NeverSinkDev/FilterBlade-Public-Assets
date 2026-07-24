@@ -315,7 +315,7 @@ Chapter(){
 
 
             Section("Incursion Vials", "IncursionVial", "E") {
-                TierListToolBar();
+                TierListToolBar("Vial");
                 QuickUI([0.0, "Incursion Vials T1", "vials;t1"], "SH", [], "S Tier", ["IncursionVials", "O"]);
                 QuickUI([0.0, "Incursion Vials T2", "vials;t2"], "SH", [], "A Tier", ["IncursionVials", "O"]);
                 QuickUI([0.0, "Incursion Vials T3", "vials;t3"], "SH", [], "Others", ["IncursionVials", "O"]);
