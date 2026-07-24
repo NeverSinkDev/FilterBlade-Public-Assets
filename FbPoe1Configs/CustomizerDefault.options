@@ -2613,6 +2613,7 @@ Chapter() {
                 BasicModItemUI([0.0, "ModFiltering: Rings1", "rareid;ring_attack"], "Attacks Rings");
                 BasicModItemUI([0.0, "ModFiltering: Rings3", "rareid;ring_caster"], "Caster Rings");
                 BasicModItemUI([0.0, "ModFiltering: Minion Ring", "rareid;ring_minion"], "Minion Rings");
+                BasicModItemUI([0.0, "ModFiltering: Ring Lightradius", "rareid;ring_light"], "Light Radius Ring");
                 Title("Amulets");
                 Description("Core mods are highly valuable single mods, such as +1 to all fire gems or T1 dot multiplier. Items with fewer core mods require better other matching (auxiliary) mods.");
                 BasicModItemUI([0.0, "ModFiltering: Amulets +1 All Gems", "rareid;amu_exalter"], "Amulets with +1 to all skill gems");
