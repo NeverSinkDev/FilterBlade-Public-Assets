@@ -557,12 +557,19 @@ Chapter(){
             QuickUI([0.0, "Dead Man's Sulphur 6", "currency->deadmansulphur;t6"], "SH", ["StackSize"], "Tiny Stack");
         }
 
+        Section("Charts") {
+            Function AllflameChartsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["C:Chart", "Rarity?", "ItemLevel?", "AreaLevel?", "Corrupted?"], $text); }
+
+            QuickUI([0.0, "Allflame Charts", "charts;any"], "SH");
+
+            Conditional("?AllFlameChartsNewTier") {  }
+            ElementAdder_Tier("?AllFlameChartsNewTier", "AllflameChartsFunc");
+        }
+
         Section("Other") {
-            QuickUI([0.0, "Allflame Charts", "charts;any"], "SH", ["Rarity?"]);
             QuickUI([0.0, "Enshrouded Uniques", "enshrouded;enshroudedgear"], "SH", []);
             QuickUI([0.0, "Vestige Uniques", "uniques;vestige"], "SH", []);
             QuickUI([0.0, "Pearlescent Amulet", "exoticbaseslower;exoticpearl"], "SH", []);
-            //QuickUI([0.0, "Ghostflame Blade", "exoticbaseslower;exoticghostflame"], "SH", []);
         }
     }
 
@@ -2001,8 +2008,8 @@ Chapter() {
         Section ("Apex Tier Bases")
         {
             Description("Special rule to give sudden meta items temporary massive highlights.");
-            QuickUI([0.0, "ApexTierBasetypes84", "exoticbases;ecotinkbases84"], "SH", ["ItemLevel"], "Iron Flask: 84", []);
-            QuickUI([0.0, "ApexTierBasetypesAny", "exoticbases;ecotinkbases"], "SH", ["ItemLevel"], "Iron Flask", []);
+            QuickUI([0.0, "Apex Tier Bases ilvl 84", "exoticbases;ecotinkbases84"], "SH", ["ItemLevel"], "Iron Flask: 84", []);
+            QuickUI([0.0, "Apex Tier Bases", "exoticbases;ecotinkbases"], "SH", ["ItemLevel"], "Iron Flask", []);
         }
 
         Section ("Wombgifts", "MetamorphSampleOrganHeart")
