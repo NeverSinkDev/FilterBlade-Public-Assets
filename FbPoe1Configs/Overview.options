@@ -136,9 +136,9 @@ SS_SectionTitle("Rare Items");
 
 StyleSection("Rare Colors", "The <b>Background</b> of a rare item describes its <b>Tier</b> - the relative usefulness of the item in the current meta. Opaque or colorful backgrounds are better.<div style='text-align: center;'><img src="assets/img/ItemHoverBox/ItemHoverBoxDivider_Unique.png"><br></div>The <b>Border</b> describes the <b>properties</b>: Tiny items have a green, small items a white and big items a black border. Corrupted items come with a red border.<div style='text-align: center;'><img src="assets/img/ItemHoverBox/ItemHoverBoxDivider_Unique.png"><br></div>The <b>Text color</b> is orange, instead of yellow, if the <b>itemLevel</b> is 75 or above, meaning that you can use the item for the Regal recipe instead of the chaos one.") {
     Search S0("skip", "T1 rare - meta bases") { BaseType "Gemini Claw"; ItemLevel 80; Rarity Rare; }
-    Search S0("skip", "T2 rare - suboptimal bases") { BaseType "Slink Boots"; ItemLevel 70; SocketGroup "RRB"; Rarity Rare;}
-    Search S0("skip", "T3 rare - poor bases") { BaseType "Meatgrinder"; ItemLevel 70; SocketGroup "RRRG"; Rarity Rare; }
-    Search S0("skip", "T4 rare - worst bases") { BaseType "Wyrmscale Doublet"; ItemLevel 80; SocketGroup "GG"; Rarity Rare;}
+    Search S0("skip", "T2 rare - suboptimal bases") { BaseType "Slink Boots"; ItemLevel 70; SocketGroup "WWB"; Rarity Rare;}
+    Search S0("skip", "T3 rare - poor bases") { BaseType "Meatgrinder"; ItemLevel 70; SocketGroup "RWWG"; Rarity Rare; }
+    Search S0("skip", "T4 rare - worst bases") { BaseType "Wyrmscale Doublet"; ItemLevel 80; SocketGroup "WG"; Rarity Rare;}
     SS_Item("S0");
 
 	SS_InfoBox(["Detailed explanation", "Rare items can be crazy strong. That being said it's very tedious to pick, identify and treat (sell/price/keep) rare items. It takes a lot of practice and knowledge to quickly price rare items and there's a lot of factors, such as league type, age, meta, itemlevel, that affects it. <hr> Many Players also choose to use rares for the 'Chaos Recipe'. This is a safe and consistent way to make currency, especially early on in the league. For that you need to sell a full equipment of rares (boots, gloves, helm, 2 rings, 1 amulet, belt, armor, weapon+shield or a 2h weapon) of itemlevel 60+ (found in act 9 or later). The vendor will reward you with a Chaos Orb. If all items are unidentified, he'll give you 2 Chaos Orbs."]);
