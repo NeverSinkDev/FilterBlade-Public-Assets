@@ -197,6 +197,12 @@
       "group": "Auto-Updater"
     },
     {
+      "question": "How do I use the Auto-Updater?",
+      "answer": "Load or create a filter and head to the 'Export' screen. You will have 3 export-options. 'Download', 'Upload once' and the Premium Auto Updater. Click it and it will guide you through the process of linking your Patreon account and enabling AutoUpdate for your filter.",
+      "tags": "autoupdate auto automatically automated economy update updated eco patreon benefit update enable link trigger setup set up install start premium upload auto 4 hours",
+      "group": "Auto-Updater"
+    },
+    {
       "question": "Why does the auto-update feature cost money?",
       "answer": "When you visit filterblade your gamer PC does all the heavy lifting and our server costs get compensated by the AD income. To auto-update passively our servers have to do it AND we have less visitors. With over 1 million users on filterblade this generates outragously high costs. Even with a high number of optimizations this can easily cost thousands of euros per month. The patreon users not only pay for themself, but also help us work towards new features, invest into tech, services and quality.",
       "tags": "autoupdate auto automatically automated economy update updated eco free expensive patreon",
