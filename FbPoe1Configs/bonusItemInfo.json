@@ -1235,7 +1235,7 @@
 					"tags": ["MapOutcome"]
 				},
 				"Matryoshka":{
-					"tags": ["InfluencedOutcome"]
+					"tags": ["UniqueOutcome"]
 				},
 				"Mawr Blaidd": {
 					"tags": ["UniqueOutcome"]
@@ -2291,6 +2291,19 @@
 				},
 				"Incandescent Invitation": {
 					"text": "Opens Searing Exarch fight"
+				},
+
+				"Zorath's Eye of Malevolence": {
+					"text": "Opens the Zorath pinnacle boss encounter<br>Drops from Ulaman"
+				},
+				"Zorath's Eye of Authority": {
+					"text": "Opens the Zorath pinnacle boss encounter<br>Drops from Amanamu"
+				},
+				"Zorath's Eye of the Inevitable": {
+					"text": "Opens the Zorath pinnacle boss encounter<br>Drops from Kurgal"
+				},
+				"Zorath's Eye of the Endless": {
+					"text": "Opens the Zorath pinnacle boss encounter<br>Drops from Catarina"
 				}
 			}
 		},
@@ -3267,6 +3280,19 @@
 						"Vessel of Vinktar": {
 							"text": "Drops from The Vinktar Square.",
 							"priority": -5
+						},
+						"Stormblood": {
+							"text": "Drops from Velka in Allflame",
+							"priority": -3
+						}
+					}
+				},
+				"Sapphire Flask": {
+					"text": null,
+					"items": {
+						"Stormblood": {
+							"text": "Drops from Velka in Allflame",
+							"priority": -3
 						}
 					}
 				},
@@ -3671,6 +3697,10 @@
 					"items": {
 						"Farrul's Bite": {
 							"text": "Drops from Farrul (Einhar Boss).",
+							"priority": -5
+						},
+						"The Unblinking Eye": {
+							"text": "Drops from Uber Shaper",
 							"priority": -5
 						}
 					}
@@ -4238,6 +4268,14 @@
 						"Precursor's Emblem": {
 							"text": "Does not drop. Created with a vendor recipe.",
 							"priority": -10
+						},
+						"Pearl of Tsoatha": {
+							"text": "Drops from Velka in Allflame",
+							"priority": -3
+						},
+						"Zana's Ingenuity": {
+							"text": "Drops from Uber Sirus",
+							"priority": -5
 						}
 					}
 				},
@@ -4423,6 +4461,10 @@
 						"The Arkhon's Tools": {
 							"text": "Drops from the Incarnation of Neglect",
 							"priority": -5
+						},
+						"Unholy Accomplice": {
+							"text": "Drops from Lycia and Beyond bosses",
+							"priority": -3
 						}
 					}
 				},
@@ -4537,6 +4579,10 @@
 						"Sporeguard": {
 							"text": "Drops from Blighted Map.",
 							"priority": -5
+						},
+						"Waxen Soul": {
+							"text": "Does not drop. Sold in Ritual.",
+							"priority": -10
 						}
 					}
 				},
@@ -4789,6 +4835,10 @@
 						"Ixchel's Temptation": {
 							"text": "Drops from the Ultimatum.",
 							"priority": -5
+						},
+						"The Bandit Lord's Band": {
+							"text": "Drops from the Sasan",
+							"priority": -5
 						}
 					}
 				},
@@ -4932,6 +4982,10 @@
 						"The Burden of Shadows": {
 							"text": "Drops from the King in the Mists",
 							"priority": -5
+						},
+						"The Crustacean's Call": {
+							"text": "Drops from Velka in Allflame",
+							"priority": -3
 						}
 					}
 				},
@@ -5146,6 +5200,10 @@
 						"The Hallowed Monarch": {
 							"text": "Drops from the Uber Incarnation of Dread",
 							"priority": -5
+						},
+						"Subsume the Source": {
+							"text": "Drops from Zorath",
+							"priority": -5
 						}
 					}
 				},
@@ -5173,6 +5231,10 @@
 						"Bitter Instinct": {
 							"text": "Drops from the Uber Incarnation of Neglect",
 							"priority": -5
+						},
+						"Seablister": {
+							"text": "Drops from Velka in Allflame",
+							"priority": -3
 						}
 					}
 				},
@@ -5348,6 +5410,42 @@
 						}
 					}
 				},
+				"Pearlescent Amulet": {
+					"text": null,
+					"items": {
+						"Rotmother's Mutiny": {
+							"text": "Drops from Treasure Clams in Allflame",
+							"priority": -3
+						}
+					}
+				},
+				"Ancient Spirit Shield": {
+					"text": null,
+					"items": {
+						"The Draugur's Lantern": {
+							"text": "Drops from the Filthscrabble in Allflame",
+							"priority": -3
+						}
+					}
+				},
+				"Fleshripper": {
+					"text": null,
+					"items": {
+						"Spinesnatch": {
+							"text": "Drops from Zorath",
+							"priority": -5
+						}
+					}
+				},
+				"Ghostflame Blade": {
+					"text": null,
+					"items": {
+						"Dread Captain's Cutlass": {
+							"text": "Drops from Captainsbane",
+							"priority": -3
+						}
+					}
+				},
 				"Prismatic Jewel": {
 					"text": null,
 					"items": {
@@ -5393,7 +5491,11 @@
 					"text": null,
 					"items": {
 						"Amanamu's Gaze": {
-							"text": "Drops from Abyssal Depths.",
+							"text": "Drops from Amanamu and Ulaman",
+							"priority": -5
+						},
+						"Destructive Aspiration": {
+							"text": "Drops from Zorath",
 							"priority": -5
 						}
 					}
@@ -5402,7 +5504,11 @@
 					"text": null,
 					"items": {
 						"Kurgal's Gaze": {
-							"text": "Drops from Abyssal Depths.",
+							"text": "Drops from Amanamu and Ulaman",
+							"priority": -5
+						},
+						"Baleful Dominion": {
+							"text": "Drops from Zorath",
 							"priority": -5
 						}
 					}
@@ -5411,7 +5517,11 @@
 					"text": null,
 					"items": {
 						"Ulaman's Gaze": {
-							"text": "Drops from Abyssal Depths.",
+							"text": "Drops from Amanamu and Ulaman",
+							"priority": -5
+						},
+						"Extinguishing Grasp": {
+							"text": "Drops from Zorath",
 							"priority": -5
 						}
 					}
@@ -5420,8 +5530,21 @@
 					"text": null,
 					"items": {
 						"Tecrod's Gaze": {
-							"text": "Drops from Abyssal Depths.",
+							"text": "Drops from Amanamu and Ulaman",
 							"priority": -5
+						},
+						"Festering Vengeance": {
+							"text": "Drops from Zorath",
+							"priority": -5
+						}
+					}
+				},
+				"Assembled Eye Jewel": {
+					"text": null,
+					"items": {
+						"Reclaimed Malevolence": {
+							"text": "Made by combining four other Historic Abyssal jewels",
+							"priority": -10
 						}
 					}
 				},
