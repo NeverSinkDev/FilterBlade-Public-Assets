@@ -1239,7 +1239,7 @@ Chapter() {
             Description("Sometimes highly specific items not covered by the list above can hold high value, such as a 'Crusader Moonstone Ring'. This list is designed to cover this niche. You can also add your requirements here.");
             Section("Specific Influence BaseTypes") {
                 QuickUI([0.0, "Influenced Bases - Crusader", "influenced->all;t1basescrusader"], "SH", ["HasInfluence", "ItemLevel"], null, ["Gear", "SO"]);
-                QuickUI([0.0, "Influenced Bases - Warlock", "influenced->all;t1baseswarlord"], "SH", ["HasInfluence", "ItemLevel"], null, ["Gear", "SO"]);
+                QuickUI([0.0, "Influenced Bases - Warlock", "influenced->all;t1baseswarlord"], "SH", ["HasInfluence", "ItemLevel"], "Influenced Bases - Warlord", ["Gear", "SO"]);
                 QuickUI([0.0, "Influenced Bases - Redeemer", "influenced->all;t1basesredeemer"], "SH", ["HasInfluence", "ItemLevel"], null, ["Gear", "SO"]);
                 QuickUI([0.0, "Influenced Bases - Hunter", "influenced->all;t1baseshunter"], "SH", ["HasInfluence", "ItemLevel"], null, ["Gear", "SO"]);
                 QuickUI([0.0, "Influenced Bases - Shaper", "influenced->all;t1basesshaper"], "SH", ["HasInfluence", "ItemLevel"], null, ["Gear", "SO"]);
