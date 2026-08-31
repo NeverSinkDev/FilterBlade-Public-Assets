@@ -390,7 +390,7 @@ Chapter(){
         UniqueList(S8, "S", "A tier - Jewels", "The filter can't disintinguish between expensive and cheap unique jewels. All of them are treated the same way!");
 
         UniqueList(S3, "SH", "B+C Tier", "These are highly roll dependent. Keep your filter updated, especially if you want to hide this section!");
-        UniqueList(S7, "SDH", "D Tier - Early league Uniques:", "Expensive or interesting at the start of the new league, but lose value VERY fast! This tier stays empty, after the first days of the new league");
+        UniqueList(S7, "SH", "D Tier - Early league Uniques:", "Expensive or interesting at the start of the new league, but lose value VERY fast! This tier stays empty, after the first days of the new league");
         UniqueList(S11, "SH", "D Tier - Low Value+NonDrops:", "These uniques have an expensive version that is ONLY obtained through special means, such as vendor recipes.");
         UniqueList(S6, "SH", "D Tier - Low Value:", "These uniques are worth very little. Keep your filter updated, if you want to hide this section! Hiding this section at the start of new leagues and in SSF is a bad idea.");
 
@@ -598,7 +598,7 @@ Chapter() {
             ScarabTierList([0.0, "Betrayal Scarabs T6", "fragments->scarabs;t6"], "SH", "Others");
 
             // new tiers
-            Conditional("?ScarabNewTiers") { Show; Class "Map Fragments"; SetFontSize 45; SetTextColor 159 15 213 255; SetBorderColor 159 15 213 255; SetBackgroundColor 0 0 0 255; PlayAlertSound 2 300; PlayEffect Yellow; MinimapIcon 2 Yellow Hexagon; }
+            Conditional("?ScarabNewTiers") { Show; Class "Map Fragments" "Misc Map Items"; SetFontSize 45; SetTextColor 159 15 213 255; SetBorderColor 159 15 213 255; SetBackgroundColor 0 0 0 255; PlayAlertSound 2 300; PlayEffect Yellow; MinimapIcon 2 Yellow Hexagon; }
             ElementAdder_Tier("?ScarabNewTiers", "ScarabTierList");
 
             Conditional("?ScarabNewTiersHidden") {}
@@ -629,7 +629,7 @@ Chapter() {
 
         Section("Stacked Sacrifice Fragments", "SacrificeAtMidnight") {
             Function FragmentsFunc($s, $shd = "SD", $title, $descr = false) { QuickUI($s, $shd, ["StackSize"], $title, ["MapFragmentsNoScarabs", "SO"], $descr); }
-            FragmentsFunc([1.0, "Stacked Map Fragments T3", "fragments->stacked;t3"], "SD", "Stacked Sacrifice Fragments:");
+            FragmentsFunc([1.0, "Stacked Map Fragments T3", "fragments;t3stackedex"], "SD", "Stacked Sacrifice Fragments:");
         }
 
         Title("Splinters");
@@ -642,7 +642,7 @@ Chapter() {
             QuickUI([0.0, "Simulacrum Splinters", "currency->splinter->simulacrum;t5"], "SH", [], "Others");
         }
 
-        Section("Splinters - Single", "MergedSplinters", "E") {
+        Section("Legion Splinters - Single", "Timeless Templar Splinter", "E") {
             Function SplinterTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Splinters", "O"]); }
 
             TierListToolBar();
@@ -657,7 +657,7 @@ Chapter() {
             ElementAdder_Tier("?LegionSplinterNewTiersHidden", null, true, "Splinters", "OH");
         }
 
-        Section("Splinters - High Tier (Stacked)", "MergedSplinters", "E") {
+        Section("Legion Splinters - High Tier (Stacked)", "Timeless Maraketh Splinter", "E") {
             Function SplinterStacksUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Splinters", "OS"]); }
 
             SplinterStacksUI([0.0, "Breach and Legion splinter very large stacks 1", "currency->stackedsplintershigh;t1"], "SD", "High Tier Splinters 66+ Stacks");
@@ -670,7 +670,7 @@ Chapter() {
             ElementAdder_Tier("?BreachLegionSplinterStacksNewTier", "SplinterStacksUI");
         }
 
-        Section("Splinters - Low Tier (Stacked)", "MergedSplinters", "E") {
+        Section("Legion Splinters - Low Tier (Stacked)", "Timeless Karui Splinter", "E") {
             Function SplinterStacksUI($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Splinters", "SO"]); }
             SplinterStacksUI([0.0, "Breach and Legion splinter very large stacks 2 large", "currency->stackedsplinterslow;t1"], "SD", "Low Tier Splinters 66+ Stacks");
             SplinterStacksUI([0.0, "Breach and Legion splinter large stacks 2", "currency->stackedsplinterslow;t2"], "SD", "Low Tier Splinters 25+ Stacks");
@@ -897,7 +897,7 @@ Chapter() {
             Section ("Enchanted Contracts and Blueprints", "HeistGrandBlueprint")
             {
                 QuickUI([0.0, "Enchanted Blueprints", "heist->blueprint;enchanted"], "SH", []);
-                QuickUI([0.0, "Enchanted Contracts", "heist->contract;enchanted"], "SH", []);
+                QuickUI([0.0, "Enchanted Contracts", "heist->contract;enchanted"], "SH", ["ItemLevel"], null, ["HeistContractsNormal", "O"]);
             }
 
             Title("Custom Rules");
@@ -1102,7 +1102,7 @@ Chapter() {
         }
 
         Section("Weapons and Armours", "RoyalBurgonet") {
-            Function EgRaresArmours($s, $title) { QuickUI($s, "SH", ["BaseDefencePercentile", "ItemLevel", "Quality"], $title); }
+            Function EgRaresArmours($s, $title) { QuickUI($s, "SH", ["BaseDefencePercentile?", "ItemLevel", "Quality?", "AreaLevel"], $title); }
 
             Search T1Wep(3.0, "Tier 1 rares", "rr;t1") { }
             Search T2Wep(3.0, "Tier 2 rares", "rr;t2") { }
@@ -1324,8 +1324,8 @@ Chapter() {
                 Search S1(0.0, "Rank A Overquality Armors2", "crafting->qualityperfection;armors1q2") {}
                 Search S2(0.0, "Perfect Bases", "crafting->qualityperfection;perfectioncrafting") {}
 
-                QuickUI(0, "SH", ["Corrupted?", "ItemLevel?", "BaseDefencePercentile?", "Rarity?", "Quality"], "Rank A 29%+ Qual Armors");
-                QuickUI(1, "SH", ["Corrupted?", "ItemLevel?", "BaseDefencePercentile?", "Rarity?", "Quality"], "Rank A 24%+ Qual Armors");
+                QuickUI(0, "SH", ["Corrupted?", "ItemLevel?", "BaseDefencePercentile?", "Rarity?", "Quality"], "Rank A High OverQual Armors");
+                QuickUI(1, "SH", ["Corrupted?", "ItemLevel?", "BaseDefencePercentile?", "Rarity?", "Quality"], "Rank A Mid OverQual Armors");
                 QuickUI(2, "SH", ["Corrupted?", "ItemLevel?", "BaseDefencePercentile?", "Rarity?", "Quality"], "Optional Perfection-Based Tiering");
 
                 BaseTypeMatrix("OverqualityArmours", "1.0", "Default", true, [[S0, S1, S2]]);
@@ -1336,10 +1336,10 @@ Chapter() {
                 Search T2(0.0, "Perfect weapons tier 2, high quaity", "crafting->qualityperfection;weapont2q1") { }
                 Search T1(0.0, "Perfect weapons tier 1, low quaity", "crafting->qualityperfection;weapont1q2") { }
                 Search T2(0.0, "Perfect weapons tier 2, low quaity", "crafting->qualityperfection;weapont2q2") { }
-                QuickUI(0, "SH", ["Corrupted?", "ItemLevel", "Rarity?", "Quality"], "Rank A, 29%+ Quality Weapons");
-                QuickUI(1, "SH", ["Corrupted?", "ItemLevel", "Rarity?", "Quality"], "Rank B, 29%+ Quality Weapons");
-                QuickUI(2, "SH", ["Corrupted?", "ItemLevel", "Rarity?", "Quality"], "Rank A, 24%+ Quality Weapons");
-                QuickUI(3, "SH", ["Corrupted?", "ItemLevel", "Rarity?", "Quality"], "Rank B, 24%+ Quality Weapons");
+                QuickUI(0, "SH", ["Corrupted?", "ItemLevel", "Rarity?", "Quality"], "Rank A, High OverQual Weapons");
+                QuickUI(1, "SH", ["Corrupted?", "ItemLevel", "Rarity?", "Quality"], "Rank B, High OverQual Weapons");
+                QuickUI(2, "SH", ["Corrupted?", "ItemLevel", "Rarity?", "Quality"], "Rank A, Mid OverQual Weapons");
+                QuickUI(3, "SH", ["Corrupted?", "ItemLevel", "Rarity?", "Quality"], "Rank B, Mid OverQual Weapons");
                 BaseTypeMatrix("OverqualityWeapons", "1.0", "Default", true, [[T1], [T2]]);
             }
 
@@ -2697,12 +2697,12 @@ Chapter() {
             Section("Quest & quest-like items", "GoldenKey") {
                 Function QuestList($s, $shd = "SD", $text) { QuickUI($s, $shd, [], $text, ["quest"]); }
 
-                QuickUI([1.0, "Maven's invitations", "questlike;invitations"], "S", [], "Maven's Quest-Only Invitations");
+                QuickUI([0.0, "Atlas Voidstones", "artefact->misc;voidstones"], "SD", []);
                 QuickUI([0.0, "Quest Items", "questlikeexception;questitems"], "S", [], "Random Quest Items");
+                QuickUI([1.0, "Maven's invitations", "questlike;invitations"], "S", [], "Maven's Quest-Only Invitations");
                 QuickUI([0.0, "Labyrinth Items", "questlike;labyrinthconsumable"], "S", [], "Lab-Items (Keys and Trinkets)");
                 QuickUI([0.0, "Incursion Item", "questlike;incursionconsumable"], "S", [], "Incursion Stones of Passage");
                 QuickUI([0.0, "Heist Target", "heisttarget;any"], "S", [], "Heist Target");
-                QuickUI([0.0, "Atlas Voidstones", "artefact->misc;voidstones"], "SD", []);
 
                 Conditional("?QuestNewTiers") { Show; Class Quest; SetBorderColor 74 230 58; SetFontSize 45; PlayEffect Green; MinimapIcon 1 Green Hexagon;}
                 ElementAdder_Tier("?QuestNewTiers", "QuestList");
