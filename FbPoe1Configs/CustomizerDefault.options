@@ -754,7 +754,7 @@ Chapter() {
             QuickUI([0.0, "Pinnacle - Zana (Low Tier)", "maps->influenced;zanamaplow"], "SH", ["MapTier"], "Originator / Zana Maps (Low)");
 
             Title("Unique Maps");
-            QuickUI([0.0, "Unique Maps Multi", "uniques->maps;multispecial"], "SH", []);
+            QuickUI([0.0, "Unique Maps Multi", "uniques->maps;multispecial"], "SH", ["Corrupted"]);
 
             Title("Exotic Variations");
             QuickUI([0.0, "Vaal Temple Map", "maps->vaaltemple;any"], "SH", []);
