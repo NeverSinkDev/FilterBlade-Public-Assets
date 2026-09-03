@@ -177,20 +177,20 @@
 			"displayTagsNextToItem": false,
 			"items": {
 				"Tailoring Orb": {
-					"text": "Obtained from Curio Displays in Blueprints<br>Adds or replaces an enchantment on a body armour. This may reforge the body armour's sockets",
+					"text": "Obtained from Curio Displays in Blueprints",
 					"tags": ["BossDrop"]
 				},
 				"Tempering Orb": {
-					"text": "Obtained from Curio Displays in Blueprints<br>Adds or replaces an enchantment on a weapon. This may reforge the weapon's sockets",
+					"text": "Obtained from Curio Displays in Blueprints",
 					"tags": ["BossDrop"]
 				},
 
 				"Veiled Exalted Orb": {
-					"text": "Drops from Catarina<br>Removes a random modifier and adds a random Veiled modifier to a rare item",
+					"text": "Drops from Catarina, Master of Undeath",
 					"tags": ["BossDrop"]
 				},
 				"Veiled Chaos Orb": {
-					"text": "Drops from Safehouse Leaders<br>Reforges a rare item with new random modifiers including a random Veiled modifier",
+					"text": "Drops from Leaders of Syndicate Safehouses",
 					"tags": ["BossDrop"]
 				},
 
@@ -202,131 +202,107 @@
 					"text": "Drops from the Overgrown Grove Atlas Anomaly<br>Used at the Horticrafting bench for special crafting options",
 					"tags": ["LeagueDrop"]
 				},
+				
+				"Reflecting Mist": {
+					"text": "Drops from the Lake Islet Atlas Anomaly",
+					"tags": ["LeagueDrop"]
+				},
 
 				"Tainted Divine Teardrop": {
-					"text": "Unpredictably raises or lowers the tier of each modifier on a corrupted rare item",
 					"tags": ["Beyond", "LeagueDrop"]
 				},
 				"Tainted Exalted Orb": {
-					"text": "Unpredictably adds or removes a modifier on a corrupted rare item",
 					"tags": ["Beyond", "LeagueDrop"]
 				},
 				"Tainted Chaos Orb": {
-					"text": "Unpredictably either reforges a corrupted rare item with new random modifiers or removes all of its modifiers",
 					"tags": ["Beyond", "LeagueDrop"]
 				},
 				"Tainted Orb of Fusing": {
-					"text": "Unpredictably adds or removes a link to the largest group of linked sockets on a corrupted item",
 					"tags": ["Beyond", "LeagueDrop"]
 				},
 				"Tainted Mythic Orb": {
-					"text": "Unpredictably either upgrades a corrupted item to unique rarity or destroys it",
 					"tags": ["Beyond", "LeagueDrop"]
 				},
 				"Tainted Chromatic Orb": {
-					"text": "Unpredictably reforges the colour of sockets on a corrupted item",
 					"tags": ["Beyond", "LeagueDrop"]
 				},
 				"Tainted Jeweller's Orb": {
-					"text": "Unpredictably adds or removes a socket on a corrupted item",
 					"tags": ["Beyond", "LeagueDrop"]
 				},
 				"Tainted Armourer's Scrap": {
-					"text": "Randomises the quality of a corrupted armour",
 					"tags": ["Beyond", "LeagueDrop"]
 				},
 				"Tainted Blacksmith's Whetstone": {
-					"text": "Randomises the quality of a corrupted weapon",
 					"tags": ["Beyond", "LeagueDrop"]
 				},
 
 				"Eldritch Chaos Orb": {
-					"text": "If The Searing Exarch is dominant, reroll prefix modifiers. If The Eater of Worlds is dominant, reroll suffix modifiers",
 					"tags": ["Eldritch", "Generic"]
 				},
 				"Eldritch Orb of Annulment": {
-					"text": "If The Searing Exarch is dominant, remove a prefix modifier. If The Eater of Worlds is dominant, remove a suffix modifier",
 					"tags": ["Eldritch", "Generic"]
 				},
 				"Eldritch Exalted Orb": {
-					"text": "If The Searing Exarch is dominant, add a prefix modifier. If The Eater of Worlds is dominant, add a suffix modifier",
 					"tags": ["Eldritch", "Generic"]
 				},
 				"Exceptional Eldritch Ember": {
-					"text": "Drops from The Searing Exarch<br>Adds an Exceptional Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"text": "Drops from The Searing Exarch",
 					"tags": ["Eldritch", "BossDrop"]
 				},
 				"Exceptional Eldritch Ichor": {
-					"text": "Drops from The Eater of Worlds<br>Adds an Exceptional Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
+					"text": "Drops from The Eater of Worlds",
 					"tags": ["Eldritch", "BossDrop"]
 				},
 				"Grand Eldritch Ember": {
-					"text": "Adds a Grand Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
 					"tags": ["Eldritch", "Generic"]
 				},
 				"Grand Eldritch Ichor": {
-					"text": "Adds a Grand Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
 					"tags": ["Eldritch", "Generic"]
 				},
 				"Greater Eldritch Ember": {
-					"text": "Adds a Greater Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
 					"tags": ["Eldritch", "Generic"]
 				},
 				"Greater Eldritch Ichor": {
-					"text": "Adds a Greater Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
 					"tags": ["Eldritch", "Generic"]
 				},
 				"Lesser Eldritch Ember": {
-					"text": "Adds a Lesser Searing Exarch implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
 					"tags": ["Eldritch", "Generic"]
 				},
 				"Lesser Eldritch Ichor": {
-					"text": "Adds a Lesser Eater of Worlds implicit modifier to a Body Armour, Boots, Gloves or Helmet replacing any existing implicit modifier",
 					"tags": ["Eldritch", "Generic"]
 				},
 
 				"Fertile Catalyst": {
-					"text": "Adds quality that enhances Life and Mana modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 				"Prismatic Catalyst": {
-					"text": "Adds quality that enhances Resistance modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 				"Tempering Catalyst": {
-					"text": "Adds quality that enhances Defence modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 				"Accelerating Catalyst": {
-					"text": "Adds quality that enhances Speed modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 				"Unstable Catalyst": {
-					"text": "Adds quality that enhances Critical modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 				"Intrinsic Catalyst": {
-					"text": "Adds quality that enhances Attribute modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 				"Noxious Catalyst": {
-					"text": "Adds quality that enhances Physical and Chaos Damage modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 				"Turbulent Catalyst": {
-					"text": "Adds quality that enhances Elemental Damage modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 				"Abrasive Catalyst": {
-					"text": "Adds quality that enhances Attack modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 				"Imbued Catalyst": {
-					"text": "Adds quality that enhances Caster modifiers on a ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 				"Tainted Catalyst": {
-					"text": "Applies a random quality type and amount to a corrupted ring, amulet or belt",
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
 
@@ -348,180 +324,151 @@
 				},
 
 				"Awakener's Orb": {
-					"text": "Drops from Sirus<br>Destroys an item, applying its influence to another of the same item class. The second item is reforged as a rare item with both influence types and new modifiers",
+					"text": "Drops from Sirus, Awakener of Worlds",
 					"tags": ["BossDrop"]
 				},
 				"Orb of Dominance": {
-					"text": "Drops from Sirus, Shaper and Elder<br>Removes one Influenced Modifier from an item with at least two Influenced Modifiers and upgrades another Influenced Modifier",
+					"text": "Drops from Sirus, Shaper, Elder and Uber Elder",
 					"tags": ["BossDrop"]
 				},
 				"Orb of Remembrance": {
-					"text": "Drops from the Incarnation of Neglect<br>Randomises the number of Memory Strands on a normal equiment itemr",
+					"text": "Drops from the Incarnation of Neglect",
 					"tags": ["BossDrop"]
 				},
 				"Orb of Unravelling": {
-					"text": "Drops from the Incarnation of Dread<br>Consumes all Memory Strands on an item to attempt to upgrade the tier of explicit modifiers based on the number of Memoty Strands consumed",
+					"text": "Drops from the Incarnation of Dread",
 					"tags": ["BossDrop"]
 				},
 				"Orb of Intention": {
-					"text": "Drops from the Incarnation of Fear<br>Modifies a Memory Influenced Map, causing items found to have more Memory Strands, but fewer items drop",
+					"text": "Drops from the Incarnation of Fear",
 					"tags": ["BossDrop"]
 				},
 				"Hunter's Exalted Orb": {
-					"text": "Drops from Al-Hezmin, The Hunter<br>Adds Hunter influence and a new Hunter modifier to a rare item",
+					"text": "Drops from Al-Hezmin, The Hunter",
 					"tags": ["BossDrop"]
 				},
 				"Redeemer's Exalted Orb": {
-					"text": "Drops from Veritania, The Redeemer<br>Adds Redeemer influence and a new Redeemer modifier to a rare item",
+					"text": "Drops from Veritania, The Redeemer",
 					"tags": ["BossDrop"]
 				},
 				"Warlord's Exalted Orb": {
-					"text": "Drops from Drox, The warlord<br>Adds Warlord influence and a new Warlord modifier to a rare item",
+					"text": "Drops from Drox, The Warlord",
 					"tags": ["BossDrop"]
 				},
 				"Crusader's Exalted Orb": {
-					"text": "Drops from Baran, The Crusader<br>Adds Crusader influence and a new Crusader modifier to a rare item",
+					"text": "Drops from Baran, The Crusader",
 					"tags": ["BossDrop"]
 				},
 				"Shaper's Exalted Orb": {
-					"text": "Drops from The Shaper or Uber Elder<br>Adds Shaper influence and a new Shaper modifier to a rare item",
+					"text": "Drops from The Shaper or Uber Elder",
 					"tags": ["BossDrop"]
 				},
 				"Elder's Exalted Orb": {
-					"text": "Drops from The Elder or Uber Elder<br>Adds Elder influence and a new Elder modifier to a rare item",
+					"text": "Drops from The Elder or Uber Elder",
 					"tags": ["BossDrop"]
 				},
 				"Orb of Conflict": {
-					"text": "Drops from Maven or in Maven's Crucible<br>Unpredictably raise the strength of one Searing Exarch or Eater of Worlds modifier on an item and lower the strength of another",
+					"text": "Drops from the Maven and her invitations",
 					"tags": ["BossDrop"]
 				},
 
 				"Mirror of Kalandra": {
-					"text": "Creates a mirrored copy of an item",
 					"tags": ["Generic"]
 				},
 				"Hinekora's Lock": {
-					"text": "Allows an item to foresee the result of the next Currency item used on it. Modifying the item in any way removes the ability to foresee",
 					"tags": ["Generic"]
 				},
 				"Sacred Orb": {
-					"text": "Randomises the numeric values of base defences on an armour",
 					"tags": ["Generic"]
 				},
 				"Divine Orb": {
-					"text": "Randomises the numeric values of the random modifiers on an item",
+					"tags": ["Generic"]
+				},
+				"Valdo's Puzzle Box": {
 					"tags": ["Generic"]
 				},
 				"Exalted Orb": {
-					"text": "Augments a rare item with a new random modifier",
 					"tags": ["Generic"]
 				},
 				"Fracturing Orb": {
-					"text": "Fracture a random modifier on a rare item with at least 4 modifiers, locking it in place",
 					"tags": ["Generic"]
 				},
 				"Ancient Orb": {
-					"text": "Reforges a unique equipment as another of the same item class",
 					"tags": ["Generic"]
 				},
 				"Orb of Annulment": {
-					"text": "Removes a random modifier from an item",
 					"tags": ["Generic"]
 				},
 				"Orb of Unmaking": {
-					"text": "Grants an atlas passive skill refund point",
 					"tags": ["Generic"]
 				},
 				"Gemcutter's Prism": {
-					"text": "Improves the quality of a gem",
 					"tags": ["Generic"]
 				},
 				"Regal Orb": {
-					"text": "Upgrades a magic item to a rare item",
 					"tags": ["Generic"]
 				},
 				"Vaal Orb": {
-					"text": "Corrupts an item, modifying it unpredictably",
 					"tags": ["Generic"]
 				},
 				"Chaos Orb": {
-					"text": "Reforges a rare item with new random modifiers",
 					"tags": ["Generic"]
 				},
 				"Orb of Regret": {
-					"text": "Grants a passive skill refund point",
 					"tags": ["Generic"]
 				},
 				"Orb of Scouring": {
-					"text": "Removes all modifiers from an item",
 					"tags": ["Generic"]
 				},
 				"Blessed Orb": {
-					"text": "Randomises the numeric values of the implicit modifiers of an item",
 					"tags": ["Generic"]
 				},
 				"Orb of Fusing": {
-					"text": "Reforges the links between sockets on an item",
 					"tags": ["Generic"]
 				},
 				"Orb of Alchemy": {
-					"text": "Upgrades a normal item to a rare item",
 					"tags": ["Generic"]
 				},
 				"Orb of Binding": {
-					"text": "Upgrades a normal item to a rare item with up to four linked sockets",
 					"tags": ["Generic"]
 				},
 				"Jeweller's Orb": {
-					"text": "Reforges the number of sockets on an item",
 					"tags": ["Generic"]
 				},
 				"Enkindling Orb": {
-					"text": "Adds an enchantment to a utility flask that will improve it but prevent it from gaining charges during its effect",
 					"tags": ["Generic"]
 				},
 				"Instilling Orb": {
-					"text": "Adds an enchantment to a utility flask that will cause it to be used when certain conditions are met",
 					"tags": ["Generic"]
 				},
 				"Glassblower's Bauble": {
-					"text": "Improves the quality of a flask",
 					"tags": ["Generic"]
 				},
 				"Chromatic Orb": {
-					"text": "Reforges the colour of sockets on an item",
 					"tags": ["Generic"]
 				},
 				"Orb of Chance": {
-					"text": "Upgrades a normal item to a random rarity",
 					"tags": ["Generic"]
 				},
 				"Orb of Alteration": {
-					"text": "Reforges a magic item with new random modifiers",
 					"tags": ["Generic"]
 				},
 				"Orb of Transmutation": {
-					"text": "Upgrades a normal item to a magic item",
 					"tags": ["Generic"]
 				},
 				"Orb of Augmentation": {
-					"text": "Augments a magic item with a new random modifier",
 					"tags": ["Generic"]
 				},
 				"Blacksmith's Whetstone": {
-					"text": "Improves the quality of a weapon",
 					"tags": ["Generic"]
 				},
 				"Armourer's Scrap": {
-					"text": "Improves the quality of an armour",
 					"tags": ["Generic"]
 				},
 				"Portal Scroll": {
-					"text": "Creates a portal to town",
 					"tags": ["Generic"]
 				},
 				"Scroll of Wisdom": {
-					"text": "Identifies an item",
 					"tags": ["Generic"]
 				},
 				"Mirror Shard": {
@@ -550,7 +497,6 @@
 				},
 
 				"Eternal Orb": {
-					"text": "Creates an imprint of an item for later restoration. The imprint can't be applied to Fractured Items",
 					"tags": ["RuthlessOnly"]
 				},
 				"Veiled Scarab": {
@@ -562,139 +508,120 @@
 					"tags": ["Meme"]
 				},
 
-				"Reflecting Mist": {
-					"text": "Unpredictably reflects a rare amulet or ring, breaking it into two mirrored halves with reflected modifiers",
-					"tags": ["LeagueDrop"]
-				},
-
 				"Foulborn Orb of Augmentation": {
-					"text": "Augments a Magic item with a new random modifier with higher level modifiers being more likely",
+					"text": "Can be birthed from the Genesis Tree from a Lavish Wombgift",
 					"tags": ["BossDrop"]
 				},
 				"Foulborn Regal Orb": {
-					"text": "Upgrades a Magic item to a Rare item with higher level modifiers being more likely",
+					"text": "Can be birthed from the Genesis Tree from a Lavish Wombgift",
 					"tags": ["BossDrop"]
 				},
 				"Foulborn Exalted Orb": {
-					"text": "Augments a Rare item with a new random modifier with higher level modifiers being more likely",
+					"text": "Can be birthed from the Genesis Tree from a Lavish Wombgift",
 					"tags": ["BossDrop"]
 				},
 				"Flesh of Xesht": {
-					"text": "Drops from It That Was Esh and It That Was Tul<br>Transforms a Breach Unique item to its alternate form",
+					"text": "Drops from It That Was Esh and It That Was Tul",
 					"tags": ["BossDrop"]
 				},
 
 				"Volatile Vaal Orb": {
-					"text": "Sanctum Reward<br>Unpredictably either randomises the values of random modifiers on a unique equipment and corrupts it, or destroys it",
+					"text": "Can be offered as a reward in The Forbidden Sanctum",
 					"tags": ["BossDrop"]
 				},
 
 				"Maven's Chisel of Avarice": {
-					"text": "Improves the quality of a map enhancing Currency found",
 					"tags": ["BossDrop"]
 				},
 				"Maven's Chisel of Divination": {
-					"text": "Improves the quality of a map enhancing Divination Cards found",
 					"tags": ["BossDrop"]
 				},
 				"Maven's Chisel of Procurement": {
-					"text": "Improves the quality of a map enhancing Item Rarity",
 					"tags": ["BossDrop"]
 				},
 				"Maven's Chisel of Proliferation": {
-					"text": "Improves the quality of a map enhancing Pack Size",
 					"tags": ["BossDrop"]
 				},
 				"Maven's Chisel of Scarabs": {
-					"text": "Improves the quality of a map enhancing Scarabs found",
 					"tags": ["BossDrop"]
 				},
 
 				"Templar Astrolabe": {
-					"text": "Adds a Shaped Region to a quadrant of the Atlas",
 					"tags": ["BossDrop"]
 				},
 				"Fruiting Astrolabe": {
-					"text": "Adds a Shaped Region containing the Sacred Grove to a quadrant of the Atlas",
 					"tags": ["BossDrop"]
 				},
 				"Lightless Astrolabe": {
-					"text": "Adds a Shaped Region containing Abysses to a quadrant of the Atlas",
 					"tags": ["BossDrop"]
 				},
 				"Grasping Astrolabe": {
-					"text": "Adds a Shaped Region containing Breaches to a quadrant of the Atlas",
 					"tags": ["BossDrop"]
 				},
 				"Nameless Astrolabe": {
-					"text": "Adds a Shaped Region containing Ritual Altars to a quadrant of the Atlas",
 					"tags": ["BossDrop"]
 				},
 				"Fungal Astrolabe": {
-					"text": "Adds a Shaped Region containing Blight encounters to a quadrant of the Atlas",
 					"tags": ["BossDrop"]
 				},
 				"Chaotic Astrolabe": {
-					"text": "Adds a Shaped Region containing Ultimatum encounters to a quadrant of the Atlas",
 					"tags": ["BossDrop"]
 				},
 				"Deceptive Astrolabe": {
-					"text": "Adds a Shaped Region containing Delirium encounters to a quadrant of the Atlas",
 					"tags": ["BossDrop"]
 				},
 				"Timeless Astrolabe": {
-					"text": "Adds a Shaped Region containing Legion encounters to a quadrant of the Atlas",
 					"tags": ["BossDrop"]
 				},
 				"Runic Astrolabe": {
-					"text": "Adds a Shaped Region containing Expedition encounters to a quadrant of the Atlas",
 					"tags": ["BossDrop"]
 				},
 
 				"Memory of Trauma": {
-					"text": "Adds a Memory Thread to the Atlas leading to the Incarnation of Fear",
+					"text": "Drops from Memory Tears",
 					"tags": ["BossDrop"]
 				},
 				"Memory of Reverence": {
-					"text": "Adds a Memory Thread to the Atlas leading to the Incarnation of Dread",
+					"text": "Drops from Memory Tears",
 					"tags": ["BossDrop"]
 				},
 				"Memory of Loneliness": {
-					"text": "Adds a Memory Thread to the Atlas leading to the Incarnation of Neglect",
+					"text": "Drops from Memory Tears",
 					"tags": ["BossDrop"]
 				},
 
 				"Karui Enshrouding Crystal": {
-					"text": "Drops from Karui Legion General in Maps<br>Enshrouds Unique Gloves",
+					"text": "Drops from Karui Legion General outside of the Domain of Timeless Conflict",
 					"tags": ["LeagueDrop"]
 				},
 				"Imperial Enshrouding Crystal": {
-					"text": "Drops from Eternal Empire Legion General in Maps<br>Enshrouds Unique Boots",
+					"text": "Drops from Eternal Empire Legion General outside of the Domain of Timeless Conflict",
 					"tags": ["LeagueDrop"]
 				},
 				"Vaal Enshrouding Crystal": {
-					"text": "Drops from Vaal Legion General in Maps<br>Enshrouds Unique Helmets",
+					"text": "Drops from Vaal Legion General outside of the Domain of Timeless Conflict",
 					"tags": ["LeagueDrop"]
 				},
 				"Templar Enshrouding Crystal": {
-					"text": "Drops from Templar Legion General in Maps<br>Enshrouds Unique Shields",
+					"text": "Drops from Templar Legion General outside of the Domain of Timeless Conflict",
 					"tags": ["LeagueDrop"]
 				},
 				"Maraketh Enshrouding Crystal": {
-					"text": "Drops from Maraketh Legion General in Maps<br>Enshrouds Unique Body Armours",
+					"text": "Drops from Maraketh Legion General outside of the Domain of Timeless Conflict",
 					"tags": ["LeagueDrop"]
 				},
 
-				"Valdo's Puzzle Box": {
-					"text": "Contains a Mysterious Map with a Foil Unique Reward",
-					"tags": ["Generic"]
+				"Message in a Bottle": {
+					"text": "Obtained through the Curse of the Allflame league mechanic",
+					"tags": ["LeagueDrop"]
 				},
+
 				"Ritual Splinter": {
 					"text": "Combine 100 Splinters to create a Ritual Vessel",
 					"tags": ["LeagueDrop"]
 				},
 				"Ritual Vessel": {
-					"text": "Stores the monsters slain for the first time from a completed Ritual Altar for future use",
+					"text": "Drops from The King in the Mists",
 					"tags": ["LeagueDrop"]
 				},
 				"Crescent Splinter": {
@@ -708,134 +635,17 @@
 
 		"Fossil": {
 			"items": {
-				"Aberrant Fossil": {
-					"text": "More Chaos modifiers, No Lightning modifiers"
-				},
-				"Aetheric Fossil": {
-					"text": "More Caster modifiers, Fewer Attack modifiers"
-				},
-				"Bloodstained Fossil": {
-					"text": "Corrupted, Has a Corrupted implicit modifier"
-				},
-				"Bound Fossil": {
-					"text": "More Minion, Aura or Curse modifiers"
-				},
-				"Corroded Fossil": {
-					"text": "More Physical Ailment or Chaos Ailment modifiers, No Elemental modifiers"
-				},
-				"Deft Fossil": {
-					"text": "More Critical modifiers, No Attribute modifiers"
-				},
-				"Dense Fossil": {
-					"text": "More Defence modifiers, No Life modifiers"
-				},
-				"Faceted Fossil": {
-					"text": "More Gem modifiers"
-				},
-				"Fractured Fossil": {
-					"text": "Fracture a random Modifier"
-				},
-				"Frigid Fossil": {
-					"text": "More Cold modifiers, No Fire modifiers"
-				},
-				"Fundamental Fossil": {
-					"text": "More Attribute modifiers, No Critical modifiers"
-				},
-				"Gilded Fossil": {
-					"text": "Item is overvalued by vendors"
-				},
-				"Glyphic Fossil": {
-					"text": "Has a Corrupt Essence modifier"
-				},
-				"Hollow Fossil": {
-					"text": "Has an Abyssal Socket"
-				},
-				"Jagged Fossil": {
-					"text": "More Physical modifiers, No Chaos modifiers"
-				},
-				"Lucent Fossil": {
-					"text": "More Mana modifiers, No Speed modifiers"
-				},
-				"Metallic Fossil": {
-					"text": "More Lightning modifiers, No Physical modifiers"
-				},
-				"Opulent Fossil": {
-					"text": "More Drop modifiers, No Tagless modifiers"
-				},
-				"Prismatic Fossil": {
-					"text": "More Elemental modifiers, No Physical Ailment or Chaos Ailment modifiers"
-				},
-				"Pristine Fossil": {
-					"text": "More Life modifiers, No Defence modifiers"
-				},
-				"Sanctified Fossil": {
-					"text": "Numeric values are lucky, High Level modifiers are more common"
-				},
-				"Scorched Fossil": {
-					"text": "More Fire modifiers, No Cold modifiers"
-				},
-				"Serrated Fossil": {
-					"text": "More Attack modifiers, No Caster modifiers"
-				},
-				"Shuddering Fossil": {
-					"text": "More Speed modifiers, No mana modifiers"
-				},
-				"Tangled Fossil": {
-					"text": "Makes a random modifier type much more likely and prevents another random modifier type. Effects revealed once resonator is fully socketed."
-				},
-
 				"Primitive Chaotic Resonator": {
-					"text": "Single socket Resonator reforging a rare item using Fossils"
+					"text": "One Socket"
 				},
 				"Potent Chaotic Resonator": {
-					"text": "Two socket Resonator reforging a rare item using Fossils"
+					"text": "Two Sockets"
 				},
 				"Powerful Chaotic Resonator": {
-					"text": "Three socket Resonator reforging a rare item using Fossils"
+					"text": "Three Sockets"
 				},
 				"Prime Chaotic Resonator": {
-					"text": "Four socket Resonator reforging a rare item using Fossils"
-				}
-			}
-		},
-
-		"DeliriumOrb": {
-			"items": {
-				"Armoursmith's Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Armour reward type"
-				},
-				"Blacksmith's Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Weapons reward type"
-				},
-				"Blighted Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Blight reward type"
-				},
-				"Cartographer's Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Map Items reward type"
-				},
-				"Diviner's Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Divination Cards reward type"
-				},
-				"Fragmented Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Fragments reward type"
-				},
-				"Jeweller's Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Trinkets reward type"
-				},
-				"Singular Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Unique Items reward type"
-				},
-				"Skittering Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Scarabs reward type"
-				},
-				"Thaumaturge's Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Gems reward type"
-				},
-				"Whispering Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Essences reward type"
-				},
-				"Fine Delirium Orb": {
-					"text": "Modifies a Map item adding layers of Delirium with the Currency Items reward type"
+					"text": "Four Sockets"
 				}
 			}
 		},
@@ -2243,13 +2053,13 @@
 					"text": "Opens The Eternal Labyrinth"
 				},
 				"Gift to the Goddess": {
-					"text": "Opens The Eternal Labyrinth of Opportunity<br>Divine Font grants 6 additional uses<br>Drops at the end of upgraded Trial of Ascendancy"
+					"text": "Drops at the end of upgraded Trial of Ascendancy"
 				},
 				"Dedication to the Goddess": {
-					"text": "Opens The Eternal Labyrinth of Opportunity<br>Divine Font offers Corrupted Gem crafting options<br>Drops at the end of upgraded Trial of Ascendancy"
+					"text": "Drops at the end of upgraded Trial of Ascendancy"
 				},
 				"Tribute to the Goddess": {
-					"text": "Opens The Eternal Labyrinth of Fortune<br>Reward Chests are improved<br>Drops at the end of upgraded Trial of Ascendancy"
+					"text": "Drops at the end of upgraded Trial of Ascendancy"
 				},
 
 				"Divine Vessel": {
@@ -2310,402 +2120,30 @@
 
 		"Scarab": {
 			"items": {
-				"Breach Scarab of the Hive": {
-					"text": "Area contains a Breach Hive"
-				},
-				"Breach Scarab of Instability": {
-					"text": "Area contains 2 additional Unstable Breaches"
-				},
-				"Breach Scarab of the Marshal": {
-					"text": "Unstable Breaches in Area contain a Boss<br>Breach Hives in Area lead to a Hive Fortress"
-				},
-				"Breach Scarab of the Incensed Swarm": {
-					"text": "Ailith's skills in Area instead enrage the Hive, increasing the Difficulty and Reward of subsequent waves"
-				},
-				"Breach Scarab of Resonant Cascade": {
-					"text": "Unstable Breaches in Areas are 10% faster for each Unstable Breach already opened<br>Monsters from Unstable Breaches in Areas have increased Difficulty and Reward for each Unstable Breach already opened."
-				},
-
-				"Cartography Scarab of Escalation": {
-					"text": "10% increased Maps found in Area for each Map Modifier affecting Area"
-				},
-				"Cartography Scarab of the Multitude": {
-					"text": "Area contains 8 to 12 additional packs of Difficult and Rewarding Monsters which drop 300% increased Maps"
-				},
-				"Cartography Scarab of Corruption": {
-					"text": "Non-Unique Maps found in Area are Corrupted with 8 Modifiers"
-				},
-				"Cartography Scarab of Risk": {
-					"text": "Area has 2 additional random Modifiers"
-				},
-
-				"Bestiary Scarab": {
-					"text": "Area contains Einhar"
-				},
-				"Bestiary Scarab of the Herd": {
-					"text": "Area contains 5 additional Red Beasts if it contains Einhar"
-				},
-				"Bestiary Scarab of Duplicating": {
-					"text": "Create a copy of Beasts captured in Area"
-				},
-
-				"Influencing Scarab of the Shaper": {
-					"text": "Adds Shaper Influence outcome to Area"
-				},
-				"Influencing Scarab of the Elder": {
-					"text": "Adds Elder Influence outcome to Area"
-				},
-				"Influencing Scarab of Hordes": {
-					"text": "Influenced Monster Packs in Area have 40% increased Pack Size"
-				},
-				"Influencing Scarab of Interference": {
-					"text": "Spawns a Conqueror, Elder or Shaper Guardian or Synthesis boss to accompany the Map boss<br>This additional boss is guaranteed to drop a Shaper Guardian, Elder Guardian, Conqueror or Unique Synthesised Map."
-				},
-
-				"Sulphite Scarab": {
-					"text": "Area contains Niko"
-				},
-				"Sulphite Scarab of Fumes": {
-					"text": "Sulphite found in Map Area releases Enraging Fumes<br>Monsters affected by Enraging Fumes have 50% increased Item Quantity<br>Sulphite in your maps is guarded by Monsters from the Azurite Mine"
-				},
-
-				"Divination Scarab of Pilfering": {
-					"text": "Divination Cards which drop in Area are stolen by a Final Map Boss<br>That Final Map Boss has increased Toughness and deals increased Damage the more Divination Cards they have stolen<br>That Final Map Boss duplicates all stolen Divination Cards when defeated"
-				},
-				"Divination Scarab of Plenty": {
-					"text": "Up to 6 to 10 Packs of Magic Monsters in Area have 1000% increased chance to drop Divination Cards"
-				},
-				"Divination Scarab of The Cloister": {
-					"text": "Area contains 8 to 12 additional packs of Doedre's Devoted<br>Doedre's Devoted have 1% additional chance to drop a Stacked Deck"
-				},
-				
-				"Torment Scarab": {
-					"text": "Area is haunted by 4 additional Tormented Spirits<br>Tormented Spirits in Area have a 25% chance to be set free when Possessed Monsters are slain"
-				},
-				"Torment Scarab of Peculiarity": {
-					"text": "Tormented Spirits in Area are replaced with unusual variants"
-				},
-				"Torment Scarab of Possession": {
-					"text": "Rare Monsters in Area have a quarter chance to be Possessed by up to 1 Tormented Spirit"
-				},
-
-				"Ambush Scarab": {
-					"text": "Area contains 4 additional Strongboxes"
-				},
-				"Ambush Scarab of Hidden Compartments": {
-					"text": "15% Chance for Strongboxes in Area to be openable again"
-				},
-				"Ambush Scarab of Potency": {
-					"text": "75% Increased effect of Explicit Modifiers on Strongboxes in Area"
-				},
-				"Ambush Scarab of Containment": {
-					"text": "Area contains many additional Strongboxes<br>Area's inhabitants are lying in ambush"
-				},
-				"Ambush Scarab of Discernment": {
-					"text": "Strongboxes in Area are more likely to be rarer varieties"
-				},
-
-				"Expedition Scarab": {
-					"text": "Area contains an Expedition Encounter"
-				},
-				"Expedition Scarab of Runefinding": {
-					"text": "Expedition Encounters in Area have 100% increased number of Runic Monster Markers"
-				},
-				"Expedition Scarab of Verisium Powder": {
-					"text": "Expedition Encounters in Area have 50% increased number of Explosives<br>80% increased Explosive Radius"
-				},
-				"Expedition Scarab of Archaeology": {
-					"text": "Remnants in Expedition Encounters in Area have 2 additional Suffixes and Prefixes"
-				},
-				"Expedition Scarab of Infusion": {
-					"text": "Logbooks found in Area always have 4 Implicits<br>Expedition Monsters gain increased Difficulty and Reward for each Remnant detonated"
-				},
-
-				"Legion Scarab": {
-					"text": "Area contains an additional Legion Encounter"
-				},
-				"Legion Scarab of Officers": {
-					"text": "Legion Factions in Area have 5 additional Sergeants"
-				},
-				"Legion Scarab of Treasures": {
-					"text": "Chests that are broken out have a chance for the chests rewards to be applied to the monsters it breaks out, while also making those monsters more difficult and rewarding"
-				},
-				"Legion Scarab of Eternal Conflict": {
-					"text": "Legion Monsters in Area can be broken out of Stasis multiple times<br>Legion Monsters in Area gain increased Difficulty and Reward for each time they are broken out"
-				},
-
-				"Abyss Scarab": {
-					"text": "Area contains an additional Abyss"
-				},
-				"Abyss Scarab of Multitudes": {
-					"text": "Abyss Chasms in Area spawn 100% increased Monsters per Soul fed"
-				},
-				"Abyss Scarab of Crystals": {
-					"text": "Abyss Pits in Area that do not contain a reward instead create an Abyssal Crystal"
-				},
-				"Abyss Scarab of the Consort": {
-					"text": "Abyss Pit in Area spawns an Abyssal Consort"
-				},
-				"Abyss Scarab of Descending": {
-					"text": "Area contains an Abyssal Depths"
-				},
-
-				"Anarchy Scarab": {
-					"text": "Area contains 5 additional Rogue Exiles"
-				},
-				"Anarchy Scarab of Gigantification": {
-					"text": "Rogue Exiles in Area have a 30% chance to be replaced with a Rogue Giant"
-				},
-				"Anarchy Scarab of Partnership": {
-					"text": "Rogue Exiles in Area have a 50% chance to appear in pairs"
-				},
-				"Anarchy Scarab of the Exceptional": {
-					"text": "Area contains an additional Exceptional Rogue Exile"
-				},
-
-				"Essence Scarab": {
-					"text": "Area contains 3 additional Essences"
-				},
-				"Essence Scarab of Ascent": {
-					"text": "Essences found in Area are a tier higher"
-				},
-				"Essence Scarab of Stability": {
-					"text": "Using a Remnant of Corruption in Area can only result in upgrading or transforming Essences"
-				},
-				"Essence Scarab of Calcification": {
-					"text": "Rare monsters that are natural inhabitants of the Area are imprisoned by Essences"
-				},
-				"Essence Scarab of Adaptation": {
-					"text": "Imprisoned Monsters released in Areas grant a random Essence Modifier to another Imprisoned Monster in the Area<br>Imprisoned Monsters in Areas have increased Difficulty and Reward for each Essence Modifier"
-				},
-
-				"Domination Scarab": {
-					"text": "Area contains 3 additional Shrines"
-				},
-				"Domination Scarab of Apparitions": {
-					"text": "Area contains 2 additional Apparition Shrines"
-				},
-				"Domination Scarab of Evolution": {
-					"text": "Area contains an additional Evolving Shrine"
-				},
-				"Domination Scarab of Terrors": {
-					"text": "Shrines in Area are guarded by an Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
-				},
-
-				"Ritual Scarab of Selectiveness": {
-					"text": "Rerolling Favours at Ritual Altars in Area has no cost the first 2 times<br>Ritual Altars in Area allow rerolling Favours 2 additional times"
-				},
-				"Ritual Scarab of Wisps": {
-					"text": "Ritual Altars in Area spawn a Wildwood Wisp<br>Wildwood Wisps grant 100% increased Tribute Gained to nearby Players"
-				},
-				"Ritual Scarab of Abundance": {
-					"text": "Rituals in Area offer 100% increased Favours"
-				},
-				"Ritual Scarab of the Corpses": {
-					"text": "Rituals in Area contain an additional Rare Itemised Corpse Monster"
-				},
-
-				"Harvest Scarab": {
-					"text": "Area contains the Sacred Grove"
-				},
-				"Harvest Scarab of Doubling": {
-					"text": "Lifeforce dropped by Harvest Monsters in Area is duplicated<br>Harvest Monsters in Area have 100% more Life"
-				},
-				"Harvest Scarab of Cornucopia": {
-					"text": "If Area contains the Sacred Grove, it will contain up to 1 additional Tier 4 seed of each type, if possible"
-				},
-
-				"Incursion Scarab": {
-					"text": "Area contains Alva"
-				},
-				"Incursion Scarab of Invasion": {
-					"text": "Area contains 12-16 additional packs of Incursion Monsters"
-				},
-				"Incursion Scarab of Champions": {
-					"text": "Incursions in Area have a 35% chance for all Monsters to be at least Magic<br>Incursions in Area have 15% increased Pack Size"
-				},
-				"Incursion Scarab of Timelines": {
-					"text": "Final Architect slain in Area will drop an Itemised Temple<br>Itemised Temples dropped in Area are generated based on current Temple layout, but with randomised room tiers"
-				},
-
-				"Betrayal Scarab": {
-					"text": "Area contains Jun"
-				},
-				"Betrayal Scarab of the Allflame": {
-					"text": "75% Increased number of Monster Packs Substituted by Allflame Embers in Area"
-				},
-				"Betrayal Scarab of Reinforcements": {
-					"text": "Immortal Syndicate Members in Area have 50% increased chance to be accompanied by reinforcements"
-				},
-				"Betrayal Scarab of Unbreaking": {
-					"text": "Interrogated Immortal Syndicate targets in Area have a 50% chance to not lose Rank upon completing Interrogation"
-				},
-
-				"Beyond Scarab": {
-					"text": "Slaying enemies close together in Area can attract monsters from Beyond this realm"
-				},
-				"Beyond Scarab of Haemophilia": {
-					"text": "Beyond Portals in Area have 50% increased Merging Radius"
-				},
-				"Beyond Scarab of Resurgence": {
-					"text": "Summons the Beyond Bosses of other factions when a Beyond Boss is summoned<br>Beyond Bosses in Area drop 100% increased Tainted Currency<br>Beyond Portals in Area have 30% increased chance to spawn a Unique Boss"
-				},
-				"Beyond Scarab of the Invasion": {
-					"text": "Rare and Unique Monsters slain in Area create 8 to 12 additional Beyond Portals"
-				},
-
-				"Ultimatum Scarab": {
-					"text": "Area contains an Ultimatum Encounter"
-				},
-				"Ultimatum Scarab of Bribing": {
-					"text": "Ultimatum Monsters grant 150% increased Experience<br>Ultimatum Encounters grant rewards as though you completed 2 additional Rounds"
-				},
-				"Ultimatum Scarab of Dueling": {
-					"text": "Ultimatum Encounters in Area will always lead to a Unique Boss if possible"
-				},
-				"Ultimatum Scarab of Catalysing": {
-					"text": "Ultimatum Encounters in Area will only offer Catalysts as Rewards to the Map Owner"
-				},
-				"Ultimatum Scarab of Inscription": {
-					"text": "Ultimatum Encounter rewards in Area offering Catalysts will offer Inscribed Ultimatums to the Map Owner instead"
-				},
-
-				"Delirium Scarab": {
-					"text": "Area contains a Mirror of Delirium"
-				},
-				"Delirium Scarab of Mania": {
-					"text": "Delirium Reward Meters fill 100% faster in Area<br>Delirium in Area increases 50% faster with distance from the mirror"
-				},
-				"Delirium Scarab of Paranoia": {
-					"text": "Delirium Encounters in Area generate 2 additional Reward types"
-				},
-				"Delirium Scarab of Neuroses": {
-					"text": "Delirium Encounters in Area contain all Unique Delirium Bosses<br>Can only be used with Tier 11+ Maps<br>Delirium Reward Types gain +1 to count on defeating Unique Delirium Bosses"
-				},
-				"Delirium Scarab of Delusions": {
-					"text": "Maps found in Area have layers of Delirium"
-				},
-
-				"Blight Scarab": {
-					"text": "Area contains a Blight Encounter"
-				},
-				"Blight Scarab of the Blightheart": {
-					"text": "Blight Encounters in Area have one Blighted Chest<br>Blight Encounters in Area spawn many more waves of Enemies<br>Blighted Chests in Area grow larger and more rewarding the more Blighted Enemies are slain"
-				},
-				"Blight Scarab of Blooming": {
-					"text": "Blight Encounters in Area have up to 3 additional Unique Bosses<br>Unique enemies in Blight Encounters have 100% increased life<br>Tier 14+ Blighted Maps found in Area drop as Blight-Ravaged Maps instead"
-				},
-				"Blight Scarab of Invigoration": {
-					"text": "Each Empowering Tower in Areas grants Blighted Monsters in range increased Difficulty and Reward"
-				},
-
-				"Scarab of Adversaries": {
-					"text": "Area contains 4 additional Packs with Mirrored Rare Monsters"
-				},
-				"Scarab of the Sinistral": {
-					"text": "100% increased effect of Area Prefix Modifiers<br>Area Suffix Modifiers have no effect"
-				},
-				"Scarab of the Dextral": {
-					"text": "100% increased effect of Area Suffix Modifiers<br>Area Prefix Modifiers have no effect"
-				},
-				"Scarab of Divinity": {
-					"text": "Up to 2 additional Rare Monsters in Area will be Pantheon-Touched<br>Apparitions spawned by Pantheon-Touched Monsters deal 100% increased damage"
-				},
-				"Scarab of Monstrous Lineage": {
-					"text": "40% increased Magic Pack Size"
-				},
-				"Scarab of Radiant Storms": {
-					"text": "Area contains a Resplendent Tempest"
-				},
-				"Scarab of Stability": {
-					"text": "Portals to Area have a 50% chance to not be consumed on use"
-				},
-				"Scarab of Wisps": {
-					"text": "Monsters in Area have a chance to be Empowered by 2000 Wildwood Wisps"
-				},
-
-				"Horned Scarab of Bloodlines": {
-					"text": "Area has 150% increased Magic Monsters"
-				},
-				"Horned Scarab of Nemeses": {
-					"text": "Rare Monsters in Area have 2 additional Modifiers"
-				},
-				"Horned Scarab of Preservation": {
-					"text": "Other Scarabs are not consumed on use"
-				},
-				"Horned Scarab of Awakening": {
-					"text": "Tier 16+ Areas contain the Bosses from a random Maven Invitation"
-				},
-				"Horned Scarab of Tradition": {
-					"text": "All Rare and Unique Monsters in Area have dropped items transformed by a Reward Modifier"
-				},
-				"Horned Scarab of Glittering": {
-					"text": "Players in Area gain increased Item Rarity for each Monster slain recently, up to 400%"
-				},
-				"Horned Scarab of Pandemonium": {
-					"text": "Monster packs in Area have a 15% chance to be replaced by a random Atlas Boss<br>Modifiers to the Final Map Boss also apply to these Atlas Bosses"
-				},
-
-				"Titanic Scarab": {
-					"text": "Unique Monsters have 1% increased Toughness, Damage, Rarity and Quantity of items dropped per 1% increased Pack Size of Area"
-				},
-				"Titanic Scarab of Legend": {
-					"text": "Unique Monsters in Area have 2 additional Monster Modifiers"
-				},
-				"Titanic Scarab of Treasures": {
-					"text": "Unique Monsters in Area have an additional Reward<br>Unique Monsters in Area have 30% increased Toughness"
-				},
-
-				"Kalguuran Scarab": {
-					"text": "Area contains 2 additional Ore Deposits"
-				},
-				"Kalguuran Scarab of Guarded Riches": {
-					"text": "Monsters guarded Ore Deposits in Area are at least Magic"
-				},
-				"Kalguuran Scarab of Refinement": {
-					"text": "Ore Deposits in Area grant Smelted Bars instead of Marking Ore"
-				},
-				"Kalguuran Scarab of Enriching": {
-					"text": "Monsters guarding Ore Deposits have increased Difficulty and Reward<br>Ore Deposits contain 15% increased Ore for each Ore Deposit completed in Area"
-				},
-
-				"Trarthan Scarab": {
-					"text": "Area is inhabited by a Mercenary"
-				},
-				"Trarthan Scarab of Infamy": {
-					"text": "Mercenaries found in Area are Infamous<br>Mercenaries found in Area are accompanied by two Wild Mercenaries"
-				},
-				"Trarthan Scarab of Renown": {
-					"text": "All Equipment Items on Mercenaries found in Area are Unique"
-				},
-				"Trarthan Scarab of Surprising Alliances": {
-					"text": "Wild Rogue Exiles in Area have 50% chance to be accompanied by a Wild Mercenary<br>Wild Mercenaries have increased Difficulty for each Wild Mercenary in Area"
-				},
-
 				"Allflame Ember of Kulemak": {
-					"text": "Drops from Catarina<br>Pack monsters revive after Map Boss has been slain"
+					"text": "Drops from Catarina, Master of Undeath"
 				},
 
 				"Allflame Ember of Flesh": {
-					"text": "Obtained through the Curse of the Allflame league mechanic<br>Pack has single Monster<br>Monster has greatly increased Life"
+					"text": "Obtained through the Curse of the Allflame league mechanic"
 				},
 				"Allflame Ember of the Ethereal": {
-					"text": "Obtained through the Curse of the Allflame league mechanic<br>Pack Monsters cannot drop Equipment, Flasks or Tinctures"
+					"text": "Obtained through the Curse of the Allflame league mechanic"
 				},
 				"Allflame Ember of the Gilded": {
-					"text": "Obtained through the Curse of the Allflame league mechanic<br>Pack Monster Equipment Drops are converted to Gold"
+					"text": "Obtained through the Curse of the Allflame league mechanic"
 				},
 				"Allflame Ember of the Wildwood": {
-					"text": "Obtained through the Curse of the Allflame league mechanic<br>Pack Leader Empowers Map Bosses with Wildwood Wisps when slain"
+					"text": "Obtained through the Curse of the Allflame league mechanic"
 				},
 				"Allflame Ember of Toads": {
-					"text": "Obtained through the Curse of the Allflame league mechanic<br>Pack Monsters are Harmless Toads"
+					"text": "Obtained through the Curse of the Allflame league mechanic"
 				},		
 				"Allflame Ember of Propagation": {
-					"text": "Obtained through the Curse of the Allflame league mechanic<br>Pack Monsters that die when Rare spread Modifiers to other Rare Monsters in Area"
+					"text": "Obtained through the Curse of the Allflame league mechanic"
 				},
 				"Allflame Ember of Resplendence": {
-					"text": "Obtained through the Curse of the Allflame league mechanic<br>Pack Monsters do not drop items<br>Pack Monsters grant increased Item Rarity when slain, up to 400%, decaying over time"
+					"text": "Obtained through the Curse of the Allflame league mechanic"
 				}
 			}
 		},
@@ -2850,17 +2288,17 @@
 				"Pact of Beidat": {
 					"text": "Drops from Beidat Beyond boss"
 				},
-				"Pact of K'tash": {
-					"text": "Drops from K'tash Beyond boss"
+				"Pact of K'Tash": {
+					"text": "Drops from K'Tash Beyond boss"
 				},
 				"Pact of Lycia": {
-					"text": null
+					"text": "Drops from Lycia"
 				},
 				"Coursing Currents Support": {
-					"text": null
+					"text": "Drops from Velka, the Tide Witch"
 				},
 				"Crystalfall Support": {
-					"text": null
+					"text": "Drops from Zorath, Vile Assembled"
 				},
 
 				"Transfusion Support": {
