@@ -213,11 +213,11 @@ Chapter(){
         }
 
         Section("Heist Rogue's Markers", "HeistCoin") {
-            Function CustomCoinFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"]); }
+            Function CustomCoinFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSizeBig", "AreaLevel"]); }
 
             Search S1(0.1, "Rogue's Marker (Heist Coins)") { BaseType "Rogue's Marker"; }
-            QuickUI([0.0, "Rogue's Marker (Heist Coins) Stack", "currency->heist;highstack"], "SH", ["StackSize", "AreaLevel"], "Large Stacks");
-            QuickUI(S1, "SH", ["StackSize", "AreaLevel"], "Others", "");
+            QuickUI([0.0, "Rogue's Marker (Heist Coins) Stack", "currency->heist;highstack"], "SH", ["StackSizeBig", "AreaLevel"], "Large Stacks");
+            QuickUI(S1, "SH", ["StackSizeBig", "AreaLevel"], "Others", "");
             QuickUI([0.0, "Remaining Rogue Markers", "currency->heist;exhide"], "SH", [], "", [], "Remaining coins that were not caught due to potential Stack/Area requirements of the rules above.");
 
             // new tiers
@@ -256,7 +256,7 @@ Chapter(){
 
             Section("Harvest Lifeforce", "Lifeforce")
             {
-                Function LifeForceFunc($s, $shd = "SHD", $text = "") { QuickUI($s, $shd, ["AreaLevel", "StackSize"], $text, ["Currency", "DO"]); }
+                Function LifeForceFunc($s, $shd = "SHD", $text = "") { QuickUI($s, $shd, ["AreaLevel", "StackSizeHuge"], $text, ["Currency", "DO"]); }
 
                 LifeForceFunc([0.0, "Lifeforce Stacksize: S", "currency->harvest;t1lifeforce"], "SH");
                 LifeForceFunc([0.0, "Lifeforce Stacksize: A", "currency->harvest;t2lifeforce"], "SH");
@@ -511,7 +511,7 @@ Chapter(){
     Section("Gold", "Gold_inventory_icon") {
         Description("Gold is auto-picked-up! You will even pick up the gold if the rules are disabled.");
 
-        Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text); }
+        Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSizeHuge", "AreaLevel"], $text); }
 
         GoldFunc([0.0, "Settlers Gold - Huge Stack", "gold;stack3"], "SH", "Massive");
         GoldFunc([0.0, "Settlers Gold - Medium Stack", "gold;stack2"], "SH", "Huge");
@@ -549,12 +549,12 @@ Chapter(){
         }
 
         Section("Sulphur") {
-            QuickUI([0.0, "Dead Man's Sulphur 1", "currency->deadmansulphur;t1"], "SH", ["StackSize"], "Gigantic Stack");
-            QuickUI([0.0, "Dead Man's Sulphur 2", "currency->deadmansulphur;t2"], "SH", ["StackSize"], "Huge Stack");
-            QuickUI([0.0, "Dead Man's Sulphur 3", "currency->deadmansulphur;t3"], "SH", ["StackSize"], "Large Stack");
-            QuickUI([0.0, "Dead Man's Sulphur 4", "currency->deadmansulphur;t4"], "SH", ["StackSize"], "Medium Stack");
-            QuickUI([0.0, "Dead Man's Sulphur 5", "currency->deadmansulphur;t5"], "SH", ["StackSize"], "Small Stack");
-            QuickUI([0.0, "Dead Man's Sulphur 6", "currency->deadmansulphur;t6"], "SH", ["StackSize"], "Tiny Stack");
+            QuickUI([0.0, "Dead Man's Sulphur 1", "currency->deadmansulphur;t1"], "SH", ["StackSizeHuge"], "Gigantic Stack");
+            QuickUI([0.0, "Dead Man's Sulphur 2", "currency->deadmansulphur;t2"], "SH", ["StackSizeHuge"], "Huge Stack");
+            QuickUI([0.0, "Dead Man's Sulphur 3", "currency->deadmansulphur;t3"], "SH", ["StackSizeHuge"], "Large Stack");
+            QuickUI([0.0, "Dead Man's Sulphur 4", "currency->deadmansulphur;t4"], "SH", ["StackSizeHuge"], "Medium Stack");
+            QuickUI([0.0, "Dead Man's Sulphur 5", "currency->deadmansulphur;t5"], "SH", ["StackSizeHuge"], "Small Stack");
+            QuickUI([0.0, "Dead Man's Sulphur 6", "currency->deadmansulphur;t6"], "SH", ["StackSizeHuge"], "Tiny Stack");
         }
 
         Section("Charts") {
@@ -635,10 +635,10 @@ Chapter() {
         Title("Splinters");
 
         Section("Simulacrum Splinters", "DeliriumMapItemSimulacrum") {
-            QuickUI([0.0, "Simulacrum Splinter Stacks 4", "currency->splinter->simulacrum;t1"], "SD", ["StackSize"], "Huge Stacks");
-            QuickUI([0.0, "Simulacrum Splinter Stacks 3", "currency->splinter->simulacrum;t2"], "SD", ["StackSize"], "Large Stacks");
-            QuickUI([0.0, "Simulacrum Splinter Stacks 2", "currency->splinter->simulacrum;t3"], "SD", ["StackSize"], "Medium Stacks");
-            QuickUI([0.0, "Simulacrum Splinter Stacks 1", "currency->splinter->simulacrum;t4"], "SD", ["StackSize"], "Small Stacks");
+            QuickUI([0.0, "Simulacrum Splinter Stacks 4", "currency->splinter->simulacrum;t1"], "SD", ["StackSizeBig"], "Huge Stacks");
+            QuickUI([0.0, "Simulacrum Splinter Stacks 3", "currency->splinter->simulacrum;t2"], "SD", ["StackSizeBig"], "Large Stacks");
+            QuickUI([0.0, "Simulacrum Splinter Stacks 2", "currency->splinter->simulacrum;t3"], "SD", ["StackSizeBig"], "Medium Stacks");
+            QuickUI([0.0, "Simulacrum Splinter Stacks 1", "currency->splinter->simulacrum;t4"], "SD", ["StackSizeBig"], "Small Stacks");
             QuickUI([0.0, "Simulacrum Splinters", "currency->splinter->simulacrum;t5"], "SH", [], "Others");
         }
 

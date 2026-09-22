@@ -290,10 +290,10 @@ Chapter(){
         }
 
         Section("Verisium") {
-            QuickUI([0.0, "Verisium, massive stack", "verisium;massive"], "SH", ["StackSize"]);
-            QuickUI([0.0, "Verisium, huge stack", "verisium;huge"], "SH", ["StackSize"]);
-            QuickUI([0.0, "Verisium, large stack", "verisium;large"], "SH", ["StackSize"]);
-            QuickUI([0.0, "Verisium", "verisium;any"], "SH", ["StackSize"]);
+            QuickUI([0.0, "Verisium, massive stack", "verisium;massive"], "SH", ["StackSizeHuge"]);
+            QuickUI([0.0, "Verisium, huge stack", "verisium;huge"], "SH", ["StackSizeHuge"]);
+            QuickUI([0.0, "Verisium, large stack", "verisium;large"], "SH", ["StackSizeHuge"]);
+            QuickUI([0.0, "Verisium", "verisium;any"], "SH", ["StackSizeHuge"]);
         }
 
         Section ("Breach Crafting")
@@ -313,7 +313,7 @@ Chapter(){
     Section("Gold", "Gold_inventory_icon") {
         Description("Gold can be hidden and will still be auto-picked up if you walk next to it.");
 
-        Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text); }
+        Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSizeHuge", "AreaLevel"], $text); }
         Function GoldFuncR($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text); }
 
         Section("Campaign Exclusive Gold Rules")
