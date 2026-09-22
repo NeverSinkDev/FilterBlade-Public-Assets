@@ -677,13 +677,13 @@ Chapter()
         Section("Economy Based Crafting Bases", "buckler05.webp", "E") {
             Description("These bases are used to craft high value items and are quite valuable to crafters. The high level bases (82) require a combination of corrupted/irradiated/+1level areas to be found. The high tier bases commonly sell for 25ex each. This is an experimental section. Expect frequent updates here.");
 
-            QuickUI([0.0, "Eco-Based Lvl82 Crafting (high)", "endgame->normalcraft->economy;group1t1"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL82 bases (High Tier)", ["Gear", "OS"]);
-            QuickUI([0.0, "Eco-Based Lvl82 Crafting (low)", "endgame->normalcraft->economy;group1t2"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL82 bases (Common Tier)", ["Gear", "OS"]);
+            QuickUI([0.0, "Eco-Based Lvl82 Crafting (high)", "endgame->normalcraft->economy;group1t1"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL82 bases (High Tier)", ["GearPlusFlasks", "OS"]);
+            QuickUI([0.0, "Eco-Based Lvl82 Crafting (low)", "endgame->normalcraft->economy;group1t2"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL82 bases (Common Tier)", ["GearPlusFlasks", "OS"]);
 
-            QuickUI([0.0, "Eco-Based Lvl81 Crafting (high)", "endgame->normalcraft->economy;group2t1"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL81 bases (High Tier)", ["Gear", "OS"]);
-            QuickUI([0.0, "Eco-Based Lvl81 Crafting (low)", "endgame->normalcraft->economy;group2t2"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL81 bases (Common Tier)", ["Gear", "OS"]);
+            QuickUI([0.0, "Eco-Based Lvl81 Crafting (high)", "endgame->normalcraft->economy;group2t1"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL81 bases (High Tier)", ["GearPlusFlasks", "OS"]);
+            QuickUI([0.0, "Eco-Based Lvl81 Crafting (low)", "endgame->normalcraft->economy;group2t2"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL81 bases (Common Tier)", ["GearPlusFlasks", "OS"]);
 
-            QuickUI([0.0, "Eco-Based Lvl79 Crafting", "endgame->normalcraft->economy;group3t2"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL79 bases", ["Gear", "OS"]);
+            QuickUI([0.0, "Eco-Based Lvl79 Crafting", "endgame->normalcraft->economy;group3t2"], "SD", ["ItemLevel", "Rarity", "UnidentifiedItemTier"], "LVL79 bases", ["GearPlusFlasks", "OS"]);
         }
 
         Section("Rings, Amulets, Belts", "Amethyst_Ring_inventory_icon") {
