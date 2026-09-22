@@ -256,7 +256,7 @@ Chapter(){
 
             Section("Harvest Lifeforce", "Lifeforce")
             {
-                Function LifeForceFunc($s, $shd = "SHD", $text = "") { QuickUI($s, $shd, ["AreaLevel", "StackSizeHuge"], $text, ["Currency", "DO"]); }
+                Function LifeForceFunc($s, $shd = "SHD", $text = "") { QuickUI($s, $shd, ["AreaLevel", "StackSizeHuge", "B:Crystallised Lifeforce;-:Sacred Crystallised Lifeforce"], $text); }
 
                 LifeForceFunc([0.0, "Lifeforce Stacksize: S", "currency->harvest;t1lifeforce"], "SH");
                 LifeForceFunc([0.0, "Lifeforce Stacksize: A", "currency->harvest;t2lifeforce"], "SH");
