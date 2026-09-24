@@ -1091,18 +1091,18 @@ Chapter() {
             Search B2(1.0, "Rare belts T2", "rr->belts;t2") { }
             Search B3(1.0, "Rare belts T3", "rr->belts;t3") { }
 
-            QuickUI(S1, "SD", ["AreaLevel","ItemLevel"], "Rank A - Rings/Amulets");
-            QuickUI(B1, "SD", ["AreaLevel","ItemLevel"], "Rank A - Belts");
-            QuickUI(S2, "SD", ["AreaLevel","ItemLevel"], "Rank B - Rings/Amulets");
-            QuickUI(B2, "SD", ["AreaLevel","ItemLevel"], "Rank B - Belts");
-            QuickUI(S3, "SD", ["AreaLevel","ItemLevel"], "Rank C - Rings/Amulets");
-            QuickUI(B3, "SD", ["AreaLevel","ItemLevel"], "Rank C - Belts");
+            QuickUI(S1, "SD", ["AreaLevel","ItemLevel", "Corrupted?", "Identified?"], "Rank A - Rings/Amulets");
+            QuickUI(B1, "SD", ["AreaLevel","ItemLevel", "Corrupted?", "Identified?"], "Rank A - Belts");
+            QuickUI(S2, "SD", ["AreaLevel","ItemLevel", "Corrupted?", "Identified?"], "Rank B - Rings/Amulets");
+            QuickUI(B2, "SD", ["AreaLevel","ItemLevel", "Corrupted?", "Identified?"], "Rank B - Belts");
+            QuickUI(S3, "SD", ["AreaLevel","ItemLevel", "Corrupted?", "Identified?"], "Rank C - Rings/Amulets");
+            QuickUI(B3, "SD", ["AreaLevel","ItemLevel", "Corrupted?", "Identified?"], "Rank C - Belts");
 
             BaseTypeMatrix("EgRaresJewellery", "1.0", "ClassSplit", false, [[S1, B1], [S2, B2], [S3, B3]]);
         }
 
         Section("Weapons and Armours", "RoyalBurgonet") {
-            Function EgRaresArmours($s, $title) { QuickUI($s, "SH", ["BaseDefencePercentile?", "ItemLevel", "Quality?", "AreaLevel"], $title); }
+            Function EgRaresArmours($s, $title) { QuickUI($s, "SH", ["BaseDefencePercentile?", "ItemLevel", "Quality?", "AreaLevel", "Corrupted?", "Identified?"], $title); }
 
             Search T1Wep(3.0, "Tier 1 rares", "rr;t1") { }
             Search T2Wep(3.0, "Tier 2 rares", "rr;t2") { }
