@@ -140,7 +140,7 @@ Chapter(){
             }
 
             Section("Campaign Specific - Stacked Drops", "Transmut") {
-                Function CurrencyLevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
+                Function CurrencyLevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "O"]); }
 
                 CurrencyLevelingStackList([0.0, "Stacked Campaign Chance", "currency->levelingstacked;t2chance"], "SD", "Stacked Chance Orbs+");
                 CurrencyLevelingStackList([0.0, "Stacked Campaign Transmutations", "currency->levelingstacked;t3trans"], "SD", "Stacked Trans&Alt");
