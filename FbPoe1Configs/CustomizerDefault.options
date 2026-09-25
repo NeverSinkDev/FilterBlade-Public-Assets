@@ -66,8 +66,8 @@ Chapter(){
             ElementAdder_Tier("?CurrencyNewTiersHidden", null, true, "normalCurrency", "OH");
         }
 
-        Function CurrencyStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Currency", "DO"]); }
-        Function CurrencyStackListWithArea($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "DO"]); }
+        Function CurrencyStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize"], $text, ["Currency", "O"]); }
+        Function CurrencyStackListWithArea($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "SO"]); }
 
         Section("Currency Stacks", "Chaos")
         {
