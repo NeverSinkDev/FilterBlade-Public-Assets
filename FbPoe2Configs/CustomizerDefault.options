@@ -64,7 +64,7 @@ Chapter(){
 
         Section("Emotions (Delirium)", "distilledfear.webp", "E") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function EmotionsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Liquid ;C:Stackable Currency", "O"]); }
+            Function EmotionsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Stackable Currency;G:Emotion", "O"]); }
             TierListToolBar("deliriuminstill");
 
             EmotionsFunc([0.0, "Emotions Tier 1", "currency->emotions;s"], "SH", "S Tier");
@@ -80,7 +80,7 @@ Chapter(){
 
             // hide tier
             Conditional("?EmotionsNewTiersHidden") { }
-            ElementAdder_Tier("?EmotionsNewTiersHidden", null, true, "B:Liquid ;C:Stackable Currency", "OH");
+            ElementAdder_Tier("?EmotionsNewTiersHidden", null, true, "C:Stackable Currency;G:Emotion", "OH");
         }
 
         Section("Catalysts (Breach)", "breachcatalystchaos.webp", "E") {
@@ -150,7 +150,7 @@ Chapter(){
     Section("Socketables", "Iron_Rune_inventory_icon", "E") {
 
         // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-        Function SocketsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Augment", "O"]); }
+        Function SocketsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["NormalPoe2SocketAugments", "O"]); }
         TierListToolBar("Socketables");
 
         SocketsFunc([0.0, "Sockets S", "sockets->general;s"], "SH", "S Tier");
@@ -167,7 +167,7 @@ Chapter(){
 
         // hide tier
         Conditional("?SocketsNewTiersHidden") { }
-        ElementAdder_Tier("?SocketsNewTiersHidden", null, true, "C:Augment", "OH");
+        ElementAdder_Tier("?SocketsNewTiersHidden", null, true, "NormalPoe2SocketAugments", "OH");
     }
 
     Section("Gems", "Uncut_Skill_Gem_inventory_icon") {
