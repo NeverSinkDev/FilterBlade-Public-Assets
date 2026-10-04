@@ -692,64 +692,64 @@ Chapter()
 
             Section("RARES", "crimsonamulet.webp") {
                 Description("Rares with perfect itemlevel");
-                QuickUI(EgNRareT1, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(EgNRareT2, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(EgNRareT3, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(EgNRareT4, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
+                QuickUI(EgNRareT1, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(EgNRareT2, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(EgNRareT3, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(EgNRareT4, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
                 Description("Rares with lower itemlevel (can't roll all mods)");
-                QuickUI(NRareT1, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(NRareT2, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(NRareT3, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(NRareT4, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
+                QuickUI(NRareT1, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(NRareT2, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(NRareT3, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(NRareT4, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
             }
 
             Section("RARES: TIER 2+", "crimsonamulet.webp") {
                 Description("Rank A");
-                QuickUI(RareT4RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"], "Jewellery, Rare, Tier 4-5, Rank A");
-                QuickUI(RareT3RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(RareT2RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
+                QuickUI(RareT4RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"], "Jewellery, Rare, Tier 4-5, Rank A");
+                QuickUI(RareT3RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(RareT2RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
                 Description("Rank B");
-                QuickUI(RareT4RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"], "Jewellery, Rare, Tier 4-5, Rank B");
-                QuickUI(RareT3RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(RareT2RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
+                QuickUI(RareT4RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"], "Jewellery, Rare, Tier 4-5, Rank B");
+                QuickUI(RareT3RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(RareT2RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
                 Description("Rank C");
-                QuickUI(RareT4RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"], "Jewellery, Rare, Tier 4-5, Rank C");
-                QuickUI(RareT3RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(RareT2RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
+                QuickUI(RareT4RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"], "Jewellery, Rare, Tier 4-5, Rank C");
+                QuickUI(RareT3RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(RareT2RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
                 Description("Any rank high-tier item (only if not matched by rules above)");
-                QuickUI([0.0, "Rare Tiers, Remaining, Tier 5 Jewellery", "ut->rare;anyremaining5j"] "SH", ["ItemLevel", "AreaLevel", "UnidentifiedItemTier"], "Other T5 rares, any rank");
-                QuickUI([0.0, "Rare Tiers, Remaining, Tier 4 Jewellery", "ut->rare;anyremaining4j"] "SH", ["ItemLevel", "AreaLevel", "UnidentifiedItemTier"], "Other T4 rares, any rank");
+                QuickUI([0.0, "Rare Tiers, Remaining, Tier 5 Jewellery", "ut->rare;anyremaining5j"] "SH", ["ItemLevel", "AreaLevel", "UnidentifiedItemTier", "Corrupted?", "Identified?"], "Other T5 rares, any rank");
+                QuickUI([0.0, "Rare Tiers, Remaining, Tier 4 Jewellery", "ut->rare;anyremaining4j"] "SH", ["ItemLevel", "AreaLevel", "UnidentifiedItemTier", "Corrupted?", "Identified?"], "Other T4 rares, any rank");
             }
 
             Section("MAGICS: Tier 2+", "belt09.webp") {
                 Description("Rank A");
-                QuickUI(MagicT4RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"], "Jewellery, Magic, Tier 4-5, Rank A");
-                QuickUI(MagicT3RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(MagicT2RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
+                QuickUI(MagicT4RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"], "Jewellery, Magic, Tier 4-5, Rank A");
+                QuickUI(MagicT3RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(MagicT2RA, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
                 Description("Rank B");
-                QuickUI(MagicT4RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"], "Jewellery, Magic, Tier 4-5, Rank B");
-                QuickUI(MagicT3RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(MagicT2RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
+                QuickUI(MagicT4RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"], "Jewellery, Magic, Tier 4-5, Rank B");
+                QuickUI(MagicT3RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(MagicT2RB, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
                 Description("Rank C");
-                QuickUI(MagicT4RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"], "Jewellery, Magic, Tier 4-5, Rank C");
-                QuickUI(MagicT3RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(MagicT2RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
+                QuickUI(MagicT4RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"], "Jewellery, Magic, Tier 4-5, Rank C");
+                QuickUI(MagicT3RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(MagicT2RC, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
                 Description("Any rank high-tier item (only if not matched by rules above)");
-                QuickUI([0.0, "Magic Tiers, Remaining, Tier 5 Jewellery", "ut->magic;anyremaining5j"] "SH", ["ItemLevel", "AreaLevel", "UnidentifiedItemTier"], "Other T5 magics, any rank");
-                QuickUI([0.0, "Magic Tiers, Remaining, Tier 4 Jewellery", "ut->magic;anyremaining4j"] "SH", ["ItemLevel", "AreaLevel", "UnidentifiedItemTier"], "Other T4 magics, any rank");
+                QuickUI([0.0, "Magic Tiers, Remaining, Tier 5 Jewellery", "ut->magic;anyremaining5j"] "SH", ["ItemLevel", "AreaLevel", "UnidentifiedItemTier", "Corrupted?", "Identified?"], "Other T5 magics, any rank");
+                QuickUI([0.0, "Magic Tiers, Remaining, Tier 4 Jewellery", "ut->magic;anyremaining4j"] "SH", ["ItemLevel", "AreaLevel", "UnidentifiedItemTier", "Corrupted?", "Identified?"], "Other T4 magics, any rank");
             }
 
             Section("MAGIC+NORMAL: Endgame Visibility", "belt09.webp") {
                 Description("Normals/Magics with perfect itemlevel");
-                QuickUI(EgNNT1Ideal, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(EgNNT2Ideal, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(EgNNT3Ideal, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(EgNNT4Ideal, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
+                QuickUI(EgNNT1Ideal, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(EgNNT2Ideal, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(EgNNT3Ideal, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(EgNNT4Ideal, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
                 Description("Normals/Magics with lower itemlevel");
-                QuickUI(EgNNT1, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(EgNNT2, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(EgNNT3, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
-                QuickUI(EgNNT4, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier"]);
+                QuickUI(EgNNT1, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(EgNNT2, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(EgNNT3, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
+                QuickUI(EgNNT4, "SH", ["ItemLevel", "Rarity","UnidentifiedItemTier", "Corrupted?", "Identified?"]);
             }
 
             Search EgNNT1Ideal(0.0, "Endgame Jewellery Rank A, ideal", "endgame->jewellery;jt1ideallevel") { }
