@@ -1322,6 +1322,17 @@ Section("Misc.", "GoldenKey") {
             Conditional("?CUniversalCustomRuleD", ["c3.gear.chancing", "c0.start", "c4.gear.salvagable", "c7.jewels.generic.all", "c11.uniques.all", "c20.leveling.salvagable.all"], null, 4260) { Show; SetBorderColor 220 50 150 255; SetTextColor 220 50 150 255; SetFontSize 45; Identified True; Corrupted False; Rarity Normal Magic Rare; HasExplicitMod "of Many"; PlayAlertSound 1 300; PlayEffect Red; MinimapIcon 0 Red Hexagon; }
             ElementAdder_Tier("?CUniversalCustomRuleD", "CondFilterMod");
         }
+
+        Section("Add Custom Decorator", "Firefly")
+        {
+            Function CondDeco ($s, $shd = "SD", $title)
+            {
+                QuickUI($s, $shd, ["CondTargetSelection?", "RarityU", "ClassesWithRarity", "ItemLevel?", "Stats_Rarity?"], $title, ["rarityItems", "S?OA"]);
+            }
+
+            Conditional("?CUniversalDecorator", ["c3.gear.chancing", "c0.start", "c4.gear.salvagable", "c7.jewels.generic.all", "c11.uniques.all", "c20.leveling.salvagable.all"], null, 4300) { Show; SetBorderColor 200 0 0; ItemLevel >= 65; Rarity Normal Magic; SetFontSize 40; Continue; }
+            ElementAdder_Tier("?CUniversalDecorator", "CondDeco");
+        }
     }
 
     Section("Unique Special Cases") {
