@@ -511,7 +511,7 @@ Chapter(){
     Section("Gold", "Gold_inventory_icon") {
         Description("Gold is auto-picked-up! You will even pick up the gold if the rules are disabled.");
 
-        Function GoldFuncHuge($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSizeBig", "AreaLevel"], $text); }
+        Function GoldFuncHuge($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSizeHuge", "AreaLevel"], $text); }
         Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSizeBig", "AreaLevel"], $text); }
 
         GoldFuncHuge([0.0, "Settlers Gold - Huge Stack", "gold;stack3"], "SH", "Massive");

@@ -313,6 +313,7 @@ Chapter(){
     Section("Gold", "Gold_inventory_icon") {
         Description("Gold can be hidden and will still be auto-picked up if you walk next to it.");
 
+        Function GoldFuncH($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSizeHuge", "AreaLevel"], $text); }
         Function GoldFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSizeBig", "AreaLevel"], $text); }
         Function GoldFuncR($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text); }
 
@@ -326,14 +327,14 @@ Chapter(){
             GoldFunc([0.0, "Gold Pile: Medium (Campaign)", "gold;stack3lvl"], "SH", "Gold Pile: Medium (Campaign Acts 4+)");
         }
 
-        GoldFunc([0.0, "Gold Pile: Gigantic", "gold;stack3"], "SH");
-        GoldFunc([0.0, "Gold Pile: Large", "gold;stack2"], "SH");
+        GoldFuncH([0.0, "Gold Pile: Gigantic", "gold;stack3"], "SH");
+        GoldFuncH([0.0, "Gold Pile: Large", "gold;stack2"], "SH");
         GoldFunc([0.0, "Gold Pile: Medium (Endgame)", "gold;stack1"], "SH");
         GoldFuncR([0.1, "Gold Pile: Small", "gold;any"], "SH", "Gold Pile: Remaining");
 
         // new tiers
         Conditional("?GoldNewTier") { Show; BaseType == "Gold"; StackSize >= 1337; SetTextColor 200 200 0; SetBorderColor 200 200 0; }
-        ElementAdder_Tier("?GoldNewTier", "GoldFunc");
+        ElementAdder_Tier("?GoldNewTier", "GoldFuncH");
     }
 }
 
