@@ -412,7 +412,7 @@ Tablet,Breach Tablet,65,NMRU,1,1,,,,MiscMap,,5,,,,,,,,,Adds an Otherworldy Breac
 Tablet,Delirium Tablet,65,NMRU,1,1,,,,MiscMap,,5,,,,,,,,,Adds a Mirror of Delirium to a Map \n10 uses remaining,,,,,,,,
 Tablet,Overseer Tablet,65,NMRU,1,1,,,,MiscMap,,5,,,,,,,,,Empowers the Map Boss of a Map \n10 uses remaining,,,,,,,,
 Tablet,Ritual Tablet,65,NMRU,1,1,,,,MiscMap,,5,,,,,,,,,Adds Ritual Altars to a Map \n10 uses remaining,,,,,,,,
-Tablet,Irradiated Tablet,65,NMRU,1,1,,,,disa,,5,,,,,,,,,Adds Irradiated to a Map \n10 uses remaining,,,,,,,,
+Tablet,Irradiated Tablet,65,NMRU,1,1,,,,MiscMap,,5,,,,,,,,,Adds Irradiated to a Map \n10 uses remaining,,,,,,,,
 Tablet,Abyss Tablet,65,NMRU,1,1,,,,MiscMap,,5,,,,,,,,,Adds Abysses to a Map \n10 uses remaining,,,,,,,,
 Tablet,Temple Tablet,65,NMRU,1,1,,,,MiscMap,,5,,,,,,,,,Adds Vaal Beacons to a Map \n10 uses remaining,,,,,,,,
 Expedition Logbook,Expedition Logbook,65,N,1,1,,,,MiscMap,,5,,,,,,,,,,,,,,,,,
