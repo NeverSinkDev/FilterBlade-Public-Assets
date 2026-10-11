@@ -3159,7 +3159,7 @@ Stackable Currency,Telesia's Ducat,1,,1,1,,,,CotA,,,,,,,,,,,"Rerolls the room ty
 Stackable Currency,Rotmother's Ducat,1,,1,1,,,,CotA,,,,,,,,,,,Augments a rare belt with a Trap or Mine modifier,,,,,,,,
 Stackable Currency,Brinehook's Ducat,1,,1,1,,,,CotA,,,,,,,,,,,Crafts a random Pantheon Aspect Skill onto an item,,,,,,,,
 Stackable Currency,Katakohi's Ducat,1,,1,1,,,,CotA,,,,,,,,,,,"Etches over between 1 to 3 sockets on a pair of Gloves, granting random enchantments but rendering the sockets unusable",,,,,,,,
-Stackable Currency,Tzamoto's Ducat,1,,1,1,,,,CotA,,,,,,,,,,,Randomly either removes all [Intangibility] from an item or destroys it.,,,,,,,,
+Stackable Currency,Tzamoto's Ducat,1,,1,1,,,,CotA,,,,,,,,,,,Randomly either removes all Intangibility from an item or destroys it.,,,,,,,,
 Stackable Currency,Ukatoa's Ducat,1,,1,1,,,,CotA,,,,,,,,,,,"Replaces the implicit Modifier of a non-Unique Amulet with an Eldritch implicit, provided it does not already have one.",,,,,,,,
 Skill Gems,Mana-Infused Staff,16,,1,1,,,,CotA,,,,,,,,,,,,,,,,,,,
 Skill Gems,Pact of Beidat,24,,1,1,,,,CotA,,,,,,,,,,,,,,,,,,,
