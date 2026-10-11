@@ -1192,7 +1192,7 @@ Chapter() {
             QuickUI(S1, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel?", "DropLevel?", "Identified?", "Quality?"], "Rank B");
             QuickUI(S2, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel?", "DropLevel?", "Identified?", "Quality?"], "Rank C");
             QuickUI([0.0, "Fractured items, others", "exotic->fractured;fractothers"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel?", "DropLevel?", "Identified?", "Quality?"], "Rank D/Untiered");
-            BaseTypeMatrix("FracturedBases", "1.0", "Default", true, ["Life Flasks", "Mana Flasks", "Utility Flasks", "Jewels"], [[S0], [S1], [S2]]);
+            BaseTypeMatrix("FracturedBases", "1.0", "Default", true, ["Life Flasks", "Mana Flasks", "Utility Flasks", "Jewels", "Abyss Jewels"], [[S0], [S1], [S2]]);
         }
 
         Section("Memory-Stranded Items", "OrbofIntention")
