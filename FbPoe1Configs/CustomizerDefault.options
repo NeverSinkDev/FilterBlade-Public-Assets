@@ -387,7 +387,6 @@ Chapter(){
         Title("Predictable Tiers");
         UniqueList(S0, "S", "S Tier", "Tier 1 uniques are always an expensive and lucky find!");
         UniqueList(S1, "SH", "A Tier", "Tier 2 uniques are always fairly expensive, but can be even more valuable with some lucky rolls");
-        UniqueList(S8, "S", "A tier - Jewels", "The filter can't disintinguish between expensive and cheap unique jewels. All of them are treated the same way!");
 
         UniqueList(S3, "SH", "B+C Tier", "These are highly roll dependent. Keep your filter updated, especially if you want to hide this section!");
         UniqueList(S7, "SH", "D Tier - Early league Uniques:", "Expensive or interesting at the start of the new league, but lose value VERY fast! This tier stays empty, after the first days of the new league");
@@ -396,6 +395,7 @@ Chapter(){
 
         Title("High Variety Tiers");
 
+        UniqueList(S8, "S", "High Variety - Jewels", "The filter can't disintinguish between expensive and cheap unique jewels. However, unique uncorrupted jewels have high odds of being very valuable");
         UniqueList(SMulti, "S", "High Variety - Top Multi-Bases:", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a VERY small chance for these to be VERY expensive");
         UniqueList(S2, "SH", "High Variety - Multi-Bases:", "Multiple uniques share the same base: very valuable uniques AND cheap uniques. The filter can't say which one dropped. Always check these! There's a small chance for these to be expensive");
         UniqueList(S10, "SH", "High Variety - Boss-Drops:", "A potentially expensive unique version of this item drops ONLY from bosses! The world drop unique is fairly cheap! You can hide this tier, BUT remember to check the hidden items dropped by bosses!");
