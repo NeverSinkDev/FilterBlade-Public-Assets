@@ -952,9 +952,9 @@ Chapter()
                 Search SockT1(1.0, "Oversocketed Tier 1a", "exotic->exceptional;oversockt1s2") { }
                 Search SockT1(1.0, "Oversocketed Tier 1b", "exotic->exceptional;oversockt1s3") { }
 
-                QuickUI([0.0, "Chancing Overquality", "exotic->exceptional;chancingoverqual"], "SH", ["Quality"], "Chance Bases: Overquality", ["gearInclDisabled", "SO"]);
+                QuickUI([0.0, "Chancing Overquality", "exotic->exceptional;chancingoverqual"], "SH", ["Quality"], "Chance Bases: Overquality", ["rarityItems", "SO"]);
 
-                QuickUI(Chancing, "SD", [], "Chance Bases: Oversocket", ["gearInclDisabled", "SO"]);
+                QuickUI(Chancing, "SD", [], "Chance Bases: Oversocket", ["rarityItems", "SO"]);
 
                 Description("Items with exceptional amount of quality or sockets and potentially very valuable bases are highlighted by these rules");
                 QuickUI(SockT1, "SD", ["ItemLevel"], "Value-bases: Oversocket", ["gearInclDisabled", "SO"]);
@@ -1421,7 +1421,7 @@ Section("Misc.", "GoldenKey") {
             QuickUI([0.0, "Remaining Essences", "currency->essence;exhide"], "SH", [], "", [], "Remaining Essences, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
             QuickUI([0.0, "Remaining Socketables", "sockets->general;exhide"], "SH", [], "", [], "Remaining Runes, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
             QuickUI([0.0, "Remaining Waystones", "waystones;exhide"], "SH", [], "", [], "Remaining Maps, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
-            QuickUI([0.0, "Remaining Uncut Gems", "gems->uncut;exhide"], "SH", [], "Remaining Gems, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
+            QuickUI([0.0, "Remaining Uncut Gems", "gems->uncut;exhide"], "SH", [], "", [], "Remaining Gems, which are not matched by any of the above rules, probably due to unmet filtering requirements.");
         }
 
 
