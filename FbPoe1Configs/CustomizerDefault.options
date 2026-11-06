@@ -2428,7 +2428,7 @@ Chapter() {
             Section("Exotics: Foulborn Uniques", null, "E") {
                 Function FoulbornUniqueList($s, $shd = "SHD", $text, $descr = false) { QuickUI($s, $shd, [], $text, ["GearPlusFlasks", "O"], $descr); }
 
-                TierListToolBar();
+                TierListToolBar("uniques.foulborn.json");
 
                 FoulbornUniqueList([0.0, "Foulborn Uniques Tier 1", "uniques->foulborn;t1"], "S", "S-Tier");
                 FoulbornUniqueList([0.0, "Foulborn Uniques Tier 2", "uniques->foulborn;t2"], "S", "A-Tier");
