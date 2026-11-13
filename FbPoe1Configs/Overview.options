@@ -50,14 +50,13 @@ StyleSection("Gold", "You can find gold all throughout the game. It's picked up 
     SS_Item("S0");
 }
 
-SS_SectionTitle("Current League: 3.29 Allflame");
+SS_SectionTitle("Current League: 3.30 Covens of Umbra");
 
-StyleSection("Allflame League", "Dead Man's Sulphur, Ducats and all kind of precious items can be found on the seafloor!") {
-    Search S0("skip") { BaseType "Coral Reef Chart"; ItemLevel 70; Rarity Rare; }
-    Search S0("skip") { BaseType "Dead Man's Sulphur"; StackSize 50; }
-    Search S0("skip") { BaseType "Dead Man's Sulphur"; StackSize 250; }
-    Search S0("skip") { BaseType "Dead Man's Sulphur"; StackSize 1000; }
-    Search S0("skip") { BaseType "Brinehook's Ducat"; }
+StyleSection("Umbra League", "Use threads to modify maps, find fated items and wickerman pieces!") {
+    Search S0("skip") { BaseType "Abyss Thread" }
+    Search S0("skip") { BaseType "Coven Queen's Crown" }
+    Search S0("skip") { BaseType "Cursed Poppet"; }
+    Search S0("skip") { BaseType "Ruby Ring"; Fated True; ItemLevel 75; Rarity Rare; }
     SS_Item("S0");
 }
 
