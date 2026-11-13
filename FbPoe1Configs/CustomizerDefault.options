@@ -509,7 +509,7 @@ Chapter(){
         ElementAdder_Tier("?GoldNewTier", "GoldFuncHuge");
     }
 
-    Section("Current League: Covens of Umbra") {
+    Section("Current League: Covens of Umbra", "VoltaicSkull") {
         Section("Viscera", "Talisman") {
             Function VisceraFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Viscera", "O"]); }
             TierListToolBar();
