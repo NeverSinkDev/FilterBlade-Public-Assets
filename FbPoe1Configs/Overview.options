@@ -449,7 +449,6 @@ StyleSection("DELVE FOSSILS", "Fossils are originally found in the Azurite mine 
 
 StyleSection("Astrolabes", "Astrolabes are a new way to juice up maps in the endgame. These are found after defeating the incarnations of Dread, Neglect and Fear.") {
     Search S0("skip") { BaseType "Nameless Astrolabe"; }
-    Search S0("skip") { BaseType "Templar Astrolabe"; }
     SS_Item("S0");
 }
 
