@@ -127,7 +127,7 @@ Chapter(){
                 LevelingStackList([0.0, "Currency during leveling 1", "currency->leveling;t3trans"], "SH", "Campaign: Trans&alts");
 
                 Title("Campaign: Useful Campaign Currencies");
-                LevelingStackList([0.0, "Currency during leveling 0", "currency->leveling;t1binding"], "SH", "Campaign: Binding Orbs");
+//                LevelingStackList([0.0, "Currency during leveling 0", "currency->leveling;t1binding"], "SH", "Campaign: Binding Orbs");
                 QuickUI([0.0, "Essences while leveling", "currency->leveling;essences"], "SH", ["AreaLevel"], "Campaign: Essences", ["essences"]);
 
                 LevelingStackList([0.0, "Currency during leveling 4 misc", "currency->leveling;t4misc"], "SH", "Campaign: Quality & Chromatics");
@@ -555,6 +555,7 @@ Chapter(){
             }
             Section("Untiered")
             {
+            UnidTierRule([0.0, "Unid Tier: Any base, special classes", "gear->tiered;specialclasses"], "Any Item - Special classes");
             UnidTierRule([0.0, "Unid Tier: Any base, tier 5", "gear->tiered;any5"], "Any Item - Item tier 5");
             UnidTierRule([0.0, "Unid Tier: Any base, tier 4", "gear->tiered;any4"], "Any Item - Item tier 4");
             UnidTierRule([0.0, "Unid Tier: Any base, tier 3", "gear->tiered;any3"], "Any Item - Item tier 3");
