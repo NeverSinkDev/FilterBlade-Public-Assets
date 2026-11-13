@@ -589,54 +589,6 @@ Chapter(){
         }
     }
 
-    Section("Previous League: Curse of the Allflame", "RotmothersDucat") {
-
-        Section("Ducats") {
-            // generated via manualUtil_GenerateOptFileTierListCode(); util function!
-            Function AllflameDucatsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Stackable Currency;B:Ducat", "O"]); }
-            TierListToolBar();
-
-            AllflameDucatsFunc([0.0, "Ducats S Tier", "currency->ducats;t1"], "SH", "S Tier");
-            AllflameDucatsFunc([0.0, "Ducats A Tier", "currency->ducats;t2"], "SH", "A Tier");
-            AllflameDucatsFunc([0.0, "Ducats B Tier", "currency->ducats;t3"], "SH", "B Tier");
-            AllflameDucatsFunc([0.0, "Ducats C Tier", "currency->ducats;t4"], "SH", "C Tier");
-            AllflameDucatsFunc([0.0, "Ducats D Tier", "currency->ducats;t5"], "SH", "D Tier");
-
-            QuickUI([1.0, "Remaining Ducats", "currency->ducats;exhide"], "SH", [], "", [], "Remaining Ducats that were not caught be the rules above due to additional requirements.");
-
-            // new tiers
-            Conditional("?AllflameDucatsNewTier") { }
-            ElementAdder_Tier("?AllflameDucatsNewTier", "AllflameDucatsFunc");
-
-            // hide tier
-            Conditional("?AllflameDucatsNewTiersHidden") { }
-            ElementAdder_Tier("?AllflameDucatsNewTiersHidden", null, true, "C:Stackable Currency;B:Ducat", "OH");
-        }
-
-        Section("Sulphur") {
-            QuickUI([0.0, "Dead Man's Sulphur 1", "currency->deadmansulphur;t1"], "SH", ["StackSizeHuge"], "Gigantic Stack");
-            QuickUI([0.0, "Dead Man's Sulphur 2", "currency->deadmansulphur;t2"], "SH", ["StackSizeHuge"], "Huge Stack");
-            QuickUI([0.0, "Dead Man's Sulphur 3", "currency->deadmansulphur;t3"], "SH", ["StackSizeBig"], "Large Stack");
-            QuickUI([0.0, "Dead Man's Sulphur 4", "currency->deadmansulphur;t4"], "SH", ["StackSizeBig"], "Medium Stack");
-            QuickUI([0.0, "Dead Man's Sulphur 5", "currency->deadmansulphur;t5"], "SH", ["StackSizeBig"], "Small Stack");
-            QuickUI([0.0, "Dead Man's Sulphur 6", "currency->deadmansulphur;t6"], "SH", ["StackSizeBig"], "Tiny Stack");
-        }
-
-        Section("Charts") {
-            Function AllflameChartsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["C:Chart", "Rarity?", "ItemLevel?", "AreaLevel?", "Corrupted?"], $text); }
-
-            QuickUI([0.0, "Allflame Charts", "charts;any"], "SH");
-
-            Conditional("?AllFlameChartsNewTier") {  }
-            ElementAdder_Tier("?AllFlameChartsNewTier", "AllflameChartsFunc");
-        }
-
-        Section("Other") {
-            QuickUI([0.0, "Enshrouded Uniques", "enshrouded;enshroudedgear"], "SH", []);
-            QuickUI([0.0, "Vestige Uniques", "uniques;vestige"], "SH", []);
-        }
-    }
-
 }
 
 Chapter() {
@@ -2145,6 +2097,54 @@ Chapter() {
             Conditional("?CorpsesNewTiersHidden") { }
             ElementAdder_Tier("?CorpsesNewTiersHidden", null, true, "C:Corpses", "OH");
         }
+
+            Section("Curse of the Allflame", "RotmothersDucat") {
+
+                Section("Ducats") {
+                    // generated via manualUtil_GenerateOptFileTierListCode(); util function!
+                    Function AllflameDucatsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Stackable Currency;B:Ducat", "O"]); }
+                    TierListToolBar();
+
+                    AllflameDucatsFunc([0.0, "Ducats S Tier", "currency->ducats;t1"], "SH", "S Tier");
+                    AllflameDucatsFunc([0.0, "Ducats A Tier", "currency->ducats;t2"], "SH", "A Tier");
+                    AllflameDucatsFunc([0.0, "Ducats B Tier", "currency->ducats;t3"], "SH", "B Tier");
+                    AllflameDucatsFunc([0.0, "Ducats C Tier", "currency->ducats;t4"], "SH", "C Tier");
+                    AllflameDucatsFunc([0.0, "Ducats D Tier", "currency->ducats;t5"], "SH", "D Tier");
+
+                    QuickUI([1.0, "Remaining Ducats", "currency->ducats;exhide"], "SH", [], "", [], "Remaining Ducats that were not caught be the rules above due to additional requirements.");
+
+                    // new tiers
+                    Conditional("?AllflameDucatsNewTier") { }
+                    ElementAdder_Tier("?AllflameDucatsNewTier", "AllflameDucatsFunc");
+
+                    // hide tier
+                    Conditional("?AllflameDucatsNewTiersHidden") { }
+                    ElementAdder_Tier("?AllflameDucatsNewTiersHidden", null, true, "C:Stackable Currency;B:Ducat", "OH");
+                }
+
+                Section("Sulphur") {
+                    QuickUI([0.0, "Dead Man's Sulphur 1", "currency->deadmansulphur;t1"], "SH", ["StackSizeHuge"], "Gigantic Stack");
+                    QuickUI([0.0, "Dead Man's Sulphur 2", "currency->deadmansulphur;t2"], "SH", ["StackSizeHuge"], "Huge Stack");
+                    QuickUI([0.0, "Dead Man's Sulphur 3", "currency->deadmansulphur;t3"], "SH", ["StackSizeBig"], "Large Stack");
+                    QuickUI([0.0, "Dead Man's Sulphur 4", "currency->deadmansulphur;t4"], "SH", ["StackSizeBig"], "Medium Stack");
+                    QuickUI([0.0, "Dead Man's Sulphur 5", "currency->deadmansulphur;t5"], "SH", ["StackSizeBig"], "Small Stack");
+                    QuickUI([0.0, "Dead Man's Sulphur 6", "currency->deadmansulphur;t6"], "SH", ["StackSizeBig"], "Tiny Stack");
+                }
+
+                Section("Charts") {
+                    Function AllflameChartsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["C:Chart", "Rarity?", "ItemLevel?", "AreaLevel?", "Corrupted?"], $text); }
+
+                    QuickUI([0.0, "Allflame Charts", "charts;any"], "SH");
+
+                    Conditional("?AllFlameChartsNewTier") {  }
+                    ElementAdder_Tier("?AllFlameChartsNewTier", "AllflameChartsFunc");
+                }
+
+                Section("Other") {
+                    QuickUI([0.0, "Enshrouded Uniques", "enshrouded;enshroudedgear"], "SH", []);
+                    QuickUI([0.0, "Vestige Uniques", "uniques;vestige"], "SH", []);
+                }
+            }
 
         Title("Special Properties");
 
