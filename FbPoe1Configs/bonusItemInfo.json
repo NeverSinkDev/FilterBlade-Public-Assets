@@ -305,21 +305,25 @@
 				"Tainted Catalyst": {
 					"tags": ["Catalyst", "LeagueDrop"]
 				},
+				"Dextral Catalyst": {
+					"text": "Obtained from Ultimatum found in a Mirage",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
+				"Sinistral Catalyst": {
+					"text": "Obtained from Ultimatum found in a Mirage",
+					"tags": ["Catalyst", "LeagueDrop"]
+				},
 
 				"Burial Medallion": {
-					"text": "Brought to Dannig to refresh his vendor inventory",
 					"tags": ["Expedition", "LeagueDrop"]
 				},
 				"Exotic Coinage": {
-					"text": "Brought to Tujen to refresh his vendor inventory",
 					"tags": ["Expedition", "LeagueDrop"]
 				},
 				"Astragali": {
-					"text": "Brought to Gwennen to refresh her vendor inventory",
 					"tags": ["Expedition", "LeagueDrop"]
 				},
 				"Scrap Metal": {
-					"text": "Brought to Rog to refresh his vendor inventory",
 					"tags": ["Expedition", "LeagueDrop"]
 				},
 
@@ -429,9 +433,6 @@
 				"Orb of Alchemy": {
 					"tags": ["Generic"]
 				},
-				"Orb of Binding": {
-					"tags": ["Generic"]
-				},
 				"Jeweller's Orb": {
 					"tags": ["Generic"]
 				},
@@ -472,40 +473,23 @@
 					"tags": ["Generic"]
 				},
 				"Mirror Shard": {
-					"text": "A stack of 20 shards becomes a Mirror of Kalandra",
 					"tags": ["Generic"]
 				},
 				"Fracturing Shard": {
-					"text": "A stack of 20 shards becomes a Fracturing Orb",
 					"tags": ["Generic"]
 				},
 				"Alchemy Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Alchemy",
 					"tags": ["Generic"]
 				},
 				"Alteration Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Alteration",
 					"tags": ["Generic"]
 				},
 				"Transmutation Shard": {
-					"text": "A stack of 20 shards becomes an Orb of Transmutation",
 					"tags": ["Generic"]
 				},
 				"Stacked Deck": {
 					"text": "Can be used to gain a random divination card",
 					"tags": ["Generic"]
-				},
-
-				"Eternal Orb": {
-					"tags": ["RuthlessOnly"]
-				},
-				"Veiled Scarab": {
-					"text": "Can be used to gain a random scarab",
-					"tags": ["StandardOnly"]
-				},
-				"Albino Rhoa Feather": {
-					"text": "Redacted",
-					"tags": ["Meme"]
 				},
 
 				"Foulborn Orb of Augmentation": {
@@ -542,16 +526,10 @@
 				"Maven's Chisel of Proliferation": {
 					"tags": ["BossDrop"]
 				},
-				"Maven's Chisel of Scarabs": {
+				"Maven's Chisel of Threads": {
 					"tags": ["BossDrop"]
 				},
 
-				"Templar Astrolabe": {
-					"tags": ["BossDrop"]
-				},
-				"Fruiting Astrolabe": {
-					"tags": ["BossDrop"]
-				},
 				"Lightless Astrolabe": {
 					"tags": ["BossDrop"]
 				},
@@ -567,13 +545,19 @@
 				"Chaotic Astrolabe": {
 					"tags": ["BossDrop"]
 				},
-				"Deceptive Astrolabe": {
-					"tags": ["BossDrop"]
-				},
 				"Timeless Astrolabe": {
 					"tags": ["BossDrop"]
 				},
 				"Runic Astrolabe": {
+					"tags": ["BossDrop"]
+				},
+				"Feral Astrolabe": {
+					"tags": ["BossDrop"]
+				},
+				"Immortal Astrolabe": {
+					"tags": ["BossDrop"]
+				},
+				"Royal Astrolabe": {
 					"tags": ["BossDrop"]
 				},
 
@@ -610,14 +594,42 @@
 					"text": "Drops from Maraketh Legion General outside of the Domain of Timeless Conflict",
 					"tags": ["LeagueDrop"]
 				},
+				"Afarud Enshrouding Crystal": {
+					"text": "Drops from Afarud General in Miraged Legion encounters",
+					"tags": ["LeagueDrop"]
+				},
+
+				"Refracting Fog": {
+					"text": "Drops from Delirium Bosses",
+					"tags": ["LeagueDrop"]
+				},
+
+				"Soul Core of Instability": {
+					"text": "Drops from Atziri",
+					"tags": ["LeagueDrop"]
+				},
+				"Soul Core of Finesse": {
+					"text": "Drops from Atziri",
+					"tags": ["LeagueDrop"]
+				},
+				"Soul Core of Intellect": {
+					"text": "Drops from Atziri",
+					"tags": ["LeagueDrop"]
+				},
+				"Soul Core of Might": {
+					"text": "Drops from Atziri",
+					"tags": ["LeagueDrop"]
+				},
+
+				"Merrick's Ducat": {
+					"tags": ["LeagueDrop"]
+				},
 
 				"Message in a Bottle": {
-					"text": "Obtained through the Curse of the Allflame league mechanic",
 					"tags": ["LeagueDrop"]
 				},
 
 				"Ritual Splinter": {
-					"text": "Combine 100 Splinters to create a Ritual Vessel",
 					"tags": ["LeagueDrop"]
 				},
 				"Ritual Vessel": {
@@ -625,8 +637,24 @@
 					"tags": ["LeagueDrop"]
 				},
 				"Crescent Splinter": {
-					"text": "Combine 10 Crescent Splinters to create The Maven's Writ",
 					"tags": ["BossDrop"]
+				},
+
+
+				"Eternal Orb": {
+					"tags": ["RuthlessOnly"]
+				},
+				"Frayed Thread": {
+					"text": "Can be used or vendored to grant a random Thread",
+					"tags": ["StandardOnly"]
+				},
+				"Cryptic Astrolabe": {
+					"text": "Can be used or vendored to grant a random Astrolabe",
+					"tags": ["StandardOnly"]
+				},
+				"Albino Rhoa Feather": {
+					"text": "Redacted",
+					"tags": ["Meme"]
 				}
 
 				
@@ -654,12 +682,6 @@
 			"items": {
 				"Prismatic Oil": {
 					"text": "Can be used to anoint special Passive Skills not on the Passive Skill Tree otherwise."
-				},
-				"Tainted Oil": {
-					"text": "Can be combined with other oils to enchant corrupted rings, amulets or blighted maps."
-				},
-				"Reflective Oil": {
-					"text": "Can be combined with other oils to enchant mirrored rings, amulets or blighted maps."
 				},
 				"Clear Oil": {
 					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, 12% reduced Monster Movement Speed"
@@ -695,7 +717,7 @@
 					"text": "Anoints ring/amulet. Modifies blighted maps: 6% increased Pack size, Varieties of Items contained in 18 Blight Chests are Lucky"
 				},
 				"Silver Oil": {
-					"text": "Anoints ring/amulet. Modifies blighted maps:  6% increased Pack size, 80% increased Quantity of Items"
+					"text": "Anoints ring/amulet. Modifies blighted maps:  6% increased Pack size, 80% increased Rarity of Items"
 				},
 				"Golden Oil": {
 					"text": "Anoints ring/amulet. Modifies blighted maps:  6% increased Pack size, 30% chance for Blight Chests to contain an additional Reward"
@@ -1913,32 +1935,6 @@
 
 		"Fragment": {
 			"items": {
-				"Sacrifice at Dusk": {
-					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
-				},
-				"Sacrifice at Midnight": {
-					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
-				},
-				"Sacrifice at Dawn": {
-					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
-				},
-				"Sacrifice at Noon": {
-					"text": "Fragment for the Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
-				},	
-
-				"Mortal Grief": {
-					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
-				},
-				"Mortal Rage": {
-					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
-				},
-				"Mortal Ignorance": {
-					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
-				},
-				"Mortal Hope": {
-					"text": "Fragment for the Uber Atziri, Queen of the Vaal fight<br>If used alongside a map adds a Vaal Side Area and Item Quantity bonus"
-				},
-
 				"Fragment of the Chimera": {
 					"text": "Fragment for The Shaper fight<br>Drops from Guardian of the Chimera"
 				},
@@ -2006,34 +2002,34 @@
 				},
 
 				"Reality Fragment": {
-					"text": "Fragment for the Uber Maven fight<br>Drops from Nightmare Map bosses"
+					"text": "Drops from Nightmare of the Depraved Trinity"
 				},
 				"Awakening Fragment": {
-					"text": "Fragment for the Uber Sirus fight<br>Drops from Nightmare Map bosses"
+					"text": "Drops from Nightmare of the Depraved Trinity"
 				},
 				"Blazing Fragment": {
-					"text": "Fragment for the Uber Exarch fight<br>Drops from Nightmare Map bosses"
+					"text": "Drops from Nightmare of Catarina"
 				},
 				"Devouring Fragment": {
-					"text": "Fragment for the Uber Eater fight<br>Drops from Nightmare Map bosses"
+					"text": "Drops from Nightmare of Catarina"
 				},
 				"Cosmic Fragment": {
-					"text": "Fragment for the Uber Shaper fight<br>Drops from Nightmare Map bosses"
+					"text": "Drops from Nightmare of Uhtred"
 				},
 				"Decaying Fragment": {
-					"text": "Fragment for the Uber Uber Elder fight<br>Drops from Nightmare Map bosses"
+					"text": "Drops from Nightmare of the Unbreakable"
 				},
 				"Synthesising Fragment": {
-					"text": "Fragment for the Uber Cortex fight<br>Drops from Nightmare Map bosses"
+					"text": "Drops from Nightmare of the Unbreakable or Nightmare of Uhtred"
 				},
 				"Lonely Fragment": {
-					"text": "Fragment for the Uber Incarnation of Neglect fight<br>Drops from Nightmare Map bosses"
+					"text": "Drops from Nightmare of Lycia"
 				},
 				"Reverent Fragment": {
-					"text": "Fragment for the Uber Incarnation of Dread fight<br>Drops from Nightmare Map bosses"
+					"text": "Drops from Nightmare of Lycia"
 				},
 				"Traumatic Fragment": {
-					"text": "Fragment for the Uber Incarnation of Fear fight<br>Drops from Nightmare Map bosses"
+					"text": "Drops from Nightmare of Lycia"
 				},
 
 				"Sacred Blossom": {
@@ -2066,6 +2062,10 @@
 					"text": "Used to unlock additional Pantheon bonuses"
 				},
 
+				"Royal Visage": {
+					"text": "Drops from Atziri"
+				},
+
 				"Blood-filled Vessel": {
 					"text": "Adds the monsters stored from a previous Ritual Altar to a Ritual Altar in the map"
 				},
@@ -2088,6 +2088,10 @@
 
 				"Hivebrain Gland": {
 					"text": "Opens portals to a Hive Colony"
+				},
+
+				"The Black Barya": {
+					"text": "Opens Saresh, of the Weeping Black fight"
 				},
 
 				"Polaric Invitation": {
@@ -2118,32 +2122,41 @@
 			}
 		},
 
-		"Scarab": {
+		"allflames": {
 			"items": {
 				"Allflame Ember of Kulemak": {
 					"text": "Drops from Catarina, Master of Undeath"
 				},
-
-				"Allflame Ember of Flesh": {
-					"text": "Obtained through the Curse of the Allflame league mechanic"
+				"Allflame Ember of Propagation": {
+					"text": "Drops from Catarina, Master of Undeath"
 				},
 				"Allflame Ember of the Ethereal": {
-					"text": "Obtained through the Curse of the Allflame league mechanic"
+					"text": "Drops from Catarina, Master of Undeath"
+				},
+
+				"Allflame Ember of Flesh": {
+					"text": "Obtained from Betrayal Safehouses"
 				},
 				"Allflame Ember of the Gilded": {
-					"text": "Obtained through the Curse of the Allflame league mechanic"
+					"text": "Obtained from Betrayal Safehouses"
 				},
 				"Allflame Ember of the Wildwood": {
-					"text": "Obtained through the Curse of the Allflame league mechanic"
+					"text": "Obtained from Betrayal Safehouses"
 				},
 				"Allflame Ember of Toads": {
-					"text": "Obtained through the Curse of the Allflame league mechanic"
-				},		
-				"Allflame Ember of Propagation": {
-					"text": "Obtained through the Curse of the Allflame league mechanic"
+					"text": "Obtained from Betrayal Safehouses"
 				},
 				"Allflame Ember of Resplendence": {
-					"text": "Obtained through the Curse of the Allflame league mechanic"
+					"text": "Obtained from Betrayal Safehouses"
+				},
+				"Allflame Ember of the Cloister": {
+					"text": "Obtained from Betrayal Safehouses"
+				},		
+				"Allflame Ember of the Divine": {
+					"text": "Obtained from Betrayal Safehouses"
+				},
+				"Allflame Ember of the Multitude": {
+					"text": "Obtained from Betrayal Safehouses"
 				}
 			}
 		},
@@ -2294,15 +2307,11 @@
 				"Pact of Lycia": {
 					"text": "Drops from Lycia"
 				},
-				"Coursing Currents Support": {
-					"text": "Drops from Velka, the Tide Witch"
-				},
 				"Crystalfall Support": {
 					"text": "Drops from Zorath, Vile Assembled"
 				},
-
 				"Transfusion Support": {
-					"text": "Drops only on Standard from Saresh"
+					"text": "Drops from Saresh"
 				}
 			}
 		},
@@ -2445,12 +2454,12 @@
 					"text": null,
 					"items": {
 						"Fate of the Vaal": {
-							"text": "Does not drop. Created with a Vial.",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -8
 						},
 						"Story of the Vaal": {
 							"text": "Drops from the Crucible of Flame in the Temple of Atzoatl.",
-							"priority": -3
+							"priority": -8
 						}
 					}
 				},
@@ -2663,12 +2672,12 @@
 					"text": null,
 					"items": {
 						"Soul Ripper": {
-							"text": "Does not drop. Created with a Vial (Alva Temple).",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -8
 						},
 						"Soul Catcher": {
-							"text": "Drops from The Vaal Omnitect (Alva Temple).",
-							"priority": -5
+							"text": "Drops in the Museum of Artefacts Temple of Atzoatl room",
+							"priority": -8
 						}
 					}
 				},
@@ -2718,19 +2727,6 @@
 						"Vessel of Vinktar": {
 							"text": "Drops from The Vinktar Square.",
 							"priority": -5
-						},
-						"Stormblood": {
-							"text": "Drops from Velka in Allflame",
-							"priority": -3
-						}
-					}
-				},
-				"Sapphire Flask": {
-					"text": null,
-					"items": {
-						"Stormblood": {
-							"text": "Drops from Velka in Allflame",
-							"priority": -3
 						}
 					}
 				},
@@ -2796,12 +2792,12 @@
 					"text": null,
 					"items": {
 						"Apep's Supremacy": {
-							"text": "Does not drop. Created with a Vial (Alva Temple).",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -8
 						},
 						"Apep's Slumber": {
 							"text": "Drops from the Cultivar Chamber in the Temple of Atzoatl.",
-							"priority": -3
+							"priority": -8
 						},
 						"Esh's Visage": {
 							"text": "Grown on the Genesis Tree",
@@ -2926,12 +2922,12 @@
 							"priority": -5
 						},
 						"Mask of the Stitched Demon": {
-							"text": "Does not drop. Created with a Vial (Alva Temple).",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -8
 						},
 						"Mask of the Spirit Drinker": {
 							"text": "Drops from the Sanctum of Immortality in the Temple of Atzoatl.",
-							"priority": -3
+							"priority": -8
 						},
 						"Mask of the Tribunal": {
 							"text": "Drops from Uber Cortex.",
@@ -2986,12 +2982,12 @@
 					"text": null,
 					"items": {
 						"Slavedriver's Hand": {
-							"text": "Does not drop. Created with a Vial.",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -8
 						},
 						"Architect's Hand": {
 							"text": "Drops from the Defense Research Lab in the Temple of Atzoatl.",
-							"priority": -3
+							"priority": -8
 						},
 						"Abhorrent Interrogation": {
 							"text": "Drops from Oshabi (Harvest Boss).",
@@ -3012,12 +3008,12 @@
 					"text": null,
 					"items": {
 						"Omeyocan": {
-							"text": "Does not drop. Created with a Vial (Alva Temple).",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -8
 						},
 						"Dance of the Offered": {
 							"text": "Drops from the Lightning Workshop in the Temple of Atzoatl.",
-							"priority": -3
+							"priority": -8
 						}
 					}
 				},
@@ -3566,8 +3562,8 @@
 							"priority": -5
 						},
 						"Screams of the Desiccated": {
-							"text": "Drops only on Standard from Saresh",
-							"priority": -10
+							"text": "Drops from Saresh",
+							"priority": -5
 						}
 					}
 				},
@@ -3575,12 +3571,12 @@
 					"text": null,
 					"items": {
 						"Zerphi's Heart": {
-							"text": "Does not drop. Created with a Vial.",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -8
 						},
 						"Sacrificial Heart": {
-							"text": "Drops from The Vaal Omnitect.",
-							"priority": -5
+							"text": "Drops in the Glittering Halls Temple of Atzoatl room",
+							"priority": -8
 						}
 					}
 				},
@@ -3707,10 +3703,6 @@
 							"text": "Does not drop. Created with a vendor recipe.",
 							"priority": -10
 						},
-						"Pearl of Tsoatha": {
-							"text": "Drops from Velka in Allflame",
-							"priority": -3
-						},
 						"Zana's Ingenuity": {
 							"text": "Drops from Uber Sirus",
 							"priority": -5
@@ -3791,6 +3783,14 @@
 				"Lapis Amulet": {
 					"text": null,
 					"items": {
+						"Khatal's Weeping": {
+							"text": "Drops from Astral monsters in Mirages",
+							"priority": -3
+						},
+						"Khatal's Geyser": {
+							"text": "Drops from Astral monsters in Mirages",
+							"priority": -3
+						},
 						"Choir of the Storm": {
 							"text": "Grown on the Genesis Tree",
 							"priority": -8
@@ -3837,13 +3837,21 @@
 				"Chain Belt": {
 					"text": null,
 					"items": {
+						"Saresh's Darkness": {
+							"text": "Drops from Astral monsters in Mirages",
+							"priority": -3
+						},
+						"Solerai's Radiance": {
+							"text": "Drops from Astral monsters in Mirages",
+							"priority": -3
+						},
 						"Coward's Legacy": {
-							"text": "Does not drop. Created with a Vial.",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -8
 						},
 						"Coward's Chains": {
 							"text": "Drops from the Hybridization Chamber in the Temple of Atzoatl.",
-							"priority": -3
+							"priority": -8
 						},
 						"Chains of Emancipation": {
 							"text": "Drops from Friedrich Tarollo (Unique Heist Contact Boss).",
@@ -4243,8 +4251,8 @@
 							"priority": -8
 						},
 						"The Broken Elegy": {
-							"text": "Drops only on Standard from Saresh",
-							"priority": -10
+							"text": "Drops from Saresh",
+							"priority": -5
 						}
 					}
 				},
@@ -4420,10 +4428,6 @@
 						"The Burden of Shadows": {
 							"text": "Drops from the King in the Mists",
 							"priority": -5
-						},
-						"The Crustacean's Call": {
-							"text": "Drops from Velka in Allflame",
-							"priority": -3
 						}
 					}
 				},
@@ -4669,10 +4673,6 @@
 						"Bitter Instinct": {
 							"text": "Drops from the Uber Incarnation of Neglect",
 							"priority": -5
-						},
-						"Seablister": {
-							"text": "Drops from Velka in Allflame",
-							"priority": -3
 						}
 					}
 				},
@@ -4779,8 +4779,8 @@
 					"text": null,
 					"items": {
 						"The Sands of Time": {
-							"text": "Drops only on Standard from Saresh",
-							"priority": -10
+							"text": "Drops from Saresh",
+							"priority": -5
 						}
 					}
 				},
@@ -4848,24 +4848,6 @@
 						}
 					}
 				},
-				"Pearlescent Amulet": {
-					"text": null,
-					"items": {
-						"Rotmother's Mutiny": {
-							"text": "Drops from Treasure Clams in Allflame",
-							"priority": -3
-						}
-					}
-				},
-				"Ancient Spirit Shield": {
-					"text": null,
-					"items": {
-						"The Draugur's Lantern": {
-							"text": "Drops from the Filthscrabble in Allflame",
-							"priority": -3
-						}
-					}
-				},
 				"Fleshripper": {
 					"text": null,
 					"items": {
@@ -4875,15 +4857,64 @@
 						}
 					}
 				},
-				"Ghostflame Blade": {
+				"Coronal Maul": {
 					"text": null,
 					"items": {
-						"Dread Captain's Cutlass": {
-							"text": "Drops from Captainsbane",
+						"The Desecrated Chalice": {
+							"text": "Drops from Astral monsters in Mirages",
+							"priority": -3
+						},
+						"The Sacred Chalice": {
+							"text": "Drops from Astral monsters in Mirages",
 							"priority": -3
 						}
 					}
 				},
+				"Maraketh Bow": {
+					"text": null,
+					"items": {
+						"The Bane of Hope": {
+							"text": "Drops from Astral monsters in Mirages",
+							"priority": -3
+						},
+						"The Flame of Hope": {
+							"text": "Drops from Astral monsters in Mirages",
+							"priority": -3
+						}
+					}
+				},
+				"Exquisite Blade": {
+					"text": null,
+					"items": {
+						"Fleshrender": {
+							"text": "Drops from Astral monsters in Mirages",
+							"priority": -3
+						},
+						"Skysunder": {
+							"text": "Drops from Astral monsters in Mirages",
+							"priority": -3
+						}
+					}
+				},
+				"Basalt Flask": {
+					"text": null,
+					"items": {
+						"Dreadmaidens' Sacrament": {
+							"text": "Obtained from Coven league mechanic",
+							"priority": -5
+						}
+					}
+				},
+				"Eye Gouger": {
+					"text": null,
+					"items": {
+						"The Covetous Dark": {
+							"text": "Obtained from Coven league mechanic",
+							"priority": -5
+						}
+					}
+				},
+
 				"Prismatic Jewel": {
 					"text": null,
 					"items": {
@@ -4917,7 +4948,33 @@
 					"text": "Drops from Simulacrum."
 				},
 				"Timeless Jewel": {
-					"text": "Drops from Domain of Timeless Conflict"
+					"text": null,
+					"items": {
+						"Brutal Restraint": {
+							"text": "Drops from Maraketh Legion General",
+							"priority": -5
+						},
+						"Elegant Hubris": {
+							"text": "Drops from Eternal Empire Legion General",
+							"priority": -5
+						},
+						"Glorious Vanity": {
+							"text": "Drops from Vaal Legion General",
+							"priority": -5
+						},
+						"Lethal Pride": {
+							"text": "Drops from Karui Legion General",
+							"priority": -5
+						},
+						"Militant Faith": {
+							"text": "Drops from Templar Legion General",
+							"priority": -5
+						},
+						"Heroic Tragedy": {
+							"text": "Drops from Olroth",
+							"priority": -6
+						}
+					}
 				},
 				"Medium Cluster Jewel": {
 					"text": "Drops from Simulacrum."
@@ -4986,6 +5043,15 @@
 						}
 					}
 				},
+				"Mycelium Core": {
+					"text": null,
+					"items": {
+						"Putrid Seed": {
+							"text": "Can drop from Effulgent Blightworm in a Mycotic Blight encounter",
+							"priority": -5
+						}
+					}
+				},
 				"Cobalt Jewel": {
 					"text": null,
 					"items": {
@@ -5022,8 +5088,8 @@
 							"priority": -9
 						},
 						"Tempered Mind": {
-							"text": "Drops from The Vaal Omnitect.",
-							"priority": -5
+							"text": "Drops in the Glittering Halls Temple of Atzoatl room",
+							"priority": -8
 						},
 						"The Blue Dream": {
 							"text": "Grown on the Genesis Tree",
@@ -5034,8 +5100,8 @@
 							"priority": -8
 						},
 						"Transcendent Mind": {
-							"text": "Does not drop. Created with a Vial.",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -3
 						},
 						"Brute Force Solution": {
 							"text": "Overridden in Exceptions. Only Drops Corrupted.",
@@ -5139,12 +5205,12 @@
 							"priority": -5
 						},
 						"Tempered Spirit": {
-							"text": "Drops from The Vaal Omnitect.",
-							"priority": -5
+							"text": "Drops in the Glittering Halls Temple of Atzoatl room",
+							"priority": -8
 						},
 						"Transcendent Spirit": {
-							"text": "Does not drop. Created with a Vial.",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -3
 						},
 						"The Green Dream": {
 							"text": "Grown on the Genesis Tree",
@@ -5264,8 +5330,8 @@
 							"priority": -5
 						},
 						"Tempered Flesh": {
-							"text": "Drops from The Vaal Omnitect.",
-							"priority": -5
+							"text": "Drops in the Glittering Halls Temple of Atzoatl room",
+							"priority": -8
 						},
 						"The Red Nightmare": {
 							"text": "Grown on the Genesis Tree",
@@ -5276,8 +5342,8 @@
 							"priority": -8
 						},
 						"Transcendent Flesh": {
-							"text": "Does not drop. Created with a Vial.",
-							"priority": -10
+							"text": "Drops in Temples of Atzoatl that contain a Cradle of Creation",
+							"priority": -3
 						},
 						"Combat Focus": {
 							"text": "Does not drop. Created with a vendor recipe.",
