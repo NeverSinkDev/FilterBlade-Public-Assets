@@ -510,7 +510,7 @@ Chapter(){
     }
 
     Section("Current League: Covens of Umbra", "VoltaicSkull") {
-        Section("Viscera", "Talisman") {
+        Section("Viscera", "VoltaicSkull") {
             Function VisceraFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Viscera", "O"]); }
             TierListToolBar();
 
@@ -586,6 +586,23 @@ Chapter(){
             // hide tier
             Conditional("?AllflameEmbersNewTiersHidden") { }
             ElementAdder_Tier("?AllflameEmbersNewTiersHidden", null, true, "B:Allflame Ember of ", "OH");
+        }
+
+        Section("Fated Item Treatment", "Silver Coin")
+        {
+            Warning("Fated items are rare items modified by the Umbra league. They will roll special mods depending on your league choices. The T1/T2 items follow the filters/your tiering of rare items, but keep showing on a higher strictness. Decorators will give fated items borders as well. I don't recommend changing this section");
+            QuickUI([1.0, "Fated RankA Rings+Amulets", "rr->amuring;t1f"], "SD", ["ItemLevel"], "Jewellery Fated T1");
+            QuickUI([1.0, "Fated RankB Rings+Amulets", "rr->amuring;t2f"], "SD", ["ItemLevel"], "Jewellery Fated T2");
+            QuickUI([1.0, "Fated RankA Belts", "rr->belts;t1f"], "SD", ["ItemLevel"], "Belts Fated T1");
+            QuickUI([1.0, "Fated RankB Belts", "rr->belts;t2f"], "SD", ["ItemLevel"], "Belts Fated T2");
+            QuickUI([1.0, "Fated Rank A Gear", "rr;t1f"], "SD", ["ItemLevel"], "Fated Gear T1");
+            QuickUI([1.0, "Fated Rank B Gear", "rr;t2f"], "SD", ["ItemLevel"], "Fated Gear T2");
+            Description("Anything not caught by rules above");
+            QuickUI([1.0, "Other Fated items", "rr;fatedoverride"], "SD", ["ItemLevel"], "All other fated items");
+            Description("Will highlight fated abyss jewels and similar gear - if it exists");
+            QuickUI([1.0, "Fated Exotic Classes", "rr;fatedspecial"], "SD", ["ItemLevel"]);
+            Description("Not necessary. Fated items receive an extra decorator and will be highlighted by other rules, but you CAN give them all extra highlight if you want");
+            QuickUI([0.0, "Optional: Any fated item while leveling", "leveling->rare->armours;fatedany"], "SD", ["ItemType", "ItemLevel", "DropLevel?", "Sockets", "Quality?", "Identified?"], "Any leveling fated item (optional override)");
         }
     }
 
@@ -1077,6 +1094,7 @@ Chapter() {
             QuickUI([1.0, "Endgame rare deco ilvl 68", "decorators->rareeg;ilvl68"], "SD", ["ItemLevel"], "ItemLevel 68");
             QuickUI([1.0, "Endgame rare deco corrupted implicit", "decorators->rareeg;corruptedraresimplicit"], "SD", ["Corrupted", "CorruptedMods"], "Corrupted Implicit");
             QuickUI([1.0, "Endgame rare deco corrupted", "decorators->rareeg;corruptedrares"], "SD", ["Corrupted", "CorruptedMods"], "Corrupted - No implicit");
+            QuickUI([1.0, "Endgame fated items", "decorators->rareeg;fatedgear"], "SD", ["ItemLevel"], "Fated Items");
             QuickUI([1.0, "Endgame rare deco 4 links", "decorators->rareeg;fourlinkedrares"], "SD", ["Corrupted", "CorruptedMods"], "4 Links");
         }
 
@@ -1096,7 +1114,7 @@ Chapter() {
             QuickUI(S3, "SD", ["AreaLevel","ItemLevel", "Corrupted?", "Identified?"], "Rank C - Rings/Amulets");
             QuickUI(B3, "SD", ["AreaLevel","ItemLevel", "Corrupted?", "Identified?"], "Rank C - Belts");
 
-            BaseTypeMatrix("EgRaresJewellery", "1.0", "ClassSplit", false, [], [[S1, B1], [S2, B2], [S3, B3]]);
+            BaseTypeMatrix("EgRaresJewellery", "1.0", "ClassSplit", false, [], [[S1, B1, Fated RankA Rings+Amulets, Fated RankA Belts], [S2, B2, Fated RankB Rings+Amulets, Fated RankB Belts], [S3, B3]]);
         }
 
         Section("Weapons and Armours", "RoyalBurgonet") {
@@ -1115,8 +1133,8 @@ Chapter() {
             EgRaresArmours(T5, "Rank E");
 
             BaseTypeMatrix("EgRaresGear", "1.0", "Default", true, [],
-                [[T1Wep],
-                    [T2Wep],
+                [[T1Wep, Fated Rank A Gear],
+                    [T2Wep, Fated Rank B Gear],
                     [T3Dagger],
                     [T4]]
             );
@@ -1821,6 +1839,7 @@ Chapter() {
                 QuickUI([1.0, "Leveling rare deco medium 1", "decorators->leveling->rare;mediumrares1"], "SD", ["ItemLevel", "Height", "Width"]);
                 QuickUI([1.0, "Leveling rare deco medium 2", "decorators->leveling->rare;mediumrares2"], "SD", ["ItemLevel", "Height", "Width"]);
                 QuickUI([1.0, "Leveling rare deco large", "decorators->leveling->rare;largerares"], "SD", ["ItemLevel", "Height", "Width"]);
+                QuickUI([1.0, "Leveling fated items", "decorators->leveling->rare;fatedgear"], "SD");
             }
 
             Function ClassBox ($s, $shd = "SDH", $text) { QuickUI($s, $shd, ["ItemLevel?", "DropLevel?", "AllGearClasses", "Identified?"], $text); }
