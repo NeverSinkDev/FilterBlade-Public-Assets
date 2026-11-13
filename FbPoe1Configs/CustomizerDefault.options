@@ -534,37 +534,37 @@ Chapter(){
             // one rule per tag (no merging via a shared name); the matrix groups them per rank in sub-arrays, referenced by title
             Section("Rank A")
             {
-                UnidTierRule([0.0, "Unid Tier: Rank A, tier 5+", "gear->tiered;t5r1"], "Rank A - item tier 5+");
-                UnidTierRule([0.0, "Unid Tier: Rank A, tier 4+", "gear->tiered;t4r1"], "Rank A - item tier 4+");
-                UnidTierRule([0.0, "Unid Tier: Rank A, tier 3+", "gear->tiered;t3r1"], "Rank A - item tier 3+");
-                UnidTierRule([0.0, "Unid Tier: Rank A, tier 2+", "gear->tiered;t2r1"], "Rank A - item tier 2+");
+                UnidTierRule([0.0, "Unid Tier: Rank A, tier 5", "gear->tiered;t5r1"], "Rank A - item tier 5");
+                UnidTierRule([0.0, "Unid Tier: Rank A, tier 4", "gear->tiered;t4r1"], "Rank A - item tier 4");
+                UnidTierRule([0.0, "Unid Tier: Rank A, tier 3", "gear->tiered;t3r1"], "Rank A - item tier 3");
+                UnidTierRule([0.0, "Unid Tier: Rank A, tier 2", "gear->tiered;t2r1"], "Rank A - item tier 2");
             }
             Section("Rank B")
             {
-               UnidTierRule([0.0, "Unid Tier: Rank B, tier 5+", "gear->tiered;t5r2"], "Rank B - item tier 5+");
-               UnidTierRule([0.0, "Unid Tier: Rank B, tier 4+", "gear->tiered;t4r2"], "Rank B - item tier 4+");
-               UnidTierRule([0.0, "Unid Tier: Rank B, tier 3+", "gear->tiered;t3r2"], "Rank B - item tier 3+");
-               UnidTierRule([0.0, "Unid Tier: Rank B, tier 2+", "gear->tiered;t2r2"], "Rank B - item tier 2+");
+               UnidTierRule([0.0, "Unid Tier: Rank B, tier 5", "gear->tiered;t5r2"], "Rank B - item tier 5");
+               UnidTierRule([0.0, "Unid Tier: Rank B, tier 4", "gear->tiered;t4r2"], "Rank B - item tier 4");
+               UnidTierRule([0.0, "Unid Tier: Rank B, tier 3", "gear->tiered;t3r2"], "Rank B - item tier 3");
+               UnidTierRule([0.0, "Unid Tier: Rank B, tier 2", "gear->tiered;t2r2"], "Rank B - item tier 2");
             }
             Section("Rank C")
             {
-                UnidTierRule([0.0, "Unid Tier: Rank C, tier 5+", "gear->tiered;t5r3"], "Rank C - item tier 5+");
-                UnidTierRule([0.0, "Unid Tier: Rank C, tier 4+", "gear->tiered;t4r3"], "Rank C - item tier 4+");
-                UnidTierRule([0.0, "Unid Tier: Rank C, tier 3+", "gear->tiered;t3r3"], "Rank C - item tier 3+");
-                UnidTierRule([0.0, "Unid Tier: Rank C, tier 2+", "gear->tiered;t2r3"], "Rank C - item tier 2+");
+                UnidTierRule([0.0, "Unid Tier: Rank C, tier 5", "gear->tiered;t5r3"], "Rank C - item tier 5");
+                UnidTierRule([0.0, "Unid Tier: Rank C, tier 4", "gear->tiered;t4r3"], "Rank C - item tier 4");
+                UnidTierRule([0.0, "Unid Tier: Rank C, tier 3", "gear->tiered;t3r3"], "Rank C - item tier 3");
+                UnidTierRule([0.0, "Unid Tier: Rank C, tier 2", "gear->tiered;t2r3"], "Rank C - item tier 2");
             }
             Section("Untiered")
             {
-            UnidTierRule([0.0, "Unid Tier: Any base, tier 5+", "gear->tiered;any5"], "Item tier 5+");
-            UnidTierRule([0.0, "Unid Tier: Any base, tier 4+", "gear->tiered;any4"], "Item tier 4+");
-            UnidTierRule([0.0, "Unid Tier: Any base, tier 3+", "gear->tiered;any3"], "Item tier 3+");
-            UnidTierRule([0.0, "Unid Tier: Any base, tier 2+", "gear->tiered;any2"], "Item tier 2+");
+            UnidTierRule([0.0, "Unid Tier: Any base, tier 5", "gear->tiered;any5"], "Any Item - Item tier 5");
+            UnidTierRule([0.0, "Unid Tier: Any base, tier 4", "gear->tiered;any4"], "Any Item - Item tier 4");
+            UnidTierRule([0.0, "Unid Tier: Any base, tier 3", "gear->tiered;any3"], "Any Item - Item tier 3");
+            UnidTierRule([0.0, "Unid Tier: Any base, tier 2", "gear->tiered;any2"], "Any Item - Item tier 2");
             }
 
             BaseTypeMatrix("UnidentifiedTierItems", "1.0", "Default", true, [],
-                [["Unid Tier: Rank A, tier 5+", "Unid Tier: Rank A, tier 4+", "Unid Tier: Rank A, tier 3+", "Unid Tier: Rank A, tier 2+"],
-                    ["Unid Tier: Rank B, tier 5+", "Unid Tier: Rank B, tier 4+", "Unid Tier: Rank B, tier 3+", "Unid Tier: Rank B, tier 2+"],
-                    ["Unid Tier: Rank C, tier 5+", "Unid Tier: Rank C, tier 4+", "Unid Tier: Rank C, tier 3+", "Unid Tier: Rank C, tier 2+"]]);
+                [["Unid Tier: Rank A, tier 5", "Unid Tier: Rank A, tier 4", "Unid Tier: Rank A, tier 3", "Unid Tier: Rank A, tier 2"],
+                    ["Unid Tier: Rank B, tier 5", "Unid Tier: Rank B, tier 4", "Unid Tier: Rank B, tier 3", "Unid Tier: Rank B, tier 2"],
+                    ["Unid Tier: Rank C, tier 5", "Unid Tier: Rank C, tier 4", "Unid Tier: Rank C, tier 3", "Unid Tier: Rank C, tier 2"]]);
         }
 
         Section("Allflame Embers & Map Enchant Currency", "AllflameEmberofTul", "E") {
