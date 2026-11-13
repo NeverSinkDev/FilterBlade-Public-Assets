@@ -313,22 +313,6 @@ Chapter(){
                 ElementAdder_Tier("?AncTrialOmensHidden", null, true, "AncTrialOmens", "OH");
             }
 
-
-            Section("Incursion Vials", "IncursionVial", "E") {
-                TierListToolBar("Vial");
-                QuickUI([0.0, "Incursion Vials T1", "vials;t1"], "SH", [], "S Tier", ["IncursionVials", "O"]);
-                QuickUI([0.0, "Incursion Vials T2", "vials;t2"], "SH", [], "A Tier", ["IncursionVials", "O"]);
-                QuickUI([0.0, "Incursion Vials T3", "vials;t3"], "SH", [], "Others", ["IncursionVials", "O"]);
-
-                // new vial tiers
-                Function VialTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["IncursionVials", "O"]); }
-                Conditional("?IncVialNewTier") { Show; Class Currency; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; SetBorderColor 0 0 0 255; SetFontSize 45; PlayAlertSound 2 300; }
-                ElementAdder_Tier("?IncVialNewTier", "VialTierList");
-
-                Conditional("?VialNewTiersHidden") { }
-                ElementAdder_Tier("?VialNewTiersHidden", null, true, "IncursionVials", "OH");
-            }
-
             Section("Runegrafts", "RuneGraft", "E") {
                 // generated via manualUtil_GenerateOptFileTierListCode(); util function!
                 Function RunegraftsFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Runegraft of", "O"]); }
@@ -525,7 +509,86 @@ Chapter(){
         ElementAdder_Tier("?GoldNewTier", "GoldFuncHuge");
     }
 
-    Section("Current League: Curse of the Allflame", "RotmothersDucat") {
+    Section("Current League: Covens of Umbra") {
+        Section("Viscera", "Talisman") {
+            Function VisceraFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Viscera", "O"]); }
+            TierListToolBar();
+
+            VisceraFunc([0.0, "Viscera T1", "viscera;t1"], "SH", "S Tier");
+            VisceraFunc([0.0, "Viscera T2", "viscera;t2"], "SH", "A Tier");
+            VisceraFunc([0.0, "Viscera T3", "viscera;t3"], "SH", "B Tier");
+            VisceraFunc([0.0, "Viscera T4", "viscera;t4"], "SH", "C Tier");
+            VisceraFunc([0.0, "Viscera T5", "viscera;t5"], "SH", "D Tier");
+
+            // new tiers
+            Conditional("?VisceraNewTier") { }
+            ElementAdder_Tier("?VisceraNewTier", "VisceraFunc");
+        }
+
+        Section("Unidentified Item Tiers", "OrbofIntention")
+        {
+            Description("Unidentified magic and rare items can drop with an item tier (2-5). Higher tiers roll high mods more frequently (unlike the item mods, higher number means better)");
+
+            Function UnidTierRule($s, $title) { QuickUI($s, "SH", ["Rarity", "UnidentifiedItemTier", "ItemLevel?", "DropLevel?", "Corrupted?"], $title); }
+
+            // one rule per tag (no merging via a shared name); the matrix groups them per rank in sub-arrays, referenced by title
+            Section("Rank A")
+            {
+                UnidTierRule([0.0, "Unid Tier: Rank A, tier 5+", "gear->tiered;t5r1"], "Rank A - item tier 5+");
+                UnidTierRule([0.0, "Unid Tier: Rank A, tier 4+", "gear->tiered;t4r1"], "Rank A - item tier 4+");
+                UnidTierRule([0.0, "Unid Tier: Rank A, tier 3+", "gear->tiered;t3r1"], "Rank A - item tier 3+");
+                UnidTierRule([0.0, "Unid Tier: Rank A, tier 2+", "gear->tiered;t2r1"], "Rank A - item tier 2+");
+            }
+            Section("Rank B")
+            {
+               UnidTierRule([0.0, "Unid Tier: Rank B, tier 5+", "gear->tiered;t5r2"], "Rank B - item tier 5+");
+               UnidTierRule([0.0, "Unid Tier: Rank B, tier 4+", "gear->tiered;t4r2"], "Rank B - item tier 4+");
+               UnidTierRule([0.0, "Unid Tier: Rank B, tier 3+", "gear->tiered;t3r2"], "Rank B - item tier 3+");
+               UnidTierRule([0.0, "Unid Tier: Rank B, tier 2+", "gear->tiered;t2r2"], "Rank B - item tier 2+");
+            }
+            Section("Rank C")
+            {
+                UnidTierRule([0.0, "Unid Tier: Rank C, tier 5+", "gear->tiered;t5r3"], "Rank C - item tier 5+");
+                UnidTierRule([0.0, "Unid Tier: Rank C, tier 4+", "gear->tiered;t4r3"], "Rank C - item tier 4+");
+                UnidTierRule([0.0, "Unid Tier: Rank C, tier 3+", "gear->tiered;t3r3"], "Rank C - item tier 3+");
+                UnidTierRule([0.0, "Unid Tier: Rank C, tier 2+", "gear->tiered;t2r3"], "Rank C - item tier 2+");
+            }
+            Section("Untiered")
+            {
+            UnidTierRule([0.0, "Unid Tier: Any base, tier 5+", "gear->tiered;any5"], "Item tier 5+");
+            UnidTierRule([0.0, "Unid Tier: Any base, tier 4+", "gear->tiered;any4"], "Item tier 4+");
+            UnidTierRule([0.0, "Unid Tier: Any base, tier 3+", "gear->tiered;any3"], "Item tier 3+");
+            UnidTierRule([0.0, "Unid Tier: Any base, tier 2+", "gear->tiered;any2"], "Item tier 2+");
+            }
+
+            BaseTypeMatrix("UnidentifiedTierItems", "1.0", "Default", true, [],
+                [["Unid Tier: Rank A, tier 5+", "Unid Tier: Rank A, tier 4+", "Unid Tier: Rank A, tier 3+", "Unid Tier: Rank A, tier 2+"],
+                    ["Unid Tier: Rank B, tier 5+", "Unid Tier: Rank B, tier 4+", "Unid Tier: Rank B, tier 3+", "Unid Tier: Rank B, tier 2+"],
+                    ["Unid Tier: Rank C, tier 5+", "Unid Tier: Rank C, tier 4+", "Unid Tier: Rank C, tier 3+", "Unid Tier: Rank C, tier 2+"]]);
+        }
+
+        Section("Allflame Embers & Map Enchant Currency", "AllflameEmberofTul", "E") {
+            Function AllflameEmbersFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["B:Allflame Ember of ", "O"]); }
+            TierListToolBar();
+
+            Description("Allflame Embers (and some other items) replace monsters or add an additional encounter onto the map");
+            AllflameEmbersFunc([0.0, "Allflame Embers T1", "mapenchantments;t1"], "SH", "S Tier");
+            AllflameEmbersFunc([0.0, "Allflame Embers T2", "mapenchantments;t2"], "SH", "A Tier");
+            AllflameEmbersFunc([0.0, "Allflame Embers T3", "mapenchantments;t3"], "SH", "B Tier");
+            AllflameEmbersFunc([0.0, "Allflame Embers T4", "mapenchantments;t4"], "SH", "C Tier");
+            AllflameEmbersFunc([0.0, "Allflame Embers T5", "mapenchantments;t5"], "SH", "D Tier");
+
+            // new tiers
+            Conditional("?AllflameEmbersNewTier") { }
+            ElementAdder_Tier("?AllflameEmbersNewTier", "AllflameEmbersFunc");
+
+            // hide tier
+            Conditional("?AllflameEmbersNewTiersHidden") { }
+            ElementAdder_Tier("?AllflameEmbersNewTiersHidden", null, true, "B:Allflame Ember of ", "OH");
+        }
+    }
+
+    Section("Previous League: Curse of the Allflame", "RotmothersDucat") {
 
         Section("Ducats") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
@@ -570,7 +633,6 @@ Chapter(){
         Section("Other") {
             QuickUI([0.0, "Enshrouded Uniques", "enshrouded;enshroudedgear"], "SH", []);
             QuickUI([0.0, "Vestige Uniques", "uniques;vestige"], "SH", []);
-            QuickUI([0.0, "Pearlescent Amulet", "exoticbaseslower;exoticpearl"], "SH", []);
         }
     }
 
@@ -583,33 +645,8 @@ Chapter() {
     // CURRENT LEAGUE
     //===================================================================================================
 
-    Section("Scarabs, Fragments and Splinters", "RewardScarabs.webp", "E") {
-        Title("Full Scarabs");
-
-        Section("Scarabs & Allflames", "Scarab", "E") {
-            Function ScarabTierList($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["Scarabs", "O"]); }
-
-            TierListToolBar("Scarab", [], []);
-
-            ScarabTierList([0.0, "Betrayal Scarabs T1", "fragments->scarabs;t1"], "SH", "S Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T2", "fragments->scarabs;t2"], "SH", "A Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T3", "fragments->scarabs;t3"], "SH", "B Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T4", "fragments->scarabs;t4"], "SH", "C Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T5", "fragments->scarabs;t5"], "SH", "D Tier");
-            ScarabTierList([0.0, "Betrayal Scarabs T6", "fragments->scarabs;t6"], "SH", "Others");
-
-            // new tiers
-            Conditional("?ScarabNewTiers") { Show; Class "Map Fragments" "Misc Map Items"; SetFontSize 45; SetTextColor 159 15 213 255; SetBorderColor 159 15 213 255; SetBackgroundColor 0 0 0 255; PlayAlertSound 2 300; PlayEffect Yellow; MinimapIcon 2 Yellow Hexagon; }
-            ElementAdder_Tier("?ScarabNewTiers", "ScarabTierList");
-
-            Conditional("?ScarabNewTiersHidden") {}
-            ElementAdder_Tier("?ScarabNewTiersHidden", null, true, "Scarabs", "OH");
-        }
-
-        Section("Stacked T4 Scarabs", "Scarab", "E") {
-            Function StackedScarabsFunc($s, $shd = "SD", $title) { QuickUI($s, $shd, ["StackSize"], $title, ["Scarabs", "SO"]); }
-            StackedScarabsFunc([1.0, "Stacked Scarabs", "fragments->scarabs;t3stackedex"], "SD");
-        }
+    Section("Fragments and Splinters", "RewardFragments.webp", "E") {
+        Title("Fragments");
 
         Section("Map Fragments & Invitations", "RewardFragments.webp", "E") {
             Function FragmentsFunc($s, $shd = "SHD", $title, $descr = false) { QuickUI($s, $shd, [], $title, ["normalFragmentsAndInvitations", "O"], $descr); }
@@ -618,7 +655,8 @@ Chapter() {
 
             FragmentsFunc([1.1, "Map Fragments T1", "fragments;t1"], "SH", "S Tier");
             FragmentsFunc([1.1, "Map Fragments T2", "fragments;t2"], "SH", "A Tier");
-            FragmentsFunc([1.1, "Map Fragments T3", "fragments;t4"], "SH", "B Tier");
+            FragmentsFunc([0.0, "Map Fragments T2B", "fragments;t3"], "SH", "B Tier");
+            FragmentsFunc([1.1, "Map Fragments T3", "fragments;t4"], "SH", "C Tier");
             FragmentsFunc([1.1, "Map Fragments T4 (remaining)", "fragments;t5"], "SH", "Others");
 
             Conditional("?MapFragmentNoBreachNewTier") { Show; Class == "Map Fragments"; SetFontSize 45; SetBorderColor 0 0 0 255; PlayAlertSound 2 300; MinimapIcon 2 White Triangle; PlayEffect White; SetTextColor 0 0 0 255; SetBackgroundColor 159 15 213 255; }
@@ -760,8 +798,12 @@ Chapter() {
 
             Title("Exotic Variations");
             QuickUI([0.0, "Vaal Temple Map", "maps->vaaltemple;any"], "SH", []);
-            QuickUI([0.0, "8-Mod Corrupted Maps", "maps->corruptedspecial;mod8"], "SH", ["MapTier"], null, ["Maps", "ASO"]);
+            QuickUI([0.0, "8-Mod Corrupted Maps", "maps->specialmods;mod8"], "SH", ["MapTier"], null, ["Maps", "ASO"]);
             QuickUI([0.0, "Valdo Maps", "maps->nightmare;valdomaps"], "SH", []);
+
+            Description("Identified maps that rolled one of the special mods suchas 'of Zarokh' (mirage) or 'of the Woods' (wildwood). Note that these can only roll on ID and by using chaos orbs");
+            QuickUI([0.0, "Special Mod Maps High", "maps->specialmods;exoticmod1"], "SH", ["MapTier"], "Special Mapmods: Mirage, Wildwood", ["Item Mods", "S", "HasExplicitMod"]);
+            QuickUI([0.0, "Special Mod Maps", "maps->specialmods;exoticmod2"], "SH", ["MapTier"], "Special Mapmods: Other", ["Item Mods", "S", "HasExplicitMod"]);
 
             Title("League Based Maps");
             QuickUI([0.0, "Delirium High Maps", "maps->enchanted;t1"], "SHD", ["MapTier"], "Delirium or Enchanted (T14+)");
@@ -921,6 +963,7 @@ Chapter() {
         Section("Ultimatum, Sanctum, Incursion", "InscribedUltimatum") {
             QuickUI([1.0, "Chronicle of Atzoatl (Incursion Temple Map Item)", "miscmapitemsextra;itemizedleaguesincursion"], "SH", [], "Alva Incursion Temple Map", "", "Note: There's sadly NO way to filter these by reward, health percentage, rooms etc.");
             QuickUI([1.0, "Itemized Ultimatum", "miscmapitemsextra;itemizedleaguesultimatum"], "SH", [], "Ultimatum", "", "Note: There's sadly NO way to filter these by reward, health percentage etc.");
+            QuickUI([0.0, "Itemized Mercenary Warrant", "miscmapitemsextra;itemizedleaguesmercenary"], "SH", [], "Mercenary Warrant");
 
             QuickUI([0.0, "Itemized Sanctum (high level)", "exoticmap->sanctum;ilvl83"], "SH", ["ItemLevel"], "Forbidden Tome (high level)");
             QuickUI([0.0, "Itemized Sanctum", "exoticmap->sanctum;any"], "SH", [], "Forbidden Tome / Sanctum"); // Sanctum Vaults Research -> started run
@@ -1135,6 +1178,51 @@ Chapter() {
         //Chapter() {
         //    SectionTitle("Endgame - Special Rares & Crafting (lvl 68+)");
 
+        Section("Valuable Basetypes (poe.ninja)", "Chaos", "E") {
+            TierListToolBar();
+            Description("Bases that are currently worth around 10++ chaos at a high item level, no matter the rarity. Each list has its own item level requirement. This list has priority over the 3 lower tiers of the exotic tierlist.");
+            QuickUI([0.0, "Expensive Crafting Bases ilvl 86", "exoticbases;v86"], "SH", ["ItemLevel", "Rarity", "Quality"], "", ["Gear", "SO"]);
+            QuickUI([0.0, "Expensive Crafting Bases ilvl 85", "exoticbases;v85"], "SH", ["ItemLevel", "Rarity", "Quality"], "", ["Gear", "SO"]);
+            QuickUI([0.0, "Expensive Crafting Bases ilvl 84", "exoticbases;v84"], "SH", ["ItemLevel", "Rarity", "Quality"], "", ["Gear", "SO"]);
+            QuickUI([0.0, "Expensive Crafting Bases ilvl 83", "exoticbases;v83"], "SH", ["ItemLevel", "Rarity", "Quality"], "", ["Gear", "SO"]);
+        }
+
+        Section("Exotic Basetypes", "Talisman") {
+            Description("Exotic basetypes are typically found in special locations and league mechanics, such as Heist, Bestiary or by bricking uniques. The higher tier ones can be highly valuable.");
+
+            QuickUI([0.0, "Exotic Bases Rank A", "exoticbases;t1"], "SH", ["Rarity", "ItemLevel?", "Corrupted?", "Identified?"], "Rank A - Apex bases");
+            QuickUI([0.0, "Exotic Bases Rank B", "exoticbases;t2"], "SH", ["Rarity", "ItemLevel?", "Corrupted?", "Identified?"], "Rank B - Valuable and unobtainable");
+            QuickUI([0.0, "Exotic Bases Rank C", "exoticbases;t3"], "SH", ["Rarity", "ItemLevel?", "Corrupted?", "Identified?"], "Rank C - High tier");
+            QuickUI([0.0, "Exotic Bases Rank D", "exoticbases;t4"], "SH", ["Rarity", "ItemLevel?", "Corrupted?", "Identified?"], "Rank D - Mid tier");
+            QuickUI([0.0, "Exotic Bases Rank E", "exoticbases;t5"], "SH", ["Rarity", "ItemLevel?", "Corrupted?", "Identified?"], "Rank E - Leveling and Low Value");
+
+            // matrix tiers reference the QuickUI rules above by their title
+            BaseTypeMatrix("ExoticBases", "1.0", "Default", false, [], [["Exotic Bases Rank A"], ["Exotic Bases Rank B"], ["Exotic Bases Rank C"], ["Exotic Bases Rank D"], ["Exotic Bases Rank E"]], "AnyByTier");
+        }
+
+        Section("Memory-Stranded Items", "OrbofIntention")
+        {
+            Search S0(0.0, "Rank A, high strands", "gear->memorystrand;t1high") {}
+            Search S0(0.0, "Rank A", "gear->memorystrand;t1") {}
+            Search S1(0.0, "Rank B, high strands", "gear->memorystrand;t2high") {}
+            Search S1(0.0, "Rank B", "gear->memorystrand;t2") {}
+            Search S2(0.0, "Rank C, high strands", "gear->memorystrand;t3high") {}
+            Search S2(0.0, "Rank C", "gear->memorystrand;t3") {}
+            Search S3(0.0, "Rank D, high strands, High", "gear->memorystrand;anyhigh") {}
+            Search S3(0.0, "Rank D", "gear->memorystrand;any") {}
+
+            QuickUI(0, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
+            QuickUI(1, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
+            QuickUI(2, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
+            QuickUI(3, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
+            QuickUI(4, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
+            QuickUI(5, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
+            QuickUI(6, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
+            QuickUI(7, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
+
+            BaseTypeMatrix("MemoryStrandedItems", "1.0", "Default", true, [], [[S0], [S1], [S2]]);
+        }
+
         Section("High Level Crafting Bases", "CraftingUnlockObject.webp") {
             Description("High level, specific crafting bases are in high demand early in the league and can be useful in SSF environments. This section handles non-influenced versions of these items.");
 
@@ -1194,29 +1282,6 @@ Chapter() {
             QuickUI(S2, "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel?", "DropLevel?", "Identified?", "Quality?"], "Rank C");
             QuickUI([0.0, "Fractured items, others", "exotic->fractured;fractothers"], "SH", ["AllGearClassesPlusFlaskJewelMapHeist", "ItemLevel?", "DropLevel?", "Identified?", "Quality?"], "Rank D/Untiered");
             BaseTypeMatrix("FracturedBases", "1.0", "Default", true, ["Life Flasks", "Mana Flasks", "Utility Flasks", "Jewels", "Abyss Jewels"], [[S0], [S1], [S2]]);
-        }
-
-        Section("Memory-Stranded Items", "OrbofIntention")
-        {
-            Search S0(0.0, "Rank A, high strands", "gear->memorystrand;t1high") {}
-            Search S0(0.0, "Rank A", "gear->memorystrand;t1") {}
-            Search S1(0.0, "Rank B, high strands", "gear->memorystrand;t2high") {}
-            Search S1(0.0, "Rank B", "gear->memorystrand;t2") {}
-            Search S2(0.0, "Rank C, high strands", "gear->memorystrand;t3high") {}
-            Search S2(0.0, "Rank C", "gear->memorystrand;t3") {}
-            Search S3(0.0, "Rank D, high strands, High", "gear->memorystrand;anyhigh") {}
-            Search S3(0.0, "Rank D", "gear->memorystrand;any") {}
-
-            QuickUI(0, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
-            QuickUI(1, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
-            QuickUI(2, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
-            QuickUI(3, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
-            QuickUI(4, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
-            QuickUI(5, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
-            QuickUI(6, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
-            QuickUI(7, "SH", ["Rarity", "MemoryStrands", "ItemLevel?", "DropLevel?", "Corrupted?"]);
-
-            BaseTypeMatrix("MemoryStrandedItems", "1.0", "Default", true, [], [[S0], [S1], [S2]]);
         }
 
         Section ("Influenced Items", "Voidorb") {
@@ -1311,6 +1376,22 @@ Chapter() {
             QuickUI([0.0, "68+ 4 Links", "normalcraft->extra;earlyendgame4link"], "SD", ["AreaLevel", "FourPlusSocketClasses", "Rarity"], "4-Links: Early Endgame");
         }
 
+        Title("Niche scenarios:");
+        Section ("Exotic Basetypes: Special Cases", "Talisman")
+        {
+            QuickUI([0.0, "Exotic Outlier: ID-Tier", "exoticbases;exoticstiered"], "SH", ["UnidentifiedItemTier", "Rarity?", "ItemLevel?"], "Unid.Tier 5 Exotics");
+            QuickUI([0.0, "Exotic Outlier: Stranded", "exoticbases;exoticsmemory"], "SH", ["MemoryStrands", "Rarity?", "ItemLevel?"], "Stranded Exotics");
+            QuickUI([0.0, "Exotic Outlier: Fractured", "exoticbases;exoticsfract"], "SH", ["Rarity?", "ItemLevel?"], "Fractured exotics");
+
+            QuickUI([0.0, "Mirage Stygian", "exoticbases;stygianmirage"], "SH", []);
+            QuickUI([0.0, "Stygian Vise, High ItemLevel", "exoticbases;stygian86"], "SH", ["ItemLevel"]);
+            QuickUI([0.0, "Unid Tier and Veiled Mod", "gear->tiered;strandedveiled"], "SH", ["UnidentifiedItemTier", "AllGearClassesPlusFlaskJewelMapHeist?", "ItemLevel?", "DropLevel?"]);
+            QuickUI([0.0, "Unid Tier and Fractured Mod", "gear->tiered;strandedfractured"], "SH", ["UnidentifiedItemTier", "AllGearClassesPlusFlaskJewelMapHeist?", "ItemLevel?", "DropLevel?"]);
+            Description("Occasionally may be used by NeverSink to add a highly important item in a developing meta. Usually unused");
+            QuickUI([0.0, "Apex Tier Bases ilvl 84", "exoticbases;ecotinkbases84"], "SH", ["ItemLevel"], "Economy Meta Bases: 84", []);
+            QuickUI([0.0, "Apex Tier Bases", "exoticbases;ecotinkbases"], "SH", ["ItemLevel"], "Economy Meta Bases", []);
+        }
+
         Section("Overquality, Synthesized & Other Items", "Lion") {
 
             Section("Early endgame harvest bases") {
@@ -1359,16 +1440,6 @@ Chapter() {
                 QuickUI([0.0, "Synthesised items", "artefact->misc;anysynth"], "SD", ["AllGearClassesPlusFlaskJewelMap", "ItemLevel?", "DropLevel?", "Identified?", "Quality?"]);
             }
 
-            Section("Economy-Based Expensive 86+ bases", null, "E") {
-                TierListToolBar();
-                Description("This section contains all bases that are currently worth around 10++ chaos, no matter the rarity. Only atlas bases (and some exceptions) are allowed in this section.");
-//                QuickUI([0.0, "Expensive Crafting Bases", "crafting->expensive;any"], "SH", ["ItemLevel", "Rarity", "Quality"], "", ["Gear", "SO"]);
-                QuickUI([0.0, "Expensive Crafting Bases ilvl 86", "crafting->expensive;any86"], "SH", ["ItemLevel", "Rarity", "Quality"], "", ["Gear", "SO"]);
-                QuickUI([0.0, "Expensive Crafting Bases ilvl 85", "crafting->expensive;any85"], "SH", ["ItemLevel", "Rarity", "Quality"], "", ["Gear", "SO"]);
-                QuickUI([0.0, "Expensive Crafting Bases ilvl 84", "crafting->expensive;any84"], "SH", ["ItemLevel", "Rarity", "Quality"], "", ["Gear", "SO"]);
-                QuickUI([0.0, "Expensive Crafting Bases ilvl 83", "crafting->expensive;any83"], "SH", ["ItemLevel", "Rarity", "Quality"], "", ["Gear", "SO"]);
-            }
-
             Section("Noteworthy Corrupted Items") {
                 Description("ItemLevel 80+ quivers can roll valuable chain corruptions. This rule helps detect these.");
                 QuickUI([0.0, "Corrupted rare quivers", "exotic->corruptions;singlecorruptedquivers"], "SD", ["ItemLevel", "Rarity", "AllGearClassesPlusJewel"], "Single corrupted rare quivers");
@@ -1384,6 +1455,7 @@ Chapter() {
             }
 
             Title("Others");
+
             Section("Other Exotic Scenarios") {
 
                 Description("This is mostly relevant for heist-based drops");
@@ -1996,14 +2068,7 @@ Chapter() {
 
     Section("League-specific items and mods", "WardBase") {
 
-        Title("Exotic Bases");
-
-        Section ("Apex Tier Bases")
-        {
-            Description("Special rule to give sudden meta items temporary massive highlights.");
-            QuickUI([0.0, "Apex Tier Bases ilvl 84", "exoticbases;ecotinkbases84"], "SH", ["ItemLevel"], "Iron Flask: 84", []);
-            QuickUI([0.0, "Apex Tier Bases", "exoticbases;ecotinkbases"], "SH", ["ItemLevel"], "Iron Flask", []);
-        }
+        Title("League Items");
 
         Section("Special Wombgift Rules", "MetamorphSampleOrganHeart") {
             WombgiftsCustomFiltering([1.0, "Expensive ILVL84 Wombgifts", "exotic->wombgifts;t2ilvl84"], "DSH");
@@ -2060,57 +2125,6 @@ Chapter() {
             }
         }
 
-        Section ("Foulborn Uniques", "MalachaisArtifice")
-        {
-            Description("This rule has less priority than S and A tier uniques. A foulborn 'S' tier unique will look like any 'S' tier unique.");
-            QuickUI([0.0, "Foulborn Unique", "uniques;foulborn"], "SD", []);
-        }
-
-        Section("Breach Rings", "BreachRing") {
-            QuickUI([3.0, "Breach Rings High ilvl", "rare->exotic->breachrings;high"], "SH", ["AreaLevel", "ItemLevel"], null, ["Gear", "OS"]);
-            QuickUI([3.0, "Breach Rings", "rare->exotic->breachrings;any"], "SH", ["AreaLevel", "ItemLevel"], null, ["Gear", "OS"]);
-        }
-
-        Section("Talismans", "RewardTalisman.webp") {
-            QuickUI([0.0, "Talisman Tier 1", "rare->exotic->talisman;t1"], "SH", ["ItemLevel?"], null, ["C:Amulets;B:Talisman", "OS"]);
-            QuickUI([0.0, "Talisman Tier 2", "rare->exotic->talisman;t2"], "SH", ["ItemLevel?"], null, ["C:Amulets;B:Talisman", "OS"]);
-            QuickUI([0.0, "Talisman Tier 3", "rare->exotic->talisman;t3"], "SH", ["ItemLevel?"], null, ["C:Amulets;B:Talisman", "OS"]);
-            QuickUI([0.0, "Talisman Exotic", "exoticbases;exotictalismanbases"], "SH", ["ItemLevel?"], null, ["C:Amulets;B:Talisman", "SO"]);
-
-            //Function TalismanUI($s) { QuickUI($s, "SH", ["ItemLevel", "Mods", "Talisman"]); }
-            //TalismanUI([1.0, "Talismans T1 Attack", "rare->exotic->talisman;t1attacktalisman"]);
-            //TalismanUI([1.0, "Talismans T1 Caster", "rare->exotic->talisman;t1castertalisman"]);
-            //TalismanUI([1.0, "Talismans T1 DoT", "rare->exotic->talisman;t1dottalisman"]);
-            //TalismanUI([1.0, "Talismans T2 Stats", "rare->exotic->talisman;t2stattalisman"]);
-            //QuickUI([1.0, "Exotic Talisman Bases", "exoticbases;exotictalismanbases"], "SH", ["ItemLevel", "Talisman"]);
-            //QuickUI([1.0, "Talismans T3 Bases", "rare->exotic->talisman;t3decenttypetalisman"], "SH", ["ItemLevel", "Talisman"]);
-            //QuickUI([1.0, "Remaining Talismans", "rare->exotic->talisman;any"], "SH", ["ItemLevel"]);
-        }
-
-        Section("Expedition Ward-Bases & Iron Flask", "WardBase") {
-            // Runic Helm, Runic Crest, Runic Crown
-            Description("Expedition introduced a new defence mechanic, Ward, in addition to the traditional ones like Armour or Evasion. Ward can only be found on these new BaseTypes:");
-            QuickUI([0.0, "Expedition Ward Bases", "exoticbases;exoticexpeditionbases"], "SH", ["ItemLevel?", "Rarity?", "ExpeditionWardBases", "Identified?"]);
-        }
-
-        Section("Breach Grasping Mail", "BreachSplinter") {
-            QuickUI([1.0, "Grasping Mail", "exoticbases;exoticbasesmisc"], "SD", ["Rarity", "ItemLevel"]);
-        }
-
-        Section("Stygian Vise", "StygianVise") {
-            QuickUI([0.0, "Stygian Vise, High ItemLevel", "exoticbaseslower;stygian86"], "SH", ["ItemLevel"], "High ItemLevel");
-            QuickUI([0.0, "Stygian Vise", "exoticbaseslower;stygian"], "SH", [], "Remaining");
-        }
-
-        Section("Sacrificial Garbs", "SacrificeAtMidnight") {
-            QuickUI([0.0, "Exotic Bases", "exoticbaseslower;exoticsacrificial"], "SD", ["ItemLevel", "Rarity", "Corrupted"], null, ["Gear", "OS"]);
-        }
-
-        Section("Ritual BaseTypes", "BloodFilledRitualVessel") {
-            Search S2(0.0, "Ritual BaseTypes") { BaseType "Nexus Gloves"; Rarity Normal; }
-            QuickUI(S2, "SD", ["RitualBases", "Rarity", "ItemLevel"]);
-        }
-
         Section("Corpses for Spectres", "Forest_Warrior_inventory_icon") {
             // generated via manualUtil_GenerateOptFileTierListCode(); util function!
             Function CorpsesFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, [], $text, ["C:Corpses", "O"]); }
@@ -2129,18 +2143,6 @@ Chapter() {
             // hide tier
             Conditional("?CorpsesNewTiersHidden") { }
             ElementAdder_Tier("?CorpsesNewTiersHidden", null, true, "C:Corpses", "OH");
-        }
-
-        Section("Heist Experimented BaseType", "HeistExpBase") {
-            Function ExpListFunc($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["ItemLevel"], $text, ["HeistExpBases", "O"]); }
-
-            ExpListFunc([0.0, "Experimented BaseTypes Heist T1", "exoticbases;exoticheistbases"], "SD", "Experimented BaseTypes");
-
-            Conditional("?HeistExpBasesNewTiers") { Show; SetTextColor 210 178 135; SetBackgroundColor 0 0 0 255; SetBorderColor 213 159 100 200; SetFontSize 42; }
-            ElementAdder_Tier("?HeistExpBasesNewTiers", "ExpListFunc");
-
-            Conditional("?HeistExpBasesNewTiersHidden") { }
-            ElementAdder_Tier("?HeistExpBasesNewTiersHidden", null, true, "HeistExpBases", "OH");
         }
 
         Title("Special Properties");
@@ -2206,13 +2208,10 @@ Chapter() {
         Title("Currently Unobtainable");
 
         Section("Currently Unobtainable", "JuggernautsUrsineCharmoftheChampion") {
-            QuickUI([0.0, "Cord Belt", "exoticbaseslower;exoticmiragebases"], "SH", [], "Mirage Exclusive: Cord Belt");
-            QuickUI([0.0, "Mirage Stygian", "exoticbaseslower;stygianmirage"], "SH", [], "Stygian Vise with Mirage Mods");
             Description("If imbued gems can drop, this will catch them (and any other imbued item). Better handling will be added once we know more.");
             QuickUI([0.0, "Imbued", "artefact->misc;anyimbued"], "SH", [], "Any Imbued Drop");
 
             QuickUI([0.0, "Items with Crucible passive tree", "exotic->crucible;crucibleany"], "SH", ["DropLevel", "Rarity", "ItemLevel"]);
-            QuickUI([0.0, "Kalandra Lake exclusive Bases", "exoticbases;exoticlakekala"], "SH", ["Rarity", "ItemLevel"], null, ["Gear", "OS"]);
         }
     }
 
@@ -2690,11 +2689,9 @@ Chapter() {
             //            QuickUI(S2, "SH", ["ItemLevel"]);
             //        }
 
-            Section("Fishing Rod and Bricked Uniques", "FishingRod") {
+            Section("Fishing Rod", "FishingRod") {
                 Search S3("0.0", "Fishing Rod") { Class "Fishing Rods"; BaseType "Fishing Rod"; Rarity "Normal"; }
                 QuickUI(S3, "SH", [], "", [], ["On the Hook", "YOU'VE BEEN CAPTURED! STUPID EXILE!", "Fishing rods are just incredibly rare. They don't have any secrets or special purposes at all. NeverSink assures that he was not forced to write this message and that the international fishing council of Wraeclast did not impose their supreme will upon him, but merely acted as advisors."]);
-
-                QuickUI([0.0, "Bricked Uniques", "exoticbases;exoticuniquebases"], "SH", ["Rarity", "ItemLevel"], null, ["Gear", "OS"], "Will highlight exotic bases bricked into a rare, such as 'Kalandra's Touch'. May generate a lifetime supply of salt if that happens. You're welcome.");
             }
 
             Section("Quest & quest-like items", "GoldenKey") {
@@ -2752,8 +2749,8 @@ Chapter() {
                 Search S0(1.0, "Untiered Currency", "currency;restex") {  }
                 Search S0(1.0, "Untiered Uniques", "uniques;restex") { }
                 Search S0(1.0, "Untiered Unique maps", "uniques->maps;restex") {  }
-                Search S0(1.0, "Untiered Scarabs", "fragments->scarabs;restex") { }
-                Search S0(1.0, "Untiered Vials", "vials;restex") { }
+                Search S0(1.0, "Untiered Allflame Embers", "mapenchantments;restex") { }
+                Search S0(1.0, "Untiered Viscera", "viscera;restex") { }
                 Search S0(1.0, "Untiered Fragments", "fragments;restex") { }
                 Search S0(1.0, "Untiered Fossils", "currency->fossil;restex") {  }
                 Search S0(1.0, "Untiered Ducats", "currency->ducats;restex") {  }
