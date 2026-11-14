@@ -974,14 +974,14 @@ Chapter() {
 
                 Description("Give specific BaseTypes more highlighting here.");
 
-                Conditional("?CRareShowBases", ["c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; }
+                Conditional("?CRareShowBases", ["c3.gear.itemtiered.all", "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; }
                 ElementAdder_Tier("?CRareShowBases", "CondShowBase");
             }
 
             Section("Highlight rares by Armour Type", "Firefly") {
                 Description("Highlight gear by their type, like Evasion or Evasion-EnergyShield items.");
 
-                Conditional("?CRareShowItemTypes", ["c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
+                Conditional("?CRareShowItemTypes", ["c3.gear.itemtiered.all", "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
 
                 Function CondShowType ($s, $shd = "SD", $title)
                 {
@@ -1000,7 +1000,7 @@ Chapter() {
 
                 Description("Highlight specific item classes here.");
 
-                Conditional("?CRareShowClasses", ["c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; }
+                Conditional("?CRareShowClasses", ["c3.gear.itemtiered.all", "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; }
                 ElementAdder_Tier("?CRareShowClasses", "CondShowClass");
             }
 
@@ -1023,12 +1023,12 @@ Chapter() {
                     QuickUI($s, $shd, ["CondTargetSelection?", "ItemLevel?", "DropLevel?", "LinkedSockets?", "Stats_RareGear?"], $title, ["Gear", "OS"]);
                 }
 
-                Conditional("?CRareHideBases", ["c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Hide; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
+                Conditional("?CRareHideBases", ["c3.gear.itemtiered.all", "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Hide; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
                 ElementAdder_Tier("?CRareHideBases", "CondHideBase");
             }
 
             Section("Hide rares by Armour Type", "Annulment") {
-                Conditional("?CRareHideItemTypes", ["c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Hide; ItemLevel >= 68; Rarity Rare; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
+                Conditional("?CRareHideItemTypes", ["c3.gear.itemtiered.all", "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Hide; ItemLevel >= 68; Rarity Rare; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
 
                 Function CondHideType ($s, $shd = "HD", $title)
                 {
@@ -1046,19 +1046,19 @@ Chapter() {
 
                 Description("Hide uninteresting items, such as bows for melee characters or melee weapons for casters.");
 
-                Conditional("?CRareHideClasses", ["c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Hide; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
+                Conditional("?CRareHideClasses", ["c3.gear.itemtiered.all",  "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Hide; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
                 ElementAdder_Tier("?CRareHideClasses", "CondHideClass");
             }
 
             Section("Hide rares by Tier", "Annulment") {
                 Description("Note: The section 'hide and highlight rares by type' section can be used to achieve the same result, while also having control over classes and levels.");
-                Conditional("?CRareSimpleHide", ["c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Hide; Class "Helmets" "Gloves" "Boots" "Body Armours" "Shields" "Quivers" "Wands" "Rune Dagger" "Warstaves" "Daggers" "Sceptres" "Bows" "Claws" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces"; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
+                Conditional("?CRareSimpleHide", ["c3.gear.itemtiered.all", "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Hide; Class "Helmets" "Gloves" "Boots" "Body Armours" "Shields" "Quivers" "Wands" "Rune Dagger" "Warstaves" "Daggers" "Sceptres" "Bows" "Claws" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces"; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
                 QuickUI("?CRareSimpleHide", "HD", ["CondTargetSelection?", "ItemLevel"], "Hide Rares By Tier");
             }
 
             Section("Corrupted Rares Custom Rules", "VaalOrb")
             {
-                Conditional("?CorruptedRares", ["c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Show; Corrupted True; Rarity Rare; ItemLevel >= 68; SetFontSize 28; SetBorderColor 180 70 0; }
+                Conditional("?CorruptedRares", ["c3.gear.itemtiered.all", "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Show; Corrupted True; Rarity Rare; ItemLevel >= 68; SetFontSize 28; SetBorderColor 180 70 0; }
                 QuickUI("?CorruptedRares", "SD", ["AllGearClasses", "ItemLevel?", "DropLevel?", "CorruptedMods", "Sockets?", "CondTargetSelection?"], "Corrupted Rares");
             }
         }
