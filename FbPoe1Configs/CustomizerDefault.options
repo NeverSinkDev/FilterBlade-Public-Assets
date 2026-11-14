@@ -122,7 +122,7 @@ Chapter(){
                 Function LevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["AreaLevel"], $text, ["Currency", "DO"]); }
 
                 Title("Campaign: Gem Shopping Currencies");
-                LevelingStackList([0.0, "Currency during leveling 5", "currency->leveling;t2chance"], "SH", "Campaign: Chance Orbs");
+                LevelingStackList([0.0, "Currency during leveling 5", "currency->leveling;t2chance"], "SH", "Campaign: Alteratíon Orbs");
                 LevelingStackList([0.0, "Currency during leveling 3 early", "currency->leveling;t3transearly"], "SH", "Campaign: Trans&alts Act1-3");
                 LevelingStackList([0.0, "Currency during leveling 1", "currency->leveling;t3trans"], "SH", "Campaign: Trans&alts");
 
@@ -142,7 +142,7 @@ Chapter(){
             Section("Campaign Specific - Stacked Drops", "Transmut") {
                 Function CurrencyLevelingStackList($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["StackSize", "AreaLevel"], $text, ["Currency", "O"]); }
 
-                CurrencyLevelingStackList([0.0, "Stacked Campaign Chance", "currency->levelingstacked;t2chance"], "SD", "Stacked Chance Orbs+");
+                CurrencyLevelingStackList([0.0, "Stacked Campaign Alts", "currency->levelingstacked;t2chance"], "SD", "Stacked Alteration Orbs+");
                 CurrencyLevelingStackList([0.0, "Stacked Campaign Transmutations", "currency->levelingstacked;t3trans"], "SD", "Stacked Trans&Alt");
                 CurrencyLevelingStackList([0.0, "Stacked Campaign Misc", "currency->levelingstacked;t4misc"], "SD", "Stacked Misc");
                 CurrencyLevelingStackList([0.0, "Stacked Campaign T5 Aug", "currency->levelingstacked;t5aug"], "SD", "Stacked Augment");
