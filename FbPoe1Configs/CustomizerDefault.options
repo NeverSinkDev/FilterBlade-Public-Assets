@@ -1050,10 +1050,10 @@ Chapter() {
                 ElementAdder_Tier("?CRareHideClasses", "CondHideClass");
             }
 
-            Section("Hide rares by Tier", "Annulment") {
+            Section("Hide rares by Rank", "Annulment") {
                 Description("Note: The section 'hide and highlight rares by type' section can be used to achieve the same result, while also having control over classes and levels.");
                 Conditional("?CRareSimpleHide", ["c3.gear.itemtiered.all", "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Hide; Class "Helmets" "Gloves" "Boots" "Body Armours" "Shields" "Quivers" "Wands" "Rune Dagger" "Warstaves" "Daggers" "Sceptres" "Bows" "Claws" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces"; SetFontSize 18; ItemLevel >= 68; Rarity Rare; }
-                QuickUI("?CRareSimpleHide", "HD", ["CondTargetSelection?", "ItemLevel"], "Hide Rares By Tier");
+                QuickUI("?CRareSimpleHide", "HD", ["CondTargetSelection?", "ItemLevel"], "Hide Rares By Rank");
             }
 
             Section("Corrupted Rares Custom Rules", "VaalOrb")
