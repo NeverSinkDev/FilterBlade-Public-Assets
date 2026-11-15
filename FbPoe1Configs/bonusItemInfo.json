@@ -2058,14 +2058,6 @@
 					"text": "Drops at the end of upgraded Trial of Ascendancy"
 				},
 
-				"Divine Vessel": {
-					"text": "Used to unlock additional Pantheon bonuses"
-				},
-
-				"Royal Visage": {
-					"text": "Drops from Atziri"
-				},
-
 				"Blood-filled Vessel": {
 					"text": "Adds the monsters stored from a previous Ritual Altar to a Ritual Altar in the map"
 				},
@@ -2092,6 +2084,10 @@
 
 				"The Black Barya": {
 					"text": "Opens Saresh, of the Weeping Black fight"
+				},
+
+				"Cursed Poppet": {
+					"text": "Opens the Coven Queen fight"
 				},
 
 				"Polaric Invitation": {
@@ -2135,28 +2131,36 @@
 				},
 
 				"Allflame Ember of Flesh": {
-					"text": "Obtained from Betrayal Safehouses"
+					"text": "Obtained from Haku in Fortification Safehouse"
 				},
 				"Allflame Ember of the Gilded": {
-					"text": "Obtained from Betrayal Safehouses"
+					"text": "Obtained from Janus in Fortification Safehouse"
 				},
 				"Allflame Ember of the Wildwood": {
-					"text": "Obtained from Betrayal Safehouses"
+					"text": "Obtained from Vagan in Transportation Safehouse"
 				},
 				"Allflame Ember of Toads": {
-					"text": "Obtained from Betrayal Safehouses"
+					"text": "Obtained from Cameria in Transportation Safehouse"
 				},
 				"Allflame Ember of Resplendence": {
-					"text": "Obtained from Betrayal Safehouses"
+					"text": "Obtained from Jorgin in Transportation Safehouse"
 				},
 				"Allflame Ember of the Cloister": {
-					"text": "Obtained from Betrayal Safehouses"
+					"text": "Obtained from Korell in Transportation Safehouse"
 				},		
 				"Allflame Ember of the Divine": {
-					"text": "Obtained from Betrayal Safehouses"
+					"text": "Obtained from Elreon in Transportation Safehouse"
 				},
 				"Allflame Ember of the Multitude": {
-					"text": "Obtained from Betrayal Safehouses"
+					"text": "Obtained from Leo in Transportation Safehouse"
+				},
+				
+				"Divine Vessel": {
+					"text": "Used to unlock additional Pantheon bonuses"
+				},
+
+				"Royal Visage": {
+					"text": "Drops from Atziri"
 				}
 			}
 		},
@@ -2446,6 +2450,10 @@
 						},
 						"Legacy of the Rose": {
 							"text": "Drops from the Incarnation of Neglect",
+							"priority": -5
+						},
+						"Bane of the Apostate": {
+							"text": "Drops from the Coven Queen",
 							"priority": -5
 						}
 					}
@@ -4900,8 +4908,44 @@
 					"text": null,
 					"items": {
 						"Dreadmaidens' Sacrament": {
-							"text": "Obtained from Coven league mechanic",
+							"text": "Drops from a boss empowered by a Fate",
+							"priority": -8
+						}
+					}
+				},
+				"Exquisite Leather": {
+					"text": null,
+					"items": {
+						"Hide of the Vendigo": {
+							"text": "Drops from a boss empowered by a Fate",
+							"priority": -8
+						}
+					}
+				},
+				"Twilight Regalia": {
+					"text": null,
+					"items": {
+						"Mantle of Dreams": {
+							"text": "Drops from the Uber Incarnation of Dread",
 							"priority": -5
+						}
+					}
+				},
+				"Walnut Spirit Shield": {
+					"text": null,
+					"items": {
+						"Ordered Fate": {
+							"text": "Drops from a boss empowered by a Fate",
+							"priority": -8
+						}
+					}
+				},
+				"Imbued Wand": {
+					"text": null,
+					"items": {
+						"Corpse Rose": {
+							"text": "Drops from a boss empowered by a Fate",
+							"priority": -8
 						}
 					}
 				},
@@ -4909,7 +4953,16 @@
 					"text": null,
 					"items": {
 						"The Covetous Dark": {
-							"text": "Obtained from Coven league mechanic",
+							"text": "Drops from the Coven Queen",
+							"priority": -5
+						}
+					}
+				},
+				"Callous Mask": {
+					"text": null,
+					"items": {
+						"Veil of Flesh": {
+							"text": "Drops from the Coven Queen",
 							"priority": -5
 						}
 					}
