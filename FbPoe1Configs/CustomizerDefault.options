@@ -1514,6 +1514,7 @@ Chapter() {
             QuickUI([0.0, "Magic Jewels", "jewels->generic;anymagic"], "SH", ["Jewels", "ItemLevel", "Corrupted?"], "Generic Magic Jewels", [], "Magic jewels for crafting and corrupting.");
             QuickUI(0, "SH", ["Jewels", "ItemLevel", "Corrupted?"], "Generic Rare Jewels", [], "Rare jewels are solid pickups. They're small and can be very valuable.");
 
+            QuickUI([0.0, "Veiled Jewels", "exoticmods;exoticveiled"], "SD");
             QuickUI([0.0, "Magic Jewels with corrupted implicit", "jewels->special;any"], "SH", ["ItemLevel?", "DropLevel?", "Corrupted?", "Rarity?", "CorruptedMods"], "Magic+Corrupted Mod");
             QuickUI([0.0, "ModFiltering: Jewels 2 Corrupted", "jewels->special;1modcorrupted"], "SH", ["ItemLevel?", "DropLevel?", "Corrupted?", "Mods?"], "Rare+Corrupted Mod");
             QuickUI([0.0, "ModFiltering: Jewels 3", "jewels->special;1moduncorrupted"], "SH", ["ItemLevel?", "DropLevel?", "Corrupted?", "Mods?"], "Identified With Life or ES Mods");
