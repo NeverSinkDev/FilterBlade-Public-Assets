@@ -978,7 +978,7 @@ Chapter() {
                 ElementAdder_Tier("?CRareShowBases", "CondShowBase");
             }
 
-            Section("Highlight rares by Armour Type", "Firefly") {
+            Section("Highlight rares by Defence Type", "Firefly") {
                 Description("Highlight gear by their type, like Evasion or Evasion-EnergyShield items.");
 
                 Conditional("?CRareShowItemTypes", ["c3.gear.itemtiered.all", "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Rare; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
@@ -1027,7 +1027,7 @@ Chapter() {
                 ElementAdder_Tier("?CRareHideBases", "CondHideBase");
             }
 
-            Section("Hide rares by Armour Type", "Annulment") {
+            Section("Hide rares by Defence Type", "Annulment") {
                 Conditional("?CRareHideItemTypes", ["c3.gear.itemtiered.all", "c4.rare.trinkets.all", "c4.rare.trinkets.all", "c4.rare.t3.all", "c4.rare.idhandling.all", "c4.rare.t2.all", "c4.rare.t1.all", "c5.gear.crafting86.all"]) { Hide; ItemLevel >= 68; Rarity Rare; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
 
                 Function CondHideType ($s, $shd = "HD", $title)
@@ -1693,7 +1693,7 @@ Chapter() {
                 ElementAdder_Tier("?CLevelShowBases", "CondShowBase_Lvl");
             }
 
-            Section("Highlight items by Armour Type", "Firefly") {
+            Section("Highlight items by Defence Type", "Firefly") {
                 Conditional("?CLevelShowType", ["c11.leveling.gear.all", "c11.leveling.firstlevels.all", "c11.leveling.act12.all", "c11.leveling.rares.low", "c11.leveling.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
                 Function CondShowTypeLVL ($s, $shd = "SD", $title)
                 {
@@ -1713,7 +1713,7 @@ Chapter() {
                 ElementAdder_Tier("?CLevelShowClasses", "CondShowClass_Lvl");
             }
 
-            Section("Hide items by Armour Type", "Annulment") {
+            Section("Hide items by Defence Type", "Annulment") {
                 Conditional("?CLevelHideType", ["c11.leveling.gear.all", "c11.leveling.firstlevels.all", "c11.leveling.act12.all", "c11.leveling.rares.low", "c11.leveling.all"]) { Hide; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
 
                 Function CondHideTypeLVL ($s, $shd = "HD", $title)
@@ -2307,7 +2307,7 @@ Chapter() {
                 ElementAdder_Tier("?CUniversalCustomRuleD", "CondFilterMod");
             }
 
-            Section("Add Armour-Type-Based Rules", "Firefly")
+            Section("Add Defence-Type-Based Rules", "Firefly")
             {
                 Conditional("?CUniversalCustomRuleArmourType", ["c1.idmod.all", "c11.leveling.all", "c4.rare.decorator.all", "c0.alpha", "c6.hidelayer.endgame", "c12.hide.all"]) { Show; SetBorderColor 200 0 0; SetFontSize 38; ItemLevel >= 68; Rarity Normal Magic; Class == "Body Armours" "Gloves" "Boots" "Helmets" "Shields"; }
                 ElementAdder_Tier("?CUniversalCustomRuleArmourType", "CondShowArmourType");
