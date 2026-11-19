@@ -776,8 +776,8 @@ Chapter() {
             QuickUI([0.0, "Special Mod Maps", "maps->specialmods;exoticmod2"], "SH", ["MapTier"], "Special Mapmods: Other", ["Item Mods", "S", "HasExplicitMod"]);
 
             Title("League Based Maps");
-            QuickUI([0.0, "Delirium High Maps", "maps->enchanted;t1"], "SHD", ["MapTier"], "Delirium or Enchanted (T14+)");
-            QuickUI([0.0, "Delirium Maps", "maps->enchanted;any"], "SHD", ["MapTier"], "Delirium or Enchanted");
+            QuickUI([0.0, "Delirium High Maps", "maps->enchanted;t1"], "SHD", ["MapTier"], "Enchanted Maps (T14+)");
+            QuickUI([0.0, "Delirium Maps", "maps->enchanted;any"], "SHD", ["MapTier"], "Enchanted Maps");
             Function BlightedMapTier($s, $shd = "SHD", $text) { QuickUI($s, $shd, ["MapTier"], $text, ["Maps", "ASO"]); }
 
             QuickUI([0.0, "Uber Blighted Map", "maps->blighted;uber"], "SH", [], "Blight Ravaged Maps");

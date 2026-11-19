@@ -3096,6 +3096,8 @@ Stackable Currency,Feral Astrolabe,68,,1,1,,,,CoU,,3,,,,,,,,,Adds an Empowered S
 Stackable Currency,Royal Astrolabe,68,,1,1,,,,CoU,,3,,,,,,,,,Adds an Empowered Shaped Region containing Temporal Incursions,,,,,,,,
 Stackable Currency,Cryptic Astrolabe,68,,1,1,,,,CoU,,3,,,,,,,,,A collection of unknown Astrolabes,,,,,,,,
 Stackable Currency,Afarud Enshrouding Crystal,68,,1,1,,,,CoU,,3,,,,,,,,,Enshrouds Unique Quivers,,,,,,,,
+Stackable Currency,Originator's Exalted Orb,78,,1,1,,,,defa,,3,,,,,,,,,Removes a random Suffix modifier and adds a random\nrare-only modifier to a rare map item,,,,,,,,
+Stackable Currency,Primordial Exalted Orb,81,,1,1,,,,defa,,3,,,,,,,,,A collection of unknown exotic Exalted Orbs,,,,,,,,
 Skill Gems,Arcane Link,34,,1,1,,,,CoU,,3,,,,,,,,,,,,,,,,,
 Skill Gems,Fireball of Radiation,1,,1,1,,,,CoU,,3,,,,,,,,,,,,,,,,,
 Map Fragments,Expedition Thread,68,,1,1,,,,CoU,,3,,,,,,,,,Threads an Expedition Encounter into an Area,,,,,,,,
